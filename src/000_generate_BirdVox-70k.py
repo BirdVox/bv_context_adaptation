@@ -79,7 +79,7 @@ for index, row in df.iterrows():
     # The end of the clip is 250 ms after the annotation
     data = full_night.read(12000)
     # Export
-    clip_path = os.path.join(original_clips_dir, clip_str)
+    clip_path = os.path.join(unit_dir, clip_str)
     sf.write(clip_path, data, orig_sr)
     samples.append(sample)
 
@@ -130,7 +130,7 @@ while false_positive_counter < n_false_positives:
         # The end of the clip is 250 ms after the annotation
         data = full_night.read(12000)
         # Export
-        clip_path = os.path.join(original_clips_dir, clip_str)
+        clip_path = os.path.join(unit_dir, clip_str)
         sf.write(clip_path, data, orig_sr)
     prob_counter = prob_counter + 1
 
