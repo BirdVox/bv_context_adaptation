@@ -78,8 +78,9 @@ for index, row in df.iterrows():
     full_night.seek(sample_start)
     # The end of the clip is 250 ms after the annotation
     data = full_night.read(12000)
-    clip_path = os.path.join(original_clips_dir)
-    sf.write(clip_str, data, orig_sr)
+    # Export
+    clip_path = os.path.join(original_clips_dir, clip_str)
+    sf.write(clip_path, data, orig_sr)
     samples.append(sample)
 
 # The number of false positives to be added to the dataset is equal to the
@@ -123,10 +124,14 @@ while false_positive_counter < n_false_positives:
         clip_list = [unit_str, sample_str, freq_str, "0", suffix_str]
         false_positive_counter = false_positive_counter + 1
         clip_str = "_".join(clip_list)
+        # The start of the clip is 250 ms before the annotation
         sample_start = prob_sample - 6000
         full_night.seek(sample_start)
+        # The end of the clip is 250 ms after the annotation
         data = full_night.read(12000)
-        sf.write(clip_str, data, orig_sr)
+        # Export
+        clip_path = os.path.join(original_clips_dir, clip_str)
+        sf.write(clip_path, data, orig_sr)
     prob_counter = prob_counter + 1
 
 # Print elapsed time
