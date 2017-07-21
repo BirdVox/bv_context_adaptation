@@ -3,14 +3,26 @@ import os
 import pandas as pd
 import soundfile as sf
 import sys
+import time
 
 import paths
 
+
+# Define constants
 data_dir = paths.get_data_dir()
-units = [1, 2, 3, 5, 7, 10]
-n_units = len(units)
 orig_sr = 24000 # the sample rate of the full night data is 24 kHz
 suffix_str = "original.wav"
+args = sys.argv[1:]
+unit_id = args[0]
+units = [1, 2, 3, 5, 7, 10]
+unit = units[unit_id]
+n_units = len(units)
+
+# Print header
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start")
+print("Generating BirdVox-70k clips for unit " + str(unit).zfill(2))
+print("")
 
 # Create directory for original (i.e. non-augmented) clips
 predictions_dir = os.path.join(data_dir, "random_forest_predictions")
@@ -24,9 +36,6 @@ if not os.path.exists(original_clips_dir):
     os.makedirs(original_clips_dir)
 
 # Create directory corresponding to the recording unit
-args = sys.argv[1:]
-unit_id = args[0]
-unit = units[unit_id]
 unit_str = "unit" + str(unit).zfill(2)
 unit_dir = os.path.join(original_clips_dir, unit_str)
 if not os.path.exists(unit_dir):
@@ -74,6 +83,12 @@ for index, row in df.iterrows():
 # difference between the number of annotated positives (flight calls) and
 # the number of annotated negatives (alarms)
 n_false_positives = n_positive_samples - n_negative_samples
+print("Number of positives (genuine flight calls): " + str(n_positive_samples))
+print("Number of negatives (alarms): " + str(n_negative_samples))
+print("Number of false positives (clips fooling SKM-based detector): "
+      + str(n_false_positives))
+print("Total number of clips: " + str(2*n_positive_samples))
+print("")
 
 # Load probabilities of the SKM (spherical k-means) prediction model
 # developed by Justin Salamon
@@ -110,3 +125,14 @@ while false_positive_counter < n_false_positives:
         data = full_night.read(12000)
         sf.write(clip_str, data, orig_sr)
     prob_counter = prob_counter + 1
+
+# Print elapsed time
+print(str(datetime.datetime.now()) + " Finish")
+elapsed_time = time.time() - start_time
+elapsed_hours = int(elapsed_time / (60 * 60))
+elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
+elapsed_seconds = elapsed_time % 60.
+elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
+                                               elapsed_minutes,
+                                               elapsed_seconds)
+print("Total elapsed time: " + elapsed_str)
