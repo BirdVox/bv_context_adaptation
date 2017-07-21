@@ -56,12 +56,12 @@ n_negative_samples = 0
 # Export every annotation either as positive (flight call) or negative (alarm)
 for index, row in df.iterrows():
     # Compute center time of the annotation bounding box
-    time = 0.5 * (row["Begin Time (s)"] + row["End Time (s)"])
-    sample = int(24000 * time)
+    mid_time = 0.5 * (row["Begin Time (s)"] + row["End Time (s)"])
+    sample = int(24000 * mid_time)
     sample_str = str(sample).zfill(9)
     # Compute center frequency of the annotation bounding box
-    freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
-    freq_str = str(int(freq)).zfill(4)
+    mid_freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
+    freq_str = str(int(mid_freq)).zfill(4)
     comment = row["Calls"]
     # Alarm sounds are negative examples (label 0)
     if comment == "alarm":
@@ -131,7 +131,7 @@ while false_positive_counter < n_false_positives:
 
 # Print elapsed time
 print(str(datetime.datetime.now()) + " Finish")
-elapsed_time = time.time() - start_time
+elapsed_time = time.time() - int(start_time)
 elapsed_hours = int(elapsed_time / (60 * 60))
 elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
 elapsed_seconds = elapsed_time % 60.
