@@ -29,7 +29,7 @@ print("")
 predictions_dir = os.path.join(data_dir, "random_forest_predictions")
 recordings_dir = os.path.join(data_dir, "full_night_recordings")
 annotations_dir = os.path.join(data_dir, "annotations")
-clips_dir = os.path.join("data", "BirdVox-70k")
+clips_dir = os.path.join(data_dir, "BirdVox-70k")
 if not os.path.exists(clips_dir):
     os.makedirs(clips_dir)
 original_clips_dir = os.path.join(clips_dir, "original")
