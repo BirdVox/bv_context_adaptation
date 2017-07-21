@@ -62,12 +62,9 @@ for index, row in df.iterrows():
     # Compute center frequency of the annotation bounding box
     mid_freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
     freq_str = str(int(mid_freq)).zfill(5)
-    comment = row["Calls"]
-    # Alarm sounds are negative examples (label 0)
-    if comment == "alarm":
+    if "Calls" in row and row["Calls"] == "alarm":
         label_str = "0"
         n_negative_samples = n_negative_samples + 1
-    # All other annotations are genuine flight calls (label 1)
     else:
         label_str = "1"
         n_positive_samples = n_positive_samples + 1
