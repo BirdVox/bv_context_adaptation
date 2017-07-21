@@ -61,7 +61,7 @@ for index, row in df.iterrows():
     sample_str = str(sample).zfill(9)
     # Compute center frequency of the annotation bounding box
     mid_freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
-    freq_str = str(int(mid_freq)).zfill(4)
+    freq_str = str(int(mid_freq)).zfill(5)
     comment = row["Calls"]
     # Alarm sounds are negative examples (label 0)
     if comment == "alarm":
@@ -120,7 +120,7 @@ while false_positive_counter < n_false_positives:
         samples.append(prob_sample)
         sample_str = str(prob_sample).zfill(9)
         # By convention, the frequency of a false positive example is 0 Hz
-        freq_str = str(0).zfill(4)
+        freq_str = str(0).zfill(5)
         clip_list = [unit_str, sample_str, freq_str, "0", suffix_str]
         false_positive_counter = false_positive_counter + 1
         clip_str = "_".join(clip_list)
