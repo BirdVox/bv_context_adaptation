@@ -44,6 +44,8 @@ if not os.path.exists(unit_dir):
 
 # Open full night recording
 samples = []
+annotation_name = unit_str + ".txt"
+annotation_path = os.path.join(annotations_dir, annotation_name)
 df = pd.read_csv(annotation_path, sep='\t')
 recording_name = unit_str + ".flac"
 recording_path = os.path.join(recordings_dir, recording_name)
