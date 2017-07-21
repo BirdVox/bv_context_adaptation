@@ -1,0 +1,10 @@
+2017-07-21 10:45:40.159031 Start
+Generating BirdVox-70k clips for unit 02
+
+Number of positives (genuine flight calls): 4736
+Number of negatives (alarms): 4
+Number of false positives (clips fooling SKM-based detector): 4732
+Total number of clips: 9472
+
+2017-07-21 10:51:34.404499 Finish
+Total elapsed time: 00:05:54.40

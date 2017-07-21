@@ -1,0 +1,137 @@
+
+Jupyter server is running on: gpu-26
+Job starts at: Thu Jul 20 14:15:59 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9187:localhost:9187 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9187:localhost:9187 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 14:16:02.346 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1542820/jupyter/notebook_cookie_secret
+[I 14:16:03.071 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:16:03.071 NotebookApp] 0 active kernels 
+[I 14:16:03.071 NotebookApp] The Jupyter Notebook is running at: http://localhost:9187/?token=e85a35a8db2f83440f06d68fa954e58bede87b46d24f09eb
+[I 14:16:03.072 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:16:03.072 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9187/?token=e85a35a8db2f83440f06d68fa954e58bede87b46d24f09eb
+[I 14:24:09.015 NotebookApp] 302 GET /?token=e85a35a8db2f83440f06d68fa954e58bede87b46d24f09eb (::1) 0.78ms
+[I 14:24:24.170 NotebookApp] Creating new directory in /spl2017
+[I 14:24:29.681 NotebookApp] Creating new directory in /spl2017
+[W 14:24:35.047 NotebookApp] delete /spl2017/Untitled Folder 1
+[I 14:24:49.874 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 14:24:56.343 NotebookApp] Kernel started: 586a8ef0-9824-4b12-a74c-16e698f9e2d8
+[W 14:24:56.374 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170720141602 (::1) 23.46ms referer=http://localhost:9187/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 14:26:56.430 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 14:32:56.325 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:34:57.872 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:35:10.857 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[W 14:36:30.453 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170720141602 (::1) 1.89ms referer=http://localhost:9187/notebooks/spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:36:56.541 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:37:34.324 NotebookApp] Kernel restarted: 586a8ef0-9824-4b12-a74c-16e698f9e2d8
+[I 14:38:41.900 NotebookApp] Kernel restarted: 586a8ef0-9824-4b12-a74c-16e698f9e2d8
+[I 14:38:56.904 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:40:56.565 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:42:56.461 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:44:56.508 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:46:56.499 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:48:56.496 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:50:56.404 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:52:56.470 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:54:56.454 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:56:56.438 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 14:58:56.815 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:00:56.457 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:02:56.415 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:06:59.647 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:08:57.374 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:10:56.483 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:12:57.811 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:14:57.528 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:16:56.462 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:18:56.519 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:22:56.492 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:24:56.663 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:26:56.606 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 15:28:56.529 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[W 15:42:13.197 NotebookApp] WebSocket ping timeout after 119632 ms.
+[I 16:34:48.503 NotebookApp] 302 GET /?token=e85a35a8db2f83440f06d68fa954e58bede87b46d24f09eb (::1) 0.50ms
+[W 16:34:58.802 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170720141602 (::1) 1.93ms referer=http://localhost:9187/notebooks/spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[E 16:35:18.632 NotebookApp] Unhandled error in API request
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/base/handlers.py", line 503, in wrapper
+        result = yield gen.maybe_future(method(self, *args, **kwargs))
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/gen.py", line 1015, in run
+        value = future.result()
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/concurrent.py", line 237, in result
+        raise_exc_info(self._exc_info)
+      File "<string>", line 3, in raise_exc_info
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/gen.py", line 285, in wrapper
+        yielded = next(result)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/handlers.py", line 124, in get
+        path=path, type=type, format=format, content=content,
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 356, in get
+        model = self._dir_model(path, content=content)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 251, in _dir_model
+        for name in os.listdir(os_dir):
+    FileNotFoundError: [Errno 2] No such file or directory: '/home/vl1019/spl2017/notebooks/data'
+[E 16:35:18.697 NotebookApp] {
+      "Host": "localhost:9187",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:54.0) Gecko/20100101 Firefox/54.0",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "Accept-Language": "en-US,en;q=0.5",
+      "Accept-Encoding": "gzip, deflate",
+      "X-Xsrftoken": "2|ea71bf83|ee3812f86f74c5014c7d75b1c818989d|1500575049",
+      "X-Requested-With": "XMLHttpRequest",
+      "Referer": "http://localhost:9187/tree/spl2017/notebooks/data",
+      "Cookie": "username-localhost-9187=\"2|1:0|10:1500582888|23:username-localhost-9187|44:NTI3YTFiOGY5NzJhNGI1N2E0NGU1YThkMzlkM2MwYzE=|0de4d877de0696f092a126e4e15b3a8625c3431837b08daef72b985b42053fac\"; _xsrf=2|ea71bf83|ee3812f86f74c5014c7d75b1c818989d|1500575049; username-localhost-8888=\"2|1:0|10:1500575474|23:username-localhost-8888|44:ZWQwM2JiOGM3MDk4NGFhYThjNzFhYjkzOTRmYTljNzg=|022d54edfe48113c65e51f1930367dd6232b32dba3235bce0cf4c2bdf558c8c3\"",
+      "Dnt": "1",
+      "Connection": "keep-alive"
+    }
+[E 16:35:18.697 NotebookApp] 500 GET /api/contents/spl2017/notebooks/data?type=directory&_=1500582902902 (::1) 65.86ms referer=http://localhost:9187/tree/spl2017/notebooks/data
+[W 16:35:22.828 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170720141602 (::1) 1.80ms referer=http://localhost:9187/notebooks/spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:37:22.896 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:39:23.028 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:41:07.997 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:42:58.924 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:44:59.176 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:46:58.931 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:48:58.884 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:50:58.917 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:52:58.899 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:54:58.900 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:56:58.905 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 16:58:58.948 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:00:59.932 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:02:58.977 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:04:59.976 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:06:57.003 NotebookApp] Kernel interrupted: 586a8ef0-9824-4b12-a74c-16e698f9e2d8
+[I 17:06:58.924 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:08:59.234 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:10:58.995 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:12:58.937 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[I 17:14:58.942 NotebookApp] Saving file at /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[W 17:38:29.004 NotebookApp] WebSocket ping timeout after 119864 ms.
+slurmstepd: error: *** JOB 1542820 ON gpu-26 CANCELLED AT 2017-07-21T02:16:02 DUE TO TIME LIMIT ***
