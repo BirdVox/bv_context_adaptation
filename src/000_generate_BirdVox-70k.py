@@ -116,7 +116,8 @@ false_positive_counter = 0
 while false_positive_counter < n_false_positives:
     prob_sample = sorted_prob_samples[prob_counter]
     dists = [np.abs(sample-prob_sample) for sample in samples]
-    if np.all([dist > 6000 for dist in dists]):
+    min_dist = np.min(dists)
+    if min_dist > 6000:
         samples.append(prob_sample)
         sample_str = str(prob_sample).zfill(9)
         # By convention, the frequency of a false positive example is 0 Hz
