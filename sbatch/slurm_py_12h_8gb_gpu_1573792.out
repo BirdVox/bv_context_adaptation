@@ -1,0 +1,83 @@
+
+Jupyter server is running on: gpu-26
+Job starts at: Sat Jul 22 14:01:27 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8605:localhost:8605 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8605:localhost:8605 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 14:01:28.491 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1573792/jupyter/notebook_cookie_secret
+[I 14:01:28.842 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:01:28.842 NotebookApp] 0 active kernels 
+[I 14:01:28.842 NotebookApp] The Jupyter Notebook is running at: http://localhost:8605/?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5
+[I 14:01:28.842 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:01:28.842 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8605/?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5
+[I 14:02:20.666 NotebookApp] 302 GET /?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5 (::1) 0.77ms
+[I 14:03:21.869 NotebookApp] Kernel started: 3a84feb1-ebc8-4db8-b084-f963d5c2101f
+[W 14:03:21.955 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170722140128 (::1) 9.00ms referer=http://localhost:8605/notebooks/spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:12:04.718 NotebookApp] 302 GET /?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5 (::1) 0.47ms
+[W 14:12:13.259 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170722140128 (::1) 2.10ms referer=http://localhost:8605/notebooks/spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:14:13.370 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:16:13.380 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:18:13.368 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:20:13.382 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:22:13.541 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:24:13.408 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:26:13.408 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:28:13.438 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 14:30:13.418 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 14:33:13.342 NotebookApp] WebSocket ping timeout after 119791 ms.
+[I 15:01:29.017 NotebookApp] 302 GET /?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5 (::1) 0.48ms
+[I 15:01:31.681 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 15:01:38.236 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170722140128 (::1) 2.06ms referer=http://localhost:8605/notebooks/spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:01:41.204 NotebookApp] Kernel restarted: 3a84feb1-ebc8-4db8-b084-f963d5c2101f
+[I 15:03:39.284 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:05:39.096 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:07:39.152 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:09:39.489 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:11:39.129 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:13:39.133 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:17:39.168 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:19:39.034 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:21:39.150 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:23:39.269 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:41:39.358 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:01:39.676 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 16:08:12.723 NotebookApp] WebSocket ping timeout after 119007 ms.
+[I 21:34:00.576 NotebookApp] 302 GET /?token=e28ff02ed823d90f986e4fd19bda53ff3d982e2831f350f5 (::1) 0.50ms
+[W 21:34:10.403 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170722140128 (::1) 2.31ms referer=http://localhost:8605/notebooks/spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:34:51.119 NotebookApp] Kernel restarted: 3a84feb1-ebc8-4db8-b084-f963d5c2101f
+[I 21:36:15.957 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:40:11.590 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:42:11.531 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:48:20.169 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:50:11.785 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:52:11.848 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 21:54:11.740 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 22:00:12.215 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 22:02:11.877 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb

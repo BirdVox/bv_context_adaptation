@@ -1,0 +1,239 @@
+
+Jupyter server is running on: gpu-26
+Job starts at: Fri Jul 21 11:02:48 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6858:localhost:6858 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6858:localhost:6858 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 11:02:49.741 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1562805/jupyter/notebook_cookie_secret
+[I 11:02:50.086 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 11:02:50.086 NotebookApp] 0 active kernels 
+[I 11:02:50.086 NotebookApp] The Jupyter Notebook is running at: http://localhost:6858/?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811
+[I 11:02:50.086 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:02:50.086 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6858/?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811
+[I 11:07:18.555 NotebookApp] 302 GET /?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811 (::1) 0.78ms
+[W 11:07:44.309 NotebookApp] delete /spl2017/notebooks/000_generate_BirdVox-70k.ipynb
+[W 11:07:56.735 NotebookApp] delete /spl2017/notebooks/data
+[W 11:07:56.736 NotebookApp] Directory /home/vl1019/spl2017/notebooks/data not empty
+[W 11:07:56.736 NotebookApp] 400 DELETE /api/contents/spl2017/notebooks/data (::1) 1.59ms referer=http://localhost:6858/tree/spl2017/notebooks
+[I 11:08:52.083 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 11:08:53.601 NotebookApp] Kernel started: 777e1197-a5bd-4c2f-bcb1-d64992cf68fb
+[W 11:08:53.718 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 8.95ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[E 11:08:53.925 NotebookApp] Kernel info request failed, assuming current {}
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-120>", line 2, in initialize
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 445, in initialize
+    self.init_sockets()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 235, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 177, in _bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq/backend/cython/socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq/backend/cython/socket.c:10014)
+zmq.error.ZMQError: Address already in use
+[I 11:08:56.603 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 777e1197-a5bd-4c2f-bcb1-d64992cf68fb restarted
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-120>", line 2, in initialize
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 445, in initialize
+    self.init_sockets()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 235, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 177, in _bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq/backend/cython/socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq/backend/cython/socket.c:10014)
+zmq.error.ZMQError: Address already in use
+[I 11:08:59.610 NotebookApp] KernelRestarter: restarting kernel (2/5)
+WARNING:root:kernel 777e1197-a5bd-4c2f-bcb1-d64992cf68fb restarted
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-120>", line 2, in initialize
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 445, in initialize
+    self.init_sockets()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 235, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 177, in _bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq/backend/cython/socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq/backend/cython/socket.c:10014)
+zmq.error.ZMQError: Address already in use
+[I 11:09:02.615 NotebookApp] KernelRestarter: restarting kernel (3/5)
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-120>", line 2, in initialize
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 445, in initialize
+    self.init_sockets()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 235, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 177, in _bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq/backend/cython/socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq/backend/cython/socket.c:10014)
+zmq.error.ZMQError: Address already in use
+[I 11:09:05.620 NotebookApp] KernelRestarter: restarting kernel (4/5)
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/vl1019/miniconda3/lib/python3.6/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/__main__.py", line 3, in <module>
+    app.launch_new_instance()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 657, in launch_instance
+    app.initialize(argv)
+  File "<decorator-gen-120>", line 2, in initialize
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/traitlets/config/application.py", line 87, in catch_config_error
+    return method(app, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 445, in initialize
+    self.init_sockets()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 235, in init_sockets
+    self.shell_port = self._bind_socket(self.shell_socket, self.shell_port)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelapp.py", line 177, in _bind_socket
+    s.bind("tcp://%s:%i" % (self.ip, port))
+  File "zmq/backend/cython/socket.pyx", line 495, in zmq.backend.cython.socket.Socket.bind (zmq/backend/cython/socket.c:5653)
+  File "zmq/backend/cython/checkrc.pxd", line 25, in zmq.backend.cython.checkrc._check_rc (zmq/backend/cython/socket.c:10014)
+zmq.error.ZMQError: Address already in use
+[W 11:09:06.510 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 1.66ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb
+[W 11:09:08.624 NotebookApp] KernelRestarter: restart failed
+[W 11:09:08.625 NotebookApp] Kernel 777e1197-a5bd-4c2f-bcb1-d64992cf68fb died, removing from map.
+ERROR:root:kernel 777e1197-a5bd-4c2f-bcb1-d64992cf68fb restarted failed!
+[W 11:09:08.756 NotebookApp] Kernel deleted before session
+[W 11:09:08.756 NotebookApp] 410 DELETE /api/sessions/ef1a7135-ee2d-4048-b9d2-8ca36b6b9740 (::1) 1.07ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb
+[I 11:10:35.617 NotebookApp] 302 GET /?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811 (::1) 0.47ms
+[I 11:10:45.367 NotebookApp] Kernel started: 1d5e11c8-1657-49e9-9920-3a31c76baf3e
+[W 11:10:45.406 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 1.91ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb
+[I 11:12:45.414 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:14:45.414 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:16:45.482 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[W 11:23:16.365 NotebookApp] WebSocket ping timeout after 119873 ms.
+[I 14:25:11.360 NotebookApp] 302 GET /?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811 (::1) 0.41ms
+[W 14:26:14.603 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 1.80ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb
+[I 14:28:14.462 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 14:30:14.455 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:32:14.550 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:36:14.470 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:38:14.491 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:40:14.478 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:42:14.482 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:44:14.476 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:50:14.513 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:51:34.649 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:52:14.490 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:54:14.519 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:55:55.898 NotebookApp] Kernel interrupted: 1d5e11c8-1657-49e9-9920-3a31c76baf3e
+[I 14:56:14.504 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:57:51.322 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:58:14.507 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 14:59:15.260 NotebookApp] Kernel restarted: 1d5e11c8-1657-49e9-9920-3a31c76baf3e
+[W 14:59:15.264 NotebookApp] zmq message arrived on closed channel
+[I 15:00:14.505 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:02:14.542 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:06:14.533 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:08:14.524 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:10:14.532 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:12:14.528 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:14:14.572 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:16:14.555 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:18:14.547 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:20:14.603 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 15:34:36.216 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 15:34:37.296 NotebookApp] Kernel started: f9931372-388e-4253-8745-6245ef7bb693
+[W 15:34:37.428 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 1.84ms referer=http://localhost:6858/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 15:36:37.324 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:38:37.321 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:40:37.325 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:42:37.363 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:44:37.334 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:48:37.359 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:50:37.363 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:52:37.355 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 15:58:37.404 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:00:37.360 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:02:37.371 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:08:37.380 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:12:37.383 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:14:37.390 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:16:37.391 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:20:37.394 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:22:37.407 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 16:24:37.411 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 16:30:08.264 NotebookApp] WebSocket ping timeout after 119943 ms.
+[W 16:30:16.410 NotebookApp] WebSocket ping timeout after 119961 ms.
+[I 19:59:03.936 NotebookApp] 302 GET /?token=d6f726d0c7a62ecd162837f8e6e68bdc9499dda6a980d811 (::1) 0.50ms
+[W 20:04:56.111 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170721110249 (::1) 1.77ms referer=http://localhost:6858/notebooks/spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:05:06.420 NotebookApp] Kernel restarted: f9931372-388e-4253-8745-6245ef7bb693
+[I 20:06:56.461 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:08:56.444 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:10:56.503 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:12:56.464 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:14:57.513 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:22:56.497 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:25:00.438 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:37:00.118 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 20:38:57.008 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 20:56:07.763 NotebookApp] WebSocket ping timeout after 118976 ms.
+slurmstepd: error: *** JOB 1562805 ON gpu-26 CANCELLED AT 2017-07-21T23:03:12 DUE TO TIME LIMIT ***
