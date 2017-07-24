@@ -54,12 +54,12 @@ if aug_str == "noise":
         unit_noise_paths = [os.path.join(unit_dir, name) for name in names]
         noise_paths.append(unit_noise_paths)
     noise_paths = [p for unit_p in unit_noise_paths for p in unit_p]
-    bgnoise = muda.deformers.BackgroundNoise(
-        n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
+    deformer = muda.deformers.BackgroundNoise(
+        n_samples=8, files=noise_paths, weight_min=0.1, weight_max=0.5)
 elif aug_str == "pitch":
-    pass
+    deformer = muda.deformers.RandomPitchShift(n_samples=4, mean=1.0, sigma=1.0)
 elif aug_str == "stretch":
-    pass
+    deformer = muda.deformers.RandomTimeStretch(n_samples=4, location=0.0, scale=0.1)
 
 # Print elapsed time
 print(str(datetime.datetime.now()) + " Finish")
