@@ -13,5 +13,4 @@ module purge
 # The integer passed to the Python script 000_generate_BirdVox-70k_clips.py
 # corresponds to the index of the recording unit in the
 # list [1, 2, 3, 5, 7, 10]. It ranges between 0 and 5.
-cd ../src
-python 000_generate_BirdVox-70k_clips.py 5
+python ../src/000_generate_BirdVox-70k_clips.py 5
