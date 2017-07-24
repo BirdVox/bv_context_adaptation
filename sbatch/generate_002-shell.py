@@ -9,6 +9,7 @@ file_path = "002.sh"
 
 with open(file_path, "w") as f:
     f.write("# This shell script executes the Slurm jobs for data augmentation.")
+    f.write("\n")
     for unit in units:
         unit_str = str(unit).zfill(2)
         for aug_str in augmentations:
