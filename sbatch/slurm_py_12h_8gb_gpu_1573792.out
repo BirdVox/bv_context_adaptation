@@ -81,3 +81,6 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 21:54:11.740 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
 [I 22:00:12.215 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
 [I 22:02:11.877 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[I 22:12:21.840 NotebookApp] Saving file at /spl2017/notebooks/bugfix_BirdVox-70k.ipynb
+[W 22:25:22.641 NotebookApp] WebSocket ping timeout after 119973 ms.
+slurmstepd: error: *** JOB 1573792 ON gpu-26 CANCELLED AT 2017-07-23T02:01:42 DUE TO TIME LIMIT ***
