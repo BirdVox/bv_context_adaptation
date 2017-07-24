@@ -8,13 +8,15 @@ augmentations = localmodule.get_augmentations()
 file_path = "002.sh"
 
 with open(file_path, "w") as f:
-    f.write("# This shell script executes the Slurm jobs for data augmentation.")
+    f.write("# This shell script executes the Slurm jobs for data augmentation.\n")
     f.write("\n")
     for unit in units:
         unit_str = str(unit).zfill(2)
         for aug_str in augmentations:
             sbatch_str = "sbatch 002-" + unit_str + "-" + aug_str + ".sbatch"
             f.write(sbatch_str + "\n")
+        f.write("\n")
+    f.write("\n")
 
 # Grant permission to execute the file
 # https://stackoverflow.com/a/30463972
