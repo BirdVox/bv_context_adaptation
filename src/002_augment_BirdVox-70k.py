@@ -44,7 +44,22 @@ out_unit_dir = os.path.join(aug_clips_dir, unit_str)
 if not os.path.exists(out_unit_dir):
     os.makedirs(out_unit_dir)
 
-
+if aug_str == "noise":
+    noise_paths = []
+    for unit in other_units:
+        unit_str = str(unit).zfill(2)
+        unit_dir = os.path.join(original_clips_dir, unit_str)
+        regexp = "*_0_original.wav"
+        names = sorted(glob.glob(os.path.join(unit_dir, regexp)))
+        unit_noise_paths = [os.path.join(unit_dir, name) for name in names]
+        noise_paths.append(unit_noise_paths)
+    noise_paths = [p for unit_p in unit_noise_paths for p in unit_p]
+    bgnoise = muda.deformers.BackgroundNoise(
+        n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
+elif aug_str == "pitch":
+    pass
+elif aug_str == "stretch":
+    pass
 
 # Print elapsed time
 print(str(datetime.datetime.now()) + " Finish")
