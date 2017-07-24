@@ -1,8 +1,9 @@
 import datetime
-import numpy as np
+import jams
+import librosa
+import muda
+import glob
 import os
-import pandas as pd
-import soundfile as sf
 import sys
 import time
 
@@ -21,6 +22,10 @@ other_units = units.remove(unit)
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start")
 print("Augmenting BirdVox-70k clips for unit " + str(unit).zfill(2))
+print("jams version: {:s}'.format(jams.__version__)")
+print("librosa version: {:s}'.format(librosa.__version__)")
+print("muda version: {:s}'.format(muda.__version__)")
+print("numpy version: {:s}'.format(numpy.__version__)")
 print("")
 
 # Create directory for augmented clips
