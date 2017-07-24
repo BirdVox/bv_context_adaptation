@@ -1,3 +1,6 @@
+def get_augmentations():
+    return ["noise", "original", "pitch", "stretch"]
+
 def get_data_dir():
 	return "/scratch/vl1019/spl2017_data"
 
