@@ -4,7 +4,7 @@ sys.path.append("../src")
 import localmodule
 
 units = localmodule.get_units()
-augmentations = localmodule.get_units()
+augmentations = localmodule.get_augmentations()
 file_path = "002.sh"
 
 with open(file_path, "w") as f:
