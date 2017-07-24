@@ -6,15 +6,15 @@ import soundfile as sf
 import sys
 import time
 
-import paths
+import localmodule
 
 
 # Define constants
-data_dir = paths.get_data_dir()
+data_dir = localmodule.get_data_dir()
 args = sys.argv[1:]
 aug_str = args[0]
 unit_id = int(args[1])
-units = [1, 2, 3, 5, 7, 10]
+units = localmodule.get_units()
 unit = units[unit_id]
 n_units = len(units)
 

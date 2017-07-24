@@ -10,10 +10,10 @@ import paths
 
 
 # Define constants
-data_dir = paths.get_data_dir()
+data_dir = localmodule.get_data_dir()
 BirdVox_dir = os.path.join(data_dir, "BirdVox-70k")
 original_BirdVox_dir = os.path.join(BirdVox_dir, "original")
-units = [1, 2, 3, 5, 7, 10]
+units = localmodule.get_units()
 n_units = len(units)
 clip_duration = 0.5
 

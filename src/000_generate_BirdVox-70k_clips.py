@@ -6,16 +6,16 @@ import soundfile as sf
 import sys
 import time
 
-import paths
+import localmodule
 
 
 # Define constants
-data_dir = paths.get_data_dir()
+data_dir = localmodule.get_data_dir()
 orig_sr = 24000 # the sample rate of the full night data is 24 kHz
 suffix_str = "original.wav"
 args = sys.argv[1:]
 unit_id = int(args[0])
-units = [1, 2, 3, 5, 7, 10]
+units = localmodule.get_units()
 unit = units[unit_id]
 n_units = len(units)
 
