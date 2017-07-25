@@ -38,4 +38,7 @@ for aug_str in augmentations:
                 f.write("\n")
                 f.write("module purge\n")
                 f.write("\n")
+                f.write("# The first argument is the name of the augmentation.\n")
+                f.write("# The first argument is the instance ID of the augmentation.\n")
+                f.write("# The third argument is the ID of the recording unit.\n")
                 f.write("python " + script_path_with_args)
