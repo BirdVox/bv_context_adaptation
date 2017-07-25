@@ -5,7 +5,7 @@ import localmodule
 
 # Define constants
 units = localmodule.get_units()
-script_name = "000_generate_BirdVox-70k_wav.py"
+script_name = "000_generate-wav.py"
 script_path = os.path.join("..", "src", script_name)
 
 # Loop over recording units
@@ -27,6 +27,6 @@ for unit in units:
         f.write("\n")
         f.write("module purge\n")
         f.write("\n")
-        f.write("# The integer passed to the Python script 000_generate_BirdVox-70k_wav.py\n")
-        f.write("# corresponds to the ID of the recording unit in the list [1, 2, 3, 5, 7, 10].\n")
+        f.write("# The integer passed to the Python script 000_generate-wav.py\n")
+        f.write("# corresponds to the ID of the recording unit.\n")
         f.write("python " + script_path_with_args)
