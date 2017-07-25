@@ -10,4 +10,4 @@
 
 module purge
 
-python ../src/001_generate_BirdVox-70k_jams.py
+python ../src/001_generate-jams.py
