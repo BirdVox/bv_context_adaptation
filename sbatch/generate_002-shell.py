@@ -19,7 +19,7 @@ with open(file_path, "w") as f:
             n_aug_instances = augmentations[aug_str]
             # Loop over instances
             for aug_instance_id in range(n_aug_instances):
-                aug_sample_str = str(aug_instance_id)
+                aug_instance_str = str(aug_instance_id)
                 job_name = "-".join(["002", unit_str, aug_str, aug_instance_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
                 f.write(sbatch_str + "\n")
