@@ -34,17 +34,17 @@ print("")
 predictions_dir = os.path.join(data_dir, "random_forest_predictions")
 recordings_dir = os.path.join(data_dir, "full_night_recordings")
 annotations_dir = os.path.join(data_dir, "annotations")
-clips_dir = os.path.join(data_dir, "BirdVox-70k")
-if not os.path.exists(clips_dir):
-    os.makedirs(clips_dir)
-original_clips_dir = os.path.join(clips_dir, "original")
-if not os.path.exists(original_clips_dir):
-    os.makedirs(original_clips_dir)
+BirdVox_wav_dir = os.path.join(data_dir, "BirdVox-70k_wav")
+if not os.path.exists(BirdVox_wav_dir):
+    os.makedirs(BirdVox_wav_dir)
+original_BirdVox_wav_dir = os.path.join(BirdVox_wav_dir, "original")
+if not os.path.exists(original_BirdVox_wav_dir):
+    os.makedirs(original_BirdVox_wav_dir)
 
 
 # Create directory corresponding to the recording unit.
 unit_str = "unit" + str(unit).zfill(2)
-unit_dir = os.path.join(original_clips_dir, unit_str)
+unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
 if not os.path.exists(unit_dir):
     os.makedirs(unit_dir)
 

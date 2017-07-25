@@ -11,8 +11,8 @@ import paths
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
-BirdVox_dir = os.path.join(data_dir, "BirdVox-70k")
-original_BirdVox_dir = os.path.join(BirdVox_dir, "original")
+BirdVox_wav_dir = os.path.join(data_dir, "BirdVox-70k_wav")
+original_BirdVox_wav_dir = os.path.join(BirdVox_wav_dir, "original")
 units = localmodule.get_units()
 n_units = len(units)
 clip_duration = 0.5
@@ -33,7 +33,7 @@ print("")
 for unit_id in range(n_units):
     unit = units[unit_id]
     unit_str = "unit" + str(unit).zfill(2)
-    unit_dir = os.path.join(original_BirdVox_dir, unit_str)
+    unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
     names = os.listdir(unit_dir)
     names = sorted(names)
     n_names = len(names)
