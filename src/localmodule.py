@@ -18,8 +18,16 @@ def get_data_dir():
 	return "/scratch/vl1019/spl2017_data"
 
 
+def get_dataset_name():
+    return "BirdVox-70k"
+
+
 def get_models_dir():
     return "/scratch/vl1019/spl2017_models"
+
+
+def get_sample_rate():
+    return 24000 # in Hertz
 
 
 def get_units():
