@@ -21,7 +21,7 @@ clip_duration = 0.5
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start")
-print("Generating BirdVox-70k JAMS metadata")
+print("Generating BirdVox-70k JAMS metadata.")
 print('jams version: {:s}'.format(jams.__version__))
 print('muda version: {:s}'.format(muda.__version__))
 print('numpy version: {:s}'.format(np.__version__))
@@ -29,7 +29,7 @@ print('librosa version: {:s}'.format(librosa.__version__))
 print("")
 
 
-# Loop across recording units.
+# Loop over recording units.
 for unit_id in range(n_units):
     unit = units[unit_id]
     unit_str = "unit" + str(unit).zfill(2)
@@ -38,7 +38,7 @@ for unit_id in range(n_units):
     names = sorted(names)
     n_names = len(names)
 
-    # Loop across names.
+    # Loop over names.
     for name_id in range(n_names):
         name = names[name_id]
 

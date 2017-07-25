@@ -22,7 +22,7 @@ instance_str = str(int(args[2]))
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start")
-print("Augmenting BirdVox-70k clips for unit " + str(unit).zfill(2))
+print("Augmenting BirdVox-70k clips for unit " + str(unit).zfill(2) + ".")
 print("with augmentation " + aug_str + " and instance " + instance_str)
 print("jams version: {:s}'.format(jams.__version__)")
 print("librosa version: {:s}'.format(librosa.__version__)")

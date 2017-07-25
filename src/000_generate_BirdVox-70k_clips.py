@@ -23,7 +23,7 @@ n_units = len(units)
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start")
-print("Generating BirdVox-70k clips for unit " + str(unit).zfill(2))
+print("Generating BirdVox-70k clips for unit " + str(unit).zfill(2) + ".")
 print('numpy version: {:s}'.format(numpy.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
 print('soundfile version: {:s}'.format(sf.__version__))
