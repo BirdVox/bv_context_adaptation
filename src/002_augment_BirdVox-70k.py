@@ -32,19 +32,19 @@ print("")
 
 
 # Create directory for augmented clips.
-clips_dir = os.path.join(data_dir, "BirdVox-70k")
-if not os.path.exists(clips_dir):
-    os.makedirs(clips_dir)
-original_clips_dir = os.path.join(clips_dir, "original")
-aug_clips_dir = os.path.join(clips_dir, aug_str)
-if not os.path.exists(aug_clips_dir):
-    os.makedirs(aug_clips_dir)
+BirdVox_wav_dir = os.path.join(data_dir, "BirdVox-70k_wav")
+if not os.path.exists(BirdVox_wav_dir):
+    os.makedirs(BirdVox_wav_dir)
+original_BirdVox_wav_dir = os.path.join(BirdVox_wav_dir, "original")
+aug_BirdVox_wav_dir = os.path.join(BirdVox_wav_dir, aug_str)
+if not os.path.exists(aug_BirdVox_wav_dir):
+    os.makedirs(aug_BirdVox_wav_dir)
 
 
 # Create directory corresponding to the recording unit.
 unit_str = "unit" + str(unit).zfill(2)
-in_unit_dir = os.path.join(original_clips_dir, unit_str)
-out_unit_dir = os.path.join(aug_clips_dir, unit_str)
+in_unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
+out_unit_dir = os.path.join(aug_BirdVox_wav_dir, unit_str)
 if not os.path.exists(out_unit_dir):
     os.makedirs(out_unit_dir)
 
