@@ -16,13 +16,14 @@ units = localmodule.get_units()
 args = sys.argv[1:]
 unit = int(args[0])
 aug_str = args[1]
-aug_id = int(args[2])
+instance_str = str(int(args[2]))
 
 
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start")
 print("Augmenting BirdVox-70k clips for unit " + str(unit).zfill(2))
+print("with augmentation " + aug_str + " and instance " + instance_str)
 print("jams version: {:s}'.format(jams.__version__)")
 print("librosa version: {:s}'.format(librosa.__version__)")
 print("muda version: {:s}'.format(muda.__version__)")
@@ -60,7 +61,7 @@ if aug_str[:5] == "noise":
     # negative + negative = negative
     # and
     # positive + negative = positive.
-    noise_unit_str = str(unit).zfill(2)
+    noise_unit_str = str(noise_unit).zfill(2)
     noise_unit_dir = os.path.join(original_clips_dir, unit_str)
 
     # This regular expression selects only negative, non-augmented examples
@@ -92,9 +93,34 @@ jam_paths = sorted(glob.glob(os.path.join(in_unit_dir, "*.jams")))
 
 # Loop over examples.
 for (wav_path, jam_path) in zip(wav_paths, jam_paths):
+    # Load WAV and JAMS files into muda object.
     jam_original = muda.load_jam_audio(ja_path, wav_path)
+
+    # Apply data augmentation.
     jam_transformer = transformer.transform(jam_original)
 
+    # Get jam from jam iterator. The iterator has only one element.
+    jam = next(jam_transformer)
+
+    # Split name of WAV path to remove the "_original.wav" suffix
+    original_wav_name = os.path.split(wav_path)[-1]
+    original_wav_split = original_wav_name.split("_")
+    suffix = "-".join(aug_str, instance_str)
+
+    # Generate path of augmented WAV file
+    wav_suffix = suffix + ".wav"
+    augmented_wav_split = original_wav_split[-1] + [wav_suffix]
+    augmented_wav_name = "_".join(augmented_wav_split)
+    augmented_wav_path = os.path.join(out_unit_dir, augmented_wav_name)
+
+    # Generate path of augmented JAMS file
+    jam_suffix = suffix + ".jam"
+    augmented_jam_split = original_wav_split[-1] + [jam_suffix]
+    augmented_jam_name = "_".join(augmented_jam_split)
+    augmented_jam_path = os.path.join(out_unit_dir, augmented_jam_name)
+
+    # Export augmented audio and metadata
+    muda.save(augmented_wav_path, augmented_jam_path, jam)
 
 
 # Print elapsed time.
