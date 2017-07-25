@@ -7,7 +7,7 @@ import localmodule
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
 del augmentations["original"]
-script_name = "002_augment_BirdVox-70k.py"
+script_name = "002_augment.py"
 script_path = os.path.join("..", "src", script_name)
 
 # Loop over augmentations.
