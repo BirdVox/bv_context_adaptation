@@ -10,4 +10,4 @@
 
 module purge
 
-python ../src/003_generate_BirdVox-70k_hdf5.py
+python ../src/003_save-hdf5.py
