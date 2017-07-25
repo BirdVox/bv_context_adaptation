@@ -5,7 +5,7 @@ import localmodule
 
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-augmentations.pop("original")
+del augmentations["original"]
 file_path = "002.sh"
 
 with open(file_path, "w") as f:

@@ -6,7 +6,7 @@ import localmodule
 # Define constants
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-augmentations.pop("original")
+del augmentations["original"]
 model_name = "002_augment_BirdVox-70k.py"
 
 # Loop over recording units
