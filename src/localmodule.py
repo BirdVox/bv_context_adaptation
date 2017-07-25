@@ -1,3 +1,6 @@
+import os
+
+
 def get_augmentations():
     units = get_units()
     augmentations = {("noise-unit"+str(unit).zfill(2)): 4 for unit in units}
@@ -7,9 +10,26 @@ def get_augmentations():
     return augmentations
 
 
+def get_archive_dir():
+    return "/archive/vl1019/spl2017_data"
+
+
 def get_data_dir():
 	return "/scratch/vl1019/spl2017_data"
 
 
+def get_models_dir():
+    return "/scratch/vl1019/spl2017_models"
+
+
 def get_units():
     return [1, 2, 3, 5, 7, 10]
+
+
+def rsync():
+    data_dir = get_data_dir()
+    archive_dir = get_archive_dir()
+    flags = ["-r"]
+    command_words = ["rsync"] + flags + [data_dir, archive_dir]
+    command_str = " ".join(command_words)
+    os.command(command_str)
