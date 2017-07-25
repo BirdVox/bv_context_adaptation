@@ -12,7 +12,6 @@ import localmodule
 # Define constants.
 data_dir = localmodule.get_data_dir()
 orig_sr = 24000 # the sample rate of the full night data is 24 kHz
-suffix_str = "original.wav"
 args = sys.argv[1:]
 unit_id = int(args[0])
 units = localmodule.get_units()
@@ -135,7 +134,7 @@ while false_positive_counter < n_false_positives:
         sample_str = str(prob_sample).zfill(9)
         # By convention, the frequency of a false positive example is 0 Hz.
         freq_str = str(0).zfill(5)
-        clip_list = [unit_str, sample_str, freq_str, "0", suffix_str]
+        clip_list = [unit_str, sample_str, freq_str, "0", "original.wav"]
         false_positive_counter = false_positive_counter + 1
         clip_str = "_".join(clip_list)
         # The start of the clip is 250 ms before the annotation.
