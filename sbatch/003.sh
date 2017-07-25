@@ -1,4 +1,4 @@
-# This shell script executes the Slurm job for saving the BirdVox-70k data
+# This shell script executes the Slurm job for saving the data
 # into HDF5 containers. Each HDF5 container corresponds to a different
 # unit-augmentation pair, and contains audio, JAMS metadata, as well as
 # metadata on the UTC starting time of the full night recording and
