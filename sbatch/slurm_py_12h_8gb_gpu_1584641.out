@@ -59,3 +59,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 13:41:13.113 NotebookApp] Saving file at /spl2017/src/001_generate_jams.py.ipynb
 [I 13:43:35.117 NotebookApp] Saving file at /spl2017/src/001_generate_jams.py.ipynb
 [I 15:01:09.831 NotebookApp] 302 GET /?token=68a370509e9f8e832c86642b0291113a293683e39a36c930 (::1) 0.46ms
+slurmstepd: error: *** JOB 1584641 ON gpu-25 CANCELLED AT 2017-07-25T00:13:51 DUE TO TIME LIMIT ***
