@@ -11,13 +11,14 @@ file_path = "000.sh"
 # Open shell file
 with open(file_path, "w") as f:
     # Print header
-    f.write("# This shell script executes all Slurm jobs for generating WAV files\n"
+    f.write("# This shell script executes all Slurm jobs for generating WAV files\n")
     f.write("# in BirdVox-70k.\n")
     f.write("\n")
 
     # Loop over recording units
     for unit in units:
         # Define job name
+        unit_str = "unit" + str(unit).zfill(2)
         job_name = "_".join(["000", unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
         # Write SBATCH command to shell file.

@@ -1,9 +1,9 @@
-# This shell script executes all 6 Slurm jobs for generating the BirdVox-70k
-# dataset. Every job corresponds to a different recording unit.
+# This shell script executes all Slurm jobs for generating WAV files
+# in BirdVox-70k.
 
-sbatch 000-01.sbatch
-sbatch 000-02.sbatch
-sbatch 000-03.sbatch
-sbatch 000-05.sbatch
-sbatch 000-07.sbatch
-sbatch 000-10.sbatch
+sbatch 000_unit01.sbatch
+sbatch 000_unit02.sbatch
+sbatch 000_unit03.sbatch
+sbatch 000_unit05.sbatch
+sbatch 000_unit07.sbatch
+sbatch 000_unit10.sbatch
