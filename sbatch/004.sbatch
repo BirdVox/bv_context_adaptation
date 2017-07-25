@@ -10,4 +10,4 @@
 
 module purge
 
-python ../src/004_archive_BirdVox-70k_wav.py
+python ../src/004_archive.py
