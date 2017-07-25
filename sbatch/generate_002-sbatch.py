@@ -18,7 +18,7 @@ for unit in units:
         # Loop over instances
         for aug_instance_id in range(n_aug_instances):
             aug_instance_str = str(aug_instance_id)
-            job_name = "-".join(["002", unit_str, aug_str, aug_instance_str])
+            job_name = "_".join(["002", unit_str, aug_str, aug_instance_str])
             model_list = [model_name, unit_str, aug_str, aug_instance_str]
             model_name_with_args = " ".join(model_list)
             file_name = job_name + ".sbatch"

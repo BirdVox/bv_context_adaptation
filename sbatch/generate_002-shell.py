@@ -20,7 +20,7 @@ with open(file_path, "w") as f:
             # Loop over instances
             for aug_instance_id in range(n_aug_instances):
                 aug_instance_str = str(aug_instance_id)
-                job_name = "-".join(["002", unit_str, aug_str, aug_instance_str])
+                job_name = "_".join(["002", unit_str, aug_str, aug_instance_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
                 f.write(sbatch_str + "\n")
             f.write("\n")
