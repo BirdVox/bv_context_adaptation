@@ -9,10 +9,10 @@ model_name = "000_generate_BirdVox-70k_wav.py"
 
 # Loop over recording units
 for unit in units:
-    unit_str = str(unit).zfill(2)
-    job_name = "_".join("000", unit_str)
+    unit_str = "unit" + str(unit).zfill(2)
+    job_name = "_".join(["000", unit_str])
     file_name = job_name + ".sbatch"
-    model_name_with_args = " ".join(model_name, unit_str)
+    model_name_with_args = " ".join([model_name, str(unit).zfill(2)])
     with open(file_name, "w") as f:
         f.write("#!/bin/bash\n")
         f.write("\n")
