@@ -13,18 +13,18 @@ import localmodule
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 orig_sr = localmodule.get_sample_rate()
+negative_labels = localmodule.get_negative_labels()
 clip_length = int(0.500 * orig_sr) # a clip lasts 500 ms
 args = sys.argv[1:]
-unit_id = int(args[0])
+unit_str = args[0]
 units = localmodule.get_units()
-unit = units[unit_id]
 n_units = len(units)
 
 
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Generating " + dataset_name + " clips for unit " + str(unit).zfill(2) + ".")
+print("Generating " + dataset_name + " clips for " + unit_str ".")
 print('numpy version: {:s}'.format(numpy.__version__) + ".")
 print('pandas version: {:s}'.format(pd.__version__) + ".")
 print('soundfile version: {:s}'.format(sf.__version__) + ".")
@@ -32,8 +32,8 @@ print("")
 
 
 # Create directory for original (i.e. non-augmented) clips.
-predictions_dir = os.path.join(data_dir, "random_forest_predictions")
-recordings_dir = os.path.join(data_dir, "full_night_recordings")
+predictions_dir = os.path.join(data_dir, "baseline_predictions")
+recordings_dir = os.path.join(data_dir, "audio")
 annotations_dir = os.path.join(data_dir, "annotations")
 dataset_wav_name = "_".join(dataset_name, "wav")
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
@@ -45,7 +45,6 @@ if not os.path.exists(original_dataset_wav_dir):
 
 
 # Create directory corresponding to the recording unit.
-unit_str = "unit" + str(unit).zfill(2)
 unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
 if not os.path.exists(unit_dir):
     os.makedirs(unit_dir)
@@ -73,7 +72,7 @@ for index, row in df.iterrows():
     # Compute center frequency of the annotation bounding box.
     mid_freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
     freq_str = str(int(mid_freq)).zfill(5)
-    if "Calls" in row and row["Calls"] == "alarm":
+    if "Calls" in row and row["Calls"] in negative_labels:
         label_str = "0"
         n_negative_samples = n_negative_samples + 1
     else:
@@ -94,20 +93,19 @@ for index, row in df.iterrows():
 
 
 # The number of false positives to be added to the dataset is equal to the
-# difference between the number of annotated positives (flight calls) and
-# the number of annotated negatives (alarms).
+# difference between the number of annotated positives and
+# the number of annotated negatives.
 n_false_positives = n_positive_samples - n_negative_samples
-print("Number of positives (genuine flight calls): " + str(n_positive_samples) + ".")
-print("Number of negatives (alarms): " + str(n_negative_samples) + ".")
-print("Number of false positives (clips fooling SKM-based detector): "
+print("Number of positives: " + str(n_positive_samples) + ".")
+print("Number of negatives: " + str(n_negative_samples) + ".")
+print("Number of false positives (clips fooling baseline detector): "
       + str(n_false_positives) + ".")
 print("Total number of clips: " + str(2*n_positive_samples) ".")
 print("")
 
 
-# Load probabilities of the SKM (spherical k-means) prediction model
-# developed by Justin Salamon.
-prediction_name = unit_str + "_skm_prob.npy"
+# Load probabilities of the baseline prediction model.
+prediction_name = unit_str + ".npy"
 prediction_path = os.path.join(predictions_dir, prediction_name)
 prob_matrix = np.load(prediction_path)
 
@@ -150,6 +148,7 @@ while false_positive_counter < n_false_positives:
         clip_path = os.path.join(unit_dir, clip_str)
         sf.write(clip_path, data, orig_sr)
     prob_counter = prob_counter + 1
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
