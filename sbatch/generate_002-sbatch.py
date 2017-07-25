@@ -23,8 +23,8 @@ for aug_str in augmentations:
             unit_str = "unit" + str(unit).zfill(2)
             job_name = "_".join(["002", aug_str, instance_str, unit_str])
             file_name = job_name + ".sbatch"
-            script_list = [script_path, aug_str, instance_str, unit_str]
-            script_path_with_args = " ".join(model_list)
+            script_list = [script_path, aug_str, instance_str, str(unit).zfill(2)]
+            script_path_with_args = " ".join(script_list)
             with open(file_name, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
