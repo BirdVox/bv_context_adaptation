@@ -16,6 +16,7 @@ units = localmodule.get_units()
 args = sys.argv[1:]
 unit = int(args[0])
 aug_str = args[1]
+aug_id = int(args[2])
 
 # Print header
 start_time = int(time.time())
@@ -44,42 +45,40 @@ if not os.path.exists(out_unit_dir):
     os.makedirs(out_unit_dir)
 
 # Define deformers
-if aug_str == "noise":
+if aug_str[:5] == "noise":
     # Background noise deformers
-    noise_deformers = []
-    for unit in units:
-        # For each recording unit, we create a deformer which adds a negative
-        # example (i.e. containing no flight call) to the current clip, weighted
-        # by a randomized amplitude factor ranging between 0.1 and 0.5.
-        # This does not change the label because
-        # negative + negative = negative
-        # and
-        # positive + negative = positive
-        unit_str = str(unit).zfill(2)
-        unit_dir = os.path.join(original_clips_dir, unit_str)
-        # This regular expression selects only negative, non-augmented examples
-        # for background noise
-        regexp = "*_0_original.wav"
-        names = sorted(glob.glob(os.path.join(unit_dir, regexp)))
-        unit_noise_paths = [os.path.join(unit_dir, name) for name in names]
-        unit_noise_deformer = muda.deformers.BackgroundNoise(
-            n_samples=2, files=unit_noise_paths, weight_min=0.1, weight_max=0.5)
-        noise_deformers.append(unit_noise_deformer)
+    noise_unit = int(aug_str[10:])
+    # For each recording unit, we create a deformer which adds a negative
+    # example (i.e. containing no flight call) to the current clip, weighted
+    # by a randomized amplitude factor ranging between 0.1 and 0.5.
+    # This does not change the label because
+    # negative + negative = negative
+    # and
+    # positive + negative = positive
+    noise_unit_str = str(unit).zfill(2)
+    noise_unit_dir = os.path.join(original_clips_dir, unit_str)
+    # This regular expression selects only negative, non-augmented examples
+    # for background noise
+    regexp = "*_0_original.wav"
+    names = sorted(glob.glob(os.path.join(noise_unit_dir, regexp)))
+    noise_paths = [os.path.join(noise_unit_dir, name) for name in names]
+    deformer = muda.deformers.BackgroundNoise(
+        n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
 elif aug_str == "pitch":
     # Pitch shift deformer
-    # For every clip to be augmented, we apply 4 pitch shifts whose intervals
-    # are sampled from a normal distribution with null mean and unit variance,
+    # For every clip to be augmented, we apply a pitch shift whose interval
+    # is sampled from a normal distribution with null mean and unit variance,
     # as measured in semitones according to the 12-tone equal temperament.
-    pitch_deformer = muda.deformers.RandomPitchShift(
-        n_samples=4, mean=0.0, sigma=1.0)
+    deformer = muda.deformers.RandomPitchShift(
+        n_samples=1, mean=0.0, sigma=1.0)
 elif aug_str == "stretch":
     # Time stretching deformer
-    # For every clip to be augmented, we apply 4 time stretching whose factors
+    # For every clip to be augmented, we apply a time stretching whose factor
     # are sampled from a log-normal distribution with mu=0.0 and sigma=1.0.
-    stretch_deformer = muda.deformers.RandomTimeStretch(
-        n_samples=4, location=0.0, scale=0.1)
+    deformer = muda.deformers.RandomTimeStretch(
+        n_samples=1, location=0.0, scale=0.1)
 
-deformers = noise_deformers + [pitch_deformer, stretch_deformer]
+
 wav_names = sorted(glob.glob(os.path.join(in_unit_dir)))
 
 
