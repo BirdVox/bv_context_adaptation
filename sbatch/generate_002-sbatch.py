@@ -3,25 +3,28 @@ import sys
 sys.path.append("../src")
 import localmodule
 
-# Define constants
+# Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
 del augmentations["original"]
-model_name = "002_augment_BirdVox-70k.py"
+script_name = "002_augment_BirdVox-70k.py"
+script_path = os.path.join("..", "src", script_name)
 
-# Loop over recording units
-for unit in units:
-    unit_str = str(unit).zfill(2)
-    # Loop over augmentations
-    for aug_str in augmentations:
-        n_aug_instances = augmentations[aug_str]
-        # Loop over instances
-        for aug_instance_id in range(n_aug_instances):
-            aug_instance_str = str(aug_instance_id)
-            job_name = "_".join(["002", unit_str, aug_str, aug_instance_str])
-            model_list = [model_name, unit_str, aug_str, aug_instance_str]
-            model_name_with_args = " ".join(model_list)
+# Loop over augmentations.
+for aug_str in augmentations:
+    n_instances = augmentations[aug_str]
+
+    # Loop over instances.
+    for instance_id in range(n_instances):
+        instance_str = str(instance_id)
+
+        # Loop over recording units.
+        for unit in units:
+            unit_str = "unit" + str(unit).zfill(2)
+            job_name = "_".join(["002", aug_str, instance_str, unit_str])
             file_name = job_name + ".sbatch"
+            script_list = [script_path, aug_str, instance_str, unit_str]
+            script_path_with_args = " ".join(model_list)
             with open(file_name, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
@@ -35,4 +38,4 @@ for unit in units:
                 f.write("\n")
                 f.write("module purge\n")
                 f.write("\n")
-                f.write("python ../src/" + model_name_with_args)
+                f.write("python " + script_path_with_args)
