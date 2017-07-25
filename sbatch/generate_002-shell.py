@@ -5,17 +5,24 @@ import localmodule
 
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-augmentations.remove("original")
+augmentations.pop("original")
 file_path = "002.sh"
 
 with open(file_path, "w") as f:
     f.write("# This shell script executes the Slurm jobs for data augmentation.\n")
     f.write("\n")
+    # Loop over recording units
     for unit in units:
         unit_str = str(unit).zfill(2)
+        # Loop over augmentations
         for aug_str in augmentations:
-            sbatch_str = "sbatch 002-" + unit_str + "-" + aug_str + ".sbatch"
-            f.write(sbatch_str + "\n")
+            n_aug_instances = augmentations[aug_str]
+            # Loop over instances
+            for aug_instance_id in range(n_aug_instances):
+                aug_sample_str = str(aug_instance_id)
+                job_name = "-".join(["002", unit_str, aug_str, aug_instance_str])
+                sbatch_str = "sbatch " + job_name + ".sbatch"
+                f.write(sbatch_str + "\n")
         f.write("\n")
     f.write("\n")
 
