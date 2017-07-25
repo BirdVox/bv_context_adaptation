@@ -11,7 +11,9 @@ import localmodule
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
-orig_sr = 24000 # the sample rate of the full night data is 24 kHz
+dataset_name = localmodule.get_dataset_name()
+orig_sr = localmodule.get_sample_rate()
+clip_length = int(0.500 * orig_sr) # a clip lasts 500 ms
 args = sys.argv[1:]
 unit_id = int(args[0])
 units = localmodule.get_units()
@@ -21,11 +23,11 @@ n_units = len(units)
 
 # Print header.
 start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start")
-print("Generating BirdVox-70k clips for unit " + str(unit).zfill(2) + ".")
-print('numpy version: {:s}'.format(numpy.__version__))
-print('pandas version: {:s}'.format(pd.__version__))
-print('soundfile version: {:s}'.format(sf.__version__))
+print(str(datetime.datetime.now()) + " Start.")
+print("Generating " + dataset_name + " clips for unit " + str(unit).zfill(2) + ".")
+print('numpy version: {:s}'.format(numpy.__version__) + ".")
+print('pandas version: {:s}'.format(pd.__version__) + ".")
+print('soundfile version: {:s}'.format(sf.__version__) + ".")
 print("")
 
 
@@ -33,17 +35,18 @@ print("")
 predictions_dir = os.path.join(data_dir, "random_forest_predictions")
 recordings_dir = os.path.join(data_dir, "full_night_recordings")
 annotations_dir = os.path.join(data_dir, "annotations")
-BirdVox_wav_dir = os.path.join(data_dir, "BirdVox-70k_wav")
-if not os.path.exists(BirdVox_wav_dir):
-    os.makedirs(BirdVox_wav_dir)
-original_BirdVox_wav_dir = os.path.join(BirdVox_wav_dir, "original")
-if not os.path.exists(original_BirdVox_wav_dir):
-    os.makedirs(original_BirdVox_wav_dir)
+dataset_wav_name = "_".join(dataset_name, "wav")
+dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
+if not os.path.exists(dataset_wav_dir):
+    os.makedirs(dataset_wav_dir)
+original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
+if not os.path.exists(original_dataset_wav_dir):
+    os.makedirs(original_dataset_wav_dir)
 
 
 # Create directory corresponding to the recording unit.
 unit_str = "unit" + str(unit).zfill(2)
-unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
+unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
 if not os.path.exists(unit_dir):
     os.makedirs(unit_dir)
 
@@ -64,7 +67,7 @@ n_negative_samples = 0
 for index, row in df.iterrows():
     # Compute center time of the annotation bounding box.
     mid_time = 0.5 * (row["Begin Time (s)"] + row["End Time (s)"])
-    sample = int(24000 * mid_time)
+    sample = int(orig_sr * mid_time)
     sample_str = str(sample).zfill(9)
 
     # Compute center frequency of the annotation bounding box.
@@ -79,12 +82,10 @@ for index, row in df.iterrows():
     clip_list = [unit_str, sample_str, freq_str, label_str, suffix_str]
     clip_str = "_".join(clip_list)
 
-    # The start of the clip is 250 ms before the annotation.
-    sample_start = sample - 6000
+    # Read.
+    sample_start = sample - int(0.5 * clip_length)
     full_night.seek(sample_start)
-
-    # The end of the clip is 250 ms after the annotation.
-    data = full_night.read(12000)
+    data = full_night.read(clip_length)
 
     # Export.
     clip_path = os.path.join(unit_dir, clip_str)
@@ -96,11 +97,11 @@ for index, row in df.iterrows():
 # difference between the number of annotated positives (flight calls) and
 # the number of annotated negatives (alarms).
 n_false_positives = n_positive_samples - n_negative_samples
-print("Number of positives (genuine flight calls): " + str(n_positive_samples))
-print("Number of negatives (alarms): " + str(n_negative_samples))
+print("Number of positives (genuine flight calls): " + str(n_positive_samples) + ".")
+print("Number of negatives (alarms): " + str(n_negative_samples) + ".")
 print("Number of false positives (clips fooling SKM-based detector): "
-      + str(n_false_positives))
-print("Total number of clips: " + str(2*n_positive_samples))
+      + str(n_false_positives) + ".")
+print("Total number of clips: " + str(2*n_positive_samples) ".")
 print("")
 
 
@@ -112,7 +113,7 @@ prob_matrix = np.load(prediction_path)
 
 
 # Retrieve timestamps corresponding to decreasing confidences.
-prob_samples = (prob_matrix[:, 0] * 24000).astype('int')
+prob_samples = (prob_matrix[:, 0] * orig_sr).astype('int')
 probs = prob_matrix[:, 1]
 sorting_indices = np.argsort(probs)[::-1]
 sorted_probs = probs[sorting_indices]
@@ -129,26 +130,29 @@ while false_positive_counter < n_false_positives:
     prob_sample = sorted_prob_samples[prob_counter]
     dists = [np.abs(sample-prob_sample) for sample in samples]
     min_dist = np.min(dists)
-    if min_dist > 6000:
+    if min_dist > clip_length:
+        # Append sample to growing list.
         samples.append(prob_sample)
         sample_str = str(prob_sample).zfill(9)
+
         # By convention, the frequency of a false positive example is 0 Hz.
         freq_str = str(0).zfill(5)
         clip_list = [unit_str, sample_str, freq_str, "0", "original.wav"]
         false_positive_counter = false_positive_counter + 1
         clip_str = "_".join(clip_list)
-        # The start of the clip is 250 ms before the annotation.
-        sample_start = prob_sample - 6000
+
+        # Read.
+        sample_start = prob_sample - int(0.5 * clip_length)
         full_night.seek(sample_start)
-        # The end of the clip is 250 ms after the annotation.
-        data = full_night.read(12000)
+        data = full_night.read(clip_length)
+
         # Export.
         clip_path = os.path.join(unit_dir, clip_str)
         sf.write(clip_path, data, orig_sr)
     prob_counter = prob_counter + 1
 
 # Print elapsed time.
-print(str(datetime.datetime.now()) + " Finish")
+print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
 elapsed_hours = int(elapsed_time / (60 * 60))
 elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
@@ -156,4 +160,4 @@ elapsed_seconds = elapsed_time % 60.
 elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
                                                elapsed_minutes,
                                                elapsed_seconds)
-print("Total elapsed time: " + elapsed_str)
+print("Total elapsed time: " + elapsed_str + ".")
