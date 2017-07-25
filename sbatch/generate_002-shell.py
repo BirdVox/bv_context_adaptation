@@ -24,9 +24,9 @@ with open(file_path, "w") as f:
         for instance_id in range(n_instances):
             instance_str = str(instance_id)
 
-            # Loop over recording units
+            # Loop over recording units.
             for unit in units:
-                unit_str = str(unit).zfill(2)
+                unit_str = "unit" + str(unit).zfill(2)
                 # Define job name.
                 job_name = "_".join(["002", aug_str, instance_str, unit_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
