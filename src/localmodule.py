@@ -31,7 +31,7 @@ def get_sample_rate():
 
 
 def get_units():
-    return [1, 2, 3, 5, 7, 10]
+    return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
 
 def rsync():
