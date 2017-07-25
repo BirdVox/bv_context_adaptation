@@ -10,6 +10,6 @@
 
 module purge
 
-# The integer passed to the Python script 000_generate_BirdVox-70k_wav.py
-# corresponds to the ID of the recording unit in the list [1, 2, 3, 5, 7, 10].
-python ../src/000_generate_BirdVox-70k_wav.py 02
+# The integer passed to the Python script 000_generate-wav.py
+# corresponds to the ID of the recording unit.
+python ../src/000_generate-wav.py 02

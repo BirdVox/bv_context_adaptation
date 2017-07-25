@@ -10,4 +10,7 @@
 
 module purge
 
-python ../src/002_augment_BirdVox-70k.py pitch 2 01
+# The first argument is the name of the augmentation.
+# The first argument is the instance ID of the augmentation.
+# The third argument is the ID of the recording unit.
+python ../src/002_augment.py pitch 2 01

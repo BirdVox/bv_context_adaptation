@@ -1,5 +1,4 @@
-# This shell script executes all Slurm jobs for generating WAV files
-# in BirdVox-70k.
+# This shell script executes all Slurm jobs for generating WAV files.
 
 sbatch 000_unit01.sbatch
 sbatch 000_unit02.sbatch
