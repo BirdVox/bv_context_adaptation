@@ -15,15 +15,15 @@ data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 units = localmodule.get_units()
 args = sys.argv[1:]
-unit = int(args[0])
-aug_str = args[1]
-instance_str = str(int(args[2]))
+aug_str = args[0]
+instance_str = str(int(args[1]))
+unit_str = args[2]
 
 
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Augmenting " + dataset_name + " clips for unit " + str(unit).zfill(2))
+print("Augmenting " + dataset_name + " clips for " + unit_str)
 print("with augmentation " + aug_str + " and instance " + instance_str + ".")
 print("jams version: {:s}.'.format(jams.__version__)")
 print("librosa version: {:s}.'.format(librosa.__version__)")
@@ -45,7 +45,6 @@ if not os.path.exists(aug_dataset_wav_dir):
 
 
 # Create directory corresponding to the recording unit.
-unit_str = "unit" + str(unit).zfill(2)
 in_unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
 out_unit_dir = os.path.join(aug_dataset_wav_dir, unit_str)
 if not os.path.exists(out_unit_dir):
