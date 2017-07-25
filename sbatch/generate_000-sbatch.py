@@ -9,8 +9,7 @@ script_name = "000_generate-wav.py"
 script_path = os.path.join("..", "src", script_name)
 
 # Loop over recording units
-for unit in units:
-    unit_str = "unit" + str(unit).zfill(2)
+for unit_str in units:
     job_name = "_".join(["000", unit_str])
     file_name = job_name + ".sbatch"
     script_path_with_args = " ".join([script_path, str(unit).zfill(2)])
@@ -27,6 +26,5 @@ for unit in units:
         f.write("\n")
         f.write("module purge\n")
         f.write("\n")
-        f.write("# The integer passed to the Python script 000_generate-wav.py\n")
-        f.write("# corresponds to the ID of the recording unit.\n")
+        f.write("# The argument is the name of the recording unit.\n")
         f.write("python " + script_path_with_args)
