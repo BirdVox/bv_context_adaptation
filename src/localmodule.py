@@ -26,6 +26,10 @@ def get_models_dir():
     return "/scratch/vl1019/spl2017_models"
 
 
+def get_negative_labels():
+    return ["alarm"]
+
+
 def get_sample_rate():
     return 24000 # in Hertz
 
