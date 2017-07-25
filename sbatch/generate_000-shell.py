@@ -15,9 +15,8 @@ with open(file_path, "w") as f:
     f.write("\n")
 
     # Loop over recording units
-    for unit in units:
+    for unit_str in units:
         # Define job name
-        unit_str = "unit" + str(unit).zfill(2)
         job_name = "_".join(["000", unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
         # Write SBATCH command to shell file.
