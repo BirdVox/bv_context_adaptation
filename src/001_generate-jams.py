@@ -16,7 +16,6 @@ dataset_wav_name = "_".join(dataset_name, "wav")
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
 units = localmodule.get_units()
-n_units = len(units)
 clip_duration = 0.5
 
 
@@ -32,9 +31,8 @@ print("")
 
 
 # Loop over recording units.
-for unit_id in range(n_units):
-    unit = units[unit_id]
-    unit_str = "unit" + str(unit).zfill(2)
+for unit_str in units:
+    unit_str = units[unit_id]
     unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
     names = os.listdir(unit_dir)
     names = sorted(names)
