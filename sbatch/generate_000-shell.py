@@ -11,8 +11,7 @@ file_path = "000.sh"
 # Open shell file
 with open(file_path, "w") as f:
     # Print header
-    f.write("# This shell script executes all Slurm jobs for generating WAV files\n")
-    f.write("# in BirdVox-70k.\n")
+    f.write("# This shell script executes all Slurm jobs for generating WAV files.\n")
     f.write("\n")
 
     # Loop over recording units
