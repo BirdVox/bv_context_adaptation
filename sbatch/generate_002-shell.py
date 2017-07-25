@@ -23,8 +23,8 @@ with open(file_path, "w") as f:
                 job_name = "-".join(["002", unit_str, aug_str, aug_instance_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
                 f.write(sbatch_str + "\n")
+            f.write("\n")
         f.write("\n")
-    f.write("\n")
 
 # Grant permission to execute the file
 # https://stackoverflow.com/a/30463972
