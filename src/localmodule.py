@@ -3,7 +3,7 @@ import os
 
 def get_augmentations():
     units = get_units()
-    augmentations = {("noise-unit"+str(unit).zfill(2)): 4 for unit in units}
+    augmentations = {("noise-" + unit_str): 4 for unit_str in units}
     augmentations["original"] = 1
     augmentations["pitch"] = 4
     augmentations["stretch"] = 4
