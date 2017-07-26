@@ -81,7 +81,7 @@ for index, row in df.iterrows():
     else:
         label_str = "1"
         n_positive_samples = n_positive_samples + 1
-    clip_list = [unit_str, sample_str, freq_str, label_str, suffix_str]
+    clip_list = [unit_str, sample_str, freq_str, label_str, "original.wav"]
     clip_str = "_".join(clip_list)
 
     # Read.
