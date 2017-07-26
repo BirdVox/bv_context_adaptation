@@ -12,7 +12,7 @@ import paths
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
-dataset_wav_name = "_".join(dataset_name, "wav")
+dataset_wav_name = "_".join(dataset_name, "audio")
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
 units = localmodule.get_units()
@@ -60,7 +60,7 @@ for unit_str in units:
 
         # Fill annotation metadata.
         ann.annotation_metadata.version = '1.0'
-        ann.annotation_metadata.corpus = 'BirdVox-70k'
+        ann.annotation_metadata.corpus = dataset_name
 
         # Add annotation.
         jam.annotations.append(ann)
