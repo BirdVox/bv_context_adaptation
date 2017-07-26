@@ -1,10 +1,11 @@
 import h5py
 import os
+import pandas as pd
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
-dataset_wav_name = "_".join([dataset_name, "wav"])
+dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
@@ -14,7 +15,8 @@ augmentations = localmodule.get_augmentations()
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Saving " + dataset_name + " audio data and metadata into HDF5 containers.")
-print("h5py version: {:s}.'.format(h5py.__version__)")
+print("h5py version: {:s}.".format(h5py.__version__))
+print("pandas version: {:s}.".format(pd.__version__))
 print("")
 
 
@@ -23,6 +25,12 @@ dataset_hdf5_name = "_".join([dataset_name, "hdf5"])
 dataset_hdf5_dir = os.path.join(datadir, dataset_hdf5_name)
 if not os.path.exists(dataset_hdf5_dir):
     os.makedirs(dataset_hdf5_dir)
+
+
+# Load GPS coordinates
+gps_name = "_".join([dataset_name, "gps-coordinates"])
+gps_path = os.path.join(data_dir, gps_name)
+
 
 
 # Loop over augmentations.
