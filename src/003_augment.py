@@ -74,14 +74,14 @@ if aug_str[:5] == "noise":
     deformer = muda.deformers.BackgroundNoise(
         n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
 elif aug_str == "pitch":
-    # Pitch shift deformer
+    # Pitch shift deformer.
     # For every clip to be augmented, we apply a pitch shift whose interval
     # is sampled from a normal distribution with null mean and unit variance,
     # as measured in semitones according to the 12-tone equal temperament.
     deformer = muda.deformers.RandomPitchShift(
         n_samples=1, mean=0.0, sigma=1.0)
 elif aug_str == "stretch":
-    # Time stretching deformer
+    # Time stretching deformer.
     # For every clip to be augmented, we apply a time stretching whose factor
     # are sampled from a log-normal distribution with mu=0.0 and sigma=1.0.
     deformer = muda.deformers.RandomTimeStretch(
@@ -104,24 +104,24 @@ for (wav_path, jam_path) in zip(wav_paths, jam_paths):
     # Get jam from jam iterator. The iterator has only one element.
     jam = next(jam_transformer)
 
-    # Split name of WAV path to remove the "_original.wav" suffix
+    # Split name of WAV path to remove the "_original.wav" suffix.
     original_wav_name = os.path.split(wav_path)[-1]
     original_wav_split = original_wav_name.split("_")
     suffix = "-".join(aug_str, instance_str)
 
-    # Generate path of augmented WAV file
+    # Generate path of augmented WAV file.
     wav_suffix = suffix + ".wav"
     augmented_wav_split = original_wav_split[-1] + [wav_suffix]
     augmented_wav_name = "_".join(augmented_wav_split)
     augmented_wav_path = os.path.join(out_unit_dir, augmented_wav_name)
 
-    # Generate path of augmented JAMS file
+    # Generate path of augmented JAMS file.
     jam_suffix = suffix + ".jam"
     augmented_jam_split = original_wav_split[-1] + [jam_suffix]
     augmented_jam_name = "_".join(augmented_jam_split)
     augmented_jam_path = os.path.join(out_unit_dir, augmented_jam_name)
 
-    # Export augmented audio and metadata
+    # Export augmented audio and metadata.
     muda.save(augmented_wav_path, augmented_jam_path, jam)
 
 

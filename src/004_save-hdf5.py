@@ -20,14 +20,14 @@ print("pandas version: {:s}.".format(pd.__version__))
 print("")
 
 
-# Create directory for HDF5
+# Create directory for HDF5 data.
 dataset_hdf5_name = "_".join([dataset_name, "hdf5"])
 dataset_hdf5_dir = os.path.join(datadir, dataset_hdf5_name)
 if not os.path.exists(dataset_hdf5_dir):
     os.makedirs(dataset_hdf5_dir)
 
 
-# Load GPS coordinates
+# Load GPS coordinates as Pandas dataframe.
 gps_name = "_".join([dataset_name, "gps-coordinates"])
 gps_path = os.path.join(data_dir, gps_name)
 
