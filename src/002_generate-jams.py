@@ -12,7 +12,7 @@ import paths
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
-dataset_wav_name = "_".join(dataset_name, "audio")
+dataset_wav_name = "_".join(dataset_name, "audio-clips")
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
 units = localmodule.get_units()
