@@ -11,4 +11,4 @@
 module purge
 
 # The argument is the name of the recording unit.
-python ../src/001_generate-wav.py unit01
+python ../src/001_generate-audio-clips.py unit01

@@ -13,4 +13,4 @@ module purge
 # The first argument is the name of the augmentation.
 # The second argument is the instance ID of the augmentation.
 # The third argument is the name of the recording unit.
-python ../src/003_augment.py stretch 0 unit02
+python ../src/003_augment-clips.py stretch 0 unit02

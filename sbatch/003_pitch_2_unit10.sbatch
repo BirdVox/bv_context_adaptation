@@ -13,4 +13,4 @@ module purge
 # The first argument is the name of the augmentation.
 # The second argument is the instance ID of the augmentation.
 # The third argument is the name of the recording unit.
-python ../src/003_augment.py pitch 2 unit10
+python ../src/003_augment-clips.py pitch 2 unit10
