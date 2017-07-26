@@ -32,7 +32,7 @@ print("")
 
 
 # Create directory for original (i.e. non-augmented) clips.
-predictions_name = "_".join([dataset_name, "baseline-predictions")
+predictions_name = "_".join([dataset_name, "baseline-predictions"])
 predictions_dir = os.path.join(data_dir, predictions_name)
 recordings_name = "_".join([dataset_name, "full-audio"])
 recordings_dir = os.path.join(data_dir, recordings_name)
