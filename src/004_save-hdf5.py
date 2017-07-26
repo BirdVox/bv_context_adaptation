@@ -30,7 +30,7 @@ if not os.path.exists(dataset_hdf5_dir):
 # Load GPS coordinates as Pandas dataframe.
 gps_name = "_".join([dataset_name, "gps-coordinates"])
 gps_path = os.path.join(data_dir, gps_name)
-
+gps_df = pd.read_csv(gps_path)
 
 
 # Loop over augmentations.
@@ -51,3 +51,7 @@ for aug_str in augmentations:
         for unit in units:
             unit_str = "unit" + str(unit).zfill(2)
             in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
+
+            gps_row = gps_df.loc[gps_df["Unit"] == "unit01"].iloc[0]
+            latitude = gps_row["Latitude"]
+            longitude = gps_row["Longitude"]
