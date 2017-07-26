@@ -37,7 +37,7 @@ predictions_dir = os.path.join(data_dir, predictions_name)
 recordings_name = "_".join([dataset_name, "full-audio"])
 recordings_dir = os.path.join(data_dir, recordings_name)
 annotations_name = "_".join([dataset_name, "annotations"])
-annotations_dir = os.path.join(data_dir, annotations_dir)
+annotations_dir = os.path.join(data_dir, annotations_name)
 dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 if not os.path.exists(dataset_wav_dir):
