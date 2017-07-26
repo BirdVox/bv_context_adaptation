@@ -15,7 +15,7 @@ def get_archive_dir():
 
 
 def get_data_dir():
-	return "/scratch/vl1019/spl2017_data"
+	return "/beegfs/vl1019/spl2017_data"
 
 
 def get_dataset_name():
