@@ -10,4 +10,4 @@
 
 module purge
 
-python ../src/002_generate-jams.py
+python ../src/002_generate-jams-clips.py

@@ -28,9 +28,15 @@ if not os.path.exists(dataset_hdf5_dir):
 
 
 # Load GPS coordinates as Pandas dataframe.
-gps_name = "_".join([dataset_name, "gps-coordinates"])
+gps_name = "_".join([dataset_name, "gps-coordinates.csv"])
 gps_path = os.path.join(data_dir, gps_name)
 gps_df = pd.read_csv(gps_path)
+
+
+# Load UTC starting times
+utc_name = "_".join([dataset_name, "utc-start-times.csv"])
+utc_path = os.path.join(data_dir, utc_name)
+utc_df = pd.read_csv(utc_path)
 
 
 # Loop over augmentations.
@@ -48,10 +54,14 @@ for aug_str in augmentations:
         instanced_aug_dir = os.path.join(BirdVox_wav_dir, instanced_aug_str)
 
         # Loop over recording units.
-        for unit in units:
-            unit_str = "unit" + str(unit).zfill(2)
+        for unit_str in units:
             in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
 
-            gps_row = gps_df.loc[gps_df["Unit"] == "unit01"].iloc[0]
+            # Read latitude and longitude
+            gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
             latitude = gps_row["Latitude"]
             longitude = gps_row["Longitude"]
+
+            # Read starting time
+            utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
+            utc = utc_row["UTC"]
