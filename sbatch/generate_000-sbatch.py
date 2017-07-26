@@ -12,7 +12,7 @@ script_path = os.path.join("..", "src", script_name)
 for unit_str in units:
     job_name = "_".join(["000", unit_str])
     file_name = job_name + ".sbatch"
-    script_path_with_args = " ".join([script_path, str(unit).zfill(2)])
+    script_path_with_args = " ".join([script_path, unit_str])
     with open(file_name, "w") as f:
         f.write("#!/bin/bash\n")
         f.write("\n")
