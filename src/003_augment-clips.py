@@ -28,7 +28,7 @@ print("with augmentation " + aug_str + " and instance " + instance_str + ".")
 print("jams version: {:s}.".format(jams.__version__))
 print("librosa version: {:s}.".format(librosa.__version__))
 print("muda version: {:s}.".format(muda.__version__))
-print("numpy version: {:s}.".format(numpy.__version__))
+print("numpy version: {:s}.".format(np.__version__))
 print("")
 
 
