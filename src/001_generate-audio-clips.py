@@ -100,7 +100,7 @@ print("Number of positives: " + str(n_positive_samples) + ".")
 print("Number of negatives: " + str(n_negative_samples) + ".")
 print("Number of false positives (clips fooling baseline detector): "
       + str(n_false_positives) + ".")
-print("Total number of clips: " + str(2*n_positive_samples) ".")
+print("Total number of clips: " + str(2*n_positive_samples) + ".")
 print("")
 
 
