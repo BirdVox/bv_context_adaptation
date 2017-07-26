@@ -10,6 +10,5 @@
 
 module purge
 
-# The integer passed to the Python script 000_generate-wav.py
-# corresponds to the ID of the recording unit.
-python ../src/000_generate-wav.py 02
+# The argument is the name of the recording unit.
+python ../src/000_generate-wav.py unit02
