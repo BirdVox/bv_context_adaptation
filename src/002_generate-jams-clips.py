@@ -6,7 +6,7 @@ import soundfile as sf
 import sys
 import time
 
-import paths
+import localmodule
 
 
 # Define constants.
