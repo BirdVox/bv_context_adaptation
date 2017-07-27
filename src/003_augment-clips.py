@@ -1,8 +1,9 @@
 import datetime
+import glob
 import jams
 import librosa
 import muda
-import glob
+import numpy as np
 import os
 import sys
 import time
@@ -96,7 +97,7 @@ jam_paths = sorted(glob.glob(os.path.join(in_unit_dir, "*.jams")))
 # Loop over examples.
 for (wav_path, jam_path) in zip(wav_paths, jam_paths):
     # Load WAV and JAMS files into muda object.
-    jam_original = muda.load_jam_audio(ja_path, wav_path)
+    jam_original = muda.load_jam_audio(jam_path, wav_path)
 
     # Apply data augmentation.
     jam_transformer = transformer.transform(jam_original)
