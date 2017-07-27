@@ -32,15 +32,12 @@ print("")
 
 # Loop over recording units.
 for unit_str in units:
-    unit_str = units[unit_id]
-    unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
+    unit_dir = os.path.join([original_BirdVox_wav_dir, unit_str])
     names = os.listdir(unit_dir)
     names = sorted(names)
-    n_names = len(names)
 
     # Loop over names.
-    for name_id in range(n_names):
-        name = names[name_id]
+    for name in names:
 
         # Initialize JAMS metadata file.
         jam = jams.JAMS()
