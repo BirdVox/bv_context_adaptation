@@ -55,8 +55,6 @@ if not os.path.exists(out_unit_dir):
 # Define deformers.
 if aug_str[:5] == "noise":
     # Background noise deformers.
-    noise_unit = int(aug_str[10:])
-
     # For each recording unit, we create a deformer which adds a negative
     # example (i.e. containing no flight call) to the current clip, weighted
     # by a randomized amplitude factor ranging between 0.1 and 0.5.
@@ -64,8 +62,8 @@ if aug_str[:5] == "noise":
     # negative + negative = negative
     # and
     # positive + negative = positive.
-    noise_unit_str = str(noise_unit).zfill(2)
-    noise_unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
+    noise_unit_str = aug_str[6:]
+    noise_unit_dir = os.path.join(original_dataset_wav_dir, noise_unit_str)
 
     # This regular expression selects only negative, non-augmented examples
     # for background noise.
@@ -74,7 +72,6 @@ if aug_str[:5] == "noise":
     noise_paths = [os.path.join(noise_unit_dir, name) for name in names]
     deformer = muda.deformers.BackgroundNoise(
         n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
-
 elif aug_str == "pitch":
     # Pitch shift deformer.
     # For every clip to be augmented, we apply a pitch shift whose interval
@@ -82,7 +79,6 @@ elif aug_str == "pitch":
     # as measured in semitones according to the 12-tone equal temperament.
     deformer = muda.deformers.RandomPitchShift(
         n_samples=1, mean=0.0, sigma=1.0)
-
 elif aug_str == "stretch":
     # Time stretching deformer.
     # For every clip to be augmented, we apply a time stretching whose factor
