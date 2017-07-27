@@ -98,7 +98,7 @@ for (wav_path, jam_path) in zip(wav_paths, jam_paths):
     jam_original = muda.load_jam_audio(jam_path, wav_path)
 
     # Apply data augmentation.
-    jam_transformer = transformer.transform(jam_original)
+    jam_transformer = deformer.transform(jam_original)
 
     # Get jam from jam iterator. The iterator has only one element.
     jam = next(jam_transformer)
