@@ -33,7 +33,7 @@ print("")
 
 
 # Create directory for augmented clips.
-dataset_wav_name = "_".join(dataset_name, "audio-clips")
+dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 if not os.path.exists(dataset_wav_dir):
     os.makedirs(dataset_wav_dir)
@@ -111,13 +111,13 @@ for (wav_path, jam_path) in zip(wav_paths, jam_paths):
 
     # Generate path of augmented WAV file.
     wav_suffix = suffix + ".wav"
-    augmented_wav_split = original_wav_split[-1] + [wav_suffix]
+    augmented_wav_split = original_wav_split[:-1] + [wav_suffix]
     augmented_wav_name = "_".join(augmented_wav_split)
     augmented_wav_path = os.path.join(out_unit_dir, augmented_wav_name)
 
     # Generate path of augmented JAMS file.
     jam_suffix = suffix + ".jam"
-    augmented_jam_split = original_wav_split[-1] + [jam_suffix]
+    augmented_jam_split = original_wav_split[:-1] + [jam_suffix]
     augmented_jam_name = "_".join(augmented_jam_split)
     augmented_jam_path = os.path.join(out_unit_dir, augmented_jam_name)
 
