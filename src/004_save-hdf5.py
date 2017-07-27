@@ -1,6 +1,9 @@
+import glob
+import jams
 import h5py
 import os
 import pandas as pd
+import soundfile as sf
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
@@ -16,7 +19,9 @@ start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Saving " + dataset_name + " audio data and metadata into HDF5 containers.")
 print("h5py version: {:s}.".format(h5py.__version__))
+print("jams version: {:s}.".format(jams.__version__))
 print("pandas version: {:s}.".format(pd.__version__))
+print("soundfile version: {:s}.".format(sf.__version__))
 print("")
 
 
@@ -55,13 +60,25 @@ for aug_str in augmentations:
 
         # Loop over recording units.
         for unit_str in units:
-            in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
+            # Initialize HDF5 container
+            # TODO
 
-            # Read latitude and longitude
+            # Write latitude and longitude
             gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
             latitude = gps_row["Latitude"]
             longitude = gps_row["Longitude"]
+            # TODO write
 
-            # Read starting time
+            # Write starting time
             utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
             utc = utc_row["UTC"]
+            # TODO write
+
+            # List clips in unit
+            in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
+            wav_paths = glob.glob(os.path.join(in_unit_dir, ".wav"))
+
+            # Loop over clips
+            for wav_path in wav_paths:
+                clip_name = os.path.split(wav_paths)[1]
+                jam_path = wav_path[:-4] + ".jams"
