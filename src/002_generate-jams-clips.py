@@ -32,7 +32,7 @@ print("")
 
 # Loop over recording units.
 for unit_str in units:
-    unit_dir = os.path.join(original_BirdVox_wav_dir, unit_str)
+    unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
     names = os.listdir(unit_dir)
     names = sorted(names)
 
