@@ -1,9 +1,9 @@
 import datetime
+import jams
+import librosa
+import muda
 import numpy as np
 import os
-import pandas as pd
-import soundfile as sf
-import sys
 import time
 
 import localmodule
@@ -16,7 +16,7 @@ dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
 units = localmodule.get_units()
-clip_duration = 0.5
+clip_duration = 0.5 # in seconds
 
 
 # Print header.
@@ -24,9 +24,9 @@ start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Generating " + dataset_name + " JAMS metadata.")
 print('jams version: {:s}'.format(jams.__version__))
+print('librosa version: {:s}'.format(librosa.__version__))
 print('muda version: {:s}'.format(muda.__version__))
 print('numpy version: {:s}'.format(np.__version__))
-print('librosa version: {:s}'.format(librosa.__version__))
 print("")
 
 
