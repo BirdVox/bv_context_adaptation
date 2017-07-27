@@ -23,10 +23,10 @@ clip_duration = 0.5
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Generating " + dataset_name + " JAMS metadata.")
-print('jams version: {:s}.'.format(jams.__version__))
-print('muda version: {:s}.'.format(muda.__version__))
-print('numpy version: {:s}.'.format(np.__version__))
-print('librosa version: {:s}.'.format(librosa.__version__))
+print('jams version: {:s}'.format(jams.__version__))
+print('muda version: {:s}'.format(muda.__version__))
+print('numpy version: {:s}'.format(np.__version__))
+print('librosa version: {:s}'.format(librosa.__version__))
 print("")
 
 

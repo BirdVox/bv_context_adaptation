@@ -18,10 +18,10 @@ augmentations = localmodule.get_augmentations()
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Saving " + dataset_name + " audio data and metadata into HDF5 containers.")
-print("h5py version: {:s}.".format(h5py.__version__))
-print("jams version: {:s}.".format(jams.__version__))
-print("pandas version: {:s}.".format(pd.__version__))
-print("soundfile version: {:s}.".format(sf.__version__))
+print("h5py version: {:s}".format(h5py.__version__))
+print("jams version: {:s}".format(jams.__version__))
+print("pandas version: {:s}".format(pd.__version__))
+print("soundfile version: {:s}".format(sf.__version__))
 print("")
 
 
@@ -80,5 +80,7 @@ for aug_str in augmentations:
 
             # Loop over clips
             for wav_path in wav_paths:
+                # Load WAV
+                y =
                 clip_name = os.path.split(wav_paths)[1]
                 jam_path = wav_path[:-4] + ".jams"
