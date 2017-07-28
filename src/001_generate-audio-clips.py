@@ -18,7 +18,6 @@ clip_length = int(0.500 * orig_sr) # a clip lasts 500 ms
 args = sys.argv[1:]
 unit_str = args[0]
 units = localmodule.get_units()
-n_units = len(units)
 
 
 # Print header.
