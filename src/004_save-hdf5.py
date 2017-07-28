@@ -55,7 +55,7 @@ for aug_str in augmentations:
             instanced_aug_str = aug_str
         else:
             instance_str = str(instance_id)
-            instanced_aug_str = "_".join(aug_str, instance_str)
+            instanced_aug_str = "_".join([aug_str, instance_str])
         instanced_aug_dir = os.path.join(BirdVox_wav_dir, instanced_aug_str)
 
         # Loop over recording units.
@@ -81,7 +81,6 @@ for aug_str in augmentations:
             # Loop over clips
             for wav_path in wav_paths:
                 # Load WAV
-                y =
                 clip_name = os.path.split(wav_paths)[1]
                 jam_path = wav_path[:-4] + ".jams"
 
