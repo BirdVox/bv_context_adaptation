@@ -1,3 +1,4 @@
+import itertools
 import numpy as np
 import os
 
@@ -50,7 +51,7 @@ def rsync():
 
 # We perform leave-one-unit-out cross-validation with 2 units for validation
 def split_units():
-    units = localmodule.get_units()
+    units = get_units()
     n_units = len(units)
     folds = []
     for fold_id in range(n_units):
