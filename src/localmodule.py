@@ -2,6 +2,58 @@ import itertools
 import numpy as np
 import os
 
+# This function implements the Bresenham's line algorithm in dimension one,
+# in order to produce a list of pooling lengths of length n_layers such that
+# np.prod(pool_list) * input_length = output_length
+# These pooling lengths are chosen as powers of two, in such a way that
+# the decrease in lengths between input_length and output_length is as
+# progressive as possible.
+# inspired by https://stackoverflow.com/a/19293966
+def bresenham(input_length, output_length, n_layers):
+    log2_total_pooling = np.floor(np.log2(input_length / output_length))
+    floor_log2_pooling = int(np.floor(log2_total_pooling / n_layers))
+    floor_pooling = 2**floor_log2_pooling
+    ceil_log2_pooling = floor_log2_pooling + 1
+    ceil_pooling = 2**ceil_log2_pooling
+
+    n_floors = int(n_layers * ceil_log2_pooling - log2_total_pooling)
+    n_ceils = n_layers - n_floors
+    output_length * floor_pooling**n_floors * ceil_pooling**n_ceils
+
+    floor_list = range(1, n_floors+1)
+    ceil_list = range(-1, -n_ceils-1, -1)
+
+    short_list, long_list = sorted((floor_list, ceil_list), key=len)
+    n_shorts = len(short_list)
+    n_longs = len(long_list)
+
+    if long_list[0] > 0:
+        short_pooling = ceil_pooling
+        long_pooling = floor_pooling
+    else:
+        short_pooling = floor_pooling
+        long_pooling = ceil_pooling
+
+    if n_shorts == 0:
+        pool_list = [long_pooling] * n_longs
+    elif n_shorts == 1:
+        prefix = [long_pooling] * int(np.floor(n_longs / 2))
+        suffix = [long_pooling] * int(np.ceil(n_longs / 2))
+        pool_list = prefix + [short_pooling] + suffix
+    else:
+        groups = itertools.groupby(
+            ((long_list[n_longs*i//n_layers], short_list[n_shorts*i//n_layers])
+              for i in range(n_layers)),
+              key=lambda x:x[0])
+        raw_list = [j[i] for k,g in groups for i,j in enumerate(g)]
+
+        pool_list = []
+        for n in raw_list:
+            if n < 0:
+                pool_list.append(ceil_pooling)
+            else:
+                pool_list.append(floor_pooling)
+
 
 def get_augmentations():
     units = get_units()
