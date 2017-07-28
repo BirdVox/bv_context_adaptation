@@ -6,28 +6,21 @@
 * Activate environment lostanlen_spl2017
 `source activate lostanlen_spl2017`
 
-* Install numpy 
+* Install Tensorflow (Apache License 2.0) for deep learning
+`conda install tensorflow`
 
-* Install h5py (custom license)
-`conda install h5py`
+* Install Keras (François Chollet, MIT License) for deep learning
+`conda install keras`
 
-* Install pandas (BSD 3-Clause license)
+* Install pandas (BSD 3-Clause license) for parsing annotations
 `conda install pandas`
 
-* Install librosa (Brian McFee, ISC license)
-`conda install -c conda-forge librosa`
-
-* Install pysoundfile
+* Install pysoundfile for audio I/O
 `conda install -c carlthome pysoundfile`
 
-* Install keras (François Chollet, MIT license)
-`conda install -c conda-forge keras`
-
-* Install Vesper (Harold Mills, MIT license)
-`conda install -c haroldmills vesper`
-
-* Clone and install muda v0.2 (Brian McFee, ISC license)
+* Clone and install muda v0.2 (Brian McFee, ISC license) for data augmentation
 git clone https://github.com/bmcfee/muda.git
 pip install -e muda
 
-* Install mir_eval
+* Install Vesper (Harold Mills, MIT license) for Old Bird flight call detector
+`conda install -c haroldmills vesper`
