@@ -1,9 +1,0 @@
-2017-07-27 11:01:23.365704 Start.
-Generating BirdVox-70k JAMS metadata.
-jams version: 0.3.0
-librosa version: 0.5.1
-muda version: 0.1.4
-numpy version: 1.13.1
-
-2017-07-27 11:10:10.661467 Finish.
-Total elapsed time: 00:08:47.66.

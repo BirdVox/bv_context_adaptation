@@ -58,3 +58,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 21:06:09.769 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
 [I 21:08:09.688 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
 [I 21:10:09.733 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+slurmstepd: error: *** JOB 1639181 ON gpu-28 CANCELLED AT 2017-07-28T08:13:52 DUE TO TIME LIMIT ***
