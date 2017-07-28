@@ -67,12 +67,16 @@ n_negative_samples = 0
 # Export every annotation either as positive (flight call) or negative (alarm).
 for index, row in df.iterrows():
     # Compute center time of the annotation bounding box.
-    mid_time = 0.5 * (row["Begin Time (s)"] + row["End Time (s)"])
+    begin_time = float(row["Begin Time (s)"])
+    end_time = float(row["End Time (s)"])
+    mid_time = 0.5 * (begin_time + end_time)
     sample = int(orig_sr * mid_time)
     sample_str = str(sample).zfill(9)
 
     # Compute center frequency of the annotation bounding box.
-    mid_freq = 0.5 * (row["Low Freq (Hz)"] + row["High Freq (Hz)"])
+    low_freq = float(row["Low Freq (Hz)"])
+    high_freq = float(row["High Freq (Hz)"])
+    mid_freq = 0.5 * (low_freq + high_freq)
     freq_str = str(int(mid_freq)).zfill(5)
     if "Calls" in row and row["Calls"] in negative_labels:
         label_str = "0"
