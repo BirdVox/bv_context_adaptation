@@ -1,0 +1,59 @@
+
+Jupyter server is running on: gpu-28
+Job starts at: Thu Jul 27 20:13:49 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7784:localhost:7784 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7784:localhost:7784 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 20:13:51.363 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1639181/jupyter/notebook_cookie_secret
+[I 20:13:51.997 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 20:13:51.997 NotebookApp] 0 active kernels 
+[I 20:13:51.997 NotebookApp] The Jupyter Notebook is running at: http://localhost:7784/?token=7b66192f39e4e88ea6b241741625596ce68a1f212440ec74
+[I 20:13:51.997 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 20:13:51.997 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7784/?token=7b66192f39e4e88ea6b241741625596ce68a1f212440ec74
+[I 20:47:57.543 NotebookApp] 302 GET /?token=7b66192f39e4e88ea6b241741625596ce68a1f212440ec74 (::1) 0.81ms
+[W 20:48:09.347 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170727201351 (::1) 20.50ms referer=http://localhost:7784/notebooks/spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:48:09.649 NotebookApp] Kernel started: 2cf30c5b-a419-41db-8414-40fa5c2cf001
+[I 20:50:09.689 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:52:09.647 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:52:17.766 NotebookApp] Kernel restarted: 2cf30c5b-a419-41db-8414-40fa5c2cf001
+[I 20:52:32.868 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:52:37.045 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:53:31.174 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:54:09.640 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:54:12.620 NotebookApp] Kernel restarted: 2cf30c5b-a419-41db-8414-40fa5c2cf001
+[I 20:54:44.047 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:54:56.363 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:56:09.760 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 20:58:09.704 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 21:00:09.687 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 21:01:58.692 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 21:02:01.308 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 21:06:09.769 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 21:08:09.688 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
