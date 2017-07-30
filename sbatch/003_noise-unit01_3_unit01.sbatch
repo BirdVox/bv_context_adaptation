@@ -9,6 +9,7 @@
 #SBATCH --output=slurm_003_noise-unit01_3_unit01_%j.out
 
 module purge
+module load rubberband/intel/1.8.1
 
 # The first argument is the name of the augmentation.
 # The second argument is the instance ID of the augmentation.

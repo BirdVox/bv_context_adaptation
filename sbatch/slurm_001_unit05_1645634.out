@@ -1,0 +1,13 @@
+2017-07-28 11:09:03.087436 Start.
+Generating BirdVox-70k clips for unit05.
+numpy version: 1.13.1
+pandas version: 0.20.3
+soundfile version: 0.9.0
+
+Number of positives: 5264.
+Number of negatives: 1.
+Number of false positives (clips fooling baseline detector): 5263.
+Total number of clips: 10528.
+
+2017-07-28 11:11:42.188895 Finish.
+Total elapsed time: 00:02:39.19.

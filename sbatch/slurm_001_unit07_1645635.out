@@ -1,4 +1,4 @@
-2017-07-28 10:26:59.642805 Start.
+2017-07-28 11:09:02.822528 Start.
 Generating BirdVox-70k clips for unit07.
 numpy version: 1.13.1
 pandas version: 0.20.3
@@ -9,5 +9,5 @@ Number of negatives: 1.
 Number of false positives (clips fooling baseline detector): 6529.
 Total number of clips: 13060.
 
-2017-07-28 10:32:25.713655 Finish.
-Total elapsed time: 00:05:26.71.
+2017-07-28 11:12:32.018453 Finish.
+Total elapsed time: 00:03:30.02.

@@ -1,0 +1,27 @@
+2017-07-30 02:31:12.791476 Start.
+Augmenting BirdVox-70k clips for unit01
+with augmentation noise-unit01 and instance 0.
+jams version: 0.3.0
+librosa version: 0.5.1
+muda version: 0.1.4
+numpy version: 1.13.1
+
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/jams/core.py", line 142, in _open
+    with open_map[ext](name_or_fdesc, mode=mode) as fdesc:
+KeyError: 'jam'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../src/003_augment-clips.py", line 124, in <module>
+    muda.save(augmented_wav_path, augmented_jam_path, jam)
+  File "/home/vl1019/muda/muda/core.py", line 139, in save
+    jam.save(filename_jam, strict=strict)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/jams/core.py", line 1723, in save
+    with _open(path_or_file, mode='w', fmt=fmt) as fdesc:
+  File "/home/vl1019/miniconda3/lib/python3.6/contextlib.py", line 82, in __enter__
+    return next(self.gen)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/jams/core.py", line 147, in _open
+    'format: "{:s}"'.format(ext))
+jams.exceptions.ParameterError: Unknown JAMS extension format: "jam"

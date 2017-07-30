@@ -1,0 +1,104 @@
+
+Jupyter server is running on: gpu-28
+Job starts at: Fri Jul 28 10:57:59 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7833:localhost:7833 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7833:localhost:7833 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:58:00.940 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1645602/jupyter/notebook_cookie_secret
+[I 10:58:01.293 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:58:01.293 NotebookApp] 0 active kernels 
+[I 10:58:01.293 NotebookApp] The Jupyter Notebook is running at: http://localhost:7833/?token=faafc80d670ab42c241c6113d7c78597bb23ec29ad7fe231
+[I 10:58:01.293 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:58:01.293 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7833/?token=faafc80d670ab42c241c6113d7c78597bb23ec29ad7fe231
+[I 11:01:26.630 NotebookApp] 302 GET /?token=faafc80d670ab42c241c6113d7c78597bb23ec29ad7fe231 (::1) 0.78ms
+[I 11:02:10.596 NotebookApp] Kernel started: 87f7fa0f-b5c7-44b8-b1a2-74046a8298f5
+[W 11:02:10.739 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170728105800 (::1) 8.92ms referer=http://localhost:7833/notebooks/spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 11:04:10.691 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 11:48:10.749 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 11:50:10.722 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 11:54:10.741 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 12:08:10.831 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 12:10:10.760 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 12:22:10.772 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 13:50:00.263 NotebookApp] 302 GET /?token=faafc80d670ab42c241c6113d7c78597bb23ec29ad7fe231 (::1) 0.50ms
+[W 13:50:24.654 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170728105800 (::1) 2.06ms referer=http://localhost:7833/notebooks/spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 13:50:32.955 NotebookApp] Kernel restarted: 87f7fa0f-b5c7-44b8-b1a2-74046a8298f5
+[I 13:52:24.490 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[I 13:54:24.518 NotebookApp] Saving file at /spl2017/notebooks/concatenate_BirdVox-70k.ipynb
+[W 14:34:33.994 NotebookApp] WebSocket ping timeout after 119937 ms.
+[I 15:46:12.710 NotebookApp] 302 GET /?token=faafc80d670ab42c241c6113d7c78597bb23ec29ad7fe231 (::1) 0.47ms
+[I 15:46:21.021 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 15:46:22.189 NotebookApp] Kernel started: a60453b4-6551-4422-82a3-6dc803d13f56
+[W 15:46:22.286 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170728105800 (::1) 2.05ms referer=http://localhost:7833/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 15:48:22.209 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:50:22.218 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:51:21.889 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:51:24.262 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:52:22.228 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:54:22.246 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:56:22.254 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 15:58:24.040 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[W 16:01:23.599 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170728105800 (::1) 2.06ms referer=http://localhost:7833/notebooks/spl2017/notebooks/sandbox.ipynb
+[I 16:02:22.257 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:04:22.259 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:06:22.242 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:08:22.254 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:10:22.262 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:12:22.252 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:14:22.253 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:16:22.264 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:18:22.277 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:20:22.296 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:22:22.303 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:24:22.318 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:26:22.304 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:28:22.289 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:30:22.331 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:32:22.298 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:34:22.288 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:36:23.080 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:42:22.343 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:44:22.354 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:46:22.357 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:48:22.320 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:50:22.325 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:52:22.332 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:54:22.332 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:56:22.328 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 16:58:22.349 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:00:22.348 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:02:22.359 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:04:22.357 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:06:22.362 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:08:22.361 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:08:22.743 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[I 17:08:23.430 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[W 17:46:53.131 NotebookApp] WebSocket ping timeout after 119930 ms.
+slurmstepd: error: *** JOB 1645602 ON gpu-28 CANCELLED AT 2017-07-28T22:58:11 DUE TO TIME LIMIT ***
