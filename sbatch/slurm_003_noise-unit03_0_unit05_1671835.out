@@ -1,0 +1,10 @@
+2017-07-30 11:34:46.273884 Start.
+Augmenting BirdVox-70k clips for unit05
+with augmentation noise-unit03 and instance 0.
+jams version: 0.3.0
+librosa version: 0.5.1
+muda version: 0.1.4
+numpy version: 1.13.1
+
+2017-07-30 11:42:32.474825 Finish.
+Total elapsed time: 00:07:46.47.
