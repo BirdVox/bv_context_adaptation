@@ -36,20 +36,17 @@ print("")
 # Create directory for augmented clips.
 dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
-if not os.path.exists(dataset_wav_dir):
-    os.makedirs(dataset_wav_dir)
+os.makedirs(dataset_wav_dir, exist_ok=True)
 original_dataset_wav_dir = os.path.join(dataset_wav_dir, "original")
 instanced_aug_str = "_".join([aug_str, instance_str])
 aug_dataset_wav_dir = os.path.join(dataset_wav_dir, instanced_aug_str)
-if not os.path.exists(aug_dataset_wav_dir):
-    os.makedirs(aug_dataset_wav_dir)
+os.makedirs(aug_dataset_wav_dir, exist_ok=True)
 
 
 # Create directory corresponding to the recording unit.
 in_unit_dir = os.path.join(original_dataset_wav_dir, unit_str)
 out_unit_dir = os.path.join(aug_dataset_wav_dir, unit_str)
-if not os.path.exists(out_unit_dir):
-    os.makedirs(out_unit_dir)
+os.makedirs(out_unit_dir, exist_ok=True)
 
 
 # Define deformers.
