@@ -104,24 +104,26 @@ for chunk_id in range(n_chunks):
     padded_chunk = np.concatenate((pre_padding, chunk, post_padding))
 
     # Apply Thrush filter, square, integrate, divide by delayed signal, unpad.
-    fir_thrush = scipy.signal.fftconvolve(padded_chunk, thrush_fir, mode='valid')
+    fir_thrush = scipy.signal.fftconvolve(padded_chunk, thrush_fir, mode="same")
     squared_thrush = fir_thrush * fir_thrush
-    integrated_thrush = scipy.signal.fftconvolve(squared_thrush, thrush_integrator)
+    integrated_thrush = scipy.signal.fftconvolve(squared_thrush,
+        thrush_integrator, mode="same")
     thrush_padding = np.empty(thrush_delay)
     thrush_padding.fill(integrated_thrush[0])
-    thrush_tuple = (thrush_padding, integrated_thrush, thrush_padding)
+    thrush_tuple = (thrush_padding, integrated_thrush[thrush_delay:])
     delayed_thrush = np.concatenate(thrush_tuple)
     thrush_odf = delayed_thrush / integrated_thrush
     thrush_chunk_odf = thrush_odf[chunk_padding_length:-chunk_padding_length]
     thrush_chunk_odfs.append(thrush_chunk_odf)
 
     # Apply Tseep filter, square, integrate, divide by delayed signal.
-    fir_tseep = scipy.signal.fftconvolve(signal, tseep_fir, mode='valid')
+    fir_tseep = scipy.signal.fftconvolve(padded_chunk, tseep_fir, mode="same")
     squared_tseep = fir_tseep * fir_tseep
-    integrated_tseep = scipy.signal.fftconvolve(squared_tseep, tseep_integrator)
+    integrated_tseep = scipy.signal.fftconvolve(squared_tseep,
+        tseep_integrator, mode="same")
     tseep_padding = np.empty(tseep_delay)
     tseep_padding.fill(integrated_tseep[0])
-    tseep_tuple = (tseep_padding, integrated_tseep, tseep_padding)
+    tseep_tuple = (tseep_padding, integrated_tseep[tseep_delay:])
     delayed_tseep = np.concatenate(tseep_tuple)
     tseep_odf = delayed_tseep / integrated_tseep
     tseep_chunk_odf = tseep_odf[chunk_padding_length:-chunk_padding_length]
