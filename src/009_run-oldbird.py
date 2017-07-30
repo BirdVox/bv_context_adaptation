@@ -137,8 +137,8 @@ tseep_odf = np.concatenate(tseep_chunk_odfs)
 
 # Renormalize Thrush and Tseep ODFs by their respective thresholds, and sum
 # the results to get a global ODF.
-thrush_threshold = thrush_settings.threshold
-tseep_threshold = tseep_settings.threshold
+thrush_threshold = thrush_settings.ratio_threshold
+tseep_threshold = tseep_settings.ratio_threshold
 global_odf = 0.5 * (thruh_odf/thrush_threshold + tseep_odf/tseep_threshold)
 
 
