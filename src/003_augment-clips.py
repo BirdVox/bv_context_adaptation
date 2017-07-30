@@ -106,7 +106,7 @@ for wav_path, jam_path in zip(wav_paths, jam_paths):
     # Split name of WAV path to remove the "_original.wav" suffix.
     original_wav_name = os.path.split(wav_path)[-1]
     original_wav_split = original_wav_name.split("_")
-    suffix = "-".join(aug_str, instance_str)
+    suffix = "_".join([aug_str, instance_str])
 
     # Generate path of augmented WAV file.
     wav_suffix = suffix + ".wav"
