@@ -98,7 +98,7 @@ for wav_path, jam_path in zip(wav_paths, jam_paths):
             noise_path_id = np.random.randint(0, n_noise_paths)
             noise_path = noise_paths[noise_path_id]
             deformer = muda.deformers.BackgroundNoise(
-                n_samples=1, files=noise_path, weight_min=0.1, weight_max=0.5)
+                n_samples=1, files=[noise_path], weight_min=0.1, weight_max=0.5)
 
     # Load WAV and JAMS files into muda object.
     jam_original = muda.load_jam_audio(jam_path, wav_path)
