@@ -121,7 +121,7 @@ for wav_path, jam_path in zip(wav_paths, jam_paths):
     augmented_wav_path = os.path.join(out_unit_dir, augmented_wav_name)
 
     # Generate path of augmented JAMS file.
-    jam_suffix = suffix + ".jam"
+    jam_suffix = suffix + ".jams"
     augmented_jam_split = original_wav_split[:-1] + [jam_suffix]
     augmented_jam_name = "_".join(augmented_jam_split)
     augmented_jam_path = os.path.join(out_unit_dir, augmented_jam_name)
