@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=4:00:00
+#SBATCH --time=2:00:00
 #SBATCH --mem=1GB
 #SBATCH --output=slurm_003_noise-unit05_3_unit03_%j.out
 
