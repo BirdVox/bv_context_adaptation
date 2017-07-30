@@ -70,8 +70,7 @@ if aug_str[:5] == "noise":
     regexp = "*_0_original.wav"
     names = sorted(glob.glob(os.path.join(noise_unit_dir, regexp)))
     noise_paths = [os.path.join(noise_unit_dir, name) for name in names]
-    deformer = muda.deformers.BackgroundNoise(
-        n_samples=1, files=noise_paths, weight_min=0.1, weight_max=0.5)
+    n_noise_paths = len(noise_paths)
 elif aug_str == "pitch":
     # Pitch shift deformer.
     # For every clip to be augmented, we apply a pitch shift whose interval
@@ -94,6 +93,13 @@ jam_paths = sorted(glob.glob(os.path.join(in_unit_dir, "*.jams")))
 
 # Loop over examples.
 for wav_path, jam_path in zip(wav_paths, jam_paths):
+    # Sample a background noise file uniformly at random
+    if aug_str[:5] == "noise":
+            noise_path_id = np.random.randint(0, n_noise_paths)
+            noise_path = noise_paths[noise_path_id]
+            deformer = muda.deformers.BackgroundNoise(
+                n_samples=1, files=noise_path, weight_min=0.1, weight_max=0.5)
+
     # Load WAV and JAMS files into muda object.
     jam_original = muda.load_jam_audio(jam_path, wav_path)
 
