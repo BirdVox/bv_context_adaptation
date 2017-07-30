@@ -93,7 +93,7 @@ jam_paths = sorted(glob.glob(os.path.join(in_unit_dir, "*.jams")))
 
 
 # Loop over examples.
-for (wav_path, jam_path) in zip(wav_paths, jam_paths):
+for wav_path, jam_path in zip(wav_paths, jam_paths):
     # Load WAV and JAMS files into muda object.
     jam_original = muda.load_jam_audio(jam_path, wav_path)
 
