@@ -32,9 +32,9 @@ sample_rate = localmodule.get_sample_rate()
 args = sys.argv[1:]
 unit_str = args[0]
 chunk_duration = 60.0 # in seconds
-chunk_length = chunk_duration * sample_rate
+chunk_length = int(np.round(chunk_duration * sample_rate))
 chunk_padding_duration = 0.5 # in seconds
-chunk_padding_length = chunk_padding_duration * sample_rate
+chunk_padding_length = int(np.round(chunk_padding_duration * sample_rate))
 
 
 # Print header.
