@@ -48,7 +48,7 @@ print("")
 
 
 # Design Thrush filter and integrator.
-thrush_settings = os._THRUSH_SETTINGS
+thrush_settings = ob._THRUSH_SETTINGS
 thrush_fir = design_oldbird_filter(thrush_settings)
 thrush_integration_time = thrush_settings.integration_time
 thrush_integration_length = int(round(thrush_integration_time * sample_rate))
