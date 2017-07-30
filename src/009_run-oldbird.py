@@ -97,7 +97,7 @@ for chunk_id in range(n_chunks):
 
     # Read suffix padding.
     post_padding_start = min(chunk_stop, full_audio_length-chunk_padding_length)
-    full_audio_object.seek(pos_padding_start)
+    full_audio_object.seek(post_padding_start)
     post_padding = full_audio_object.read(chunk_padding_length)
 
     # Concatenate prefix, chunk, and suffix.
