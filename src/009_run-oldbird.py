@@ -62,7 +62,7 @@ tseep_settings = ob._TSEEP_SETTINGS
 tseep_fir = design_oldbird_filter(tseep_settings)
 tseep_integration_time = tseep_settings.integration_time
 tseep_integration_length = int(round(tseep_integration_time * sample_rate))
-tseep_integrator = np.ones(tseep_integrator)
+tseep_integrator = np.ones(tseep_integration_length)
 tseep_integrator = tseep_integrator / tseep_integration_length
 tseep_delay = math.floor(tseep_settings.ratio_delay * sample_rate)
 
