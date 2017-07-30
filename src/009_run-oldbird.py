@@ -108,7 +108,7 @@ for chunk_id in range(n_chunks):
     squared_thrush = fir_thrush * fir_thrush
     integrated_thrush = scipy.signal.fftconvolve(squared_thrush, thrush_integrator)
     thrush_padding = np.empty(thrush_delay)
-    thrush_padding.fill(integrated_tseep[0])
+    thrush_padding.fill(integrated_thrush[0])
     thrush_tuple = (thrush_padding, integrated_thrush)
     delayed_thrush = np.concatenate(thrush_tuple)
     thrush_odf = delayed_thrush / integrated_thrush
