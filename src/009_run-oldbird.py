@@ -29,13 +29,23 @@ full_audio_dir = os.path.join(data_dir, full_audio_name)
 sample_rate = localmodule.get_sample_rate()
 args = sys.argv[1:]
 unit_str = args[0]
-chunk_duration = 600.0 # in seconds
+chunk_duration = 60.0 # in seconds
 chunk_length = chunk_duration * sample_rate
-chunk_padding_duration = 5.0 # in seconds
+chunk_padding_duration = 0.5 # in seconds
 chunk_padding_length = chunk_padding_duration * sample_rate
 
 
-# Design Thrush filter and integrator
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Generating " + dataset_name + " clips for " + unit_str + ".")
+print('numpy version: {:s}'.format(np.__version__))
+print('scipy version: {:s}'.format(scipy.__version__))
+print('soundfile version: {:s}'.format(sf.__version__))
+print("")
+
+
+# Design Thrush filter and integrator.
 thrush_settings = os._THRUSH_SETTINGS
 thrush_fir = design_oldbird_filter(thrush_settings)
 thrush_integration_time = thrush_settings.integration_time
@@ -43,11 +53,9 @@ thrush_integration_length = int(round(thrush_integration_time * sample_rate))
 thrush_integrator = np.ones(thrush_integration_length)
 thrush_integrator = thrush_integrator / thrush_integration_length
 thrush_delay = math.floor(thrush_settings.ratio_delay * sample_rate)
-thrush_threshold = thrush_settings.threshold
-thrush_inv_threshold = 1. / thrush_threshold
 
 
-# Design Tseep filter and integrator
+# Design Tseep filter and integrator.
 tseep_settings = ob._TSEEP_SETTINGS
 tseep_fir = design_oldbird_filter(tseep_settings)
 tseep_integration_time = tseep_settings.integration_time
@@ -55,18 +63,16 @@ tseep_integration_length = int(round(tseep_integration_time * sample_rate))
 tseep_integrator = np.ones(tseep_integrator)
 tseep_integrator = tseep_integrator / tseep_integration_length
 tseep_delay = math.floor(tseep_settings.ratio_delay * sample_rate)
-tseep_threshold = tseep_settings.threshold
-tseep_inv_threshold = 1. / tseep_threshold
 
 
-# Count number of chunks
+# Count number of chunks.
 in_unit_path = os.path.join(full_audio_dir, unit_str + ".flac")
 full_audio_object = sf.SoundFile(in_unit_path)
 full_audio_length = len(full_audio_object)
 n_chunks = int(np.ceil(full_audio_length / chunk_length))
 
 
-# Initialize lists of onset detection functions (ODF)
+# Initialize lists of onset detection functions (ODF).
 thrush_chunk_odfs = []
 tseep_chunk_odfs = []
 
@@ -95,7 +101,7 @@ for chunk_id in range(n_chunks):
     # Concatenate prefix, chunk, and suffix.
     padded_chunk = np.concatenate((pre_padding, chunk, post_padding))
 
-    # Apply Thrush filter, square, integrate, divide by delayed signal, unpad
+    # Apply Thrush filter, square, integrate, divide by delayed signal, unpad.
     fir_thrush = scipy.signal.fftconvolve(padded_chunk, thrush_fir, mode='valid')
     squared_thrush = fir_thrush * fir_thrush
     integrated_thrush = scipy.signal.fftconvolve(squared_thrush, thrush_integrator)
@@ -107,7 +113,7 @@ for chunk_id in range(n_chunks):
     thrush_chunk_odf = thrush_odf[chunk_padding_length:-chunk_padding_length]
     thrush_chunk_odfs.append(thrush_chunk_odf)
 
-    # Apply Tseep filter, square, integrate, divide by delayed signal
+    # Apply Tseep filter, square, integrate, divide by delayed signal.
     fir_tseep = scipy.signal.fftconvolve(signal, tseep_fir, mode='valid')
     squared_tseep = fir_tseep * fir_tseep
     integrated_tseep = scipy.signal.fftconvolve(squared_tseep, tseep_integrator)
@@ -120,6 +126,39 @@ for chunk_id in range(n_chunks):
     tseep_chunk_odfs.append(tseep_chunk_odf)
 
 
-# Concatenate chunk-wise ODFs to get full ODFs for the whole unit
+# Concatenate chunk-wise ODFs to get full ODFs for the whole unit.
 thrush_odf = np.concatenate(thrush_chunk_odfs)
 tseep_odf = np.concatenate(tseep_chunk_odfs)
+
+
+# Renormalize Thrush and Tseep ODFs by their respective thresholds, and sum
+# the results to get a global ODF.
+thrush_threshold = thrush_settings.threshold
+tseep_threshold = tseep_settings.threshold
+global_odf = 0.5 * (thruh_odf/thrush_threshold + tseep_odf/tseep_threshold)
+
+
+# Build numpy matrices. The first column is a timestamp, the second column is
+# the unnormalized probability.
+time = np.linspace(0, full_audio_length, endpoint=False)
+thrush_matrix = np.stack((time, thrush_odf), axis=-1)
+tseep_matrix = np.stack((time, tseep_odf), axis=-1)
+global_matrix = np.stack((time, global_odf), axis=-1)
+
+
+# Export matrices related to Thrush, Tseep, and "global".
+models_dir = localmodule.get_data_dir()
+model_name = os.path.basename(__file__).split("_")[0]
+model_dir = os.path.join(models_dir, model_dir)
+os.makedirs(model_dir, exist_ok=True)
+out_unit_dir = os.path.join(model_dir, unit_str)
+os.makedirs(out_unit_dir, exit_ok=True)
+thrush_filename = "_".join([model_name, "thrush-odf", unit_str, "0"]) + ".npy"
+thrush_path = os.path.join(out_unit_dir, thrush_filename)
+np.save(thrush_path, thrush_matrix)
+tseep_filename = "_".join([model_name, "tseep-odf", unit_str, "0"]) + ".npy"
+tseep_path = os.path.join(out_unit_dir, tseep_filename)
+np.save(tseep_path, tseep_matrix)
+global_filename = "_".join([model_name, "odf", unit_str, "0"]) + ".npy"
+global_path = os.path.join(out_unit_dir, global_filename)
+np.save(global_path, global_matrix)
