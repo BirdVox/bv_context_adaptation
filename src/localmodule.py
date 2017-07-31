@@ -115,3 +115,4 @@ def split_units():
             units[np.mod(fold_id-2, n_units)],
             units[np.mod(fold_id-1, n_units)]]
         folds.append([test_units, train_units, val_units])
+    return folds
