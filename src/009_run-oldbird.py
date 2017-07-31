@@ -157,7 +157,7 @@ model_name = os.path.basename(__file__).split("_")[0]
 model_dir = os.path.join(models_dir, model_dir)
 os.makedirs(model_dir, exist_ok=True)
 out_unit_dir = os.path.join(model_dir, unit_str)
-os.makedirs(out_unit_dir, exit_ok=True)
+os.makedirs(out_unit_dir, exist_ok=True)
 thrush_filename = "_".join([model_name, "thrush-odf", unit_str, "0"]) + ".npy"
 thrush_path = os.path.join(out_unit_dir, thrush_filename)
 np.save(thrush_path, thrush_matrix)
