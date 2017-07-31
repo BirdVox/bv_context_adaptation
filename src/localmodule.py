@@ -109,6 +109,15 @@ def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
 
+def pick_peaks(odf):
+    derivative = np.diff([x])
+    pre_slope = np.insert(derivative, 0, -np.inf)
+    post_slope = np.append(derivative, np.inf)
+    peak_bools = np.logical_and((pre_slope > 0), (post_slope < 0))
+    locations = np.where(peak_bools)[0]
+    return locations
+
+
 def rsync():
     data_dir = get_data_dir()
     archive_dir = get_archive_dir()
