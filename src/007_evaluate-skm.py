@@ -57,6 +57,7 @@ for dummy_unit_str in units:
     unit_max = np.max(peak_values)
     unit_maxima.append(unit_max)
 
+
 # Define vector of thresholds.
 global_minimum = min(unit_minima)
 global_maximum = max(unit_maxima)
@@ -68,8 +69,8 @@ thresholds = global_minimum + threshold_multipliers * global_delta
 # Load annotation as DataFrame. Restrict rows to positive labels.
 annotation_name = unit_str + ".txt"
 annotation_path = os.path.join(annotations_dir, annotation_name)
-df = pd.read_csv(annotation_path, "\t")
-relevant_rows = df.loc[~df["Calls"].isin(negative_labels)]
+annotation = pd.read_csv(annotation_path, "\t")
+relevant_rows = annotation.loc[~annotation["Calls"].isin(negative_labels)]
 begin_times = np.array(relevant_rows["Begin Time (s)"])
 end_times = np.array(relevant_rows["End Time (s)"])
 relevant = 0.5 * (begin_times+end_times)
@@ -90,6 +91,14 @@ peak_times = timestamps[peak_locations]
 peak_values = odf[peak_locations]
 
 
+# Initialize DataFrame.
+df = pd.DataFrame(
+    columns=["unit", "tolerance", "threshold", "relevant", "selected",
+             "true positives", "false positives", "false negatives",
+             "precision", "recall", "F measure"],
+    index=threshods)
+
+
 # Loop over thresholds.
 for threshold in thresholds:
     # Select values above threshold.
@@ -108,11 +117,28 @@ for threshold in thresholds:
         recall = 0.0
         fmeasure = 0.0
     else:
-        precision = true_positives / n_selected
-        recall = true_positives / n_relevant
+        precision = 100 * true_positives / n_selected
+        recall = 100 * true_positives / n_relevant
         fmeasure = 2*precision*recall / (precision+recall)
 
-    #
+    # Fill in row.
+    row_dict =
+        {"unit":unit_str, "tolerance (ms)":tolerance_ms, "threshold":threshold,
+         "relevant":n_relevant, "selected":n_selected,
+         "true positives":true_positives, "false positives":false_positives,
+         "false negatives":false_negatives,
+         "precision (%)":precision, "recall (%)":recall, "F-measure (%)":f_measure}
+    df.loc[threshold] = pandas.Series(row_dict)
+
+
+# Export DataFrame.
+model_name = "SKM"
+model_dir = os.path.join(models_dir, model_name)
+unit_dir = os.path.join(model_dir, unit_str)
+tolerance_str = "tol-" + str(tolerance_ms)
+metrics_name = "_".join([model_name, tolerance_str, unit_str, "metrics"])
+metrics_path = os.path.join(unit_dir, metrics_name + ".csv")
+df.to_csv(metrics_path)
 
 
 # Print elapsed time.
