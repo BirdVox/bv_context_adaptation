@@ -140,7 +140,7 @@ tseep_odf = np.concatenate(tseep_chunk_odfs)
 # yield nonnegative ODFs.
 thrush_threshold = thrush_settings.ratio_threshold
 tseep_threshold = tseep_settings.ratio_threshold
-global_odf = 0.5 * (thruh_odf/thrush_threshold + tseep_odf/tseep_threshold)
+global_odf = 0.5 * (thrush_odf/thrush_threshold + tseep_odf/tseep_threshold)
 
 
 # Build numpy matrices. The first column is a timestamp, the second column is
