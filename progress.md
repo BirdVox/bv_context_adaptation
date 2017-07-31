@@ -56,8 +56,8 @@ containers.
 
 6. Compute log-mel-spectrograms of full night, store into 6 HDF5 containers.
 
-6. ICASSP convnet without data augmentation: for all 6 units and 10 tolerances,
+7. ICASSP convnet without data augmentation: for all 6 units and 10 tolerances,
 train (a), predict (b), evaluate on BirdVox-70k (c), evaluate on full nights (d).
 
-7. ICASSP convnet with data augmentation: for all 6 units and 10 tolerances,
+8. ICASSP convnet with data augmentation: for all 6 units and 10 tolerances,
 train (a), predict (b), evaluate on BirdVox-70k (c), evaluate on full nights (d).
