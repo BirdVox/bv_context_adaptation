@@ -145,7 +145,7 @@ global_odf = 0.5 * (thrush_odf/thrush_threshold + tseep_odf/tseep_threshold)
 
 # Build numpy matrices. The first column is a timestamp, the second column is
 # the unnormalized probability.
-time = np.linspace(0, full_audio_length, endpoint=False)
+time = np.arange(0, full_audio_length)
 thrush_matrix = np.stack((time, thrush_odf), axis=-1)
 tseep_matrix = np.stack((time, tseep_odf), axis=-1)
 global_matrix = np.stack((time, global_odf), axis=-1)
