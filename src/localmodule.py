@@ -110,7 +110,7 @@ def get_units():
 
 
 def pick_peaks(odf):
-    derivative = np.diff([x])
+    derivative = np.diff(odf)
     pre_slope = np.insert(derivative, 0, -np.inf)
     post_slope = np.append(derivative, np.inf)
     peak_bools = np.logical_and((pre_slope > 0), (post_slope < 0))
