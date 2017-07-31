@@ -40,7 +40,7 @@ chunk_padding_length = int(np.round(chunk_padding_duration * sample_rate))
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird detectors (Thrush and Tseep) on " dataset_name +
+print("Running Old Bird detectors (Thrush and Tseep) on " + dataset_name +
     ", " + unit_str + ".")
 print('numpy version: {:s}'.format(np.__version__))
 print('scipy version: {:s}'.format(scipy.__version__))
