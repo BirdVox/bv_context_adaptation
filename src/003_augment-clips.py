@@ -78,7 +78,7 @@ elif aug_str == "pitch":
 elif aug_str == "stretch":
     # Time stretching deformer.
     # For every clip to be augmented, we apply a time stretching whose factor
-    # are sampled from a log-normal distribution with mu=0.0 and sigma=1.0.
+    # are sampled from a log-normal distribution with mu=0.0 and sigma=0.1.
     deformer = muda.deformers.RandomTimeStretch(
         n_samples=1, location=0.0, scale=0.1)
 
