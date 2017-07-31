@@ -110,8 +110,8 @@ for chunk_id in range(n_chunks):
     integrated_thrush = scipy.signal.fftconvolve(squared_thrush,
         thrush_integrator, mode="same")
     thrush_padding = np.empty(thrush_delay)
-    thrush_padding.fill(integrated_thrush[0])
-    thrush_tuple = (thrush_padding, integrated_thrush[thrush_delay:])
+    thrush_padding.fill(integrated_thrush[-1])
+    thrush_tuple = (integrated_thrush[thrush_delay:], thrush_padding)
     delayed_thrush = np.concatenate(thrush_tuple)
     thrush_odf = delayed_thrush / integrated_thrush
     thrush_chunk_odf = thrush_odf[chunk_padding_length:-chunk_padding_length]
@@ -123,8 +123,8 @@ for chunk_id in range(n_chunks):
     integrated_tseep = scipy.signal.fftconvolve(squared_tseep,
         tseep_integrator, mode="same")
     tseep_padding = np.empty(tseep_delay)
-    tseep_padding.fill(integrated_tseep[0])
-    tseep_tuple = (tseep_padding, integrated_tseep[tseep_delay:])
+    tseep_padding.fill(integrated_tseep[-1])
+    tseep_tuple = (integrated_tseep[tseep_delay:], tseep_padding)
     delayed_tseep = np.concatenate(tseep_tuple)
     tseep_odf = delayed_tseep / integrated_tseep
     tseep_chunk_odf = tseep_odf[chunk_padding_length:-chunk_padding_length]
