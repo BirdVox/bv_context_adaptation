@@ -83,7 +83,6 @@ tseep_chunk_odfs = []
 # Loop over chunks.
 for chunk_id in range(n_chunks):
     # Load audio excerpt.
-    chunk_id = 0
     chunk_start = chunk_id * chunk_length
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
 
