@@ -122,12 +122,13 @@ for threshold in thresholds:
         fmeasure = 2*precision*recall / (precision+recall)
 
     # Fill in row.
-    row_dict =
-        {"unit":unit_str, "tolerance (ms)":tolerance_ms, "threshold":threshold,
+    row_dict = {
+         "unit":unit_str, "tolerance (ms)":tolerance_ms, "threshold":threshold,
          "relevant":n_relevant, "selected":n_selected,
          "true positives":true_positives, "false positives":false_positives,
          "false negatives":false_negatives,
-         "precision (%)":precision, "recall (%)":recall, "F-measure (%)":f_measure}
+         "precision (%)":precision, "recall (%)":recall,
+         "F-measure (%)":f_measure}
     df.loc[threshold] = pandas.Series(row_dict)
 
 
