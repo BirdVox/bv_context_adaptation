@@ -17,7 +17,7 @@ annotations_dir = os.path.join(data_dir, annotations_name)
 predictions_name = "_".join([dataset_name, "baseline-predictions"])
 predictions_dir = os.path.join(data_dir, predictions_name)
 units = localmodule.get_units()
-n_thresholds = 50 #100
+n_thresholds = 5
 negative_labels = localmodule.get_negative_labels()
 args = sys.argv[1:]
 tolerance_ms = int(args[0])
@@ -95,7 +95,7 @@ peak_values = odf[peak_locations]
 df = pd.DataFrame(
     columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
-             "precision (%)", "recall (%)", "F measure (%)"])
+             "precision (%)", "recall (%)", "F1 score (%)"])
 
 
 # Loop over thresholds.
@@ -114,11 +114,11 @@ for threshold in thresholds:
     if n_selected == 0 or true_positives == 0:
         precision = 0.0
         recall = 0.0
-        f_measure = 0.0
+        f1_score = 0.0
     else:
         precision = 100 * true_positives / n_selected
         recall = 100 * true_positives / n_relevant
-        f_measure = 2*precision*recall / (precision+recall)
+        f1_score = 2*precision*recall / (precision+recall)
 
     # Fill in row.
     row_dict = {
@@ -132,7 +132,7 @@ for threshold in thresholds:
          "false negatives":str(false_negatives).rjust(5),
          "precision (%)":format(precision, ".6f").rjust(10),
          "recall (%)":format(recall, ".6f").rjust(10),
-         "F-measure (%)":format(f_measure, ".6f").rjust(10)}
+         "F1 score (%)":format(f1_score, ".6f").rjust(10)}
     df.append(pd.Series(row_dict))
 
 
