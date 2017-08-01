@@ -17,7 +17,7 @@ annotations_dir = os.path.join(data_dir, annotations_name)
 predictions_name = "_".join([dataset_name, "baseline-predictions"])
 predictions_dir = os.path.join(data_dir, predictions_name)
 units = localmodule.get_units()
-n_thresholds = 5 #100
+n_thresholds = 3 #100
 negative_labels = localmodule.get_negative_labels()
 args = sys.argv[1:]
 tolerance_ms = int(args[0])
@@ -115,11 +115,11 @@ for threshold in thresholds:
     if n_selected == 0 or true_positives == 0:
         precision = 0.0
         recall = 0.0
-        fmeasure = 0.0
+        f_measure = 0.0
     else:
         precision = 100 * true_positives / n_selected
         recall = 100 * true_positives / n_relevant
-        fmeasure = 2*precision*recall / (precision+recall)
+        f_measure = 2*precision*recall / (precision+recall)
 
     # Fill in row.
     row_dict = {
