@@ -5,7 +5,7 @@
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=4:00:00
-#SBATCH --mem=4GB
+#SBATCH --mem=16GB
 #SBATCH --output=slurm_007_tol150_unit02_%j.out
 
 module purge
