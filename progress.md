@@ -61,3 +61,6 @@ train (a), predict (b), evaluate on BirdVox-70k (c), evaluate on full nights (d)
 
 8. ICASSP convnet with data augmentation: for all 6 units and 10 tolerances,
 train (a), predict (b), evaluate on BirdVox-70k (c), evaluate on full nights (d).
+
+
+D. Snowball on UrbanSound-8K
