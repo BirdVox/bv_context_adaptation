@@ -105,6 +105,10 @@ def get_sample_rate():
     return 24000 # in Hertz
 
 
+def get_tolerances():
+    return np.arange(100, 550, 50)
+
+
 def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
