@@ -124,7 +124,7 @@ for threshold in thresholds:
          "tolerance (ms)":str(tolerance_ms),
          "threshold":format(threshold, ".15f"),
          "relevant":str(n_relevant).rjust(5),
-         "selected":str(n_selected).rjust(5),
+         "selected":str(n_selected).rjust(6),
          "true positives":str(true_positives).rjust(5),
          "false positives":str(false_positives).rjust(5),
          "false negatives":str(false_negatives).rjust(5),
@@ -139,7 +139,7 @@ df = pd.DataFrame(rows,
     columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
              "precision (%)", "recall (%)", "F1 score (%)"],
-    index=[str(i).zfill(3) for i in range(n_thresholds)])
+    index=[str(i).rjust(3) for i in range(n_thresholds)])
 model_name = "SKM"
 model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
