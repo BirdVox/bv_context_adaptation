@@ -93,9 +93,9 @@ peak_values = odf[peak_locations]
 
 # Initialize DataFrame.
 df = pd.DataFrame(
-    columns=["unit", "tolerance", "threshold", "relevant", "selected",
+    columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
-             "precision", "recall", "F measure"])
+             "precision (%)", "recall (%)", "F measure (%)"])
 
 
 # Loop over thresholds.
@@ -130,10 +130,10 @@ for threshold in thresholds:
          "true positives":str(true_positives).rjust(5),
          "false positives":str(false_positives).rjust(5),
          "false negatives":str(false_negatives).rjust(5),
-         "precision (%)":format(precision, ".6f"),
-         "recall (%)":format(recall, ".6f"),
-         "F-measure (%)":format(f_measure, ".6f")}
-    df.loc[threshold] = pd.Series(row_dict)
+         "precision (%)":format(precision, ".6f").rjust(10),
+         "recall (%)":format(recall, ".6f").rjust(10),
+         "F-measure (%)":format(f_measure, ".6f").rjust(10)}
+    df.append(pd.Series(row_dict))
 
 
 # Export DataFrame.
