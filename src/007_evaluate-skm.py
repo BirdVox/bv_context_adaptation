@@ -96,7 +96,7 @@ df = pd.DataFrame(
     columns=["unit", "tolerance", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
              "precision", "recall", "F measure"],
-    index=threshods)
+    index=thresholds)
 
 
 # Loop over thresholds.
