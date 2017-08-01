@@ -129,7 +129,7 @@ for threshold in thresholds:
          "false negatives":false_negatives,
          "precision (%)":precision, "recall (%)":recall,
          "F-measure (%)":f_measure}
-    df.loc[threshold] = pandas.Series(row_dict)
+    df.loc[threshold] = pd.Series(row_dict)
 
 
 # Export DataFrame.
