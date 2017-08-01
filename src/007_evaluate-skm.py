@@ -135,7 +135,9 @@ for threshold in thresholds:
 # Export DataFrame.
 model_name = "SKM"
 model_dir = os.path.join(models_dir, model_name)
+os.makedirs(model_dir, exist_ok=True)
 unit_dir = os.path.join(model_dir, unit_str)
+os.makedirs(unit_dir, exist_ok=True)
 tolerance_str = "tol-" + str(tolerance_ms)
 metrics_name = "_".join([model_name, tolerance_str, unit_str, "metrics"])
 metrics_path = os.path.join(unit_dir, metrics_name + ".csv")
