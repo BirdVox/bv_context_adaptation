@@ -106,7 +106,7 @@ def get_sample_rate():
 
 
 def get_tolerances():
-    return np.arange(100, 550, 50)
+    return np.arange(0.100, 0.550, 50) # in seconds
 
 
 def get_units():
