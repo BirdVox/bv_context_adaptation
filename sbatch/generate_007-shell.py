@@ -22,11 +22,12 @@ with open(file_path, "w") as f:
         # Loop over recording units
         for unit_str in units:
             # Define job name
-            tol_str = "tol-" + str(int(np.round(1000*tolerance)))
+            tol_str = "tol" + str(int(np.round(1000*tolerance)))
             job_name = "_".join(["007", tol_str, unit_str])
             sbatch_str = "sbatch " + job_name + ".sbatch"
             # Write SBATCH command to shell file.
             f.write(sbatch_str + "\n")
+        f.write("\n")
 
 
 # Grant permission to execute the shell file.
