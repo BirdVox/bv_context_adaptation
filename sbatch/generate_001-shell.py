@@ -3,20 +3,20 @@ import sys
 sys.path.append("../src")
 import localmodule
 
-# Define constants
+# Define constants.
 units = localmodule.get_units()
 file_path = "001.sh"
 
 
-# Open shell file
+# Open shell file.
 with open(file_path, "w") as f:
     # Print header
     f.write("# This shell script executes all Slurm jobs for generating WAV files.\n")
     f.write("\n")
 
-    # Loop over recording units
+    # Loop over recording units.
     for unit_str in units:
-        # Define job name
+        # Define job name.
         job_name = "_".join(["001", unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
         # Write SBATCH command to shell file.
