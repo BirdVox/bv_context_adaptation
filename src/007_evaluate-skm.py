@@ -20,7 +20,7 @@ units = localmodule.get_units()
 n_thresholds = 5 #100
 negative_labels = localmodule.get_negative_labels()
 args = sys.argv[1:]
-fold_id = args[0]
+unit_str = args[0]
 tolerance_ms = int(args[1])
 tolerance = tolerance_ms / 1000
 
