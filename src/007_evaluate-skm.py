@@ -91,12 +91,11 @@ peak_times = timestamps[peak_locations]
 peak_values = odf[peak_locations]
 
 
-# Initialize DataFrame.
+`# Initialize DataFrame.
 df = pd.DataFrame(
     columns=["unit", "tolerance", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
-             "precision", "recall", "F measure"],
-    index=thresholds)
+             "precision", "recall", "F measure"])`
 
 
 # Loop over thresholds.
@@ -123,12 +122,17 @@ for threshold in thresholds:
 
     # Fill in row.
     row_dict = {
-         "unit":unit_str, "tolerance (ms)":tolerance_ms, "threshold":threshold,
-         "relevant":n_relevant, "selected":n_selected,
-         "true positives":true_positives, "false positives":false_positives,
-         "false negatives":false_negatives,
-         "precision (%)":precision, "recall (%)":recall,
-         "F-measure (%)":f_measure}
+         "unit":unit_str,
+         "tolerance (ms)":str(tolerance_ms),
+         "threshold":format(threshold, ".15f"),
+         "relevant":str(n_relevant).rjust(5),
+         "selected":str(n_selected).rjust(5),
+         "true positives":str(true_positives).rjust(5),
+         "false positives":str(false_positives).rjust(5),
+         "false negatives":str(false_negatives).rjust(5),
+         "precision (%)":format(precision, ".6f"),
+         "recall (%)":format(recall, ".6f"),
+         "F-measure (%)":format(f_measure, ".6f")}
     df.loc[threshold] = pd.Series(row_dict)
 
 
