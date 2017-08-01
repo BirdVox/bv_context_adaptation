@@ -5,11 +5,10 @@ A. Spherical k-means model
 
 3. [DONE] Postprocessing: peak-picking, thresholding, event matching.
 
-4. [IN PROGRESS] Export metrics (n_selected, TP, FP, FN, precision, recall, F)
+4. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F)
 for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 
-5. Compute global metrics (precision, recall, F and AUC) across all 6 units and
-10 tolerances. Store in 1 CSV file.
+5. [DONE] Compute global metrics (precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
 
 
 B. Old Bird
