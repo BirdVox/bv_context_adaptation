@@ -70,7 +70,10 @@ thresholds = global_minimum + threshold_multipliers * global_delta
 annotation_name = unit_str + ".txt"
 annotation_path = os.path.join(annotations_dir, annotation_name)
 annotation = pd.read_csv(annotation_path, "\t")
-relevant_rows = annotation.loc[~annotation["Calls"].isin(negative_labels)]
+if "Calls" in annotation.columns:
+    relevant_rows = annotation.loc[~annotation["Calls"].isin(negative_labels)]
+else:
+    relevant_rows = annotation
 begin_times = np.array(relevant_rows["Begin Time (s)"])
 end_times = np.array(relevant_rows["End Time (s)"])
 relevant = 0.5 * (begin_times+end_times)
