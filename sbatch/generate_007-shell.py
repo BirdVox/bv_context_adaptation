@@ -19,10 +19,10 @@ with open(file_path, "w") as f:
 
     # Loop over tolerances
     for tolerance in tolerances:
+        tol_str = "tol" + str(int(np.round(1000*tolerance)))
         # Loop over recording units
         for unit_str in units:
             # Define job name
-            tol_str = "tol" + str(int(np.round(1000*tolerance)))
             job_name = "_".join(["007", tol_str, unit_str])
             sbatch_str = "sbatch " + job_name + ".sbatch"
             # Write SBATCH command to shell file.
