@@ -95,7 +95,7 @@ peak_values = odf[peak_locations]
 df = pd.DataFrame(
     columns=["unit", "tolerance", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
-             "precision", "recall", "F measure"])`
+             "precision", "recall", "F measure"])
 
 
 # Loop over thresholds.
