@@ -17,7 +17,7 @@ annotations_dir = os.path.join(data_dir, annotations_name)
 predictions_name = "_".join([dataset_name, "baseline-predictions"])
 predictions_dir = os.path.join(data_dir, predictions_name)
 units = localmodule.get_units()
-n_thresholds = 5
+n_thresholds = 3
 negative_labels = localmodule.get_negative_labels()
 args = sys.argv[1:]
 tolerance_ms = int(args[0])
@@ -90,13 +90,8 @@ peak_locations = localmodule.pick_peaks(odf)
 peak_times = timestamps[peak_locations]
 peak_values = odf[peak_locations]
 
-
-# Initialize DataFrame.
-df = pd.DataFrame(
-    columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
-             "true positives", "false positives", "false negatives",
-             "precision (%)", "recall (%)", "F1 score (%)"])
-
+# Initialize list of rows (stored as dicts of strings).
+rows = []
 
 # Loop over thresholds.
 for threshold in thresholds:
@@ -121,7 +116,7 @@ for threshold in thresholds:
         f1_score = 2*precision*recall / (precision+recall)
 
     # Fill in row.
-    row_dict = {
+    row = {
          "unit":unit_str,
          "tolerance (ms)":str(tolerance_ms),
          "threshold":format(threshold, ".15f"),
@@ -133,10 +128,14 @@ for threshold in thresholds:
          "precision (%)":format(precision, ".6f").rjust(10),
          "recall (%)":format(recall, ".6f").rjust(10),
          "F1 score (%)":format(f1_score, ".6f").rjust(10)}
-    df.append(pd.Series(row_dict))
+    rows.append(row)
 
 
 # Export DataFrame.
+df = pd.DataFrame(rows,
+    columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
+             "true positives", "false positives", "false negatives",
+             "precision (%)", "recall (%)", "F1 score (%)"])
 model_name = "SKM"
 model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
