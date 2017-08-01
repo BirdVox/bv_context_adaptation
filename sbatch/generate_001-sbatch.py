@@ -3,12 +3,12 @@ import sys
 sys.path.append("../src")
 import localmodule
 
-# Define constants
+# Define constants.
 units = localmodule.get_units()
 script_name = "001_generate-audio-clips.py"
 script_path = os.path.join("..", "src", script_name)
 
-# Loop over recording units
+# Loop over recording units.
 for unit_str in units:
     job_name = "_".join(["001", unit_str])
     file_name = job_name + ".sbatch"
