@@ -135,7 +135,8 @@ for threshold in thresholds:
 df = pd.DataFrame(rows,
     columns=["unit", "tolerance (ms)", "threshold", "relevant", "selected",
              "true positives", "false positives", "false negatives",
-             "precision (%)", "recall (%)", "F1 score (%)"])
+             "precision (%)", "recall (%)", "F1 score (%)"],
+    index=[str(i).zfill(3) for i in range(n_thresholds)])
 model_name = "SKM"
 model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
