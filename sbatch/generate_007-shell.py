@@ -1,3 +1,4 @@
+import numpy as np
 import os
 import sys
 sys.path.append("../src")
@@ -5,6 +6,7 @@ import localmodule
 
 # Define constants
 units = localmodule.get_units()
+tolerances = localmodule.get_tolerances()
 file_path = "007.sh"
 
 
@@ -15,13 +17,16 @@ with open(file_path, "w") as f:
     "the SKM model on all units.\n")
     f.write("\n")
 
-    # Loop over recording units
-    for unit_str in units:
-        # Define job name
-        job_name = "_".join(["007", unit_str])
-        sbatch_str = "sbatch " + job_name + ".sbatch"
-        # Write SBATCH command to shell file.
-        f.write(sbatch_str + "\n")
+    # Loop over tolerances
+    for tolerance in tolerances:
+        # Loop over recording units
+        for unit_str in units:
+            # Define job name
+            tol_str = "tol-" + str(int(np.round(1000*tolerance)))
+            job_name = "_".join(["007", tol_str, unit_str])
+            sbatch_str = "sbatch " + job_name + ".sbatch"
+            # Write SBATCH command to shell file.
+            f.write(sbatch_str + "\n")
 
 
 # Grant permission to execute the shell file.
