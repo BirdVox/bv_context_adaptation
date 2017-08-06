@@ -13,8 +13,7 @@ import localmodule
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
-# args = sys.argv[1:]                                           ENABLE
-args = ["unit01"] #                                             DISABLE
+args = sys.argv[1:]
 unit_str = args[0]
 logmelspec_settings = localmodule.get_logmelspec_settings()
 n_clips_per_chunk = 1000
