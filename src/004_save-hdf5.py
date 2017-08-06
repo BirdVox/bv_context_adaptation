@@ -5,6 +5,7 @@ import os
 import pandas as pd
 import soundfile as sf
 
+import localmodule
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
