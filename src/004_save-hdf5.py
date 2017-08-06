@@ -61,10 +61,14 @@ for aug_str in augmentations:
     for instance_id in range(n_instances):
         # Define directory for instanced augmentation.
         if aug_str == "original":
-            instanced_aug_str = aug_str
+            in_instanced_aug_dir = os.path.join(dataset_wav_dir, aug_str)
+            out_instanced_aug_dir = os.path.join(dataset_wav_dir, aug_str)
         else:
             instance_str = str(instance_id)
-            instanced_aug_str = "-".join([aug_str, instance_str])
+            in_instanced_aug_dir = os.path.join(
+                dataset_wav_dir, "_".join([aug_str, instance_str]))
+            out_instanced_aug_dir = os.path.join(
+                dataset_hdf5_dir, "-".join([aug_str, instance_str]))
 
         # Loop over recording units.
         for unit_str in units:
@@ -81,8 +85,7 @@ for aug_str in augmentations:
 
             # Write starting time
             utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
-            utc_group = f.create_group("utc_start_time")
-            utc_group["utc_start_time"] = utc_row["UTC"]
+            f["utc_start_time"] = utc_row["UTC"]
 
             # List clips in unit
             in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
