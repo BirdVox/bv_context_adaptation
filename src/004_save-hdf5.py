@@ -32,7 +32,7 @@ print("")
 
 # Create directory for HDF5 data.
 dataset_hdf5_name = "_".join([dataset_name, "hdf5"])
-dataset_hdf5_dir = os.path.join(datadir, dataset_hdf5_name)
+dataset_hdf5_dir = os.path.join(data_dir, dataset_hdf5_name)
 if not os.path.exists(dataset_hdf5_dir):
     os.makedirs(dataset_hdf5_dir)
 
