@@ -1,0 +1,55 @@
+
+Jupyter server is running on: gpu-24
+Job starts at: Wed Aug  2 11:50:29 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9592:localhost:9592 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9592:localhost:9592 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 11:50:31.115 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1719031/jupyter/notebook_cookie_secret
+[I 11:50:31.477 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 11:50:31.477 NotebookApp] 0 active kernels 
+[I 11:50:31.477 NotebookApp] The Jupyter Notebook is running at: http://localhost:9592/?token=1a8681c3cd46671b78d74a5c1318c13bb847088f9cbd383e
+[I 11:50:31.477 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:50:31.477 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9592/?token=1a8681c3cd46671b78d74a5c1318c13bb847088f9cbd383e
+[I 11:51:03.373 NotebookApp] 302 GET /?token=1a8681c3cd46671b78d74a5c1318c13bb847088f9cbd383e (::1) 0.80ms
+[I 11:51:38.800 NotebookApp] Kernel started: 6a12b34a-46e6-4a21-b092-145374a3bcb4
+[W 11:51:39.486 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170802115031 (::1) 9.50ms referer=http://localhost:9592/notebooks/spl2017/notebooks/analyze_skm_errors.ipynb
+[I 11:53:38.944 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 11:55:38.839 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 11:57:38.857 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 11:59:38.931 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:01:38.955 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:03:38.960 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:11:38.937 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:13:38.893 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:15:38.934 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:17:39.649 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[I 12:19:40.040 NotebookApp] Saving file at /spl2017/notebooks/analyze_skm_errors.ipynb
+[W 14:08:09.706 NotebookApp] WebSocket ping timeout after 118953 ms.
+slurmstepd: error: *** JOB 1719031 ON gpu-24 CANCELLED AT 2017-08-02T23:50:46 DUE TO TIME LIMIT ***

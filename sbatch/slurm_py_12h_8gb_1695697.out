@@ -106,3 +106,60 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 11:11:41.267 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
 [I 11:13:40.917 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
 [W 11:29:52.073 NotebookApp] WebSocket ping timeout after 119995 ms.
+[I 12:11:26.634 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 12:13:26.628 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 12:15:26.627 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[W 12:19:29.097 NotebookApp] WebSocket ping timeout after 119985 ms.
+[I 13:54:22.887 NotebookApp] 302 GET /?token=52bafba0fb4747b70ae96846511fdf8cdf51756613683a32 (::1) 0.51ms
+[W 13:54:48.319 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170801073709 (::1) 2.15ms referer=http://localhost:9590/notebooks/spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 13:55:49.484 NotebookApp] Kernel restarted: 0fff89cf-50b5-4a10-b5de-1393217c5655
+[I 13:56:48.225 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 13:58:48.180 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:00:03.477 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:00:48.172 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:02:48.169 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:04:48.185 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:06:48.185 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:12:48.215 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:14:48.208 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:16:48.211 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:18:48.204 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:20:48.223 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:22:48.222 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:26:48.218 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:28:48.222 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:30:48.222 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:32:48.222 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:38:48.247 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:40:48.489 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:44:48.270 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 14:46:48.291 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 15:03:05.830 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 15:42:48.360 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 15:44:48.390 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 15:46:54.768 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 15:58:48.395 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:00:48.390 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:02:48.397 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:04:48.392 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:06:48.499 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:08:48.422 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:10:48.441 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:12:48.419 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:14:48.416 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[W 16:14:58.647 NotebookApp] Notebook spl2017/notebooks/evaluate_skm.ipynb is not trusted
+[I 16:14:58.946 NotebookApp] Kernel started: 395c08e2-8423-495c-b907-64d691703e0a
+[W 16:14:59.059 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170801073709 (::1) 2.11ms referer=http://localhost:9590/notebooks/spl2017/notebooks/evaluate_skm.ipynb
+[I 16:15:03.585 NotebookApp] Saving file at /spl2017/notebooks/evaluate_skm.ipynb
+[W 16:15:06.276 NotebookApp] Notebook spl2017/notebooks/inter_call_intervals.ipynb is not trusted
+[I 16:15:06.561 NotebookApp] Kernel started: df37c23f-5802-4e2d-b31c-dca06f5b1cb7
+[W 16:15:06.732 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170801073709 (::1) 1.87ms referer=http://localhost:9590/notebooks/spl2017/notebooks/inter_call_intervals.ipynb
+[I 16:15:10.758 NotebookApp] Saving file at /spl2017/notebooks/inter_call_intervals.ipynb
+[W 16:15:10.758 NotebookApp] Saving untrusted notebook spl2017/notebooks/inter_call_intervals.ipynb
+[I 16:16:48.421 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:18:48.428 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:20:48.429 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:22:48.436 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 16:28:52.210 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 17:00:48.527 NotebookApp] Saving file at /spl2017/notebooks/summarize-skm-evaluation.ipynb
+slurmstepd: error: *** JOB 1695697 ON gpu-26 CANCELLED AT 2017-08-01T19:37:22 DUE TO TIME LIMIT ***

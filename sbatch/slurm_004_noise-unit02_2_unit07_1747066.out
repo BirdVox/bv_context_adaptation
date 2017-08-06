@@ -1,0 +1,18 @@
+2017-08-05 21:43:33.631904 Start.
+Saving BirdVox-70k audio data and metadata into HDF5 containers.
+h5py version: 2.6.0
+jams version: 0.3.0
+librosa version: 0.5.1
+pandas version: 0.20.3
+soundfile version: 0.9.0
+
+Traceback (most recent call last):
+  File "../src/004_save-hdf5.py", line 93, in <module>
+    utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/core/indexing.py", line 1328, in __getitem__
+    return self._getitem_axis(key, axis=0)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/core/indexing.py", line 1749, in _getitem_axis
+    self._is_valid_integer(key, axis)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/core/indexing.py", line 1638, in _is_valid_integer
+    raise IndexError("single positional indexer is out-of-bounds")
+IndexError: single positional indexer is out-of-bounds
