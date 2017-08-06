@@ -37,7 +37,7 @@ for aug_str in augmentations:
                 f.write("#SBATCH --nodes=1\n")
                 f.write("#SBATCH --tasks-per-node=1\n")
                 f.write("#SBATCH --cpus-per-task=1\n")
-                f.write("#SBATCH --time=1:00:00\n")
+                f.write("#SBATCH --time=3:00:00\n")
                 f.write("#SBATCH --mem=1GB\n")
                 f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
                 f.write("\n")
