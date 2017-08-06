@@ -121,16 +121,16 @@ for threshold in thresholds:
     # Fill in row.
     row = {
          "unit":unit_str,
-         "tolerance (ms)":str(tolerance_ms),
-         "threshold":format(threshold, ".15f"),
-         "relevant":str(n_relevant).rjust(5),
-         "selected":str(n_selected).rjust(6),
-         "true positives":str(true_positives).rjust(5),
-         "false positives":str(false_positives).rjust(5),
-         "false negatives":str(false_negatives).rjust(5),
-         "precision (%)":format(precision, ".6f").rjust(10),
-         "recall (%)":format(recall, ".6f").rjust(10),
-         "F1 score (%)":format(f1_score, ".6f").rjust(10)}
+         "tolerance (ms)": str(tolerance_ms),
+         "threshold": format(threshold, ".15f"),
+         "relevant": str(n_relevant).rjust(5),
+         "selected": str(n_selected).rjust(6),
+         "true positives": str(true_positives).rjust(5),
+         "false positives": str(false_positives).rjust(5),
+         "false negatives": str(false_negatives).rjust(5),
+         "precision (%)": format(precision, ".6f").rjust(10),
+         "recall (%)": format(recall, ".6f").rjust(10),
+         "F1 score (%)": format(f1_score, ".6f").rjust(10)}
     rows.append(row)
 
 
