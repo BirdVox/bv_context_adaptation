@@ -109,7 +109,6 @@ for aug_str in augmentations:
             f["sample_rate"] = sample_rate
 
 
-
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
