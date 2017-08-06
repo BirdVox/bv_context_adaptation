@@ -36,8 +36,7 @@ print("")
 # Create directory for HDF5 data.
 dataset_hdf5_name = "_".join([dataset_name, "hdf5"])
 dataset_hdf5_dir = os.path.join(data_dir, dataset_hdf5_name)
-if not os.path.exists(dataset_hdf5_dir):
-    os.makedirs(dataset_hdf5_dir)
+os.makedirs(dataset_hdf5_dir, exist_ok=True)
 
 
 # Load GPS coordinates as Pandas dataframe.
@@ -57,8 +56,7 @@ for aug_str in augmentations:
     n_instances = augmentations[aug_str]
 
     aug_dir = os.path.join(dataset_hdf5_dir, aug_str)
-    if not os.path.exists(aug_dir):
-        os.makedirs(aug_dir)
+    os.makedirs(aug_dir, exist_ok=True)
 
     # Loop over instances.
     for instance_id in range(n_instances):
