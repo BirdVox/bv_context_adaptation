@@ -61,19 +61,22 @@ for aug_str in augmentations:
     for instance_id in range(n_instances):
         # Define directory for instanced augmentation.
         if aug_str == "original":
-            in_instanced_aug_dir = os.path.join(dataset_wav_dir, aug_str)
-            out_instanced_aug_dir = os.path.join(dataset_wav_dir, aug_str)
+            in_instanced_aug_str = aug_str
+            out_instanced_aug_str = aug_str
         else:
             instance_str = str(instance_id)
-            in_instanced_aug_dir = os.path.join(
-                dataset_wav_dir, "_".join([aug_str, instance_str]))
-            out_instanced_aug_dir = os.path.join(
-                dataset_hdf5_dir, "-".join([aug_str, instance_str]))
+            in_instanced_aug_str = "_".join([aug_str, instance_str]))
+            out_instanced_aug_str = "-".join([aug_str, instance_str])
+        in_instanced_aug_dir = os.path.join(
+            dataset_wav_dir, in_instanced_aug_str)
+        out_instanced_aug_dir = os.path.join(
+            dataset_wav_dir, out_instanced_aug_str)
 
         # Loop over recording units.
         for unit_str in units:
             # Initialize HDF5 container
-            file_name = "_".join([dataset_name, instanced_aug_str, unit_str])
+            file_name = "_".join(
+                [dataset_name, out_instanced_aug_str, unit_str])
             file_path = os.path.join(aug_dir, file_name + ".hdf5")
             f = h5py.File(file_path, "w")
 
@@ -88,7 +91,7 @@ for aug_str in augmentations:
             f["utc_start_time"] = utc_row["UTC"]
 
             # List clips in unit
-            in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
+            in_unit_dir = os.path.join(in_instanced_aug_dir, unit_str)
             wav_paths = glob.glob(os.path.join(in_unit_dir, ".wav"))
 
             # Loop over clips
