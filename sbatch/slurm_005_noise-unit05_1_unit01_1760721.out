@@ -1,0 +1,10 @@
+2017-08-06 16:32:40.873360 Start.
+Computing log-mel-spectrograms (logmelspec) for BirdVox-70k.
+Unit: unit01.
+Augmentation: noise-unit05-1.
+
+h5py version: 2.6.0
+librosa version: 0.5.1
+
+2017-08-06 17:07:01.529441 Finish.
+Total elapsed time: 00:34:21.53.
