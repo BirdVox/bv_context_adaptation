@@ -2,6 +2,7 @@ import datetime
 import glob
 import jams
 import h5py
+import librosa
 import os
 import pandas as pd
 import soundfile as sf
@@ -25,6 +26,7 @@ print(str(datetime.datetime.now()) + " Start.")
 print("Saving " + dataset_name + " audio data and metadata into HDF5 containers.")
 print("h5py version: {:s}".format(h5py.__version__))
 print("jams version: {:s}".format(jams.__version__))
+print("librosa version: {:s}".format(librosa.__version__))
 print("pandas version: {:s}".format(pd.__version__))
 print("soundfile version: {:s}".format(sf.__version__))
 print("")
