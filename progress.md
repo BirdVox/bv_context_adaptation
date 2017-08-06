@@ -48,7 +48,7 @@ C. Deep learning
 
 5. [DONE] Compute log-mel-spectrograms of augmented audio, store into 6*33=198 HDF5 containers.
 
-6. Compute log-mel-spectrograms of full night, store into 6 HDF5 containers.
+6. [IN PROGRESS] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers.
 
 7. ICASSP convnet without data augmentation: for all 6 units and 10 tolerances, train (a), predict (b), evaluate on BirdVox-70k (c), evaluate on full nights (d).
 
