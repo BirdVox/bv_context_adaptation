@@ -12,7 +12,7 @@ import localmodule
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 sample_rate = localmodule.get_sample_rate()
-args = ["original", 0, "unit01"] #                          DISABLE ME
+args = ["stretch", 0, "unit01"] #                          DISABLE ME
 #args = sys.argv[1:]                                         ENABLE ME
 aug_str = args[0]
 instance_str = str(int(args[1]))
@@ -21,6 +21,7 @@ if aug_str == "original":
     instanced_aug_str = aug_str
 else:
     instanced_aug_str = "-".join([aug_str, instance_str])
+logmelspec_settings = localmodule.get_logmelspec_settings()
 
 
 # Print header.
@@ -35,16 +36,30 @@ print("librosa version: {:s}".format(librosa.__version__))
 print("")
 
 
-# Define folder for logmelspec
+# Open HDF5 container of waveforms
+hdf5_dataset_name = "_".join([dataset_name, "hdf5"])
+hdf5_dir = os.path.join(data_dir, hdf5_dataset_name)
+in_aug_dir = os.path.join(hdf5_dir, aug_str)
+in_path = os.path.join(in_aug_dir, hdf5_name + ".hdf5")
+in_file = h5py.File(in_path, "r")
+
+
+# Create HDF5 container of logmelspecs
 logmelspec_name = "_".join([dataset_name, "logmelspec"])
 logmelspec_dir = os.path.join(data_dir, logmelspec_name)
 os.makedirs(logmelspec_dir, exist_ok=True)
-aug_dir = os.path.join(logmelspec_dir, aug_str)
-os.makedirs(aug_dir, exist_ok=True)
-out_unit_dir = os.path.join(aug_dir, unit_str)
-os.makedirs(out_unit_dir, exist_ok=True)
-in_unit_dir = os.path.join(data_dir, )
+out_aug_dir = os.path.join(logmelspec_dir, aug_str)
+os.makedirs(out_aug_dir, exist_ok=True)
+hdf5_name = "_".join([dataset_name, instanced_aug_str, unit_str])
+out_path = os.path.join(out_aug_dir, hdf5_name + ".hdf5")
+out_file = h5py.File(out_path)
 
+# Copy over metadata
+out_file["gps_coordinates"] = in_file["gps_coordinates"]
+out_file["sample_rate"] =
+out_file["utc_start_time"] = in_file["utc_start_time"]
+#waveforms = in_file["waveforms"]
+#durations = [waveforms[key].shape[0] for key in waveforms.keys()]
 
 
 # Print elapsed time.
