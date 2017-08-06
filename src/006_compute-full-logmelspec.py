@@ -22,7 +22,8 @@ n_clips_per_chunk = 1000
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Computing log-mel-spectrograms (logmelspec) for full " + dataset_name + ".")
+print("Computing log-mel-spectrograms (logmelspec) for full " +
+    dataset_name + ".")
 print("Unit: " + unit_str + ".")
 print("")
 print("h5py version: {:s}".format(h5py.__version__))
