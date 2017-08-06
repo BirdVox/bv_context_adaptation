@@ -158,7 +158,11 @@ for chunk_id in range(n_chunks):
         clip_range = range(start_hop, stop_hop)
         clip_logmelspec = chunk_logmelspec[:, clip_range]
 
+        # Define clip name.
         clip_name = str(mid_sample).zfill(9)
+
+        # Store clip in HDF5 group.
+        lms_group[clip_name] = clip_logmelspec
 
 
 # Print elapsed time.
