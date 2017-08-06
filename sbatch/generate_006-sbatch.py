@@ -6,7 +6,6 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-augmentations = localmodule.get_augmentations()
 script_name = "006_compute-full-logmelspec.py"
 script_path = os.path.join("..", "src", script_name)
 
