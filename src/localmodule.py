@@ -55,7 +55,7 @@ def bresenham(input_length, output_length, n_layers):
                 pool_list.append(floor_pooling)
 
 
-# We perform leave-one-unit-out cross-validation with 2 units for validation
+# We perform leave-one-unit-out cross-validation with 2 units for validation.
 def fold_units():
     units = get_units()
     n_units = len(units)
@@ -91,6 +91,20 @@ def get_data_dir():
 
 def get_dataset_name():
     return "BirdVox-70k"
+
+
+def get_logmelspec_settings():
+    logmelspec_settings = {
+        "fmin": 2000,
+        "fmax": 11025,
+        "hop_length": 32,
+        "n_fft": 1024,
+        "n_mels": 128,
+        "sr": 22050,
+        "win_length": 256
+        "window": "hann"
+    }
+    return logmelspec_settings
 
 
 def get_models_dir():
