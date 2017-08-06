@@ -101,7 +101,7 @@ def get_logmelspec_settings():
         "n_fft": 1024,
         "n_mels": 128,
         "sr": 22050,
-        "win_length": 256
+        "win_length": 256,
         "window": "hann"
     }
     return logmelspec_settings
