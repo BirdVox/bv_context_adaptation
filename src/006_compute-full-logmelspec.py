@@ -2,17 +2,20 @@ import datetime
 import h5py
 import librosa
 import os
+import pandas as pd
 import sys
 import time
 
+sys.path.append('../src') #                                    DISABLE
 import localmodule
+
 
 
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
-sample_rate = localmodule.get_sample_rate()
-args = sys.argv[1:]
+# args = sys.argv[1:]                                           ENABLE
+args = ["unit01"] #                                             DISABLE
 unit_str = args[0]
 logmelspec_settings = localmodule.get_logmelspec_settings()
 
@@ -25,6 +28,7 @@ print("Unit: " + unit_str + ".")
 print("")
 print("h5py version: {:s}".format(h5py.__version__))
 print("librosa version: {:s}".format(librosa.__version__))
+print("pandas version: {:s}".format(pd.__version__))
 print("")
 
 
