@@ -96,10 +96,11 @@ for aug_str in augmentations:
             wav_paths = sorted(wav_paths)
 
             # Loop over clips
-            for wav_path in wav_paths:
-                # Load WAV
-                clip_name = os.path.split(wav_paths)[1]
+            for wav_path in wav_paths[:10]: # REMOVE ME
+                wav_clip = librosa.load(wav_path, sr=24000)[0]
+                clip_name = os.path.split(wav_path)[1]
                 jam_path = wav_path[:-4] + ".jams"
+
 
 
 # Print elapsed time.
