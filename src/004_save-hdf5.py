@@ -53,6 +53,10 @@ utc_df = pd.read_csv(utc_path)
 for aug_str in augmentations:
     n_instances = augmentations[aug_str]
 
+    aug_dir = os.path.join(dataset_hdf5_dir, aug_str)
+    if not os.path.exists(aug_dir):
+        os.makedirs(aug_dir)
+
     # Loop over instances.
     for instance_id in range(n_instances):
         # Define directory for instanced augmentation.
@@ -60,24 +64,25 @@ for aug_str in augmentations:
             instanced_aug_str = aug_str
         else:
             instance_str = str(instance_id)
-            instanced_aug_str = "_".join([aug_str, instance_str])
-        instanced_aug_dir = os.path.join(BirdVox_wav_dir, instanced_aug_str)
+            instanced_aug_str = "-".join([aug_str, instance_str])
 
         # Loop over recording units.
         for unit_str in units:
             # Initialize HDF5 container
-            # TODO
+            file_name = "_".join([dataset_name, instanced_aug_str, unit_str])
+            file_path = os.path.join(aug_dir, file_name + ".hdf5")
+            f = h5py.File(file_path, "w")
 
             # Write latitude and longitude
             gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
-            latitude = gps_row["Latitude"]
-            longitude = gps_row["Longitude"]
-            # TODO write
+            gps_group = f.create_group("gps_coordinates")
+            gps_group["latitude"] = gps_row["Latitude"]
+            gps_group["longitude"] = gps_row["Longitude"]
 
             # Write starting time
             utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
-            utc = utc_row["UTC"]
-            # TODO write
+            utc_group = f.create_group("utc_start_time")
+            utc_group["utc_start_time"] = utc_row["UTC"]
 
             # List clips in unit
             in_unit_dir = os.path.join(instanced_aug_dir, unit_str)
