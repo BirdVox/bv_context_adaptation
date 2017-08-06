@@ -18,6 +18,7 @@ dataset_wav_name = "_".join([dataset_name, "audio-clips"])
 dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
+sample_rate = localmodule.get_sample_rate()
 
 
 # Print header.
@@ -45,7 +46,7 @@ gps_path = os.path.join(data_dir, gps_name)
 gps_df = pd.read_csv(gps_path)
 
 
-# Load UTC starting times
+# Load UTC starting times.
 utc_name = "_".join([dataset_name, "utc-start-times.csv"])
 utc_path = os.path.join(data_dir, utc_name)
 utc_df = pd.read_csv(utc_path)
@@ -76,32 +77,43 @@ for aug_str in augmentations:
 
         # Loop over recording units.
         for unit_str in units:
-            # Initialize HDF5 container
+            # Initialize HDF5 container.
             file_name = "_".join(
                 [dataset_name, out_instanced_aug_str, unit_str])
             file_path = os.path.join(aug_dir, file_name + ".hdf5")
             f = h5py.File(file_path, "w")
 
-            # Write latitude and longitude
+            # Write latitude and longitude.
             gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
             gps_group = f.create_group("gps_coordinates")
             gps_group["latitude"] = gps_row["Latitude"]
             gps_group["longitude"] = gps_row["Longitude"]
 
-            # Write starting time
+            # Write starting time.
             utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
             f["utc_start_time"] = utc_row["UTC"]
 
-            # List clips in unit
+            # List clips in unit.
             in_unit_dir = os.path.join(in_instanced_aug_dir, unit_str)
             wav_paths = glob.glob(os.path.join(in_unit_dir, "*.wav"))
             wav_paths = sorted(wav_paths)
 
-            # Loop over clips
+            # Loop over clips.
             for wav_path in wav_paths[:10]: # REMOVE ME
-                wav_clip = librosa.load(wav_path, sr=24000)[0]
-                clip_name = os.path.split(wav_path)[1]
+                # Create group for clip.
+                clip_group = f.create_group(os.path.split(wav_path)[1])
+
+                # Load and write waveform.
+                waveform = librosa.load(wav_path, sr=sample_rate)[0]
+                clip_group["waveform"] = waveform
+
+                # Load and write metadata.
                 jam_path = wav_path[:-4] + ".jams"
+                jam = jams.load(jam_path)
+                clip_group["jams"] = jam
+
+            # Write sample rate
+            f["sample_rate"] = sample_rate
 
 
 
