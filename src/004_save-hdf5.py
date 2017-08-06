@@ -93,6 +93,7 @@ for aug_str in augmentations:
             # List clips in unit
             in_unit_dir = os.path.join(in_instanced_aug_dir, unit_str)
             wav_paths = glob.glob(os.path.join(in_unit_dir, "*.wav"))
+            wav_paths = sorted(wav_paths)
 
             # Loop over clips
             for wav_path in wav_paths:
