@@ -44,9 +44,9 @@ C. Deep learning
 
 3. [DONE] Augment audio data: 33 augmentations.
 
-4. [IN PROGRESS] Store augmented audio into 6*33=198 HDF5 containers.
+4. [DONE] Store augmented audio into 6*33=198 HDF5 containers.
 
-5. Compute log-mel-spectrograms of augmented audio, store into 6*33=198 HDF5 containers.
+5. [IN PROGRESS] Compute log-mel-spectrograms of augmented audio, store into 6*33=198 HDF5 containers.
 
 6. Compute log-mel-spectrograms of full night, store into 6 HDF5 containers.
 
