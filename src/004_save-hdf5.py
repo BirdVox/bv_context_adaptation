@@ -65,7 +65,7 @@ for aug_str in augmentations:
             out_instanced_aug_str = aug_str
         else:
             instance_str = str(instance_id)
-            in_instanced_aug_str = "_".join([aug_str, instance_str]))
+            in_instanced_aug_str = "_".join([aug_str, instance_str])
             out_instanced_aug_str = "-".join([aug_str, instance_str])
         in_instanced_aug_dir = os.path.join(
             dataset_wav_dir, in_instanced_aug_str)
