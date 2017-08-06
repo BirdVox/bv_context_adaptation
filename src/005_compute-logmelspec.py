@@ -36,7 +36,7 @@ print("librosa version: {:s}".format(librosa.__version__))
 print("")
 
 
-# Open HDF5 container of waveforms
+# Open HDF5 container of waveforms.
 hdf5_dataset_name = "_".join([dataset_name, "hdf5"])
 hdf5_dir = os.path.join(data_dir, hdf5_dataset_name)
 in_aug_dir = os.path.join(hdf5_dir, aug_str)
@@ -46,7 +46,7 @@ in_file = h5py.File(in_path, "r")
 sample_rate = in_file["sample_rate"].value
 
 
-# Create HDF5 container of logmelspecs
+# Create HDF5 container of logmelspecs.
 logmelspec_name = "_".join([dataset_name, "logmelspec"])
 logmelspec_dir = os.path.join(data_dir, logmelspec_name)
 os.makedirs(logmelspec_dir, exist_ok=True)
@@ -56,7 +56,7 @@ out_path = os.path.join(out_aug_dir, hdf5_name + ".hdf5")
 out_file = h5py.File(out_path)
 
 
-# Copy over metadata
+# Copy over metadata.
 out_file["dataset_name"] = localmodule.get_dataset_name()
 out_file["unit"] = unit_str
 out_file["augmentation"] = aug_str
@@ -76,21 +76,21 @@ settings_group["win_length"] = logmelspec_settings["win_length"]
 settings_group["window"] = logmelspec_settings["window"]
 
 
-# List clips
+# List clips.
 lms_group = out_file.create_group("logmelspec")
 clip_names = list(in_file["waveforms"].keys())
 
 
-# Loop over clips
+# Loop over clips.
 for clip_name in clip_names:
-    # Load waveform
+    # Load waveform.
     waveform = in_file["waveforms"][clip_name].value
 
-    # Resample to 22050 Hz
+    # Resample to 22050 Hz.
     waveform = librosa.resample(
         waveform, sample_rate, logmelspec_settings["sr"])
 
-    # Compute Short-Term Fourier Transform (STFT)
+    # Compute Short-Term Fourier Transform (STFT).
     stft = librosa.stft(
         waveform,
         n_fft=logmelspec_settings["n_fft"],
@@ -98,10 +98,10 @@ for clip_name in clip_names:
         hop_length=logmelspec_settings["hop_length"],
         window=logmelspec_settings["window"])
 
-    # Compute squared magnitude coefficients
+    # Compute squared magnitude coefficients.
     abs2_stft = (stft.real*stft.real) + (stft.imag*stft.imag)
 
-    # Gather frequency bins according to the Mel scale
+    # Gather frequency bins according to the Mel scale.
     melspec = librosa.feature.melspectrogram(
         y=None,
         S=abs2_stft,
@@ -112,13 +112,13 @@ for clip_name in clip_names:
         fmin=logmelspec_settings["fmin"],
         fmax=logmelspec_settings["fmax"])
 
-    # Apply pointwise base-10 logarithm
+    # Apply pointwise base-10 logarithm.
     logmelspec = 0.5 * librosa.logamplitude(melspec, ref=1.0)
 
-    # Convert to single floating-point precision
+    # Convert to single floating-point precision.
     logmelspec = logmelspec.astype('float32')
 
-    # Save
+    # Save.
     lms_group[clip_name] = logmelspec
 
 
