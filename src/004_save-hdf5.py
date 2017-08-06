@@ -99,18 +99,11 @@ for aug_str in augmentations:
             wav_paths = sorted(wav_paths)
 
             # Loop over clips.
-            for wav_path in wav_paths[:10]: # REMOVE ME
-                # Create group for clip.
-                clip_group = f.create_group(os.path.split(wav_path)[1])
-
-                # Load and write waveform.
+            waveform_group = f.create_group("waveforms")
+            for wav_path in wav_paths:
                 waveform = librosa.load(wav_path, sr=sample_rate)[0]
-                clip_group["waveform"] = waveform
-
-                # Load and write metadata.
-                jam_path = wav_path[:-4] + ".jams"
-                jam = jams.load(jam_path)
-                clip_group["jams"] = jam
+                clip_name = os.path.split(wav_path)[1][:-4]
+                waveform_group[clip_name] = waveform
 
             # Write sample rate
             f["sample_rate"] = sample_rate
