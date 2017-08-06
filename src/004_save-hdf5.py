@@ -6,6 +6,7 @@ import librosa
 import os
 import pandas as pd
 import soundfile as sf
+import sys
 import time
 
 import localmodule
@@ -19,6 +20,10 @@ dataset_wav_dir = os.path.join(data_dir, dataset_wav_name)
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
 sample_rate = localmodule.get_sample_rate()
+args = sys.argv[1:]
+aug_str = args[0]
+instance_str = str(int(args[1]))
+unit_str = args[2]
 
 
 # Print header.
@@ -51,60 +56,61 @@ utc_path = os.path.join(data_dir, utc_name)
 utc_df = pd.read_csv(utc_path)
 
 
-# Loop over augmentations.
-for aug_str in augmentations:
-    n_instances = augmentations[aug_str]
+# Create folder for augmentation
+n_instances = augmentations[aug_str]
+aug_dir = os.path.join(dataset_hdf5_dir, aug_str)
+os.makedirs(aug_dir, exist_ok=True)
 
-    aug_dir = os.path.join(dataset_hdf5_dir, aug_str)
-    os.makedirs(aug_dir, exist_ok=True)
 
-    # Loop over instances.
-    for instance_id in range(n_instances):
-        # Define directory for instanced augmentation.
-        if aug_str == "original":
-            in_instanced_aug_str = aug_str
-            out_instanced_aug_str = aug_str
-        else:
-            instance_str = str(instance_id)
-            in_instanced_aug_str = "_".join([aug_str, instance_str])
-            out_instanced_aug_str = "-".join([aug_str, instance_str])
-        in_instanced_aug_dir = os.path.join(
-            dataset_wav_dir, in_instanced_aug_str)
-        out_instanced_aug_dir = os.path.join(
-            dataset_wav_dir, out_instanced_aug_str)
+# Define directory for instanced augmentation.
+if aug_str == "original":
+    in_instanced_aug_str = aug_str
+    out_instanced_aug_str = aug_str
+else:
+    instance_str = str(instance_id)
+    in_instanced_aug_str = "_".join([aug_str, instance_str])
+    out_instanced_aug_str = "-".join([aug_str, instance_str])
+in_instanced_aug_dir = os.path.join(
+    dataset_wav_dir, in_instanced_aug_str)
+out_instanced_aug_dir = os.path.join(
+    dataset_wav_dir, out_instanced_aug_str)
 
-        # Loop over recording units.
-        for unit_str in units:
-            # Initialize HDF5 container.
-            file_name = "_".join(
-                [dataset_name, out_instanced_aug_str, unit_str])
-            file_path = os.path.join(aug_dir, file_name + ".hdf5")
-            f = h5py.File(file_path, "w")
 
-            # Write latitude and longitude.
-            gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
-            gps_group = f.create_group("gps_coordinates")
-            gps_group["latitude"] = gps_row["Latitude"]
-            gps_group["longitude"] = gps_row["Longitude"]
+# Initialize HDF5 container.
+file_name = "_".join(
+    [dataset_name, out_instanced_aug_str, unit_str])
+file_path = os.path.join(aug_dir, file_name + ".hdf5")
+f = h5py.File(file_path, "w")
 
-            # Write starting time.
-            utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
-            f["utc_start_time"] = utc_row["UTC"]
 
-            # List clips in unit.
-            in_unit_dir = os.path.join(in_instanced_aug_dir, unit_str)
-            wav_paths = glob.glob(os.path.join(in_unit_dir, "*.wav"))
-            wav_paths = sorted(wav_paths)
+# Write latitude and longitude.
+gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
+gps_group = f.create_group("gps_coordinates")
+gps_group["latitude"] = gps_row["Latitude"]
+gps_group["longitude"] = gps_row["Longitude"]
 
-            # Loop over clips.
-            waveform_group = f.create_group("waveforms")
-            for wav_path in wav_paths:
-                waveform = librosa.load(wav_path, sr=sample_rate)[0]
-                clip_name = os.path.split(wav_path)[1][:-4]
-                waveform_group[clip_name] = waveform
 
-            # Write sample rate
-            f["sample_rate"] = sample_rate
+# Write starting time.
+utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
+f["utc_start_time"] = utc_row["UTC"]
+
+
+# List clips in unit.
+in_unit_dir = os.path.join(in_instanced_aug_dir, unit_str)
+wav_paths = glob.glob(os.path.join(in_unit_dir, "*.wav"))
+wav_paths = sorted(wav_paths)
+
+
+# Loop over clips.
+waveform_group = f.create_group("waveforms")
+for wav_path in wav_paths:
+    waveform = librosa.load(wav_path, sr=sample_rate)[0]
+    clip_name = os.path.split(wav_path)[1][:-4]
+    waveform_group[clip_name] = waveform
+
+
+# Write sample rate
+f["sample_rate"] = sample_rate
 
 
 # Print elapsed time.
