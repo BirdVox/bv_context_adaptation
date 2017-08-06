@@ -55,14 +55,25 @@ os.makedirs(out_aug_dir, exist_ok=True)
 out_path = os.path.join(out_aug_dir, hdf5_name + ".hdf5")
 out_file = h5py.File(out_path)
 
+
 # Copy over metadata
-#out_file["gps_coordinates"] = in_file["gps_coordinates"]
 out_file["dataset_name"] = localmodule.get_dataset_name()
 out_file["unit"] = unit_str
 out_file["augmentation"] = aug_str
 out_file["instance"] = instance_id
-out_file["settings"] = logmelspec_settings
 out_file["utc_start_time"] = in_file["utc_start_time"].value
+gps_group = out_file.create_group("gps_coordinates")
+gps_group["latitude"] = in_file["gps_coordinates"]["latitude"]
+gps_group["longitude"] = in_file["gps_coordinates"]
+lms_group = out_file.create_group("logmelspec_settings")
+lms_group["fmax"] = logmelspec_settings["fmax"]
+lms_group["fmin"] = logmelspec_settings["fmin"]
+lms_group["hop_length"] = logmelspec_settings["hop_length"]
+lms_group["n_fft"] = logmelspec_settings["n_fft"]
+lms_group["n_mels"] = logmelspec_settings["n_mels"]
+lms_group["sr"] = logmelspec_settings["sr"]
+lms_group["win_length"] = logmelspec_settings["win_length"]
+lms_group["window"] = logmelspec_settings["window"]
 #waveforms = in_file["waveforms"]
 #durations = [waveforms[key].shape[0] for key in waveforms.keys()]
 
