@@ -19,9 +19,14 @@ for aug_str in augmentations:
     for instance_id in range(n_instances):
         instance_str = str(instance_id)
 
+        if aug_str == "original":
+            instanced_aug_str = aug_str
+        else:
+            instanced_aug_str = "_".join([aug_str, instance_str])
+
         # Loop over recording units.
         for unit_str in units:
-            job_name = "_".join(["004", aug_str, instance_str, unit_str])
+            job_name = "_".join(["004", instanced_aug_str, unit_str])
             file_name = job_name + ".sbatch"
             script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)

@@ -23,12 +23,17 @@ with open(file_path, "w") as f:
         for instance_id in range(n_instances):
             instance_str = str(instance_id)
 
+            if aug_str == "original":
+                instanced_aug_str = aug_str
+            else:
+                instanced_aug_str = "_".join([aug_str, instance_str])
+
             # Loop over recording units.
             for unit_str in units:
                 # Define job name.
-                job_name = "_".join(["004", aug_str, instance_str, unit_str])
+                job_name = "_".join(["004", instanced_aug_str, unit_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
-                
+
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
             f.write("\n")
