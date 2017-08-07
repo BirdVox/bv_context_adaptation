@@ -110,6 +110,7 @@ for chunk_id in range(n_chunks):
     # Load audio chunk.
     first_clip_id = chunk_id * n_clips_per_chunk
     last_clip_id = min((chunk_id+1) * n_clips_per_chunk, n_clips)
+    n_clips_in_chunk = last_clip_id - first_clip_id
     chunk_range = range(first_clip_id, last_clip_id)
     chunk_sample_range = sample_range[chunk_range]
     chunk_start = chunk_sample_range[0] - half_clip_length
@@ -150,7 +151,7 @@ for chunk_id in range(n_chunks):
     chunk_logmelspec = logmelspec.astype('float32')
 
     # Loop over audio clips.
-    for clip_id in range(n_clips_per_chunk):
+    for clip_id in range(n_clips_in_chunk):
         # Extract logmelspec clip in chunk
         mid_sample = chunk_sample_range[clip_id]
         mid_rel_sample = mid_sample - chunk_start
