@@ -8,8 +8,10 @@ import localmodule
 
 
 # Define constants
-dataset_name = localdmodule.get_dataset_name()
+data_dir = localmodule.get_data_dir()
+dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
+sample_rate = localmodule.get_sample_rate()
 args = ["unit01", "thrush", "00:09"] #                          DISABLE
 #args = sys.argv[1:]                                            ENABLE
 unit_str = args[0]
@@ -27,6 +29,42 @@ print("Running Old Bird onset detection functions (Thrush and Tseep) on " +
 print('h5py version: {:s}.'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
 print("")
+
+
+# Load onset detection function.
+oldbird_name = "_".join([dataset_name, "oldbird"])
+oldbird_dir = os.path.join(data_dir, oldbird_name)
+odf_path = os.path.join(data_dir, unit_str + ".hdf5")
+odf_file = h5py.File(odf_path, "r")
+odf_dataset = odf_str + "_odf"
+odf = odf_file[odf_dataset]
+odf_length = len(odf)
+
+# Define array of thresholds.
+# TODO.
+# up_thresholds
+# down_thresholds
+
+
+# Create directory for Old Bird in models_dir.
+model_dir = os.path.join(models_dir, "Old Bird")
+os.makedirs(model_dir, exist_ok=True)
+out_unit_dir = os.path.join(model_dir, unit_str)
+os.makedirs(out_unit_dir, exist_ok=True)
+predictions_dir = os.path.join(out_unit_dir, "predictions")
+os.makedirs(predictions_dir, exist_ok=True)
+
+
+# Loop over thresholds in group.
+for threshold_id in threshold_id_range:
+    up_threshold = up_thresholds[threshold_id]
+    down_threshold = down_thresholds[threshold_id]
+
+    # Define CSV file for given threshold.
+    # TODO.
+
+    # Loop over timestamps.
+    # TODO
 
 
 # Print elapsed time.
