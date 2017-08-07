@@ -16,20 +16,16 @@ B. Old Bird
 
 2. [DONE] Run Tseep, Thrush on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
 
-3. Apply ad hoc detector, with 100 thresholds and limits on duration,
-to Tseep and Thrush ODFs, on 6 full night recordings. Export peak times
-as 2*6*100=1200 CSV files.
+3. [IN PROGRESS] Apply ad hoc detector, with 100 thresholds and limits on duration, to Tseep and Thrush ODFs, on 6 full night recordings. Export peak times as 2*6*100=1200 CSV files. Parallelize over ODFs (2), units (6), and groups of 10 thresholds (10).
 
 4. Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6
-units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results
-in 6*3*10*2=360 CSV files.
+units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
 
 5. Compute global metrics (precision, recall, and F) across all 6 units and
 10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
 
 6. Apply OldBird-mixed detector, with 100 different thresholds and limits
-on duration, on 6 full night recordings and 10 tolerances. It results in
-6*10=60 CSV files.
+on duration, on 6 full night recordings and 10 tolerances. It results in 6*10=60 CSV files.
 
 7. Compute global AUPRC across all 6 units for OldBird-mixed detector. Store in 1 CSV file.
 
