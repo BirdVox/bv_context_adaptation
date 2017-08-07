@@ -99,14 +99,13 @@ n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
 lms_dataset_size = (logmelspec_settings["n_mels"], n_hops)
 lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 
+
 # Loop over chunks.
 for chunk_id in [0, n_chunks-1]: # debug mode
 #for chunk_id in range(n_chunks):
     # Load audio chunk.
-    first_hop = chunk_id * n_hops_per_chunk
-    chunk_start = int(np.ceil(first_hop * sample_float_step))
-    last_hop = min((chunk_id+1) * n_hops_per_chunk, n_hops)
-    chunk_stop = int(np.floor(last_hop * sample_float_step))
+    chunk_start = chunk_id * chunk_length
+    chunk_stop = min(chunk_start + chunk_length, full_audio_length)
     full_audio.seek(chunk_start)
     chunk_waveform = full_audio.read(chunk_stop-chunk_start)
 
