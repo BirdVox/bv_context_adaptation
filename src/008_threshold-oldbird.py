@@ -13,6 +13,10 @@ models_dir = localmodule.get_models_dir()
 args = ["unit01", "thrush", "00:09"] #                          DISABLE
 #args = sys.argv[1:]                                            ENABLE
 unit_str = args[0]
+odf_str = args[1]
+threshold_id_start = int(args[2][:2])
+threshold_id_stop = int(args[2][-2:])
+threshold_id_range = range(threshold_id_start, threshold_id_stop)
 
 
 # Print header.
