@@ -97,3 +97,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 19:31:11.949 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
 [I 19:33:11.950 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
 [I 19:45:11.975 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
+slurmstepd: error: *** JOB 1760961 ON gpu-26 CANCELLED AT 2017-08-06T21:03:59 ***
