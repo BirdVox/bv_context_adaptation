@@ -61,7 +61,7 @@ utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
 
 
 # Copy over metadata.
-out_file["dataset_name"] = localmodule.get_dataset_name()
+out_file["dataset_name"] = dataset_name
 out_file["unit"] = unit_str
 out_file["utc_start_time"] = utc_row["UTC"]
 gps_group = out_file.create_group("gps_coordinates")
@@ -88,13 +88,12 @@ full_audio_length = len(full_audio)
 
 
 # Define a time sample for the middle of every audio clip.
-sample_rate = localmodule.get_sample_rate()
 lms_sample_rate = logmelspec_settings["sr"]
 lms_hop_length = logmelspec_settings["hop_length"]
-sample_float_step = lms_hop_length * sample_rate / lms_sample_rate
-n_hops = int(np.floor(full_audio_length/sample_float_step))
+sample_float_step = lms_hop_length * sample_rate / lms_sr
+n_hops = int(np.floor(full_audio_length / sample_float_step))
 n_chunks = int(np.ceil(n_clips / n_clips_per_chunk))
-samples_per_hop = lms_hop_length * sample_rate / lms_sample_rate
+samples_per_hop = lms_hop_length * sample_rate / lms_sr
 
 
 # Start HDF5 group for log-mel-spectrograms (logmelspec).
@@ -141,15 +140,19 @@ for chunk_id in range(n_chunks):
         fmax=logmelspec_settings["fmax"])
 
     # Apply pointwise base-10 logarithm.
+    # The multiplication by 0.5 is to compensate for magnitude squaring.
     logmelspec = 0.5 * librosa.logamplitude(melspec, ref=1.0)
 
     # Convert to single floating-point precision.
-    chunk_logmelspec = logmelspec.astype('float32')
+    logmelspec = logmelspec.astype('float32')
 
-    # Write to HDF5 dataset
-
-
-
+    # Write to HDF5 dataset.
+    # hop_start is an integer because chunk_start is both a multiple
+    # of sample_rate and lms_hop_length = chunk_duration.
+    hop_start = int((chunk_start*lms_sr) / (sample_rate*lms_hop_length))
+    n_hops_in_chunk = logmelspec.shape[1]
+    hop_stop = hop_start + n_hops_in_chunk
+    lms_dataset[:, hop_start:hop_stop] = logmelspec
 
 
 # Print elapsed time.
