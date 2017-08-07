@@ -1,2 +1,0 @@
-/opt/slurm/data/slurmd/job1682355/slurm_script: line 14: 181607 Killed                  python ../src/009_run-oldbird.py unit03
-slurmstepd: error: Exceeded step memory limit at some point.
