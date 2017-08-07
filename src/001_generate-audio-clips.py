@@ -125,7 +125,7 @@ sorted_prob_samples = sorted_prob_samples
 
 
 # The exported false positives correspond to the timestamps with highest
-# confidences under the condition that they are 6000 samples (500 ms) apart
+# confidences under the condition that they are 12000 samples (500 ms) apart
 # from all previously exported clips.
 prob_counter = 0
 false_positive_counter = 0
