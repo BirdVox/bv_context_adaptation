@@ -75,6 +75,7 @@ utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
 # Copy over metadata.
 out_file["dataset_name"] = dataset_name
 out_file["unit"] = unit_str
+out_file["sample_rate"] = sample_rate
 out_file["utc_start_time"] = utc_row["UTC"]
 gps_group = out_file.create_group("gps_coordinates")
 gps_group["latitude"] =  gps_row["Latitude"]
