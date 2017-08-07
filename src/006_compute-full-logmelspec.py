@@ -149,7 +149,7 @@ for chunk_id in range(n_chunks):
     # of sample_rate and lms_hop_length = chunk_duration.
     hop_start = int((chunk_start*lms_sr) / (sample_rate*lms_hop_length))
     n_hops_in_chunk = logmelspec.shape[1]
-    hop_stop = hop_start + n_hops_in_chunk
+    hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
     lms_dataset[:, hop_start:hop_stop] = logmelspec
 
 
