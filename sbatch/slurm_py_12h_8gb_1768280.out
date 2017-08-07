@@ -70,3 +70,4 @@ rm: cannot remove ‘/beegfs/vl1019/spl2017_data/BirdVox-70k_full-logmelspec/uni
 [I 11:46:01.000 NotebookApp] Kernel restarted: 1adf8047-0977-4328-99c9-43f2306888d2
 [I 11:46:01.101 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
 [I 11:48:01.104 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
+[W 12:24:02.132 NotebookApp] WebSocket ping timeout after 119215 ms.
