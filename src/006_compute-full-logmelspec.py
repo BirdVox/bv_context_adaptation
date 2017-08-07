@@ -87,13 +87,12 @@ full_audio = sf.SoundFile(recording_path)
 full_audio_length = len(full_audio)
 
 
-# Define a time sample for the middle of every audio clip.
-lms_sr = logmelspec_settings["sr"]
+# Compute number of chunks and number of hops.
+n_chunks = int(np.ceil(full_audio_length / chunk_length))
 lms_hop_length = logmelspec_settings["hop_length"]
-sample_float_step = lms_hop_length * sample_rate / lms_sr
-n_hops = int(np.floor(full_audio_length / sample_float_step))
-n_chunks = int(np.ceil(n_clips / n_clips_per_chunk))
-samples_per_hop = lms_hop_length * sample_rate / lms_sr
+lms_sr = logmelspec_settings["sr"]
+n_samples_per_hop = lms_hop_length * sample_rate / lms_sr
+n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
 
 
 # Start HDF5 group for log-mel-spectrograms (logmelspec).
