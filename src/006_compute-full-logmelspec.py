@@ -17,7 +17,9 @@ dataset_name = localmodule.get_dataset_name()
 args = sys.argv[1:]
 unit_str = args[0]
 logmelspec_settings = localmodule.get_logmelspec_settings()
-n_hops_per_chunk = 10000
+sample_rate = localmodule.get_sample_rate()
+chunk_duration = logmelspec_settings["hop_length"] # in seconds
+chunk_length = chunk_duration * sample_rate
 
 
 # Print header.
@@ -103,9 +105,9 @@ lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 for chunk_id in range(n_chunks):
     # Load audio chunk.
     first_hop = chunk_id * n_hops_per_chunk
-    chunk_start = np.ceil(first_hop * sample_float_step)
+    chunk_start = int(np.ceil(first_hop * sample_float_step))
     last_hop = min((chunk_id+1) * n_hops_per_chunk, n_hops)
-    chunk_stop = np.floor(last_hop * sample_float_step)
+    chunk_stop = int(np.floor(last_hop * sample_float_step))
     full_audio.seek(chunk_start)
     chunk_waveform = full_audio.read(chunk_stop-chunk_start)
 
