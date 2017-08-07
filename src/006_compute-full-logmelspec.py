@@ -97,7 +97,7 @@ samples_per_hop = lms_hop_length * sample_rate / lms_sample_rate
 
 # Start HDF5 group for log-mel-spectrograms (logmelspec).
 lms_dataset_size = (logmelspec_settings["n_mels"], n_hops)
-lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size
+lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 
 # Loop over chunks.
 for chunk_id in range(n_chunks):
@@ -140,6 +140,9 @@ for chunk_id in range(n_chunks):
 
     # Convert to single floating-point precision.
     chunk_logmelspec = logmelspec.astype('float32')
+
+    # Write to HDF5 dataset
+
 
 
 
