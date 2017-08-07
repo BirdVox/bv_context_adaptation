@@ -101,8 +101,7 @@ lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 
 
 # Loop over chunks.
-for chunk_id in [0, n_chunks-1]: # debug mode
-#for chunk_id in range(n_chunks):
+for chunk_id in range(n_chunks):
     # Load audio chunk.
     chunk_start = chunk_id * chunk_length
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
