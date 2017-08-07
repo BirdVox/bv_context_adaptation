@@ -1,7 +1,9 @@
 import os
 import sys
+
 sys.path.append("../src")
 import localmodule
+
 
 # Define constants.
 units = localmodule.get_units()
@@ -29,7 +31,7 @@ with open(file_path, "w") as f:
                 # Define job name.
                 job_name = "_".join(["003", aug_str, instance_str, unit_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
-                
+
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
             f.write("\n")

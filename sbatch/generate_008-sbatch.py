@@ -7,7 +7,12 @@ import localmodule
 
 # Define constants
 units = localmodule.get_units()
-script_name = "007_run-oldbird.py"
+odfs = ["thrush", "tseep"]
+n_thresholds = 100
+threshold_hop = 10
+threshold_range = np.arange(0, n_thresholds, threshold_hop)
+n_threshold_groups = len(threshold_range)
+script_name = "008_threshold-oldbird.py"
 script_path = os.path.join("..", "src", script_name)
 
 

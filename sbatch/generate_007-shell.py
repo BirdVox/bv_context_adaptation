@@ -1,7 +1,9 @@
 import os
 import sys
+
 sys.path.append("../src")
 import localmodule
+
 
 # Define constants
 units = localmodule.get_units()

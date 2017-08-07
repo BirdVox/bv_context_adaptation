@@ -1,7 +1,9 @@
 import os
 import sys
+
 sys.path.append("../src")
 import localmodule
+
 
 # Define constants.
 units = localmodule.get_units()
@@ -9,6 +11,7 @@ augmentations = localmodule.get_augmentations()
 del augmentations["original"]
 script_name = "003_augment-clips.py"
 script_path = os.path.join("..", "src", script_name)
+
 
 # Loop over augmentations.
 for aug_str in augmentations:
