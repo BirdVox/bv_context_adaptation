@@ -95,7 +95,7 @@ thrush_integrator = thrush_integrator / thrush_integration_length
 thrush_delay = math.floor(thrush_settings.ratio_delay * sample_rate)
 thrush_group = out_file.create_group("thrush_settings")
 for thrush_key in thrush_settings.__dict__:
-    thrush_group[thrush_key] = thrush_settings[thrush_key]
+    thrush_group[thrush_key] = thrush_settings.__dict__[thrush_key]
 
 
 # Design Tseep filter and integrator.
@@ -107,7 +107,7 @@ tseep_integrator = np.ones(tseep_integration_length)
 tseep_integrator = tseep_integrator / tseep_integration_length
 tseep_delay = math.floor(tseep_settings.ratio_delay * sample_rate)
 for tseep_key in tseep_settings.__dict__:
-    tseep_group[tseep_key] = tseep_settings[tseep_key]
+    tseep_group[tseep_key] = tseep_settings.__dict__[tseep_key]
 
 
 # Count number of chunks.
