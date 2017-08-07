@@ -88,7 +88,7 @@ full_audio_length = len(full_audio)
 
 
 # Define a time sample for the middle of every audio clip.
-lms_sample_rate = logmelspec_settings["sr"]
+lms_sr = logmelspec_settings["sr"]
 lms_hop_length = logmelspec_settings["hop_length"]
 sample_float_step = lms_hop_length * sample_rate / lms_sr
 n_hops = int(np.floor(full_audio_length / sample_float_step))
@@ -101,7 +101,8 @@ lms_dataset_size = (logmelspec_settings["n_mels"], n_hops)
 lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 
 # Loop over chunks.
-for chunk_id in range(n_chunks):
+for chunk_id in [0, n_chunks-1]: # debug mode
+#for chunk_id in range(n_chunks):
     # Load audio chunk.
     first_hop = chunk_id * n_hops_per_chunk
     chunk_start = int(np.ceil(first_hop * sample_float_step))
