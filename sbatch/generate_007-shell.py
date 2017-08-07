@@ -21,6 +21,7 @@ with open(file_path, "w") as f:
         # Define job name
         job_name = "_".join(["007", unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
+        
         # Write SBATCH command to shell file.
         f.write(sbatch_str + "\n")
 
