@@ -4,6 +4,7 @@ import itertools
 import math
 import numpy as np
 import os
+import pandas as pd
 import soundfile as sf
 import scipy
 import sys
@@ -41,9 +42,11 @@ chunk_padding_length = int(np.round(chunk_padding_duration * sample_rate))
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird detectors (Thrush and Tseep) on " + dataset_name +
-    ", " + unit_str + ".")
+print("Running Old Bird onset detection functions (Thrush and Tseep) on " +
+    dataset_name + ", " + unit_str + ".")
+print('h5py version: {:s}.'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
+print('pandas version: {:s}'.format(pd.__version__))
 print('scipy version: {:s}'.format(scipy.__version__))
 print('soundfile version: {:s}'.format(sf.__version__))
 print("")
