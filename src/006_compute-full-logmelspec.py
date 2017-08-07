@@ -123,6 +123,9 @@ for chunk_id in range(n_chunks):
         hop_length=logmelspec_settings["hop_length"],
         window=logmelspec_settings["window"])
 
+    # Delete last sample to compensante for padding.
+    stft = stft[:, :-1]
+
     # Compute squared magnitude coefficients.
     abs2_stft = (stft.real*stft.real) + (stft.imag*stft.imag)
 
