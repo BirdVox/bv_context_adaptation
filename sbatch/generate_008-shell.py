@@ -25,18 +25,23 @@ with open(file_path, "w") as f:
 
     # Loop over recording units
     for unit_str in units:
+
         # Loop over onset detection function ("thrush" and "tseep")
         for odf_str in odfs:
+
             # Loop over groups of thresholds
             for threshold_group_id in range(n_threshold_groups):
+                # Define group of thresholds.
                 thr_start = threshold_range[threshold_group_id]
                 thr_start_str = str(thr_start).zfill(2)
                 thr_stop = thr_start + threshold_hop - 1
                 thr_stop_str = str(thr_stop).zfill(2)
                 group_range_str = ":".join([thr_start_str, thr_stop_str])
-                # Define job name
+
+                # Define job name.
                 job_name = "_".join(["008", unit_str, odf_str, group_range_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
+                
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
             f.write("\n")
