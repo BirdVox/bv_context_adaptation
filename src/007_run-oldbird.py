@@ -114,6 +114,7 @@ for chunk_id in range(n_chunks):
     delayed_thrush = np.concatenate(thrush_tuple)
     thrush_odf = delayed_thrush / integrated_thrush
     thrush_chunk_odf = thrush_odf[chunk_padding_length:-chunk_padding_length]
+    thrush_chunk_odf = thrush_chunk_odf.astype('float32')
     thrush_chunk_odfs.append(thrush_chunk_odf)
 
     # Apply Tseep filter, square, integrate, divide by delayed signal.
@@ -127,6 +128,7 @@ for chunk_id in range(n_chunks):
     delayed_tseep = np.concatenate(tseep_tuple)
     tseep_odf = delayed_tseep / integrated_tseep
     tseep_chunk_odf = tseep_odf[chunk_padding_length:-chunk_padding_length]
+    tseep_chunk_odf = tseep_chunk_odf.astype('float32')
     tseep_chunk_odfs.append(tseep_chunk_odf)
 
 
@@ -143,7 +145,7 @@ tseep_threshold = tseep_settings.ratio_threshold
 global_odf = 0.5 * (thrush_odf/thrush_threshold + tseep_odf/tseep_threshold)
 
 
-# Build numpy matrices. The first column is a timestamp, the second column is
+# Build NumPy matrices. The first column is a timestamp, the second column is
 # the unnormalized probability.
 time = np.arange(0, full_audio_length)
 thrush_matrix = np.stack((time, thrush_odf), axis=-1)
