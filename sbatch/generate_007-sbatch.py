@@ -5,7 +5,7 @@ import localmodule
 
 # Define constants
 units = localmodule.get_units()
-script_name = "009_run-oldbird.py"
+script_name = "007_run-oldbird.py"
 script_path = os.path.join("..", "src", script_name)
 
 # Loop over recording units
@@ -20,8 +20,8 @@ for unit_str in units:
         f.write("#SBATCH --nodes=1\n")
         f.write("#SBATCH --tasks-per-node=1\n")
         f.write("#SBATCH --cpus-per-task=1\n")
-        f.write("#SBATCH --time=4:00:00\n")
-        f.write("#SBATCH --mem=64GB\n")
+        f.write("#SBATCH --time=2:00:00\n")
+        f.write("#SBATCH --mem=1GB\n")
         f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
         f.write("\n")
         f.write("module purge\n")
