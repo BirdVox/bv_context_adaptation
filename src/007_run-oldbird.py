@@ -106,6 +106,7 @@ tseep_integration_length = int(round(tseep_integration_time * sample_rate))
 tseep_integrator = np.ones(tseep_integration_length)
 tseep_integrator = tseep_integrator / tseep_integration_length
 tseep_delay = math.floor(tseep_settings.ratio_delay * sample_rate)
+tseep_group = out_file.create_group("tseep_settings")
 for tseep_key in tseep_settings.__dict__:
     tseep_group[tseep_key] = tseep_settings.__dict__[tseep_key]
 
