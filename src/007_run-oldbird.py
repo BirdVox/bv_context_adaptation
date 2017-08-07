@@ -154,7 +154,7 @@ global_matrix = np.stack((time, global_odf), axis=-1)
 # Export matrices related to Thrush, Tseep, and "global".
 models_dir = localmodule.get_data_dir()
 model_name = os.path.basename(__file__).split("_")[0]
-model_dir = os.path.join(models_dir, model_dir)
+model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
 out_unit_dir = os.path.join(model_dir, unit_str)
 os.makedirs(out_unit_dir, exist_ok=True)
