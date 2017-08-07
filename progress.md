@@ -14,20 +14,18 @@ for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 B. Old Bird
 1. [DONE] Implement Tseep and Thrush onset detection function (ODF) from Vesper.
 
-2. [IN PROGRESS] Run Tseep, Thrush on 6 full night recordings. Export into an HDF5 container by chunks. Also export a linear combination of
-Tseep and Thrush ODFs (hereafter called OldBird-mixed) that will be used
-to compute AUPRC.
+2. [IN PROGRESS] Run Tseep, Thrush on 6 full night recordings. Export into an HDF5 container by chunks.
 
-3. Apply ad hoc detector, with fixed threshold and limits on duration,
+3. Apply ad hoc detector, with 100 thresholds and limits on duration,
 to Tseep and Thrush ODFs, on 6 full night recordings. Export peak times
 as 2*6=12 CSV files.
 
 4. Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6
-units, 3 detectors (Tseep, Thrush and both), and 10 tolerances. It results
-in 6*3*10=180 CSV files.
+units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results
+in 6*3*10*2=360 CSV files.
 
 5. Compute global metrics (precision, recall, and F) across all 6 units and
-10 tolerances. Store in 1 CSV file.
+10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
 
 6. Apply OldBird-mixed detector, with 100 different thresholds and limits
 on duration, on 6 full night recordings and 10 tolerances. It results in
