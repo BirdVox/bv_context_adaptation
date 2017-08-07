@@ -15,7 +15,7 @@ B. Old Bird
 1. [DONE] Implement Tseep and Thrush onset detection function (ODF) from Vesper.
 
 2. [IN PROGRESS] Run Tseep, Thrush on 6 full night recordings. Export as
-numPy matrices of 10-minute chunks. Also export a linear combination of
+NumPy matrices of 10-minute chunks. Also export a linear combination of
 Tseep and Thrush ODFs (hereafter called OldBird-mixed) that will be used
 to compute AUPRC.
 
