@@ -1,9 +1,0 @@
-2017-08-01 07:00:09.219590 Start.
-Evaluating SKM detector on BirdVox-70k, unit05
-with a temporal tolerance of 500 ms.
-mir_eval version: 0.4
-numpy version: 1.13.1
-pandas version: 0.20.3
-
-2017-08-01 07:01:47.702911 Finish.
-Total elapsed time: 00:01:38.70.
