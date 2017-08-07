@@ -17,7 +17,7 @@ dataset_name = localmodule.get_dataset_name()
 args = sys.argv[1:]
 unit_str = args[0]
 logmelspec_settings = localmodule.get_logmelspec_settings()
-n_clips_per_chunk = 1000
+n_hops_per_chunk = 10000
 
 
 # Print header.
@@ -76,10 +76,6 @@ settings_group["win_length"] = logmelspec_settings["win_length"]
 settings_group["window"] = logmelspec_settings["window"]
 
 
-# Start HDF5 group for log-mel-spectrograms (logmelspec).
-lms_group = out_file.create_group("logmelspec")
-
-
 # Open full audio file as FLAC.
 recordings_name = "_".join([dataset_name, "full-audio"])
 recordings_dir = os.path.join(data_dir, recordings_name)
@@ -93,28 +89,23 @@ full_audio_length = len(full_audio)
 sample_rate = localmodule.get_sample_rate()
 lms_sample_rate = logmelspec_settings["sr"]
 lms_hop_length = logmelspec_settings["hop_length"]
-sample_float_step = 64 * lms_hop_length * sample_rate / lms_sample_rate
-clip_length = int(np.round(0.5 * sample_rate))
-half_clip_length = int(np.round(0.25 * sample_rate))
-sample_start = half_clip_length
-sample_stop = full_audio_length - half_clip_length
-sample_range = np.arange(sample_start, sample_stop, sample_float_step)
-sample_range = np.round(sample_range).astype('int')
-n_clips = len(sample_range)
+sample_float_step = lms_hop_length * sample_rate / lms_sample_rate
+n_hops = int(np.floor(full_audio_length/sample_float_step))
 n_chunks = int(np.ceil(n_clips / n_clips_per_chunk))
 samples_per_hop = lms_hop_length * sample_rate / lms_sample_rate
 
 
+# Start HDF5 group for log-mel-spectrograms (logmelspec).
+lms_dataset_size = (logmelspec_settings["n_mels"], n_hops)
+lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size
+
 # Loop over chunks.
 for chunk_id in range(n_chunks):
     # Load audio chunk.
-    first_clip_id = chunk_id * n_clips_per_chunk
-    last_clip_id = min((chunk_id+1) * n_clips_per_chunk, n_clips)
-    n_clips_in_chunk = last_clip_id - first_clip_id
-    chunk_range = range(first_clip_id, last_clip_id)
-    chunk_sample_range = sample_range[chunk_range]
-    chunk_start = chunk_sample_range[0] - half_clip_length
-    chunk_stop = chunk_sample_range[-1] + half_clip_length
+    first_hop = chunk_id * n_hops_per_chunk
+    chunk_start = np.ceil(first_hop * sample_float_step)
+    last_hop = min((chunk_id+1) * n_hops_per_chunk, n_hops)
+    chunk_stop = np.floor(last_hop * sample_float_step)
     full_audio.seek(chunk_start)
     chunk_waveform = full_audio.read(chunk_stop-chunk_start)
 
@@ -150,22 +141,7 @@ for chunk_id in range(n_chunks):
     # Convert to single floating-point precision.
     chunk_logmelspec = logmelspec.astype('float32')
 
-    # Loop over audio clips.
-    for clip_id in range(n_clips_in_chunk):
-        # Extract logmelspec clip in chunk
-        mid_sample = chunk_sample_range[clip_id]
-        mid_rel_sample = mid_sample - chunk_start
-        mid_hop = int(np.round(mid_rel_sample / samples_per_hop))
-        start_hop = mid_hop - int(np.round(half_clip_length / samples_per_hop))
-        stop_hop = mid_hop + int(np.round(half_clip_length / samples_per_hop))
-        clip_range = range(start_hop, stop_hop)
-        clip_logmelspec = chunk_logmelspec[:, clip_range]
 
-        # Define clip name.
-        clip_name = str(mid_sample).zfill(9)
-
-        # Store clip in HDF5 group.
-        lms_group[clip_name] = clip_logmelspec
 
 
 # Print elapsed time.
