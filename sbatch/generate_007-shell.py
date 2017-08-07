@@ -5,7 +5,7 @@ import localmodule
 
 # Define constants
 units = localmodule.get_units()
-file_path = "009.sh"
+file_path = "007.sh"
 
 
 # Open shell file
@@ -17,7 +17,7 @@ with open(file_path, "w") as f:
     # Loop over recording units
     for unit_str in units:
         # Define job name
-        job_name = "_".join(["009", unit_str])
+        job_name = "_".join(["007", unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
         # Write SBATCH command to shell file.
         f.write(sbatch_str + "\n")
