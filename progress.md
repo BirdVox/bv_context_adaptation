@@ -18,7 +18,7 @@ B. Old Bird
 
 3. Apply ad hoc detector, with 100 thresholds and limits on duration,
 to Tseep and Thrush ODFs, on 6 full night recordings. Export peak times
-as 2*6=12 CSV files.
+as 2*6*100=1200 CSV files.
 
 4. Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6
 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results
