@@ -7,7 +7,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 tolerances = localmodule.get_tolerances()
-script_name = "007_evaluate-skm.py"
+script_name = "007_evaluate-skm.py" update me # TODO update me
 script_path = os.path.join("..", "src", script_name)
 
 # Loop over tolerances.
@@ -16,7 +16,7 @@ for tolerance in tolerances:
     tol_str = "tol" + str(tol_ms)
     # Loop over recording units.
     for unit_str in units:
-        job_name = "_".join(["007", tol_str, unit_str])
+        job_name = "_".join(["007", tol_str, unit_str]) update me # TODO update me
         file_name = job_name + ".sbatch"
         script_path_with_args = " ".join([script_path, str(tol_ms), unit_str])
         with open(file_name, "w") as f:

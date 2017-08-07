@@ -7,7 +7,7 @@ import localmodule
 # Define constants
 units = localmodule.get_units()
 tolerances = localmodule.get_tolerances()
-file_path = "007.sh"
+file_path = "007.sh" update me # TODO update me
 
 
 # Open shell file
@@ -23,7 +23,7 @@ with open(file_path, "w") as f:
         # Loop over recording units
         for unit_str in units:
             # Define job name
-            job_name = "_".join(["007", tol_str, unit_str])
+            job_name = "_".join(["007", tol_str, unit_str]) update me # TODO update me
             sbatch_str = "sbatch " + job_name + ".sbatch"
             # Write SBATCH command to shell file.
             f.write(sbatch_str + "\n")
