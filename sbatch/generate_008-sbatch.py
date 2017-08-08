@@ -10,7 +10,7 @@ import localmodule
 units = localmodule.get_units()
 odfs = ["thrush", "tseep"]
 n_thresholds = 100
-threshold_hop = 10
+threshold_hop = 5
 threshold_range = np.arange(0, n_thresholds, threshold_hop)
 n_threshold_groups = len(threshold_range)
 script_name = "008_threshold-oldbird.py"
@@ -46,7 +46,7 @@ for unit_str in units:
                 f.write("#SBATCH --nodes=1\n")
                 f.write("#SBATCH --tasks-per-node=1\n")
                 f.write("#SBATCH --cpus-per-task=1\n")
-                f.write("#SBATCH --time=1:00:00\n")
+                f.write("#SBATCH --time=4:00:00\n")
                 f.write("#SBATCH --mem=1GB\n")
                 f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
                 f.write("\n")

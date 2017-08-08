@@ -11,7 +11,7 @@ units = localmodule.get_units()
 odfs = ["thrush", "tseep"]
 file_path = "008.sh"
 n_thresholds = 100
-threshold_hop = 10
+threshold_hop = 5
 threshold_range = np.arange(0, n_thresholds, threshold_hop)
 n_threshold_groups = len(threshold_range)
 
@@ -41,7 +41,7 @@ with open(file_path, "w") as f:
                 # Define job name.
                 job_name = "_".join(["008", unit_str, odf_str, group_range_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
-                
+
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
             f.write("\n")
