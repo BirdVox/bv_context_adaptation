@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=4:00:00
+#SBATCH --time=8:00:00
 #SBATCH --mem=1GB
 #SBATCH --output=slurm_008_unit02_tseep_th-10-14_%j.out
 
