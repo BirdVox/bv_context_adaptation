@@ -30,7 +30,7 @@ for unit_str in units:
             thr_start_str = str(thr_start).zfill(2)
             thr_stop = thr_start + threshold_hop - 1
             thr_stop_str = str(thr_stop).zfill(2)
-            group_range_str = ":".join([thr_start_str, thr_stop_str])
+            group_range_str = "-".join(["th", thr_start_str, thr_stop_str])
 
             # Define job name.
             job_name = "_".join(["008", unit_str, odf_str, group_range_str])
