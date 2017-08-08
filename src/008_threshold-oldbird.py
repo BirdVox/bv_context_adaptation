@@ -84,6 +84,18 @@ min_clip_length = int(np.round(min_clip_duration * sample_rate))
 max_clip_duration = odf_settings["max_duration"].value
 max_clip_length = int(np.round(max_clip_duration * sample_rate))
 
+# Create CSV header.
+csv_header = [
+    'Dataset',
+    'Unit',
+    'ODF',
+    'Threshold ID',
+    'Upward threshold',
+    'Downward threshold',
+    'Time (s)',
+    'Duration (s)',
+    'Onset ODF',
+    'Offset ODF']
 
 for threshold_id in threshold_id_range:
     # Read upward threshold and downward threshold.
@@ -97,8 +109,7 @@ for threshold_id in threshold_id_range:
         "th-" + threshold_str, "predictions.csv"])
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
     csv_file = open(csv_file_path, 'w')
-    csv_writer = csv.writer(csv_file)
-    header = ['Time (s)', 'Duration (s)', 'Onset ODF', 'Offset ODF']
+    csv_writer = csv.writer(csv_file, delimiter=', ')
     csv_writer.writerow(header)
 
     # Initialize variables.
@@ -142,7 +153,28 @@ for threshold_id in threshold_id_range:
             # Also store value of ODF at offset.
             offset_odf = odf[0, clip_stop]
             # Export clip_time, clip_duration, onset_odf, offset_odf.
-            row = [clip_time, clip_duration, onset_odf, offset_odf]
+            csv_header = [
+                'Dataset',
+                'Unit',
+                'ODF',
+                'Threshold ID',
+                'Upward threshold',
+                'Downward threshold',
+                'Time (s)',
+                'Duration (s)',
+                'Onset ODF',
+                'Offset ODF']
+            row = [
+                dataset_name,
+                unit_str,
+                'Old Bird (' + odf_str + ')',
+                threshold_str,
+                "{:5.3f}".format(up_threshold),
+                "{:5.3f}".format(down_threshold),
+                "{:8.2f}".format(clip_time),
+                "{:5.3f}".format(clip_duration),
+                "{:5.3f}".format(onset_odf),
+                "{:5.3f}".format(offset_odf)]
             csv_writer.writerow(str(clip_time))
             # If clip length is shorter than minimum, jump to the end of clip.
             if (t-clip_start) < min_clip_length:
