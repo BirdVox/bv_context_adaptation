@@ -1,3 +1,4 @@
+import csv
 import datetime
 import h5py
 import numpy as np
@@ -82,6 +83,69 @@ min_clip_length = int(np.round(min_clip_duration * sample_rate))
 max_clip_duration = odf_settings["max_duration"].value
 max_clip_length = int(np.round(max_clip_duration * sample_rate))
 
+
+for threshold_id in threshold_id_range:
+    up_threshold = up_thresholds[threshold_id]
+    down_threshold = down_thresholds[threshold_id]
+    threshold_str = str(threshold_id).zfill(2)
+
+    # Initialize variables.
+    clip_start = 0
+    clip_stop = 0
+    clip_mid = 0
+    onset_odf = 0.0
+    offset_odf = 0.0
+    clip_switch = False
+    t = 0
+
+    # Scan the whole onset detection function through time
+    while t < odf_length:
+
+        # If we are not inside a clip ...
+        if (not clip_switch):
+
+            # ... wait for an onset (odf[0, t] > up_threshold).
+            if (odf[0, t] > up_threshold):
+                # We are at the clip onset. Store start time and value of ODF.
+                clip_switch = True
+                clip_start = t
+                onset_odf = odf[0, t]
+
+        # Otherwise, if we are inside a clip, wait for an offset
+        # (odf[t] < down_threshold) or until the maximum clip length is reached.
+        elif (odf[0, t] < down_threshold) or ((t-clip_start) == max_clip_length):
+
+            # We are at the clip offset.
+            # If odf[t] > up_threshold, we should keep the clip_switch to True,
+            # but that is not what Old Bird and Vesper do.
+            # see https://github.com/HaroldMills/Vesper-Tseep-Thrush/blob/master/tests/test_old_bird_detector_redux.py#L63-L65
+            clip_switch = False
+            # Bound the clip length from below.
+            clip_length = max(t-clip_start, min_clip_length)
+            # Compute time at the middle of the clip and clip duration.
+            clip_stop = clip_start + clip_length
+            clip_mid = int(0.5 * (clip_start+clip_stop))
+            clip_time = clip_mid / sample_rate
+            clip_duration = clip_length / sample_rate
+            # Also store value of ODF at offset.
+            offset_odf = odf[0, clip_stop]
+            # TODO export clip_time, clip_duration, onset_odf, offset_odf
+            # If clip length is shorter than minimum, jump to the end of clip.
+            print(clip_time, clip_duration, onset_odf, offset_odf)
+            if (t-clip_start) < min_clip_length:
+                t = int(np.floor(clip_stop/hop_length)) * hop_length
+        t = t + hop_length
+
+    # If the ODF ends with an onset not followed by any offset, export clip
+    # by using last timestamp as offset. This is unlikely to happen in practice.
+    if clip_switch:
+        clip_switch = False
+        clip_stop = odf_length - 1
+        clip_mid = int(0.5 * (clip_start+clip_stop))
+        clip_time = clip_mid / sample_rate
+        clip_duration = clip_length / sample_rate
+        offset_odf = odf[0, clip_stop]
+        # TODO export clip_time, clip_duration, onset_odf, offset_odf
 
 
 # Print elapsed time.
