@@ -177,7 +177,7 @@ for threshold_id in threshold_id_range:
                 "{:5.3f}".format(down_threshold),
                 "{:8.2f}".format(clip_time),
                 "{:5.3f}".format(clip_duration),
-                "{:6.3f}".format(onset_odf),
+                "{:9.3f}".format(onset_odf),
                 "{:5.3f}".format(offset_odf)]
             csv_writer.writerow(row)
             # If clip length is shorter than minimum, jump to the end of clip.
