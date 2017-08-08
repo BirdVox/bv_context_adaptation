@@ -50,7 +50,7 @@ odf_path = os.path.join(oldbird_dir, unit_str + ".hdf5")
 odf_file = h5py.File(odf_path, "r")
 odf_dataset_key = "_".join([odf_str, "odf"])
 odf = odf_file[odf_dataset_key]
-odf_length = len(odf)
+odf_length = odf.shape[1]
 print(odf_length)
 
 
