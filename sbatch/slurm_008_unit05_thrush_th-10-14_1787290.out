@@ -1,0 +1,12 @@
+2017-08-08 19:03:29.812731 Start.
+Running Old Bird onset detection functions (Thrush and Tseep) on BirdVox-70k, unit05.
+h5py version: 2.6.0.
+numpy version: 1.13.1
+
+1.30086423262
+1.30929588042
+1.31737910951
+1.32515569933
+1.33265962905
+2017-08-08 19:20:41.480561 Finish.
+Total elapsed time: 00:17:12.48.
