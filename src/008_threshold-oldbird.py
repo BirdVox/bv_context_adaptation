@@ -51,6 +51,7 @@ odf_file = h5py.File(odf_path, "r")
 odf_dataset_key = "_".join([odf_str, "odf"])
 odf = odf_file[odf_dataset_key]
 odf_length = len(odf)
+print(odf_length)
 
 
 # Define arrays of thresholds.
@@ -89,6 +90,7 @@ for threshold_id in threshold_id_range:
     up_threshold = up_thresholds[threshold_id]
     down_threshold = down_thresholds[threshold_id]
     threshold_str = str(threshold_id).zfill(2)
+    print(up_threshold)
 
     # Create CSV file for predictions.
     csv_file_name = "_".join([dataset_name, "oldbird", odf_str, unit_str,
