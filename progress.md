@@ -62,3 +62,6 @@ D. Snowball on UrbanSound-8K
 3. Define snowball model and pescador generator.
 
 4. Snowball convnet: train (a), predict (b), evaluate (c).
+
+
+Juan: schedule C, then B, then D, then A.
