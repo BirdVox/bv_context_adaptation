@@ -85,9 +85,18 @@ max_clip_length = int(np.round(max_clip_duration * sample_rate))
 
 
 for threshold_id in threshold_id_range:
+    # Read upward threshold and downward threshold.
     up_threshold = up_thresholds[threshold_id]
     down_threshold = down_thresholds[threshold_id]
     threshold_str = str(threshold_id).zfill(2)
+
+    # Create CSV file for predictions.
+    csv_file_name = "_".join([dataset_name, "oldbird", odf_str, unit_str,
+        "th-" + threshold_str, "predictions.csv"])
+    csv_file_path = os.path.join(predictions_dir, csv_file_name)
+    csv_writer = csv.writer(open(csv_file_path, 'wb'))
+    header = ['Time (s)', 'Duration (s)', 'Onset ODF', 'Offset ODF']
+    csv_writer.writerow(header)
 
     # Initialize variables.
     clip_start = 0
@@ -129,9 +138,10 @@ for threshold_id in threshold_id_range:
             clip_duration = clip_length / sample_rate
             # Also store value of ODF at offset.
             offset_odf = odf[0, clip_stop]
-            # TODO export clip_time, clip_duration, onset_odf, offset_odf
+            # Export clip_time, clip_duration, onset_odf, offset_odf.
+            row = [clip_time, clip_duration, onset_odf, offset_odf]
+            csv_writer.writerow(row)
             # If clip length is shorter than minimum, jump to the end of clip.
-            print(clip_time, clip_duration, onset_odf, offset_odf)
             if (t-clip_start) < min_clip_length:
                 t = int(np.floor(clip_stop/hop_length)) * hop_length
         t = t + hop_length
@@ -145,7 +155,8 @@ for threshold_id in threshold_id_range:
         clip_time = clip_mid / sample_rate
         clip_duration = clip_length / sample_rate
         offset_odf = odf[0, clip_stop]
-        # TODO export clip_time, clip_duration, onset_odf, offset_odf
+        row = [clip_time, clip_duration, onset_odf, offset_odf]
+        csv_writer.writerow(row)
 
 
 # Print elapsed time.
