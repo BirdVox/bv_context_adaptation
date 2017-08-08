@@ -71,3 +71,5 @@ rm: cannot remove ‘/beegfs/vl1019/spl2017_data/BirdVox-70k_full-logmelspec/uni
 [I 11:46:01.101 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
 [I 11:48:01.104 NotebookApp] Saving file at /spl2017/notebooks/compute-full-logmelspec.ipynb
 [W 12:24:02.132 NotebookApp] WebSocket ping timeout after 119215 ms.
+[I 17:13:31.743 NotebookApp] 302 GET /?token=9f3a5a1fdf7d9a4e1a040b19044efb3731d38211e8c5ee2d (::1) 0.61ms
+slurmstepd: error: *** JOB 1768280 ON gpu-24 CANCELLED AT 2017-08-07T22:51:08 DUE TO TIME LIMIT ***

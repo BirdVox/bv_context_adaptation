@@ -1,0 +1,108 @@
+
+Jupyter server is running on: gpu-25
+Job starts at: Tue Aug  8 12:00:31 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9299:localhost:9299 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9299:localhost:9299 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 12:00:33.955 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1783381/jupyter/notebook_cookie_secret
+[I 12:00:34.729 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 12:00:34.729 NotebookApp] 0 active kernels 
+[I 12:00:34.729 NotebookApp] The Jupyter Notebook is running at: http://localhost:9299/?token=a1b39a9d076ecdd4b46514d42b3e855ca90280c28e451883
+[I 12:00:34.729 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 12:00:34.729 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9299/?token=a1b39a9d076ecdd4b46514d42b3e855ca90280c28e451883
+[I 12:07:15.860 NotebookApp] 302 GET /?token=a1b39a9d076ecdd4b46514d42b3e855ca90280c28e451883 (::1) 0.73ms
+[W 12:07:25.434 NotebookApp] Notebook spl2017/notebooks/oldbird.ipynb is not trusted
+[I 12:07:26.391 NotebookApp] Kernel started: 128d1756-f5af-445c-8539-9abbf6d52372
+[W 12:07:26.640 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170808120033 (::1) 20.16ms referer=http://localhost:9299/notebooks/spl2017/notebooks/oldbird.ipynb
+[I 12:07:39.589 NotebookApp] Saving file at /spl2017/notebooks/oldbird.ipynb
+[W 12:07:39.590 NotebookApp] Saving untrusted notebook spl2017/notebooks/oldbird.ipynb
+[I 12:07:52.613 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 12:07:54.667 NotebookApp] Kernel started: 459a20d8-9260-446e-b01b-ce7ef6cef6e8
+[W 12:07:54.813 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170808120033 (::1) 1.62ms referer=http://localhost:9299/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 12:09:54.597 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[W 12:42:25.496 NotebookApp] WebSocket ping timeout after 119261 ms.
+[I 14:10:24.131 NotebookApp] 302 GET /?token=a1b39a9d076ecdd4b46514d42b3e855ca90280c28e451883 (::1) 0.62ms
+[W 14:10:37.900 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170808120033 (::1) 1.91ms referer=http://localhost:9299/notebooks/spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:11:00.893 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:12:37.785 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:14:37.830 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:16:37.829 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:18:37.817 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:22:37.807 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:24:37.808 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:26:37.818 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:36:37.841 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:38:37.841 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:40:37.837 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:42:37.844 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:44:37.849 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:46:37.869 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:48:37.857 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:50:37.861 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:52:37.938 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:53:05.760 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:54:37.862 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:54:40.987 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 14:58:37.872 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:00:37.914 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:02:37.878 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:03:23.349 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:04:37.877 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:06:37.928 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:08:37.929 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:10:37.962 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:12:37.895 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:14:37.905 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:16:37.908 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:32:57.019 NotebookApp] Kernel started: 7aee71f3-d531-42dc-98f1-e19156846148
+[W 15:32:57.167 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170808120033 (::1) 2.05ms referer=http://localhost:9299/notebooks/spl2017/notebooks/evaluate_skm.ipynb
+[I 15:38:37.982 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:40:37.958 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:44:37.986 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:48:37.984 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:50:38.078 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:52:37.987 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:54:37.995 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:56:37.989 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 15:58:38.014 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:00:40.264 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:06:38.018 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:10:38.059 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:17:25.363 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:18:38.024 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:20:38.025 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:22:38.037 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:24:38.106 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:26:38.031 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:28:38.049 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:30:38.046 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:32:38.043 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:34:38.046 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 16:46:38.082 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
