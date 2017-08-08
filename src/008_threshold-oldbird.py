@@ -12,13 +12,19 @@ import localmodule
 # Define constants.
 n_thresholds = 100
 # The array of upward thresholds is equal to
-# f(t) = 1 + threshold_multiplier * (t**threshold_exponent)
+# f(x) = t_0 + threshold_multiplier * (x**threshold_exponent)
 # when the parameters threshold_multiplier and threshold_exponent
 # are chosen such that:
-# (1)    f(threshold_range_alpha*n_thresholds) = ad_hoc_threshold
-# (2)    f(n_threshold) = ad_hoc_threshold**2
+# (1)    f(0.0)   = t_0
+# (2)    f(alpha) = t_alpha
+# (3)    f(1.0)   = t_1
+# We arbitrarily set
+# (a)    t_0     = sqrt(ad_hoc_threshold)
+# (b)    t_alpha = ad_hoc_threshold
+# (c)    t_1     = ad_hoc_threshold ** 2
+# (d)    alpha = 0.1
 # In Old Bird, ad_hoc_threshold is equal to 2.0 for Thrush and 1.2 for Tseep.
-threshold_range_alpha = 0.1
+alpha = 0.1
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
@@ -51,21 +57,19 @@ odf_file = h5py.File(odf_path, "r")
 odf_dataset_key = "_".join([odf_str, "odf"])
 odf = odf_file[odf_dataset_key]
 odf_length = odf.shape[1]
-print(odf_length)
 
 
 # Define arrays of thresholds.
 odf_settings_key = "_".join([odf_str, "settings"])
 odf_settings = odf_file[odf_settings_key]
 ad_hoc_threshold = odf_settings["ratio_threshold"].value
-ad_hoc_threshold = 1.2
-threshold_multiplier = ad_hoc_threshold**2 - 1
-threshold_exponent = \
-    (np.log(ad_hoc_threshold-1) - np.log(threshold_multiplier)) /\
-    np.log(threshold_range_alpha)
-up_threshold_abcissa = np.arange(1, 1+n_thresholds) / n_thresholds
-up_thresholds = 1 +\
-    threshold_multiplier * up_threshold_abcissa**threshold_exponent
+t_0 = np.sqrt(ad_hoc_threshold)
+t_alpha = ad_hoc_threshold
+t_1 = ad_hoc_threshold * ad_hoc_threshold
+threshold_multiplier = t_1 - t_0
+threshold_exponent = (np.log(t_alpha-t_0) - np.log(t_1-t_0)) / np.log(alpha)
+threshold_x = np.linspace(0, 1, n_thresholds)
+up_thresholds = t_0 + threshold_multiplier * (threshold_x**threshold_exponent)
 down_thresholds = 1.0 / up_thresholds
 
 
@@ -173,7 +177,7 @@ for threshold_id in threshold_id_range:
                 "{:5.3f}".format(down_threshold),
                 "{:8.2f}".format(clip_time),
                 "{:5.3f}".format(clip_duration),
-                "{:5.3f}".format(onset_odf),
+                "{:6.3f}".format(onset_odf),
                 "{:5.3f}".format(offset_odf)]
             csv_writer.writerow(row)
             # If clip length is shorter than minimum, jump to the end of clip.
