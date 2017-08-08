@@ -97,7 +97,7 @@ for threshold_id in threshold_id_range:
         "th-" + threshold_str, "predictions.csv"])
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
     csv_file = open(csv_file_path, 'w')
-    csv_writer = csv.writer(csv_writer)
+    csv_writer = csv.writer(csv_file)
     header = ['Time (s)', 'Duration (s)', 'Onset ODF', 'Offset ODF']
     csv_writer.writerow(header)
 
