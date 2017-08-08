@@ -8,6 +8,15 @@ import localmodule
 
 
 # Define constants
+n_thresholds = 100
+# The array of upward thresholds is equal to
+# f(t) = 1 + threshold_multiplier * (t**threshold_exponent)
+# when the parameters threshold_multiplier and threshold_exponent
+# are chosen such that:
+# (1)    f(threshold_range_alpha*n_thresholds) = ad_hoc_threshold
+# (2)    f(n_threshold) = ad_hoc_threshold**2
+# In Old Bird, ad_hoc_threshold is equal to 2.0 for Thrush and 1.2 for Tseep.
+threshold_range_alpha = 0.1
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
@@ -36,14 +45,22 @@ oldbird_name = "_".join([dataset_name, "oldbird"])
 oldbird_dir = os.path.join(data_dir, oldbird_name)
 odf_path = os.path.join(data_dir, unit_str + ".hdf5")
 odf_file = h5py.File(odf_path, "r")
-odf_dataset = odf_str + "_odf"
-odf = odf_file[odf_dataset]
+odf_dataset_key = "_".join([odf_str, "odf"])
+odf = odf_file[odf_dataset_key]
 odf_length = len(odf)
 
-# Define array of thresholds.
-# TODO.
-# up_thresholds
-# down_thresholds
+
+# Define arrays of thresholds.
+odf_settings_key = "_".join([odf_str, "settings"])
+odf_settings = odf_file[odf_settings_key]
+ad_hoc_threshold = odf_settings["ratio_threshold"]
+threshold_multiplier = np.log(ad_hoc_threshold**2 - 1)
+threshold_exponent =
+    (np.log(ad_hoc_threshold-1) * threshold_multiplier) /
+    np.log(threshold_alpha_range)
+up_threshold_abcissa = np.arange(1, 1+n_thresholds)
+up_thresholds = threshold_multiplier * up_threshold_abcissa**threshold_exponent
+down_thresholds = np.tensorinv(up_thresholds)
 
 
 # Create directory for Old Bird in models_dir.
