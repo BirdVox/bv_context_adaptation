@@ -28,7 +28,7 @@ hop_length = int(np.round(sample_rate * hop_duration))
 args = sys.argv[1:]
 unit_str = args[0]
 odf_str = args[1]
-threshold_id_start = int(args[2][:2])
+threshold_id_start = int(args[2][3:5])
 threshold_id_stop = int(args[2][-2:])
 threshold_id_range = range(threshold_id_start, 1 + threshold_id_stop)
 
