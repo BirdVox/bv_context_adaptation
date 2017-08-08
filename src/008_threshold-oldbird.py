@@ -94,7 +94,8 @@ for threshold_id in threshold_id_range:
     csv_file_name = "_".join([dataset_name, "oldbird", odf_str, unit_str,
         "th-" + threshold_str, "predictions.csv"])
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
-    csv_writer = csv.writer(open(csv_file_path, 'w'))
+    csv_file = open(csv_file_path, 'w')
+    csv_writer = csv.writer(csv_writer)
     header = ['Time (s)', 'Duration (s)', 'Onset ODF', 'Offset ODF']
     csv_writer.writerow(header)
 
@@ -157,6 +158,10 @@ for threshold_id in threshold_id_range:
         offset_odf = odf[0, clip_stop]
         row = [clip_time, clip_duration, onset_odf, offset_odf]
         csv_writer.writerow(row)
+
+
+# Close CSV file.
+csv_file.close()
 
 
 # Print elapsed time.
