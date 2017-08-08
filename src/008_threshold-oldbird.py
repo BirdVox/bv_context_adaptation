@@ -70,7 +70,7 @@ down_thresholds = 1.0 / up_thresholds
 
 
 # Create directory for Old Bird in models_dir.
-model_dir = os.path.join(models_dir, "Old Bird")
+model_dir = os.path.join(models_dir, "oldbird")
 os.makedirs(model_dir, exist_ok=True)
 out_unit_dir = os.path.join(model_dir, unit_str)
 os.makedirs(out_unit_dir, exist_ok=True)
@@ -109,7 +109,7 @@ for threshold_id in threshold_id_range:
         "th-" + threshold_str, "predictions.csv"])
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
     csv_file = open(csv_file_path, 'w')
-    csv_writer = csv.writer(csv_file, delimiter=', ')
+    csv_writer = csv.writer(csv_file, delimiter=',')
     csv_writer.writerow(header)
 
     # Initialize variables.
