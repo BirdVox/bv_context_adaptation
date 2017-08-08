@@ -143,7 +143,7 @@ for threshold_id in threshold_id_range:
             offset_odf = odf[0, clip_stop]
             # Export clip_time, clip_duration, onset_odf, offset_odf.
             row = [clip_time, clip_duration, onset_odf, offset_odf]
-            csv_writer.writerow(row)
+            csv_writer.writerow(str(clip_time))
             # If clip length is shorter than minimum, jump to the end of clip.
             if (t-clip_start) < min_clip_length:
                 t = int(np.floor(clip_stop/hop_length)) * hop_length
