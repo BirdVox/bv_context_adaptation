@@ -110,7 +110,7 @@ for threshold_id in threshold_id_range:
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
     csv_file = open(csv_file_path, 'w')
     csv_writer = csv.writer(csv_file, delimiter=',')
-    csv_writer.writerow(header)
+    csv_writer.writerow(csv_header)
 
     # Initialize variables.
     clip_start = 0
