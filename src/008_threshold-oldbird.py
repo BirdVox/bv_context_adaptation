@@ -94,7 +94,7 @@ for threshold_id in threshold_id_range:
     csv_file_name = "_".join([dataset_name, "oldbird", odf_str, unit_str,
         "th-" + threshold_str, "predictions.csv"])
     csv_file_path = os.path.join(predictions_dir, csv_file_name)
-    csv_writer = csv.writer(open(csv_file_path, 'wb'))
+    csv_writer = csv.writer(open(csv_file_path, 'w'))
     header = ['Time (s)', 'Duration (s)', 'Onset ODF', 'Offset ODF']
     csv_writer.writerow(header)
 
