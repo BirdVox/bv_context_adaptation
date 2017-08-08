@@ -30,7 +30,7 @@ unit_str = args[0]
 odf_str = args[1]
 threshold_id_start = int(args[2][:2])
 threshold_id_stop = int(args[2][-2:])
-threshold_id_range = range(threshold_id_start, threshold_id_stop)
+threshold_id_range = range(threshold_id_start, 1 + threshold_id_stop)
 
 
 # Print header.
