@@ -18,8 +18,11 @@
 * Install pysoundfile for audio I/O
 `conda install -c carlthome pysoundfile`
 
-* Clone and install muda (Brian McFee, ISC license) for data augmentation
+* Install muda (Brian McFee, ISC license) for data augmentation
 `pip install muda`
 
 * Install Vesper (Harold Mills, MIT license) for Old Bird flight call detector
 `conda install -c haroldmills vesper`
+
+* Install mir_eval (Colin Raffel, MIT license) for evaluation
+`conda install -c carlthome mir_eval`
