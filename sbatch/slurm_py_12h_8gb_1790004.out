@@ -86,3 +86,16 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 05:29:13.253 NotebookApp] Creating new notebook in /spl2017/notebooks
 [I 05:29:15.162 NotebookApp] Kernel started: ad7a6c15-c2fe-41d0-b535-42d874b702ff
 [W 05:29:15.281 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.13ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 05:31:15.179 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:33:15.227 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:35:15.224 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:37:15.213 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:39:15.252 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:41:15.218 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:43:15.229 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:45:15.228 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:47:15.226 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:49:15.237 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[I 05:49:39.465 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
+[W 06:16:10.160 NotebookApp] WebSocket ping timeout after 119852 ms.
+[W 06:16:16.059 NotebookApp] WebSocket ping timeout after 119923 ms.
