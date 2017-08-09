@@ -94,8 +94,7 @@ for threshold_id in range(n_thresholds):
             n = n + 1
 
     # Select rows in input DataFrame.
-    out_df = in_df[in_df["Time (s)"].isin(times)]
-
+    out_df = in_df[in_df["Time (s)"].isin(out_times)]
 
     # Export output DataFrame to CSV.
     out_df.to_csv(out_prediction_path)
