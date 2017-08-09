@@ -129,14 +129,18 @@ def get_units():
 
 def parse_augmentation_kind(aug_kind_str, training_units, val_units):
     if aug_kind_str == "all":
-        training_noise_augs = ["noise-" + training_unit_str for training_units]
+        training_noise_augs = ["noise-" + training_unit_str
+            for training_unit_str in training_units]
         training_augs = training_noise_augs + ["original", "pitch", "stretch"]
-        val_noise_augs = ["noise-" + val_unit_str for val_units]
+        val_noise_augs = ["noise-" + val_unit_str
+            for val_unit_str in val_units]
         val_augs = training_noise_augs + ["original", "pitch", "stretch"]
     elif aug_kind_str == "noise":
-        training_noise_augs = ["noise-" + training_unit_str for training_units]
+        training_noise_augs = ["noise-" + training_unit_str
+            for training_unit_str in training_units]
         training_augs = training_noise_augs + ["original"]
-        val_noise_augs = ["noise-" + val_unit_str for val_units]
+        val_noise_augs = ["noise-" + val_unit_str
+            for val_unit_str in val_units]
         val_augs = training_noise_augs + ["original"]
     else:
         if aug_kind_str == "none":
