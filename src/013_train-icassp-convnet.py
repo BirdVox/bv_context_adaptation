@@ -25,7 +25,7 @@ trial_str = args[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Training ICASSP convnet on " + dataset_name + ", " +
+print("Training Salamon's ICASSP 2017 convnet on " + dataset_name + ", " +
     unit_str, " trial " + trial_str + ".")
 if aug_kind_str == "none":
     print("No data augmentation.")
