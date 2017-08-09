@@ -18,7 +18,7 @@ B. Old Bird
 
 3. [DONE] Apply ad hoc detector, with 100 thresholds and limits on duration, to Tseep and Thrush ODFs, on 6 full night recordings. Export peak times as 2*6*100=1200 CSV files. Parallelize over ODFs (2), units (6), and groups of 10 thresholds (10).
 
-4. [IN PROGRESS] Run clip suppressor on all CSV files. Export post-processed peak times as 2*6=12 CSV files. Parallelize over ODFs (2) and units (6).
+4. [DONE] Run clip suppressor on all CSV files. Export post-processed peak times as 2*6=12 CSV files. Parallelize over ODFs (2) and units (6).
 
 5. Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6
 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
