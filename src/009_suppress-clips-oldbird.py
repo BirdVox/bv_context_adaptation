@@ -12,13 +12,16 @@ import localmodule
 args = ["unit01"] #                                     DISABLE
 #args = sys.argv[1:]                                     ENABLE
 unit_str = args[0]
+dataset_name = localmodule.get_dataset_name()
+data_dir = localmodule.get_data_dir()
+
+
 
 
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird onset detection functions (Thrush and Tseep) on " +
-    dataset_name + ", " + unit_str + ".")
+print("Running Old Bird clip suppressor on " + dataset_name + ", " + unit_str + ".")
 print('pandas version: {:s}'.format(pd.__version__))
 print("")
 
