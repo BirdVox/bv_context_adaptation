@@ -115,7 +115,7 @@ def get_logmelspec_paths(augs, units):
                     [dataset_name, aug_str, instanced_aug_str, unit_str])
                 logmelspec_path = \
                     os.path.join(aug_dir, logmelspec_name + ".hdf5")
-                logmelspec_paths.join(logmelspec_path)
+                logmelspec_paths.append(logmelspec_path)
     return logmelspec_paths
 
 
