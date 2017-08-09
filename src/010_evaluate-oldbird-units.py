@@ -1,4 +1,5 @@
 import datetime
+import mir_eval
 import numpy as np
 import os
 import pandas as pd
@@ -29,6 +30,7 @@ clip_suppressor_str = "clip-suppressor"
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Evaluating Old Bird on " + dataset_name + ", " + unit_str + ".")
+print('mir_eval version: {:s}'.format(mir_eval.__version__))
 print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
 print("")
@@ -50,6 +52,7 @@ annotation_df = pd.read_csv(annotation_path, delimiter="\t")
 begin_times = np.array(annotation_df["Begin Time (s)"]])
 end_times = np.array(annotation_df["End Time (s)"])
 true_times = 0.5 * (begin_times+end_times)
+
 
 # Loop over tolerances.
 tolerance = tolerances[0] #                             DISABLE
