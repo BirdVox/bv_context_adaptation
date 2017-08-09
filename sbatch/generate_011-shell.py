@@ -36,7 +36,6 @@ with open(file_path, "w") as f:
 
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
-            f.write("\n")
         f.write("\n")
 
 
