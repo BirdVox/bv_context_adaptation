@@ -108,7 +108,7 @@ for unit_str in units:
                     threshold_str = "th-" + str(threshold_id).zfill(2)
                     prediction_name_components = [dataset_name, "oldbird",
                         odf_str, unit_str, threshold_str, "predictions"]
-                    if clip_suppressor_str == "clip_suppressor":
+                    if clip_suppressor_str == "clip-suppressor":
                         prediction_name_components.append(clip_suppressor_str)
                     prediction_name = \
                         "_".join(prediction_name_components) + ".csv"
