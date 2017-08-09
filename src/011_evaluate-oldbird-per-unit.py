@@ -91,67 +91,66 @@ csv_header = [
 
 
 # Loop over tolerances.
-tolerance = tolerances[0] #                             DISABLE
-# for tolerance in tolerances:                           ENABLE
+for tolerance in tolerances:
 
-# Create a CSV file for metrics.
-tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
-csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
-    clip_suppressor_str, unit_str, tolerance_str, "metrics.csv"])
-csv_file_path = os.path.join(unit_dir, csv_file_name)
-csv_file = open(csv_file_path, 'w')
-csv_writer = csv.writer(csv_file, delimiter=',')
-csv_writer.writerow(csv_header)
+    # Create a CSV file for metrics.
+    tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
+    csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
+        clip_suppressor_str, unit_str, tolerance_str, "metrics.csv"])
+    csv_file_path = os.path.join(unit_dir, csv_file_name)
+    csv_file = open(csv_file_path, 'w')
+    csv_writer = csv.writer(csv_file, delimiter=',')
+    csv_writer.writerow(csv_header)
 
-# Loop over thresholds.
-threshold_id = 0 #                                      DISABLE
-# for threshold_id in range(n_threshold):               ENABLE
+    # Loop over thresholds.
+    for threshold_id in range(n_thresholds):
 
-# Load middle times of prediction.
-threshold_str = "th-" + str(threshold_id).zfill(2)
-prediction_name_components = [dataset_name, "oldbird", odf_str,
-    unit_str, threshold_str, "predictions"]
-if clip_suppressor_str == "clip_suppressor":
-    prediction_name_components.append(clip_suppressor_str)
-prediction_name = "_".join(prediction_name_components) + ".csv"
-prediction_path = os.path.join(predictions_dir, prediction_name)
-prediction_df = pd.read_csv(prediction_path)
-selected = prediction_df["Time (s)"]
+        # Load middle times of prediction.
+        threshold_str = "th-" + str(threshold_id).zfill(2)
+        prediction_name_components = [dataset_name, "oldbird", odf_str,
+            unit_str, threshold_str, "predictions"]
+        if clip_suppressor_str == "clip_suppressor":
+            prediction_name_components.append(clip_suppressor_str)
+        prediction_name = "_".join(prediction_name_components) + ".csv"
+        prediction_path = os.path.join(predictions_dir, prediction_name)
+        prediction_df = pd.read_csv(prediction_path)
+        selected = prediction_df["Time (s)"]
 
-# Match selected events with relevant events using the mir_eval toolbox.
-selected_relevant = mir_eval.util.match_events(relevant, selected, tolerance)
+        # Match selected events with relevant events using the mir_eval toolbox.
+        selected_relevant = mir_eval.util.match_events(
+            relevant, selected, tolerance)
 
-# Define metrics.
-true_positives = len(selected_relevant)
-n_selected = len(selected)
-false_positives = n_selected - true_positives
-false_negatives = n_relevant - true_positives
-if n_selected == 0 or true_positives == 0:
-    precision = 0.0
-    recall = 0.0
-    f1_score = 0.0
-else:
-    precision = 100 * true_positives / n_selected
-    recall = 100 * true_positives / n_relevant
-    f1_score = 2*precision*recall / (precision+recall)
+        # Define metrics.
+        true_positives = len(selected_relevant)
+        n_selected = len(selected)
+        false_positives = n_selected - true_positives
+        false_negatives = n_relevant - true_positives
+        if n_selected == 0 or true_positives == 0:
+            precision = 0.0
+            recall = 0.0
+            f1_score = 0.0
+        else:
+            precision = 100 * true_positives / n_selected
+            recall = 100 * true_positives / n_relevant
+            f1_score = 2*precision*recall / (precision+recall)
 
-# Write row.
-row = [
-    dataset_name,
-    unit_str,
-    clip_suppressor_str,
-    str(int(np.round(1000*tolerance))).rjust(4),
-    threshold_str,
-    str(n_relevant).rjust(5),
-    str(n_selected).rjust(6),
-    str(true_positives).rjust(5),
-    str(false_positives).rjust(5),
-    str(false_negatives).rjust(5),
-    format(precision, ".6f"),
-    format(recall, ".6f"),
-    format(f1_score, ".6f")
-]
-csv_writer.writerow(row)
+        # Write row.
+        row = [
+            dataset_name,
+            unit_str,
+            clip_suppressor_str,
+            str(int(np.round(1000*tolerance))).rjust(4),
+            threshold_str,
+            str(n_relevant).rjust(5),
+            str(n_selected).rjust(6),
+            str(true_positives).rjust(5),
+            str(false_positives).rjust(5),
+            str(false_negatives).rjust(5),
+            format(precision, ".6f"),
+            format(recall, ".6f"),
+            format(f1_score, ".6f")
+        ]
+        csv_writer.writerow(row)
 
 
 # Close CSV file.
