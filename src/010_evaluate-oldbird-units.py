@@ -8,13 +8,29 @@ import time
 import localmodule
 
 
+# Define constants.
+dataset_name = localmodule.get_datset_name()
+models_dir = localmodule.get_models_dir()
+oldbird_models_dir = os.path.join(models_dir, "oldbird")
+#args = sys.argv[1:]
+#unit_str = args[0]
+#odf_str = args[1]
+#suppressor_str = args[2]
+unit_str = "unit01"
+odf_str = "thrush"
+clip_suppressor_str = "clip-suppressor"
+
+
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird onset detection functions (Thrush and Tseep) on " +
-    dataset_name + ", " + unit_str + ".")
+print("Evaluating Old Bird on " + dataset_name + ", " + unit_str + ".")
+print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
 print("")
+
+
+# Loop over tolerances.
 
 
 # Print elapsed time.
