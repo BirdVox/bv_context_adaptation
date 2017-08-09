@@ -140,7 +140,7 @@ for unit_str in units:
                         dataset_name,
                         unit_str,
                         odf_str,
-                        clip_suppressor_str,
+                        str(threshold_id).zfill(2),
                         str(int(np.round(1000*tolerance))).rjust(4),
                         threshold_str,
                         str(n_relevant).rjust(5),
