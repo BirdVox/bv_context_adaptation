@@ -1,0 +1,51 @@
+
+Jupyter server is running on: c17-01
+Job starts at: Wed Aug  9 00:10:20 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9647:localhost:9647 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9647:localhost:9647 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 00:10:23.008 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1790004/jupyter/notebook_cookie_secret
+[I 00:10:23.338 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 00:10:23.338 NotebookApp] 0 active kernels 
+[I 00:10:23.338 NotebookApp] The Jupyter Notebook is running at: http://localhost:9647/?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c
+[I 00:10:23.338 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 00:10:23.338 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9647/?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c
+[I 00:17:15.675 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 1.27ms
+[W 00:17:37.480 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 19.39ms referer=http://localhost:9647/notebooks/spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:17:37.848 NotebookApp] Kernel started: 7a82cbb5-62fb-4ba4-9c47-103e9727d78e
+[I 00:19:37.836 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:21:37.872 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:23:37.865 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:25:38.015 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:27:37.854 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:29:37.842 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:31:37.798 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:33:37.799 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 00:35:37.819 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
