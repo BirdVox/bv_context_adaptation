@@ -92,6 +92,8 @@ for unit_str in units:
                 if time_difference < suppressor_period:
                     while time_difference < suppressor_period:
                         next_n = next_n + 1
+                        if next_n >= n_rows:
+                            break
                         next_time = in_times[next_n]
                         time_difference = next_time - current_time
                     n = next_n
