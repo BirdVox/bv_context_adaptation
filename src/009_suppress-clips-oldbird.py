@@ -20,6 +20,7 @@ data_dir = localmodule.get_data_dir()
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Running Old Bird clip suppressor on " + dataset_name + ", " + unit_str + ".")
+print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
 print("")
 
