@@ -69,13 +69,15 @@ for unit_str in units:
             settings = oldbird_hdf5[settings_key]
             filter_f0 = settings["filter_f0"].value
             filter_f1 = settings["filter_f1"].value
-            ann_df = ann_df[
+            restricted_ann_df = ann_df[
                 ((0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"])) > filter_f0) &
                 ((0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"])) < filter_f1)]
+        else:
+            retricted_ann_df = ann_df
 
         # Load middle times of true events.
-        begin_times = np.array(ann_df["Begin Time (s)"])
-        end_times = np.array(ann_df["End Time (s)"])
+        begin_times = np.array(retricted_ann_df["Begin Time (s)"])
+        end_times = np.array(retricted_ann_df["End Time (s)"])
         relevant = 0.5 * (begin_times+end_times)
         n_relevant = len(relevant)
 
