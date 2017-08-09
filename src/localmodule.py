@@ -159,7 +159,7 @@ def parse_augmentation_kind(aug_kind_str, training_units, val_units):
         training_augs = training_noise_augs + ["original", "pitch", "stretch"]
         val_noise_augs = ["noise-" + val_unit_str
             for val_unit_str in val_units]
-        val_augs = training_noise_augs + ["original", "pitch", "stretch"]
+        val_augs = val_noise_augs + ["original", "pitch", "stretch"]
     elif aug_kind_str == "noise":
         training_noise_augs = ["noise-" + training_unit_str
             for training_unit_str in training_units]
