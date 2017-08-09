@@ -83,16 +83,24 @@ true_times = 0.5 * (begin_times+end_times)
 
 
 # Prepare header for metrics.
-header = [
+csv_header = [
     "Dataset", "Unit", "ODF", "Clip suppressor", "Tolerance",
     "Threshold ID", "Relevant", "Selected", "True positives",
     "False positives", "False negatives", "Precision", "Recall", "F1 Score"]
+
 
 # Loop over tolerances.
 tolerance = tolerances[0] #                             DISABLE
 # for tolerance in tolerances:                           ENABLE
 
-# Create a CSV file with metrics.
+# Create a CSV file for metrics.
+tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
+csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
+    clip_suppressor_str, unit_str, tolerance_str, "metrics.csv"])
+csv_file_path = os.path.join(oldbird_models_dir, csv_file_name)
+csv_file = open(csv_file_path, 'w')
+csv_writer = csv.writer(csv_file, delimiter=',')
+csv_writer.writerow(csv_header)
 
 # Loop over thresholds.
 threshold_id = 0 #                                      DISABLE
