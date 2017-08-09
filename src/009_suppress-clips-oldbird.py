@@ -14,6 +14,7 @@ unit_str = args[0]
 odf_str = args[1]
 dataset_name = localmodule.get_dataset_name()
 data_dir = localmodule.get_data_dir()
+n_thresholds = 100
 
 
 # Print header.
