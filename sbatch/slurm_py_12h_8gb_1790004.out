@@ -99,3 +99,20 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 05:49:39.465 NotebookApp] Saving file at /spl2017/notebooks/merge-tseep-thrush.ipynb
 [W 06:16:10.160 NotebookApp] WebSocket ping timeout after 119852 ms.
 [W 06:16:16.059 NotebookApp] WebSocket ping timeout after 119923 ms.
+[I 08:40:53.916 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 0.75ms
+[W 08:41:12.722 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 3.25ms referer=http://localhost:9647/notebooks/spl2017/notebooks/threshold-oldbird.ipynb
+[I 08:41:13.062 NotebookApp] Kernel started: 695b92ed-00cb-4019-95df-bbb9f7fe241a
+[I 08:41:44.315 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 08:41:45.313 NotebookApp] Kernel started: 95e52191-0019-4a89-b83d-4dbea68fbb65
+[W 08:41:46.359 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.42ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 08:43:45.363 NotebookApp] Saving file at /spl2017/notebooks/sandbox.ipynb
+[W 08:49:13.970 NotebookApp] WebSocket ping timeout after 119961 ms.
+[W 08:49:16.409 NotebookApp] WebSocket ping timeout after 119976 ms.
+[I 09:12:13.799 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 1.15ms
+[I 09:12:24.711 NotebookApp] Kernel shutdown: 95e52191-0019-4a89-b83d-4dbea68fbb65
+[W 09:12:24.713 NotebookApp] delete /spl2017/notebooks/sandbox.ipynb
+[I 09:12:27.855 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 09:12:30.035 NotebookApp] Kernel started: 60cb6628-4093-4322-af63-f025fc84bb18
+[W 09:12:30.135 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.46ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 09:14:30.399 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 09:16:30.039 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
