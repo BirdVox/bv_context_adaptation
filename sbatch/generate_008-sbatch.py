@@ -20,7 +20,7 @@ script_path = os.path.join("..", "src", script_name)
 # Loop over recording units
 for unit_str in units:
 
-    # Loop over onset detection function ("thrush" and "tseep")
+    # Loop over onset detection functions ("thrush" and "tseep")
     for odf_str in odfs:
 
         # Loop over groups of thresholds
