@@ -140,7 +140,7 @@ row = [
     dataset_name,
     unit_str,
     clip_suppressor_str,
-    tolerance_str,
+    str(int(np.round(1000*tolerance))).rjust(4),
     threshold_str,
     str(n_relevant).rjust(5),
     str(n_selected).rjust(6),
