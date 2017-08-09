@@ -10,10 +10,12 @@ import localmodule
 
 
 # Define constants.
+data_dir = localodule.get_data_dir()
 dataset_name = localmodule.get_datset_name()
 models_dir = localmodule.get_models_dir()
-data_dir = localodule.get_data_dir()
+negative_labels = localmodule.get_negative_labels()
 tolerances = localmodule.get_tolerances()
+n_thresholds = 100
 
 
 # Read command-line arguments.                           ENABLE
@@ -49,6 +51,16 @@ annotations_dir = os.path.join(data_dir, annotations_name)
 annotation_name = unit_str + ".txt"
 annotation_path = os.path.join(annotations_dir, annotation_name)
 annotation_df = pd.read_csv(annotation_path, delimiter="\t")
+
+
+# Restrict rows to negative labels.
+if "Calls" in annotation.columns:
+    relevant_rows = annotation.loc[~annotation["Calls"].isin(negative_labels)]
+else:
+    relevant_rows = annotation
+
+
+# Restrict to frequency range of interest.
 begin_times = np.array(annotation_df["Begin Time (s)"]])
 end_times = np.array(annotation_df["End Time (s)"])
 true_times = 0.5 * (begin_times+end_times)
@@ -56,8 +68,22 @@ true_times = 0.5 * (begin_times+end_times)
 
 # Loop over tolerances.
 tolerance = tolerances[0] #                             DISABLE
-#for tolerance in tolerances:                           ENABLE
+# for tolerance in tolerances:                           ENABLE
 
+# Loop over thresholds.
+threshold_id = 0 #                                      DISABLE
+# for threshold_id in range(n_threshold):               ENABLE
+
+# Load prediction.
+threshold_str = "th-" + str(threshold_id).zfill(2)
+prediction_name_components = [dataset_name, "oldbird", odf_str,
+    threshold_str, "predictions"]
+if clip_suppressor_str == "clip_suppressor":
+    prediction_name_components.append(clip_suppressor_str)
+prediction_name = "_".join(prediction_name_components) + ".csv"
+prediction_path = os.path.join(predictions_dir, prediction_name)
+prediction_df = pd.read_csv(prediction_path)
+predicted_times = prediction_df["Time (s)"]
 
 
 # Print elapsed time.
