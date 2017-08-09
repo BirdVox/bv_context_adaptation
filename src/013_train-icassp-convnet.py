@@ -23,33 +23,16 @@ unit_str = args[1]
 trial_str = args[2]
 
 
-# unit_str is the name of the test unit.
+# Retrieve fold such that unit_str is in the test set.
 fold = [f for f in folds if unit_str in f[0]][0]
 test_units = fold[0]
 training_units = fold[1]
 val_units = fold[2]
 
 
-# Analyze aug_kind_str keyword:
-if aug_kind_str == "all":
-    training_noise_augs = ["noise-" + training_unit_str for training_units]
-    training_augs = training_noise_augs + ["original", "pitch", "stretch"]
-    val_noise_augs = ["noise-" + val_unit_str for val_units]
-    val_augs = training_noise_augs + ["original", "pitch", "stretch"]
-elif aug_kind_str == "noise":
-    training_noise_augs = ["noise-" + training_unit_str for training_units]
-    training_augs = training_noise_augs + ["original"]
-    val_noise_augs = ["noise-" + val_unit_str for val_units]
-    val_augs = training_noise_augs + ["original"]
-else:
-    if aug_kind_str == "none":
-        training_augs = ["original"]
-    elif aug_kind_str == "pitch":
-        training_augs == ["original", "pitch"]
-    elif aug_kind_str == "stretch":
-        training_augs == ["original", "stretch"]
-    val_augs = training_augs
-
+# Get training augmentations and validation augmentations as string keywords.
+training_augs, val_augs = \
+    localmodule.parse_augmentation_kind(aug_kind_str, training_units, val_units)
 
 
 # Print header.
