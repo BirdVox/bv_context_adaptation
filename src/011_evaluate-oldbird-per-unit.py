@@ -1,4 +1,5 @@
 import datetime
+import h5py
 import mir_eval
 import numpy as np
 import os
@@ -32,6 +33,7 @@ clip_suppressor_str = "clip-suppressor"
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Evaluating Old Bird on " + dataset_name + ", " + unit_str + ".")
+print('h5py version: {:s}'.format(h5py.__version__))
 print('mir_eval version: {:s}'.format(mir_eval.__version__))
 print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
@@ -50,15 +52,35 @@ annotations_name = "_".join([dataset_name, "annotations"])
 annotations_dir = os.path.join(data_dir, annotations_name)
 annotation_name = unit_str + ".txt"
 annotation_path = os.path.join(annotations_dir, annotation_name)
-annotation = pd.read_csv(annotation_path, delimiter="\t")
+ann_df = pd.read_csv(annotation_path, delimiter="\t")
 
 
 # Restrict rows to negative labels.
-if "Calls" in annotation.columns:
-    annotation = annotation.loc[~annotation["Calls"].isin(negative_labels)]
+if "Calls" in ann_df.columns:
+    ann_df = ann_df.loc[~ann_df["Calls"].isin(negative_labels)]
 
 
-# Restrict to frequency range of interest.
+# Restrict rows to frequency range of interest.
+if odf_str in ["thrush", "tseep"]:
+    oldbird_data_name = "_".join([dataset_name, "oldbird"])
+    oldbird_data_dir = os.path.join(data_dir, oldbird_data_name)
+    oldbird_data_path = os.path.join(oldbird_data_dir, unit_str + ".hdf5")
+    oldbird_hdf5 = h5py.File(oldbird_data_path, "r")
+    settings_key = "_".join([odf_str, "settings"])
+    settings = oldbird_hdf5[settings_key]
+    filter_f0 = settings["filter_f0"].value
+    filter_f1 = settings["filter_f1"].value
+    low_freqs = np.array(ann_df["Low Freq (Hz)"])
+    high_freqs = np.array(ann_df["High Freq (Hz)"])
+    mid_freqs = 0.5 * (low_freqs+high_freqs)
+    restricted_offset_times = []
+    offset_times = np.array(ann_df["File Offset (s)"])
+    for (mid_freq, offset_time) in zip(mid_freqs, offset_times):
+        if (mid_freq > filter_f0) and (mid_freq < filter_f1):
+            restricted_offset_times.append(offset_time)
+    ann_df = ann_df[ann_df["File Offset (s)"].isin(restricted_offset_times)]
+
+
 begin_times = np.array(annotation["Begin Time (s)"]])
 end_times = np.array(annotation["End Time (s)"])
 true_times = 0.5 * (begin_times+end_times)
