@@ -71,8 +71,8 @@ if odf_str in ["thrush", "tseep"]:
     filter_f0 = settings["filter_f0"].value
     filter_f1 = settings["filter_f1"].value
     ann_df = ann_df[
-        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"] > filter_f0 &
-        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"] < filter_f1]
+        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"]) > filter_f0 &
+        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"]) < filter_f1]
 
 
 begin_times = np.array(annotation["Begin Time (s)"]])
