@@ -1,0 +1,11 @@
+2017-08-09 06:53:31.310555 Start.
+Running Old Bird onset detection functions (Thrush and Tseep) on BirdVox-70k, unit07.
+h5py version: 2.6.0.
+numpy version: 1.13.1
+
+Traceback (most recent call last):
+  File "../src/008_threshold-oldbird.py", line 81, in <module>
+    predictions_name = os.path.join(["predictions", "no-clip-suppressor"])
+  File "/home/vl1019/miniconda3/lib/python3.6/posixpath.py", line 78, in join
+    a = os.fspath(a)
+TypeError: expected str, bytes or os.PathLike object, not list
