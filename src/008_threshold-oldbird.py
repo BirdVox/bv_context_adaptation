@@ -89,6 +89,7 @@ min_clip_length = int(np.round(min_clip_duration * sample_rate))
 max_clip_duration = odf_settings["max_duration"].value
 max_clip_length = int(np.round(max_clip_duration * sample_rate))
 
+
 # Create CSV header.
 csv_header = [
     'Dataset',
@@ -102,12 +103,13 @@ csv_header = [
     'Onset ODF',
     'Offset ODF']
 
+
+# Loop over thresholds.
 for threshold_id in threshold_id_range:
     # Read upward threshold and downward threshold.
     up_threshold = up_thresholds[threshold_id]
     down_threshold = down_thresholds[threshold_id]
     threshold_str = str(threshold_id).zfill(2)
-    print(up_threshold)
 
     # Create CSV file for predictions.
     csv_file_name = "_".join([dataset_name, "oldbird", odf_str, unit_str,
