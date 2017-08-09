@@ -102,7 +102,7 @@ for threshold in thresholds:
     # Select values above threshold.
     selected = peak_times[np.where(peak_values>threshold)]
 
-    # Match selected items with relevant items with the mir_eval toolbox.
+    # Match selected events with relevant events using the mir_eval toolbox.
     selected_relevant = mir_eval.util.match_events(relevant, selected, tolerance)
 
     # Define metrics.
