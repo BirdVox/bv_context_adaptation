@@ -11,12 +11,13 @@ import localmodule
 
 
 # Define constants.
+augmentations = localmodule.get_augmentations()
 dataset_name = localmodule.get_dataset_name()
 
 
 # Read command-line arguments.
 args = sys.argv[1:]
-augs = args[0]
+aug_kind_str = args[0]
 unit_str = args[1]
 trial_str = args[2]
 
@@ -26,8 +27,13 @@ start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Training ICASSP convnet on " + dataset_name + ", " +
     unit_str, " trial " + trial_str + ".")
-print("Set of augmentations:")
-print(augs)
+if aug_kind_str == "none":
+    print("No data augmentation.")
+elif aug_kind_str == "all":
+    print("Data augmentation:")
+    print()
+else:
+    print("")
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('keras version: {:s}'.format(keras.__version__))
