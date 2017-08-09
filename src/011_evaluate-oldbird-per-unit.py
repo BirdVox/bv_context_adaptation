@@ -154,6 +154,10 @@ row = [
 csv_writer.writerow(row)
 
 
+# Close CSV file.
+csv_file.close()
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
