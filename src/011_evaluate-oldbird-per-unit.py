@@ -1,3 +1,4 @@
+import csv
 import datetime
 import h5py
 import mir_eval
@@ -75,20 +76,29 @@ if odf_str in ["thrush", "tseep"]:
         0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"]) < filter_f1]
 
 
+# Load middle times of true events.
 begin_times = np.array(annotation["Begin Time (s)"]])
 end_times = np.array(annotation["End Time (s)"])
 true_times = 0.5 * (begin_times+end_times)
 
 
+# Prepare header for metrics.
+header = [
+    "Dataset", "Unit", "ODF", "Clip suppressor", "Tolerance",
+    "Threshold ID", "Relevant", "Selected", "True positives",
+    "False positives", "False negatives", "Precision", "Recall", "F1 Score"]
+
 # Loop over tolerances.
 tolerance = tolerances[0] #                             DISABLE
 # for tolerance in tolerances:                           ENABLE
+
+# Create a CSV file with metrics.
 
 # Loop over thresholds.
 threshold_id = 0 #                                      DISABLE
 # for threshold_id in range(n_threshold):               ENABLE
 
-# Load prediction.
+# Load middle times of prediction.
 threshold_str = "th-" + str(threshold_id).zfill(2)
 prediction_name_components = [dataset_name, "oldbird", odf_str,
     threshold_str, "predictions"]
