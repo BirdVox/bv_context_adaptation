@@ -1,0 +1,10 @@
+2017-08-09 15:32:30.666745 Start.
+Evaluating Old Bird on BirdVox-70k.
+h5py version: 2.6.0
+mir_eval version: 0.4
+numpy version: 1.13.1
+pandas version: 0.20.3
+
+2017-08-09 15:56:44.969387 Finish.
+Total elapsed time: 00:24:14.97.
+slurmstepd: error: Exceeded step memory limit at some point.

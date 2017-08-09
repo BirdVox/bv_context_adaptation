@@ -49,3 +49,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 15:19:08.170 NotebookApp] Kernel restarted: 8a2d40f6-9276-4099-88d2-f316a6da9b50
 [I 15:20:28.339 NotebookApp] Saving file at /spl2017/notebooks/train-icassp-convnet.ipynb
 [I 15:22:28.345 NotebookApp] Saving file at /spl2017/notebooks/train-icassp-convnet.ipynb
+[W 15:34:39.217 NotebookApp] WebSocket ping timeout after 119912 ms.
