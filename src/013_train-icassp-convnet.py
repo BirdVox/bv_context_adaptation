@@ -14,6 +14,11 @@ import localmodule
 aug_dict = localmodule.get_augmentations()
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
+n_input_hops = 104
+n_filters = [24, 48, 48]
+kernel_size = [5, 5]
+pool_size = [2, 4]
+n_hidden_units = 64
 
 
 # Read command-line arguments.
@@ -33,6 +38,56 @@ val_units = fold[2]
 # Get training augmentations and validation augmentations as string keywords.
 training_augs, val_augs = \
     localmodule.parse_augmentation_kind(aug_kind_str, training_units, val_units)
+
+
+from keras.callbacks import ModelCheckpoint
+from keras.models import Sequential
+from keras.layers import Dense, Dropout, Activation,  Flatten
+from keras.layers import Convolution2D, MaxPooling2D
+from keras.layers.normalization import BatchNormalization
+
+# Define and compile Keras model.
+model = keras.models.Sequential()
+
+# Layer 1
+bn = keras.layers.normalization.BatchNormalization(
+    input_shape=(128, n_input_hops, 1))
+model.add(bn)
+conv1 = keras.layers.Convolution2D(n_filters[0], kernel_size,
+    padding="same", kernel_initializer="he_normal", activation="relu")
+model.add(conv1)
+pool1 = keras.layers.MaxPooling2D(pool_size=pool_size)
+model.add(pool1)
+
+# Layer 2
+conv2 = keras.layers.Convolution2D(n_filters[1], kernel_size,
+    padding="same", kernel_initializer="he_normal", activation="relu")
+model.add(conv2)
+pool2 = keras.layers.MaxPooling2D(pool_size=pool_size)
+model.add(pool2)
+
+# Layer 3
+conv3 = keras.layers.Convolution2D(n_filters[2], kernel_size,
+    padding="same", kernel_initializer="he_normal", activation="relu")
+model.add(conv3)
+
+# Layer 4
+drop1 = keras.layers.Dropout(0.5)
+model.add(drop1)
+flatten = keras.layers.Flatten()
+model.add(flatten)
+dense1 = keras.layers.Dense(n_hidden_units,
+    kernel_initializer="he_normal", activation="relu")
+model.add(dense1)
+
+# Layer 5
+# We put a single output instead of 43 in the original paper, because this
+# is binary classification instead of multilabel classification.
+drop2 = keras.layers.Dropout(0.5)
+model.add(drop2)
+dense2 = keras.layers.Dense(1,
+    kernel_initializer="glorot_uniform", activation="softmax")
+model.add(dense2)
 
 
 # Print header.
