@@ -3,6 +3,7 @@ import h5py
 import keras
 import numpy as np
 import os
+import pescador
 import tensorflow as tf
 import time
 import sys
@@ -35,7 +36,7 @@ val_units = fold[2]
 
 
 # Get training augmentations and validation augmentations as string keywords.
-training_aug_names, val_aug_names = \
+training_augs, val_augs = \
     localmodule.parse_augmentation_kind(aug_kind_str, training_units, val_units)
 
 
