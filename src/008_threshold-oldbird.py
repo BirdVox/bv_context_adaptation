@@ -153,7 +153,7 @@ for threshold_id in threshold_id_range:
             # Bound the clip length from below.
             clip_length = max(t-clip_start, min_clip_length)
             # Compute time at the middle of the clip and clip duration.
-            clip_stop = max(clip_start + clip_length, odf_length - 1)
+            clip_stop = min(clip_start + clip_length, odf_length - 1)
             clip_mid = int(0.5 * (clip_start+clip_stop))
             clip_time = clip_mid / sample_rate
             clip_duration = clip_length / sample_rate
