@@ -18,7 +18,7 @@ models_dir = localmodule.get_models_dir()
 negative_labels = localmodule.get_negative_labels()
 tolerances = localmodule.get_tolerances()
 units = localmodule.get_units()
-#odfs = ["thrush", "tseep", "thrush-tseep"]
+#odfs = ["thrush", "tseep", "merged"]
 odfs = ["thrush", "tseep"]
 clip_suppressor_modes = ["no-clip-suppressor", "clip-suppressor"]
 n_thresholds = 100
@@ -77,8 +77,8 @@ for unit_str in units:
             retricted_ann_df = ann_df
 
         # Load middle times of true events.
-        begin_times = np.array(retricted_ann_df["Begin Time (s)"])
-        end_times = np.array(retricted_ann_df["End Time (s)"])
+        begin_times = np.array(restricted_ann_df["Begin Time (s)"])
+        end_times = np.array(restricted_ann_df["End Time (s)"])
         relevant = 0.5 * (begin_times+end_times)
         n_relevant = len(relevant)
 
