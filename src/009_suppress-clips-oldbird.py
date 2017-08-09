@@ -90,7 +90,7 @@ for threshold_id in range(n_thresholds):
                 time_difference = next_time - current_time
             n = next_n
         else:
-            times.append(current_time)
+            out_times.append(current_time)
             n = n + 1
 
     # Select rows in input DataFrame.
