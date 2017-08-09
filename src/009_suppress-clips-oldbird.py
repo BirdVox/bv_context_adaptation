@@ -1,4 +1,5 @@
 import datetime
+import h5py
 import numpy as np
 import os
 import pandas as pd
@@ -20,6 +21,17 @@ unit_dir = os.path.join(oldbird_models_dir, unit_str)
 n_thresholds = 100
 
 
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Running Old Bird clip suppressor on " +
+    dataset_name + ", " + unit_str + ".")
+print('h5py version: {:s}'.format(h5py.__version__))
+print('numpy version: {:s}'.format(np.__version__))
+print('pandas version: {:s}'.format(pd.__version__))
+print("")
+
+
 # Define input and output folder.
 in_predictions_name = "_".join(["predictions", "no-clip-suppressor"])
 in_predictions_dir = os.path.join(unit_dir, in_predictions_name)
@@ -37,15 +49,6 @@ settings_key = "_".join([odf_str, "settings"])
 settings = oldbird_hdf5[settings_key]
 suppressor_count_threshold = settings["suppressor_count_threshold"].value
 suppressor_period = settings["suppressor_period"].value
-
-
-# Print header.
-start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird clip suppressor on " + dataset_name + ", " + unit_str + ".")
-print('numpy version: {:s}'.format(np.__version__))
-print('pandas version: {:s}'.format(pd.__version__))
-print("")
 
 
 # Loop over thresholds.
