@@ -50,19 +50,17 @@ annotations_name = "_".join([dataset_name, "annotations"])
 annotations_dir = os.path.join(data_dir, annotations_name)
 annotation_name = unit_str + ".txt"
 annotation_path = os.path.join(annotations_dir, annotation_name)
-annotation_df = pd.read_csv(annotation_path, delimiter="\t")
+annotation = pd.read_csv(annotation_path, delimiter="\t")
 
 
 # Restrict rows to negative labels.
 if "Calls" in annotation.columns:
-    relevant_rows = annotation.loc[~annotation["Calls"].isin(negative_labels)]
-else:
-    relevant_rows = annotation
+    annotation = annotation.loc[~annotation["Calls"].isin(negative_labels)]
 
 
 # Restrict to frequency range of interest.
-begin_times = np.array(annotation_df["Begin Time (s)"]])
-end_times = np.array(annotation_df["End Time (s)"])
+begin_times = np.array(annotation["Begin Time (s)"]])
+end_times = np.array(annotation["End Time (s)"])
 true_times = 0.5 * (begin_times+end_times)
 
 
