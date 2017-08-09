@@ -16,6 +16,14 @@ dataset_name = localmodule.get_dataset_name()
 data_dir = localmodule.get_data_dir()
 
 
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Running Old Bird clip suppressor on " + dataset_name + ", " + unit_str + ".")
+print('pandas version: {:s}'.format(pd.__version__))
+print("")
+
+
 # Loop over thresholds.
 for threshold_id in range(n_thresholds):
     # Define input prediction path.
@@ -64,14 +72,6 @@ for threshold_id in range(n_thresholds):
 
     # Export output DataFrame to CSV.
     out_df.to_csv(out_prediction_path)
-
-
-# Print header.
-start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird clip suppressor on " + dataset_name + ", " + unit_str + ".")
-print('pandas version: {:s}'.format(pd.__version__))
-print("")
 
 
 # Print elapsed time.
