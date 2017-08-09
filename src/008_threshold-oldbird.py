@@ -19,10 +19,10 @@ n_thresholds = 100
 # (2)    f(alpha) = t_alpha
 # (3)    f(1.0)   = t_1
 # We arbitrarily set
-# (a)    t_0     = sqrt(ad_hoc_threshold)
+# (a)    t_0     = 1.0
 # (b)    t_alpha = ad_hoc_threshold
-# (c)    t_1     = ad_hoc_threshold ** 2
-# (d)    alpha = 0.1
+# (c)    t_1     = 2*ad_hoc_threshold - 1
+# (d)    alpha = 0.5
 # In Old Bird, ad_hoc_threshold is equal to 2.0 for Thrush and 1.2 for Tseep.
 alpha = 0.1
 data_dir = localmodule.get_data_dir()
@@ -63,12 +63,12 @@ odf_length = odf.shape[1]
 odf_settings_key = "_".join([odf_str, "settings"])
 odf_settings = odf_file[odf_settings_key]
 ad_hoc_threshold = odf_settings["ratio_threshold"].value
-t_0 = np.sqrt(ad_hoc_threshold)
+t_0 = 1.0
 t_alpha = ad_hoc_threshold
-t_1 = ad_hoc_threshold * ad_hoc_threshold
+t_1 = 2*ad_hoc_threshold - 1
 threshold_multiplier = t_1 - t_0
 threshold_exponent = (np.log(t_alpha-t_0) - np.log(t_1-t_0)) / np.log(alpha)
-threshold_x = np.linspace(0, 1, n_thresholds)
+threshold_x = np.linspace(0, 1, 1+n_thresholds)[1:]
 up_thresholds = t_0 + threshold_multiplier * (threshold_x**threshold_exponent)
 down_thresholds = 1.0 / up_thresholds
 
