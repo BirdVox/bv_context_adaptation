@@ -24,7 +24,7 @@ n_thresholds = 100
 # (c)    t_1     = 2*ad_hoc_threshold - 1
 # (d)    alpha = 0.5
 # In Old Bird, ad_hoc_threshold is equal to 2.0 for Thrush and 1.2 for Tseep.
-alpha = 0.1
+alpha = 0.5
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
