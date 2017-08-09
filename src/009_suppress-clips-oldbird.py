@@ -32,15 +32,16 @@ print("")
 # Loop over units.
 for unit_str in units:
 
-    # Define input and output folder.
-    in_predictions_name = "_".join(["predictions", "no-clip-suppressor"])
-    in_predictions_dir = os.path.join(unit_dir, in_predictions_name)
-    out_predictions_name = "_".join(["predictions", "clip-suppressor"])
-    out_predictions_dir = os.path.join(unit_dir, out_predictions_name)
-    os.makedirs(out_predictions_dir, exist_ok=True)
-
     # Loop over ODFs (Thrush and Tseep)
     for odf_str in odfs:
+        
+        # Define input and output folder.
+        in_predictions_name = "_".join(["predictions", "no-clip-suppressor"])
+        in_predictions_dir = os.path.join(unit_dir, in_predictions_name)
+        out_predictions_name = "_".join(["predictions", "clip-suppressor"])
+        out_predictions_dir = os.path.join(unit_dir, out_predictions_name)
+        os.makedirs(out_predictions_dir, exist_ok=True)
+
         # Define suppressor count threshold and period.
         oldbird_data_name = "_".join([dataset_name, "oldbird"])
         oldbird_data_dir = os.path.join(data_dir, oldbird_data_name)
