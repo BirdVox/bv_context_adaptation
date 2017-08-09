@@ -7,6 +7,9 @@ import time
 import localmodule
 
 
+# Define constants.
+dataset_name = localmodule.get_dataset_name()
+
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
