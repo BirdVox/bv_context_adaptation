@@ -20,7 +20,7 @@ B. Old Bird
 
 4. [DONE] Run clip suppressor on all CSV files. Export post-processed peak times as 2*6*100=1200 CSV files.
 
-5. [IN PROGRESS] Merge Thrush and Tseep predictions for every unit and every threshold, both with and without clip suppressor. It results in 2*6*100=1200 CSV files.
+5. [DONE] Merge Thrush and Tseep predictions for every unit and every threshold, both with and without clip suppressor. It results in 2*6*100=1200 CSV files.
 
 6. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
 
