@@ -26,3 +26,6 @@
 
 * Install mir_eval (Colin Raffel, MIT license) for evaluation
 `conda install -c carlthome mir_eval`
+
+* Install pescador (ISC License) for stochastic multi-stream sampling
+`conda install -c conda-forge pescador`
