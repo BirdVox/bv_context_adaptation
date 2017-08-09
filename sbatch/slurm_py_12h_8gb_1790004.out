@@ -116,3 +116,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 09:12:30.135 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.46ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
 [I 09:14:30.399 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
 [I 09:16:30.039 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 09:18:30.940 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
