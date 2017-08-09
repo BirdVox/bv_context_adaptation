@@ -139,6 +139,7 @@ for unit_str in units:
                     row = [
                         dataset_name,
                         unit_str,
+                        odf_str,
                         clip_suppressor_str,
                         str(int(np.round(1000*tolerance))).rjust(4),
                         threshold_str,
