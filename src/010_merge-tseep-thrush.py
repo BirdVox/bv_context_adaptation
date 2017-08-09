@@ -46,7 +46,7 @@ for unit_str in units:
                 threshold_str,
                 "predictions"
             ]
-            if clip_suppressor_str == "clip_suppressor":
+            if clip_suppressor_str == "clip-suppressor":
                 thrush_components_list.append(clip_suppressor_str)
             thrush_prediction_name = "_".join(thrush_components_list)
             thrush_prediction_path = os.path.join(
