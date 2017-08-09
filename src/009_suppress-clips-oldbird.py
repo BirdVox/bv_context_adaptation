@@ -12,9 +12,31 @@ import localmodule
 args = sys.argv[1:]
 unit_str = args[0]
 odf_str = args[1]
-dataset_name = localmodule.get_dataset_name()
 data_dir = localmodule.get_data_dir()
+dataset_name = localmodule.get_dataset_name()
+models_dir = localmodule.get_models_dir()
+oldbird_models_dir = os.path.join(models_dir, "oldbird")
+unit_dir = os.path.join(oldbird_models_dir, unit_str)
 n_thresholds = 100
+
+
+# Define input and output folder.
+in_predictions_name = "_".join(["predictions", "no-clip-suppressor"])
+in_predictions_dir = os.path.join(unit_dir, in_predictions_name)
+out_predictions_name = "_".join(["predictions", "clip-suppressor"])
+out_predictions_dir = os.path.join(unit_dir, out_predictions_name)
+os.makedirs(out_predictions_dir, exist_ok=True)
+
+
+# Define suppressor count threshold and period.
+oldbird_data_name = "_".join([dataset_name, "oldbird"])
+oldbird_data_dir = os.path.join(data_dir, oldbird_data_name)
+oldbird_data_path = os.path.join(oldbird_data_dir, unit_str + ".hdf5")
+oldbird_hdf5 = h5py.File(oldbird_data_path, "r")
+settings_key = "_".join([odf_str, "settings"])
+settings = oldbird_hdf5[settings_key]
+suppressor_count_threshold = settings["suppressor_count_threshold"].value
+suppressor_period = settings["suppressor_period"].value
 
 
 # Print header.
