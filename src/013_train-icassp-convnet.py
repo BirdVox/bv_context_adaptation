@@ -1,7 +1,9 @@
 import datetime
+import h5py
+import keras
 import numpy as np
 import os
-import pandas as pd
+import tensorflow as tf
 import time
 import sys
 
@@ -19,13 +21,19 @@ unit_str = args[1]
 trial_str = args[2]
 
 
-
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Summarizing Old Bird evaluation on " + dataset_name + ".")
+print("Training ICASSP convnet on " + dataset_name + ", " +
+    unit_str, " trial " + trial_str + ".")
+print("Set of augmentations:")
+print(augs)
+print("")
+print('h5py version: {:s}'.format(h5py.__version__))
+print('keras version: {:s}'.format(keras.__version__))
 print('numpy version: {:s}'.format(np.__version__))
-print('pandas version: {:s}'.format(pd.__version__))
+print('pescador version: {:s}'.format(pescador.__version__))
+print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
 
 
