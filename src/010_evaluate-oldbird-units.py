@@ -11,10 +11,7 @@ import localmodule
 # Define constants.
 dataset_name = localmodule.get_datset_name()
 models_dir = localmodule.get_models_dir()
-oldbird_models_dir = os.path.join(models_dir, "oldbird")
 data_dir = localodule.get_data_dir()
-annotations_name = "_".join([dataset_name, "annotations"])
-annotations_dir = os.path.join(data_dir, annotations_name)
 tolerances = localmodule.get_tolerances()
 
 
@@ -37,8 +34,24 @@ print('pandas version: {:s}'.format(pd.__version__))
 print("")
 
 
-# Loop over tolerances.
+# Define directory for predictions.
+oldbird_models_dir = os.path.join(models_dir, "oldbird")
 unit_dir = os.path.join(oldbird_models_dir, unit_str)
+predictions_name = "_".join(["predictions", clip_suppressor_str])
+predictions_dir = os.path.join(unit_dir, predictions_name)
+
+
+# Open annotation as Pandas DataFrame.
+annotations_name = "_".join([dataset_name, "annotations"])
+annotations_dir = os.path.join(data_dir, annotations_name)
+annotation_name = unit_str + ".txt"
+annotation_path = os.path.join(annotations_dir, annotation_name)
+annotation_df = pd.read_csv(annotation_path, delimiter="\t")
+begin_times = np.array(annotation_df["Begin Time (s)"]])
+end_times = np.array(annotation_df["End Time (s)"])
+true_times = 0.5 * (begin_times+end_times)
+
+# Loop over tolerances.
 tolerance = tolerances[0] #                             DISABLE
 #for tolerance in tolerances:                           ENABLE
 
