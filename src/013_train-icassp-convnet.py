@@ -11,7 +11,6 @@ import localmodule
 
 
 # Define constants.
-aug_dict = localmodule.get_augmentations()
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 n_input_hops = 104
@@ -36,15 +35,28 @@ val_units = fold[2]
 
 
 # Get training augmentations and validation augmentations as string keywords.
-training_augs, val_augs = \
+training_aug_names, val_aug_names = \
     localmodule.parse_augmentation_kind(aug_kind_str, training_units, val_units)
 
 
-from keras.callbacks import ModelCheckpoint
-from keras.models import Sequential
-from keras.layers import Dense, Dropout, Activation,  Flatten
-from keras.layers import Convolution2D, MaxPooling2D
-from keras.layers.normalization import BatchNormalization
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Training Salamon's ICASSP 2017 convnet on " + dataset_name + ". ")
+print("Training set: " + ", ".join(training_units) + ".")
+print("Validation set: " + ", ".join(val_units) + ".")
+print("Test set: " + ", ".join(test_units) + ".")
+print("")
+print("Training augmentations: " + ", ".join(training_augs) + ".")
+print("Validation augmentations: " + ", ".join(validation_augs) + ".")
+print("")
+print('h5py version: {:s}'.format(h5py.__version__))
+print('keras version: {:s}'.format(keras.__version__))
+print('numpy version: {:s}'.format(np.__version__))
+print('pescador version: {:s}'.format(pescador.__version__))
+print('tensorflow version: {:s}'.format(tf.__version__))
+print("")
+
 
 # Define and compile Keras model.
 model = keras.models.Sequential()
@@ -90,23 +102,13 @@ dense2 = keras.layers.Dense(1,
 model.add(dense2)
 
 
-# Print header.
-start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start.")
-print("Training Salamon's ICASSP 2017 convnet on " + dataset_name + ". ")
-print("Training set: " + ", ".join(training_units) + ".")
-print("Validation set: " + ", ".join(val_units) + ".")
-print("Test set: " + ", ".join(test_units) + ".")
-print("")
-print("Training augmentations: " + ", ".join(training_augs) + ".")
-print("Validation augmentations: " + ", ".join(validation_augs) + ".")
-print("")
-print('h5py version: {:s}'.format(h5py.__version__))
-print('keras version: {:s}'.format(keras.__version__))
-print('numpy version: {:s}'.format(np.__version__))
-print('pescador version: {:s}'.format(pescador.__version__))
-print('tensorflow version: {:s}'.format(tf.__version__))
-print("")
+# Print model summary.
+model.summary()
+
+
+# Multiplex
+
+
 
 
 # Print elapsed time.
