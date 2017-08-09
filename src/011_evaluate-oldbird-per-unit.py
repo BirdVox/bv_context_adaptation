@@ -98,7 +98,7 @@ tolerance = tolerances[0] #                             DISABLE
 tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
 csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
     clip_suppressor_str, unit_str, tolerance_str, "metrics.csv"])
-csv_file_path = os.path.join(oldbird_models_dir, csv_file_name)
+csv_file_path = os.path.join(unit_dir, csv_file_name)
 csv_file = open(csv_file_path, 'w')
 csv_writer = csv.writer(csv_file, delimiter=',')
 csv_writer.writerow(csv_header)
@@ -110,7 +110,7 @@ threshold_id = 0 #                                      DISABLE
 # Load middle times of prediction.
 threshold_str = "th-" + str(threshold_id).zfill(2)
 prediction_name_components = [dataset_name, "oldbird", odf_str,
-    threshold_str, "predictions"]
+    unit_str, threshold_str, "predictions"]
 if clip_suppressor_str == "clip_suppressor":
     prediction_name_components.append(clip_suppressor_str)
 prediction_name = "_".join(prediction_name_components) + ".csv"
