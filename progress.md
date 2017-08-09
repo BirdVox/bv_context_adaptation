@@ -24,8 +24,7 @@ B. Old Bird
 
 6. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
 
-7. [IN PROGRESS] Compute global metrics (precision, recall, and F) across all 6 units and
-10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
+7. [IN PROGRESS] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
 
 
 C. Deep learning
