@@ -72,13 +72,13 @@ if odf_str in ["thrush", "tseep"]:
     filter_f0 = settings["filter_f0"].value
     filter_f1 = settings["filter_f1"].value
     ann_df = ann_df[
-        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"]) > filter_f0 &
-        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"]) < filter_f1]
+        ((0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"])) > filter_f0) &
+        ((0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"])) < filter_f1)]
 
 
 # Load middle times of true events.
-begin_times = np.array(annotation["Begin Time (s)"])
-end_times = np.array(annotation["End Time (s)"])
+begin_times = np.array(ann_df["Begin Time (s)"])
+end_times = np.array(ann_df["End Time (s)"])
 relevant = 0.5 * (begin_times+end_times)
 n_relevant = len(relevant)
 
