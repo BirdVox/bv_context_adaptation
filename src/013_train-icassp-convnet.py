@@ -19,7 +19,6 @@ n_filters = [24, 48, 48]
 kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
-optimizer = keras.optimizers.SGD(lr=0.01)
 # TODO DON'T FORGET L2 REGULARIZATION
 
 # Read command-line arguments.
@@ -106,7 +105,7 @@ model.add(dense2)
 # Compile model, print model summary.
 model.compile(
     loss="categorical_crossentropy",
-    optimizer=optimizer,
+    optimizer="adam",
     metrics=["accuracy"])
 model.summary()
 
