@@ -49,3 +49,40 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 00:31:37.798 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
 [I 00:33:37.799 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
 [I 00:35:37.819 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 03:58:32.010 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 0.83ms
+[I 03:58:46.443 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 0.76ms
+[I 04:03:12.626 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 04:03:14.712 NotebookApp] Kernel started: 0d847a64-039d-4967-884b-d89415c7e6ce
+[W 04:03:14.870 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.13ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 04:04:11.787 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:04:41.843 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:05:14.730 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:06:14.260 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:06:16.364 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:06:18.085 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:07:14.744 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:09:14.749 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:09:21.145 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 04:10:42.882 NotebookApp] Kernel restarted: 0d847a64-039d-4967-884b-d89415c7e6ce
+[I 04:11:14.733 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:11:46.939 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:13:22.296 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:14:38.369 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:15:14.760 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:16:15.329 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:17:11.705 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:18:33.437 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:19:11.889 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:19:14.798 NotebookApp] Kernel restarted: 0d847a64-039d-4967-884b-d89415c7e6ce
+[W 04:19:14.805 NotebookApp] zmq message arrived on closed channel
+[I 04:19:42.303 NotebookApp] Kernel restarted: 0d847a64-039d-4967-884b-d89415c7e6ce
+[I 04:19:59.407 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:21:14.749 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 04:21:39.208 NotebookApp] Kernel restarted: 0d847a64-039d-4967-884b-d89415c7e6ce
+[I 04:23:14.773 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 05:07:14.871 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 05:09:15.000 NotebookApp] Saving file at /spl2017/notebooks/evaluate-oldbird-per-unit.ipynb
+[I 05:29:02.176 NotebookApp] 302 GET /?token=bdfbd8c51348a94346ea61105f5c5adbfd00d4aec9f04c8c (::1) 0.84ms
+[I 05:29:13.253 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 05:29:15.162 NotebookApp] Kernel started: ad7a6c15-c2fe-41d0-b535-42d874b702ff
+[W 05:29:15.281 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170809001023 (::1) 2.13ms referer=http://localhost:9647/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
