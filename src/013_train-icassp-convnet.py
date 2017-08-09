@@ -13,7 +13,7 @@ import localmodule
 # Define constants.
 aug_dict = localmodule.get_augmentations()
 dataset_name = localmodule.get_dataset_name()
-folds = local
+folds = localmodule.fold_units()
 
 
 # Read command-line arguments.
@@ -23,12 +23,33 @@ unit_str = args[1]
 trial_str = args[2]
 
 
+# unit_str is the name of the test unit.
+fold = [f for f in folds if unit_str in f[0]][0]
+test_units = fold[0]
+training_units = fold[1]
+val_units = fold[2]
+
+
 # Analyze aug_kind_str keyword:
-if aug_kind_str == "none":
-    augs = ["original"]
-elif aug_kind_str == "all":
-    noise_augs = ["noise-" + u_str for ]
-    augs = ["original", "pitch", "stretch"]
+if aug_kind_str == "all":
+    training_noise_augs = ["noise-" + training_unit_str for training_units]
+    training_augs = training_noise_augs + ["original", "pitch", "stretch"]
+    val_noise_augs = ["noise-" + val_unit_str for val_units]
+    val_augs = training_noise_augs + ["original", "pitch", "stretch"]
+elif aug_kind_str == "noise":
+    training_noise_augs = ["noise-" + training_unit_str for training_units]
+    training_augs = training_noise_augs + ["original"]
+    val_noise_augs = ["noise-" + val_unit_str for val_units]
+    val_augs = training_noise_augs + ["original"]
+else:
+    if aug_kind_str == "none":
+        training_augs = ["original"]
+    elif aug_kind_str == "pitch":
+        training_augs == ["original", "pitch"]
+    elif aug_kind_str == "stretch":
+        training_augs == ["original", "stretch"]
+    val_augs = training_augs
+
 
 
 # Print header.
@@ -39,10 +60,8 @@ print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(val_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
 print("")
-if aug_kind_str == "none":
-    print("No data augmentation.")
-elif aug_kind_str == "all":
-    print("Data augmentation:")
+print("Training augmentations: " + ", ".join(training_augs) + ".")
+print("Validation augmentations: " + ", ".join(validation_augs) + ".")
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('keras version: {:s}'.format(keras.__version__))
