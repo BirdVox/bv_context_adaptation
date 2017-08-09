@@ -111,8 +111,9 @@ model.compile(
 model.summary()
 
 
-# Multiplex
-
+# Get paths to HDF5 containing logmelspec features.
+tr_lms_paths = localmodule.get_logmelspec_paths(training_augs, training_units)
+val_lms_paths = localmodule.get_logmelspec_paths(val_augs, val_units)
 
 
 
