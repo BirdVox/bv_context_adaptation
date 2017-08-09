@@ -27,7 +27,7 @@ n_thresholds = 100
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Evaluating Old Bird on " + dataset_name + ", " + unit_str + ".")
+print("Evaluating Old Bird on " + dataset_name + ".")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('mir_eval version: {:s}'.format(mir_eval.__version__))
 print('numpy version: {:s}'.format(np.__version__))
