@@ -2,6 +2,7 @@ import itertools
 import numpy as np
 import os
 
+
 # This function implements the Bresenham's line algorithm in dimension one,
 # in order to produce a list of pooling lengths of length n_layers such that
 # np.prod(pool_list) * input_length = output_length
@@ -93,6 +94,31 @@ def get_dataset_name():
     return "BirdVox-70k"
 
 
+def get_logmelspec_paths(augs, units):
+    aug_dict = get_augmentations()
+    data_dir = get_data_dir()
+    dataset_name = get_dataset_name()
+    logmelspec_name = "_".join([dataset_name, "logmelspec"])
+    logmelspec_dir = os.path.join(data_dir, logmelspec_name)
+    logmelspec_paths = []
+    for aug_str in augs:
+        aug_dir = os.path.join(logmelspec_dir, aug_str)
+        if aug_str == "original":
+            instances = [aug_str]
+        else:
+            n_instances = aug_dict[aug_str]
+            instances = ["-".join([aug_str, str(instance_id)])
+                for instance_id in range(n_instances)]
+        for instanced_aug_str in instances:
+            for unit_str in units:
+                logmelspec_name = "_".join(
+                    [dataset_name, aug_str, instance_aug_str, unit_str])
+                logmelspec_path = \
+                    os.path.join(aug_dir, logmelspec_name + ".hdf5")
+                logmelspec_paths.join(logmelspec_path)
+    return logmelspec_paths
+
+
 def get_logmelspec_settings():
     logmelspec_settings = {
         "fmin": 2000,
@@ -102,8 +128,7 @@ def get_logmelspec_settings():
         "n_mels": 128,
         "sr": 22050,
         "win_length": 256,
-        "window": "hann"
-    }
+        "window": "hann"}
     return logmelspec_settings
 
 
