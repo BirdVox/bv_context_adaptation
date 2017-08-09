@@ -85,6 +85,8 @@ for unit_str in units:
             while n < (n_rows-suppressor_count_threshold):
                 current_time = in_times[n]
                 next_n = n + suppressor_count_threshold
+                if next_n >= n_rows:
+                    break
                 next_time = in_times[next_n]
                 time_difference = next_time - current_time
                 if time_difference < suppressor_period:
