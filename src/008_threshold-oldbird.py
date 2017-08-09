@@ -78,7 +78,8 @@ model_dir = os.path.join(models_dir, "oldbird")
 os.makedirs(model_dir, exist_ok=True)
 out_unit_dir = os.path.join(model_dir, unit_str)
 os.makedirs(out_unit_dir, exist_ok=True)
-predictions_dir = os.path.join(out_unit_dir, "predictions")
+predictions_name = os.path.join(["predictions", "no-clip-suppressor"])
+predictions_dir = os.path.join(out_unit_dir, predictions_name)
 os.makedirs(predictions_dir, exist_ok=True)
 
 

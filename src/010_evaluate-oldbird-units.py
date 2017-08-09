@@ -8,12 +8,6 @@ import time
 import localmodule
 
 
-# Define constants.
-args = ["unit01"] #                                     DISABLE
-#args = sys.argv[1:]                                     ENABLE
-unit_str = args[0]
-
-
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
