@@ -79,7 +79,8 @@ if odf_str in ["thrush", "tseep"]:
 # Load middle times of true events.
 begin_times = np.array(annotation["Begin Time (s)"]])
 end_times = np.array(annotation["End Time (s)"])
-true_times = 0.5 * (begin_times+end_times)
+relevant = 0.5 * (begin_times+end_times)
+n_relevant = len(relevant)
 
 
 # Prepare header for metrics.
@@ -115,7 +116,42 @@ if clip_suppressor_str == "clip_suppressor":
 prediction_name = "_".join(prediction_name_components) + ".csv"
 prediction_path = os.path.join(predictions_dir, prediction_name)
 prediction_df = pd.read_csv(prediction_path)
-predicted_times = prediction_df["Time (s)"]
+selected = prediction_df["Time (s)"]
+
+# Match selected events with relevant events using the mir_eval toolbox.
+selected_relevant = mir_eval.util.match_events(relevant, selected, tolerance)
+
+# Define metrics.
+true_positives = len(selected_relevant)
+n_selected = len(selected)
+false_positives = n_selected - true_positives
+false_negatives = n_relevant - true_positives
+if n_selected == 0 or true_positives == 0:
+    precision = 0.0
+    recall = 0.0
+    f1_score = 0.0
+else:
+    precision = 100 * true_positives / n_selected
+    recall = 100 * true_positives / n_relevant
+    f1_score = 2*precision*recall / (precision+recall)
+
+# Write row.
+row = [
+    dataset_name,
+    unit_str,
+    clip_suppressor_str,
+    tolerance_str,
+    threshold_str,
+    str(n_relevant).rjust(5),
+    str(n_selected).rjust(6),
+    str(true_positives).rjust(5),
+    str(false_positives).rjust(5),
+    str(false_negatives).rjust(5),
+    format(precision, ".6f"),
+    format(recall, ".6f"),
+    format(f1_score, ".6f")
+]
+csv_writer.writerow(row)
 
 
 # Print elapsed time.
