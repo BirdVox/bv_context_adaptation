@@ -24,7 +24,7 @@ B. Old Bird
 
 6. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
 
-7. Compute global metrics (precision, recall, and F) across all 6 units and
+7. [IN PROGRESS] Compute global metrics (precision, recall, and F) across all 6 units and
 10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
 
 
@@ -41,7 +41,7 @@ C. Deep learning
 
 6. [DONE] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
-7. Train icassp convnet on BirdVox-70k. Export 6*10=60 Keras models. Parallelize over units (6) and trials (10).
+7. [IN PROGRESS] Train icassp convnet on BirdVox-70k. Export 6*10=60 Keras models. Parallelize over units (6) and trials (10).
 
 8. For every trained unit (6), every prediction unit (6), and every trial (10), export 6*10=60 BirdVox-70k predictions as HDF5 containers. Compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds. Parallelize over trained units (6) and trials (10).
 
