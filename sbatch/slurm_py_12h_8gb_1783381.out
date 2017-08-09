@@ -111,3 +111,35 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 18:00:38.205 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
 [I 18:02:38.214 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
 [I 18:04:38.219 NotebookApp] Saving file at /spl2017/notebooks/threshold-oldbird.ipynb
+[I 22:34:50.377 NotebookApp] 302 GET /?token=a1b39a9d076ecdd4b46514d42b3e855ca90280c28e451883 (::1) 0.55ms
+[I 22:54:57.965 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 22:55:05.136 NotebookApp] Kernel started: 6ddcbf86-75eb-462e-8d41-9c7ca40d8bc6
+[W 22:55:05.151 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170808120033 (::1) 2.01ms referer=http://localhost:9299/notebooks/spl2017/notebooks/Untitled.ipynb?kernel_name=python3
+[I 22:57:05.259 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:01:05.181 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:03:05.260 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:07:05.269 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:09:05.296 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:11:05.230 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:13:05.238 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:15:05.237 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:17:05.268 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:21:05.300 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 23:23:05.222 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:25:05.235 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:31:02.911 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:33:05.533 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:37:09.116 NotebookApp] Kernel restarted: 6ddcbf86-75eb-462e-8d41-9c7ca40d8bc6
+[I 23:38:46.848 NotebookApp] Kernel restarted: 6ddcbf86-75eb-462e-8d41-9c7ca40d8bc6
+[I 23:39:05.250 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:41:05.258 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:43:05.270 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:45:05.298 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:47:05.337 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:49:05.366 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:51:05.271 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:53:05.287 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:55:05.280 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:57:05.301 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+[I 23:59:05.287 NotebookApp] Saving file at /spl2017/notebooks/suppress-clips-oldbird.ipynb
+slurmstepd: error: *** JOB 1783381 ON gpu-25 CANCELLED AT 2017-08-09T00:00:38 DUE TO TIME LIMIT ***

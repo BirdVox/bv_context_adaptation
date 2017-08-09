@@ -6,7 +6,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=12:00:00
 #SBATCH --mem=8GB
-#SBATCH --gres=gpu:1
 #SBATCH --output=slurm_py_12h_8gb_%j.out
 
 module purge
