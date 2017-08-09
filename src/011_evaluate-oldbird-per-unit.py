@@ -18,8 +18,7 @@ models_dir = localmodule.get_models_dir()
 negative_labels = localmodule.get_negative_labels()
 tolerances = localmodule.get_tolerances()
 units = localmodule.get_units()
-#odfs = ["thrush", "tseep", "merged"]
-odfs = ["thrush", "tseep"]
+odfs = ["thrush", "tseep", "merged"]
 clip_suppressor_modes = ["no-clip-suppressor", "clip-suppressor"]
 n_thresholds = 100
 
