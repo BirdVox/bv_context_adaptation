@@ -70,15 +70,9 @@ if odf_str in ["thrush", "tseep"]:
     settings = oldbird_hdf5[settings_key]
     filter_f0 = settings["filter_f0"].value
     filter_f1 = settings["filter_f1"].value
-    low_freqs = np.array(ann_df["Low Freq (Hz)"])
-    high_freqs = np.array(ann_df["High Freq (Hz)"])
-    mid_freqs = 0.5 * (low_freqs+high_freqs)
-    restricted_offset_times = []
-    offset_times = np.array(ann_df["File Offset (s)"])
-    for (mid_freq, offset_time) in zip(mid_freqs, offset_times):
-        if (mid_freq > filter_f0) and (mid_freq < filter_f1):
-            restricted_offset_times.append(offset_time)
-    ann_df = ann_df[ann_df["File Offset (s)"].isin(restricted_offset_times)]
+    ann_df = ann_df[
+        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"] > filter_f0 &
+        0.5*(ann_df["Low Freq (Hz)"]+ann_df["High Freq (Hz)"] < filter_f1]
 
 
 begin_times = np.array(annotation["Begin Time (s)"]])
