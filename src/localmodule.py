@@ -127,6 +127,28 @@ def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
 
+def parse_augmentation_kind(aug_kind_str, training_units, val_units):
+    if aug_kind_str == "all":
+        training_noise_augs = ["noise-" + training_unit_str for training_units]
+        training_augs = training_noise_augs + ["original", "pitch", "stretch"]
+        val_noise_augs = ["noise-" + val_unit_str for val_units]
+        val_augs = training_noise_augs + ["original", "pitch", "stretch"]
+    elif aug_kind_str == "noise":
+        training_noise_augs = ["noise-" + training_unit_str for training_units]
+        training_augs = training_noise_augs + ["original"]
+        val_noise_augs = ["noise-" + val_unit_str for val_units]
+        val_augs = training_noise_augs + ["original"]
+    else:
+        if aug_kind_str == "none":
+            training_augs = ["original"]
+        elif aug_kind_str == "pitch":
+            training_augs == ["original", "pitch"]
+        elif aug_kind_str == "stretch":
+            training_augs == ["original", "stretch"]
+        val_augs = training_augs
+    return training_augs, val_augs
+
+
 def pick_peaks(odf):
     derivative = np.diff(odf)
     pre_slope = np.insert(derivative, 0, -np.inf)
