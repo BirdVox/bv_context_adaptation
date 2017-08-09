@@ -12,8 +12,8 @@ import localmodule
 
 
 # Define constants.
-data_dir = localodule.get_data_dir()
-dataset_name = localmodule.get_datset_name()
+data_dir = localmodule.get_data_dir()
+dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
 negative_labels = localmodule.get_negative_labels()
 tolerances = localmodule.get_tolerances()
@@ -24,7 +24,7 @@ n_thresholds = 100
 #args = sys.argv[1:]
 #unit_str = args[0]
 #odf_str = args[1]
-#suppressor_str = args[2]
+#clip_suppressor_str = args[2]
 unit_str = "unit01"
 odf_str = "thrush"
 clip_suppressor_str = "clip-suppressor"
@@ -77,7 +77,7 @@ if odf_str in ["thrush", "tseep"]:
 
 
 # Load middle times of true events.
-begin_times = np.array(annotation["Begin Time (s)"]])
+begin_times = np.array(annotation["Begin Time (s)"])
 end_times = np.array(annotation["End Time (s)"])
 relevant = 0.5 * (begin_times+end_times)
 n_relevant = len(relevant)
