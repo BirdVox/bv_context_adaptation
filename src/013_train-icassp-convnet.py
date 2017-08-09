@@ -19,7 +19,7 @@ n_filters = [24, 48, 48]
 kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
-# TODO DON'T FORGET L2 REGULARIZATION
+regularizer = keras.regularizers.l2(0.001)
 
 # Read command-line arguments.
 args = sys.argv[1:]
@@ -96,7 +96,8 @@ model.add(drop1)
 flatten = keras.layers.Flatten()
 model.add(flatten)
 dense1 = keras.layers.Dense(n_hidden_units,
-    kernel_initializer="he_normal", activation="relu")
+    kernel_initializer="he_normal", activation="relu",
+    kernel_regularizer=regularizer)
 model.add(dense1)
 
 # Layer 5
@@ -105,7 +106,8 @@ model.add(dense1)
 drop2 = keras.layers.Dropout(0.5)
 model.add(drop2)
 dense2 = keras.layers.Dense(1,
-    kernel_initializer="glorot_uniform", activation="softmax")
+    kernel_initializer="glorot_uniform", activation="softmax",
+    kernel_regularizer=regularizer)
 model.add(dense2)
 
 # Compile model, print model summary.
