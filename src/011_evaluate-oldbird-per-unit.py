@@ -1,7 +1,6 @@
 import csv
 import datetime
 import h5py
-import itertools
 import mir_eval
 import numpy as np
 import os
@@ -45,12 +44,6 @@ csv_header = [
 # Loop over units.
 for unit_str in units:
 
-    # Define directory for predictions.
-    oldbird_models_dir = os.path.join(models_dir, "oldbird")
-    unit_dir = os.path.join(oldbird_models_dir, unit_str)
-    predictions_name = "_".join(["predictions", clip_suppressor_str])
-    predictions_dir = os.path.join(unit_dir, predictions_name)
-
     # Open annotation as Pandas DataFrame.
     annotations_name = "_".join([dataset_name, "annotations"])
     annotations_dir = os.path.join(data_dir, annotations_name)
@@ -69,7 +62,8 @@ for unit_str in units:
         if odf_str in ["thrush", "tseep"]:
             oldbird_data_name = "_".join([dataset_name, "oldbird"])
             oldbird_data_dir = os.path.join(data_dir, oldbird_data_name)
-            oldbird_data_path = os.path.join(oldbird_data_dir, unit_str + ".hdf5")
+            oldbird_data_path = os.path.join(
+                oldbird_data_dir, unit_str + ".hdf5")
             oldbird_hdf5 = h5py.File(oldbird_data_path, "r")
             settings_key = "_".join([odf_str, "settings"])
             settings = oldbird_hdf5[settings_key]
@@ -85,72 +79,82 @@ for unit_str in units:
         relevant = 0.5 * (begin_times+end_times)
         n_relevant = len(relevant)
 
-        # Loop over clip suppressor modes (on and off) and tolerances.
-        iterator_product = itertools.product(clip_suppressor_modes, tolerances)
-        for (clip_suppressor_str, tolerance) in iterator_product:
+        # Loop over clip suppressor modes (on and off)
+        for clip_suppressor_str in clip_suppressor_modes:
 
-            # Create a CSV file for metrics.
-            tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
-            csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
-                clip_suppressor_str, unit_str, tolerance_str, "metrics.csv"])
-            csv_file_path = os.path.join(unit_dir, csv_file_name)
-            csv_file = open(csv_file_path, 'w')
-            csv_writer = csv.writer(csv_file, delimiter=',')
-            csv_writer.writerow(csv_header)
+            # Define directory for predictions.
+            oldbird_models_dir = os.path.join(models_dir, "oldbird")
+            unit_dir = os.path.join(oldbird_models_dir, unit_str)
+            predictions_name = "_".join(["predictions", clip_suppressor_str])
+            predictions_dir = os.path.join(unit_dir, predictions_name)
 
-            # Loop over thresholds.
-            for threshold_id in range(n_thresholds):
+            # Loop over tolerances.
+            for tolerance in tolerances:
 
-                # Load middle times of prediction.
-                threshold_str = "th-" + str(threshold_id).zfill(2)
-                prediction_name_components = [dataset_name, "oldbird", odf_str,
-                    unit_str, threshold_str, "predictions"]
-                if clip_suppressor_str == "clip_suppressor":
-                    prediction_name_components.append(clip_suppressor_str)
-                prediction_name = "_".join(prediction_name_components) + ".csv"
-                prediction_path = os.path.join(predictions_dir, prediction_name)
-                prediction_df = pd.read_csv(prediction_path)
-                selected = prediction_df["Time (s)"]
+                # Create a CSV file for metrics.
+                tolerance_str = "tol-" + str(int(np.round(1000*tolerance)))
+                csv_file_name = "_".join([dataset_name, "oldbird", odf_str,
+                    clip_suppressor_str, unit_str, tolerance_str,
+                    "metrics.csv"])
+                csv_file_path = os.path.join(unit_dir, csv_file_name)
+                csv_file = open(csv_file_path, 'w')
+                csv_writer = csv.writer(csv_file, delimiter=',')
+                csv_writer.writerow(csv_header)
 
-                # Match selected events with relevant events.
-                selected_relevant = mir_eval.util.match_events(
-                    relevant, selected, tolerance)
+                # Loop over thresholds.
+                for threshold_id in range(n_thresholds):
 
-                # Define metrics.
-                true_positives = len(selected_relevant)
-                n_selected = len(selected)
-                false_positives = n_selected - true_positives
-                false_negatives = n_relevant - true_positives
-                if n_selected == 0 or true_positives == 0:
-                    precision = 0.0
-                    recall = 0.0
-                    f1_score = 0.0
-                else:
-                    precision = 100 * true_positives / n_selected
-                    recall = 100 * true_positives / n_relevant
-                    f1_score = 2*precision*recall / (precision+recall)
+                    # Load middle times of prediction.
+                    threshold_str = "th-" + str(threshold_id).zfill(2)
+                    prediction_name_components = [dataset_name, "oldbird",
+                        odf_str, unit_str, threshold_str, "predictions"]
+                    if clip_suppressor_str == "clip_suppressor":
+                        prediction_name_components.append(clip_suppressor_str)
+                    prediction_name = \
+                        "_".join(prediction_name_components) + ".csv"
+                    prediction_path = \
+                        os.path.join(predictions_dir, prediction_name)
+                    prediction_df = pd.read_csv(prediction_path)
+                    selected = prediction_df["Time (s)"]
 
-                # Write row.
-                row = [
-                    dataset_name,
-                    unit_str,
-                    clip_suppressor_str,
-                    str(int(np.round(1000*tolerance))).rjust(4),
-                    threshold_str,
-                    str(n_relevant).rjust(5),
-                    str(n_selected).rjust(6),
-                    str(true_positives).rjust(5),
-                    str(false_positives).rjust(5),
-                    str(false_negatives).rjust(5),
-                    format(precision, ".6f"),
-                    format(recall, ".6f"),
-                    format(f1_score, ".6f")
-                ]
-                csv_writer.writerow(row)
+                    # Match selected events with relevant events.
+                    selected_relevant = mir_eval.util.match_events(
+                        relevant, selected, tolerance)
 
+                    # Define metrics.
+                    true_positives = len(selected_relevant)
+                    n_selected = len(selected)
+                    false_positives = n_selected - true_positives
+                    false_negatives = n_relevant - true_positives
+                    if n_selected == 0 or true_positives == 0:
+                        precision = 0.0
+                        recall = 0.0
+                        f1_score = 0.0
+                    else:
+                        precision = 100 * true_positives / n_selected
+                        recall = 100 * true_positives / n_relevant
+                        f1_score = 2*precision*recall / (precision+recall)
 
-        # Close CSV file.
-        csv_file.close()
+                    # Write row.
+                    row = [
+                        dataset_name,
+                        unit_str,
+                        clip_suppressor_str,
+                        str(int(np.round(1000*tolerance))).rjust(4),
+                        threshold_str,
+                        str(n_relevant).rjust(5),
+                        str(n_selected).rjust(6),
+                        str(true_positives).rjust(5),
+                        str(false_positives).rjust(5),
+                        str(false_negatives).rjust(5),
+                        format(precision, ".6f"),
+                        format(recall, ".6f"),
+                        format(f1_score, ".6f")
+                    ]
+                    csv_writer.writerow(row)
+
+                # Close CSV file.
+                csv_file.close()
 
 
 # Print elapsed time.
