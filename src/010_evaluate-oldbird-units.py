@@ -12,6 +12,13 @@ import localmodule
 dataset_name = localmodule.get_datset_name()
 models_dir = localmodule.get_models_dir()
 oldbird_models_dir = os.path.join(models_dir, "oldbird")
+data_dir = localodule.get_data_dir()
+annotations_name = "_".join([dataset_name, "annotations"])
+annotations_dir = os.path.join(data_dir, annotations_name)
+tolerances = localmodule.get_tolerances()
+
+
+# Read command-line arguments.                           ENABLE
 #args = sys.argv[1:]
 #unit_str = args[0]
 #odf_str = args[1]
@@ -31,6 +38,10 @@ print("")
 
 
 # Loop over tolerances.
+unit_dir = os.path.join(oldbird_models_dir, unit_str)
+tolerance = tolerances[0] #                             DISABLE
+#for tolerance in tolerances:                           ENABLE
+
 
 
 # Print elapsed time.
