@@ -37,11 +37,6 @@ training_units = fold[1]
 val_units = fold[2]
 
 
-# Get training augmentations and validation augmentations as string keywords.
-training_augs, val_augs = \
-    localmodule.parse_augmentation_kind(aug_kind_str, training_units, val_units)
-
-
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
@@ -123,6 +118,8 @@ model.summary()
 # Get paths to HDF5 containing logmelspec features.
 tr_lms_paths = localmodule.get_logmelspec_paths(training_augs, training_units)
 val_lms_paths = localmodule.get_logmelspec_paths(val_augs, val_units)
+
+
 
 
 
