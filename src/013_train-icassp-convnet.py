@@ -23,10 +23,12 @@ kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
 regularizer = keras.regularizers.l2(0.001)
-n_input_hops = 128
 steps_per_epoch = 1024
 epochs = 32
 validation_steps = 256
+k = 2048
+lam = 8.0
+batch_size = 32
 
 
 # Read command-line arguments.
@@ -125,9 +127,9 @@ model.summary()
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
 training_streamer = localmodule.multiplex_logmelspec(
-    aug_kind_str, training_units, n_input_hops)
+    aug_kind_str, training_units, n_input_hops, k, lam, batch_size)
 validation_streamer = localmodule.multiplex_logmelspec(
-    aug_kind_str, validation_units, n_input_hops)
+    aug_kind_str, validation_units, n_input_hops, k, lam, batch_size)
 
 
 # Create directory for model, unit, and trial.
