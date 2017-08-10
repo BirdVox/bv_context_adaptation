@@ -141,7 +141,7 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
         noise_augs = ["noise-" + unit_str for unit_str in fold_units]
         if aug_kind_str == "all":
             augs = noise_augs + ["original", "pitch", "stretch"]
-        elif aug_kind_str = "noise":
+        elif aug_kind_str == "noise":
             augs = noise_augs + ["original"]
 
     # Generate a Pescador streamer for every HDF5 container, that is,
