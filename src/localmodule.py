@@ -194,3 +194,36 @@ def rsync():
     command_words = ["rsync"] + flags + [data_dir, archive_dir]
     command_str = " ".join(command_words)
     os.command(command_str)
+
+
+def yield_XY(lms_path, n_hops):
+    # Open HDF5 container.
+    with h5py.File(lms_path, "r") as lms_container:
+        # Open HDF5 group corresponding to log-mel-spectrograms.
+        lms_group = lms_container["logmelspec"]
+
+        # The naming convention of a key is
+        # [unit]_[time]_[freq]_[y]_[aug]_[instance]
+        # where y=1 if the key corresponds to a positive clip and 0 otherwise.
+        keys = list(lms_group.keys())
+        while True:
+            # Pick a key uniformly as random.
+            key = random.choice(keys)
+
+            # Load logmelspec.
+            X = lms_container[key]
+
+            # Trim logmelspec in time to required number of hops.
+            X_width = X.shape[1]
+            first_col = int((X_width-n_hops) / 2)
+            last_col = int((X_width+n_hops) / 2)
+            X = X[:, first_col:last_col]
+
+            # Add trailing singleton dimension for Keras interoperability.
+            X = X[:, :, np.newaxis]
+
+            # Retrieve label y from key name.
+            y = float(key.split("_")[3])
+
+            # Yield data and label as dictionary.
+            yield dict(X=X, y=y)
