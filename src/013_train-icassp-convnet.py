@@ -21,6 +21,7 @@ kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
 regularizer = keras.regularizers.l2(0.001)
+n_input_hops = 128
 
 
 # Read command-line arguments.
@@ -34,7 +35,7 @@ trial_str = args[2]
 fold = [f for f in folds if unit_str in f[0]][0]
 test_units = fold[0]
 training_units = fold[1]
-val_units = fold[2]
+validation_units = fold[2]
 
 
 # Print header.
@@ -42,7 +43,7 @@ start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Training Salamon's ICASSP 2017 convnet on " + dataset_name + ". ")
 print("Training set: " + ", ".join(training_units) + ".")
-print("Validation set: " + ", ".join(val_units) + ".")
+print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
 print("")
 print("Training augmentations: " + ", ".join(training_augs) + ".")
@@ -116,11 +117,10 @@ model.summary()
 
 
 # Get paths to HDF5 containing logmelspec features.
-tr_lms_paths = localmodule.get_logmelspec_paths(training_augs, training_units)
-val_lms_paths = localmodule.get_logmelspec_paths(val_augs, val_units)
-
-
-
+training_streamers = localmodule.multiplex_logmelspec(
+    aug_kind_str, training_units, n_input_hops)
+validation_streamers = localmodule.multiplex_logmelspec(
+    aug_kind_str, validation_units, n_input_hops)
 
 
 # Print elapsed time.
