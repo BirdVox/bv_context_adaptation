@@ -127,7 +127,8 @@ def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
 
-def multiplex(aug_kind_str, fold_units, n_hops, k=2048, lam=8.0, batch_size=32):
+def multiplex_logmelspec(aug_kind_str, fold_units, n_hops,
+        k=2048, lam=8.0, batch_size=32):
     # Parse augmentation kind string (aug_kind_str).
     if aug_kind_str == "none":
         training_augs = ["original"]
@@ -173,7 +174,7 @@ def multiplex(aug_kind_str, fold_units, n_hops, k=2048, lam=8.0, batch_size=32):
     # Create buffered streamer with specified batch size.
     buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
 
-    # 
+    #
     return buffered_streamer.tuples("X", "y", cycle=True)
 
 
