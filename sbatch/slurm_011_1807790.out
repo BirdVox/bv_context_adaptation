@@ -1,9 +1,9 @@
-2017-08-10 00:39:35.719190 Start.
+2017-08-10 16:28:41.995396 Start.
 Evaluating Old Bird on BirdVox-70k.
 h5py version: 2.6.0
 mir_eval version: 0.4
 numpy version: 1.13.1
 pandas version: 0.20.3
 
-2017-08-10 01:01:15.866383 Finish.
-Total elapsed time: 00:21:40.87.
+2017-08-10 16:49:49.400907 Finish.
+Total elapsed time: 00:21:08.40.
