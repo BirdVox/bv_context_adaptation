@@ -152,30 +152,55 @@ def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
 
 
-def parse_augmentation_kind(aug_kind_str, training_units, val_units):
-    if aug_kind_str == "all":
-        training_noise_augs = ["noise-" + training_unit_str
-            for training_unit_str in training_units]
-        training_augs = training_noise_augs + ["original", "pitch", "stretch"]
-        val_noise_augs = ["noise-" + val_unit_str
-            for val_unit_str in val_units]
-        val_augs = val_noise_augs + ["original", "pitch", "stretch"]
-    elif aug_kind_str == "noise":
-        training_noise_augs = ["noise-" + training_unit_str
-            for training_unit_str in training_units]
-        training_augs = training_noise_augs + ["original"]
-        val_noise_augs = ["noise-" + val_unit_str
-            for val_unit_str in val_units]
-        val_augs = val_noise_augs + ["original"]
+def multiplex(aug_kind_str, fold_units, n_hops, k=2048, lam=8.0, batch_size=32):
+    # Parse augmentation kind string (aug_kind_str).
+    if aug_kind_str == "none":
+        training_augs = ["original"]
+    elif aug_kind_str == "pitch":
+        training_augs == ["original", "pitch"]
+    elif aug_kind_str == "stretch":
+        training_augs == ["original", "stretch"]
     else:
-        if aug_kind_str == "none":
-            training_augs = ["original"]
-        elif aug_kind_str == "pitch":
-            training_augs == ["original", "pitch"]
-        elif aug_kind_str == "stretch":
-            training_augs == ["original", "stretch"]
-        val_augs = training_augs
-    return training_augs, val_augs
+        noise_augs = ["noise-" + unit_str for unit_str in fold_units]
+        if aug_kind_str == "all":
+            augs = noise_augs + ["original", "pitch", "stretch"]
+        elif: aug_kind_str = "noise":
+            augs = noise_augs + ["original"]
+
+    # Generate a Pescador streamer for every HDF5 container, that is,
+    # every unit-augmentation-instance triplet.
+    aug_dict = get_augmentations()
+    data_dir = get_data_dir()
+    dataset_name = get_dataset_name()
+    logmelspec_name = "_".join([dataset_name, "logmelspec"])
+    logmelspec_dir = os.path.join(data_dir, logmelspec_name)
+    streams = []
+    for aug_str in augs:
+        aug_dir = os.path.join(logmelspec_dir, aug_str)
+        if aug_str == "original":
+            instances = [aug_str]
+        else:
+            n_instances = aug_dict[aug_str]
+            instances = ["-".join([aug_str, str(instance_id)])
+                for instance_id in range(n_instances)]
+        for instanced_aug_str in instances:
+            for unit_str in units:
+                lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
+                lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
+                stream = pescador.Streamer(
+                    yield_logmelspec, logmelspec_path, n_hops)
+                streams.append(stream)
+
+    # Multiplex streamers together.
+    mux = pescador.Mux(streams,
+        k=k, lam=lam, with_replacement=True, revive=True)
+
+    # Create buffered streamer with specified batch size.
+    buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
+
+    # 
+    return buffered_streamer.tuples("X", "y", cycle=True)
+
 
 
 def pick_peaks(odf):
