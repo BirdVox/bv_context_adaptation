@@ -133,11 +133,11 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops,
         k=2048, lam=8.0, batch_size=32):
     # Parse augmentation kind string (aug_kind_str).
     if aug_kind_str == "none":
-        training_augs = ["original"]
+        taugs = ["original"]
     elif aug_kind_str == "pitch":
-        training_augs == ["original", "pitch"]
+        augs == ["original", "pitch"]
     elif aug_kind_str == "stretch":
-        training_augs == ["original", "stretch"]
+        augs == ["original", "stretch"]
     else:
         noise_augs = ["noise-" + unit_str for unit_str in fold_units]
         if aug_kind_str == "all":
