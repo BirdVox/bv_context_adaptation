@@ -94,31 +94,6 @@ def get_dataset_name():
     return "BirdVox-70k"
 
 
-def get_logmelspec_paths(augs, units):
-    aug_dict = get_augmentations()
-    data_dir = get_data_dir()
-    dataset_name = get_dataset_name()
-    logmelspec_name = "_".join([dataset_name, "logmelspec"])
-    logmelspec_dir = os.path.join(data_dir, logmelspec_name)
-    logmelspec_paths = []
-    for aug_str in augs:
-        aug_dir = os.path.join(logmelspec_dir, aug_str)
-        if aug_str == "original":
-            instances = [aug_str]
-        else:
-            n_instances = aug_dict[aug_str]
-            instances = ["-".join([aug_str, str(instance_id)])
-                for instance_id in range(n_instances)]
-        for instanced_aug_str in instances:
-            for unit_str in units:
-                logmelspec_name = "_".join(
-                    [dataset_name, instanced_aug_str, unit_str])
-                logmelspec_path = \
-                    os.path.join(aug_dir, logmelspec_name + ".hdf5")
-                logmelspec_paths.append(logmelspec_path)
-    return logmelspec_paths
-
-
 def get_logmelspec_settings():
     logmelspec_settings = {
         "fmin": 2000,
