@@ -165,8 +165,7 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops,
             for unit_str in units:
                 lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
                 lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
-                stream = pescador.Streamer(
-                    yield_logmelspec, logmelspec_path, n_hops)
+                stream = pescador.Streamer(yield_logmelspec, lms_path, n_hops)
                 streams.append(stream)
 
     # Multiplex streamers together.
@@ -176,7 +175,6 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops,
     # Create buffered streamer with specified batch size.
     buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
 
-    #
     return buffered_streamer.tuples("X", "y", cycle=True)
 
 
