@@ -1,6 +1,7 @@
 import itertools
 import numpy as np
 import os
+import pescador
 
 
 # This function implements the Bresenham's line algorithm in dimension one,
