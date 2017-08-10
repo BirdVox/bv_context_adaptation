@@ -3,6 +3,7 @@ import h5py
 import keras
 import numpy as np
 import os
+import pandas as pd
 import pescador
 import random
 import sys
@@ -56,6 +57,7 @@ print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('keras version: {:s}'.format(keras.__version__))
 print('numpy version: {:s}'.format(np.__version__))
+print('pandas version: {:s}'.format(pd.__version__))
 print('pescador version: {:s}'.format(pescador.__version__))
 print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
@@ -163,7 +165,8 @@ history = model.fit_generator(
 history_name = "_".join(
     [dataset_name, model_name, unit_str, trial_str, "history"])
 history_path = os.path.join(output_dir, history_name)
-pandas.DataFrame(history.history).to_csv(history_path)
+pd.DataFrame(history.history).to_csv(history_path)
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
