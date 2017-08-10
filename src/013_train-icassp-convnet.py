@@ -150,6 +150,13 @@ checkpoint = keras.callbacks.ModelCheckpoint(network_path,
     monitor="val_loss", verbose=False, save_best_only=True, mode="min")
 
 
+# Export network architecture as YAML file.
+yaml_path = os.path.join(trial_dir, network_name + ".yaml")
+with open(yaml_path, "w") as yaml_file:
+    yaml_string = model.to_yaml()
+    yaml_file.write(yaml_strin)
+
+
 # Train model.
 history = model.fit_generator(
     training_streamer,
@@ -164,7 +171,7 @@ history = model.fit_generator(
 # Export history as CSV file.
 history_name = "_".join(
     [dataset_name, model_name, unit_str, trial_str, "history"])
-history_path = os.path.join(output_dir, history_name)
+history_path = os.path.join(trial_dir, history_name)
 pd.DataFrame(history.history).to_csv(history_path)
 
 
