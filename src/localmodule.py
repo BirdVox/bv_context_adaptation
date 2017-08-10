@@ -70,6 +70,7 @@ def fold_units():
             units[np.mod(fold_id-2, n_units)],
             units[np.mod(fold_id-1, n_units)]]
         folds.append([test_units, train_units, val_units])
+    # TODO: assert that len(test_units)==1
     return folds
 
 
@@ -125,6 +126,7 @@ def get_tolerances():
 
 def get_units():
     return ["unit" + str(unit).zfill(2) for unit in [1, 2, 3, 5, 7, 10]]
+    # TODO: assert that unit names do not contain underscores.
 
 
 def multiplex_logmelspec(aug_kind_str, fold_units, n_hops,
