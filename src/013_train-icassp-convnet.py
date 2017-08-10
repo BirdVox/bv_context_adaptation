@@ -23,6 +23,9 @@ pool_size = [2, 4]
 n_hidden_units = 64
 regularizer = keras.regularizers.l2(0.001)
 n_input_hops = 128
+steps_per_epoch = 1024
+epochs = 32
+validation_steps = 256
 
 
 # Read command-line arguments.
@@ -119,26 +122,47 @@ model.summary()
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
-training_streamers = localmodule.multiplex_logmelspec(
+training_streamer = localmodule.multiplex_logmelspec(
     aug_kind_str, training_units, n_input_hops)
-validation_streamers = localmodule.multiplex_logmelspec(
+validation_streamer = localmodule.multiplex_logmelspec(
     aug_kind_str, validation_units, n_input_hops)
 
 
-# Create directory for model.
+# Create directory for model, unit, and trial.
 model_name = "icassp-convnet"
 if not aug_kind_str == "original":
     model_name = "_".join([model_name, aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
+unit_dir = os.path.join(model_dir, unit_str)
+os.makedirs(unit_dir, exist_ok=True)
+trial_dir = os.path.join(unit_dir, trial_str)
+os.makedirs(trial_dir, exist_ok=True)
 
-aug_kind_str = args[0]
-unit_str = args[1]
-trial_str = args[2]
 
-checkpoint = keras.callbacks.ModelCheckpoint(model_path,
+# Create Keras callback for checkpointing model.
+network_name = "_".join(
+    [dataset_name, model_name, unit_str, trial_str, "network"])
+network_path = os.path.join(trial_dir, network_name + ".hdf5")
+checkpoint = keras.callbacks.ModelCheckpoint(network_path,
     monitor="val_loss", verbose=False, save_best_only=True, mode="min")
 
+
+# Train model.
+history = model.fit_generator(
+    training_streamer,
+    steps_per_epoch = steps_per_epoch,
+    epochs = epochs,
+    verbose = False,
+    callbacks = [checkpoint],
+    validation_data = validation_streamer,
+    validation_steps = validation_steps)
+
+
+# Export history as CSV file.
+history_name = model_str + "_history_split" + split_str + ".csv"
+history_path = os.path.join(output_dir, history_name)
+pandas.DataFrame(history.history).to_csv(history_path)
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
