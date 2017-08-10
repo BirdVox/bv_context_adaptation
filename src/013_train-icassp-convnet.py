@@ -160,7 +160,8 @@ history = model.fit_generator(
 
 
 # Export history as CSV file.
-history_name = model_str + "_history_split" + split_str + ".csv"
+history_name = "_".join(
+    [dataset_name, model_name, unit_str, trial_str, "history"])
 history_path = os.path.join(output_dir, history_name)
 pandas.DataFrame(history.history).to_csv(history_path)
 
