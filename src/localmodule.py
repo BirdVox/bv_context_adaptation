@@ -161,7 +161,7 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
             instances = ["-".join([aug_str, str(instance_id)])
                 for instance_id in range(n_instances)]
         for instanced_aug_str in instances:
-            for unit_str in units:
+            for unit_str in fold_units:
                 lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
                 lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
                 stream = pescador.Streamer(yield_logmelspec, lms_path, n_hops)
