@@ -4,9 +4,10 @@ import keras
 import numpy as np
 import os
 import pescador
+import random
+import sys
 import tensorflow as tf
 import time
-import sys
 
 import localmodule
 
@@ -20,6 +21,7 @@ kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
 regularizer = keras.regularizers.l2(0.001)
+
 
 # Read command-line arguments.
 args = sys.argv[1:]
