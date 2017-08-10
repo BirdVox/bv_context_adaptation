@@ -15,6 +15,7 @@ import localmodule
 # Define constants.
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
+models_dir = localmodule.get_models_dir()
 n_input_hops = 104
 n_filters = [24, 48, 48]
 kernel_size = [5, 5]
@@ -116,11 +117,27 @@ model.compile(
 model.summary()
 
 
-# Get paths to HDF5 containing logmelspec features.
+# Build Pescador streamers corresponding to log-mel-spectrograms in augmented
+# training and validation sets.
 training_streamers = localmodule.multiplex_logmelspec(
     aug_kind_str, training_units, n_input_hops)
 validation_streamers = localmodule.multiplex_logmelspec(
     aug_kind_str, validation_units, n_input_hops)
+
+
+# Create directory for model.
+model_name = "icassp-convnet"
+if not aug_kind_str == "original":
+    model_name = "_".join([model_name, aug_kind_str])
+model_dir = os.path.join(models_dir, model_name)
+os.makedirs(model_dir, exist_ok=True)
+
+aug_kind_str = args[0]
+unit_str = args[1]
+trial_str = args[2]
+
+checkpoint = keras.callbacks.ModelCheckpoint(model_path,
+    monitor="val_loss", verbose=False, save_best_only=True, mode="min")
 
 
 # Print elapsed time.
