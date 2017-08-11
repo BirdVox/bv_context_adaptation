@@ -14,7 +14,7 @@ script_name = "013_train-icassp-convnet.py"
 script_path = os.path.join("..", "src", script_name)
 
 
-for aug_kind_str in aug_kind:
+for aug_kind_str in aug_kinds:
     for trial_id in range(n_trials):
         trial_str = str(trial_id)
         file_path = "013_aug-" + aug_kind_str + "_trial-" + trial_str + ".sh"
