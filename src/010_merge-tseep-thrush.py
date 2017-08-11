@@ -19,7 +19,7 @@ n_thresholds = 100
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Evaluating Old Bird on " + dataset_name + ".")
+print("Merge Tseep and Thrush predictions in  " + dataset_name + ".")
 print('pandas version: {:s}'.format(pd.__version__))
 print("")
 
