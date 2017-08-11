@@ -31,7 +31,8 @@ for aug_kind_str in aug_kinds:
             for unit_str in units:
                 # Define job name.
                 job_name = "_".join(
-                    ["013", "aug-" + aug_kind_str, unit_str, trial_str])
+                    ["013", "aug-" + aug_kind_str, unit_str,
+                     "trial-" + trial_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
 
                 # Write SBATCH command to shell file.
