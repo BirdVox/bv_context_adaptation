@@ -202,7 +202,7 @@ def rsync():
 def yield_logmelspec(lms_path, n_hops):
     # Open HDF5 container.
     with h5py.File(lms_path, "r") as lms_container:
-        # Open HDF5 group corresponding to log-mel-spectrograms.
+        # Open HDF5 group corresponding to log-mel-spectrograms (lms).
         lms_group = lms_container["logmelspec"]
 
         # The naming convention of a key is
@@ -214,7 +214,7 @@ def yield_logmelspec(lms_path, n_hops):
             key = random.choice(keys)
 
             # Load logmelspec.
-            X = lms_container[key]
+            X = lms_group[key]
 
             # Trim logmelspec in time to required number of hops.
             X_width = X.shape[1]
