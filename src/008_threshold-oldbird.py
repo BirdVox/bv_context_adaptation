@@ -37,6 +37,7 @@ odf_str = args[1]
 threshold_id_start = int(args[2][3:5])
 threshold_id_stop = int(args[2][-2:])
 threshold_id_range = range(threshold_id_start, 1 + threshold_id_stop)
+clip_suppressor_str = "no-clip-suppressor"
 
 
 # Print header.
@@ -95,6 +96,7 @@ csv_header = [
     'Dataset',
     'Unit',
     'ODF',
+    'Clip suppressor',
     'Threshold ID',
     'Upward threshold',
     'Downward threshold',
@@ -160,22 +162,12 @@ for threshold_id in threshold_id_range:
             # Also store value of ODF at offset.
             offset_odf = odf[0, clip_stop]
             # Export clip_time, clip_duration, onset_odf, offset_odf.
-            csv_header = [
-                'Dataset',
-                'Unit',
-                'ODF',
-                'Threshold ID',
-                'Upward threshold',
-                'Downward threshold',
-                'Time (s)',
-                'Duration (s)',
-                'Onset ODF',
-                'Offset ODF']
             row = [
                 dataset_name,
                 unit_str,
                 'Old Bird (' + odf_str + ')',
-                threshold_str,
+                clip_suppressor_str,
+                str(threshold_id).zfill(2),
                 "{:5.3f}".format(up_threshold),
                 "{:5.3f}".format(down_threshold),
                 "{:8.2f}".format(clip_time),
