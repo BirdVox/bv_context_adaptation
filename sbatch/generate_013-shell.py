@@ -23,8 +23,11 @@ for aug_kind_str in aug_kinds:
         with open(file_path, "w") as f:
             # Print header
             f.write(
-                "# This shell script executes Slurm jobs for thresholding " +
-                "Old Bird onset detection functions: Thrush and Tseep.\n")
+                "# This shell script executes Slurm jobs for training\n" +
+                "Justin Salamon's ICASSP 2017 convolutional neural network\n" +
+                "on " + dataset_name + ".\n")
+            f.write("Trial ID: " + trial_str + ".\n")
+            f.write("Augmentation kind: " + aug_kind_str + ".\n")
             f.write("\n")
 
             # Loop over recording units
