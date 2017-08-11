@@ -152,7 +152,7 @@ checkpoint = keras.callbacks.ModelCheckpoint(network_path,
 yaml_path = os.path.join(trial_dir, network_name + ".yaml")
 with open(yaml_path, "w") as yaml_file:
     yaml_string = model.to_yaml()
-    yaml_file.write(yaml_strin)
+    yaml_file.write(yaml_string)
 
 
 # Train model.
