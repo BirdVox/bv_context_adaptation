@@ -145,7 +145,7 @@ os.makedirs(trial_dir, exist_ok=True)
 
 # Create Keras callback for checkpointing model.
 network_name = "_".join(
-    [dataset_name, model_name, unit_str, trial_str, "network"])
+    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "network"])
 network_path = os.path.join(trial_dir, network_name + ".hdf5")
 checkpoint = keras.callbacks.ModelCheckpoint(network_path,
     monitor="val_loss", verbose=False, save_best_only=True, mode="min")
@@ -171,7 +171,7 @@ history = model.fit_generator(
 
 # Export history as CSV file.
 history_name = "_".join(
-    [dataset_name, model_name, unit_str, trial_str, "history"])
+    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "history"])
 history_path = os.path.join(trial_dir, history_name + ".csv")
 pd.DataFrame(history.history).to_csv(history_path)
 
