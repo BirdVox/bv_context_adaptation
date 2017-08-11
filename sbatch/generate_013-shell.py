@@ -7,6 +7,7 @@ import localmodule
 
 
 # Define constants
+dataset_name = localmodule.get_dataset_name()
 aug_kinds = ["all", "noise", "original", "pitch", "stretch"]
 units = localmodule.get_units()
 n_trials = 10
