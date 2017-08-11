@@ -1,4 +1,8 @@
-# This shell script executes Slurm jobs for thresholding Old Bird onset detection functions: Thrush and Tseep.
+# This shell script executes Slurm jobs for training
+Justin Salamon's ICASSP 2017 convolutional neural network
+on BirdVox-70k.
+Trial ID: 3.
+Augmentation kind: stretch.
 
 sbatch 013_aug-stretch_unit01_trial-3.sbatch
 sbatch 013_aug-stretch_unit02_trial-3.sbatch
