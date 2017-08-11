@@ -172,7 +172,7 @@ history = model.fit_generator(
 # Export history as CSV file.
 history_name = "_".join(
     [dataset_name, model_name, unit_str, trial_str, "history"])
-history_path = os.path.join(trial_dir, history_name)
+history_path = os.path.join(trial_dir, history_name + ".csv")
 pd.DataFrame(history.history).to_csv(history_path)
 
 
