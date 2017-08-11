@@ -17,6 +17,7 @@ oldbird_models_dir = os.path.join(models_dir, "oldbird")
 units = localmodule.get_units()
 odfs = ["thrush", "tseep"]
 n_thresholds = 100
+clip_suppressor_str = "clip-suppressor"
 
 
 # Print header.
@@ -103,6 +104,9 @@ for unit_str in units:
 
             # Select rows in input DataFrame.
             out_df = in_df[in_df["Time (s)"].isin(out_times)]
+
+            # Replace clip_suppressor column.
+            out_df["Clip suppressor"] = clip_suppressor_str
 
             # Export output DataFrame to CSV.
             out_df.to_csv(out_prediction_path)
