@@ -49,14 +49,14 @@ for unit_str in units:
     annotations_dir = os.path.join(data_dir, annotations_name)
     annotation_name = unit_str + ".txt"
     annotation_path = os.path.join(annotations_dir, annotation_name)
-    ann_df = pd.read_csv(annotation_path, delimiter="\t")
-
-    # Restrict rows to negative labels.
-    if "Calls" in ann_df.columns:
-        ann_df = ann_df.loc[~ann_df["Calls"].isin(negative_labels)]
 
     # Loop over onset detection functions.
     for odf_str in odfs:
+        ann_df = pd.read_csv(annotation_path, delimiter="\t")
+
+        # Restrict rows to negative labels.
+        if "Calls" in ann_df.columns:
+            ann_df = ann_df.loc[~ann_df["Calls"].isin(negative_labels)]
 
         # Restrict rows to frequency range of interest.
         if odf_str in ["thrush", "tseep"]:
