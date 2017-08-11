@@ -29,7 +29,7 @@ for aug_kind_str in aug_kinds:
                 ["013", "aug-" + aug_kind_str, unit_str, trial_str])
             file_name = job_name + ".sbatch"
             script_path_with_args = " ".join(
-                [script_path, "aug-" + aug_kind_str, unit_str, trial_str])
+                [script_path, aug_kind_str, unit_str, trial_str])
 
             # Write call to python in SBATCH file.
             with open(file_name, "w") as f:
