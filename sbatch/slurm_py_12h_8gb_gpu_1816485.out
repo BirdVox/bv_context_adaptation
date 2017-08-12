@@ -37,3 +37,74 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8162/?token=04f741b3bc8debb7a1426dcc26bf07964acddda5e2c30f8e
+[I 12:57:54.742 NotebookApp] 302 GET /?token=04f741b3bc8debb7a1426dcc26bf07964acddda5e2c30f8e (::1) 2.26ms
+[W 12:58:15.053 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170811110051 (::1) 18.95ms referer=http://localhost:8162/notebooks/spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 12:58:15.328 NotebookApp] Kernel started: c1f7dbc6-d30f-4417-bfb9-c341d03d9466
+[I 13:02:50.789 NotebookApp] Kernel restarted: c1f7dbc6-d30f-4417-bfb9-c341d03d9466
+[I 13:04:15.312 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:06:15.320 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:08:15.437 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:12:15.379 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:14:15.415 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:16:15.422 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:18:15.353 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:20:15.356 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:22:15.363 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:24:15.378 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:36:15.424 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:38:15.438 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 13:52:15.555 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:02:15.439 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:04:15.431 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:06:15.471 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:08:15.456 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:10:15.444 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:12:15.446 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:14:15.447 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:16:15.467 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:18:15.556 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:20:15.460 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:22:15.459 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:24:15.463 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:26:15.464 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:28:15.481 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:30:15.494 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:32:15.479 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:34:15.605 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:36:15.504 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:38:15.504 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:40:15.586 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:42:15.511 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:44:15.539 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 14:46:15.522 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:08:15.561 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:10:15.581 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:12:15.568 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:34:15.601 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:36:15.605 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:38:15.643 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:40:05.292 NotebookApp] Kernel restarted: c1f7dbc6-d30f-4417-bfb9-c341d03d9466
+[I 15:40:15.691 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:42:15.625 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:44:15.623 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:46:15.683 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:48:15.634 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 15:50:15.655 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:03:23.485 NotebookApp] Kernel restarted: c1f7dbc6-d30f-4417-bfb9-c341d03d9466
+[I 16:04:15.667 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:06:15.664 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:07:07.144 NotebookApp] Kernel restarted: c1f7dbc6-d30f-4417-bfb9-c341d03d9466
+[I 16:08:15.685 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:10:15.699 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:12:15.688 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:24:15.728 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:26:15.757 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:28:15.717 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:30:15.783 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:32:15.774 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:34:15.835 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:36:15.775 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:38:15.757 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 16:40:15.811 NotebookApp] Saving file at /spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[W 17:21:08.052 NotebookApp] WebSocket ping timeout after 119933 ms.
+slurmstepd: error: *** JOB 1816485 ON gpu-13 CANCELLED AT 2017-08-11T23:01:14 DUE TO TIME LIMIT ***
