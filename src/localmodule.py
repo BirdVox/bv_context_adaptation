@@ -135,7 +135,7 @@ def get_units():
 def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
     # Parse augmentation kind string (aug_kind_str).
     if aug_kind_str == "none":
-        taugs = ["original"]
+        augs = ["original"]
     elif aug_kind_str == "pitch":
         augs == ["original", "pitch"]
     elif aug_kind_str == "stretch":
