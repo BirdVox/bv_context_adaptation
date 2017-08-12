@@ -162,7 +162,6 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
         else:
             n_instances = aug_dict[aug_str]
             instances = ["-".join([aug_str, str(instance_id)])
-                for instance_id in range(n_instances)]
         for instanced_aug_str in instances:
             for unit_str in fold_units:
                 lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
