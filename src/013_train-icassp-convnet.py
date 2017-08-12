@@ -142,7 +142,7 @@ os.makedirs(trial_dir, exist_ok=True)
 
 # Create Keras callback for checkpointing model.
 network_name = "_".join(
-    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "network"])
+    [dataset_name, model_name, unit_str, trial_str, "network"])
 network_path = os.path.join(trial_dir, network_name + ".hdf5")
 checkpoint = keras.callbacks.ModelCheckpoint(network_path,
     monitor="val_loss", verbose=False, save_best_only=True, mode="min")
