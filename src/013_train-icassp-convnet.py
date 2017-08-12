@@ -114,7 +114,7 @@ model.add(dense2)
 
 # Compile model, print model summary.
 model.compile(
-    loss="categorical_crossentropy",
+    loss="binary_crossentropy",
     optimizer="adam",
     metrics=["accuracy"])
 model.summary()
