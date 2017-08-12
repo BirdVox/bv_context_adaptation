@@ -51,6 +51,9 @@ print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
 
 
+# 
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
