@@ -8,7 +8,7 @@ import localmodule
 
 # Define constants
 dataset_name = localmodule.get_dataset_name()
-aug_kinds = ["all", "noise", "original", "pitch", "stretch"]
+aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 units = localmodule.get_units()
 n_trials = 10
 script_name = "013_train-icassp-convnet.py"
