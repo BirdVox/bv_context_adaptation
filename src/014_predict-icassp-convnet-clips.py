@@ -62,6 +62,15 @@ network_name = "_".join(
     [dataset_name, model_name, aug_kind_str,
      test_unit_str, trial_str, "network"])
 network_path = os.path.join(trial_dir, network_name + ".hdf5")
+model = keras.models.load_model(network_path)
+
+
+# Make Pescador streamer for prection unit.
+aug_str = "original"
+hdf5_dir = os.path.join(data_dir, "_".join([dataset_name, "hdf5"]))
+original_hdf5_dir = os.path.join(hdf5_dir, aug_str)
+hdf5_name = "_".join([dataset_name, aug_str, predict_unit_str])
+hdf5_path = os.path.join(original_hdf5_dir, hdf5_name + ".hdf5")
 
 
 # Print elapsed time.
