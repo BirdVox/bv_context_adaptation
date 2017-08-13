@@ -24,7 +24,7 @@ B. Old Bird
 
 6. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units, 3 detectors (Tseep, Thrush and both), and 10 tolerances, both with and without clip suppressor. It results in 6*3*10*2=360 CSV files.
 
-7. [IN PROGRESS] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 2 CSV file, one without suppressor, one with suppressor.
+7. [DONE] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 6 CSV files, 3 without suppressor, 3 with suppressor.
 
 
 C. Deep learning
@@ -40,15 +40,19 @@ C. Deep learning
 
 6. [DONE] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
-7. [IN PROGRESS] Train icassp convnet on BirdVox-70k. Export 6*10=60 Keras models. Parallelize over units (6) and trials (10).
+7. [IN PROGRESS] Train icassp convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
 
-8. For every trained unit (6), every prediction unit (6), and every trial (10), export 6*10=60 BirdVox-70k predictions as HDF5 containers. Compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds. Parallelize over trained units (6) and trials (10).
+8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as HDF5 containers. Parallelize over folds (6) and prediction unit (3).
 
-8. For every trained unit (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
+9. For every fold unit (6), every prediction unit in validation set and test set (3), compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds between 0.0 and 1.0. Parallelize over folds (6) and prediction unit (3).
 
-9. For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set.
+10. For every fold (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
 
-10. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
+11. For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set.
+
+12. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
+
+13. For every fold (6), every prediction unit in validation set and test set (3), export full night predictions as HDF5 containers.
 
 
 D. Snowball on UrbanSound-8K
