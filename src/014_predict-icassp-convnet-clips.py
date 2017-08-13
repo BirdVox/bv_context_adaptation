@@ -51,7 +51,17 @@ print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
 
 
-# 
+# Load model.
+model_name = "icassp-convnet"
+if not aug_kind_str == "original":
+    model_name = "_".join([model_name, aug_kind_str])
+model_dir = os.path.join(models_dir, model_name)
+unit_dir = os.path.join(model_dir, test_unit_str)
+trial_dir = os.path.join(unit_dir, trial_str)
+network_name = "_".join(
+    [dataset_name, model_name, aug_kind_str,
+     test_unit_str, trial_str, "network"])
+network_path = os.path.join(trial_dir, network_name + ".hdf5")
 
 
 # Print elapsed time.
