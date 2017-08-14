@@ -151,7 +151,7 @@ checkpoint = keras.callbacks.ModelCheckpoint(network_path,
 
 # Create custom callback for saving history.
 history_name = "_".join(
-    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "history"])
+    [dataset_name, model_name, unit_str, trial_str, "history"])
 history_path = os.path.join(trial_dir, history_name + ".csv")
 with open(history_path, 'w') as csv_file:
     csv_writer = csv.writer(csv_file)
