@@ -1,3 +1,4 @@
+import csv
 import datetime
 import h5py
 import keras
@@ -148,6 +149,26 @@ checkpoint = keras.callbacks.ModelCheckpoint(network_path,
     monitor="val_loss", verbose=False, save_best_only=True, mode="min")
 
 
+# Create custom callback for saving history.
+history_name = "_".join(
+    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "history"])
+history_path = os.path.join(trial_dir, history_name + ".csv")
+with open(history_path, 'w') as csv_file:
+    csv_writer = csv.writer(csv_file)
+    header = ['Epoch', 'Local time', 'Training loss', 'Training accuracy (%)',
+        'Validation loss', 'Validation accuracy (%)']
+    csv_writer.writerow(header)
+def write_row(history_path, epoch, logs):
+    with open(history_path, 'a') as csv_file:
+        csv_writer = csv.writer(csv_file)
+        row = [str(epoch).zfill(3), str(datetime.datetime.now()),
+            "{:.16f}".format(logs.loss), "{:.2f}".format(logs.acc),
+            "{:.16f}".format(logs.val_loss), "{:.2f}".format(logs.training_acc)]
+        csv_writer.writerow(row)
+history_callback = keras.callbacks.LambdaCallback(
+    on_epoch_end=lambda epoch, logs: write_row(history_path, epoch, logs))
+
+
 # Export network architecture as YAML file.
 yaml_path = os.path.join(trial_dir, network_name + ".yaml")
 with open(yaml_path, "w") as yaml_file:
@@ -164,13 +185,6 @@ history = model.fit_generator(
     callbacks = [checkpoint],
     validation_data = validation_streamer,
     validation_steps = validation_steps)
-
-
-# Export history as CSV file.
-history_name = "_".join(
-    [dataset_name, model_name, aug_kind_str, unit_str, trial_str, "history"])
-history_path = os.path.join(trial_dir, history_name + ".csv")
-pd.DataFrame(history.history).to_csv(history_path)
 
 
 # Print elapsed time.
