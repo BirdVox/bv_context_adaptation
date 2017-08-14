@@ -182,7 +182,7 @@ history = model.fit_generator(
     steps_per_epoch = steps_per_epoch,
     epochs = epochs,
     verbose = False,
-    callbacks = [checkpoint],
+    callbacks = [checkpoint, history_callback],
     validation_data = validation_streamer,
     validation_steps = validation_steps)
 
