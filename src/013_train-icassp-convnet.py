@@ -114,10 +114,8 @@ dense2 = keras.layers.Dense(1,
 model.add(dense2)
 
 # Compile model, print model summary.
-model.compile(
-    loss="binary_crossentropy",
-    optimizer="adam",
-    metrics=["accuracy"])
+metrics = ["accuracy"]
+model.compile(loss="binary_crossentropy", optimizer="adam", metrics=metrics)
 model.summary()
 
 
