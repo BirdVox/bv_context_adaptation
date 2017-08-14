@@ -167,7 +167,7 @@ def write_row(history_path, epoch, logs):
             "{:.16f}".format(logs.get('loss')),
             "{:.2f}".format(logs.get('acc')),
             "{:.16f}".format(logs.get('val_loss')),
-            "{:.2f}".format(logs.get('training_acc'))]
+            "{:.2f}".format(logs.get('val_acc'))]
         csv_writer.writerow(row)
 history_callback = keras.callbacks.LambdaCallback(
     on_epoch_end=lambda epoch, logs: write_row(history_path, epoch, logs))
