@@ -4,9 +4,8 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=12:00:00
-#SBATCH --mem=1GB
-#SBATCH --gres=gpu:1
+#SBATCH --time=16:00:00
+#SBATCH --mem=8GB
 #SBATCH --output=slurm_013_aug-stretch_unit10_trial-1_%j.out
 
 module purge
