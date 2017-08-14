@@ -214,7 +214,7 @@ def yield_logmelspec(lms_path, n_hops):
             key = random.choice(keys)
 
             # Load logmelspec.
-            X = lms_group[key]
+            X = lms_group[key].value
 
             # Trim logmelspec in time to required number of hops.
             X_width = X.shape[1]
