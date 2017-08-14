@@ -109,7 +109,7 @@ model.add(dense1)
 drop2 = keras.layers.Dropout(0.5)
 model.add(drop2)
 dense2 = keras.layers.Dense(1,
-    kernel_initializer="glorot_uniform", activation="softmax",
+    kernel_initializer="glorot_uniform", activation="sigmoid",
     kernel_regularizer=regularizer)
 model.add(dense2)
 
