@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#BATCH --job-name=013_aug-all_unit01_trial-0
+#BATCH --job-name=013_aug-all_unit01_trial-1
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
