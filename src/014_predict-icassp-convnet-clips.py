@@ -1,10 +1,9 @@
+import csv
 import datetime
 import h5py
 import keras
 import numpy as np
 import os
-import pandas as pd
-import pescador
 import sys
 import tensorflow as tf
 import time
@@ -47,15 +46,14 @@ print('h5py version: {:s}'.format(h5py.__version__))
 print('keras version: {:s}'.format(keras.__version__))
 print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
-print('pescador version: {:s}'.format(pescador.__version__))
 print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
 
 
 # Load model.
 model_name = "icassp-convnet"
-if not aug_kind_str == "original":
-    model_name = "_".join([model_name, aug_kind_str])
+if not aug_kind_str == "none":
+    model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
 unit_dir = os.path.join(model_dir, test_unit_str)
 trial_dir = os.path.join(unit_dir, trial_str)
@@ -85,7 +83,13 @@ clip_predictions_name = "_".join([
     "clip-predictions"
 ])
 
-keys = list(lms_group.keys())
+
+# List keys.
+keys = sorted(list(lms_group.keys()))
+
+
+# Loop over keys.
+prediction = {}
 for key in keys:
     # Load logmelspec.
     X = lms_group[key]
