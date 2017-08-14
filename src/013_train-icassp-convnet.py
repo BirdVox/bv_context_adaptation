@@ -191,6 +191,12 @@ history = model.fit_generator(
     validation_steps = validation_steps)
 
 
+# Print history.
+history_df = pd.DataFrame(history.history)
+print(history_df.to_string())
+print("")
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
