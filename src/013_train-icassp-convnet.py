@@ -129,8 +129,8 @@ validation_streamer = localmodule.multiplex_logmelspec(
 
 # Create directory for model, unit, and trial.
 model_name = "icassp-convnet"
-if not aug_kind_str == "original":
-    model_name = "_".join([model_name, aug_kind_str])
+if not aug_kind_str == "none":
+    model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
 os.makedirs(model_dir, exist_ok=True)
 unit_dir = os.path.join(model_dir, unit_str)
