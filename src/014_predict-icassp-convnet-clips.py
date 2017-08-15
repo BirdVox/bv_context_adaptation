@@ -45,7 +45,6 @@ print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('keras version: {:s}'.format(keras.__version__))
 print('numpy version: {:s}'.format(np.__version__))
-print('pandas version: {:s}'.format(pd.__version__))
 print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
 
