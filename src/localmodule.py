@@ -226,7 +226,7 @@ def yield_logmelspec(lms_path, n_hops):
             X = X[:, :, np.newaxis]
 
             # Retrieve label y from key name.
-            y = np.float32(key.split("_")[3])
+            y = np.array([np.float32(key.split("_")[3])])
 
             # Yield data and label as dictionary.
             yield dict(X=X, y=y)
