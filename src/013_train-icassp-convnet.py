@@ -180,12 +180,12 @@ with open(yaml_path, "w") as yaml_file:
 
 # Train model.
 history = model.fit_generator(
-    training_streamer,
+    training_streamertuples('X', 'y', cycle=True),
     steps_per_epoch = steps_per_epoch,
     epochs = epochs,
     verbose = False,
     callbacks = [checkpoint, history_callback],
-    validation_data = validation_streamer,
+    validation_data = validation_streamer.tuples('X', 'y', cycle=True),
     validation_steps = validation_steps)
 
 
