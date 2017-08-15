@@ -12,6 +12,7 @@ import localmodule
 
 
 # Define constants.
+data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 models_dir = localmodule.get_models_dir()
