@@ -88,12 +88,14 @@ clip_predictions_name = "_".join([
 keys = sorted(list(lms_group.keys()))
 
 
-# Loop over keys.
-clip_predictions = {}
+# Initialize Pandas DataFrame of predictions.
 df_columns = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
     "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
     "Predicted probability"]
 df = pd.DataFrame(columns=df_columns)
+
+
+# Loop over keys.
 for key in keys:
     # Load logmelspec.
     X = lms_group[key]
@@ -110,9 +112,7 @@ for key in keys:
     # Predict.
     predicted_probability = model.predict_proba(X)
 
-unit01_942725398_00000_0_original
-
-    # Store prediction in DataFrame.
+    # Store prediction as DataFrame row.
     key_split = key.split("_")
     timestamp_str = key_split[1]
     freq_str = key_split[2]
