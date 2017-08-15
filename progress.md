@@ -58,7 +58,7 @@ C. Deep learning
 D. Snowball on UrbanSound-8K
 1. [DONE] Augment UrbanSound-8K dataset.
 
-2. [DONE] Compute scattering transform of augmented audio.
+2. [IN PROGRESS] Compute scattering transform of augmented audio.
 
 3. Define snowball model and pescador generator.
 
@@ -66,7 +66,7 @@ D. Snowball on UrbanSound-8K
 
 
 E. Cross-validated spherical k-means model
-1. Train on external data.
+1. Train SKM on BirdVox-70k clips with augmentation (one trial). Parallelize across units (6).
 
 2. Compute predictions on 6 full night recordings.
 
