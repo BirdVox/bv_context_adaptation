@@ -136,6 +136,7 @@ prediction_name = "_".join([dataset_name, model_name,
     "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
     "clip-predictions")
 prediction_path = os.path.join(trial_dir, prediction_name + ".csv")
+df.to_csv(prediction_path)
 
 
 # Print elapsed time.
