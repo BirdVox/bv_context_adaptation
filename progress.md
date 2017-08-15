@@ -1,4 +1,4 @@
-A. Spherical k-means model
+A. Out-of-sample spherical k-means model
 1. [DONE] Train on external data.
 
 2. [DONE] Compute predictions on 6 full night recordings.
@@ -40,7 +40,7 @@ C. Deep learning
 
 6. [DONE] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
-7. [IN PROGRESS] Train icassp convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
+7. [IN PROGRESS] Train ICASSP convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
 
 8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as HDF5 containers. Parallelize over folds (6) and prediction unit (3).
 
@@ -65,4 +65,14 @@ D. Snowball on UrbanSound-8K
 4. Snowball convnet: train (a), predict (b), evaluate (c).
 
 
-Juan: schedule C, then B, then D, then A.
+E. Cross-validated spherical k-means model
+
+
+F. Per-channel energy normalization (PCEN)
+1. Send some BirdVox data to the Google team.
+
+2. Compute fixed PCEN of augmented audio, store into 6*33=198 HDF5 containers. Parallelize over units (6) and augmentations (33).
+
+3. Compute fixed PCEN of full night, store into 6 HDF5 containers. Parallelize over units (6).
+
+4. Train SPL convnet on BirdVox-70k with augmentation on PCEN (one trial). Export 6 Keras models. Parallelize over folds (6).
