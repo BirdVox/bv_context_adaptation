@@ -66,6 +66,16 @@ D. Snowball on UrbanSound-8K
 
 
 E. Cross-validated spherical k-means model
+1. Train on external data.
+
+2. Compute predictions on 6 full night recordings.
+
+3. Postprocessing: peak-picking, thresholding, event matching.
+
+4. Export metrics (n_selected, TP, FP, FN, precision, recall, F)
+for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
+
+5. Compute global metrics (n_selected, TP, FP, FN, precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
 
 
 F. Per-channel energy normalization (PCEN)
