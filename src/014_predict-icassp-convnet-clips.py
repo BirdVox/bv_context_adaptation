@@ -132,7 +132,10 @@ hdf5_file.close()
 
 
 # Export clip predictions as CSV file.
-
+prediction_name = "_".join([dataset_name, model_name,
+    "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
+    "clip-predictions")
+prediction_path = os.path.join(trial_dir, prediction_name + ".csv")
 
 
 # Print elapsed time.
