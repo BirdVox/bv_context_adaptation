@@ -89,7 +89,11 @@ keys = sorted(list(lms_group.keys()))
 
 
 # Loop over keys.
-prediction = {}
+clip_predictions = {}
+df_columns = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
+    "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
+    "Predicted probability"]
+df = pd.DataFrame(columns=df_columns)
 for key in keys:
     # Load logmelspec.
     X = lms_group[key]
@@ -104,14 +108,31 @@ for key in keys:
     X = X[:, :, np.newaxis]
 
     # Predict.
-    y = model.predict(X)
+    predicted_probability = model.predict_proba(X)
 
-    # Store prediction in dictionary.
-    prediction[key] = y
+unit01_942725398_00000_0_original
+
+    # Store prediction in DataFrame.
+    key_split = key.split("_")
+    timestamp_str = key_split[1]
+    freq_str = key_split[2]
+    ground_truth_str = key_split[3]
+    aug_str = key_split[4]
+    predicted_probability_str = "{:.16f}".format(predicted_probability)
+    row_df = pd.DataFrame(
+        [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
+         freq_str, aug_str, key, ground_truth_str, predicted_probability_str],
+        columns=df_columns,
+        ignore_index=True)
+    df.append(row_df)
 
 
 # Close HDF5 containers.
 hdf5_file.close()
+
+
+# Export clip predictions as CSV file.
+
 
 
 # Print elapsed time.
