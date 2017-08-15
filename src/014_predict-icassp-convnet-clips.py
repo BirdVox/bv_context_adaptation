@@ -27,7 +27,7 @@ predict_unit_str = args[3]
 
 
 # Retrieve fold such that unit_str is in the test set.
-fold = [f for f in folds if unit_str in f[0]][0]
+fold = [f for f in folds if test_unit_str in f[0]][0]
 test_units = fold[0]
 training_units = fold[1]
 validation_units = fold[2]
