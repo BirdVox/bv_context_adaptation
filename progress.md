@@ -79,7 +79,7 @@ for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 
 
 F. Per-channel energy normalization (PCEN)
-1. Send some BirdVox data to the Google team.
+1. [IN PROGRESS] Send some BirdVox data to the Google team.
 
 2. Compute fixed PCEN of augmented audio, store into 6*33=198 HDF5 containers. Parallelize over units (6) and augmentations (33).
 
