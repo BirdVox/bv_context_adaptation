@@ -22,7 +22,6 @@ n_filters = [24, 48, 48]
 kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
-regularizer = keras.regularizers.l2(0.001)
 steps_per_epoch = 1024
 epochs = 32
 validation_steps = 256
@@ -100,17 +99,20 @@ flatten = keras.layers.Flatten()
 model.add(flatten)
 dense1 = keras.layers.Dense(n_hidden_units,
     kernel_initializer="he_normal", activation="relu",
-    kernel_regularizer=regularizer)
+    kernel_regularizer=keras.regularizers.l2(0.001))
 model.add(dense1)
 
 # Layer 5
 # We put a single output instead of 43 in the original paper, because this
 # is binary classification instead of multilabel classification.
+# Furthermore, this layer contains 43 times less connections than in the
+# original paper, so we divide the l2 weight penalization by 50.
+# 0.001 / 50 = 0.00002
 drop2 = keras.layers.Dropout(0.5)
 model.add(drop2)
 dense2 = keras.layers.Dense(1,
     kernel_initializer="normal", activation="sigmoid",
-    kernel_regularizer=regularizer)
+    kernel_regularizer=keras.regularizers.l2(0.00002))
 model.add(dense2)
 
 # Compile model, print model summary.
