@@ -180,7 +180,7 @@ with open(yaml_path, "w") as yaml_file:
 
 # Train model.
 history = model.fit_generator(
-    training_streamertuples('X', 'y', cycle=True),
+    training_streamer.tuples('X', 'y', cycle=True),
     steps_per_epoch = steps_per_epoch,
     epochs = epochs,
     verbose = False,
