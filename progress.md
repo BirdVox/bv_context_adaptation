@@ -58,7 +58,7 @@ C. Deep learning
 D. Snowball on UrbanSound-8K
 1. [DONE] Augment UrbanSound-8K dataset.
 
-2. [IN PROGRESS] Compute scattering transform of augmented audio.
+2. [DONE] Compute scattering transform of augmented audio.
 
 3. Define snowball model and pescador generator.
 
