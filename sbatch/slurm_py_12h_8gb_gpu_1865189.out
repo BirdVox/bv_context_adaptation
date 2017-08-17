@@ -1,0 +1,115 @@
+
+Jupyter server is running on: gpu-30
+Job starts at: Thu Aug 17 10:32:16 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9900:localhost:9900 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9900:localhost:9900 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:32:17.412 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1865189/jupyter/notebook_cookie_secret
+[I 10:32:17.764 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:32:17.764 NotebookApp] 0 active kernels 
+[I 10:32:17.764 NotebookApp] The Jupyter Notebook is running at: http://localhost:9900/?token=e9feec572c6c751b8b01c8ce415a3d9a51188feef1bf9122
+[I 10:32:17.765 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:32:17.765 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9900/?token=e9feec572c6c751b8b01c8ce415a3d9a51188feef1bf9122
+[I 10:45:36.244 NotebookApp] 302 GET /?token=e9feec572c6c751b8b01c8ce415a3d9a51188feef1bf9122 (::1) 0.77ms
+[I 10:49:30.598 NotebookApp] Kernel started: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[W 10:49:30.786 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170817103217 (::1) 9.29ms referer=http://localhost:9900/notebooks/spl2017/notebooks/Untitled.ipynb
+[I 10:49:36.455 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+2017-08-17 10:49:55.772219: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:49:55.772430: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:49:55.772441: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 10:51:25.829 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 10:51:30.670 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 10:51:44.790558: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:51:44.790764: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:51:44.790775: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 10:53:30.711 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 10:58:46.792 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+2017-08-17 10:59:04.771315: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:59:04.771532: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:59:04.771544: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 10:59:18.141 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 10:59:30.674 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 10:59:58.747822: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:59:58.747958: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 10:59:58.747970: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:01:30.709 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:05:30.902 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:07:29.549 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:07:30.776 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:09:30.742 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:11:30.724 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:12:30.727 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:13:30.705 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 11:13:48.128557: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:13:48.128740: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:13:48.128752: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:15:20.425 NotebookApp] Kernel interrupted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:15:30.758 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:15:40.639 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:17:30.740 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 11:17:42.845660: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:17:42.845856: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:17:42.845867: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:19:30.772 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:21:30.784 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:23:30.824 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:24:43.459 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+2017-08-17 11:25:10.749071: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:25:10.749167: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:25:10.749182: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:25:30.856 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:25:46.130 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:25:51.249 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:25:52.791 NotebookApp] Kernel interrupted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:25:53.728 NotebookApp] Kernel interrupted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:25:53.936 NotebookApp] Kernel interrupted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:25:54.391 NotebookApp] Kernel interrupted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:27:30.853 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 11:28:43.392599: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:28:43.392795: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:28:43.392807: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:29:30.795 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:31:30.805 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:33:30.844 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:35:30.009 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:35:30.845 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 11:37:10.639102: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:37:10.639269: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:37:10.639280: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:37:30.911 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:39:31.283 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:41:30.927 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:43:27.232 NotebookApp] Kernel restarted: a93e16d6-f0a6-47e1-8024-b1ff8ac4b12d
+[I 11:43:30.881 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+2017-08-17 11:44:41.001803: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:44:41.001969: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-17 11:44:41.001981: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 11:45:30.968 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
+[I 11:47:31.237 NotebookApp] Saving file at /spl2017/notebooks/Untitled.ipynb
