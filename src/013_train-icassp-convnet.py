@@ -117,7 +117,7 @@ model.add(dense2)
 
 # Compile model, print model summary.
 metrics = ["accuracy"]
-model.compile(loss="binary_crossentropy", optimizer="adam", metrics=metrics)
+model.compile(loss="mse", optimizer="sgd", metrics=metrics)
 model.summary()
 
 
