@@ -86,3 +86,5 @@ F. Per-channel energy normalization (PCEN)
 3. Compute fixed PCEN of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
 4. Train SPL convnet on BirdVox-70k with augmentation on PCEN (one trial). Export 6 Keras models. Parallelize over folds (6).
+
+G. Spectral flux
