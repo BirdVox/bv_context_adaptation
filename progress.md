@@ -60,7 +60,7 @@ D. Snowball on UrbanSound-8K
 
 2. [DONE] Compute scattering transform of augmented audio.
 
-3. Define snowball model and pescador generator.
+3. [IN PROGRESS] Define snowball model and pescador generator.
 
 4. Snowball convnet: train (a), predict (b), evaluate (c).
 
