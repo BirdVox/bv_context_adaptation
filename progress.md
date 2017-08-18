@@ -56,13 +56,21 @@ C. Deep learning
 
 
 D. Snowball on UrbanSound-8K
-1. [DONE] Augment UrbanSound-8K dataset.
+1. [DONE] Find padding heuristics (repeat vs zero).
 
-2. [DONE] Compute scattering transform of augmented audio.
+2. [DONE] Augment UrbanSound-8K dataset.
 
-3. [DONE] Define snowball model and pescador generator.
+3. [DONE] Compute scattering transform of augmented audio.
 
-4. Snowball convnet: train (a), predict (b), evaluate (c).
+4. [DONE] Define snowball model and pescador generator.
+
+5. [IN PROGRESS] Train snowball convnet, one trial. Parallelize across folds (10).
+
+6. Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
+
+7. Get validation accuracy and test accuracy of snowball for one trial. 
+
+8. Train snowball convnet, 9 trials. Parallelize across trials (9) and folds (10).
 
 
 E. Cross-validated spherical k-means model
