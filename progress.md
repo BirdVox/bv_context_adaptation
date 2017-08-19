@@ -64,7 +64,7 @@ D. Snowball on UrbanSound-8K
 
 4. [DONE] Define snowball model and pescador generator.
 
-5. [IN PROGRESS] Train snowball convnet, one trial. Parallelize across folds (10).
+5. [RUNNING] Train snowball convnet, one trial. Parallelize across folds (10).
 
 6. Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
 
