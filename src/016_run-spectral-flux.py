@@ -87,3 +87,7 @@ spectralflux_dataset = out_file.create_dataset(
 
 # Loop over chunks.
 for chunk_id in range(n_chunks):
+    # Load audio excerpt.
+    chunk_start = chunk_id * chunk_length
+    chunk_stop = min(chunk_start + chunk_length, full_audio_length)
+
