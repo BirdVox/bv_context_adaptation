@@ -21,8 +21,7 @@ full_audio_dir = os.path.join(data_dir, full_audio_name)
 sample_rate = localmodule.get_sample_rate()
 args = sys.argv[1:]
 unit_str = args[0]
-hop_length = 512 # default value for logmelspec in librosa
-chunk_duration = hop_length # in seconds
+chunk_duration = 64 # in seconds
 chunk_length = chunk_duration * sample_rate
 
 
