@@ -114,7 +114,7 @@ for chunk_id in range(n_chunks):
     # hop_start is an integer because chunk_start is both a multiple
     # of sample_rate and hop_length = chunk_duration.
     hop_start = int((chunk_start*sf_sr) / (sample_rate*sf_hop_length))
-    n_hops_in_chunk = odf.shape[1]
+    n_hops_in_chunk = odf.shape[0]
     hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
     spectralflux_dataset[:, hop_start:hop_stop] = odf
 
