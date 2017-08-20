@@ -13,7 +13,7 @@ script_path = os.path.join("..", "src", script_name)
 
 # Loop over recording units.
 for unit_str in units:
-    job_name = "_".join(["006", unit_str])
+    job_name = "_".join(["016", unit_str])
     file_name = job_name + ".sbatch"
     script_list = [script_path, unit_str]
     script_path_with_args = " ".join(script_list)
