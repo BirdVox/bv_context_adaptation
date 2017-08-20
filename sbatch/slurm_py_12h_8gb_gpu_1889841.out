@@ -56,3 +56,7 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 2017-08-20 19:14:43.706215: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 [I 19:15:01.475 NotebookApp] Kernel interrupted: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
 [I 19:15:20.490 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:17:20.511 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:19:20.509 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:21:20.514 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:23:20.519 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
