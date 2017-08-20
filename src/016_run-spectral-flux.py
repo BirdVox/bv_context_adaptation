@@ -46,3 +46,11 @@ os.makedirs(full_spectralflux_dir, exist_ok=True)
 out_name = unit_str
 out_path = os.path.join(full_spectralflux_dir, out_name + ".hdf5")
 out_file = h5py.File(out_path)
+
+
+# Load GPS coordinates.
+gps_name = "_".join([dataset_name, "gps-coordinates.csv"])
+gps_path = os.path.join(data_dir, gps_name)
+gps_df = pd.read_csv(gps_path)
+gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
+
