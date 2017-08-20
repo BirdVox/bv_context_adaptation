@@ -70,7 +70,9 @@ D. Snowball on UrbanSound-8K
 
 7. Get validation accuracy and test accuracy of snowball for one trial. 
 
-8. Train snowball convnet, 9 trials. Parallelize across trials (9) and folds (10).
+8. Train snowball convnet with log compression, one fold, one trial.
+
+9. Train snowball convnet with additional features, one fold, one trial.
 
 
 E. Cross-validated spherical k-means model
@@ -97,7 +99,7 @@ F. Per-channel energy normalization (PCEN)
 
 
 G. Spectral flux
-1. [IN PROGRESS] Run spectral flux on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
+1. [RUNNING] Run spectral flux on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
 
 2. Apply spectral flux detector, with 100 thresholds, to spectral flux ODF, on 6 full night recordings. Export peak times as 6*100=600 CSV files. Parallelize over units (6) and groups of 10 thresholds (10).
 
