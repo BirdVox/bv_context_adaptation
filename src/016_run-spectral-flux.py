@@ -3,6 +3,7 @@ import h5py
 import librosa
 import numpy as np
 import os
+import pandas as pd
 import soundfile as sf
 import sys
 import time
@@ -31,6 +32,7 @@ print("Running spectral flux on " + dataset_name + ", " + unit_str + ".")
 print('h5py version: {:s}.'.format(h5py.__version__))
 print('librosa version: {:s}.'.format(librosa.__version__))
 print('numpy version: {:s}'.format(np.__version__))
+print('pandas version: {:s}'.format(pd.__version__))
 print('soundfile version: {:s}'.format(sf.__version__))
 print("")
 
