@@ -98,3 +98,6 @@ for chunk_id in range(n_chunks):
 
     # Delete last sample to compensate for padding.
     odf = odf[:-1]
+
+    # Convert to single floating-point precision.
+    odf = odf.astype('float32')
