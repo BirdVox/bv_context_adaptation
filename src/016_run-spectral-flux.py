@@ -95,3 +95,6 @@ for chunk_id in range(n_chunks):
 
     # Compute spectral flux.
     odf = librosa.onset.onset_strength(chunk_waveform)
+
+    # Delete last sample to compensate for padding.
+    odf = odf[:-1]
