@@ -71,3 +71,10 @@ gps_group = out_file.create_group("gps_coordinates")
 gps_group["latitude"] =  gps_row["Latitude"]
 gps_group["longitude"] = gps_row["Longitude"]
 
+
+# Count number of chunks.
+in_unit_path = os.path.join(full_audio_dir, unit_str + ".flac")
+full_audio_object = sf.SoundFile(in_unit_path)
+full_audio_length = len(full_audio_object)
+n_chunks = int(np.ceil(full_audio_length / chunk_length))
+
