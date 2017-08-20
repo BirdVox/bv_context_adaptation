@@ -43,7 +43,7 @@ clip_suppressor_str = "no-clip-suppressor"
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Running Old Bird onset detection functions (Thrush and Tseep) on " +
+print("Thresholding Old Bird onset detection functions (Thrush and Tseep) on " +
     dataset_name + ", " + unit_str + ".")
 print('h5py version: {:s}.'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
