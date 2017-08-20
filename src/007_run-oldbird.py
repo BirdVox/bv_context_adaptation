@@ -52,7 +52,7 @@ print('soundfile version: {:s}'.format(sf.__version__))
 print("")
 
 
-# Create HDF5 container of ODF curves
+# Create HDF5 container of ODF curves.
 full_oldbird_name = "_".join([dataset_name, "oldbird"])
 full_oldbird_dir = os.path.join(data_dir, full_oldbird_name)
 os.makedirs(full_oldbird_dir, exist_ok=True)
