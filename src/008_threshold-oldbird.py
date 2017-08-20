@@ -193,6 +193,10 @@ for threshold_id in threshold_id_range:
         csv_writer.writerow(row)
 
 
+# Close HDF5 file.
+odf_file.close()
+
+
 # Close CSV file.
 csv_file.close()
 
