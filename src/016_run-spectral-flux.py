@@ -110,6 +110,15 @@ for chunk_id in range(n_chunks):
     # Convert to single floating-point precision.
     odf = odf.astype('float32')
 
+    # Write to HDF5 dataset.
+    # hop_start is an integer because chunk_start is both a multiple
+    # of sample_rate and hop_length = chunk_duration.
+    hop_start = int((chunk_start*sf_sr) / (sample_rate*sf_hop_length))
+    n_hops_in_chunk = odf.shape[1]
+    hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
+    spectralflux_dataset[:, hop_start:hop_stop] = odf
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
