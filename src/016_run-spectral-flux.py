@@ -78,3 +78,8 @@ full_audio_object = sf.SoundFile(in_unit_path)
 full_audio_length = len(full_audio_object)
 n_chunks = int(np.ceil(full_audio_length / chunk_length))
 
+
+# Initialize dataset of onset detection function (ODF).
+dataset_size = (1, full_audio_length)
+spectralflux_dataset = out_file.create_dataset(
+    "spectral-flux_odf", dataset_size)
