@@ -71,11 +71,13 @@ gps_group["latitude"] =  gps_row["Latitude"]
 gps_group["longitude"] = gps_row["Longitude"]
 
 
-# Count number of chunks.
-in_unit_path = os.path.join(full_audio_dir, unit_str + ".flac")
-full_audio_object = sf.SoundFile(in_unit_path)
-full_audio_length = len(full_audio_object)
-n_chunks = int(np.ceil(full_audio_length / chunk_length))
+# Open full audio file as FLAC.
+recordings_name = "_".join([dataset_name, "full-audio"])
+recordings_dir = os.path.join(data_dir, recordings_name)
+recording_name = unit_str + ".flac"
+recording_path = os.path.join(recordings_dir, recording_name)
+full_audio = sf.SoundFile(recording_path)
+full_audio_length = len(full_audio)
 
 
 # Initialize dataset of onset detection function (ODF).
@@ -86,15 +88,8 @@ spectralflux_dataset = out_file.create_dataset(
 
 # Loop over chunks.
 for chunk_id in range(n_chunks):
-    # Load audio excerpt.
+    # Load audio chunk.
     chunk_start = chunk_id * chunk_length
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
-
-    # Read prefix padding.
-    pre_padding_start = max(chunk_start-chunk_padding_length, 0)
-    full_audio_object.seek(pre_padding_start)
-    pre_padding = full_audio_object.read(chunk_padding_length)
-
-    # Read chunk.
-    full_audio_object.seek(chunk_start)
-    chunk = full_audio_object.read(chunk_stop-chunk_start)
+    full_audio.seek(chunk_start)
+    chunk_waveform = full_audio.read(chunk_stop-chunk_start)
