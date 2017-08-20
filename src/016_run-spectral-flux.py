@@ -54,3 +54,9 @@ gps_path = os.path.join(data_dir, gps_name)
 gps_df = pd.read_csv(gps_path)
 gps_row = gps_df.loc[gps_df["Unit"] == unit_str].iloc[0]
 
+
+# Load UTC starting times.
+utc_name = "_".join([dataset_name, "utc-start-times.csv"])
+utc_path = os.path.join(data_dir, utc_name)
+utc_df = pd.read_csv(utc_path)
+utc_row = utc_df.loc[utc_df["Unit"] == unit_str].iloc[0]
