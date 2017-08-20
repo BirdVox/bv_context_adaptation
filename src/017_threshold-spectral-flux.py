@@ -38,6 +38,10 @@ odf = odf_file[odf_dataset_key]
 odf_length = odf.shape[1]
 
 
+# Close HDF5 file.
+odf_file.close()
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
