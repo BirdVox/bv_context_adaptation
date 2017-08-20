@@ -21,7 +21,9 @@ full_audio_dir = os.path.join(data_dir, full_audio_name)
 sample_rate = localmodule.get_sample_rate()
 args = sys.argv[1:]
 unit_str = args[0]
-chunk_duration = 64 # in seconds
+sf_hop_length = 512 # default value for melspectrogram in librosa
+sf_sr = 22050 # defaut value for sample rate in librosa
+chunk_duration = 256 # in seconds
 chunk_length = chunk_duration * sample_rate
 
 
@@ -101,3 +103,4 @@ for chunk_id in range(n_chunks):
 
     # Convert to single floating-point precision.
     odf = odf.astype('float32')
+
