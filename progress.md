@@ -97,7 +97,7 @@ F. Per-channel energy normalization (PCEN)
 
 
 G. Spectral flux
-1. Run spectral flux on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
+1. [IN PROGRESS] Run spectral flux on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
 
 2. Apply spectral flux detector, with 100 thresholds, to spectral flux ODF, on 6 full night recordings. Export peak times as 6*100=600 CSV files. Parallelize over units (6) and groups of 10 thresholds (10).
 
