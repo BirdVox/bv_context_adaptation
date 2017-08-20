@@ -38,6 +38,17 @@ odf = odf_file[odf_dataset_key]
 odf_length = odf.shape[1]
 
 
+# Create CSV header.
+csv_header = [
+    'Dataset',
+    'Unit',
+    'ODF',
+    'Threshold ID',
+    'Threshold',
+    'Time (s)',
+    'Onset ODF']
+
+
 # Close HDF5 file.
 odf_file.close()
 
