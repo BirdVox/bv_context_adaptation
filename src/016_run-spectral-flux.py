@@ -92,3 +92,6 @@ for chunk_id in range(n_chunks):
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
     full_audio.seek(chunk_start)
     chunk_waveform = full_audio.read(chunk_stop-chunk_start)
+
+    # Compute spectral flux.
+    odf = librosa.onset.onset_strength(chunk_waveform)
