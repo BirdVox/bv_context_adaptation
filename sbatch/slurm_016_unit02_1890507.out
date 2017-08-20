@@ -1,5 +1,5 @@
-2017-08-20 17:42:22.710646 Start.
-Running spectral flux on BirdVox-70k, unit01.
+2017-08-20 17:55:08.785737 Start.
+Running spectral flux on BirdVox-70k, unit02.
 h5py version: 2.6.0.
 librosa version: 0.5.1.
 numpy version: 1.13.1
@@ -15,4 +15,4 @@ Traceback (most recent call last):
     for fspace in selection.broadcast(mshape):
   File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/selections.py", line 297, in broadcast
     raise TypeError("Can't broadcast %s -> %s" % (target_shape, count))
-TypeError: Can't broadcast (5488,) -> (1, 5042)
+TypeError: Can't broadcast (6241,) -> (1, 5734)
