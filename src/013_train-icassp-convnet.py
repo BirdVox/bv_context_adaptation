@@ -104,7 +104,8 @@ model.add(dense1)
 # We put a single output instead of 43 in the original paper, because this
 # is binary classification instead of multilabel classification.
 # Furthermore, this layer contains 43 times less connections than in the
-# original paper, so we divide the l2 weight penalization by 50.
+# original paper, so we divide the l2 weight penalization by 50, which is
+# of the same order of magnitude as 43.s
 # 0.001 / 50 = 0.00002
 drop2 = keras.layers.Dropout(0.5)
 model.add(drop2)
