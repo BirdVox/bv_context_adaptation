@@ -81,6 +81,12 @@ full_audio = sf.SoundFile(recording_path)
 full_audio_length = len(full_audio)
 
 
+# Compute number of chunks and number of hops.
+n_chunks = int(np.ceil(full_audio_length / chunk_length))
+n_samples_per_hop = sf_hop_length * sample_rate / sf_sr
+n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
+
+
 # Initialize dataset of onset detection function (ODF).
 dataset_size = (1, full_audio_length)
 spectralflux_dataset = out_file.create_dataset(
