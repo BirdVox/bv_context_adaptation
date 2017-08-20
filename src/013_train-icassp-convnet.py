@@ -114,6 +114,7 @@ dense2 = keras.layers.Dense(1,
     kernel_regularizer=keras.regularizers.l2(0.00002))
 model.add(dense2)
 
+
 # Compile model, print model summary.
 metrics = ["accuracy"]
 model.compile(loss="mse", optimizer="sgd", metrics=metrics)
