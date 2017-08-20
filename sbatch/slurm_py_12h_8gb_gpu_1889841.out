@@ -37,3 +37,22 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:9550/?token=64a58a7966e4c33714b384866da1ed17d19e64e89e0c4935
+[I 19:04:56.540 NotebookApp] 302 GET /?token=64a58a7966e4c33714b384866da1ed17d19e64e89e0c4935 (::1) 0.80ms
+[W 19:05:20.028 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170820160839 (::1) 8.45ms referer=http://localhost:9550/notebooks/spl2017/notebooks/debug_013.ipynb
+[I 19:05:20.575 NotebookApp] Kernel started: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
+[I 19:07:20.503 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:09:20.477 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:10:07.192 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:10:23.221 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:10:24.463 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:12:13.497 NotebookApp] Kernel restarted: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
+[I 19:12:29.058 NotebookApp] Kernel restarted: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
+[I 19:12:39.778 NotebookApp] Kernel restarted: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
+[I 19:13:20.489 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:14:26.139 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:14:28.898 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+2017-08-20 19:14:43.705984: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-20 19:14:43.706201: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-20 19:14:43.706215: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 19:15:01.475 NotebookApp] Kernel interrupted: 6475d7b6-eddf-4f0b-ab07-7aacbff6404a
+[I 19:15:20.490 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
