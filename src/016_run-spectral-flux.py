@@ -37,3 +37,12 @@ print('numpy version: {:s}'.format(np.__version__))
 print('pandas version: {:s}'.format(pd.__version__))
 print('soundfile version: {:s}'.format(sf.__version__))
 print("")
+
+
+# Create HDF5 container of ODF curves.
+full_spectralflux_name = "_".join([dataset_name, "spectral-flux"])
+full_spectralflux_dir = os.path.join(data_dir, full_spectralflux_name)
+os.makedirs(full_spectralflux_dir, exist_ok=True)
+out_name = unit_str
+out_path = os.path.join(full_spectralflux_dir, out_name + ".hdf5")
+out_file = h5py.File(out_path)
