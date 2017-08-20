@@ -70,7 +70,9 @@ D. Snowball on UrbanSound-8K
 
 7. Get validation accuracy and test accuracy of snowball for one trial. 
 
-8. Train snowball convnet, 9 trials. Parallelize across trials (9) and folds (10).
+8. Train snowball convnet with log compression, one fold, one trial.
+
+9. Train snowball convnet with additional features, one fold, one trial.
 
 
 E. Cross-validated spherical k-means model
