@@ -91,3 +91,8 @@ for chunk_id in range(n_chunks):
     chunk_start = chunk_id * chunk_length
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
 
+    # Read prefix padding.
+    pre_padding_start = max(chunk_start-chunk_padding_length, 0)
+    full_audio_object.seek(pre_padding_start)
+    pre_padding = full_audio_object.read(chunk_padding_length)
+
