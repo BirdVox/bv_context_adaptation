@@ -96,3 +96,6 @@ for chunk_id in range(n_chunks):
     full_audio_object.seek(pre_padding_start)
     pre_padding = full_audio_object.read(chunk_padding_length)
 
+    # Read chunk.
+    full_audio_object.seek(chunk_start)
+    chunk = full_audio_object.read(chunk_stop-chunk_start)
