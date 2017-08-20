@@ -1,0 +1,71 @@
+
+Jupyter server is running on: c01-01
+Job starts at: Sun Aug 20 16:13:53 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9259:localhost:9259 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9259:localhost:9259 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 16:13:55.420 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1889894/jupyter/notebook_cookie_secret
+[I 16:13:55.763 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 16:13:55.763 NotebookApp] 0 active kernels 
+[I 16:13:55.763 NotebookApp] The Jupyter Notebook is running at: http://localhost:9259/?token=f671e060cbfd32bf3f8da5da24dc938ce7755c3f6c4368ab
+[I 16:13:55.763 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:13:55.763 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9259/?token=f671e060cbfd32bf3f8da5da24dc938ce7755c3f6c4368ab
+[I 16:14:47.583 NotebookApp] 302 GET /?token=f671e060cbfd32bf3f8da5da24dc938ce7755c3f6c4368ab (::1) 1.31ms
+[I 16:15:44.081 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 16:15:45.393 NotebookApp] Kernel started: 3716d1bc-e752-4a3f-ab21-7d4fd86d201e
+[W 16:15:45.406 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170820161355 (::1) 11.16ms referer=http://localhost:9259/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 16:17:45.370 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:19:45.376 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:21:45.383 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:23:45.382 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:43:19.848 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:45:24.108 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:48:39.057 NotebookApp] Kernel restarted: 3716d1bc-e752-4a3f-ab21-7d4fd86d201e
+[I 16:49:56.294 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:50:41.838 NotebookApp] Kernel restarted: 3716d1bc-e752-4a3f-ab21-7d4fd86d201e
+[I 16:51:56.304 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:53:56.301 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:55:02.944 NotebookApp] Kernel restarted: 3716d1bc-e752-4a3f-ab21-7d4fd86d201e
+[I 16:55:56.304 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:56:02.092 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:57:56.308 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 16:59:56.311 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:01:56.315 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:05:58.744 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:07:59.260 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:09:07.091 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:13:40.230 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:13:42.875 NotebookApp] Kernel restarted: 3716d1bc-e752-4a3f-ab21-7d4fd86d201e
+[I 17:14:11.074 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:16:11.075 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:22:11.084 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:24:11.098 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:26:45.804 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
+[I 17:28:11.096 NotebookApp] Saving file at /spl2017/notebooks/run-spectral-flux.ipynb
