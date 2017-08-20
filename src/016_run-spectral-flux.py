@@ -88,7 +88,7 @@ n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
 
 
 # Initialize dataset of onset detection function (ODF).
-dataset_size = (1, full_audio_length)
+dataset_size = (1, n_hops)
 spectralflux_dataset = out_file.create_dataset(
     "spectral-flux_odf", dataset_size)
 
