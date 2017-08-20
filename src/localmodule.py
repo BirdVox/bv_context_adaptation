@@ -132,7 +132,7 @@ def get_units():
     # TODO: assert that unit names do not contain underscores.
 
 
-def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
+def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
     # Parse augmentation kind string (aug_kind_str).
     if aug_kind_str == "none":
         augs = ["original"]
@@ -172,7 +172,7 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, k, lam, batch_size):
 
     # Multiplex streamers together.
     mux = pescador.Mux(streams,
-        k=k, lam=lam, with_replacement=True, revive=True)
+        k=len(streams), lam=None, with_replacement=True, revive=True)
 
     # Create buffered streamer with specified batch size.
     buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
