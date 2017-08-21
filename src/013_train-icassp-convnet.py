@@ -91,10 +91,10 @@ conv3 = keras.layers.Convolution2D(n_filters[2], kernel_size,
 model.add(conv3)
 
 # Layer 4
-drop1 = keras.layers.Dropout(0.5)
-model.add(drop1)
 flatten = keras.layers.Flatten()
 model.add(flatten)
+drop1 = keras.layers.Dropout(0.5)
+model.add(drop1)
 dense1 = keras.layers.Dense(n_hidden_units,
     kernel_initializer="he_normal", activation="relu",
     kernel_regularizer=keras.regularizers.l2(0.001))
