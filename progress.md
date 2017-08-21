@@ -66,7 +66,7 @@ D. Snowball on UrbanSound-8K
 
 5. [RUNNING] Train snowball convnet, one trial. Parallelize across folds (10).
 
-6. Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
+6. [IN PROGRESS] Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
 
 7. Get validation accuracy and test accuracy of snowball for one trial. 
 
