@@ -40,7 +40,7 @@ C. Deep learning
 
 6. [DONE] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
-7. [IN PROGRESS] Train ICASSP convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
+7. [RUNNING] Train ICASSP convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
 
 8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as HDF5 containers. Parallelize over folds (6) and prediction unit (3).
 
