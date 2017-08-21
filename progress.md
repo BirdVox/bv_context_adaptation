@@ -64,11 +64,11 @@ D. Snowball on UrbanSound-8K
 
 4. [DONE] Define snowball model and pescador generator.
 
-5. [RUNNING] Train snowball convnet, one trial. Parallelize across folds (10).
+5. [DONE] Train snowball convnet, one trial. Parallelize across folds (10).
 
-6. [IN PROGRESS] Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
+6. [DONE] Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
 
-7. Get validation accuracy, validation MRR, test accuracy, and test MRR, of snowball for one trial. 
+7. [IN PROGRESS] Get validation accuracy, validation MRR, test accuracy, and test MRR, of snowball for one trial. 
 
 8. Train snowball convnet with log compression, one fold, one trial.
 
