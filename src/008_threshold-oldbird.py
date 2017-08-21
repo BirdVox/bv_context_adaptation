@@ -192,13 +192,12 @@ for threshold_id in threshold_id_range:
         row = [clip_time, clip_duration, onset_odf, offset_odf]
         csv_writer.writerow(row)
 
+    # Close CSV file.
+    csv_file.close()
+
 
 # Close HDF5 file.
 odf_file.close()
-
-
-# Close CSV file.
-csv_file.close()
 
 
 # Print elapsed time.
