@@ -68,7 +68,7 @@ D. Snowball on UrbanSound-8K
 
 6. [IN PROGRESS] Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
 
-7. Get validation accuracy and test accuracy of snowball for one trial. 
+7. Get validation accuracy, validation MRR, test accuracy, and test MRR, of snowball for one trial. 
 
 8. Train snowball convnet with log compression, one fold, one trial.
 
