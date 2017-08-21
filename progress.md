@@ -68,11 +68,7 @@ D. Snowball on UrbanSound-8K
 
 6. [DONE] Compute snowball predictions. Parallelize across test folds (10) and prediction folds (2).
 
-7. [IN PROGRESS] Get validation accuracy, validation MRR, test accuracy, and test MRR, of snowball for one trial. 
-
-8. Train snowball convnet with log compression, one fold, one trial.
-
-9. Train snowball convnet with additional features, one fold, one trial.
+7. [DONE] Get validation accuracy, validation MRR, test accuracy, and test MRR, of snowball for one trial.
 
 
 E. Cross-validated spherical k-means model
