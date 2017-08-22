@@ -63,7 +63,7 @@ print("")
 # NB: the original implementation of Justin Salamon in ICASSP 2017 relies on
 # glorot_uniform initialization for all layers, and the optimizer is a
 # stochastic gradient descent (SGD) with a fixed learning rate of 0.1.
-# Instead, we use a he_uniform initialization for the layers followed
+# Instead, we use a he_normal initialization for the layers followed
 # by rectified linear units (see He ICCV 2015), and replace the SGD by
 # the Adam adaptive stochastic optimizer (see Kingma ICLR 2014).
 model = keras.models.Sequential()
