@@ -37,3 +37,62 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8824/?token=affda05fb904cdeec1b9312e9e7d8f7fe0bae1d6d0fff030
+[I 19:14:09.062 NotebookApp] 302 GET /?token=affda05fb904cdeec1b9312e9e7d8f7fe0bae1d6d0fff030 (::1) 0.82ms
+[W 19:14:21.693 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170821191135 (::1) 8.39ms referer=http://localhost:8824/notebooks/spl2017/notebooks/debug_013.ipynb
+[I 19:14:22.156 NotebookApp] Kernel started: 62fff794-0f3d-4da6-a048-206ea1bd4a9b
+2017-08-21 19:15:00.059254: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 19:15:00.059503: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 19:15:00.059517: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 19:16:22.074 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:16:26.499 NotebookApp] Kernel interrupted: 62fff794-0f3d-4da6-a048-206ea1bd4a9b
+[I 19:18:22.100 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:20:22.098 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:22:22.099 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:24:22.192 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:26:22.091 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:28:22.118 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:30:22.119 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:31:13.892 NotebookApp] Kernel restarted: 62fff794-0f3d-4da6-a048-206ea1bd4a9b
+2017-08-21 19:31:48.697262: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 19:31:48.697459: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 19:31:48.697474: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 19:32:22.118 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:34:22.140 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:36:22.289 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:38:22.154 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:46:43.780 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 19:59:29.608 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 19:59:31.047 NotebookApp] Kernel started: dca40822-6c03-492c-a41a-16a1dfa8feee
+[W 19:59:31.091 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170821191135 (::1) 2.22ms referer=http://localhost:8824/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 20:01:42.764 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:02:22.014 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:04:16.729 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:05:30.964 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:09:30.988 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:11:31.042 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:13:31.058 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[W 20:23:16.014 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170821191135 (::1) 2.24ms referer=http://localhost:8824/notebooks/spl2017/notebooks/debug_013.ipynb
+[I 20:25:15.968 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 20:25:54.858 NotebookApp] Kernel interrupted: 62fff794-0f3d-4da6-a048-206ea1bd4a9b
+[I 20:26:16.339 NotebookApp] Kernel restarted: 62fff794-0f3d-4da6-a048-206ea1bd4a9b
+2017-08-21 20:27:12.674133: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 20:27:12.674328: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-21 20:27:12.674343: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 20:27:15.935 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 20:29:16.022 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 20:31:16.020 NotebookApp] Saving file at /spl2017/notebooks/debug_013.ipynb
+[I 20:37:31.086 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:41:31.165 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:43:31.108 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:45:31.114 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:47:31.184 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:57:31.204 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:58:44.056 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 20:59:31.161 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 21:00:03.155 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 21:00:21.985 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[I 21:01:28.405 NotebookApp] Kernel restarted: dca40822-6c03-492c-a41a-16a1dfa8feee
+[I 21:03:31.181 NotebookApp] Saving file at /spl2017/notebooks/threshold-spectral-flux.ipynb
+[W 21:18:47.385 NotebookApp] WebSocket ping timeout after 119889 ms.
+[W 21:18:59.700 NotebookApp] WebSocket ping timeout after 119917 ms.
+slurmstepd: error: *** JOB 1908973 ON gpu-29 CANCELLED AT 2017-08-22T07:11:51 DUE TO TIME LIMIT ***
