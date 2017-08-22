@@ -56,6 +56,16 @@ odf = odf_file[odf_dataset_key]
 odf_length = odf.shape[1]
 
 
+# Create directory for Old Bird in models_dir.
+model_dir = os.path.join(models_dir, "spectral-flux")
+os.makedirs(model_dir, exist_ok=True)
+out_unit_dir = os.path.join(model_dir, unit_str)
+os.makedirs(out_unit_dir, exist_ok=True)
+predictions_name = "predictions"
+predictions_dir = os.path.join(out_unit_dir, predictions_name)
+os.makedirs(predictions_dir, exist_ok=True)
+
+
 # Create CSV header.
 csv_header = [
     'Dataset',
