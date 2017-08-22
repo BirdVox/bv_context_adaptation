@@ -30,6 +30,17 @@ print('numpy version: {:s}'.format(np.__version__))
 print("")
 
 
+# Find global minimum and maximum.
+unit_maxima = []
+for unit_str in units:
+    aux_odf_path = os.path.join(sf_dir, unit_str + ".hdf5")
+    with h5py.File(aux_odf_path, "r") as aux_odf_file:
+        aux_odf = aux_odf_file[odf_dataset_key]
+        unit_maximum = np.max(aux_odf)
+        unit_maxima.append(unit_maximum)
+max_threshold = max(unit_maxima)
+
+
 # Load onset detection function.
 sf_name = "_".join([dataset_name, "spectral-flux"])
 sf_dir = os.path.join(data_dir, sf_name)
