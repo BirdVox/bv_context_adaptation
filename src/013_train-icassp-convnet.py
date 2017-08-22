@@ -66,39 +66,31 @@ print("")
 # Instead, we use a he_normal initialization for the layers followed
 # by rectified linear units (see He ICCV 2015), and replace the SGD by
 # the Adam adaptive stochastic optimizer (see Kingma ICLR 2014).
-model = keras.models.Sequential()
+
+# Input
+inputs = keras.layers.Input(shape=(128, n_input_hops, 1))
 
 # Layer 1
-bn = keras.layers.normalization.BatchNormalization(
-    input_shape=(128, n_input_hops, 1))
-model.add(bn)
+bn = keras.layers.normalization.BatchNormalization()(inputs)
 conv1 = keras.layers.Convolution2D(n_filters[0], kernel_size,
-    padding="same", kernel_initializer="he_normal", activation="relu")
-model.add(conv1)
-pool1 = keras.layers.MaxPooling2D(pool_size=pool_size)
-model.add(pool1)
+    padding="same", kernel_initializer="he_normal")(bn)
+pool1 = keras.layers.MaxPooling2D(pool_size=pool_size)(conv1)
 
 # Layer 2
 conv2 = keras.layers.Convolution2D(n_filters[1], kernel_size,
-    padding="same", kernel_initializer="he_normal", activation="relu")
-model.add(conv2)
-pool2 = keras.layers.MaxPooling2D(pool_size=pool_size)
-model.add(pool2)
+    padding="same", kernel_initializer="he_normal", activation="relu")(pool1)
+pool2 = keras.layers.MaxPooling2D(pool_size=pool_size)(conv2)
 
 # Layer 3
 conv3 = keras.layers.Convolution2D(n_filters[2], kernel_size,
-    padding="same", kernel_initializer="he_normal", activation="relu")
-model.add(conv3)
+    padding="same", kernel_initializer="he_normal", activation="relu")(pool2)
 
 # Layer 4
-flatten = keras.layers.Flatten()
-model.add(flatten)
-drop1 = keras.layers.Dropout(0.5)
-model.add(drop1)
+flatten = keras.layers.Flatten()(conv3)
+drop1 = keras.layers.Dropout(0.5)(flatten)
 dense1 = keras.layers.Dense(n_hidden_units,
     kernel_initializer="he_normal", activation="relu",
-    kernel_regularizer=keras.regularizers.l2(0.001))
-model.add(dense1)
+    kernel_regularizer=keras.regularizers.l2(0.001))(drop1)
 
 # Layer 5
 # We put a single output instead of 43 in the original paper, because this
@@ -107,17 +99,16 @@ model.add(dense1)
 # original paper, so we divide the l2 weight penalization by 50, which is
 # of the same order of magnitude as 43.
 # 0.001 / 50 = 0.00002
-drop2 = keras.layers.Dropout(0.5)
-model.add(drop2)
+drop2 = keras.layers.Dropout(0.5)(dense1)
 dense2 = keras.layers.Dense(1,
     kernel_initializer="normal", activation="sigmoid",
-    kernel_regularizer=keras.regularizers.l2(0.00002))
-model.add(dense2)
+    kernel_regularizer=keras.regularizers.l2(0.00002))(drop2)
 
 
 # Compile model, print model summary.
-metrics = ["accuracy"]
-model.compile(loss="binary_crossentropy", optimizer="adam", metrics=metrics)
+model = keras.models.Model(inputs=inputs, outputs=dense2)
+model.compile(loss="binary_crossentropy",
+    optimizer="adam", metrics=["accuracy"])
 model.summary()
 
 
