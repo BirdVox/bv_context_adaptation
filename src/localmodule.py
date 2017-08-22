@@ -137,9 +137,9 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
     if aug_kind_str == "none":
         augs = ["original"]
     elif aug_kind_str == "pitch":
-        augs == ["original", "pitch"]
+        augs = ["original", "pitch"]
     elif aug_kind_str == "stretch":
-        augs == ["original", "stretch"]
+        augs = ["original", "stretch"]
     else:
         noise_augs = ["noise-" + unit_str for unit_str in fold_units]
         if aug_kind_str == "all":
