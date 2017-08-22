@@ -29,7 +29,7 @@ print("")
 
 # Load onset detection function.
 sf_name = "_".join([dataset_name, "spectral-flux"])
-sf_dir = os.path.join(data_dir, oldbird_name)
+sf_dir = os.path.join(data_dir, sf_name)
 odf_path = os.path.join(oldbird_dir, unit_str + ".hdf5")
 odf_file = h5py.File(odf_path, "r")
 odf_dataset_key = "spectral-flux_odf"
