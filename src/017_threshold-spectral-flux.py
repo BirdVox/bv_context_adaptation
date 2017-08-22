@@ -42,6 +42,10 @@ max_threshold = max(unit_maxima)
 min_threshold = 0.5 * max_threshold
 
 
+# Define array of thresholds.
+thresholds = np.linspace(min_threshold, max_threshold, n_thresholds)
+
+
 # Load onset detection function.
 sf_name = "_".join([dataset_name, "spectral-flux"])
 sf_dir = os.path.join(data_dir, sf_name)
