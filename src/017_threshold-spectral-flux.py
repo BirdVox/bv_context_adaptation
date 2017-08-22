@@ -32,8 +32,8 @@ print("")
 
 # Find global minimum and maximum.
 unit_maxima = []
-for unit_str in units:
-    aux_odf_path = os.path.join(sf_dir, unit_str + ".hdf5")
+for aux_unit_str in units:
+    aux_odf_path = os.path.join(sf_dir, aux_unit_str + ".hdf5")
     with h5py.File(aux_odf_path, "r") as aux_odf_file:
         aux_odf = aux_odf_file[odf_dataset_key]
         unit_maximum = np.max(aux_odf)
