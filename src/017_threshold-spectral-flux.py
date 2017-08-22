@@ -16,7 +16,6 @@ dataset_name = localmodule.get_dataset_name()
 models_dir = localmodule.get_models_dir()
 args = sys.argv[1:]
 unit_str = args[0]
-odf_str = args[1]
 
 
 # Print header.
