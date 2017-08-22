@@ -39,6 +39,7 @@ for unit_str in units:
         unit_maximum = np.max(aux_odf)
         unit_maxima.append(unit_maximum)
 max_threshold = max(unit_maxima)
+min_threshold = 0.5 * max_threshold
 
 
 # Load onset detection function.
