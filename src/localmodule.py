@@ -163,11 +163,16 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
             n_instances = aug_dict[aug_str]
             instances = ["-".join([aug_str, str(instance_id)])
                 for instance_id in range(n_instances)]
+        if aug_str[:5] == "noise":
+            bias = np.float32(-17.0)
+        else:
+            bias = np.float32(0.0)
         for instanced_aug_str in instances:
             for unit_str in fold_units:
                 lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
                 lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
-                stream = pescador.Streamer(yield_logmelspec, lms_path, n_hops)
+                stream = pescador.Streamer(yield_logmelspec,
+                    lms_path, n_hops, bias)
                 streams.append(stream)
 
     # Multiplex streamers together.
@@ -224,6 +229,9 @@ def yield_logmelspec(lms_path, n_hops):
 
             # Add trailing singleton dimension for Keras interoperability.
             X = X[:, :, np.newaxis]
+
+            # Apply bias
+            X = X + bias
 
             # Retrieve label y from key name.
             y = np.array([np.float32(key.split("_")[3])])
