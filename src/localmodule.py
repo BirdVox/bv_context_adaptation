@@ -204,7 +204,7 @@ def rsync():
     os.command(command_str)
 
 
-def yield_logmelspec(lms_path, n_hops):
+def yield_logmelspec(lms_path, n_hops, bias):
     # Open HDF5 container.
     with h5py.File(lms_path, "r") as lms_container:
         # Open HDF5 group corresponding to log-mel-spectrograms (lms).
