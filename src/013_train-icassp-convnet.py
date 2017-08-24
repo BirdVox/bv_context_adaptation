@@ -87,10 +87,9 @@ conv3 = keras.layers.Convolution2D(n_filters[2], kernel_size,
 
 # Layer 4
 flatten = keras.layers.Flatten()(conv3)
-drop1 = keras.layers.Dropout(0.5)(flatten)
 dense1 = keras.layers.Dense(n_hidden_units,
     kernel_initializer="he_normal", activation="relu",
-    kernel_regularizer=keras.regularizers.l2(0.001))(drop1)
+    kernel_regularizer=keras.regularizers.l2(0.001))(flatten)
 
 # Layer 5
 # We put a single output instead of 43 in the original paper, because this
@@ -99,10 +98,9 @@ dense1 = keras.layers.Dense(n_hidden_units,
 # original paper, so we divide the l2 weight penalization by 50, which is
 # of the same order of magnitude as 43.
 # 0.001 / 50 = 0.00002
-drop2 = keras.layers.Dropout(0.5)(dense1)
 dense2 = keras.layers.Dense(1,
     kernel_initializer="normal", activation="sigmoid",
-    kernel_regularizer=keras.regularizers.l2(0.00002))(drop2)
+    kernel_regularizer=keras.regularizers.l2(0.00002))(dense1)
 
 
 # Compile model, print model summary.
