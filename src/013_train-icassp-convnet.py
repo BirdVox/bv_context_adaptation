@@ -146,7 +146,9 @@ history_name = "_".join(
 history_path = os.path.join(trial_dir, history_name + ".csv")
 with open(history_path, 'w') as csv_file:
     csv_writer = csv.writer(csv_file)
-    header = ["Epoch", "Local time", "Training loss", "Training accuracy (%)",
+    header = [
+        "Epoch", "Local time",
+        "Training loss", "Training accuracy (%)",
         "Validation loss", "Validation accuracy (%)"]
     csv_writer.writerow(header)
 def write_row(history_path, epoch, logs):
