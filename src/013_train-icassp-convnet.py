@@ -66,6 +66,8 @@ print("")
 # Instead, we use a he_normal initialization for the layers followed
 # by rectified linear units (see He ICCV 2015), and replace the SGD by
 # the Adam adaptive stochastic optimizer (see Kingma ICLR 2014).
+# Moreover, we disable dropout because we found that it consistently prevented
+# the model to train at all.
 
 # Input
 inputs = keras.layers.Input(shape=(128, n_input_hops, 1))
