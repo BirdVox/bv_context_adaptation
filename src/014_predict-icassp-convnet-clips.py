@@ -128,12 +128,9 @@ for key in keys:
     ground_truth_str = key_split[3]
     aug_str = key_split[4]
     predicted_probability_str = "{:.16f}".format(predicted_probability)
-    row_df = pd.DataFrame(
-        [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
-         freq_str, aug_str, key, ground_truth_str, predicted_probability_str],
-        columns=df_columns,
-        ignore_index=True)
-    df.append(row_df)
+    row = [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
+         freq_str, aug_str, key, ground_truth_str, predicted_probability_str]
+    csv_writer.writerow(row)
 
 
 # Close HDF5 containers.
