@@ -107,7 +107,7 @@ for key in keys:
     X = X[:, first_col:last_col]
 
     # Add trailing singleton dimension for Keras interoperability.
-    X = X[:, :, np.newaxis]
+    X = X[np.newaxis, :, :, np.newaxis]
 
     # Predict.
     predicted_probability = model.predict_proba(X)
