@@ -88,11 +88,11 @@ clip_predictions_name = "_".join([
 keys = sorted(list(lms_group.keys()))
 
 
-# Initialize Pandas DataFrame of predictions.
-df_columns = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
+# Create CSV header.
+csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
     "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
     "Predicted probability"]
-df = pd.DataFrame(columns=df_columns)
+csv_writer.writerow(csv_header)
 
 
 # Loop over keys.
