@@ -16,4 +16,4 @@ module load cudnn/8.0v5.1
 # The second argument is the name of the test unit.
 # The third argument is name of trial.
 # The fourth argument is the name of the prediction unit.
-python ../src/014_predict-icassp-convnet.py all unit05 trial-6 unit03
+python ../src/014_predict-icassp-convnet-clips.py all unit05 trial-6 unit03
