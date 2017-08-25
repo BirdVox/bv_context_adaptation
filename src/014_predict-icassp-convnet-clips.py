@@ -88,6 +88,15 @@ clip_predictions_name = "_".join([
 keys = sorted(list(lms_group.keys()))
 
 
+# Create CSV file.
+prediction_name = "_".join([dataset_name, model_name,
+    "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
+    "clip-predictions")
+prediction_path = os.path.join(trial_dir, prediction_name + ".csv")
+csv_file = open(predictions_path, 'w')
+csv_writer = csv.writer(csv_file, delimiter=',')
+
+
 # Create CSV header.
 csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
     "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
