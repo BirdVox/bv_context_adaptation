@@ -50,9 +50,9 @@ C. Deep learning
 
 11. For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set.
 
-12. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
+12. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
-13. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
+13. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
 
 
 D. Snowball on UrbanSound-8K
