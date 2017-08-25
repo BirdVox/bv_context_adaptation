@@ -1,0 +1,82 @@
+2017-08-25 01:44:19.953910: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 01:44:19.954165: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 01:44:19.954176: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 01:44:19.954180: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 01:44:19.954184: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-08-25 01:44:18.997076 Start.
+Training Salamon's ICASSP 2017 convnet on BirdVox-70k. 
+Training set: unit05, unit07, unit10.
+Validation set: unit01, unit02.
+Test set: unit03.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+pandas version: 0.20.3
+pescador version: 1.0.0
+tensorflow version: 1.2.1
+
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 128, 104, 1)       0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 128, 104, 1)       4         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 128, 104, 24)      624       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 64, 26, 24)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 64, 26, 48)        28848     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 32, 6, 48)         0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 32, 6, 48)         57648     
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 9216)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                589888    
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 65        
+=================================================================
+Total params: 677,077
+Trainable params: 677,075
+Non-trainable params: 2
+_________________________________________________________________
+         acc      loss   val_acc  val_loss
+0   0.829224  0.777281  0.497314  2.864703
+1   0.935547  0.209264  0.501221  3.017725
+2   0.958496  0.158321  0.502197  1.466713
+3   0.964966  0.142881  0.493286  2.268415
+4   0.972290  0.113082  0.500122  2.163163
+5   0.973633  0.120089  0.499878  2.008136
+6   0.980469  0.088264  0.489380  3.134680
+7   0.976196  0.095288  0.508423  1.738324
+8   0.981201  0.081222  0.492920  8.178567
+9   0.976440  0.103433  0.541260  1.583320
+10  0.982544  0.069426  0.516235  2.702982
+11  0.982422  0.074457  0.520630  2.870134
+12  0.988403  0.054176  0.566895  1.408506
+13  0.983765  0.083326  0.635742  1.085965
+14  0.981934  0.083628  0.559082  2.392442
+15  0.985474  0.074832  0.554443  1.748640
+16  0.985107  0.064168  0.573486  1.564662
+17  0.986450  0.065334  0.553345  2.792723
+18  0.986938  0.065180  0.611816  1.609506
+19  0.987671  0.058896  0.593140  1.149207
+20  0.987915  0.060040  0.655762  0.696355
+21  0.986572  0.060119  0.629517  0.689610
+22  0.984741  0.076614  0.520508  1.650714
+23  0.989624  0.055468  0.577881  0.880925
+24  0.954346  0.210621  0.536255  3.010202
+25  0.968750  0.126587  0.649414  0.857213
+26  0.988037  0.069725  0.536133  1.863532
+27  0.988892  0.065475  0.568481  0.780067
+28  0.987427  0.071820  0.577271  2.137948
+29  0.987427  0.065358  0.593750  0.829590
+30  0.989380  0.053596  0.569946  1.324778
+31  0.990601  0.047401  0.638184  1.155493
+
+2017-08-25 05:03:04.277565 Finish.
+Total elapsed time: 03:18:46.28.
