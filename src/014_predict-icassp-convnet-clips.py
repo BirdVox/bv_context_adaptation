@@ -110,7 +110,7 @@ for key in keys:
     X = X[np.newaxis, :, :, np.newaxis]
 
     # Predict.
-    predicted_probability = model.predict_proba(X)
+    predicted_probability = model.predict(X)[0, 0]
 
     # Store prediction as DataFrame row.
     key_split = key.split("_")
