@@ -41,7 +41,7 @@ for aug_kind_str in aug_kinds:
                 predict_units = validation_units + [test_unit_str]
 
                 # Loop over prediction units.
-                for predict_unit_str in units:
+                for predict_unit_str in predict_units:
                     # Define job name.
                     job_name = "_".join([
                         "014",
