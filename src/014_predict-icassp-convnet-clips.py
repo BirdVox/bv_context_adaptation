@@ -66,8 +66,7 @@ model = keras.models.load_model(network_path)
 
 # Open logmelspec container with h5py.
 aug_str = "original"
-logmelspec_dir = os.path.join(data_dir,
-    "_".join([dataset_name, "full-logmelspec"]))
+logmelspec_dir = os.path.join(data_dir, "_".join([dataset_name, "logmelspec"]))
 original_logmelspec_dir = os.path.join(logmelspec_dir, aug_str)
 hdf5_name = "_".join([dataset_name, aug_str, predict_unit_str])
 hdf5_path = os.path.join(original_logmelspec_dir, hdf5_name + ".hdf5")
