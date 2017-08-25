@@ -46,7 +46,7 @@ for aug_kind_str in aug_kinds:
                     job_name = "_".join([
                         "014",
                         "aug-" + aug_kind_str,
-                        "test-" + unit_str,
+                        "test-" + test_unit_str,
                         "trial-" + trial_str,
                         "predict-" + predict_unit_str])
                     sbatch_str = "sbatch " + job_name + ".sbatch"
