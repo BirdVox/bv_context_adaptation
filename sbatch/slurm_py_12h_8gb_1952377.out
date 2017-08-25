@@ -1,0 +1,101 @@
+
+Jupyter server is running on: c17-01
+Job starts at: Fri Aug 25 08:57:06 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7385:localhost:7385 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7385:localhost:7385 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 08:57:08.857 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1952377/jupyter/notebook_cookie_secret
+[I 08:57:09.593 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 08:57:09.593 NotebookApp] 0 active kernels 
+[I 08:57:09.593 NotebookApp] The Jupyter Notebook is running at: http://localhost:7385/?token=99f5017f57c97b53e7e7e4b95bf40acd84003ff72715f60d
+[I 08:57:09.593 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:57:09.594 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7385/?token=99f5017f57c97b53e7e7e4b95bf40acd84003ff72715f60d
+[I 08:57:48.404 NotebookApp] 302 GET /?token=99f5017f57c97b53e7e7e4b95bf40acd84003ff72715f60d (::1) 1.20ms
+[I 08:58:04.872 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 08:58:06.504 NotebookApp] Kernel started: d74c4618-f230-4336-8834-22180b912b52
+[W 08:58:06.531 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170825085708 (::1) 23.65ms referer=http://localhost:7385/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 08:59:57.344 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+[I 09:00:06.298 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:02:06.302 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:04:06.389 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:04:26.874 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+2017-08-25 09:04:41.302457: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:04:41.302656: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:04:41.302665: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:04:41.302670: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:04:41.302674: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:05:30.293 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:08:06.314 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:10:06.327 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:12:05.966 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:14:06.361 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:16:06.410 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:18:06.370 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:20:06.383 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:21:59.782 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:31:05.731 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+2017-08-25 09:31:19.107942: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:31:19.108123: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:31:19.108131: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:31:19.108135: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:31:19.108140: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:31:57.753 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+[I 09:32:06.390 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:32:09.966 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:32:10.250 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+2017-08-25 09:32:33.495366: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:32:33.495589: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:32:33.495597: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:32:33.495602: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:32:33.495606: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:32:52.105 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:33:02.479 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+2017-08-25 09:33:15.014624: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:33:15.014815: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:33:15.014823: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:33:15.014828: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:33:15.014835: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:34:06.408 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:35:23.665 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+2017-08-25 09:35:45.922394: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:35:45.922593: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:35:45.922602: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:35:45.922606: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:35:45.922610: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:36:06.416 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:38:06.423 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:41:12.137 NotebookApp] Kernel restarted: d74c4618-f230-4336-8834-22180b912b52
+2017-08-25 09:41:26.627612: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:41:26.627801: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:41:26.627809: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:41:26.627813: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-25 09:41:26.627817: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 09:42:06.421 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 09:44:06.449 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
