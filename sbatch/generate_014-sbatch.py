@@ -11,7 +11,7 @@ aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 folds = localmodule.fold_units()
 units = localmodule.get_units()
 n_trials = 10
-script_name = "014_predict-icassp-convnet.py"
+script_name = "014_predict-icassp-convnet-clips.py"
 script_path = os.path.join("..", "src", script_name)
 
 
