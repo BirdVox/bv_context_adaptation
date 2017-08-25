@@ -27,7 +27,7 @@ B. Old Bird
 7. [DONE] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 6 CSV files, 3 without suppressor, 3 with suppressor.
 
 
-C. Deep learning
+C. ICASSP model
 1. [DONE] Generate BirdVox-70k dataset. Parallelize over units (6).
 
 2. [DONE] Generate JAMS metadata. Parallelize over units (6).
@@ -42,7 +42,7 @@ C. Deep learning
 
 7. [DONE] Train ICASSP convnet on BirdVox-70k with augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
-8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files. Parallelize over folds (6), trials (10), and prediction units (3).
+8. [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files. Parallelize over folds (6), trials (10), and prediction units (3).
 
 9. For every fold unit (6), every mode (validation and test), compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds between 0.0 and 1.0. Parallelize over folds (6) and prediction unit (3).
 
@@ -53,6 +53,8 @@ C. Deep learning
 12. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
 13. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
+
+14. 
 
 
 D. Snowball on UrbanSound-8K
