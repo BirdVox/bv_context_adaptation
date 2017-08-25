@@ -134,7 +134,7 @@ for key in keys:
 
 
 # Close HDF5 containers.
-hdf5_file.close()
+lms_container.close()
 
 
 # Close CSV file.
