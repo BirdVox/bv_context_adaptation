@@ -1,0 +1,25 @@
+Using TensorFlow backend.
+2017-08-25 11:41:32.827718 Start.
+Using Salamon's ICASSP 2017 convnet for binary classigification in BirdVox-70k. 
+Training set: unit07, unit10, unit01.
+Validation set: unit02, unit03.
+Test set: unit05.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../src/014_predict-icassp-convnet-clips.py", line 64, in <module>
+    model = keras.models.load_model(network_path)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/models.py", line 227, in load_model
+    with h5py.File(filepath, mode='r') as f:
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 272, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 92, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2853)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2811)
+  File "h5py/h5f.pyx", line 76, in h5py.h5f.open (/tmp/pip-tnf92dft-build/h5py/h5f.c:2099)
+OSError: Unable to open file (Unable to open file: name = '/scratch/vl1019/spl2017_models/icassp-convnet_aug-all/unit05/trial-5/birdvox-70k_icassp-convnet_aug-all_unit05_trial-5_network.hdf5', errno = 2, error message = 'no such file or directory', flags = 0, o_flags = 0)
