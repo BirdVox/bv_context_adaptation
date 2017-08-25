@@ -52,7 +52,7 @@ C. Deep learning
 
 12. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
 
-13. For every fold (6), every prediction unit in validation set and test set (3), export full night predictions as HDF5 containers.
+13. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
 
 D. Snowball on UrbanSound-8K
