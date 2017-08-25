@@ -40,11 +40,11 @@ C. Deep learning
 
 6. [DONE] Compute log-mel-spectrograms of full night, store into 6 HDF5 containers. Parallelize over units (6).
 
-7. [RUNNING] Train ICASSP convnet on BirdVox-70k with augmentation (one trial). Export 6 Keras models. Parallelize over folds (6).
+7. [DONE] Train ICASSP convnet on BirdVox-70k with augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
-8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as HDF5 containers. Parallelize over folds (6) and prediction unit (3).
+8. [IN PROGRESS] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files. Parallelize over folds (6), trials (10), and prediction units (3).
 
-9. For every fold unit (6), every prediction unit in validation set and test set (3), compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds between 0.0 and 1.0. Parallelize over folds (6) and prediction unit (3).
+9. For every fold unit (6), every mode (validation and test), compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds between 0.0 and 1.0. Parallelize over folds (6) and prediction unit (3).
 
 10. For every fold (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
 
