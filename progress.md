@@ -52,7 +52,9 @@ C. ICASSP model
 
 12. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
-13. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
+13.  [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files without data augmentation. Parallelize over folds (6), trials (10), and prediction units (3).
+
+14. Make a notebook displaying the quantiles of accuracy. Compute AUC and AUPRC.
 
 14. 
 
