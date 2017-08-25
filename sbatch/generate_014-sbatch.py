@@ -65,5 +65,5 @@ for aug_kind_str in aug_kinds:
                     f.write("# The first argument is the kind of augmentation.\n")
                     f.write("# The second argument is the name of the test unit.\n")
                     f.write("# The third argument is name of trial.\n")
-                    f.write("# The second argument is the name of the prediction unit.\n")
+                    f.write("# The fourth argument is the name of the prediction unit.\n")
                     f.write("python " + script_path_with_args)
