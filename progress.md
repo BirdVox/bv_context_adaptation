@@ -44,7 +44,7 @@ C. ICASSP model
 
 8. [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files. Parallelize over folds (6), trials (10), and prediction units (3).
 
-9. For every fold unit (6), every mode (validation and test), compute metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) for 100 different thresholds between 0.0 and 1.0. Parallelize over folds (6) and prediction unit (3).
+9. [DONE] For every fold unit (6), every mode (validation and test), compute metrics with data augmentation.
 
 10. For every fold (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
 
