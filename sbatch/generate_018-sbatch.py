@@ -13,7 +13,7 @@ script_path = os.path.join("..", "src", script_name)
 
 # Loop over kinds of data augmentation.
 for aug_kind_str in aug_kinds:
-    job_name = "_".join(["018", aug_kind_str])
+    job_name = "_".join(["018", "aug-" + aug_kind_str])
     file_name = job_name + ".sbatch"
     script_list = [script_path, aug_kind_str]
     script_path_with_args = " ".join(script_list)
