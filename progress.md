@@ -54,7 +54,7 @@ C. ICASSP model
 
 13.  [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files without data augmentation. Parallelize over folds (6), trials (10), and prediction units (3).
 
-14.  For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set, without data augmentation.
+14.  [DONE] For every fold unit (6), every mode (validation and test), compute metrics without data augmentation.
 
 15. Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
 
