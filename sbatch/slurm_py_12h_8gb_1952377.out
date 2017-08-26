@@ -99,3 +99,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 2017-08-25 09:41:26.627817: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
 [I 09:42:06.421 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
 [I 09:44:06.449 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+slurmstepd: error: *** JOB 1952377 ON c17-01 CANCELLED AT 2017-08-25T20:57:13 DUE TO TIME LIMIT ***
