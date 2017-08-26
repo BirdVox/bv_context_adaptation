@@ -24,8 +24,7 @@ models_dir = localmodule.get_models_dir()
 units = localmodule.get_units()
 model_name = "icassp-convnet"
 if not aug_kind_str == "none":
-    model_name = "_".join(
-        [model_name, "aug-" + aug_kind_str])
+    model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
 
 
@@ -97,7 +96,7 @@ for test_unit_str in units:
     csv_writer.writerow(csv_header)
 
     # Loop over trials.
-    for trial_id in range(10): # TODO UPDATE ME
+    for trial_id in range(10):
         # Define directory for trial.
         trial_str = "trial-" + str(trial_id)
         trial_dir = os.path.join(unit_dir, trial_str)
