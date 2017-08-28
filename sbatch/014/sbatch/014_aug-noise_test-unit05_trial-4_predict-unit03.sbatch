@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0:10:00
 #SBATCH --mem=500MB
-#SBATCH --output=slurm_014_aug-noise_test-unit05_trial-4_predict-unit03_%j.out
+#SBATCH --output=../slurm/slurm_014_aug-noise_test-unit05_trial-4_predict-unit03_%j.out
 
 module purge
 module load cuda/8.0.44
@@ -16,4 +16,4 @@ module load cudnn/8.0v5.1
 # The second argument is the name of the test unit.
 # The third argument is name of trial.
 # The fourth argument is the name of the prediction unit.
-python ../src/014_predict-icassp-convnet-clips.py noise unit05 trial-4 unit03
+python ../../../src/014_predict-icassp-convnet-clips.py noise unit05 trial-4 unit03
