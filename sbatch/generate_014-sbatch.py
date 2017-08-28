@@ -62,7 +62,7 @@ for aug_kind_str in aug_kinds:
                 slurm_name = "_".join([slurm_prefix, job_name, slurm_suffix])
 
                 # Write call to python in SBATCH file.
-                with open(file_name, "w") as f:
+                with open(file_path, "w") as f:
                     f.write("#!/bin/bash\n")
                     f.write("\n")
                     f.write("#BATCH --job-name=" + job_name + "\n")
