@@ -97,8 +97,7 @@ csv_writer = csv.writer(csv_file, delimiter=',')
 
 # Create CSV header.
 csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
-    "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
-    "Predicted probability"]
+    "Key", "Ground truth", "Predicted probability"]
 csv_writer.writerow(csv_header)
 
 
