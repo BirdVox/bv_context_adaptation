@@ -38,3 +38,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:9235/?token=31c08ac8085a6fb5069b50e3a7165dbd3831c7d04789c928
+slurmstepd: error: *** JOB 1963410 ON gpu-28 CANCELLED AT 2017-08-27T03:44:10 DUE TO TIME LIMIT ***

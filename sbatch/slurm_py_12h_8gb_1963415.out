@@ -124,3 +124,7 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 16:56:43.059 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
 [I 16:58:43.171 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
 [I 17:00:43.128 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 17:02:43.107 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[W 17:28:23.553 NotebookApp] WebSocket ping timeout after 119898 ms.
+[W 17:28:31.187 NotebookApp] WebSocket ping timeout after 119953 ms.
+slurmstepd: error: *** JOB 1963415 ON c17-03 CANCELLED AT 2017-08-27T03:28:40 DUE TO TIME LIMIT ***
