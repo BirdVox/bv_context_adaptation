@@ -46,17 +46,17 @@ C. ICASSP model
 
 9. [DONE] For every fold unit (6), every mode (validation and test), compute metrics with data augmentation.
 
-10. For every fold (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
+10. [DONE] For every fold (6), select the 5 trials that achieve the best validation accuracy, along with the corresponding threshold. For every unit, export best five trials, per-trial threshold, and per-trial metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) in 6 CSV files. Parallelize over units (6).
 
-11. For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set, with data augmentation.
+11. [DONE] For every possible combination of successive trials (5**6=15625), compute global metrics (n_selected, TP, FP, FN, TPR, TNR, accuracy, precision, recall, and F-measure) over the test set, with data augmentation.
 
 12. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
 13.  [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files without data augmentation. Parallelize over folds (6), trials (10), and prediction units (3).
 
-14.  [DONE] For every fold unit (6), every mode (validation and test), compute metrics without data augmentation.
+14. [DONE] For every fold unit (6), every mode (validation and test), compute metrics without data augmentation.
 
-15. Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
+15. [DONE] Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
 
 
 D. Snowball on UrbanSound-8K
