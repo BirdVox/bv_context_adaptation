@@ -84,10 +84,6 @@ clip_predictions_name = "_".join([
 ])
 
 
-# List keys.
-keys = sorted(list(lms_group.keys()))
-
-
 # Create CSV file.
 prediction_name = "_".join([dataset_name, model_name,
     "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
@@ -99,8 +95,7 @@ csv_writer = csv.writer(csv_file, delimiter=',')
 
 # Create CSV header.
 csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
-    "Center frequency (Hz)", "Augmentation", "Key", "Ground truth",
-    "Predicted probability"]
+    "Key", "Predicted probability"]
 csv_writer.writerow(csv_header)
 
 
