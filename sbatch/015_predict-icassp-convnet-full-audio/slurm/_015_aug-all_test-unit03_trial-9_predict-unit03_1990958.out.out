@@ -1,5 +1,0 @@
-Using TensorFlow backend.
-Traceback (most recent call last):
-  File "../../../src/015_predict-icassp-convnet-full-audio.py", line 21, in <module>
-    if not aug_kind_str == "none":
-NameError: name 'aug_kind_str' is not defined
