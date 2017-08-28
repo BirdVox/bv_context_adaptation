@@ -60,7 +60,7 @@ for aug_kind_str in aug_kinds:
                 # Define slurm name.
                 slurm_prefix = "../slurm/"
                 slurm_suffix = "%j.out"
-                slurm_name = "_".join([slurm_prefix, job_name, slurm_suffix])
+                slurm_name = slurm_prefix + "_".join([job_name, slurm_suffix])
 
                 # Write call to python in SBATCH file.
                 with open(file_path, "w") as f:
@@ -72,7 +72,7 @@ for aug_kind_str in aug_kinds:
                     f.write("#SBATCH --cpus-per-task=1\n")
                     f.write("#SBATCH --time=8:00:00\n")
                     f.write("#SBATCH --mem=500MB\n")
-                    f.write("#SBATCH --output=" + slurm_name + ".out\n")
+                    f.write("#SBATCH --output=" + slurm_name + "\n")
                     f.write("\n")
                     f.write("module purge\n")
                     f.write("module load cuda/8.0.44\n")
