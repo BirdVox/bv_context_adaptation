@@ -14,13 +14,14 @@ n_trials = 10
 script_name = "014_predict-icassp-convnet-clips.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 script_str = script_name[:3]
+script_folder =  script_name[:-3]
 
 
 # Create folders.
-os.makedirs(script_str, exist_ok=True)
-sbatch_dir = os.path.join(script_str, "sbatch")
+os.makedirs(script_folder, exist_ok=True)
+sbatch_dir = os.path.join(script_folder, "sbatch")
 os.makedirs(sbatch_dir, exist_ok=True)
-slurm_dir = os.path.join(script_str, "slurm")
+slurm_dir = os.path.join(script_folder, "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
 
 
