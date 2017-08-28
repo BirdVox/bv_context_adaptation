@@ -13,13 +13,15 @@ folds = localmodule.fold_units()
 units = localmodule.get_units()
 n_trials = 10
 script_name = "014_predict-icassp-convnet-clips.py"
-script_path = os.path.join("..", "src", script_name)
+script_str = script_name[:3]
+script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
 for aug_kind_str in aug_kinds:
     for trial_id in range(n_trials):
         trial_str = str(trial_id)
-        file_path = "014_aug-" + aug_kind_str + "_trial-" + trial_str + ".sh"
+        file_path = "_".join([
+            script_str, "aug-" + aug_kind_str, "trial-" + trial_str + ".sh"])
 
         # Open shell file
         with open(file_path, "w") as f:
@@ -44,7 +46,7 @@ for aug_kind_str in aug_kinds:
                 for predict_unit_str in predict_units:
                     # Define job name.
                     job_name = "_".join([
-                        "014",
+                        script_str,
                         "aug-" + aug_kind_str,
                         "test-" + test_unit_str,
                         "trial-" + trial_str,
