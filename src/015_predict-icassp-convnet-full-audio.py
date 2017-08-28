@@ -17,9 +17,6 @@ data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 models_dir = localmodule.get_models_dir()
-model_name = "icassp-convnet"
-if not aug_kind_str == "none":
-    model_name = "_".join([model_name, "aug-" + aug_kind_str])
 clip_length = 104
 hop_length = int(np.round(clip_length / 2))
 hop_duration = hop_length * 32 / 22050
