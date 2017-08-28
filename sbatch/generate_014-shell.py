@@ -17,13 +17,25 @@ script_str = script_name[:3]
 script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
+# Create folders.
+os.makedirs(script_str, exist_ok=True)
+sbatch_dir = os.path.join(script_str, "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_str, "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
+
+
+# Loop over augmentation kinds.
 for aug_kind_str in aug_kinds:
+
+    # Loop over trials.
     for trial_id in range(n_trials):
         trial_str = str(trial_id)
-        file_path = "_".join([
+        file_name = "_".join([
             script_str, "aug-" + aug_kind_str, "trial-" + trial_str + ".sh"])
+        file_path = os.path.join(sbatch_dir, file_name)
 
-        # Open shell file
+        # Open shell file.
         with open(file_path, "w") as f:
             # Print header
             f.write(
