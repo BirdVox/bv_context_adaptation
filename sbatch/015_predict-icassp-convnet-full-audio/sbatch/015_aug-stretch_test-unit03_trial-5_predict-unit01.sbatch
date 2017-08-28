@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=8:00:00
 #SBATCH --mem=500MB
-#SBATCH --output=../slurm/_015_aug-stretch_test-unit03_trial-5_predict-unit01_%j.out.out
+#SBATCH --output=../slurm/015_aug-stretch_test-unit03_trial-5_predict-unit01_%j.out
 
 module purge
 module load cuda/8.0.44
