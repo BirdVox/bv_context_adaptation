@@ -27,7 +27,7 @@ hop_duration = hop_length * 32 / 22050
 
 
 # Read command-line arguments.
-args = ["none", "unit01", "trial-0", "unit01"]
+args = sys.argv[1:]
 aug_kind_str = args[0]
 test_unit_str = args[1]
 trial_str = args[2]
