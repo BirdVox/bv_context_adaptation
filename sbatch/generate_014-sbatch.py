@@ -12,7 +12,8 @@ folds = localmodule.fold_units()
 units = localmodule.get_units()
 n_trials = 10
 script_name = "014_predict-icassp-convnet-clips.py"
-script_path = os.path.join("..", "src", script_name)
+script_path = os.path.join("..", "..", "..", "src", script_name)
+script_str = script_name[:3]
 
 
 # Loop over kind of augmentations
@@ -33,7 +34,7 @@ for aug_kind_str in aug_kinds:
             for predict_unit_str in predict_units:
                 # Define job name.
                 job_name = "_".join([
-                    "014",
+                    script_str,
                     "aug-" + aug_kind_str,
                     "test-" + test_unit_str,
                     trial_str,
