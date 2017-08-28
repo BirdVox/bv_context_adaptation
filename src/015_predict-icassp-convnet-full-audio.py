@@ -108,7 +108,7 @@ n_hops = int(lms_group.shape[1] / hop_length) - 1
 
 
 # Loop over hops.
-for hop_id in range(n_hops)[:100]:
+for hop_id in range(n_hops):
 
     # Load clip in full logmelspec data.
     clip_start = hop_id * hop_length
