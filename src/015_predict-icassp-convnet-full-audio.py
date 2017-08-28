@@ -119,11 +119,6 @@ for key in keys:
     predicted_probability = model.predict(X)[0, 0]
 
     # Store prediction as DataFrame row.
-    key_split = key.split("_")
-    timestamp_str = key_split[1]
-    freq_str = key_split[2]
-    ground_truth_str = key_split[3]
-    aug_str = key_split[4]
     predicted_probability_str = "{:.16f}".format(predicted_probability)
     row = [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
         key, predicted_probability_str]
