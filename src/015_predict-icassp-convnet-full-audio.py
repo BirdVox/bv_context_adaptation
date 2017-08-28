@@ -9,7 +9,6 @@ import sys
 import tensorflow as tf
 import time
 
-sys.path.append("../src")
 import localmodule
 
 
