@@ -59,7 +59,7 @@ for aug_kind_str in aug_kinds:
                 # Define slurm name.
                 slurm_prefix = "../slurm/slurm"
                 slurm_suffix = "%j"
-                slurm_name = "_".join(slurm_prefix, job_name, slurm_suffix)
+                slurm_name = "_".join([slurm_prefix, job_name, slurm_suffix])
 
                 # Write call to python in SBATCH file.
                 with open(file_name, "w") as f:
