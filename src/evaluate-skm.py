@@ -94,8 +94,10 @@ peak_locations = localmodule.pick_peaks(odf)
 peak_times = timestamps[peak_locations]
 peak_values = odf[peak_locations]
 
+
 # Initialize list of rows (stored as dicts of strings).
 rows = []
+
 
 # Loop over thresholds.
 for threshold in thresholds:
