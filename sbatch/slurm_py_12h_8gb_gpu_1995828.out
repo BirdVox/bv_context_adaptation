@@ -102,3 +102,33 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 04:33:27.161 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.60ms referer=http://localhost:7636/notebooks/spl2017/notebooks/threshold-oldbird.ipynb
 [I 04:33:27.613 NotebookApp] Kernel started: 91a0ea04-9949-45a2-b1ec-12e2c8a2516a
 [I 04:33:39.590 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:40:11.557 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:42:11.638 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:44:11.550 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:46:11.685 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:48:11.563 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:50:11.604 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:52:11.589 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:02:11.634 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:04:11.590 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:06:11.629 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:08:11.610 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:42:11.686 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:44:11.692 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:46:11.780 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:48:11.776 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:49:07.787 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:50:11.775 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:52:11.837 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:54:09.783 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
+[I 05:54:11.785 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:56:11.889 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:58:11.805 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:00:11.810 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:02:11.825 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:04:11.795 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:06:11.757 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:12:11.834 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:14:11.907 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:17:12.340 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
+[I 06:18:11.847 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
