@@ -1,0 +1,78 @@
+
+Jupyter server is running on: gpu-28
+Job starts at: Mon Aug 28 14:58:36 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8424:localhost:8424 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8424:localhost:8424 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 14:58:37.794 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1989943/jupyter/notebook_cookie_secret
+[I 14:58:38.147 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:58:38.147 NotebookApp] 0 active kernels 
+[I 14:58:38.147 NotebookApp] The Jupyter Notebook is running at: http://localhost:8424/?token=c32b01652e624ea3adbff205a258681ad003cf847f5fad8e
+[I 14:58:38.147 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:58:38.147 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8424/?token=c32b01652e624ea3adbff205a258681ad003cf847f5fad8e
+[I 14:59:09.154 NotebookApp] 302 GET /?token=c32b01652e624ea3adbff205a258681ad003cf847f5fad8e (::1) 0.75ms
+[W 15:00:50.351 NotebookApp] Notebook spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb is not trusted
+[I 15:00:50.814 NotebookApp] Kernel started: 460d1e84-5571-440a-9b61-cc8cc6650874
+[W 15:00:50.833 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170828145837 (::1) 14.86ms referer=http://localhost:8424/notebooks/spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+2017-08-28 15:01:11.222974: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-28 15:01:11.223207: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-28 15:01:11.223220: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 15:02:50.630 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:04:50.651 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:06:50.653 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:08:50.662 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:10:50.660 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[W 15:11:35.984 NotebookApp] Notebook spl2017/notebooks/predict-icassp-convnet-clips.ipynb is not trusted
+[W 15:11:35.992 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170828145837 (::1) 1.90ms referer=http://localhost:8424/notebooks/spl2017/notebooks/predict-icassp-convnet-clips.ipynb
+[I 15:11:36.425 NotebookApp] Kernel started: 230bbf53-b17d-42a6-a5c5-1f2d0f73c980
+[I 15:12:50.662 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:14:50.683 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:16:50.682 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:18:22.317 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:18:50.672 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:19:10.117 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:20:50.688 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 15:22:50.693 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:08:50.853 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:09:54.586 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:10:00.258 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:10:33.760 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:12:50.860 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[I 16:14:50.864 NotebookApp] Saving file at /spl2017/notebooks/predict-icassp-convnet-full-audio.ipynb
+[W 16:31:35.511 NotebookApp] Notebook spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb is not trusted
+[I 16:31:35.775 NotebookApp] Kernel started: e26a2187-1663-4a0b-b795-b2670f0f42d3
+[W 16:31:35.917 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170828145837 (::1) 2.08ms referer=http://localhost:8424/notebooks/spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 16:33:35.805 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 16:35:35.800 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 16:36:26.468 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 16:36:37.113 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[I 16:37:35.800 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-clips.ipynb
+[W 17:09:36.741 NotebookApp] WebSocket ping timeout after 119994 ms.
+[W 17:09:51.874 NotebookApp] WebSocket ping timeout after 119992 ms.
