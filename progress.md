@@ -58,6 +58,8 @@ C. ICASSP model
 
 15. [DONE] Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
 
+16. Investigate the locations of 20% of false detections.
+
 
 D. Snowball on UrbanSound-8K
 1. [DONE] Find padding heuristics (repeat vs zero).
