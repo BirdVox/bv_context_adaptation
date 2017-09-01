@@ -109,4 +109,4 @@ G. Spectral flux
 
 
 H. Clustering
-1. Upload data.
+1. [IN PROGRESS] Upload data.
