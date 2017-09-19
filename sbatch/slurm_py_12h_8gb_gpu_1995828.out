@@ -132,3 +132,87 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 06:14:11.907 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
 [I 06:17:12.340 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
 [I 06:18:11.847 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:26:11.919 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:40:59.762 NotebookApp] Creating new notebook in /icassp2018/ESC-10/notebooks
+[W 06:41:00.451 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 2.03ms referer=http://localhost:7636/notebooks/icassp2018/ESC-10/notebooks/Untitled.ipynb?kernel_name=python3
+[I 06:41:00.462 NotebookApp] Kernel started: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 06:43:00.435 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:45:00.452 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:47:00.465 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+2017-08-29 06:48:13.826726: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 06:48:13.827002: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 06:48:13.827015: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 06:49:00.542 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:51:00.488 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:55:00.478 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:57:00.494 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:59:00.509 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:59:51.674 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:01:00.521 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:03:00.488 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:05:00.504 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:07:00.566 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:09:00.523 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:11:00.525 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:13:00.527 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:15:00.688 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:17:00.571 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:17:21.926 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:19:00.549 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:21:00.592 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:27:00.579 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:29:00.634 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:29:01.266 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:30:19.363 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:30:46.739 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:31:00.585 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:31:16.138 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+2017-08-29 07:32:42.250344: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:32:42.250597: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:32:42.250610: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 07:33:00.623 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:33:12.922 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:33:15.733 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+2017-08-29 07:33:33.949262: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:33:33.949492: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:33:33.949505: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 07:35:00.648 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:37:00.674 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:39:00.627 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:41:00.624 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:43:00.612 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:45:00.638 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:50:37.193 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:51:00.641 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:55:00.645 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:55:39.168 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:57:00.662 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:59:00.664 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:13:00.738 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:15:00.743 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:17:00.741 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:19:00.759 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:21:00.836 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:23:00.797 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:25:00.767 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:11:00.982 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:13:01.000 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:15:01.012 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:17:01.025 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[W 09:22:43.312 NotebookApp] WebSocket ping timeout after 119981 ms.
+[W 09:22:46.814 NotebookApp] WebSocket ping timeout after 119897 ms.
+[I 10:50:09.626 NotebookApp] 302 GET /?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb9 (::1) 0.52ms
+[W 10:50:20.222 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.97ms referer=http://localhost:7636/notebooks/icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:52:20.131 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:54:20.138 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:56:20.132 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:58:12.642 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 10:58:20.140 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:00:20.153 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:02:20.157 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:04:20.168 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:06:20.172 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:08:20.177 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[W 11:32:20.364 NotebookApp] WebSocket ping timeout after 119994 ms.
+slurmstepd: error: *** JOB 1995828 ON gpu-24 CANCELLED AT 2017-08-29T15:01:41 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.
