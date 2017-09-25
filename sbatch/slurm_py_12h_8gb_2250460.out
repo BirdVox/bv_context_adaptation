@@ -1,0 +1,238 @@
+
+Jupyter server is running on: c17-02
+Job starts at: Wed Sep 20 09:30:25 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9225:localhost:9225 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9225:localhost:9225 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:30:27.092 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2250460/jupyter/notebook_cookie_secret
+[I 09:30:27.464 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:30:27.464 NotebookApp] 0 active kernels 
+[I 09:30:27.464 NotebookApp] The Jupyter Notebook is running at: http://localhost:9225/?token=d846363890cc294caf424ff69d0b36763fefb84ad4452548
+[I 09:30:27.464 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:30:27.464 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9225/?token=d846363890cc294caf424ff69d0b36763fefb84ad4452548
+[I 09:40:14.933 NotebookApp] 302 GET /?token=d846363890cc294caf424ff69d0b36763fefb84ad4452548 (::1) 1.36ms
+[W 09:50:36.192 NotebookApp] The signatures database cannot be opened; maybe it is corrupted or encrypted. You may need to rerun your notebooks to ensure that they are trusted to run Javascript. The old signatures database has been renamed to /home/vl1019/.local/share/jupyter/nbsignatures.db.bak and a new one has been created.
+[W 09:50:36.196 NotebookApp] Failed commiting signatures database to disk. You may need to move the database file to a non-networked file system, using config option `NotebookNotary.db_file`. Using in-memory signatures database for the remainder of this session.
+[W 09:50:36.209 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 09:50:36.296 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170920093027 (::1) 7.37ms referer=http://localhost:9225/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:50:38.378 NotebookApp] Kernel started: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 09:58:15.491 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 09:58:39.177 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:58:39.178 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:00:38.516 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:00:38.517 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:02:38.433 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:02:38.434 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:04:38.469 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:04:38.469 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:06:38.533 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:06:38.534 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:08:38.396 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:08:38.397 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:45:35.563 NotebookApp] 302 GET /?token=d846363890cc294caf424ff69d0b36763fefb84ad4452548 (::1) 0.90ms
+[W 10:46:12.173 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 10:46:12.193 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170920093027 (::1) 2.35ms referer=http://localhost:9225/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:48:13.342 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:48:13.343 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:00:12.984 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:00:12.984 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:02:13.019 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:02:13.020 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:09:40.332 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 11:10:13.142 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:10:13.144 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:12:13.127 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:12:13.128 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:14:13.157 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:14:13.158 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:17:59.176 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:17:59.177 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:20:13.219 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:20:13.220 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:22:13.237 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:22:13.238 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:24:13.138 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:24:13.139 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:28:13.297 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:28:13.298 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:29:41.468 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:29:41.469 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:30:13.069 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:30:13.070 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:32:13.350 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:32:13.350 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:34:12.898 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:34:12.899 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:36:13.676 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:36:13.677 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:38:13.949 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:38:13.950 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:38:37.296 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 11:40:09.127 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 11:40:13.820 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:40:13.821 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:40:24.358 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 11:42:13.948 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:42:13.949 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:04:13.707 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:04:13.708 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:06:13.633 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:06:13.634 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:08:14.076 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:08:14.077 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:10:13.049 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:10:13.050 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:12:13.870 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:12:13.871 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:14:13.963 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:14:13.964 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:16:13.865 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:16:13.866 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:18:13.564 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:18:13.565 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:20:13.713 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:20:13.714 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:22:14.054 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:22:14.055 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:24:13.954 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:24:13.956 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:26:14.052 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:26:14.053 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:28:13.794 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:28:13.795 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:30:13.968 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:30:13.969 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:32:13.276 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:32:13.276 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:34:14.005 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:34:14.006 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:40:14.007 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:40:14.008 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:42:13.968 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:42:13.969 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:46:13.985 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:46:13.986 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:48:13.973 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:48:13.974 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:50:13.929 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:50:13.930 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:52:13.826 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:52:13.827 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:52:57.157 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[I 12:52:57.872 NotebookApp] Kernel started: 08763af2-6290-4f6e-9b2f-43922444a41c
+[W 12:52:58.072 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170920093027 (::1) 1.82ms referer=http://localhost:9225/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 12:53:25.628 NotebookApp] Kernel restarted: ff7d43c9-f6b1-4676-9045-089459929480
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 12:54:13.836 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:54:13.837 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:54:57.971 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 12:54:57.972 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 12:56:13.856 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:56:13.857 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:02:57.892 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 13:02:57.893 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 13:04:13.758 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:04:13.759 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:14:14.044 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:14:14.046 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:16:14.014 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:16:14.015 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:18:13.347 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:18:13.348 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:20:13.335 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:20:13.336 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:22:13.321 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:22:13.322 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:24:13.361 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:24:13.362 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:26:13.470 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:26:13.471 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:28:13.426 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:28:13.427 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:30:13.404 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:30:13.405 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:32:13.473 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:32:13.474 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:34:13.473 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:34:13.474 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:36:13.373 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:36:13.374 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:38:13.429 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:38:13.430 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:43:56.933 NotebookApp] WebSocket ping timeout after 119988 ms.
+[W 13:43:58.794 NotebookApp] WebSocket ping timeout after 119936 ms.
+slurmstepd: error: *** JOB 2250460 ON c17-02 CANCELLED AT 2017-09-20T21:30:29 DUE TO TIME LIMIT ***
