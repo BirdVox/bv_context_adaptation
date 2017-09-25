@@ -1,0 +1,311 @@
+
+Jupyter server is running on: c02-03
+Job starts at: Mon Sep 25 09:13:50 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9136:localhost:9136 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9136:localhost:9136 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:13:53.398 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2296363/jupyter/notebook_cookie_secret
+[I 09:13:54.207 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:13:54.207 NotebookApp] 0 active kernels 
+[I 09:13:54.207 NotebookApp] The Jupyter Notebook is running at: http://localhost:9136/?token=1b09f429ccdb3bd3303855a3d3d7337c3bab7f15a038a63a
+[I 09:13:54.207 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:13:54.208 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9136/?token=1b09f429ccdb3bd3303855a3d3d7337c3bab7f15a038a63a
+[I 09:14:43.192 NotebookApp] 302 GET /?token=1b09f429ccdb3bd3303855a3d3d7337c3bab7f15a038a63a (::1) 1.32ms
+[W 09:15:08.407 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 09:15:08.465 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170925091353 (::1) 32.25ms referer=http://localhost:9136/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:15:09.176 NotebookApp] Kernel started: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 09:17:09.171 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:17:09.172 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:19:09.070 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:19:09.071 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:23:09.081 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:23:09.082 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:25:09.130 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:25:09.131 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 09:27:09.016 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:27:09.016 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 09:30:10.242 NotebookApp] WebSocket ping timeout after 119945 ms.
+[I 10:11:48.458 NotebookApp] 302 GET /?token=1b09f429ccdb3bd3303855a3d3d7337c3bab7f15a038a63a (::1) 1.03ms
+[W 10:14:05.781 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 10:14:05.799 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170925091353 (::1) 2.79ms referer=http://localhost:9136/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:14:12.092 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 10:16:06.176 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:16:06.177 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:18:06.199 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:18:06.200 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:20:06.202 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:20:06.203 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:22:06.202 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:22:06.203 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:23:16.082 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 10:24:06.209 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:24:06.210 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:26:06.207 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:26:06.208 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:30:06.207 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:30:06.207 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:32:06.234 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:32:06.235 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:38:06.478 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:38:06.479 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:40:06.453 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:40:06.454 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:54:06.515 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:54:06.516 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 10:58:06.518 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 10:58:06.519 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:00:06.312 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:00:06.313 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:02:06.708 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:02:06.718 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:04:06.730 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:04:06.731 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:06:06.406 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:06:06.407 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:08:06.374 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:08:06.375 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:10:06.883 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:10:06.884 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:12:06.784 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:12:06.785 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:18:06.746 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:18:06.747 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:34:06.800 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:34:06.801 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:36:06.723 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:36:06.724 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:36:31.445 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 11:38:06.777 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:38:06.778 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:40:06.909 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:40:06.910 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:42:06.871 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:42:06.881 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:44:13.696 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:44:13.697 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:46:05.078 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 11:46:06.836 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:46:06.837 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:48:06.878 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:48:06.879 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:50:06.732 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:50:06.732 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 11:52:06.818 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 11:52:06.819 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:00:06.728 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:00:06.729 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:02:06.701 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:02:06.702 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:04:06.863 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:04:06.864 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:12:06.760 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:12:06.761 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 12:14:06.882 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:14:06.883 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:14:44.645 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[W 12:14:44.660 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170925091353 (::1) 2.63ms referer=http://localhost:9136/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[I 12:14:45.189 NotebookApp] Kernel started: ac25c295-cbf5-46c4-ab3b-0676f79fc56c
+[I 12:15:14.077 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 34095298-cb2f-418d-99e6-b0db729135ac restarted
+[I 12:16:45.184 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 12:16:45.185 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 12:18:45.159 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 12:18:45.160 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 12:19:06.137 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 12:20:06.772 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:20:06.773 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 12:23:37.078 NotebookApp] WebSocket ping timeout after 119923 ms.
+[W 12:23:46.273 NotebookApp] WebSocket ping timeout after 119994 ms.
+[I 13:35:23.431 NotebookApp] 302 GET /?token=1b09f429ccdb3bd3303855a3d3d7337c3bab7f15a038a63a (::1) 0.83ms
+[I 13:35:23.454 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:35:23.455 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 13:37:15.198 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 13:37:15.818 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170925091353 (::1) 2.63ms referer=http://localhost:9136/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 13:37:23.865 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 13:37:24.563 NotebookApp] Kernel started: 905e98b9-d20a-43a2-8a8f-028d8e8c3832
+[W 13:37:24.569 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170925091353 (::1) 3.14ms referer=http://localhost:9136/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 13:39:24.536 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 13:41:24.547 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 13:59:24.978 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:01:24.619 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:03:24.609 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:05:24.673 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:07:24.932 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:13:24.950 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:15:24.947 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:17:24.955 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:19:24.979 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:21:25.344 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:27:15.819 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 14:27:15.820 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 14:31:25.287 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:49:15.920 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 14:49:15.921 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 14:51:15.879 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 14:51:15.880 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 14:52:04.445 NotebookApp] Kernel interrupted: 34095298-cb2f-418d-99e6-b0db729135ac
+ERROR:tornado.general:Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 276, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 228, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 390, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/ipkernel.py", line 196, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/zmqshell.py", line 501, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2725, in run_cell
+    self.events.trigger('post_execute')
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/events.py", line 74, in trigger
+    func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 113, in flush_figures
+    return show(True)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 36, in show
+    display(figure_manager.canvas.figure)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/display.py", line 164, in display
+    format_dict, md_dict = format(obj, include=include, exclude=exclude)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 145, in format
+    data = formatter(obj)
+  File "<decorator-gen-9>", line 2, in __call__
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 190, in catch_format_error
+    r = method(self, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 307, in __call__
+    return printer(obj)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 240, in <lambda>
+    png_formatter.for_type(Figure, lambda fig: print_figure(fig, 'png', **kwargs))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 124, in print_figure
+    fig.canvas.print_figure(bytes_io, **kw)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2244, in print_figure
+    **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 545, in print_png
+    FigureCanvasAgg.draw(self)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 464, in draw
+    self.figure.draw(self.renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/figure.py", line 1143, in draw
+    renderer, self, dsu, self.suppressComposite)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2409, in draw
+    mimage._draw_list_compositing_images(renderer, self, dsu)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/collections.py", line 1940, in draw
+    self._antialiased, self.get_edgecolors())
+KeyboardInterrupt
+ERROR:tornado.general:Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 276, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 228, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 390, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/ipkernel.py", line 196, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/zmqshell.py", line 501, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2725, in run_cell
+    self.events.trigger('post_execute')
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/events.py", line 74, in trigger
+    func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 113, in flush_figures
+    return show(True)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 36, in show
+    display(figure_manager.canvas.figure)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/display.py", line 164, in display
+    format_dict, md_dict = format(obj, include=include, exclude=exclude)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 145, in format
+    data = formatter(obj)
+  File "<decorator-gen-9>", line 2, in __call__
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 190, in catch_format_error
+    r = method(self, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 307, in __call__
+    return printer(obj)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 240, in <lambda>
+    png_formatter.for_type(Figure, lambda fig: print_figure(fig, 'png', **kwargs))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 124, in print_figure
+    fig.canvas.print_figure(bytes_io, **kw)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2244, in print_figure
+    **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 545, in print_png
+    FigureCanvasAgg.draw(self)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 464, in draw
+    self.figure.draw(self.renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/figure.py", line 1143, in draw
+    renderer, self, dsu, self.suppressComposite)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2409, in draw
+    mimage._draw_list_compositing_images(renderer, self, dsu)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/collections.py", line 1940, in draw
+    self._antialiased, self.get_edgecolors())
+KeyboardInterrupt
+[I 14:52:06.137 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 34095298-cb2f-418d-99e6-b0db729135ac restarted
+[I 14:52:35.974 NotebookApp] Kernel restarted: 34095298-cb2f-418d-99e6-b0db729135ac
+[I 14:53:16.127 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 14:53:16.128 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 14:53:24.999 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:55:25.365 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:57:16.240 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 14:57:16.242 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 14:57:24.826 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 14:59:24.833 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:01:24.889 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:03:24.857 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:05:25.391 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
