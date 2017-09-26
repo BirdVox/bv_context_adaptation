@@ -1,0 +1,218 @@
+
+Jupyter server is running on: gpu-24
+Job starts at: Tue Aug 29 03:01:35 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7636:localhost:7636 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7636:localhost:7636 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 03:01:36.297 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-1995828/jupyter/notebook_cookie_secret
+[I 03:01:36.660 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 03:01:36.660 NotebookApp] 0 active kernels 
+[I 03:01:36.660 NotebookApp] The Jupyter Notebook is running at: http://localhost:7636/?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb9
+[I 03:01:36.660 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 03:01:36.660 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7636/?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb9
+[I 03:03:21.185 NotebookApp] 302 GET /?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb (::1) 0.77ms
+[I 03:03:21.205 NotebookApp] 302 GET /tree?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb (::1) 1.13ms
+[I 03:03:31.702 NotebookApp] 302 GET /?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb9 (::1) 0.53ms
+[W 03:03:52.328 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 8.77ms referer=http://localhost:7636/notebooks/spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:03:52.350 NotebookApp] Kernel started: 6c541042-dfa3-4e5d-89c4-9be5b47f5d6f
+[I 03:05:52.351 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:05:58.145 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:07:52.424 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:09:52.391 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:11:52.384 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:13:52.406 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:15:52.446 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:17:52.406 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:19:15.310 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:19:52.444 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:21:52.475 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:23:52.452 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:25:52.540 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:27:52.529 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:29:52.472 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:31:52.468 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:35:52.490 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:37:52.528 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:39:52.479 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[W 03:40:39.682 NotebookApp] Notebook spl2017/notebooks/summarize-oldbird-evaluation.ipynb is not trusted
+[W 03:40:39.694 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 2.06ms referer=http://localhost:7636/notebooks/spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[I 03:40:39.916 NotebookApp] Kernel started: 7091f5b7-aaa2-40d7-9cfd-a4cd11599985
+[W 03:40:44.896 NotebookApp] Notebook spl2017/notebooks/summarize-skm-evaluation.ipynb is not trusted
+[W 03:40:44.907 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.59ms referer=http://localhost:7636/notebooks/spl2017/notebooks/summarize-skm-evaluation.ipynb
+[I 03:40:45.434 NotebookApp] Kernel started: 78b17d41-56e2-4d2a-8097-f8284e6b6ea4
+[I 03:41:52.523 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:43:28.724 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:43:52.465 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:45:52.489 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:47:52.470 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:49:52.488 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:51:52.531 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:53:52.508 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 03:55:52.539 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 04:01:52.560 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 04:07:52.576 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 04:11:52.580 NotebookApp] Saving file at /spl2017/notebooks/summarize-evaluation-icassp-full-audio.ipynb
+[I 04:12:10.733 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 04:12:11.375 NotebookApp] Kernel started: e39c74a6-1347-4e50-9cdc-d540f236b088
+[W 04:12:11.380 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 2.39ms referer=http://localhost:7636/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 04:14:11.355 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:16:11.378 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:18:11.446 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:20:11.404 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:22:11.390 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:24:11.446 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:24:20.525 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
+[I 04:26:11.433 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:28:11.428 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:30:11.495 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:32:11.590 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 04:33:04.569 NotebookApp] Notebook spl2017/notebooks/summarize-oldbird-evaluation.ipynb is not trusted
+[W 04:33:04.609 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 2.09ms referer=http://localhost:7636/notebooks/spl2017/notebooks/summarize-oldbird-evaluation.ipynb
+[W 04:33:15.689 NotebookApp] Notebook spl2017/notebooks/oldbird.ipynb is not trusted
+[W 04:33:15.705 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.59ms referer=http://localhost:7636/notebooks/spl2017/notebooks/oldbird.ipynb
+[I 04:33:16.178 NotebookApp] Kernel started: 5b3b7a0a-d827-4cf5-b32a-ea979f07a190
+[W 04:33:27.151 NotebookApp] Notebook spl2017/notebooks/threshold-oldbird.ipynb is not trusted
+[W 04:33:27.161 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.60ms referer=http://localhost:7636/notebooks/spl2017/notebooks/threshold-oldbird.ipynb
+[I 04:33:27.613 NotebookApp] Kernel started: 91a0ea04-9949-45a2-b1ec-12e2c8a2516a
+[I 04:33:39.590 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:40:11.557 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:42:11.638 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:44:11.550 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:46:11.685 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:48:11.563 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:50:11.604 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 04:52:11.589 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:02:11.634 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:04:11.590 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:06:11.629 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:08:11.610 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:42:11.686 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:44:11.692 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:46:11.780 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:48:11.776 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:49:07.787 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:50:11.775 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:52:11.837 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:54:09.783 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
+[I 05:54:11.785 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:56:11.889 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 05:58:11.805 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:00:11.810 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:02:11.825 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:04:11.795 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:06:11.757 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:12:11.834 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:14:11.907 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:17:12.340 NotebookApp] Kernel restarted: e39c74a6-1347-4e50-9cdc-d540f236b088
+[I 06:18:11.847 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:26:11.919 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[I 06:40:59.762 NotebookApp] Creating new notebook in /icassp2018/ESC-10/notebooks
+[W 06:41:00.451 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 2.03ms referer=http://localhost:7636/notebooks/icassp2018/ESC-10/notebooks/Untitled.ipynb?kernel_name=python3
+[I 06:41:00.462 NotebookApp] Kernel started: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 06:43:00.435 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:45:00.452 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:47:00.465 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+2017-08-29 06:48:13.826726: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 06:48:13.827002: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 06:48:13.827015: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 06:49:00.542 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:51:00.488 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:55:00.478 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:57:00.494 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:59:00.509 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 06:59:51.674 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:01:00.521 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:03:00.488 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:05:00.504 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:07:00.566 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:09:00.523 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:11:00.525 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:13:00.527 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:15:00.688 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:17:00.571 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:17:21.926 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:19:00.549 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:21:00.592 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:27:00.579 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:29:00.634 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:29:01.266 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:30:19.363 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:30:46.739 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:31:00.585 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:31:16.138 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+2017-08-29 07:32:42.250344: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:32:42.250597: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:32:42.250610: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 07:33:00.623 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:33:12.922 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:33:15.733 NotebookApp] Kernel restarted: 22ca88be-f591-471b-ba4a-15164d1cf303
+2017-08-29 07:33:33.949262: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:33:33.949492: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-29 07:33:33.949505: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 07:35:00.648 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:37:00.674 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:39:00.627 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:41:00.624 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:43:00.612 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:45:00.638 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:50:37.193 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:51:00.641 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:55:00.645 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:55:39.168 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 07:57:00.662 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 07:59:00.664 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:13:00.738 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:15:00.743 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:17:00.741 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:19:00.759 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:21:00.836 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:23:00.797 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 08:25:00.767 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:11:00.982 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:13:01.000 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:15:01.012 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 09:17:01.025 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[W 09:22:43.312 NotebookApp] WebSocket ping timeout after 119981 ms.
+[W 09:22:46.814 NotebookApp] WebSocket ping timeout after 119897 ms.
+[I 10:50:09.626 NotebookApp] 302 GET /?token=8ac2d6d45497a342e44560936cab850be1b17ba24937aeb9 (::1) 0.52ms
+[W 10:50:20.222 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20170829030136 (::1) 1.97ms referer=http://localhost:7636/notebooks/icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:52:20.131 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:54:20.138 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:56:20.132 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 10:58:12.642 NotebookApp] Kernel interrupted: 22ca88be-f591-471b-ba4a-15164d1cf303
+[I 10:58:20.140 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:00:20.153 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:02:20.157 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:04:20.168 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:06:20.172 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[I 11:08:20.177 NotebookApp] Saving file at /icassp2018/ESC-10/notebooks/script03_predict_convnet.ipynb
+[W 11:32:20.364 NotebookApp] WebSocket ping timeout after 119994 ms.
+slurmstepd: error: *** JOB 1995828 ON gpu-24 CANCELLED AT 2017-08-29T15:01:41 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.
