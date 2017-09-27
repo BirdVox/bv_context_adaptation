@@ -309,3 +309,20 @@ WARNING:root:kernel 34095298-cb2f-418d-99e6-b0db729135ac restarted
 [I 15:01:24.889 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
 [I 15:03:24.857 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
 [I 15:05:25.391 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:13:25.467 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:15:25.522 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:17:25.704 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:23:24.916 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:27:24.921 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:29:24.919 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:33:24.991 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:37:25.622 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:41:25.631 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:43:24.984 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:45:24.974 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:47:25.627 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[I 15:49:25.579 NotebookApp] Saving file at /spl2017/notebooks/visualize_icassp_double_peaks.ipynb
+[W 17:07:55.565 NotebookApp] WebSocket ping timeout after 119932 ms.
+[W 17:08:06.779 NotebookApp] WebSocket ping timeout after 119968 ms.
+slurmstepd: error: *** JOB 2296363 ON c02-03 CANCELLED AT 2017-09-25T21:14:01 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.
