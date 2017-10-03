@@ -1,0 +1,23 @@
+2017-10-02 10:16:49.855657: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-02 10:16:49.855873: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-02 10:16:49.855885: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-10-02 10:16:49.464716 Start.
+Using Salamon's ICASSP 2017 convnet for binary classification in BirdVox-70k, full audio. 
+Training set: unit02, unit03, unit05.
+Validation set: unit07, unit10.
+Test set: unit01.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../../../src/015_predict-icassp-convnet-full-audio.py", line 118, in <module>
+    predicted_probability = model.predict(X)[0,0]
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 1499, in predict
+    check_batch_axis=False)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 140, in _standardize_input_data
+    str(array.shape))
+ValueError: Error when checking : expected input_1 to have shape (None, 128, 104, 1) but got array with shape (1, 128, 83, 1)
