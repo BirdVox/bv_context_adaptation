@@ -39,6 +39,7 @@ opts{2}.banks.gamma.U_log2_oversampling = Inf;
 opts{2}.banks.gamma.S_log2_oversampling = Inf;
 opts{2}.banks.gamma.gamma_bounds = [1 4];
 
+
 % Define poolings in time and frequency.
 poolings = [ ...
     2 2; ...
@@ -49,8 +50,10 @@ poolings = [ ...
     2 8;
     2 16];
 
+
 % Build scattering architectures.
 archs = sc_setup(opts);
+
 
 % List waveform names.
 [hdf5_folder, hdf5_name] = fileparts(hdf5_path);
@@ -61,9 +64,11 @@ unit_str = hdf5_name_split{3};
 waveforms_info = h5info(hdf5_path, '/waveforms');
 waveform_names = {waveforms_info.Datasets.Name};
 
+
 % Retrieve sample rate.
 n_waveform_names = length(waveform_names);
 sample_rate = h5read(hdf5_path, '/sample_rate');
+
 
 % Print header.
 disp(['Computing scattering transforms for ', ...
@@ -72,8 +77,10 @@ disp(['Unit: ', unit_str, '.'])
 disp(['Augmentation: ', instanced_aug_str, '.']);
 disp(['Number of files: ', sprintf('%d', n_waveform_names), '.']);
 
+
 % Initialize scattering structure.
 scattering = struct();
+
 
 % Create feature directory if it does not already exists.
 data_dir = fileparts(fileparts(hdf5_folder));
@@ -82,6 +89,7 @@ scattering_snowball_dir_path = fullfile(data_dir, scattering_snowball_dir);
 if ~exist(scattering_snowball_directory, 'dir')
     mkdir(scattering_snowball_dir_path);
 end
+
 
 % Create augmentation directory if it does not already exists.
 instanced_aug_dir_path = ...
@@ -149,6 +157,7 @@ for waveform_name_id = 1:n_waveform_names
     % Store X in HDF5 container.
     scattering.(waveform_name) = X;
 end
+
 
 % Save
 out_name = [dataset_name, '_', instanced_aug_str, '_', unit_str, '.mat'];
