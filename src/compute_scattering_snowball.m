@@ -1,7 +1,3 @@
-hdf5_path = ['/beegfs/vl1019/spl2017_data/BirdVox-70k_hdf5/' ...
-    'original/BirdVox-70k_original_unit01.hdf5'];
-addpath(genpath('~/scattering.m'));
-
 function compute_scattering_snowball(hdf5_path)
 % Define options for first-order scattering (time-frequency representation).
 opts{1}.time.size = 8192;
@@ -68,14 +64,6 @@ waveform_names = {waveforms_info.Datasets.Name};
 % Retrieve sample rate.
 n_waveform_names = length(waveform_names);
 sample_rate = h5read(hdf5_path, '/sample_rate');
-
-
-% Print header.
-disp(['Computing scattering transforms for ', ...
-    dataset_name, ' augmented data.']);
-disp(['Unit: ', unit_str, '.'])
-disp(['Augmentation: ', instanced_aug_str, '.']);
-disp(['Number of files: ', sprintf('%d', n_waveform_names), '.']);
 
 
 % Initialize scattering structure.
