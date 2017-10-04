@@ -44,7 +44,14 @@ scattering_path = os.path.expanduser(os.path.join("~", "scattering.m"))
 # Define MATLAB code.
 matlab_code = "; ".join([
     "addpath(genpath('" + scattering_path + "'))",
-    "hdf5_path = " + hdf5_path])
+    "hdf5_path = " + hdf5_path,
+    "compute_scattering_snowball(hdf5_path)",
+    "quit;"])
+
+
+# Define UNIX command.
+unix_command = "matlab -r \"" + matlab_code + "\""
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
