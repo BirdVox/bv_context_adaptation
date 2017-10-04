@@ -6,6 +6,7 @@ addpath(genpath('~/scattering.m'));
 opts{1}.time.size = 8192;
 % Temporal oversampling by a factor 2^1=2.
 opts{1}.time.U_log2_oversampling = 1;
+opts{1}.time.S_log2_oversampling = 0;
 % Number of filters per octave.
 opts{1}.time.nFilters_per_octave = 48;
 % Maximum quality factor.
@@ -28,8 +29,8 @@ opts{2}.banks.time.T = 8192;
 % No constraint on the maximum scale.
 opts{2}.banks.time.max_scale = Inf;
 % Only compute scales larger than 2^7.
-opts{2}.banks.time.gamma_bounds = [12 Inf];
-%opts{2}.banks.time.sibling_mask_factor = Inf;
+opts{2}.banks.time.gamma_bounds = [7 Inf];
+opts{2}.banks.time.sibling_mask_factor = Inf;
 
 % No subsampling along log-frequencies.
 opts{2}.banks.gamma.U_log2_oversampling = Inf;
@@ -69,6 +70,46 @@ waveform = waveform(1:8192);
 U0 = initialize_U(waveform, archs{1}.banks{1});
 Y1 = U_to_Y(U0, archs{1}.banks);
 U1 = Y_to_U(Y1{end}, archs{1}.nonlinearity);
-S1 = Y_to_S(Y1, archs{1});
 Y2 = U_to_Y(U1, archs{2}.banks);
+S1 = Y_to_S(Y2, archs{2});
 U2 = Y_to_U(Y2{end}, archs{2}.nonlinearity);
+U2_psi = U2{1,1};
+U2_phi = U2{1,2};
+
+% Build structure of scattering coefficients.
+nScales = length(U2{1,1}.data);
+X = struct();
+X.S1 = single(S1.data((1+end/4):end, :));
+poolings = [ ...
+    2 2; ...
+    2 2;
+    2 2;
+    2 2;
+    2 2;
+    2 2;
+    16 16];
+
+for scale_id = 1:nScales
+    j = opts{2}.banks.time.gamma_bounds(1) - 1 + scale_id;
+    scale_str = ['U2_j', sprintf('%02d', j)];
+    U2_scale = cell(1, 1+length(U2{1,1}.data));
+    disp(poolings(scale_id, :));
+    for j_j_id = 1:length(U2{1,1}.data{scale_id})
+        pooled_U2_psi = cat(3, ...
+            ordfilt2(U2{1,1}.data{scale_id}{j_j_id}(:, :, 1), ...
+                poolings(scale_id, 1)*poolings(scale_id, 2), ...
+                ones(poolings(scale_id, 1), poolings(scale_id, 2))), ...
+            ordfilt2(U2{1,1}.data{scale_id}{j_j_id}(:, :, 2), ...
+                poolings(scale_id, 1)*poolings(scale_id, 2), ...
+                ones(poolings(scale_id, 1), poolings(scale_id, 2))));
+        U2_scale{j_j_id} = pooled_U2_psi( ...
+            1:poolings(scale_id, 1):end,
+            1:poolings(scale_id, 2):end, ...
+            :);
+    end
+    pooled_U2_phi = ordfilt2(U2{1,2}.data{scale_id}, 2*2, ones(2,2));
+    U2_scale{end} = pooled_U2_phi(1:2:end, 1:2:end);
+    U2_scale = cat(3, U2_scale{:});
+    U2_scale = U2_scale((1+end/4):end, 1:(end/2), :);
+    X.(scale_str) = single(U2_scale);
+end
