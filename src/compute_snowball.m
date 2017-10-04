@@ -6,21 +6,22 @@ addpath(genpath('~/scattering.m'));
 [hdf5_folder, hdf5_name] = fileparts(hdf5_path);
 hdf5_name_split = strsplit(hdf5_name, '_');
 dataset_name = hdf5_name_split{1};
-
+instanced_aug_str = hdf5_name_split{2};
+unit_str = hdf5_name_split{3};
 waveforms_info = h5info(hdf5_path, '/waveforms');
 waveform_names = {waveforms_info.Datasets.Name};
 
 n_waveform_names = length(waveform_names);
-sample_rate = h5read(hdf5_path, '/sample_rate')
+sample_rate = h5read(hdf5_path, '/sample_rate');
 
 % Print header.
-disp(['Computing scattering transforms for ', dataset_name, ' augmented data.');
+disp(['Computing scattering transforms for ', ...
+    dataset_name, ' augmented data.']);
 Q_str = sprintf('%02d', Q);
-disp(['Quality factor (Q): ', Q_str]);
-disp(['Augmentation: ', aug_str]);
-disp(['Suffix: ', suffix]);
-disp(['Fold id: ', string(fold_id)]);
-disp(['Number of files: ', string(n_waveform_names)]);
+disp(['Quality factor (Q): ', Q_str, '.']);
+disp(['Unit: ', unit_str, '.'])
+disp(['Augmentation: ', instanced_aug_str, '.']);
+disp(['Number of files: ', sprintf('%d', n_waveform_names), '.']);
 
 waveform_name_id = 1;
 waveform_name = waveform_names{waveform_name_id};
