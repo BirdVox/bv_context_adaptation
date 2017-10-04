@@ -11,7 +11,7 @@ opts{1}.time.nFilters_per_octave = 48;
 % Maximum quality factor.
 opts{1}.time.max_Q = 24;
 % Support of the low-pass filter phi.
-opts{1}.time.T = 8;
+opts{1}.time.T = 64;
 % Hard constraint on the maximum scale of the wavelets psi.
 opts{1}.time.max_scale = 2048;
 % Number of octaves in the wavelet filterbank.
@@ -21,13 +21,15 @@ opts{1}.time.gamma_bounds = [1 128];
 opts{1}.time.is_chunked = false;
 
 % Define options for low-pass filtering of time-frequency representation.
-opts{2}.invariants.time.T = 32;
+opts{2}.invariants.time.T = 64;
 
 % Define options for second-order scattering along time.
 opts{2}.banks.time.T = 8192;
 % No constraint on the maximum scale.
 opts{2}.banks.time.max_scale = Inf;
-opts{2}.banks.time.sibling_mask_factor = Inf;
+% Only compute scales larger than 2^7.
+opts{2}.banks.time.gamma_bounds = [12 Inf];
+%opts{2}.banks.time.sibling_mask_factor = Inf;
 
 % No subsampling along log-frequencies.
 opts{2}.banks.gamma.U_log2_oversampling = Inf;
@@ -63,4 +65,10 @@ waveform_path = ['/waveforms/', waveform_name];
 waveform = h5read(hdf5_path, waveform_path);
 waveform = waveform(1:8192);
 
-[S, U] = sc_propagate(waveform, archs);
+
+U0 = initialize_U(waveform, archs{1}.banks{1});
+Y1 = U_to_Y(U0, archs{1}.banks);
+U1 = Y_to_U(Y1{end}, archs{1}.nonlinearity);
+S1 = Y_to_S(Y1, archs{1});
+Y2 = U_to_Y(U1, archs{2}.banks);
+U2 = Y_to_U(Y2{end}, archs{2}.nonlinearity);
