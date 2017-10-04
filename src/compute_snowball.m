@@ -2,6 +2,7 @@ hdf5_path = ['/beegfs/vl1019/spl2017_data/BirdVox-70k_hdf5/' ...
     'original/BirdVox-70k_original_unit01.hdf5'];
 addpath(genpath('~/scattering.m'));
 
+%function compute_snowball(hdf5_path)
 % Define options for first-order scattering (time-frequency representation).
 opts{1}.time.size = 8192;
 % Temporal oversampling by a factor 2^1=2.
@@ -36,10 +37,22 @@ opts{2}.banks.time.handle = @morlet_1d;
 % No subsampling along log-frequencies.
 opts{2}.banks.gamma.U_log2_oversampling = Inf;
 opts{2}.banks.gamma.S_log2_oversampling = Inf;
-opts{2}.banks.gamma.gamma_bounds = [1 3];
+opts{2}.banks.gamma.gamma_bounds = [1 4];
 
+% Define poolings in time and frequency.
+poolings = [ ...
+    2 2; ...
+    2 2;
+    2 4;
+    2 4;
+    2 8;
+    2 8;
+    2 16];
+
+% Build scattering architectures.
 archs = sc_setup(opts);
 
+% List waveform names.
 [hdf5_folder, hdf5_name] = fileparts(hdf5_path);
 hdf5_name_split = strsplit(hdf5_name, '_');
 dataset_name = hdf5_name_split{1};
@@ -48,6 +61,7 @@ unit_str = hdf5_name_split{3};
 waveforms_info = h5info(hdf5_path, '/waveforms');
 waveform_names = {waveforms_info.Datasets.Name};
 
+% Retrieve sample rate.
 n_waveform_names = length(waveform_names);
 sample_rate = h5read(hdf5_path, '/sample_rate');
 
@@ -58,15 +72,15 @@ disp(['Unit: ', unit_str, '.'])
 disp(['Augmentation: ', instanced_aug_str, '.']);
 disp(['Number of files: ', sprintf('%d', n_waveform_names), '.']);
 
-%for waveform_name_id = 1:n_waveform_names
-waveform_name_id = 1;
+% Loop over waveforms.
+for waveform_name_id = 1:n_waveform_names
+% Load waveform.
 waveform_name = waveform_names{waveform_name_id};
 waveform_path = ['/waveforms/', waveform_name];
-
 waveform = h5read(hdf5_path, waveform_path);
 waveform = waveform(1:8192);
 
-
+% Compute scattering transform.
 U0 = initialize_U(waveform, archs{1}.banks{1});
 Y1 = U_to_Y(U0, archs{1}.banks);
 U1 = Y_to_U(Y1{end}, archs{1}.nonlinearity);
@@ -80,16 +94,10 @@ U2_phi = U2{1,2};
 nScales = length(U2{1,1}.data);
 X = struct();
 X.S1 = single(S1.data((1+end/4):end, :));
-poolings = [ ...
-    2 2; ...
-    2 2;
-    2 4;
-    2 4;
-    2 8;
-    2 8;
-    2 16];
 
+% Loop over scales.
 for scale_id = 1:nScales
+    % Pool scattering coefficients in time and frequency.
     j = opts{2}.banks.time.gamma_bounds(1) - 1 + scale_id;
     scale_str = ['U2_j', sprintf('%02d', j)];
     U2_scale = cell(1, 1+length(U2{1,1}.data{scale_id}));
@@ -116,3 +124,6 @@ for scale_id = 1:nScales
     U2_scale = U2_scale((1+end/4):end, 1:(end/2), :);
     X.(scale_str) = single(U2_scale);
 end
+end
+
+%end
