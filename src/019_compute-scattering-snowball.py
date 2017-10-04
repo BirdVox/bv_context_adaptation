@@ -1,0 +1,45 @@
+import datetime
+import time
+import os
+import sys
+
+import localmodule
+
+
+# Define HDF5 path.
+data_dir = localmodule.get_data_dir()
+dataset_name = localmodule.get_dataset_name()
+hdf5_dir = "_".join([dataset_name, "hdf5"])
+hdf5_dir_path = os.path.join(data_dir, hdf5_dir)
+augmentation_dir_path = os.path.join(hdf5_dir_path, instanced_aug_str)
+hdf5_name = "_".join([dataset_name, instanced_aug_str, unit_str])
+hdf5_path = os.path.join(augentation_dir_path, hdf5_name + ".hdf5")
+
+
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Computing scattering coefficients for " + dataset_name + ".")
+print("Unit: " + unit_str + ".")
+print("Augmentation: " + instanced_aug_str + ".")
+print("")
+
+
+# Define scattering path.
+scattering_path = os.path.expanduser(os.path.join("~", "scattering.m"))
+
+
+matlab_code = "; ".join([
+    "addpath(genpath('" + scattering_path + "'))",
+    "hdf5_path = " + hdf5_path])
+
+# Print elapsed time.
+print(str(datetime.datetime.now()) + " Finish.")
+elapsed_time = time.time() - int(start_time)
+elapsed_hours = int(elapsed_time / (60 * 60))
+elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
+elapsed_seconds = elapsed_time % 60.
+elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
+                                               elapsed_minutes,
+                                               elapsed_seconds)
+print("Total elapsed time: " + elapsed_str + ".")
