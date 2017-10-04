@@ -5,8 +5,17 @@ import sys
 
 import localmodule
 
-unit_str = 'unit01'
-instanced_aug_str = 'original'
+
+# Define constants.
+args = sys.argv[1:]
+aug_str = args[0]
+instance_id = int(args[1])
+instance_str = str(instance_id)
+unit_str = args[2]
+if aug_str == "original":
+    instanced_aug_str = aug_str
+else:
+    instanced_aug_str = "-".join([aug_str, instance_str])
 
 
 # Define HDF5 path.
@@ -32,6 +41,7 @@ print("")
 scattering_path = os.path.expanduser(os.path.join("~", "scattering.m"))
 
 
+# Define MATLAB code.
 matlab_code = "; ".join([
     "addpath(genpath('" + scattering_path + "'))",
     "hdf5_path = " + hdf5_path])
