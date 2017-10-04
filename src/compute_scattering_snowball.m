@@ -150,6 +150,9 @@ for waveform_name_id = 1:n_waveform_names
     scattering.(waveform_name) = X;
 end
 
-%
+% Save
+out_name = [dataset_name, '_', instanced_aug_str, '_', unit_str, '.mat'];
+out_path = fullfile(instanced_aug_dir_path, out_name);
+save(out_path, 'scattering', '-v7.3');
 
 end
