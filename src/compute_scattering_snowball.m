@@ -75,13 +75,21 @@ disp(['Number of files: ', sprintf('%d', n_waveform_names), '.']);
 % Initialize scattering structure.
 scattering = struct();
 
-% Create directory if it does not already exists.
-data_dir = fileparts(fileparts(hdf5_folder))
+% Create feature directory if it does not already exists.
+data_dir = fileparts(fileparts(hdf5_folder));
 scattering_snowball_dir = [dataset_name, '_scattering-snowball'];
 scattering_snowball_dir_path = fullfile(data_dir, scattering_snowball_dir);
 if ~exist(scattering_snowball_directory, 'dir')
     mkdir(scattering_snowball_dir_path);
 end
+
+% Create augmentation directory if it does not already exists.
+instanced_aug_dir_path = ...
+    fullfile(scattering_snowball_dir_path, instanced_aug_str);
+if ~exist(instanced_aug_dir_path, 'dir')
+    mkdir(instanced_aug_dir_path);
+end
+
 
 % Loop over waveforms.
 for waveform_name_id = 1:n_waveform_names
