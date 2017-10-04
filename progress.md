@@ -111,4 +111,25 @@ G. Spectral flux
 
 
 H. Clustering
-1. [IN PROGRESS] Upload data.
+1. [DONE] Upload data.
+2. Re-encode eBird data by genus.
+
+
+I. Snowball on BirdVox-70k
+
+
+J. ICASSP paper
+* Motivation: current practices in bioacoustics. Raven users community. Report training time and prediction time. Spend effort on contextualization.
+* Vincent: two purposes. One is estimating population. The other is inspecting the clips manually and finding a rare bird.
+* Juan: there are 3 key things to the paper.
+	1) the dataset. SKM-based methodology
+	2) the systematic benchmark
+	3) first application of convnet to FC detection in continuous recordings
+* Justin: Aim at a software for running the pre-trained convnet on flight call detection. This implies to re-train the model on all the data we have (BV-70k and PLoS One dataset).
+* Release both the BirdVox-70k dataset and "BirdVox full nights" (temporary name).
+* Results: tabulated set of results. F-measure ad hoc, cross-validation, oracle. Describe the optimal parameter set.
+* Results: plot of all the curves. Work on the figures.
+* Qualitative examples if we have time.
+
+K. Dataset release
+
