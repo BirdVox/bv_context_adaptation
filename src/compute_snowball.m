@@ -31,15 +31,15 @@ opts{2}.banks.time.max_scale = Inf;
 % Only compute scales larger than 2^7.
 opts{2}.banks.time.gamma_bounds = [7 Inf];
 opts{2}.banks.time.sibling_mask_factor = Inf;
+opts{2}.banks.time.handle = @morlet_1d;
 
 % No subsampling along log-frequencies.
 opts{2}.banks.gamma.U_log2_oversampling = Inf;
 opts{2}.banks.gamma.S_log2_oversampling = Inf;
+opts{2}.banks.gamma.gamma_bounds = [1 3];
 
 archs = sc_setup(opts);
 
-
-addpath(genpath('~/scattering.m'));
 [hdf5_folder, hdf5_name] = fileparts(hdf5_path);
 hdf5_name_split = strsplit(hdf5_name, '_');
 dataset_name = hdf5_name_split{1};
@@ -83,17 +83,16 @@ X.S1 = single(S1.data((1+end/4):end, :));
 poolings = [ ...
     2 2; ...
     2 2;
-    2 2;
-    2 2;
-    2 2;
-    2 2;
-    16 16];
+    2 4;
+    2 4;
+    2 8;
+    2 8;
+    2 16];
 
 for scale_id = 1:nScales
     j = opts{2}.banks.time.gamma_bounds(1) - 1 + scale_id;
     scale_str = ['U2_j', sprintf('%02d', j)];
-    U2_scale = cell(1, 1+length(U2{1,1}.data));
-    disp(poolings(scale_id, :));
+    U2_scale = cell(1, 1+length(U2{1,1}.data{scale_id}));
     for j_j_id = 1:length(U2{1,1}.data{scale_id})
         pooled_U2_psi = cat(3, ...
             ordfilt2(U2{1,1}.data{scale_id}{j_j_id}(:, :, 1), ...
@@ -103,12 +102,16 @@ for scale_id = 1:nScales
                 poolings(scale_id, 1)*poolings(scale_id, 2), ...
                 ones(poolings(scale_id, 1), poolings(scale_id, 2))));
         U2_scale{j_j_id} = pooled_U2_psi( ...
-            1:poolings(scale_id, 1):end,
+            1:poolings(scale_id, 1):end, ...
             1:poolings(scale_id, 2):end, ...
             :);
     end
-    pooled_U2_phi = ordfilt2(U2{1,2}.data{scale_id}, 2*2, ones(2,2));
-    U2_scale{end} = pooled_U2_phi(1:2:end, 1:2:end);
+    pooled_U2_phi = ordfilt2(U2{1,2}.data{scale_id}, ...
+        poolings(scale_id, 1)*poolings(scale_id, 2), ...
+        ones(poolings(scale_id, 1), poolings(scale_id, 2)));
+    U2_scale{end} = pooled_U2_phi( ...
+        1:poolings(scale_id, 1):end, ...
+        1:poolings(scale_id, 2):end);
     U2_scale = cat(3, U2_scale{:});
     U2_scale = U2_scale((1+end/4):end, 1:(end/2), :);
     X.(scale_str) = single(U2_scale);
