@@ -89,8 +89,6 @@ end
 
 % Loop over waveforms.
 for waveform_name_id = 1:n_waveform_names
-    disp(waveform_name_id);
-
     % Load waveform.
     waveform_name = waveform_names{waveform_name_id};
     waveform_path = ['/waveforms/', waveform_name];
