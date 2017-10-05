@@ -38,6 +38,8 @@ for aug_str in augmentations:
             file_name = os.path.join(script_name[:-3], job_name + ".sbatch")
             script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)
+            slurm_path = os.path.join("..", "slurm",
+                "slurm_" + job_name + "_%j.out")
             with open(file_name, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
@@ -47,7 +49,7 @@ for aug_str in augmentations:
                 f.write("#SBATCH --cpus-per-task=1\n")
                 f.write("#SBATCH --time=12:00:00\n")
                 f.write("#SBATCH --mem=1GB\n")
-                f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
+                f.write("#SBATCH --output=" + slurm_path + "\n")
                 f.write("\n")
                 f.write("module purge\n")
                 f.write("\n")
