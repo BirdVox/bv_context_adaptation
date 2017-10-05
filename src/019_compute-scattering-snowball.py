@@ -53,6 +53,10 @@ matlab_code = "; ".join([
 unix_command = "matlab -r \"" + matlab_code + "\""
 
 
+# Call UNIX command.
+os.system(unix_command)
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
