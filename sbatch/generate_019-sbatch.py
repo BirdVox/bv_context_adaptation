@@ -9,11 +9,14 @@ import localmodule
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
 script_name = "019_compute-scattering-snowball.py"
-script_path = os.path.join("..", "..", "src", script_name)
+script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
-# Create folder.
-os.makedirs(script_name[:-3], exist_ok=True)
+# Create folders.
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
 
 
 # Loop over augmentations.
