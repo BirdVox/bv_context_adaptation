@@ -52,6 +52,7 @@ for aug_str in augmentations:
                 f.write("#SBATCH --output=" + slurm_path + "\n")
                 f.write("\n")
                 f.write("module purge\n")
+                f.write("module load matlab/2017a\n")
                 f.write("\n")
                 f.write("# The first argument is the name of the augmentation.\n")
                 f.write("# The second argument is the instance ID of the augmentation.\n")
