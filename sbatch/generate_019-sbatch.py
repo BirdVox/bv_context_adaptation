@@ -9,7 +9,7 @@ import localmodule
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
 script_name = "019_compute-scattering-snowball.py"
-script_path = os.path.join("..", "src", script_name)
+script_path = os.path.join("..", "..", "src", script_name)
 
 
 # Create folder.
