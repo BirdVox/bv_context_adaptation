@@ -17,6 +17,7 @@ sbatch_dir = os.path.join(script_name[:-3], "sbatch")
 os.makedirs(sbatch_dir, exist_ok=True)
 slurm_dir = os.path.join(script_name[:-3], "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
+file_path = os.path.join(sbatch_dir, script_name[:-3], script_name[:3] + ".sh")
 
 
 # Loop over augmentations.
