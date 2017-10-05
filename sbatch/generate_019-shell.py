@@ -8,7 +8,12 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-file_path = "019.sh"
+script_name = "019_compute-scattering-snowball.py"
+file_path = os.path.join(script_name[:-3], script_name[:3] + ".sh")
+
+
+# Create folder.
+os.makedirs(script_name[:-3], exist_ok=True)
 
 
 # Open shell file.
