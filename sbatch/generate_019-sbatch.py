@@ -12,6 +12,10 @@ script_name = "019_compute-scattering-snowball.py"
 script_path = os.path.join("..", "src", script_name)
 
 
+# Create folder.
+os.makedirs(script_name[:-3], exist_ok=True)
+
+
 # Loop over augmentations.
 for aug_str in augmentations:
     n_instances = augmentations[aug_str]
