@@ -9,6 +9,7 @@
 #SBATCH --output=../slurm/slurm_019_noise-unit01_2_unit01_%j.out
 
 module purge
+module load matlab/2017a
 
 # The first argument is the name of the augmentation.
 # The second argument is the instance ID of the augmentation.
