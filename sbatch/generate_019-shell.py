@@ -13,7 +13,10 @@ file_path = os.path.join(script_name[:-3], script_name[:3] + ".sh")
 
 
 # Create folder.
-os.makedirs(script_name[:-3], exist_ok=True)
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
 
 
 # Open shell file.
