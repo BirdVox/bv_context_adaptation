@@ -32,7 +32,7 @@ for aug_str in augmentations:
         # Loop over recording units.
         for unit_str in units:
             job_name = "_".join(["019", instanced_aug_str, unit_str])
-            file_name = job_name + ".sbatch"
+            file_name = os.path.join(script_name[:-3], job_name + ".sbatch")
             script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)
             with open(file_name, "w") as f:
