@@ -13,4 +13,4 @@ module purge
 # The first argument is the name of the augmentation.
 # The second argument is the instance ID of the augmentation.
 # The third argument is the name of the recording unit.
-python ../src/019_compute-scattering-snowball.py stretch 2 unit07
+python ../../src/019_compute-scattering-snowball.py stretch 2 unit07
