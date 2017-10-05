@@ -39,11 +39,13 @@ print("")
 
 # Define scattering path.
 scattering_path = os.path.expanduser(os.path.join("~", "scattering.m"))
+src_path = os.path.join("..", "..", "..", "src")
 
 
 # Define MATLAB code.
 matlab_code = "; ".join([
     "addpath(genpath('" + scattering_path + "'))",
+    "addpath('" + src_path + "')",
     "hdf5_path = '" + hdf5_path + "'",
     "compute_scattering_snowball(hdf5_path)",
     "quit;"])
