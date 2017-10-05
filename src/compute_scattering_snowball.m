@@ -74,7 +74,7 @@ scattering = struct();
 data_dir = fileparts(fileparts(hdf5_folder));
 scattering_snowball_dir = [dataset_name, '_scattering-snowball'];
 scattering_snowball_dir_path = fullfile(data_dir, scattering_snowball_dir);
-if ~exist(scattering_snowball_directory, 'dir')
+if ~exist(scattering_snowball_dir, 'dir')
     mkdir(scattering_snowball_dir_path);
 end
 
