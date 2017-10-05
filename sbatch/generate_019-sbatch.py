@@ -17,7 +17,6 @@ sbatch_dir = os.path.join(script_name[:-3], "sbatch")
 os.makedirs(sbatch_dir, exist_ok=True)
 slurm_dir = os.path.join(script_name[:-3], "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
-file_path = os.path.join(sbatch_dir, script_name[:3] + ".sh")
 
 
 # Loop over augmentations.
@@ -36,12 +35,12 @@ for aug_str in augmentations:
         # Loop over recording units.
         for unit_str in units:
             job_name = "_".join(["019", instanced_aug_str, unit_str])
-            file_name = os.path.join(script_name[:-3], job_name + ".sbatch")
+            file_path = os.path.join(sbatch_dir, job_name + ".sbatch")
             script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)
             slurm_path = os.path.join("..", "slurm",
                 "slurm_" + job_name + "_%j.out")
-            with open(file_name, "w") as f:
+            with open(file_path, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
                 f.write("#BATCH --job-name=" + job_name + "\n")
