@@ -1,0 +1,19 @@
+MATLAB is selecting SOFTWARE OPENGL rendering.
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2017 The MathWorks, Inc.
+                   R2017a (9.2.0.556344) 64-bit (glnxa64)
+                               March 27, 2017
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+2017-10-09 16:15:13.586957 Start.
+Computing scattering coefficients for BirdVox-70k.
+Unit: unit01.
+Augmentation: original.
+
+2017-10-09 16:21:03.459010 Finish.
+Total elapsed time: 00:05:50.46.
+slurmstepd: error: Exceeded step memory limit at some point.
