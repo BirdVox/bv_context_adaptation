@@ -7,7 +7,7 @@
 #SBATCH --time=6:00:00
 #SBATCH --mem=8GB
 #SBATCH --gres=gpu:1
-#SBATCH --output=slurm_013_aug-none_unit05_trial-8_%j.out
+#SBATCH --output=../slurm/slurm_013_aug-none_unit05_trial-8_%j.out
 
 module purge
 module load cuda/8.0.44
