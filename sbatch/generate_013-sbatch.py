@@ -31,6 +31,10 @@ for aug_kind_str in aug_kinds:
             script_path_with_args = " ".join(
                 [script_path, aug_kind_str, unit_str, trial_str])
 
+            # Define slurm path.
+            slurm_path = os.path.join("..", "slurm",
+                "slurm_" + job_name + "_%j.out")
+
             # Write call to python in SBATCH file.
             with open(file_name, "w") as f:
                 f.write("#!/bin/bash\n")
@@ -42,7 +46,7 @@ for aug_kind_str in aug_kinds:
                 f.write("#SBATCH --time=6:00:00\n")
                 f.write("#SBATCH --mem=8GB\n")
                 f.write("#SBATCH --gres=gpu:1\n")
-                f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
+                f.write("#SBATCH --output=" + slurm_path + "\n")
                 f.write("\n")
                 f.write("module purge\n")
                 f.write("module load cuda/8.0.44\n")
