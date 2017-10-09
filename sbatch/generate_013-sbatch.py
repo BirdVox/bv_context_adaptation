@@ -11,7 +11,7 @@ aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 units = localmodule.get_units()
 n_trials = 10
 script_name = "013_train-icassp-convnet.py"
-script_path = os.path.join("..", "src", script_name)
+script_path = os.path.join("..", "..", "src", script_name)
 
 
 # Create folders.
