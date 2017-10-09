@@ -14,6 +14,12 @@ script_name = "013_train-icassp-convnet.py"
 script_path = os.path.join("..", "src", script_name)
 
 
+# Create folders.
+os.makedirs(script_name[:-3], exist_ok=True)
+os.makedirs(os.path.join(script_name[:-3], "sbatch"), exist_ok=True)
+os.makedirs(os.path.join(script_name[:-3], "slurm"), exist_ok=True)
+
+
 # Loop over kind of augmentations
 for aug_kind_str in aug_kinds:
 
@@ -27,16 +33,19 @@ for aug_kind_str in aug_kinds:
             # Define job name.
             job_name = "_".join(
                 ["013", "aug-" + aug_kind_str, unit_str, trial_str])
-            file_name = job_name + ".sbatch"
             script_path_with_args = " ".join(
                 [script_path, aug_kind_str, unit_str, trial_str])
+
+            # Define file path.
+            file_name = job_name + ".sbatch"
+            file_path = os.path.join(script_name[:-3], "sbatch", file_name)
 
             # Define slurm path.
             slurm_path = os.path.join("..", "slurm",
                 "slurm_" + job_name + "_%j.out")
 
             # Write call to python in SBATCH file.
-            with open(file_name, "w") as f:
+            with open(file_path, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
                 f.write("#BATCH --job-name=" + job_name + "\n")
