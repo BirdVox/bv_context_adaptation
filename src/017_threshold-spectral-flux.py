@@ -56,7 +56,7 @@ odf = odf_file[odf_dataset_key]
 odf_length = odf.shape[1]
 
 
-# Create directory for Old Bird in models_dir.
+# Create directory for spectral flux in models_dir.
 model_dir = os.path.join(models_dir, "spectral-flux")
 os.makedirs(model_dir, exist_ok=True)
 out_unit_dir = os.path.join(model_dir, unit_str)
