@@ -16,4 +16,4 @@ module load cudnn/8.0v5.1
 # The first argument is the kind of augmentation.
 # The second argument is the name of the recording unit.
 # The third argument is name of trial.
-python ../../src/013_train-icassp-convnet.py all unit05 trial-5
+python ../../../src/013_train-icassp-convnet.py all unit05 trial-5
