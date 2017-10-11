@@ -82,6 +82,20 @@ prediction_name = "_".join([
     "full-predictions.csv"])
 prediction_path = os.path.join(trial_dir, prediction_name)
 prediction_df = pd.read_csv(prediction_path)
+odf = np.array(prediction_df["Predicted probability"])
+timestamps = np.array(prediction_df["Timestamp"])
+
+
+# Load annotation.
+annotation_path = os.path.join(annotations_dir, test_unit_str + ".txt")
+annotation = pd.read_csv(annotation_path, "\t")
+begin_times = np.array(annotation["Begin Time (s)"])
+end_times = np.array(annotation["End Time (s)"])
+relevant = 0.5 * (begin_times + end_times)
+relevant = np.sort(relevant)
+n_relevant = len(relevant)
+
+
 # Create CSV file for metrics.
 metrics_name = "_".join([
     dataset_name,
