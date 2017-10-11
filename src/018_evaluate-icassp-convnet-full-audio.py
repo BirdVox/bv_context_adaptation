@@ -4,6 +4,7 @@ import h5py
 import numpy as np
 import os
 import pandas as pd
+import peakutils
 import sklearn.metrics
 import sys
 import time
@@ -38,6 +39,7 @@ icassp_thresholds = 1.0 - np.concatenate((
 ))
 n_thresholds = len(icassp_thresholds)
 tolerance = 0.5 # in seconds
+min_dist = 3 # 150 ms
 
 
 # Print header.
@@ -178,6 +180,7 @@ for threshold_id in threshold_id_range:
         format(recall, ".6f"),
         format(f1_score, ".6f")
     ]
+    print(row)
 
 
 # Print elapsed time.
