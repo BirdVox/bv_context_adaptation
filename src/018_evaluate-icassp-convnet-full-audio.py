@@ -115,10 +115,16 @@ csv_header = [
     "Test unit",
     "Trial",
     "Prediction unit",
+    "Tolerance",
     "Threshold",
-    "TP",
-    "FP",
-    "FN"]
+    "Relevant",
+    "Selected",
+    "True positives",
+    "False positives",
+    "False negatives",
+    "Precision (%)",
+    "Recall (%)",
+    "F1 Score (%)"]
 csv_writer.writerow(csv_header)
 
 
