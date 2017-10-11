@@ -87,6 +87,8 @@ timestamps = np.array(prediction_df["Timestamp"])
 
 
 # Load annotation.
+annotations_name = "_".join([dataset_name, "annotations"])
+annotations_dir = os.path.join(data_dir, annotations_name)
 annotation_path = os.path.join(annotations_dir, test_unit_str + ".txt")
 annotation = pd.read_csv(annotation_path, "\t")
 begin_times = np.array(annotation["Begin Time (s)"])
