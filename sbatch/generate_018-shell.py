@@ -11,6 +11,7 @@ aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 units = localmodule.get_units()
 script_name = "018_evaluate-icassp-convnet-full-audio.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
+dataset_name = localmodule.get_dataset_name()
 n_trials = 10
 
 
