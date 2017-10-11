@@ -33,6 +33,11 @@ model_name = "icassp-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
+icassp_thresholds = 1.0 - np.concatenate((
+    np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)
+))
+n_thresholds = len(icassp_thresholds)
+tolerance = 0.5 # in seconds
 
 
 # Print header.
@@ -72,11 +77,12 @@ metrics_name = "_".join([
     dataset_name,
     model_name,
     test_unit_str,
-    "clip-metrics"
+    "full-audio-metrics"
 ])
 metrics_path = os.path.join(metrics_dir, metrics_name + ".csv")
 csv_file = open(metrics_path, 'w')
 csv_writer = csv.writer(csv_file, delimiter=',')
+
 
 # Write CSV header.
 csv_header = [
@@ -84,35 +90,11 @@ csv_header = [
     "Augmentation kind",
     "Test unit",
     "Trial",
-    "Ad hoc threshold",
-    "Ad hoc validation TP",
-    "Ad hoc validation FP",
-    "Ad hoc validation TN",
-    "Ad hoc validation FN",
-    "Ad hoc validation accuracy (%)",
-    "Ad hoc test TP",
-    "Ad hoc test FP",
-    "Ad hoc test TN",
-    "Ad hoc test FN",
-    "Ad hoc test accuracy (%)",
-    "Cross-validated threshold",
-    "Cross-validated validation TP",
-    "Cross-validated validation FP",
-    "Cross-validated validation TN",
-    "Cross-validated validation FN",
-    "Cross-validated validation accuracy (%)",
-    "Cross-validated test TP",
-    "Cross-validated test FP",
-    "Cross-validated test TN",
-    "Cross-validated test FN",
-    "Oracle threshold",
-    "Test oracle TP",
-    "Test oracle FP",
-    "Test oracle TN",
-    "Test oracle FN",
-    "Test oracle accuracy (%)",
-    "Validation AUC",
-    "Test AUC"]
+    "Prediction unit",
+    "Threshold",
+    "TP",
+    "FP",
+    "FN"]
 csv_writer.writerow(csv_header)
 
 
