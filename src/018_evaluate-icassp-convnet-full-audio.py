@@ -138,6 +138,10 @@ for threshold_id in threshold_id_range:
     peak_values = odf[peak_locations]
     selected = peak_times[peak_values > threshold]
 
+    # Match events.
+    selected_relevant = mir_eval.util.match_events(
+        relevant, selected, tolerance)
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
