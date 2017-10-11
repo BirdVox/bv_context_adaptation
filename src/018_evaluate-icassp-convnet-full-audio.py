@@ -142,6 +142,12 @@ for threshold_id in threshold_id_range:
     selected_relevant = mir_eval.util.match_events(
         relevant, selected, tolerance)
 
+    # Count TP, FP, and FN.
+    true_positives = len(selected_relevant)
+    n_selected = len(selected)
+    false_positives = n_selected - true_positives
+    false_negatives = n_relevant - true_positives
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
