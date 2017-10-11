@@ -108,11 +108,6 @@ csv_file = open(metrics_path, 'w')
 csv_writer = csv.writer(csv_file, delimiter=',')
 
 
-# Loop over thresholds.
-for threshold_id in threshold_id_range:
-    threshold = icassp_thresholds[threshold_id]
-
-
 # Write CSV header.
 csv_header = [
     "Dataset",
@@ -127,6 +122,15 @@ csv_header = [
 csv_writer.writerow(csv_header)
 
 
+# Loop over thresholds.
+for threshold_id in threshold_id_range:
+    threshold = icassp_thresholds[threshold_id]
+
+    # Pick peaks.
+    peak_locations = peakutils.indexes(odf, thres=threshold, min_dist=min_dist)
+    peak_times = timestamps[peak_locations]
+    peak_values = odf[peak_locations]
+    selected = peak_times[peak_values > threshold]
 
 
 # Print elapsed time.
