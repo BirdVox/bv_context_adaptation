@@ -158,6 +158,25 @@ for threshold_id in threshold_id_range:
         recall = 100 * true_positives / n_relevant
         f1_score = 2*precision*recall / (precision+recall)
 
+    # Write row.
+    row = [
+        dataset_name,
+        aug_kind_str,
+        test_unit_str,
+        str(trial_id),
+        predict_unit_str,
+        str(int(np.round(1000*tolerance))).rjust(4),
+        format(threshold, ".9f"),
+        str(relevant).rjust(5),
+        str(selected).rjust(6),
+        str(true_positives).rjust(5),
+        str(false_positives).rjust(5),
+        str(false_negatives).rjust(5),
+        format(precision, ".6f"),
+        format(recall, ".6f"),
+        format(f1_score, ".6f")
+    ]
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
