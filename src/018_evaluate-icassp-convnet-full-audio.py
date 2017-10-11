@@ -148,6 +148,16 @@ for threshold_id in threshold_id_range:
     false_positives = n_selected - true_positives
     false_negatives = n_relevant - true_positives
 
+    # Compute precision, recall, and F1 score.
+    if n_selected == 0 or true_positives == 0:
+        precision = 0.0
+        recall = 0.0
+        f1_score = 0.0
+    else:
+        precision = 100 * true_positives / n_selected
+        recall = 100 * true_positives / n_relevant
+        f1_score = 2*precision*recall / (precision+recall)
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
