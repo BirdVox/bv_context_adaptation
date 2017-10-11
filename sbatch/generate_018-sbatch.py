@@ -18,7 +18,7 @@ script_dir = script_name[:-3]
 os.makedirs(script_dir, exist_ok=True)
 sbatch_dir = os.path.join(script_dir, "sbatch")
 os.makedirs(sbatch_dir, exist_ok=True)
-slurm_dir = os.path.join(slurm_dir, "slurm")
+slurm_dir = os.path.join(script_dir, "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
 
 
