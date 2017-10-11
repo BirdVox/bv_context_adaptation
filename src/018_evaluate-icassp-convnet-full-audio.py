@@ -16,7 +16,8 @@ args = sys.argv[1:]
 aug_kind_str = args[0]
 test_unit_str = args[1]
 trial_id = int(args[2])
-thresholds_str = args[3]
+predict_unit_str = args[3]
+thresholds_str = args[4]
 threshold_id_start = int(thresholds_str[3:5])
 threshold_id_stop = int(thresholds_str[-2:])
 threshold_id_range = range(threshold_id_start, 1 + threshold_id_stop)
@@ -42,6 +43,7 @@ print("Thresholding Salamon's ICASSP 2017 convnet for detection in " +
 print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
+print("Prediction unit: " + predict_unit_str)
 print("Thresholds " + thresholds_str)
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
@@ -63,6 +65,7 @@ trial_dir = os.path.join(unit_dir, trial_str)
 # Create directory for metrics.
 metrics_dir = os.path.join(trial_dir, "metrics")
 os.makedirs(metrics_dir, exist_ok=True)
+
 
 # Create CSV file for metrics.
 metrics_name = "_".join([
