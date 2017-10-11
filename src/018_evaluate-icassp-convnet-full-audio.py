@@ -1,6 +1,7 @@
 import csv
 import datetime
 import h5py
+import mir_eval
 import numpy as np
 import os
 import pandas as pd
@@ -18,10 +19,6 @@ aug_kind_str = args[0]
 test_unit_str = args[1]
 trial_id = int(args[2])
 predict_unit_str = args[3]
-thresholds_str = args[4]
-threshold_id_start = int(thresholds_str[3:5])
-threshold_id_stop = int(thresholds_str[-2:])
-threshold_id_range = range(threshold_id_start, 1 + threshold_id_stop)
 
 
 # Define constants.
@@ -51,7 +48,6 @@ print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
 print("Prediction unit: " + predict_unit_str)
-print("Thresholds " + thresholds_str)
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
@@ -133,7 +129,7 @@ csv_writer.writerow(csv_header)
 
 
 # Loop over thresholds.
-for threshold_id in threshold_id_range:
+for threshold_id in range(n_thresholds):
     threshold = icassp_thresholds[threshold_id]
 
     # Pick peaks.
@@ -171,8 +167,8 @@ for threshold_id in threshold_id_range:
         predict_unit_str,
         str(int(np.round(1000*tolerance))).rjust(4),
         format(threshold, ".9f"),
-        str(relevant).rjust(5),
-        str(selected).rjust(6),
+        str(n_relevant).rjust(5),
+        str(n_selected).rjust(6),
         str(true_positives).rjust(5),
         str(false_positives).rjust(5),
         str(false_negatives).rjust(5),
@@ -180,7 +176,7 @@ for threshold_id in threshold_id_range:
         format(recall, ".6f"),
         format(f1_score, ".6f")
     ]
-    print(row)
+    print(" ".join(row))
 
 
 # Print elapsed time.
