@@ -184,11 +184,15 @@ for predict_unit_str in predict_units:
             str(true_positives).rjust(5),
             str(false_positives).rjust(6),
             str(false_negatives).rjust(5),
-            format(precision, ".6f").rjust(9),
-            format(recall, ".6f").rjust(9),
-            format(f1_score, ".6f").rjust(9)
+            format(precision, ".6f").rjust(10),
+            format(recall, ".6f").rjust(10),
+            format(f1_score, ".6f").rjust(10)
         ]
         print(" ".join(row))
+
+
+        # Close file.
+        csv_file.close()
 
 
 # Print elapsed time.
