@@ -19,6 +19,7 @@ os.makedirs(script_dir, exist_ok=True)
 sbatch_dir = os.path.join(script_dir, "sbatch")
 os.makedirs(sbatch_dir, exist_ok=True)
 slurm_dir = os.path.join(slurm_dir, "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
 
 
 # Loop over kinds of data augmentation.
