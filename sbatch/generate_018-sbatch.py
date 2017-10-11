@@ -47,7 +47,7 @@ for aug_kind_str in aug_kinds:
             script_path_with_args = " ".join(script_list)
 
             # Define slurm path.
-            slurm_path = os.path.join("..", "slurm_" + job_name + "_%j.out)
+            slurm_path = os.path.join("..", "slurm_" + job_name + "_%j.out")
 
             # Write sbatch file.
             with open(file_path, "w") as f:
