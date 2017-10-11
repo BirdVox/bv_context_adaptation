@@ -72,6 +72,16 @@ metrics_dir = os.path.join(trial_dir, "metrics")
 os.makedirs(metrics_dir, exist_ok=True)
 
 
+# Load ODF.
+prediction_name = "_".join([
+    dataset_name,
+    model_name,
+    "test-" + test_unit_str,
+    trial_str,
+    "predict-" + test_unit_str,
+    "full-predictions.csv"])
+prediction_path = os.path.join(trial_dir, prediction_name)
+prediction_df = pd.read_csv(prediction_path)
 # Create CSV file for metrics.
 metrics_name = "_".join([
     dataset_name,
@@ -82,6 +92,11 @@ metrics_name = "_".join([
 metrics_path = os.path.join(metrics_dir, metrics_name + ".csv")
 csv_file = open(metrics_path, 'w')
 csv_writer = csv.writer(csv_file, delimiter=',')
+
+
+# Loop over thresholds.
+for threshold_id in threshold_id_range:
+    threshold = icassp_thresholds[threshold_id]
 
 
 # Write CSV header.
