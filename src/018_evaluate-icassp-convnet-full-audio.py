@@ -40,7 +40,7 @@ min_dist = 3 # 150 ms
 
 # Retrieve fold such that unit_str is in the test set.
 folds = localmodule.fold_units()
-fold = [f for f in folds if unit_str in f[0]][0]
+fold = [f for f in folds if test_unit_str in f[0]][0]
 test_units = fold[0]
 training_units = fold[1]
 validation_units = fold[2]
@@ -55,7 +55,7 @@ print("Thresholding Salamon's ICASSP 2017 convnet for detection in " +
 print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
-print("Prediction units: " + predict_units)
+print("Prediction units: " + ", ".join(predict_units))
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
@@ -87,7 +87,7 @@ for predict_unit_str in predict_units:
         model_name,
         "test-" + test_unit_str,
         trial_str,
-        "predict-" + test_unit_str,
+        "predict-" + predict_unit_str,
         "full-predictions.csv"])
     prediction_path = os.path.join(trial_dir, prediction_name)
     prediction_df = pd.read_csv(prediction_path)
@@ -144,7 +144,8 @@ for predict_unit_str in predict_units:
         threshold = icassp_thresholds[threshold_id]
 
         # Pick peaks.
-        peak_locations = peakutils.indexes(odf, thres=threshold, min_dist=min_dist)
+        peak_locations = peakutils.indexes(
+            odf, thres=threshold, min_dist=min_dist)
         peak_times = timestamps[peak_locations]
         peak_values = odf[peak_locations]
         selected = peak_times[peak_values > threshold]
@@ -181,7 +182,7 @@ for predict_unit_str in predict_units:
             str(n_relevant).rjust(5),
             str(n_selected).rjust(6),
             str(true_positives).rjust(5),
-            str(false_positives).rjust(5),
+            str(false_positives).rjust(6),
             str(false_negatives).rjust(5),
             format(precision, ".6f").rjust(9),
             format(recall, ".6f").rjust(9),
