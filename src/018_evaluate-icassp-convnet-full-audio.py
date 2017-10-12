@@ -188,6 +188,7 @@ for predict_unit_str in predict_units:
             format(recall, ".6f").rjust(10),
             format(f1_score, ".6f").rjust(10)
         ]
+        csv_writer.writerow(row)
 
 
         # Close file.
