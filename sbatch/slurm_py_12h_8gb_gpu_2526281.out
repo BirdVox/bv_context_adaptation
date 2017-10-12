@@ -63,3 +63,5 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 19:22:18.588 NotebookApp] Kernel restarted: 7b191001-b051-4382-94e9-261039f5016c
 [I 19:23:36.282 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
 [W 19:23:36.282 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:25:36.063 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:25:36.064 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
