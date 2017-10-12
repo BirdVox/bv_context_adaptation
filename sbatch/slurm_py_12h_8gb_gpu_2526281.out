@@ -1,0 +1,65 @@
+
+Jupyter server is running on: gpu-24
+Job starts at: Thu Oct 12 19:00:19 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7221:localhost:7221 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7221:localhost:7221 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 19:00:21.446 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2526281/jupyter/notebook_cookie_secret
+[I 19:00:21.934 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 19:00:21.934 NotebookApp] 0 active kernels 
+[I 19:00:21.934 NotebookApp] The Jupyter Notebook is running at: http://localhost:7221/?token=d2cbf1ac4852a67e610cd47479793b6688d3e9ff8b7b5c61
+[I 19:00:21.934 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 19:00:21.935 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7221/?token=d2cbf1ac4852a67e610cd47479793b6688d3e9ff8b7b5c61
+[I 19:02:29.341 NotebookApp] 302 GET /?token=d2cbf1ac4852a67e610cd47479793b6688d3e9ff8b7b5c61 (::1) 0.83ms
+[W 19:05:33.242 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[I 19:05:34.729 NotebookApp] Kernel started: 7b191001-b051-4382-94e9-261039f5016c
+[W 19:05:34.765 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171012190021 (::1) 31.90ms referer=http://localhost:7221/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:07:35.911 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:07:35.912 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:08:55.771 NotebookApp] Kernel interrupted: 7b191001-b051-4382-94e9-261039f5016c
+[I 19:09:12.301 NotebookApp] Kernel restarted: 7b191001-b051-4382-94e9-261039f5016c
+[I 19:09:35.434 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:09:35.435 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:11:36.017 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:11:36.018 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:13:45.500 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:13:45.501 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:15:38.263 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:15:38.264 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:17:36.700 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:17:36.700 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:19:36.206 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:19:36.206 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:20:42.796 NotebookApp] Kernel restarted: 7b191001-b051-4382-94e9-261039f5016c
+[I 19:21:37.391 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:21:37.392 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 19:22:18.588 NotebookApp] Kernel restarted: 7b191001-b051-4382-94e9-261039f5016c
+[I 19:23:36.282 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 19:23:36.282 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb

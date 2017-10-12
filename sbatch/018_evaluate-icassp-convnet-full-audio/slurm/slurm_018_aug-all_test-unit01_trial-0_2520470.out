@@ -1,0 +1,14 @@
+2017-10-12 07:07:54.188956 Start.
+Thresholding Salamon's ICASSP 2017 convnet for detection in BirdVox-70k full audio. 
+Augmentation kind: all
+Test unit: unit01
+Trial ID: 0
+Prediction units: unit01, unit07, unit10
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+
+2017-10-12 07:09:22.195413 Finish.
+Total elapsed time: 00:01:28.20.
