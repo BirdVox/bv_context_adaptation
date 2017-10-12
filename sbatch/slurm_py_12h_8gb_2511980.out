@@ -55,3 +55,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 21:21:24.479 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
 [I 21:24:56.206 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
 [W 21:24:56.207 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+slurmstepd: error: *** JOB 2511980 ON c17-01 CANCELLED AT 2017-10-11T21:29:34 ***
