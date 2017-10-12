@@ -76,11 +76,6 @@ for predict_unit_str in predict_units:
     trial_dir = os.path.join(unit_dir, trial_str)
 
 
-    # Create directory for metrics.
-    metrics_dir = os.path.join(trial_dir, "metrics")
-    os.makedirs(metrics_dir, exist_ok=True)
-
-
     # Load ODF.
     prediction_name = "_".join([
         dataset_name,
@@ -111,10 +106,12 @@ for predict_unit_str in predict_units:
     metrics_name = "_".join([
         dataset_name,
         model_name,
-        test_unit_str,
+        "test-" + test_unit_str,
+        trial_str,
+        "predict-" + predict_unit_str,
         "full-audio-metrics"
     ])
-    metrics_path = os.path.join(metrics_dir, metrics_name + ".csv")
+    metrics_path = metrics_name + ".csv"
     csv_file = open(metrics_path, 'w')
     csv_writer = csv.writer(csv_file, delimiter=',')
 
