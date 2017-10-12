@@ -1,0 +1,16 @@
+2017-10-11 21:25:23.823124 Start.
+Thresholding Salamon's ICASSP 2017 convnet for detection in BirdVox-70k full audio. 
+Augmentation kind: none
+Test unit: unit07
+Trial ID: 0
+Prediction units: unit07, unit03, unit05
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+
+Traceback (most recent call last):
+  File "../../../src/018_evaluate-icassp-convnet-full-audio.py", line 191, in <module>
+    csv_writer.writerow(row)
+ValueError: I/O operation on closed file.
