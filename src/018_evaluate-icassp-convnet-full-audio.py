@@ -111,7 +111,7 @@ for predict_unit_str in predict_units:
         "predict-" + predict_unit_str,
         "full-audio-metrics"
     ])
-    metrics_path = metrics_name + ".csv"
+    metrics_path = os.path.join(trial_dir, metrics_name + ".csv")
     csv_file = open(metrics_path, 'w')
     csv_writer = csv.writer(csv_file, delimiter=',')
 
