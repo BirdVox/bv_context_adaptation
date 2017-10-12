@@ -191,8 +191,8 @@ for predict_unit_str in predict_units:
         csv_writer.writerow(row)
 
 
-        # Close file.
-        csv_file.close()
+    # Close file.
+    csv_file.close()
 
 
 # Print elapsed time.
