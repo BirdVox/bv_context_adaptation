@@ -6,7 +6,7 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0:10:00
 #SBATCH --mem=1GB
-#SBATCH --output=../slurm_018_aug-noise_test-unit05_trial-1_%j.out
+#SBATCH --output=../slurm/slurm_018_aug-noise_test-unit05_trial-1_%j.out
 
 module purge
 
