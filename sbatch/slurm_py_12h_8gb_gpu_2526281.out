@@ -101,3 +101,12 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 20:39:17.173 NotebookApp] Kernel started: 0c52d404-b30e-4811-ad8b-89b000d3445d
 [I 20:43:50.247 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
 [W 20:43:50.248 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 20:49:10.046 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 20:49:10.047 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 20:54:23.666 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 20:54:23.666 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 20:59:33.629 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 20:59:33.630 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 21:03:26.504 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171012190021 (::1) 2.79ms referer=http://localhost:7221/notebooks/spl2017/notebooks/oldbird.ipynb
+[W 21:03:26.628 NotebookApp] Notebook spl2017/notebooks/oldbird.ipynb is not trusted
+[I 21:03:28.585 NotebookApp] Kernel started: 84eef80a-187a-4336-93fa-fbf56deda957
