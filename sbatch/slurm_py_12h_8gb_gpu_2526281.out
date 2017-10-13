@@ -146,3 +146,8 @@ WARNING:root:kernel 7eda53c3-eb83-4551-b82e-4782887cf5aa restarted
 [I 22:50:08.547 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
 [I 22:55:29.749 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
 [I 23:00:50.525 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 23:06:08.742 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[W 23:17:00.667 NotebookApp] WebSocket ping timeout after 119550 ms.
+[W 23:22:13.325 NotebookApp] WebSocket ping timeout after 90000 ms.
+[I 23:29:37.465 NotebookApp] 302 GET /?token=d2cbf1ac4852a67e610cd47479793b6688d3e9ff8b7b5c61 (::1) 0.52ms
+[W 23:30:11.344 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171012190021 (::1) 2.58ms referer=http://localhost:7221/notebooks/spl2017/notebooks/display-icassp-layers.ipynb
