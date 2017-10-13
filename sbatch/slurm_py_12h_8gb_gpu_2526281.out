@@ -112,3 +112,14 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 21:03:28.585 NotebookApp] Kernel started: 84eef80a-187a-4336-93fa-fbf56deda957
 [I 21:05:30.639 NotebookApp] Saving file at /spl2017/notebooks/oldbird.ipynb
 [W 21:05:30.640 NotebookApp] Saving untrusted notebook spl2017/notebooks/oldbird.ipynb
+[I 21:07:29.855 NotebookApp] Saving file at /spl2017/notebooks/oldbird.ipynb
+[W 21:07:29.855 NotebookApp] Saving untrusted notebook spl2017/notebooks/oldbird.ipynb
+[W 21:41:40.439 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 21:41:40.539 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171012190021 (::1) 2.46ms referer=http://localhost:7221/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 21:42:23.684 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 21:42:23.685 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 21:47:56.712 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 21:47:56.713 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 21:47:56.944 NotebookApp] Kernel interrupted: 76677015-b5f2-4dff-a0ab-a260b03bef57
+[I 21:55:00.749 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 21:55:00.749 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
