@@ -123,3 +123,26 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 21:47:56.944 NotebookApp] Kernel interrupted: 76677015-b5f2-4dff-a0ab-a260b03bef57
 [I 21:55:00.749 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
 [W 21:55:00.749 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 22:03:17.792 NotebookApp] Saving file at /spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 22:03:17.793 NotebookApp] Saving untrusted notebook spl2017/notebooks/analyze_icassp_errors.ipynb
+[W 22:32:33.156 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171012190021 (::1) 2.36ms referer=http://localhost:7221/notebooks/spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:32:34.805 NotebookApp] Kernel started: 7eda53c3-eb83-4551-b82e-4782887cf5aa
+[I 22:34:37.658 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:36:43.693 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:38:39.930 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:39:26.641 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:40:54.134 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+2017-10-12 22:43:50.447190: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 22:43:50.447422: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 22:43:50.447435: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 22:44:46.060 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:47:38.589 NotebookApp] Kernel restarted: 7eda53c3-eb83-4551-b82e-4782887cf5aa
+[I 22:47:38.592 NotebookApp] Kernel interrupted: 7eda53c3-eb83-4551-b82e-4782887cf5aa
+[I 22:47:41.590 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 7eda53c3-eb83-4551-b82e-4782887cf5aa restarted
+2017-10-12 22:47:59.042717: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 22:47:59.042967: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-10-12 22:47:59.042980: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 22:50:08.547 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 22:55:29.749 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[I 23:00:50.525 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
