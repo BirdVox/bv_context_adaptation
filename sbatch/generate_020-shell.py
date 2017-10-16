@@ -8,6 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
+script_name = "020_compute-skm-logmelspec.py"
 
 
 # Create folder.
@@ -20,7 +21,7 @@ os.makedirs(slurm_dir, exist_ok=True)
 
 
 # Define file path.
-file_path = os.path.join(sbatch_dir, "020.sh")
+file_path = os.path.join(sbatch_dir, script_name[:3] + ".sh")
 
 
 # Open shell file.
