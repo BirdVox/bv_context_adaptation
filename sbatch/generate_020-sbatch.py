@@ -48,7 +48,7 @@ for aug_str in augmentations:
                 "slurm_" + job_name + "_%j.out")
 
             # Open file.
-            with open(file_name, "w") as f:
+            with open(file_path, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
                 f.write("#BATCH --job-name=" + job_name + "\n")
