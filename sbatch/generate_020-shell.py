@@ -26,7 +26,7 @@ file_path = os.path.join(sbatch_dir, "020.sh")
 # Open shell file.
 with open(file_path, "w") as f:
     # Print header.
-    f.write("# This shell script executes the Slurm jobs for computing"\ +
+    f.write("# This shell script executes the Slurm jobs for computing" +\
         "log-mel-spectrograms for SKM-SVM model.\n")
     f.write("\n")
 
