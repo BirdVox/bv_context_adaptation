@@ -158,3 +158,5 @@ WARNING:root:kernel 7eda53c3-eb83-4551-b82e-4782887cf5aa restarted
 [I 23:58:06.563 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
 [I 00:00:05.750 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
 [I 00:10:11.756 NotebookApp] Saving file at /spl2017/notebooks/display-icassp-layers.ipynb
+[W 00:22:28.574 NotebookApp] WebSocket ping timeout after 119706 ms.
+slurmstepd: error: *** JOB 2526281 ON gpu-24 CANCELLED AT 2017-10-13T07:00:38 DUE TO TIME LIMIT ***
