@@ -11,13 +11,26 @@ script_name = "006_compute-full-logmelspec.py"
 script_path = os.path.join("..", "src", script_name)
 
 
+# Create folders.
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
+
+
 # Loop over recording units.
 for unit_str in units:
+    # Define file path.
     job_name = "_".join(["006", unit_str])
     file_name = job_name + ".sbatch"
+    file_path = os.path.join(sbatch_dir, file_name)
+
+    # Define script.
     script_list = [script_path, unit_str]
     script_path_with_args = " ".join(script_list)
-    with open(file_name, "w") as f:
+
+    # Open file.
+    with open(file_path, "w") as f:
         f.write("#!/bin/bash\n")
         f.write("\n")
         f.write("#BATCH --job-name=" + job_name + "\n")
