@@ -38,7 +38,7 @@ print("")
 
 
 # Create HDF5 container of logmelspecs
-full_logmelspec_name = "_".join([dataset_name, "full-logmelspec"])
+full_logmelspec_name = "_".join([dataset_name, "skm-full-logmelspec"])
 full_logmelspec_dir = os.path.join(data_dir, full_logmelspec_name)
 os.makedirs(full_logmelspec_dir, exist_ok=True)
 out_name = unit_str
