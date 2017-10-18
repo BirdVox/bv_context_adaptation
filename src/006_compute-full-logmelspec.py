@@ -153,6 +153,10 @@ for chunk_id in range(n_chunks):
     lms_dataset[:, hop_start:hop_stop] = logmelspec
 
 
+# Close file.
+out_file.close()
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
