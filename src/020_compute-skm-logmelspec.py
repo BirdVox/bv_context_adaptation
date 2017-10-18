@@ -122,6 +122,9 @@ for clip_name in clip_names:
     lms_group[clip_name] = logmelspec
 
 
+# Close file.
+out_file.close()
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
