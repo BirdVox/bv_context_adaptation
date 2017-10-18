@@ -7,7 +7,7 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-file_path = "021.sh"
+script_name = "021_compute-skm-full-logmelspec.py"
 
 
 # Create folder.
@@ -34,7 +34,6 @@ with open(file_path, "w") as f:
 
         # Write SBATCH command to shell file.
         f.write(sbatch_str + "\n")
-    f.write("\n")
 
 
 # Grant permission to execute the shell file.
