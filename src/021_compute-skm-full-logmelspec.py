@@ -132,7 +132,7 @@ for chunk_id in range(n_chunks):
         S=abs2_stft,
         sr=logmelspec_settings["sr"],
         n_fft=logmelspec_settings["n_fft"],
-        n_mels=logmelspec_settings["n_mels"],
+        n_mels=40,
         htk=True,
         fmin=logmelspec_settings["fmin"],
         fmax=logmelspec_settings["fmax"])
