@@ -43,14 +43,14 @@ for aug_str in augmentations:
             else:
                 instanced_aug_str = "_".join([aug_str, instance_str])
 
-                # Loop over recording units.
-                for unit_str in units:
-                    # Define job name.
-                    job_name = "_".join(["020", instanced_aug_str, unit_str])
-                    sbatch_str = "sbatch " + job_name + ".sbatch"
+            # Loop over recording units.
+            for unit_str in units:
+                # Define job name.
+                job_name = "_".join(["020", instanced_aug_str, unit_str])
+                sbatch_str = "sbatch " + job_name + ".sbatch"
 
-                    # Write SBATCH command to shell file.
-                    f.write(sbatch_str + "\n")
+                # Write SBATCH command to shell file.
+                f.write(sbatch_str + "\n")
             f.write("\n")
 
 
@@ -58,4 +58,4 @@ for aug_str in augmentations:
     # https://stackoverflow.com/a/30463972
     mode = os.stat(shell_path).st_mode
     mode |= (mode & 0o444) >> 2
-    os.chmod(file_path, mode)
+    os.chmod(shell_path, mode)
