@@ -39,7 +39,7 @@ for unit_str in units:
         f.write("#SBATCH --cpus-per-task=1\n")
         f.write("#SBATCH --time=2:00:00\n")
         f.write("#SBATCH --mem=4GB\n")
-        f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
+        f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
         f.write("\n")
         f.write("module purge\n")
         f.write("\n")
