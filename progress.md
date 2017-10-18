@@ -78,18 +78,22 @@ D. Snowball on UrbanSound-8K
 
 
 E. Cross-validated spherical k-means model
-1. [IN PROGRESS] Compute log-mel-spectrograms.
+1. [IN PROGRESS] Compute log-mel-spectrograms on 70k recordings. Parallelize across units (6).
 
-2. Train SKM on BirdVox-70k clips with augmentation (one trial). Parallelize across units (6).
+2. Train PCA on BirdVox-70k clips without augmentation. Save biases and PCA matrices. Parallelize across units (6).
 
-3. Compute predictions on 6 full night recordings.
+3. Train SKM on BirdVox-70k clips. Parallelize across units (6) and trials (10).
 
-4. Postprocessing: peak-picking, thresholding, event matching.
+4. Train SVM on BirdVox-70k. Parallelize across units (6), trials (10), and log10C (5).
 
-5. Export metrics (n_selected, TP, FP, FN, precision, recall, F)
+5. Compute predictions on 6 full night recordings.
+
+6. Postprocessing: peak-picking, thresholding, event matching.
+
+7. Export metrics (n_selected, TP, FP, FN, precision, recall, F)
 for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 
-6. Compute global metrics (n_selected, TP, FP, FN, precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
+8. Compute global metrics (n_selected, TP, FP, FN, precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
 
 
 F. Spectral flux
