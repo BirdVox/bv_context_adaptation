@@ -24,25 +24,26 @@ os.makedirs(slurm_dir, exist_ok=True)
 file_path = os.path.join(sbatch_dir, script_name[:3] + ".sh")
 
 
-# Open shell file.
-with open(file_path, "w") as f:
-    # Print header.
-    f.write("# This shell script executes the Slurm jobs for computing" +\
-        "log-mel-spectrograms for SKM-SVM model.\n")
-    f.write("\n")
 
-    # Loop over augmentations.
-    for aug_str in augmentations:
+# Loop over augmentations.
+for aug_str in augmentations:
 
-        # Loop over instances.
-        n_instances = augmentations[aug_str]
-        for instance_id in range(n_instances):
-            instance_str = str(instance_id)
+    # Loop over instances.
+    n_instances = augmentations[aug_str]
+    for instance_id in range(n_instances):
+        instance_str = str(instance_id)
 
-            if aug_str == "original":
-                instanced_aug_str = aug_str
-            else:
-                instanced_aug_str = "_".join([aug_str, instance_str])
+        if aug_str == "original":
+            instanced_aug_str = aug_str
+        else:
+            instanced_aug_str = "_".join([aug_str, instance_str])
+
+        # Open shell file.
+        with open(file_path, "w") as f:
+            # Print header.
+            f.write("# This shell script executes the Slurm jobs for computing" +\
+                "log-mel-spectrograms for SKM-SVM model.\n")
+            f.write("\n")
 
             # Loop over recording units.
             for unit_str in units:
@@ -52,8 +53,8 @@ with open(file_path, "w") as f:
 
                 # Write SBATCH command to shell file.
                 f.write(sbatch_str + "\n")
-            f.write("\n")
         f.write("\n")
+    f.write("\n")
 
 
 # Grant permission to execute the shell file.
