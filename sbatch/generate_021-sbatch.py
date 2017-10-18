@@ -7,7 +7,7 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-script_name = "021_compute-full-logmelspec.py"
+script_name = "021_compute-skm-full-logmelspec.py"
 script_path = os.path.join("..", "src", script_name)
 
 
