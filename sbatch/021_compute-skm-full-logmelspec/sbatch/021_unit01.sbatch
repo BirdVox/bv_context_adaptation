@@ -11,4 +11,4 @@
 module purge
 
 # The argument is the name of the recording unit.
-python ../src/021_compute-skm-full-logmelspec.py unit01
+python ../../../src/021_compute-skm-full-logmelspec.py unit01
