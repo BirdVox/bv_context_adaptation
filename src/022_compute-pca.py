@@ -14,6 +14,10 @@ import localmodule
 # Define constants.
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
+patch_width = 32
+n_patches_per_clip = 3
+
+# Parse arguments.
 args = sys.argv[1:]
 aug_str = args[0]
 instance_id = int(args[1])
