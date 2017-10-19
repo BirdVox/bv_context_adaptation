@@ -98,6 +98,9 @@ for train_unit_str in training_units:
             X.append(np.ravel(patch))
 
 
+# Concatenate raveled patches as rows.
+X = np.stack(X)
+
 
 # Close HDF5 file.
 in_file.close()
