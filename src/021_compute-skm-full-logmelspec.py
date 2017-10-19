@@ -96,7 +96,7 @@ n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
 
 
 # Start HDF5 group for log-mel-spectrograms (logmelspec).
-lms_dataset_size = (settings_group["n_mels"], n_hops)
+lms_dataset_size = (40, n_hops)
 lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
 
 
