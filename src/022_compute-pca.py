@@ -60,6 +60,9 @@ aug_dir = os.path.join(logmelspec_dir, aug_str)
 X = []
 
 
+# Loop over training units.
+for train_unit_str in training_units:
+
 
 
 
