@@ -15,7 +15,7 @@ import localmodule
 data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 patch_width = 32
-n_patches_per_clip = 3
+n_patches_per_clip = 10
 
 # Parse arguments.
 args = sys.argv[1:]
