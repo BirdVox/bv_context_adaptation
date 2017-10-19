@@ -89,6 +89,11 @@ for train_unit_str in training_units:
         # Loop over time-frequency patches.
         for patch_id in range(n_patches_per_clip):
 
+            # Extract patch.
+            patch_start = logmelspec_start + patch_id * patch_width
+            patch_stop = patch_start + patch_width
+            patch = logmelspec[:, patch_start:patch_stop]
+
 
 
 # Close HDF5 file.
