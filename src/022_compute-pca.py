@@ -80,6 +80,12 @@ for train_unit_str in training_units:
         # Load logmelspec.
         logmelspec = in_file["logmelspec"][clip_name].value
 
+        # Load time-frequency patches.
+        logmelspec_width = logmelspec.shape[1]
+        logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
+        logmelspec_start = logmelspec_mid -\
+            np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
+
 
 
 # Close HDF5 file.
