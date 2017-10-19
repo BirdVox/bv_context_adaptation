@@ -103,7 +103,7 @@ F. Spectral flux
 
 3. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units and 10 tolerances. It results in 6*10=60 CSV files.
 
-4. Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 60 CSV files.
+4. [DONE] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 60 CSV files.
 
 
 G. Snowball on BirdVox-70k
