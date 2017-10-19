@@ -94,6 +94,9 @@ for train_unit_str in training_units:
             patch_stop = patch_start + patch_width
             patch = logmelspec[:, patch_start:patch_stop]
 
+            # Ravel patch.
+            X.append(np.ravel(patch))
+
 
 
 # Close HDF5 file.
