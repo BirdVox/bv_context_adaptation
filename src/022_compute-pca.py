@@ -69,6 +69,11 @@ for train_unit_str in training_units:
     in_file = h5py.File(in_path)
 
 
+    # List clips.
+    lms_group = in_file.create_group("logmelspec")
+    clip_names = list(in_file["waveforms"].keys())
+
+
 
 
 # Close HDF5 file.
