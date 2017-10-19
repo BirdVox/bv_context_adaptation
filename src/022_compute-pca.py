@@ -63,6 +63,11 @@ X = []
 # Loop over training units.
 for train_unit_str in training_units:
 
+    # Load HDF5 container of logmelspecs.
+    hdf5_name = "_".join([dataset_name, instanced_aug_str, train_unit_str])
+    in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
+    in_file = h5py.File(in_path)
+
 
 
 
