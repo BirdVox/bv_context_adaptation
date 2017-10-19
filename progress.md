@@ -99,7 +99,7 @@ for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 F. Spectral flux
 1. [DONE] Run spectral flux on 6 full night recordings. Export into 6 HDF5 containers by chunks. Parallelize over units.
 
-2. [IN PROGRESS] Apply spectral flux detector, with 100 thresholds, to spectral flux ODF, on 6 full night recordings. Export peak times as 6*100=600 CSV files. Parallelize over units (6) and groups of 10 thresholds (10).
+2. [DONE] Apply spectral flux detector, with 100 thresholds, to spectral flux ODF, on 6 full night recordings. Export peak times as 6*100=600 CSV files. Parallelize over units (6) and groups of 10 thresholds (10).
 
 3. Export metrics (n_selected, TP, FP, FN, precision, recall, F) for all 6 units and 10 tolerances. It results in 6*10=60 CSV files.
 
