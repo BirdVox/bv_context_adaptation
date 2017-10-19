@@ -56,9 +56,8 @@ logmelspec_dir = os.path.join(data_dir, logmelspec_name)
 aug_dir = os.path.join(logmelspec_dir, aug_str)
 
 
-# List clips.
-lms_group = in_file.create_group("logmelspec")
-clip_names = list(in_file["waveforms"].keys())
+# Initialize matrix of training data.
+X = []
 
 
 
