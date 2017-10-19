@@ -18,18 +18,26 @@ args = sys.argv[1:]
 aug_str = args[0]
 instance_id = int(args[1])
 instance_str = str(instance_id)
-unit_str = args[2]
+test_unit_str = args[2]
 if aug_str == "original":
     instanced_aug_str = aug_str
 else:
     instanced_aug_str = "-".join([aug_str, instance_str])
 
 
+# Retrieve fold such that test_unit_str is in the test set.
+folds = localmodule.fold_units()
+fold = [f for f in folds if test_unit_str in f[0]][0]
+test_units = fold[0]
+training_units = fold[1]
+validation_units = fold[2]
+
+
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Computing PCA for " + dataset_name + " clips.")
-print("Unit: " + unit_str + ".")
+print("Test Unit: " + test_unit_str + ".")
 print("")
 print("h5py version: {:s}".format(h5py.__version__))
 print("librosa version: {:s}".format(librosa.__version__))
@@ -46,7 +54,11 @@ in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
 in_file = h5py.File(in_path)
 
 
-# List keys.
+# List clips.
+lms_group = in_file.create_group("logmelspec")
+clip_names = list(in_file["waveforms"].keys())
+
+
 
 
 
