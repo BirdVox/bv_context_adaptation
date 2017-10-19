@@ -4,6 +4,7 @@ import librosa
 import numpy as np
 import os
 import sklearn
+from sklearn.externals import joblib
 import soundfile as sf
 import sys
 import time
@@ -104,6 +105,10 @@ X = np.stack(X)
 
 # Define PCA object in scikit-learn.
 pca = sklearn.decomposition.PCA()
+
+
+# Fit PCA.
+pca.fit(X)
 
 
 # Close HDF5 file.
