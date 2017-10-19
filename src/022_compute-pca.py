@@ -50,12 +50,10 @@ print("scikit-learn version: {:s}".format(sklearn.__version__))
 print("")
 
 
-# Load HDF5 container of logmelspecs.
+# Define input folder.
 logmelspec_name = "_".join([dataset_name, "skm-logmelspec"])
 logmelspec_dir = os.path.join(data_dir, logmelspec_name)
 aug_dir = os.path.join(logmelspec_dir, aug_str)
-in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
-in_file = h5py.File(in_path)
 
 
 # List clips.
