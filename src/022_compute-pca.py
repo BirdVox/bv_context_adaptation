@@ -86,6 +86,9 @@ for train_unit_str in training_units:
         logmelspec_start = logmelspec_mid -\
             np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
 
+        # Loop over time-frequency patches.
+        for patch_id in range(n_patches_per_clip):
+
 
 
 # Close HDF5 file.
