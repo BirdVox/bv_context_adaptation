@@ -115,6 +115,10 @@ pca.fit(X)
 in_file.close()
 
 
+# Pickle trained PCA with joblib.
+
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
