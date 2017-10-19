@@ -77,6 +77,9 @@ for train_unit_str in training_units:
     # Loop over clips.
     for clip_name in clip_names:
 
+        # Load logmelspec.
+        logmelspec = in_file["logmelspec"][clip_name].value
+
 
 
 # Close HDF5 file.
