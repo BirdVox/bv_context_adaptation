@@ -74,6 +74,9 @@ for train_unit_str in training_units:
     clip_names = list(in_file["waveforms"].keys())
 
 
+    # Loop over clips.
+    for clip_name in clip_names:
+
 
 
 # Close HDF5 file.
