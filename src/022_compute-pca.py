@@ -102,6 +102,10 @@ for train_unit_str in training_units:
 X = np.stack(X)
 
 
+# Define PCA object in scikit-learn.
+pca = sklearn.decomposition.PCA()
+
+
 # Close HDF5 file.
 in_file.close()
 
