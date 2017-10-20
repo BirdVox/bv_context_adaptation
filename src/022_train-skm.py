@@ -105,6 +105,10 @@ in_file.close()
 skm_model = skm.SKM(k=256)
 
 
+# Train SKM.
+skm_model.fit(X)
+
+
 
 
 
