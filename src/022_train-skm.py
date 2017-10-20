@@ -16,6 +16,8 @@ data_dir = localmodule.get_data_dir()
 dataset_name = localmodule.get_dataset_name()
 patch_width = 32
 n_patches_per_clip = 10
+aug_str = "original"
+instanced_aug_str = aug_str
 
 
 # Parse arguments.
