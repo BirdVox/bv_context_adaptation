@@ -18,14 +18,7 @@ n_patches_per_clip = 10
 
 # Parse arguments.
 args = sys.argv[1:]
-aug_str = args[0]
-instance_id = int(args[1])
-instance_str = str(instance_id)
-test_unit_str = args[2]
-if aug_str == "original":
-    instanced_aug_str = aug_str
-else:
-    instanced_aug_str = "-".join([aug_str, instance_str])
+test_unit_str = args[0]
 
 
 # Retrieve fold such that test_unit_str is in the test set.
