@@ -121,6 +121,11 @@ trial_dir = os.path.join(unit_dir, trial_name)
 os.makedirs(trial_dir, exist_ok=True)
 
 
+# Save SKM model.
+model_name = "_".join([
+    dataset_name, model_name, unit_dir, trial_name, "model.hdf5"
+])
+model_path = os.path.join(trial_dir, model_name)
 
 
 
