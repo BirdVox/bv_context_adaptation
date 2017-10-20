@@ -101,7 +101,10 @@ X = np.stack(X).T
 in_file.close()
 
 
-# Pickle trained PCA with joblib.
+# Construct SKM model.
+skm_model = skm.SKM(k=256)
+
+
 
 
 
