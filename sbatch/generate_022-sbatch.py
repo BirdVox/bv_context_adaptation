@@ -29,7 +29,7 @@ for unit_str in units:
         trial_str = str(trial_id).zfill(2)
 
         # Define file path.
-        job_name = "_".join(["022", unit_str, trial_str])
+        job_name = "_".join(["022", unit_str, "trial-" + trial_str])
         file_name = job_name + ".sbatch"
         file_path = os.path.join(sbatch_dir, file_name)
 
