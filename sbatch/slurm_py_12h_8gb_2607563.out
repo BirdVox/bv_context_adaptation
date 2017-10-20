@@ -173,3 +173,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 20:33:53.031 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
 [I 20:35:53.033 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
 [I 20:37:53.045 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+slurmstepd: error: *** JOB 2607563 ON c23-02 CANCELLED AT 2017-10-20T01:59:04 DUE TO TIME LIMIT ***
