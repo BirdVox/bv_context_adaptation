@@ -37,7 +37,7 @@ validation_units = fold[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Computing PCA for " + dataset_name + " clips.")
+print("Training SKM for " + dataset_name + " clips.")
 print("Test Unit: " + test_unit_str + ".")
 print("Trial ID: " + str(trial_id) + ".")
 print("")
