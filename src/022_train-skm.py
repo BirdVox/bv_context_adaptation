@@ -3,8 +3,6 @@ import h5py
 import librosa
 import numpy as np
 import os
-import sklearn
-from sklearn.externals import joblib
 import soundfile as sf
 import sys
 import time
@@ -47,7 +45,7 @@ print("")
 print("h5py version: {:s}".format(h5py.__version__))
 print("librosa version: {:s}".format(librosa.__version__))
 print("numpy version: {:s}".format(np.__version__))
-print("scikit-learn version: {:s}".format(sklearn.__version__))
+print("skm version: {:s}".format(skm.__version__))
 print("")
 
 
@@ -101,14 +99,6 @@ for train_unit_str in training_units:
 
 # Concatenate raveled patches as rows.
 X = np.stack(X)
-
-
-# Define PCA object in scikit-learn.
-pca = sklearn.decomposition.PCA()
-
-
-# Fit PCA.
-pca.fit(X)
 
 
 # Close HDF5 file.
