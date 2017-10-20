@@ -24,8 +24,7 @@ for trial_id in range(n_trials):
 
     # Define file path.
     file_path = os.path.join(
-        sbatch_dir,
-        "_".join(script_name[:3], "trial-"+str(trial_id), ".sh"))
+        sbatch_dir, script_name[:3] + "_trial-" + str(trial_id) + ".sh")
 
 
     # Open shell file.
