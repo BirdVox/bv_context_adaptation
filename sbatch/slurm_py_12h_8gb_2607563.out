@@ -37,3 +37,139 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:9719/?token=22c9b741d622a434d5490697bf7d7733eda53153bdb66998
+[I 15:35:39.642 NotebookApp] 302 GET /?token=22c9b741d622a434d5490697bf7d7733eda53153bdb66998 (::1) 1.33ms
+[W 15:36:13.915 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171019135857 (::1) 27.80ms referer=http://localhost:9719/notebooks/spl2017/figs/fig_f1score_time.ipynb
+[I 15:36:14.320 NotebookApp] Kernel started: 41073d74-b7ea-4551-9a99-bf780bc5123f
+[I 15:38:14.289 NotebookApp] Saving file at /spl2017/figs/fig_f1score_time.ipynb
+[W 15:40:04.576 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[W 15:40:04.596 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171019135857 (::1) 2.44ms referer=http://localhost:9719/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:40:05.376 NotebookApp] Kernel started: b0647d59-36c4-4a48-9433-aa3556166223
+[I 15:42:05.447 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:42:05.449 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:44:05.432 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:44:05.433 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:46:05.444 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:46:05.445 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:48:05.439 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:48:05.440 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:50:05.440 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:50:05.441 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:52:05.439 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:52:05.440 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:53:09.571 NotebookApp] Kernel restarted: b0647d59-36c4-4a48-9433-aa3556166223
+[I 15:54:05.466 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:54:05.467 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:56:05.468 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:56:05.470 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 15:58:05.470 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 15:58:05.471 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:00:05.475 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:00:05.476 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:16:05.527 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:16:05.528 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:42:05.681 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:42:05.682 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:46:05.620 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:46:05.621 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:48:05.689 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:48:05.690 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:50:05.630 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:50:05.631 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:52:05.637 NotebookApp] Saving file at /spl2017/notebooks/compare-pr-curves.ipynb
+[W 16:52:05.638 NotebookApp] Saving untrusted notebook spl2017/notebooks/compare-pr-curves.ipynb
+[I 16:53:50.583 NotebookApp] Creating new notebook in /spl2017/notebooks
+[I 16:53:52.098 NotebookApp] Kernel started: e5dda6d1-e926-4e0e-904b-c7685e61b99a
+[W 16:53:52.104 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171019135857 (::1) 3.39ms referer=http://localhost:9719/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 16:55:52.142 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 16:57:52.132 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 16:59:52.138 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:01:30.098 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:01:52.138 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:03:52.153 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:05:52.164 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:07:52.162 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:09:52.176 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:13:52.180 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:15:52.191 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:17:07.480 NotebookApp] Kernel restarted: e5dda6d1-e926-4e0e-904b-c7685e61b99a
+[I 17:17:52.197 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:18:12.390 NotebookApp] Kernel restarted: e5dda6d1-e926-4e0e-904b-c7685e61b99a
+[I 17:19:52.230 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:21:52.240 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:23:52.251 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:27:52.252 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:29:52.259 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:31:52.265 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:33:52.271 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:35:52.279 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:37:52.291 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:39:52.290 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:51:52.382 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:53:52.387 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 17:59:52.406 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:01:52.404 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:03:52.414 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:05:52.421 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:07:52.422 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:09:52.434 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:11:52.435 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:13:52.519 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:15:52.462 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:17:52.483 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:19:52.470 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:21:52.498 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:23:52.482 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:25:52.489 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:27:52.493 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:31:57.948 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[I 18:33:52.518 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:35:52.524 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:37:52.523 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:39:52.536 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:41:52.545 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:43:52.615 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 18:59:52.603 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:01:52.606 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:03:52.619 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:05:52.620 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:07:52.622 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:09:52.624 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:11:52.634 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:13:52.638 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:15:52.647 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:17:52.689 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:19:52.659 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:21:52.660 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:23:52.666 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:25:52.682 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:27:52.685 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:29:52.689 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:31:52.693 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:33:52.715 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:35:52.739 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:37:52.735 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:39:52.736 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:43:52.740 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:45:16.303 NotebookApp] Kernel restarted: e5dda6d1-e926-4e0e-904b-c7685e61b99a
+[I 19:45:52.869 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:47:52.863 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:55:52.883 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:57:52.896 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 19:59:52.935 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:01:38.327 NotebookApp] Kernel restarted: e5dda6d1-e926-4e0e-904b-c7685e61b99a
+[I 20:01:52.948 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:03:52.946 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:05:52.957 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:07:52.970 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:09:52.965 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:11:52.974 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:13:52.978 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:21:52.994 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:23:53.003 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:25:53.003 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:27:53.012 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:29:53.021 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:31:53.027 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:33:53.031 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:35:53.033 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
+[I 20:37:53.045 NotebookApp] Saving file at /spl2017/notebooks/evaluate_convnet.ipynb
