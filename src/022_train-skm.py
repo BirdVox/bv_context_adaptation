@@ -69,8 +69,7 @@ for train_unit_str in training_units:
 
 
     # List clips.
-    lms_group = in_file.create_group("logmelspec")
-    clip_names = list(in_file["waveforms"].keys())
+    clip_names = list(in_file["logmelspec"].keys())
 
 
     # Loop over clips.
