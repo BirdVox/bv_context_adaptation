@@ -1,0 +1,41 @@
+
+Jupyter server is running on: c19-02
+Job starts at: Fri Oct 20 14:30:18 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6014:localhost:6014 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6014:localhost:6014 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+Warning: remote port forwarding failed for listen port 6014
+[I 14:30:22.639 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2624521/jupyter/notebook_cookie_secret
+[I 14:30:23.370 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:30:23.371 NotebookApp] 0 active kernels 
+[I 14:30:23.371 NotebookApp] The Jupyter Notebook is running at: http://localhost:6014/?token=8c9c4a20ff4c3d46a24ff7700826799d4d38e1b92626eee8
+[I 14:30:23.371 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:30:23.371 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6014/?token=8c9c4a20ff4c3d46a24ff7700826799d4d38e1b92626eee8
+slurmstepd: error: *** JOB 2624521 ON c19-02 CANCELLED AT 2017-10-20T15:17:48 ***
