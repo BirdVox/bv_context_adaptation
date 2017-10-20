@@ -123,10 +123,10 @@ os.makedirs(trial_dir, exist_ok=True)
 
 # Save SKM model.
 model_name = "_".join([
-    dataset_name, model_name, unit_dir, trial_name, "model.hdf5"
+    dataset_name, model_name, unit_dir, trial_name, "model.pkl"
 ])
 model_path = os.path.join(trial_dir, model_name)
-
+skm_model.save(model_path)
 
 
 # Print elapsed time.
