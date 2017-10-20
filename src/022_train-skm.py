@@ -109,6 +109,18 @@ skm_model = skm.SKM(k=256)
 skm_model.fit(X)
 
 
+# Create folder for trial.
+models_dir = localmodule.get_models_dir()
+model_name = "skm-cv"
+model_dir = os.path.join(models_dir, model_name)
+os.makedirs(model_dir, exist_ok=True)
+unit_dir = os.path.join(model_dir, test_unit_dir)
+os.makedirs(unit_dir, exist_ok=True)
+trial_name = "trial-" + str(trial_id)
+trial_dir = os.path.join(unit_dir, trial_name)
+os.makedirs(trial_dir, exist_ok=True)
+
+
 
 
 
