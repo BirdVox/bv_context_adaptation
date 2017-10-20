@@ -3,6 +3,7 @@ import h5py
 import librosa
 import numpy as np
 import os
+import skm
 import soundfile as sf
 import sys
 import time
@@ -16,9 +17,11 @@ dataset_name = localmodule.get_dataset_name()
 patch_width = 32
 n_patches_per_clip = 10
 
+
 # Parse arguments.
 args = sys.argv[1:]
 test_unit_str = args[0]
+trial_id = int(args[1])
 
 
 # Retrieve fold such that test_unit_str is in the test set.
