@@ -26,7 +26,7 @@ for unit_str in units:
     for trial_id in range(n_trials):
 
         # Define trial string.
-        trial_str = str(trial_id).zfill(2)
+        trial_str = str(trial_id)
 
         # Define file path.
         job_name = "_".join(["022", unit_str, "trial-" + trial_str])
