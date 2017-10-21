@@ -114,6 +114,9 @@ skm_model = skm.SKM(k=256)
 skm_model = skm_model.load(model_path)
 
 
+# 
+
+
 
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
