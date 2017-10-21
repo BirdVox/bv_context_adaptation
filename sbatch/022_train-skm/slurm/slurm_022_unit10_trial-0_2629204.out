@@ -1,0 +1,2 @@
+/opt/slurm/data/slurmd/job2629204/slurm_script: line 15: 82700 Killed                  python ../../../src/022_train-skm.py unit10 00
+slurmstepd: error: Exceeded step memory limit at some point.
