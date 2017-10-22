@@ -76,7 +76,7 @@ for train_unit_str in training_units:
 
 
     # Loop over clips.
-    for clip_name in clip_names[:10]: #UPDATE
+    for clip_name in clip_names:
         # Read label.
         y_clip = int(clip_name.split("_")[3])
 
