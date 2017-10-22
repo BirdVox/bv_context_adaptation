@@ -34,6 +34,7 @@ start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Training SVM for " + dataset_name + " clips.")
 print("Test unit: " + test_unit_str + ".")
+print("Trial ID: " + str(trial_id) + ".")
 print("")
 print("numpy version: {:s}".format(np.__version__))
 print("scikit-learn version: {:s}".format(sklearn.__version__))
@@ -47,19 +48,6 @@ fold = [f for f in folds if test_unit_str in f[0]][0]
 test_units = fold[0]
 training_units = fold[1]
 validation_units = fold[2]
-
-
-# Print header.
-start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start.")
-print("Training SVM for " + dataset_name + " clips.")
-print("Test Unit: " + test_unit_str + ".")
-print("Trial ID: " + str(trial_id) + ".")
-print("")
-print("h5py version: {:s}".format(h5py.__version__))
-print("numpy version: {:s}".format(np.__version__))
-print("skm version: {:s}".format(skm.__version__))
-print("")
 
 
 # Define input folder.
