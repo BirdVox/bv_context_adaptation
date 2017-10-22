@@ -134,3 +134,8 @@ WARNING:root:kernel 013d0f5c-8da0-4eaa-b821-3a60ad4972ed restarted
 [I 23:30:20.340 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
 [I 23:31:25.263 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
 [I 23:32:20.340 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:42:20.375 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[W 23:44:26.310 NotebookApp] WebSocket ping timeout after 119902 ms.
+[W 23:46:16.618 NotebookApp] WebSocket ping timeout after 90000 ms.
+[W 23:52:52.187 NotebookApp] WebSocket ping timeout after 119804 ms.
+[W 23:58:53.029 NotebookApp] WebSocket ping timeout after 119994 ms.
