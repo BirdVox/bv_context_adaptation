@@ -129,3 +129,8 @@ WARNING:root:kernel 013d0f5c-8da0-4eaa-b821-3a60ad4972ed restarted
 [I 23:02:20.251 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
 [I 23:04:20.281 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
 [I 23:06:20.274 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:26:20.342 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:28:20.335 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:30:20.340 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:31:25.263 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 23:32:20.340 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
