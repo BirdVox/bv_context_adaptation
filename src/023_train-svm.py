@@ -1,15 +1,11 @@
 import csv
 import datetime
-import h5py
 from sklearn.externals import joblib
-import librosa
 import numpy as np
 import os
-import pickle
 import sklearn.preprocessing
 import sklearn.svm
 import skm
-import soundfile as sf
 import sys
 import time
 
@@ -39,11 +35,9 @@ print(str(datetime.datetime.now()) + " Start.")
 print("Training SVM for " + dataset_name + " clips.")
 print("Test unit: " + test_unit_str + ".")
 print("")
-print("h5py version: {:s}".format(h5py.__version__))
-print("librosa version: {:s}".format(librosa.__version__))
 print("numpy version: {:s}".format(np.__version__))
-print("pandas version: {:s}".format(pd.__version__))
-print("soundfile version: {:s}".format(sf.__version__))
+print("scikit-learn version: {:s}".format(sklearn.__version__))
+print("skm version: {:s}".format(skm.__version__))
 print("")
 
 
@@ -63,7 +57,6 @@ print("Test Unit: " + test_unit_str + ".")
 print("Trial ID: " + str(trial_id) + ".")
 print("")
 print("h5py version: {:s}".format(h5py.__version__))
-print("librosa version: {:s}".format(librosa.__version__))
 print("numpy version: {:s}".format(np.__version__))
 print("skm version: {:s}".format(skm.__version__))
 print("")
