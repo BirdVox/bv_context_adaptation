@@ -1,0 +1,12 @@
+2017-10-21 22:51:52.948237 Start.
+Training SKM for BirdVox-70k clips.
+Test Unit: unit03.
+Trial ID: 1.
+
+h5py version: 2.6.0
+librosa version: 0.5.1
+numpy version: 1.13.1
+skm version: 0.0.1
+
+2017-10-21 23:05:42.935146 Finish.
+Total elapsed time: 00:13:50.94.

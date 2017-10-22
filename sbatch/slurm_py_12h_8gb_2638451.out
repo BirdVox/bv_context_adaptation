@@ -56,3 +56,76 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 20:10:06.965 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
 [I 20:12:06.945 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
 [I 20:14:06.950 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 20:40:21.226 NotebookApp] Creating new notebook in /spl2017/notebooks
+[W 20:40:21.915 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171021192642 (::1) 1.99ms referer=http://localhost:9413/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 20:40:22.008 NotebookApp] Kernel started: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 20:42:22.034 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:44:22.037 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:45:40.191 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:46:22.052 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:48:00.250 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 20:48:22.044 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:50:22.061 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:52:22.072 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:53:45.250 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 013d0f5c-8da0-4eaa-b821-3a60ad4972ed restarted
+[I 20:53:52.203 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 20:54:12.720 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[W 20:54:19.019 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171021192642 (::1) 2.36ms referer=http://localhost:9413/notebooks/spl2017/notebooks/train-svm.ipynb
+[I 20:56:19.260 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 20:58:19.503 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:00:19.503 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:02:19.508 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:06:19.527 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:08:19.531 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:10:19.530 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:12:19.543 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:28:19.802 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:28:43.907 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 21:30:19.594 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:31:18.191 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 21:32:19.616 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:34:19.731 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:36:19.614 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:44:19.641 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:46:19.642 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:48:19.651 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:50:19.656 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:52:19.659 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:54:19.662 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:56:19.669 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 21:58:19.785 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:00:19.675 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:06:19.690 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:07:33.999 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:08:19.689 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:20:31.144 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:22:19.729 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:22:47.013 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:24:19.737 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:26:20.149 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:29:39.552 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:30:20.156 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:32:20.162 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:34:20.280 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:36:17.872 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:36:20.163 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:38:20.177 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:40:20.198 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:44:20.193 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:46:20.196 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:46:41.217 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:48:06.189 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 22:48:20.197 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:50:20.207 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:52:20.215 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:52:52.763 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:54:20.247 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:56:20.226 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 22:58:20.240 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:00:20.237 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:00:37.781 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 23:01:35.727 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 23:02:20.251 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:04:20.281 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 23:06:20.274 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
