@@ -1,5 +1,6 @@
 import csv
 import datetime
+import h5py
 from sklearn.externals import joblib
 import numpy as np
 import os
@@ -36,6 +37,7 @@ print("Training SVM for " + dataset_name + " clips.")
 print("Test unit: " + test_unit_str + ".")
 print("Trial ID: " + str(trial_id) + ".")
 print("")
+print("h5py version: {:s}".format(h5py.__version__))
 print("numpy version: {:s}".format(np.__version__))
 print("scikit-learn version: {:s}".format(sklearn.__version__))
 print("skm version: {:s}".format(skm.__version__))
