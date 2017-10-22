@@ -413,7 +413,7 @@ for val_unit_str in validation_units:
             str(trial_id),
             log2C_str,
             val_unit_str,
-            "{:16.12f}".format(y_val_predicted[clip_id])]
+            "{:17.12f}".format(y_val_predicted[clip_id])]
         csv_writer.writerow(row)
 
 # Close CSV file.
@@ -514,7 +514,7 @@ for clip_id, clip_name in enumerate(clip_names):
         str(trial_id),
         log2C_str,
         test_unit_str,
-        "{:16.12f}".format(y_test_predicted[clip_id])]
+        "{:17.12f}".format(y_test_predicted[clip_id])]
     csv_writer.writerow(row)
 
 
