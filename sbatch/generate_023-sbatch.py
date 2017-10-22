@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 n_trials = 10
-script_name = "023_train-skm.py"
+script_name = "023_train-svm.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
