@@ -139,3 +139,26 @@ WARNING:root:kernel 013d0f5c-8da0-4eaa-b821-3a60ad4972ed restarted
 [W 23:46:16.618 NotebookApp] WebSocket ping timeout after 90000 ms.
 [W 23:52:52.187 NotebookApp] WebSocket ping timeout after 119804 ms.
 [W 23:58:53.029 NotebookApp] WebSocket ping timeout after 119994 ms.
+[I 02:04:08.530 NotebookApp] 302 GET /?token=1268009102361317ad0c0b82e3151bb786e14552ef265a6f (::1) 0.81ms
+[W 02:07:46.421 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171021192642 (::1) 3.55ms referer=http://localhost:9413/notebooks/spl2017/notebooks/train-svm.ipynb
+[I 02:09:44.271 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:10:02.117 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 02:11:44.280 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:13:44.291 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:13:48.956 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:15:44.291 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:17:44.300 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:19:44.303 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:25:44.326 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:27:44.327 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:34:34.987 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:43:05.084 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:49:00.615 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 02:51:35.103 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 02:52:54.135 NotebookApp] Kernel restarted: 013d0f5c-8da0-4eaa-b821-3a60ad4972ed
+[I 03:00:05.133 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 03:08:35.141 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 03:17:05.183 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[I 03:25:35.180 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
+[W 04:04:55.261 NotebookApp] WebSocket ping timeout after 119992 ms.
+[W 04:07:57.514 NotebookApp] WebSocket ping timeout after 109011 ms.
