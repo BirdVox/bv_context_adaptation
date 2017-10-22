@@ -24,14 +24,27 @@ patch_width = 32
 n_patches_per_clip = 1
 aug_str = "original"
 instanced_aug_str = aug_str
-#log2Cs = range(-5, 15)
-log2Cs = range(-1, 2)
+log2Cs = range(-5, 15)
 
 
 # Parse arguments.
 args = ["unit01", "0"]
 test_unit_str = args[0]
 trial_id = int(args[1])
+
+
+# Print header.
+start_time = int(time.time())
+print(str(datetime.datetime.now()) + " Start.")
+print("Training SVM for " + dataset_name + " clips.")
+print("Test unit: " + unit_str + ".")
+print("")
+print("h5py version: {:s}".format(h5py.__version__))
+print("librosa version: {:s}".format(librosa.__version__))
+print("numpy version: {:s}".format(np.__version__))
+print("pandas version: {:s}".format(pd.__version__))
+print("soundfile version: {:s}".format(sf.__version__))
+print("")
 
 
 # Retrieve fold such that test_unit_str is in the test set.
@@ -167,7 +180,7 @@ for val_unit_str in validation_units:
 
 
     # Loop over clips.
-    for clip_name in clip_names[:10]:
+    for clip_name in clip_names:
         # Read label.
         y_clip = int(clip_name.split("_")[3])
 
@@ -361,7 +374,7 @@ for val_unit_str in validation_units:
 
     # List clips.
     clip_names = list(in_file["logmelspec"].keys())
-    clip_names = sorted(clip_names)[:10] # UPDATE
+    clip_names = sorted(clip_names)
 
 
     # Loop over clips.
@@ -462,7 +475,7 @@ in_file = h5py.File(in_path)
 
 # List clips.
 clip_names = list(in_file["logmelspec"].keys())
-clip_names = sorted(clip_names)[:10] # UPDATE
+clip_names = sorted(clip_names)
 
 
 # Loop over clips.
@@ -520,3 +533,15 @@ for clip_id, clip_name in enumerate(clip_names):
 
 # Close CSV file.
 csv_file.close()
+
+
+# Print elapsed time.
+print(str(datetime.datetime.now()) + " Finish.")
+elapsed_time = time.time() - int(start_time)
+elapsed_hours = int(elapsed_time / (60 * 60))
+elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
+elapsed_seconds = elapsed_time % 60.
+elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
+                                               elapsed_minutes,
+                                               elapsed_seconds)
+print("Total elapsed time: " + elapsed_str + ".")
