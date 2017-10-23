@@ -25,7 +25,7 @@ log2Cs = range(-5, 15)
 
 
 # Parse arguments.
-args = ["unit01", "0"]
+args = sys.argv[1:]
 test_unit_str = args[0]
 trial_id = int(args[1])
 
