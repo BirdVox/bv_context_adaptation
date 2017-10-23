@@ -162,3 +162,5 @@ WARNING:root:kernel 013d0f5c-8da0-4eaa-b821-3a60ad4972ed restarted
 [I 03:25:35.180 NotebookApp] Saving file at /spl2017/notebooks/train-svm.ipynb
 [W 04:04:55.261 NotebookApp] WebSocket ping timeout after 119992 ms.
 [W 04:07:57.514 NotebookApp] WebSocket ping timeout after 109011 ms.
+slurmstepd: error: *** JOB 2638451 ON c25-04 CANCELLED AT 2017-10-22T07:26:43 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.

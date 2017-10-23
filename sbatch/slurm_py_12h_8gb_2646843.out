@@ -1,0 +1,169 @@
+
+Jupyter server is running on: c17-01
+Job starts at: Sun Oct 22 05:29:14 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8586:localhost:8586 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8586:localhost:8586 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 05:29:16.049 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2646843/jupyter/notebook_cookie_secret
+[I 05:29:16.399 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 05:29:16.399 NotebookApp] 0 active kernels 
+[I 05:29:16.399 NotebookApp] The Jupyter Notebook is running at: http://localhost:8586/?token=6bd08124b8f24e0447261dc286d370329fe3c9a8a1b681e4
+[I 05:29:16.399 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 05:29:16.400 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8586/?token=6bd08124b8f24e0447261dc286d370329fe3c9a8a1b681e4
+[I 06:13:46.125 NotebookApp] 302 GET /?token=6bd08124b8f24e0447261dc286d370329fe3c9a8a1b681e4 (::1) 1.29ms
+[I 06:14:06.432 NotebookApp] Creating new notebook in /spl2017/icassp2018
+[W 06:14:07.644 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171022052916 (::1) 32.00ms referer=http://localhost:8586/notebooks/spl2017/icassp2018/Untitled.ipynb?kernel_name=python3
+[I 06:14:07.782 NotebookApp] Kernel started: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[W 06:14:19.962 NotebookApp] Notebook spl2017/notebooks/analyze_icassp_errors.ipynb is not trusted
+[W 06:14:20.026 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171022052916 (::1) 1.93ms referer=http://localhost:8586/notebooks/spl2017/notebooks/analyze_icassp_errors.ipynb
+[I 06:14:21.129 NotebookApp] Kernel started: de91aaeb-9778-4321-860d-1f7813077910
+[I 06:16:07.753 NotebookApp] Saving file at /spl2017/icassp2018/recall_through_time.ipynb
+[I 06:18:07.799 NotebookApp] Saving file at /spl2017/icassp2018/recall_through_time.ipynb
+[W 06:19:19.808 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171022052916 (::1) 2.34ms referer=http://localhost:8586/notebooks/spl2017/icassp2018/detection_pr_curves.ipynb
+[I 06:19:20.197 NotebookApp] Kernel started: 7b446b8e-b7d1-4311-bf3a-8ac000be49c7
+[I 06:20:17.723 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 06:21:20.370 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 06:23:20.448 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 06:24:07.820 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 06:25:20.537 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 06:26:07.850 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 06:28:07.813 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 06:30:07.858 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 06:32:07.873 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:14:07.997 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:16:08.058 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:18:08.123 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:20:08.031 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:23:07.756 NotebookApp] Kernel restarted: 7b446b8e-b7d1-4311-bf3a-8ac000be49c7
+[I 07:23:20.628 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:31:20.717 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:33:20.683 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:35:20.578 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:35:47.974 NotebookApp] Kernel restarted: 7b446b8e-b7d1-4311-bf3a-8ac000be49c7
+[I 07:37:20.591 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:38:08.091 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:39:20.627 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 07:40:08.086 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:42:08.120 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:44:08.127 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:48:08.101 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:52:08.133 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:54:08.159 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 07:56:08.139 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:09:04.617 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:09:08.339 NotebookApp] Kernel restarted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:10:08.188 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:16:03.013 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:16:08.206 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:16:29.567 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:18:08.204 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:38:08.277 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:39:39.179 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:40:08.425 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:42:08.295 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:42:14.226 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:43:16.644 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:44:08.279 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:45:29.791 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:46:08.275 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:48:08.320 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:48:34.101 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:49:24.264 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:50:08.264 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:51:21.650 NotebookApp] Kernel interrupted: 0e6067a1-14c2-4155-a401-c41bbac4914f
+[I 08:52:08.333 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 08:54:08.327 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:00:08.331 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:02:08.328 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:05:20.871 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 09:07:20.899 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 09:15:21.660 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[W 09:15:21.886 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[W 09:15:21.906 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171022052916 (::1) 1.98ms referer=http://localhost:8586/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[I 09:15:22.676 NotebookApp] Kernel started: 889a1b0b-c882-4254-b542-434ffeb0c79e
+[I 09:17:20.961 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 09:18:08.410 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:19:20.949 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 09:20:08.423 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:22:08.435 NotebookApp] Saving file at /spl2017/icassp2018/F1-score_through_time.ipynb
+[I 09:23:20.936 NotebookApp] Saving file at /spl2017/icassp2018/detection_pr_curves.ipynb
+[I 09:24:08.463 NotebookApp] Saving file at /spl2017/icassp2018/fig3.ipynb
+[I 09:25:21.000 NotebookApp] Saving file at /spl2017/icassp2018/fig2.ipynb
+[I 09:35:46.085 NotebookApp] Creating new notebook in /spl2017/icassp2018
+[W 09:35:47.213 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171022052916 (::1) 3.11ms referer=http://localhost:8586/notebooks/spl2017/icassp2018/Untitled.ipynb?kernel_name=python3
+[I 09:35:47.312 NotebookApp] Kernel started: 74718ff2-479a-4836-8565-2d07e4b01de7
+[I 09:37:47.352 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:39:47.346 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:41:47.359 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:43:47.400 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:45:47.372 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:49:47.441 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:51:47.399 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:53:47.402 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:55:47.478 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:57:47.476 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 09:59:47.443 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:01:47.430 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:03:47.458 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:05:47.494 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:07:47.761 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:09:47.493 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:11:47.494 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:15:47.502 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:17:47.560 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:19:47.608 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:21:47.562 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:23:47.569 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:25:47.564 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:27:47.591 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:29:47.647 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:30:11.947 NotebookApp] Kernel restarted: 74718ff2-479a-4836-8565-2d07e4b01de7
+[I 10:31:47.576 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:33:47.589 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:35:47.607 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:37:47.620 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:39:47.625 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:41:47.622 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:43:47.618 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:45:47.651 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:47:47.683 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:49:36.419 NotebookApp] Kernel restarted: 74718ff2-479a-4836-8565-2d07e4b01de7
+[I 10:49:47.635 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:51:47.661 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:53:47.706 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 10:55:47.662 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 11:13:47.939 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[I 11:15:47.933 NotebookApp] Saving file at /spl2017/icassp2018/fig1.ipynb
+[W 11:44:37.472 NotebookApp] WebSocket ping timeout after 119889 ms.
+[W 11:44:39.336 NotebookApp] WebSocket ping timeout after 119911 ms.
+[W 11:44:49.016 NotebookApp] WebSocket ping timeout after 119962 ms.
+[W 11:44:51.951 NotebookApp] WebSocket ping timeout after 119931 ms.
+[W 11:44:53.625 NotebookApp] WebSocket ping timeout after 119966 ms.
+slurmstepd: error: *** JOB 2646843 ON c17-01 CANCELLED AT 2017-10-22T17:29:13 DUE TO TIME LIMIT ***
