@@ -29,3 +29,11 @@
 
 * Install pescador (ISC License) for stochastic multi-stream sampling
 `conda install -c conda-forge pescador`
+
+* Install scikit-learn (BSD License) for support vector machines
+`conda install -c anaconda scikit-learn`
+
+* Install skm (Justin Salamon) for spherical k-means
+`pip install git+git://github.com/justinsalamon/skm`
+
+
