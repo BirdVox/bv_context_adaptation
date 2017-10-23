@@ -211,7 +211,7 @@ val_metrics_path = os.path.join(
     trial_dir, val_metrics_name)
 
 
-# Open CSV file.
+# Define path to CSV file.
 csv_file = open(val_metrics_path, 'w')
 csv_writer = csv.writer(csv_file, delimiter=',')
 csv_header = [
@@ -221,12 +221,12 @@ csv_header = [
     "log2(C)",
     "Validation accuracy (%)"
 ]
-csv_writer.writerow(csv_header)
 
 
 # Loop over C (regularization parameter).
 val_accs = []
 for log2C in log2Cs:
+
 
     # Define SVM.
     svc = sklearn.svm.SVC(
@@ -244,8 +244,10 @@ for log2C in log2Cs:
         max_iter=-1,
         random_state=None)
 
+
     # Train classifier.
     svc.fit(X_train, y_train)
+
 
     # Save model.
     if np.sign(log2C) >= 0:
@@ -263,10 +265,16 @@ for log2C in log2Cs:
     svm_path = os.path.join(trial_dir, svm_name)
     joblib.dump(svc, svm_path)
 
+
     # Print validation score.
     val_acc = svc.score(X_val, y_val)
     val_accs.append(val_acc)
     print("C = {:14.6f}; acc = {:5.2f}%".format(2.0**log2C, 100*val_acc))
+
+
+    # Open CSV file.
+    csv_writer.writerow(csv_header)
+
 
     # Write row.
     row = [
@@ -278,244 +286,8 @@ for log2C in log2Cs:
     ]
     csv_writer.writerow(row)
 
-
-# Close CSV file.
-csv_file.close()
-
-
-# Compute best C.
-val_accs = np.array(val_accs)
-best_acc = np.max(val_accs)
-best_log2C = log2Cs[np.argmax(val_accs)]
-
-
-# Print best C.
-print("")
-print("Best: C = {:10.6f}; acc = {:5.2f}%".format(
-    2.0**best_log2C, 100*best_acc))
-
-
-# Load best model.
-if np.sign(log2C) >= 0:
-    best_log2C_str = "+" + str(abs(best_log2C)).zfill(2)
-else:
-    best_log2C_str = "-" + str(abs(best_log2C)).zfill(2)
-svm_name = "_".join([
-    dataset_name,
-    "skm-cv",
-    test_unit_str,
-    trial_str,
-    "svm-model",
-    "log2C-(" + best_log2C_str + ").pkl"
-])
-svm_path = os.path.join(trial_dir, svm_name)
-best_svc = joblib.load(svm_path)
-
-
-# Define CSV file for validation metrics.
-val_predictions_name = "_".join([
-    dataset_name,
-    "skm-cv",
-    test_unit_str,
-    trial_str,
-    "svm-model",
-    "val-predictions.csv"
-])
-val_predictions_path = os.path.join(
-    trial_dir, val_predictions_name)
-
-
-# Predict on validation data.
-csv_file = open(val_predictions_path, 'w')
-csv_writer = csv.writer(csv_file, delimiter=',')
-csv_header = [
-    "Dataset",
-    "Test unit",
-    "Trial ID",
-    "log2(C)",
-    "Prediction unit",
-    "Clip name",
-    "Ground truth",
-    "Log probaility"
-]
-csv_writer.writerow(csv_header)
-
-
-# Loop over validation units.
-for val_unit_str in validation_units:
-
-    # Initialize X and y for given validation unit.
-    X_val = []
-    y_val = []
-
-
-    # Load HDF5 container of logmelspecs.
-    hdf5_name = "_".join([dataset_name, instanced_aug_str, val_unit_str])
-    in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
-    in_file = h5py.File(in_path)
-
-
-    # List clips.
-    clip_names = list(in_file["logmelspec"].keys())
-    clip_names = sorted(clip_names)
-
-
-    # Loop over clips.
-    for clip_name in clip_names:
-        # Read label.
-        y_clip = int(clip_name.split("_")[3])
-
-        # Load logmelspec.
-        logmelspec = in_file["logmelspec"][clip_name].value
-
-        # Load time-frequency patches.
-        logmelspec_width = logmelspec.shape[1]
-        logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
-        logmelspec_start = logmelspec_mid -\
-            np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
-
-        # Extract patch.
-        patch_start = logmelspec_start
-        patch_stop = patch_start + patch_width
-        patch = logmelspec[:, patch_start:patch_stop]
-        patch = np.ravel(patch)
-
-        X_val.append(patch)
-        y_val.append(y_clip)
-
-
-    # Concatenate raveled patches as rows and transpose.
-    X_val = np.stack(X_val)
-
-
-    # Transform validation data.
-    X_val = skm_model.transform(X_val.T).T
-
-
-    # Scale validation data.
-    X_val = scaler.transform(X_val)
-
-
-    # Predict.
-    y_val_predicted = svc.predict_log_proba(X_val)[:, 1]
-
-
-    # Loop over clips.
-    for clip_id, clip_name in enumerate(clip_names):
-        # Write row.
-        row = [
-            dataset_name,
-            test_unit_str,
-            str(trial_id),
-            log2C_str,
-            val_unit_str,
-            "{:17.12f}".format(y_val_predicted[clip_id])]
-        csv_writer.writerow(row)
-
-# Close CSV file.
-csv_file.close()
-
-
-# Define CSV file for test metrics.
-test_predictions_name = "_".join([
-    dataset_name,
-    "skm-cv",
-    test_unit_str,
-    trial_str,
-    "svm-model",
-    "test-predictions.csv"
-])
-test_predictions_path = os.path.join(
-    trial_dir, test_predictions_name)
-
-
-# Predict on validation data.
-csv_file = open(test_predictions_path, 'w')
-csv_writer = csv.writer(csv_file, delimiter=',')
-csv_header = [
-    "Dataset",
-    "Test unit",
-    "Trial ID",
-    "log2(C)",
-    "Prediction unit",
-    "Clip name",
-    "Ground truth",
-    "Log probaility"
-]
-csv_writer.writerow(csv_header)
-
-
-# Initialize X and y for given validation unit.
-X_test = []
-y_test = []
-
-
-# Load HDF5 container of logmelspecs.
-hdf5_name = "_".join([dataset_name, instanced_aug_str, test_unit_str])
-in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
-in_file = h5py.File(in_path)
-
-
-# List clips.
-clip_names = list(in_file["logmelspec"].keys())
-clip_names = sorted(clip_names)
-
-
-# Loop over clips.
-for clip_name in clip_names:
-    # Read label.
-    y_clip = int(clip_name.split("_")[3])
-
-    # Load logmelspec.
-    logmelspec = in_file["logmelspec"][clip_name].value
-
-    # Load time-frequency patches.
-    logmelspec_width = logmelspec.shape[1]
-    logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
-    logmelspec_start = logmelspec_mid -\
-        np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
-
-    # Extract patch.
-    patch_start = logmelspec_start
-    patch_stop = patch_start + patch_width
-    patch = logmelspec[:, patch_start:patch_stop]
-    patch = np.ravel(patch)
-
-    X_test.append(patch)
-    y_test.append(y_clip)
-
-
-# Concatenate raveled patches as rows and transpose.
-X_test = np.stack(X_test)
-
-
-# Transform validation data.
-X_test = skm_model.transform(X_test.T).T
-
-
-# Scale validation data.
-X_test = scaler.transform(X_test)
-
-
-# Predict.
-y_test_predicted = svc.predict_log_proba(X_test)[:, 1]
-
-
-# Loop over clips.
-for clip_id, clip_name in enumerate(clip_names):
-    # Write row.
-    row = [
-        dataset_name,
-        test_unit_str,
-        str(trial_id),
-        log2C_str,
-        test_unit_str,
-        "{:17.12f}".format(y_test_predicted[clip_id])]
-    csv_writer.writerow(row)
-
-
-# Close CSV file.
-csv_file.close()
+    # Close CSV file.
+    csv_file.close()
 
 
 # Print elapsed time.
