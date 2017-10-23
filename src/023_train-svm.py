@@ -221,6 +221,7 @@ csv_header = [
     "log2(C)",
     "Validation accuracy (%)"
 ]
+csv_file.close()
 
 
 # Loop over C (regularization parameter).
@@ -273,7 +274,8 @@ for log2C in log2Cs:
 
 
     # Open CSV file.
-    csv_writer.writerow(csv_header)
+    csv_file = open(val_metrics_path, 'a')
+    csv_writer = csv.writer(csv_file, delimiter=',')
 
 
     # Write row.
@@ -285,6 +287,7 @@ for log2C in log2Cs:
     "{:5.2f}".format(100*val_acc)
     ]
     csv_writer.writerow(row)
+
 
     # Close CSV file.
     csv_file.close()
