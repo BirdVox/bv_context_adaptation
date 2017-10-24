@@ -237,7 +237,7 @@ for log2C in log2Cs:
         gamma='auto',
         coef0=0.0,
         shrinking=True,
-        probability=True,
+        probability=False,
         tol=0.001,
         cache_size=200,
         class_weight=None,
