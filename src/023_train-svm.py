@@ -129,7 +129,7 @@ scaler = sklearn.preprocessing.StandardScaler(copy=False)
 
 
 # Standardize training set.
-scaler.fit_transform(X_train)
+X_train = scaler.fit_transform(X_train)
 
 
 # Save scaler.
