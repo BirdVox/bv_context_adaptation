@@ -265,19 +265,9 @@ X_test = skm_model.transform(X_test.T).T
 X_test = scaler.transform(X_test)
 
 
-# Create HDF5 container for predictions.
+# Create CSV file.
 model_name = "skm-proba"
 predict_unit_str = test_unit_str
-clip_predictions_name = "_".join([
-    dataset_name,
-    model_name,
-    "test-" + test_unit_str,
-    "predict-" + predict_unit_str,
-    "clip-predictions"
-])
-
-
-# Create CSV file.
 prediction_name = "_".join([dataset_name, model_name,
     "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
     "clip-predictions"])
