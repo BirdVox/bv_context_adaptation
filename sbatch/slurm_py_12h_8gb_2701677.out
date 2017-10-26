@@ -1,0 +1,109 @@
+
+Jupyter server is running on: c17-01
+Job starts at: Wed Oct 25 21:13:00 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6276:localhost:6276 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6276:localhost:6276 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 21:13:02.310 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2701677/jupyter/notebook_cookie_secret
+[I 21:13:02.723 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 21:13:02.723 NotebookApp] 0 active kernels 
+[I 21:13:02.723 NotebookApp] The Jupyter Notebook is running at: http://localhost:6276/?token=b5ed980d894dd49ec200b6b84049f11f24ff699e1fae0265
+[I 21:13:02.723 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:13:02.723 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6276/?token=b5ed980d894dd49ec200b6b84049f11f24ff699e1fae0265
+[I 22:52:42.054 NotebookApp] 302 GET /?token=b5ed980d894dd49ec200b6b84049f11f24ff699e1fae0265 (::1) 1.29ms
+[I 23:19:57.644 NotebookApp] Creating new notebook in /spl2017/notebooks
+[W 23:19:59.081 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 10.77ms referer=http://localhost:6276/notebooks/spl2017/notebooks/Untitled1.ipynb?kernel_name=python3
+[I 23:19:59.221 NotebookApp] Kernel started: 4f4d1bdc-868e-499b-bbc6-9fd75578ac04
+[I 23:21:59.384 NotebookApp] Saving file at /spl2017/notebooks/Untitled1.ipynb
+[W 23:26:59.807 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 2.63ms referer=http://localhost:6276/notebooks/spl2017/notebooks/Untitled1.ipynb
+[I 23:28:59.947 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:31:00.008 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:33:00.008 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:53:00.111 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:55:00.076 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:57:00.142 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 23:59:00.123 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:01:00.119 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:03:00.153 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:05:00.189 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:11:00.161 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:13:00.189 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:15:00.180 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:19:00.252 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:21:00.627 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:23:00.202 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:27:00.320 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:28:37.541 NotebookApp] Kernel interrupted: 4f4d1bdc-868e-499b-bbc6-9fd75578ac04
+[I 00:29:00.843 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:31:00.271 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:33:00.280 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:35:00.230 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:47:00.326 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:49:00.417 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:51:00.393 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:53:00.354 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:55:00.376 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:57:00.368 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 00:59:00.448 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 01:01:00.477 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 01:07:00.448 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 01:07:27.977 NotebookApp] Kernel restarted: 4f4d1bdc-868e-499b-bbc6-9fd75578ac04
+[I 01:08:08.403 NotebookApp] Creating new notebook in /spl2017/icassp2018
+[W 01:08:09.910 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.01ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/Untitled.ipynb?kernel_name=python3
+[I 01:08:10.000 NotebookApp] Kernel started: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
+[W 01:08:37.989 NotebookApp] Notebook spl2017/notebooks/inter_call_intervals.ipynb is not trusted
+[W 01:08:38.060 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.16ms referer=http://localhost:6276/notebooks/spl2017/notebooks/inter_call_intervals.ipynb
+[I 01:08:38.265 NotebookApp] Kernel started: a88df352-d91f-4f3b-a141-3a2f63c9bd53
+[I 01:09:00.330 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 01:10:10.054 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:12:10.047 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:14:10.149 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:16:10.179 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:18:10.142 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:20:10.147 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[W 01:22:02.412 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.23ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig4.ipynb
+[I 01:22:02.755 NotebookApp] Kernel started: fa294b19-e562-481c-a6ae-323c4774552e
+[I 01:22:10.106 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:24:10.148 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:26:03.335 NotebookApp] Saving file at /spl2017/icassp2018/fig4.ipynb
+[I 01:26:10.098 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:28:10.170 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:30:10.168 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:32:10.216 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:34:10.261 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:36:10.162 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:38:10.202 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:40:10.240 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:42:10.179 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:42:19.000 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 90e41fc6-3d2f-4ed6-89f2-637e07d56151 restarted
+[I 01:42:24.544 NotebookApp] Kernel restarted: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
+[I 01:42:32.410 NotebookApp] Kernel restarted: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
+[W 01:42:43.311 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 2.53ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
