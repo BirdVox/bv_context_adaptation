@@ -107,3 +107,7 @@ WARNING:root:kernel 90e41fc6-3d2f-4ed6-89f2-637e07d56151 restarted
 [I 01:42:24.544 NotebookApp] Kernel restarted: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
 [I 01:42:32.410 NotebookApp] Kernel restarted: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
 [W 01:42:43.311 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 2.53ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 01:44:43.582 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[W 02:14:33.519 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 1.74ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 02:15:00.700 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 02:15:16.096 NotebookApp] Kernel restarted: 90e41fc6-3d2f-4ed6-89f2-637e07d56151
