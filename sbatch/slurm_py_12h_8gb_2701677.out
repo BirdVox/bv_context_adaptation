@@ -198,3 +198,75 @@ fmtutil: config file `fmtutil.cnf' not found.
 [I 04:36:38.814 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
 [I 04:38:38.767 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
 [I 04:40:47.617 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
+[I 04:46:38.760 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 04:54:38.808 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 04:55:44.890 NotebookApp] Kernel restarted: fa294b19-e562-481c-a6ae-323c4774552e
+[I 04:56:38.810 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 04:57:04.321 NotebookApp] Kernel interrupted: fa294b19-e562-481c-a6ae-323c4774552e
+[I 04:58:38.788 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:00:38.869 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:00:55.751 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 05:02:38.860 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:04:38.921 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:06:38.852 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:08:38.889 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:09:07.430 NotebookApp] Kernel restarted: fa294b19-e562-481c-a6ae-323c4774552e
+[I 05:10:38.852 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:12:38.994 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:14:38.866 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:16:38.928 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:18:38.869 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:20:38.949 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:22:38.870 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:40:38.994 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:42:39.007 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 05:56:36.250 NotebookApp] Notebook spl2017/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 05:56:36.317 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.34ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_precision-recall.ipynb
+[I 05:58:37.067 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 05:58:37.068 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:00:37.125 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:00:37.126 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:30:37.214 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:30:37.215 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:32:37.223 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:32:37.224 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:34:37.276 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:34:37.277 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:36:37.286 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:36:37.287 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:38:37.281 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:38:37.282 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:40:37.301 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:40:37.302 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:42:37.349 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:42:37.351 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:44:37.254 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:44:37.255 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:46:37.399 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:46:37.401 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:48:37.394 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:48:37.395 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:50:37.372 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:50:37.373 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:52:37.354 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:52:37.356 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:54:37.333 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:54:37.334 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:56:37.309 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:56:37.310 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:14:37.437 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:14:37.438 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:16:37.328 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:16:37.329 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:18:37.322 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:18:37.324 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:20:20.964 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.45ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 07:20:37.402 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:20:37.403 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 09:07:44.351 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[W 09:09:15.424 NotebookApp] Notebook spl2017/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 09:09:15.451 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.22ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_precision-recall.ipynb
+[W 09:09:44.467 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171025211302 (::1) 3.55ms referer=http://localhost:6276/notebooks/spl2017/icassp2018/fig_recall-time.ipynb
+[I 09:09:44.980 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[I 09:11:44.423 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+slurmstepd: error: *** JOB 2701677 ON c17-01 CANCELLED AT 2017-10-26T09:13:13 DUE TO TIME LIMIT ***
