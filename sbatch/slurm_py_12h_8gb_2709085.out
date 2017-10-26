@@ -91,3 +91,37 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 15:01:02.646 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
 [I 15:03:02.599 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
 [W 15:27:32.649 NotebookApp] WebSocket ping timeout after 119957 ms.
+[I 17:37:01.726 NotebookApp] 302 GET /?token=5f3992b3992e661b895e70f23516ecb30e374bbd83f4c456 (::1) 0.83ms
+[W 17:37:14.151 NotebookApp] Notebook spl2017/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 17:37:14.162 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.98ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:37:14.502 NotebookApp] Kernel started: 274c0aa9-51ab-45a1-8807-1df51047fbe9
+[I 17:37:53.760 NotebookApp] Kernel restarted: 274c0aa9-51ab-45a1-8807-1df51047fbe9
+[I 17:39:14.609 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:39:14.610 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:41:14.564 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:41:14.565 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:43:14.563 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:43:14.564 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:45:15.164 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:45:15.165 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:47:14.679 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:47:14.680 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:49:14.589 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:49:14.590 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:51:14.587 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:51:14.588 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:53:14.578 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:53:14.579 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:55:14.589 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:55:14.590 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 17:59:14.604 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 17:59:14.605 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:01:14.604 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:01:14.605 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:03:14.608 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:03:14.609 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:05:14.614 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:05:14.615 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:06:48.947 NotebookApp] Kernel restarted: 274c0aa9-51ab-45a1-8807-1df51047fbe9
+[I 18:07:14.616 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:07:14.617 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb

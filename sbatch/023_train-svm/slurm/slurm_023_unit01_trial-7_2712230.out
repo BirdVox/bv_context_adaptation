@@ -1,0 +1,19 @@
+2017-10-26 14:47:34.296084 Start.
+Training SVM for BirdVox-70k clips.
+Test unit: unit01.
+Trial ID: 7.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+scikit-learn version: 0.18.2
+skm version: 0.0.1
+
+C =       0.031250; acc = 76.73%
+C =       0.062500; acc = 75.16%
+C =       0.125000; acc = 73.83%
+C =       0.250000; acc = 72.99%
+C =       0.500000; acc = 72.29%
+C =       1.000000; acc = 72.32%
+C =       2.000000; acc = 72.82%
+2017-10-26 15:46:39.691837 Finish.
+Total elapsed time: 00:59:05.69.
