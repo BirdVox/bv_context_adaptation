@@ -264,7 +264,7 @@ X_test = scaler.transform(X_test)
 
 
 # Predict.
-y_test = svc.predict(X_model)
+y_test = svc.predict(X_test)
 
 
 # Create CSV file.
