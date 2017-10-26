@@ -71,3 +71,23 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 11:07:37.588 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
 [I 11:09:37.566 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
 [I 11:11:37.570 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[W 13:24:31.977 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.66ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 13:24:32.275 NotebookApp] Kernel started: 98efdf53-2be1-4f38-b996-461bc6b6414f
+[W 13:55:51.998 NotebookApp] WebSocket ping timeout after 119985 ms.
+[W 13:55:55.341 NotebookApp] WebSocket ping timeout after 119987 ms.
+[W 13:56:03.231 NotebookApp] WebSocket ping timeout after 119939 ms.
+[W 13:56:07.517 NotebookApp] WebSocket ping timeout after 119939 ms.
+[W 13:58:53.967 NotebookApp] WebSocket ping timeout after 90000 ms.
+[W 13:58:53.984 NotebookApp] WebSocket ping timeout after 90000 ms.
+[W 13:58:54.007 NotebookApp] WebSocket ping timeout after 90000 ms.
+[W 13:58:54.025 NotebookApp] WebSocket ping timeout after 90000 ms.
+[I 14:58:14.032 NotebookApp] 302 GET /?token=5f3992b3992e661b895e70f23516ecb30e374bbd83f4c456 (::1) 1.24ms
+[W 14:58:29.810 NotebookApp] Notebook spl2017/notebooks/inter_call_intervals.ipynb is not trusted
+[W 14:58:29.819 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.58ms referer=http://localhost:6507/notebooks/spl2017/notebooks/inter_call_intervals.ipynb
+[I 14:58:30.036 NotebookApp] Kernel started: 700985c0-5833-4d0f-b04b-eca62cf7232e
+[I 14:58:57.660 NotebookApp] Saving file at /spl2017/notebooks/inter_call_intervals.ipynb
+[W 14:58:57.661 NotebookApp] Saving untrusted notebook spl2017/notebooks/inter_call_intervals.ipynb
+[W 14:59:02.567 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.69ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 15:01:02.646 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 15:03:02.599 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[W 15:27:32.649 NotebookApp] WebSocket ping timeout after 119957 ms.
