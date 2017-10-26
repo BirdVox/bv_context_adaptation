@@ -79,7 +79,7 @@ for train_unit_str in training_units:
 
 
     # Loop over clips.
-    for clip_name in clip_names[:100]:
+    for clip_name in clip_names:
         # Read label.
         y_clip = int(clip_name.split("_")[3])
 
@@ -212,7 +212,7 @@ joblib.dump(svc, svm_path)
 
 # Initialize matrix of test data.
 X_test = []
-y_test = []
+y_test_true = []
 
 
 # Load HDF5 container of logmelspecs.
@@ -226,7 +226,7 @@ clip_names = list(in_file["logmelspec"].keys())
 
 
 # Loop over clips.
-for clip_name in clip_names[:100]:
+for clip_name in clip_names:
     # Read label.
     y_clip = int(clip_name.split("_")[3])
 
@@ -248,7 +248,7 @@ for clip_name in clip_names[:100]:
     X_test.append(np.ravel(patch))
 
     # Append label.
-    y_test.append(y_clip)
+    y_test_true.append(y_clip)
 
 
 # Concatenate raveled patches as rows.
@@ -264,7 +264,7 @@ X_test = scaler.transform(X_test)
 
 
 # Predict.
-y_test = svc.predict(X_test)
+y_test_pred = svc.predict(X_test)
 
 
 # Create CSV file.
@@ -285,26 +285,28 @@ csv_writer.writerow(csv_header)
 
 
 # Loop over keys.
-for clip_id, key in clip_names:
+for clip_id, key in enumerate(clip_names):
     # Store prediction as DataFrame row.
     key_split = key.split("_")
     timestamp_str = key_split[1]
     freq_str = key_split[2]
     ground_truth_str = key_split[3]
     aug_str = key_split[4]
-    predicted_probability = y_test[clip_id]
+    predicted_probability = y_test_pred[clip_id]
     predicted_probability_str = "{:.16f}".format(predicted_probability)
     row = [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
          freq_str, aug_str, key, ground_truth_str, predicted_probability_str]
     csv_writer.writerow(row)
 
 
-# Close HDF5 containers.
-lms_container.close()
-
-
 # Close CSV file.
 csv_file.close()
+
+
+# Print score.
+print("Accuracy = {:5.2f}".format(
+    100 * sklearn.metrics.accuracy_score(y_test_pred, y_test_true)))
+print("")
 
 
 # Print elapsed time.
