@@ -169,7 +169,8 @@ val_metrics_df = pd.read_csv(val_metrics_path, header=None, names=csv_header)
 
 # Find C maximizing validation accuracy.
 max_val_acc = np.max(val_metrics_df["Validation accuracy (%)"])
-best_log2C = val_metrics_df["log2(C)"][np.argmax(val_metrics_df["Validation accuracy (%)"])]
+best_log2C = val_metrics_df["log2(C)"][
+    np.argmax(val_metrics_df["Validation accuracy (%)"])]
 
 
 # Define SVM model.
