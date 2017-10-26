@@ -197,3 +197,4 @@ fmtutil: config file `fmtutil.cnf' not found.
 [I 04:34:38.775 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
 [I 04:36:38.814 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
 [I 04:38:38.767 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 04:40:47.617 NotebookApp] Saving file at /spl2017/notebooks/024_train-probabilistic-svm.ipynb
