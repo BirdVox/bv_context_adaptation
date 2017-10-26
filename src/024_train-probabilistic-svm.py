@@ -79,7 +79,7 @@ for train_unit_str in training_units:
 
 
     # Loop over clips.
-    for clip_name in clip_names:
+    for clip_name in clip_names[:100]:
         # Read label.
         y_clip = int(clip_name.split("_")[3])
 
@@ -226,7 +226,7 @@ clip_names = list(in_file["logmelspec"].keys())
 
 
 # Loop over clips.
-for clip_name in clip_names:
+for clip_name in clip_names[:100]:
     # Read label.
     y_clip = int(clip_name.split("_")[3])
 
