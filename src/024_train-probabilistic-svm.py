@@ -24,6 +24,7 @@ n_patches_per_clip = 1
 aug_str = "original"
 instanced_aug_str = aug_str
 
+
 # Parse arguments.
 args = sys.argv[1:]
 test_unit_str = args[0]
@@ -214,43 +215,40 @@ X_test = []
 y_test = []
 
 
-# Loop over test units.
-for test_unit_str in test_units:
-
-    # Load HDF5 container of logmelspecs.
-    hdf5_name = "_".join([dataset_name, instanced_aug_str, test_unit_str])
-    in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
-    in_file = h5py.File(in_path)
+# Load HDF5 container of logmelspecs.
+hdf5_name = "_".join([dataset_name, instanced_aug_str, test_unit_str])
+in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
+in_file = h5py.File(in_path)
 
 
-    # List clips.
-    clip_names = list(in_file["logmelspec"].keys())
+# List clips.
+clip_names = list(in_file["logmelspec"].keys())
 
 
-    # Loop over clips.
-    for clip_name in clip_names:
-        # Read label.
-        y_clip = int(clip_name.split("_")[3])
+# Loop over clips.
+for clip_name in clip_names:
+    # Read label.
+    y_clip = int(clip_name.split("_")[3])
 
-        # Load logmelspec.
-        logmelspec = in_file["logmelspec"][clip_name].value
+    # Load logmelspec.
+    logmelspec = in_file["logmelspec"][clip_name].value
 
-        # Load time-frequency patches.
-        logmelspec_width = logmelspec.shape[1]
-        logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
-        logmelspec_start = logmelspec_mid -\
-            np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
+    # Load time-frequency patches.
+    logmelspec_width = logmelspec.shape[1]
+    logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
+    logmelspec_start = logmelspec_mid -\
+        np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
 
-        # Extract patch.
-        patch_start = logmelspec_start
-        patch_stop = patch_start + patch_width
-        patch = logmelspec[:, patch_start:patch_stop]
+    # Extract patch.
+    patch_start = logmelspec_start
+    patch_stop = patch_start + patch_width
+    patch = logmelspec[:, patch_start:patch_stop]
 
-        # Ravel patch.
-        X_test.append(np.ravel(patch))
+    # Ravel patch.
+    X_test.append(np.ravel(patch))
 
-        # Append label.
-        y_test.append(y_clip)
+    # Append label.
+    y_test.append(y_clip)
 
 
 # Concatenate raveled patches as rows.
@@ -263,6 +261,10 @@ X_test = skm_model.transform(X_test.T).T
 
 # Standardize test set.
 X_test = scaler.transform(X_test)
+
+
+# Predict.
+y_test = svc.predict(X_model)
 
 
 # Create CSV file.
@@ -280,6 +282,29 @@ csv_writer = csv.writer(csv_file, delimiter=',')
 csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
     "Key", "Predicted probability"]
 csv_writer.writerow(csv_header)
+
+
+# Loop over keys.
+for clip_id, key in clip_names:
+    # Store prediction as DataFrame row.
+    key_split = key.split("_")
+    timestamp_str = key_split[1]
+    freq_str = key_split[2]
+    ground_truth_str = key_split[3]
+    aug_str = key_split[4]
+    predicted_probability = y_test[clip_id]
+    predicted_probability_str = "{:.16f}".format(predicted_probability)
+    row = [dataset_name, test_unit_str, predict_unit_str, timestamp_str,
+         freq_str, aug_str, key, ground_truth_str, predicted_probability_str]
+    csv_writer.writerow(row)
+
+
+# Close HDF5 containers.
+lms_container.close()
+
+
+# Close CSV file.
+csv_file.close()
 
 
 # Print elapsed time.
