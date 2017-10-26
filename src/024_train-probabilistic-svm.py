@@ -265,6 +265,33 @@ X_test = skm_model.transform(X_test.T).T
 X_test = scaler.transform(X_test)
 
 
+# Create HDF5 container for predictions.
+model_name = "skm-proba"
+predict_unit_str = test_unit_str
+clip_predictions_name = "_".join([
+    dataset_name,
+    model_name,
+    "test-" + test_unit_str,
+    "predict-" + predict_unit_str,
+    "clip-predictions"
+])
+
+
+# Create CSV file.
+prediction_name = "_".join([dataset_name, model_name,
+    "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
+    "clip-predictions"])
+prediction_path = os.path.join(trial_dir, prediction_name + ".csv")
+csv_file = open(prediction_path, 'w')
+csv_writer = csv.writer(csv_file, delimiter=',')
+
+
+# Create CSV header.
+csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
+    "Key", "Predicted probability"]
+csv_writer.writerow(csv_header)
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
