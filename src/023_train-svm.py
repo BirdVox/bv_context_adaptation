@@ -190,7 +190,7 @@ for val_unit_str in validation_units:
 X_val = np.stack(X_val)
 
 
-# Transform training set.
+# Transform validation set.
 X_val = skm_model.transform(X_val.T).T
 
 
