@@ -209,6 +209,62 @@ svm_path = os.path.join(trial_dir, svm_name)
 joblib.dump(svc, svm_path)
 
 
+# Initialize matrix of test data.
+X_test = []
+y_test = []
+
+
+# Loop over test units.
+for test_unit_str in test_units:
+
+    # Load HDF5 container of logmelspecs.
+    hdf5_name = "_".join([dataset_name, instanced_aug_str, test_unit_str])
+    in_path = os.path.join(aug_dir, hdf5_name + ".hdf5")
+    in_file = h5py.File(in_path)
+
+
+    # List clips.
+    clip_names = list(in_file["logmelspec"].keys())
+
+
+    # Loop over clips.
+    for clip_name in clip_names:
+        # Read label.
+        y_clip = int(clip_name.split("_")[3])
+
+        # Load logmelspec.
+        logmelspec = in_file["logmelspec"][clip_name].value
+
+        # Load time-frequency patches.
+        logmelspec_width = logmelspec.shape[1]
+        logmelspec_mid = np.round(logmelspec_width * 0.5).astype('int')
+        logmelspec_start = logmelspec_mid -\
+            np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
+
+        # Extract patch.
+        patch_start = logmelspec_start
+        patch_stop = patch_start + patch_width
+        patch = logmelspec[:, patch_start:patch_stop]
+
+        # Ravel patch.
+        X_test.append(np.ravel(patch))
+
+        # Append label.
+        y_test.append(y_clip)
+
+
+# Concatenate raveled patches as rows.
+X_test = np.stack(X_test)
+
+
+# Transform test set with SKM.
+X_test = skm_model.transform(X_test.T).T
+
+
+# Standardize test set.
+X_test = scaler.transform(X_test)
+
+
 # Print elapsed time.
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
