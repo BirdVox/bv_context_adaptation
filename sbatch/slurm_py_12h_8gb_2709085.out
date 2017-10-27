@@ -125,3 +125,81 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 18:06:48.947 NotebookApp] Kernel restarted: 274c0aa9-51ab-45a1-8807-1df51047fbe9
 [I 18:07:14.616 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
 [W 18:07:14.617 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:09:14.626 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:09:14.627 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:11:14.636 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:11:14.637 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:13:14.641 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:13:14.642 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:15:14.654 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:15:14.655 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:17:14.662 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:17:14.662 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:17:41.949 NotebookApp] Kernel restarted: 274c0aa9-51ab-45a1-8807-1df51047fbe9
+[I 18:18:03.370 NotebookApp] Kernel restarted: 274c0aa9-51ab-45a1-8807-1df51047fbe9
+[I 18:19:14.672 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:19:14.673 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:21:14.670 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:23:14.684 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:23:23.948 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.37ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_recall-time.ipynb
+[I 18:25:14.713 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:27:14.719 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:29:14.828 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:31:14.730 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:37:14.757 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:39:14.754 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:45:14.766 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 18:46:13.591 NotebookApp] Notebook spl2017/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 18:46:13.623 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.57ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_precision-recall.ipynb
+[I 18:47:14.782 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:49:14.785 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:50:14.398 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 18:50:14.399 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 18:51:14.781 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:53:14.790 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:55:14.797 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:57:14.819 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 18:59:14.814 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 19:01:14.830 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 19:03:32.869 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.56ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_binary-classification.ipynb
+[W 19:04:11.289 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.13ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 19:04:11.761 NotebookApp] Kernel started: 0e6c56d5-cbe2-46dd-9144-193cdfb08304
+[I 19:05:33.330 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 19:06:11.780 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 19:07:30.166 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.28ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_recall-time.ipynb
+[I 19:08:11.785 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 19:09:30.709 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 19:18:11.815 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 19:19:30.749 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 19:20:39.886 NotebookApp] Kernel restarted: 9abee6bf-a9b6-4727-b782-db99a495792a
+[I 19:21:31.527 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 19:23:30.802 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 19:51:28.833 NotebookApp] Notebook spl2017/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 19:51:28.855 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 2.21ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_precision-recall.ipynb
+[I 19:51:46.944 NotebookApp] Kernel restarted: 143febdf-2527-45a1-a412-01289a15cb3f
+[W 19:52:32.687 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171026093211 (::1) 3.64ms referer=http://localhost:6507/notebooks/spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 19:53:29.626 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 19:53:29.627 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 19:54:32.716 NotebookApp] Saving file at /spl2017/icassp2018/fig_inter-onset-intervals.ipynb
+[I 19:56:09.166 NotebookApp] Kernel restarted: 143febdf-2527-45a1-a412-01289a15cb3f
+[I 19:57:29.534 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 19:57:29.535 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 19:57:51.542 NotebookApp] Kernel restarted: 9abee6bf-a9b6-4727-b782-db99a495792a
+[I 19:59:29.531 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 19:59:29.532 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 19:59:32.433 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:01:29.525 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 20:01:29.526 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 20:01:32.434 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:03:29.539 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 20:03:29.540 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 20:03:32.443 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:05:32.527 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:07:32.502 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:09:32.505 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:11:04.517 NotebookApp] Kernel interrupted: 9abee6bf-a9b6-4727-b782-db99a495792a
+[I 20:11:32.519 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:13:32.517 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[I 20:15:32.535 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 20:21:40.169 NotebookApp] WebSocket ping timeout after 119960 ms.
+[W 20:21:53.154 NotebookApp] WebSocket ping timeout after 119888 ms.
