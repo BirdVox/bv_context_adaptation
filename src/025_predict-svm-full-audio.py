@@ -154,6 +154,7 @@ csv_header = [
     "Predicted probability"
 ]
 csv_writer.writerow(csv_header)
+csv_file.close()
 
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
@@ -167,28 +168,41 @@ n_chunks = 1
 # Loop over hops.
 for chunk_id in range(n_chunks):
 
+
     # Initialize list of clips.
     Xs = []
 
+
     # Loop over clips.
-    for hop_id in range(chunk_size):
+    n_hops = min(chunk_size, n_hops - chunk_id * chunk_size)
+    for hop_id in range(n_hops):
 
         # Load clip in full logmelspec data.
         clip_start = (chunk_id*chunk_size + hop_id) * hop_length
         clip_stop = clip_start + patch_width
         Xs.append(np.ravel(lms_group[:, clip_start:clip_stop]))
 
+
     # Vectorize clips.
     X = np.stack(Xs)
+
 
     # Transform with SKM.
     X = skm_model.transform(X.T).T
 
+
     # Scale.
     X = scaler.transform(X)
 
+
     # Predict.
     y_pred = svc.predict_proba(X)[:, 1]
+
+
+    # Open CSV file.
+    csv_file = open(prediction_path, 'a')
+    csv_writer = csv.writer(csv_file, delimiter=',')
+
 
     # Loop over clips.
     for hop_id in range(chunk_size):
@@ -205,8 +219,11 @@ for chunk_id in range(n_chunks):
             predicted_probability_str]
         csv_writer.writerow(row)
 
-# Close CSV file.
-csv_file.close()
+
+    # Close CSV file.
+    csv_file.close()
+
+
 
 print(str(datetime.datetime.now()) + " Finish.")
 elapsed_time = time.time() - int(start_time)
