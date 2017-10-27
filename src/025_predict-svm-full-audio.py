@@ -32,7 +32,7 @@ chunk_size = 10000
 
 
 # Parse arguments.
-args = ["unit05", "6"]
+args = sys.argv[1:]
 test_unit_str = args[0]
 trial_id = int(args[1])
 
