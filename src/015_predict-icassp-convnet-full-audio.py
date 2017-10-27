@@ -74,16 +74,6 @@ lms_container = h5py.File(hdf5_path, "r")
 lms_group = lms_container["logmelspec"]
 
 
-# Create HDF5 container for predictions.
-clip_predictions_name = "_".join([
-    dataset_name,
-    model_name,
-    "test-" + test_unit_str,
-    "predict-" + predict_unit_str,
-    "full-audio-predictions"
-])
-
-
 # Create CSV file.
 prediction_name = "_".join([dataset_name, model_name,
     "test-" + test_unit_str, trial_str, "predict-" + predict_unit_str,
