@@ -28,6 +28,7 @@ hop_length = 34
 hop_duration = hop_length * 32 / 22050
 patch_width = 32
 n_patches_per_clip = 3
+chunk_size = 10000
 
 
 # Parse arguments.
@@ -156,16 +157,9 @@ csv_header = [
 csv_writer.writerow(csv_header)
 csv_file.close()
 
-start_time = int(time.time())
-print(str(datetime.datetime.now()) + " Start.")
 
-
-chunk_size = 10000
+# Loop over chunks.
 n_chunks = int(n_hops / chunk_size) + 1
-n_chunks = 1
-
-
-# Loop over hops.
 for chunk_id in range(n_chunks):
 
 
@@ -174,8 +168,8 @@ for chunk_id in range(n_chunks):
 
 
     # Loop over clips.
-    n_hops = min(chunk_size, n_hops - chunk_id * chunk_size)
-    for hop_id in range(n_hops):
+    n_hops_in_chunk = min(chunk_size, n_hops - chunk_id * chunk_size)
+    for hop_id in range(n_hops_in_chunk):
 
         # Load clip in full logmelspec data.
         clip_start = (chunk_id*chunk_size + hop_id) * hop_length
@@ -205,7 +199,7 @@ for chunk_id in range(n_chunks):
 
 
     # Loop over clips.
-    for hop_id in range(chunk_size):
+    for hop_id in range(n_hops_in_chunk):
         # Store prediction as DataFrame row.
         timestamp = (chunk_id*chunk_size + hop_id) * hop_duration
         timestamp_str = "{:9.3f}".format(timestamp)
