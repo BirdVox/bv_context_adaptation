@@ -1,0 +1,55 @@
+
+Jupyter server is running on: c17-03
+Job starts at: Fri Oct 27 09:37:58 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8932:localhost:8932 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8932:localhost:8932 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:37:59.765 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2727365/jupyter/notebook_cookie_secret
+[I 09:38:00.109 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:38:00.109 NotebookApp] 0 active kernels 
+[I 09:38:00.109 NotebookApp] The Jupyter Notebook is running at: http://localhost:8932/?token=c3e0bacdfae65a5e2e7ce0efd68cc13429d10a50055cc171
+[I 09:38:00.109 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:38:00.110 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8932/?token=c3e0bacdfae65a5e2e7ce0efd68cc13429d10a50055cc171
+[I 09:45:16.619 NotebookApp] 302 GET /?token=c3e0bacdfae65a5e2e7ce0efd68cc13429d10a50055cc171 (::1) 1.31ms
+[W 09:45:35.715 NotebookApp] The signatures database cannot be opened; maybe it is corrupted or encrypted. You may need to rerun your notebooks to ensure that they are trusted to run Javascript. The old signatures database has been renamed to /home/vl1019/.local/share/jupyter/nbsignatures.db.bak and a new one has been created.
+[W 09:45:35.717 NotebookApp] Failed commiting signatures database to disk. You may need to move the database file to a non-networked file system, using config option `NotebookNotary.db_file`. Using in-memory signatures database for the remainder of this session.
+[W 09:45:35.720 NotebookApp] Notebook spl2017/notebooks/025_predict-svm-full-audio.ipynb is not trusted
+[W 09:45:35.748 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171027093759 (::1) 11.84ms referer=http://localhost:8932/notebooks/spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[I 09:45:36.787 NotebookApp] Kernel started: 5833347e-10cc-4f9b-9c29-39ff0f6bb1f6
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt.sqlite and a new file created.
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | Failed to load history too many times, history will not be saved.
+[I 09:47:36.813 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[W 09:47:36.813 NotebookApp] Saving untrusted notebook spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[I 09:49:36.809 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[I 09:53:36.821 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb

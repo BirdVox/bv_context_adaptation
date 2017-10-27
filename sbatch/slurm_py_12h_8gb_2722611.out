@@ -155,3 +155,6 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 09:05:02.500 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
 [I 09:07:02.520 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
 [I 09:09:02.510 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[I 09:23:02.566 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
+[I 09:35:02.578 NotebookApp] Saving file at /spl2017/notebooks/025_predict-svm-full-audio.ipynb
+slurmstepd: error: *** JOB 2722611 ON c17-03 CANCELLED AT 2017-10-27T09:36:56 DUE TO TIME LIMIT ***
