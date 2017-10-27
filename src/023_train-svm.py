@@ -186,7 +186,7 @@ for val_unit_str in validation_units:
         y_val.append(y_clip)
 
 
-# Concatenate raveled patches as rows and transpose.
+# Concatenate raveled patches as rows.
 X_val = np.stack(X_val)
 
 
