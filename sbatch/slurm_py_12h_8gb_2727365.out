@@ -112,3 +112,9 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 21:18:21.561 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
 [I 21:20:28.040 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
 [I 21:22:25.077 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[I 21:34:24.980 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[I 21:35:49.991 NotebookApp] Kernel interrupted: 9dd8a9ac-155b-490b-9d13-3b8aceff30c4
+[I 21:36:02.995 NotebookApp] Kernel interrupted: 9dd8a9ac-155b-490b-9d13-3b8aceff30c4
+[I 21:36:21.556 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+[I 21:38:21.583 NotebookApp] Saving file at /spl2017/icassp2018/precision_analysis.ipynb
+slurmstepd: error: *** JOB 2727365 ON c17-03 CANCELLED AT 2017-10-27T21:38:24 DUE TO TIME LIMIT ***

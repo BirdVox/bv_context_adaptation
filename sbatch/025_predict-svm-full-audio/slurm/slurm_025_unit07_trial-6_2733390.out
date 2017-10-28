@@ -1,0 +1,13 @@
+2017-10-27 21:41:54.646233 Start.
+Running probabilistic SVM on BirdVox-70k full audio.
+Test unit: unit07.
+Trial ID: 6.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+skm version: 0.0.1
+
+2017-10-27 23:09:37.932714 Finish.
+Total elapsed time: 01:27:43.93.
