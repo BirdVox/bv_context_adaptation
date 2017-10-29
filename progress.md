@@ -52,11 +52,11 @@ C. ICASSP model
 
 12. [DONE] Train ICASSP convnet on BirdVox-70k without augmentation, 10 trials. Export 6*10=60 Keras models. Parallelize over folds (6) and trials (10).
 
-13. For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files without data augmentation. Parallelize over folds (6), trials (10), and prediction units (3).
+13. [DONE] For every fold unit (6), every prediction unit in validation set and test set (3), export BirdVox-70k predictions as CSV files without data augmentation. Parallelize over folds (6), trials (10), and prediction units (3).
 
-14. For every fold unit (6), every mode (validation and test), compute metrics without data augmentation.
+14. [DONE] For every fold unit (6), every mode (validation and test), compute metrics without data augmentation.
 
-15. Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
+15. [DONE] Make a notebook displaying the quantiles of accuracy, both with and without data augmentation. Compute AUC and AUPRC.
 
 16. [DONE] Investigate the locations of 20% of false detections.
 
@@ -78,22 +78,22 @@ D. Snowball on UrbanSound-8K
 
 
 E. Cross-validated spherical k-means model
-1. [IN PROGRESS] Compute log-mel-spectrograms on 70k recordings. Parallelize across units (6).
+1. [DONE] Compute log-mel-spectrograms on 70k recordings. Parallelize across units (6).
 
-2. Train PCA on BirdVox-70k clips without augmentation. Save biases and PCA matrices. Parallelize across units (6).
+2. [DONE] Train PCA on BirdVox-70k clips without augmentation. Save biases and PCA matrices. Parallelize across units (6).
 
-3. Train SKM on BirdVox-70k clips. Parallelize across units (6) and trials (10).
+3. [DONE] Train SKM on BirdVox-70k clips. Parallelize across units (6) and trials (10).
 
-4. Train SVM on BirdVox-70k. Parallelize across units (6), trials (10), and log10C (5).
+4. [DONE] Train SVM on BirdVox-70k. Parallelize across units (6), trials (10), and log10C (5).
 
-5. Compute predictions on 6 full night recordings.
+5. [DONE] Compute predictions on 6 full night recordings.
 
-6. Postprocessing: peak-picking, thresholding, event matching.
+6. [DONE] Postprocessing: peak-picking, thresholding, event matching.
 
-7. Export metrics (n_selected, TP, FP, FN, precision, recall, F)
+7. [DONE] Export metrics (n_selected, TP, FP, FN, precision, recall, F)
 for all 6 units, 10 tolerances, and 100 thresholds, to 6*10=60 CSV files.
 
-8. Compute global metrics (n_selected, TP, FP, FN, precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
+8. [DONE] Compute global metrics (n_selected, TP, FP, FN, precision, recall, F and AUPRC) across all 6 units and 10 tolerances. Store in 1 CSV file.
 
 
 F. Spectral flux
@@ -106,33 +106,9 @@ F. Spectral flux
 4. [DONE] Compute global metrics (precision, recall, and F) across all 6 units and 10 tolerances. Store in 60 CSV files.
 
 
-G. Snowball on BirdVox-70k
-
-
-H. ICASSP paper
-* Motivation: current practices in bioacoustics. Raven users community. Report training time and prediction time. Spend effort on contextualization.
-* Vincent: two purposes. One is estimating population. The other is inspecting the clips manually and finding a rare bird.
-* Juan: there are 3 key things to the paper.
-	1) the dataset. SKM-based methodology
-	2) the systematic benchmark
-	3) first application of convnet to FC detection in continuous recordings
-* Justin: Aim at a software for running the pre-trained convnet on flight call detection. This implies to re-train the model on all the data we have (BV-70k and PLoS One dataset).
-* Release both the BirdVox-70k dataset and "BirdVox full nights" (temporary name).
-* Results: tabulated set of results. F-measure ad hoc, cross-validation, oracle. Describe the optimal parameter set.
-* Results: plot of all the curves. Work on the figures.
-* Qualitative examples if we have time.
-
 I. Dataset release
+1. [DONE] Write README.
 
-J. Clustering
-1. [DONE] Upload data.
-2. Re-encode eBird data by genus.
+2. [DONE] Have consistent columns across units.
 
-K. Per-channel energy normalization (PCEN)
-1. [DONE] Send some BirdVox data to the Google team.
-
-2. Compute fixed PCEN of augmented audio, store into 6*33=198 HDF5 containers. Parallelize over units (6) and augmentations (33).
-
-3. Compute fixed PCEN of full night, store into 6 HDF5 containers. Parallelize over units (6).
-
-4. Train SPL convnet on BirdVox-70k with augmentation on PCEN (one trial). Export 6 Keras models. Parallelize over folds (6).
+3. [DONE] Publish on Zenodo.
