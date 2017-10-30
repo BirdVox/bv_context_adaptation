@@ -1,0 +1,382 @@
+
+Jupyter server is running on: gpu-25
+Job starts at: Sat Oct 28 05:47:44 EDT 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7959:localhost:7959 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7959:localhost:7959 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 05:47:49.186 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-2749884/jupyter/notebook_cookie_secret
+[I 05:47:50.060 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 05:47:50.060 NotebookApp] 0 active kernels 
+[I 05:47:50.060 NotebookApp] The Jupyter Notebook is running at: http://localhost:7959/?token=622db68440d3af0dadc59e9c5f00e916a8a6ac5b520bee25
+[I 05:47:50.060 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 05:47:50.061 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7959/?token=622db68440d3af0dadc59e9c5f00e916a8a6ac5b520bee25
+[I 05:55:14.645 NotebookApp] 302 GET /?token=622db68440d3af0dadc59e9c5f00e916a8a6ac5b520bee25 (::1) 0.83ms
+[W 05:55:36.085 NotebookApp] Notebook spl2017/notebooks/compare-pr-curves.ipynb is not trusted
+[I 05:55:36.990 NotebookApp] Kernel started: 07622442-fb22-4947-a202-858b1abe1146
+[W 05:55:38.087 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171028054749 (::1) 25.54ms referer=http://localhost:7959/notebooks/spl2017/notebooks/compare-pr-curves.ipynb
+[W 05:55:51.212 NotebookApp] Notebook spl2017/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 05:55:51.232 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171028054749 (::1) 2.16ms referer=http://localhost:7959/notebooks/spl2017/icassp2018/fig_precision-recall.ipynb
+[I 05:55:51.913 NotebookApp] Kernel started: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[W 05:57:00.898 NotebookApp] Notebook spl2017/icassp2018/fig_recall-time.ipynb is not trusted
+[W 05:57:00.931 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171028054749 (::1) 3.66ms referer=http://localhost:7959/notebooks/spl2017/icassp2018/fig_recall-time.ipynb
+[I 05:57:01.730 NotebookApp] Kernel started: e4180abf-31a0-4f2c-9c5f-901921b62e99
+[W 05:57:09.574 NotebookApp] Notebook spl2017/icassp2018/fig_recall-frequency.ipynb is not trusted
+[W 05:57:09.605 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171028054749 (::1) 2.66ms referer=http://localhost:7959/notebooks/spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:57:09.977 NotebookApp] Kernel started: 4e95bdb2-fc40-4c81-8812-8ce6a9b56636
+[I 05:57:51.943 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 05:57:51.944 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 05:59:01.770 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 05:59:01.771 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 05:59:09.990 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 05:59:09.991 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 05:59:51.952 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 05:59:51.952 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:01:01.779 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:01:01.780 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:01:09.996 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:01:09.996 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:01:51.948 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:01:51.949 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:03:01.818 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:03:01.819 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:03:10.040 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:03:10.041 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:03:51.980 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:03:51.981 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:05:10.006 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:05:10.007 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:07:10.023 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:07:10.024 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:09:10.027 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:09:10.028 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:11:10.056 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:11:10.057 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:13:10.043 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:13:10.044 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:15:10.093 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:15:10.093 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:15:52.008 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:15:52.008 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:17:01.826 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:17:01.827 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:19:01.832 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:19:01.832 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:21:01.856 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:21:01.857 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:22:47.331 NotebookApp] Notebook spl2017/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 06:22:47.344 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20171028054749 (::1) 2.32ms referer=http://localhost:7959/notebooks/spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:22:47.719 NotebookApp] Kernel started: 2ead6fbc-0bb6-47fa-9276-00d078deb4c3
+[I 06:23:01.852 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:23:01.852 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:24:47.747 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 06:24:47.747 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:26:47.753 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 06:26:47.754 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:27:51.497 NotebookApp] Kernel restarted: e4180abf-31a0-4f2c-9c5f-901921b62e99
+[I 06:27:52.057 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:27:52.058 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:28:47.753 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 06:28:47.753 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:29:01.929 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:29:01.930 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:30:47.758 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[W 06:30:47.759 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:36:47.778 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 06:37:01.881 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 06:37:01.882 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 06:37:52.077 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:37:52.078 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:39:10.113 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:39:10.114 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:41:10.125 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-frequency.ipynb
+[W 06:41:10.126 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-frequency.ipynb
+[I 06:41:52.091 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:41:52.092 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:43:52.101 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:43:52.102 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:45:52.105 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:45:52.105 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:47:52.132 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:47:52.132 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:49:52.133 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:49:52.133 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:50:30.820 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:30.966 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:31.107 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:31.253 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:31.401 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:31.540 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:31.689 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+ERROR:tornado.general:Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 276, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 228, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 390, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/ipkernel.py", line 196, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/zmqshell.py", line 501, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2725, in run_cell
+    self.events.trigger('post_execute')
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/events.py", line 74, in trigger
+    func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 113, in flush_figures
+    return show(True)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 36, in show
+    display(figure_manager.canvas.figure)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/display.py", line 164, in display
+    format_dict, md_dict = format(obj, include=include, exclude=exclude)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 145, in format
+    data = formatter(obj)
+  File "<decorator-gen-9>", line 2, in __call__
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 190, in catch_format_error
+    r = method(self, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 307, in __call__
+    return printer(obj)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 240, in <lambda>
+    png_formatter.for_type(Figure, lambda fig: print_figure(fig, 'png', **kwargs))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 124, in print_figure
+    fig.canvas.print_figure(bytes_io, **kw)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2192, in print_figure
+    **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 545, in print_png
+    FigureCanvasAgg.draw(self)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 464, in draw
+    self.figure.draw(self.renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/figure.py", line 1143, in draw
+    renderer, self, dsu, self.suppressComposite)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2409, in draw
+    mimage._draw_list_compositing_images(renderer, self, dsu)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 822, in draw
+    drawFunc(renderer, gc, tpath, affine.frozen())
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 1267, in _draw_lines
+    self._lineFunc(renderer, gc, path, trans)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 1293, in _draw_solid
+    renderer.draw_path(gc, path, trans)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 166, in draw_path
+    self._renderer.draw_path(gc, path, transform, rgbFace)
+KeyboardInterrupt
+ERROR:tornado.general:Uncaught exception, closing connection.
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 440, in _handle_events
+    self._handle_recv()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 472, in _handle_recv
+    self._run_callback(callback, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/zmq/eventloop/zmqstream.py", line 414, in _run_callback
+    callback(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tornado/stack_context.py", line 275, in null_wrapper
+    return fn(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 276, in dispatcher
+    return self.dispatch_shell(stream, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 228, in dispatch_shell
+    handler(stream, idents, msg)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/kernelbase.py", line 390, in execute_request
+    user_expressions, allow_stdin)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/ipkernel.py", line 196, in do_execute
+    res = shell.run_cell(code, store_history=store_history, silent=silent)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/zmqshell.py", line 501, in run_cell
+    return super(ZMQInteractiveShell, self).run_cell(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/interactiveshell.py", line 2725, in run_cell
+    self.events.trigger('post_execute')
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/events.py", line 74, in trigger
+    func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 113, in flush_figures
+    return show(True)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/ipykernel/pylab/backend_inline.py", line 36, in show
+    display(figure_manager.canvas.figure)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/display.py", line 164, in display
+    format_dict, md_dict = format(obj, include=include, exclude=exclude)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 145, in format
+    data = formatter(obj)
+  File "<decorator-gen-9>", line 2, in __call__
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 190, in catch_format_error
+    r = method(self, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/formatters.py", line 307, in __call__
+    return printer(obj)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 240, in <lambda>
+    png_formatter.for_type(Figure, lambda fig: print_figure(fig, 'png', **kwargs))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/IPython/core/pylabtools.py", line 124, in print_figure
+    fig.canvas.print_figure(bytes_io, **kw)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backend_bases.py", line 2192, in print_figure
+    **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 545, in print_png
+    FigureCanvasAgg.draw(self)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 464, in draw
+    self.figure.draw(self.renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/figure.py", line 1143, in draw
+    renderer, self, dsu, self.suppressComposite)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/axes/_base.py", line 2409, in draw
+    mimage._draw_list_compositing_images(renderer, self, dsu)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/image.py", line 139, in _draw_list_compositing_images
+    a.draw(renderer)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/artist.py", line 63, in draw_wrapper
+    draw(artist, renderer, *args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 822, in draw
+    drawFunc(renderer, gc, tpath, affine.frozen())
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 1267, in _draw_lines
+    self._lineFunc(renderer, gc, path, trans)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/lines.py", line 1293, in _draw_solid
+    renderer.draw_path(gc, path, trans)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/matplotlib/backends/backend_agg.py", line 166, in draw_path
+    self._renderer.draw_path(gc, path, transform, rgbFace)
+KeyboardInterrupt
+[I 06:50:31.844 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.000 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.155 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.323 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.477 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.634 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:32.825 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:33.913 NotebookApp] KernelRestarter: restarting kernel (1/5)
+WARNING:root:kernel 3bd7417c-8cad-45b5-b593-7da9c405804e restarted
+[I 06:50:38.920 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:39.257 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:39.420 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:39.575 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:39.732 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:39.921 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:50:40.076 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 06:51:52.133 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:51:52.134 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:53:52.145 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:53:52.146 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:55:52.151 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:55:52.152 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:57:52.156 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:57:52.157 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 06:59:52.165 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 06:59:52.165 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:01:52.172 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:01:52.173 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:03:52.195 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:03:52.196 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:04:25.036 NotebookApp] Kernel interrupted: 3bd7417c-8cad-45b5-b593-7da9c405804e
+[I 07:05:52.219 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:05:52.219 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:07:52.186 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:07:52.187 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:08:47.872 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 07:09:52.190 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:09:52.191 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:10:47.871 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 07:12:47.879 NotebookApp] Saving file at /spl2017/icassp2018/fig_binary-classification.ipynb
+[I 07:15:41.047 NotebookApp] Kernel interrupted: e4180abf-31a0-4f2c-9c5f-901921b62e99
+[I 07:15:47.259 NotebookApp] Kernel restarted: e4180abf-31a0-4f2c-9c5f-901921b62e99
+[I 07:17:02.033 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:17:02.034 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:17:52.214 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:17:52.215 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:19:52.225 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:19:52.226 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:21:52.243 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:21:52.243 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:23:52.234 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:23:52.235 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:25:52.237 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:25:52.238 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:27:52.257 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:27:52.258 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:29:02.071 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:29:02.071 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:29:52.250 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:29:52.251 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:31:52.261 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:31:52.262 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:33:52.263 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:33:52.264 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:35:52.273 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:35:52.274 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:37:52.276 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:37:52.277 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:39:52.291 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:39:52.292 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:40:52.035 NotebookApp] Kernel interrupted: e4180abf-31a0-4f2c-9c5f-901921b62e99
+[I 07:41:02.104 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:41:02.105 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:41:52.306 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:41:52.307 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:43:02.117 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:43:02.118 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:43:52.290 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:43:52.291 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:45:02.192 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:45:02.193 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:45:52.296 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:45:52.297 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:47:02.119 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:47:02.120 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:47:52.598 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:47:52.599 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:49:52.309 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:49:52.310 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:53:02.150 NotebookApp] Saving file at /spl2017/icassp2018/fig_recall-time.ipynb
+[W 07:53:02.150 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_recall-time.ipynb
+[I 07:53:52.320 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:53:52.321 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 07:55:52.374 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 07:55:52.375 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 08:01:52.368 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 08:01:52.369 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 08:03:52.408 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 08:03:52.409 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 08:07:52.393 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 08:07:52.394 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 08:09:52.433 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 08:09:52.434 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[I 08:11:52.463 NotebookApp] Saving file at /spl2017/icassp2018/fig_precision-recall.ipynb
+[W 08:11:52.464 NotebookApp] Saving untrusted notebook spl2017/icassp2018/fig_precision-recall.ipynb
+[W 09:09:42.018 NotebookApp] WebSocket ping timeout after 119985 ms.
+[W 09:09:48.369 NotebookApp] WebSocket ping timeout after 119987 ms.
+[W 09:09:48.736 NotebookApp] WebSocket ping timeout after 119915 ms.
+[W 09:09:52.845 NotebookApp] WebSocket ping timeout after 119992 ms.
+slurmstepd: error: *** JOB 2749884 ON gpu-25 CANCELLED AT 2017-10-28T17:48:12 DUE TO TIME LIMIT ***
