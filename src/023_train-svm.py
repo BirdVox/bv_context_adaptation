@@ -21,7 +21,7 @@ patch_width = 32
 n_patches_per_clip = 1
 aug_str = "original"
 instanced_aug_str = aug_str
-log2Cs = range(-5, 2) #log2Cs = range(-5, 15)
+log2Cs = range(-8, 2)
 
 
 # Parse arguments.
