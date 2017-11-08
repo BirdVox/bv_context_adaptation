@@ -86,12 +86,8 @@ def get_augmentations():
     return augmentations
 
 
-def get_archive_dir():
-    return "/archive/vl1019/spl2017_data"
-
-
 def get_data_dir():
-	return "/beegfs/vl1019/spl2017_data"
+	return "/beegfs/vl1019/BirdVox-70k_data"
 
 
 def get_dataset_name():
@@ -112,7 +108,7 @@ def get_logmelspec_settings():
 
 
 def get_models_dir():
-    return "/scratch/vl1019/spl2017_models"
+    return "/scratch/vl1019/BirdVox-70k_models"
 
 
 def get_negative_labels():
