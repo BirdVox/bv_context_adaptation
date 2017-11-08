@@ -89,13 +89,22 @@ for train_unit_str in training_units:
         logmelspec_start = logmelspec_mid -\
             np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
 
-        # Extract patch.
-        patch_start = logmelspec_start
-        patch_stop = patch_start + patch_width
-        patch = logmelspec[:, patch_start:patch_stop]
+        # Initialize list of patches in the clip.
+        X_patches = []
+
+        # Loop over patches.
+        for patch_id in range(n_patches_per_clip):
+
+            # Extract patch.
+            patch_start = logmelspec_start + patch_id * patch_width
+            patch_stop = patch_start + patch_width
+            patch = logmelspec[:, patch_start:patch_stop]
+            patch = np.ravel(patch)
+            X_patches.append(patch)
+
 
         # Ravel patch.
-        X_train.append(np.ravel(patch))
+        X_train.append(np.stack(X_patches, axis=-1))
 
         # Append label.
         y_train.append(y_clip)
@@ -103,6 +112,15 @@ for train_unit_str in training_units:
 
 # Concatenate raveled patches as rows.
 X_train = np.stack(X_train)
+# X_train now has shape (n_samples, n_features, n_patches).
+
+
+# Summarize features over patches belonging to the same sample.
+X_train_avg = np.mean(X_train, axis=-1)
+X_train_std = np.mean(X_train, axis=-1)
+X_train_max = np.mean(X_train, axis=-1)
+X_train = np.concatenate((X_train_avg, X_train_std, X_train_max), axis=-1)
+X_train = np.reshape(X_train, [X_train.shape[0]] + (-1,))
 
 
 # Load SKM model.
@@ -176,18 +194,35 @@ for val_unit_str in validation_units:
         logmelspec_start = logmelspec_mid -\
             np.round(patch_width * n_patches_per_clip * 0.5).astype('int')
 
-        # Extract patch.
-        patch_start = logmelspec_start
-        patch_stop = patch_start + patch_width
-        patch = logmelspec[:, patch_start:patch_stop]
+        # Initialize list of patches in the clip.
+        X_patches = []
+
+        # Loop over patches.
+        for patch_id in range(n_patches_per_clip):
+
+            # Extract patch.
+            patch_start = logmelspec_start + patch_id * patch_width
+            patch_stop = patch_start + patch_width
+            patch = logmelspec[:, patch_start:patch_stop]
+            patch = np.ravel(patch)
+            X_patches.append(patch)
 
         # Append X and y.
-        X_val.append(np.ravel(patch))
+        X_val.append(np.stack(X_val, axis=-1))
         y_val.append(y_clip)
 
 
 # Concatenate raveled patches as rows.
 X_val = np.stack(X_val)
+# X_val now has shape (n_samples, n_features, n_patches).
+
+
+# Summarize features over patches belonging to the same sample.
+X_val_avg = np.mean(X_val, axis=-1)
+X_val_std = np.mean(X_val, axis=-1)
+X_val_max = np.mean(X_val, axis=-1)
+X_val = np.concatenate((X_val_avg, X_val_std, X_val_max), axis=-1)
+X_val = np.reshape(X_val, [X_val.shape[0]] + (-1,))
 
 
 # Transform validation set.
