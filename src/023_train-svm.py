@@ -120,7 +120,7 @@ X_train_avg = np.mean(X_train, axis=-1)
 X_train_std = np.mean(X_train, axis=-1)
 X_train_max = np.mean(X_train, axis=-1)
 X_train = np.concatenate((X_train_avg, X_train_std, X_train_max), axis=-1)
-X_train = np.reshape(X_train, [X_train.shape[0]] + (-1,))
+X_train = np.reshape(X_train, (X_train.shape[0], -1))
 
 
 # Load SKM model.
@@ -222,7 +222,7 @@ X_val_avg = np.mean(X_val, axis=-1)
 X_val_std = np.mean(X_val, axis=-1)
 X_val_max = np.mean(X_val, axis=-1)
 X_val = np.concatenate((X_val_avg, X_val_std, X_val_max), axis=-1)
-X_val = np.reshape(X_val, [X_val.shape[0]] + (-1,))
+X_val = np.reshape(X_val, (X_val.shape[0], -1))
 
 
 # Transform validation set.
