@@ -93,7 +93,7 @@ out_lms_group =\
 
 
 # Load over clips.
-for in_clip_key in tqdm.tqdm(in_clip_keys):
+for in_clip_key in in_clip_keys:
 
     # Load background excerpt.
     in_clip_key_list = in_clip_key.split("_")
