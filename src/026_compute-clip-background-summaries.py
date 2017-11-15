@@ -1,9 +1,9 @@
+import datetime
 import h5py
 import numpy as np
 import os
 import sys
 import time
-import tqdm
 
 sys.path.append("../src")
 import localmodule
