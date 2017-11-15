@@ -6,10 +6,10 @@ import localmodule
 
 
 # Define constants.
-units = localmodule.get_units()
-n_trials = 10
-script_name = "025_predict-svm-full-audio.py"
+script_name = "026_compute-clip-background-summaries.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
+units = localmodule.get_units()
+bg_durations = [1, 2, 5, 10, 30, 60, 120, 300, 600, 1800, 3600, 7200]
 
 
 # Create folders.
@@ -23,18 +23,18 @@ os.makedirs(slurm_dir, exist_ok=True)
 for unit_str in units:
 
     # Loop over trials.
-    for trial_id in range(n_trials):
+    for bg_duration in bg_durations:
 
-        # Define trial string.
-        trial_str = str(trial_id)
+        # Define string for background duration (prepend zeros).
+        T_str = str(bg_duration).zfill(4)
 
         # Define file path.
-        job_name = "_".join(["025", unit_str, "trial-" + trial_str])
+        job_name = "_".join(["026", "T-" + T_str, unit_str])
         file_name = job_name + ".sbatch"
         file_path = os.path.join(sbatch_dir, file_name)
 
         # Define script.
-        script_list = [script_path, unit_str, str(trial_id).zfill(2)]
+        script_list = [script_path, T_str, unit_str]
         script_path_with_args = " ".join(script_list)
 
         # Open file.
@@ -45,12 +45,12 @@ for unit_str in units:
             f.write("#SBATCH --nodes=1\n")
             f.write("#SBATCH --tasks-per-node=1\n")
             f.write("#SBATCH --cpus-per-task=1\n")
-            f.write("#SBATCH --time=4:00:00\n")
+            f.write("#SBATCH --time=0:30:00\n")
             f.write("#SBATCH --mem=8GB\n")
             f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
             f.write("\n")
             f.write("module purge\n")
             f.write("\n")
             f.write("# The first argument is the name of the recording unit.\n")
-            f.write("# The second argument is the name of the trial.\n")
-f.write("python " + script_path_with_args)
+            f.write("# The second argument is the duration of background.\n")
+            f.write("python " + script_path_with_args)
