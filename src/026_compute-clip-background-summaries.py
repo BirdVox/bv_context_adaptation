@@ -28,6 +28,7 @@ percentiles = [0.1, 1, 10, 25, 50, 75, 90, 99, 99.9]
 args = sys.argv[1:]
 T_str = args[0]
 unit_str = args[1]
+bg_duration = int(T_str)
 
 
 # Create folder for backgrounds.
