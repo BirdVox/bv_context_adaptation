@@ -1,0 +1,83 @@
+units = localmodule.get_units()
+n_units = len(units)
+dataset_name = localmodule.get_dataset_name()
+full_logmelspec_name = "_".join([
+    dataset_name, "full-logmelspec"])
+data_dir = localmodule.get_data_dir()
+full_logmelspec_dir = os.path.join(
+    data_dir, full_logmelspec_name)
+clip_logmelspec_name = "_".join([
+    dataset_name, "logmelspec"])
+clip_logmelspec_dir = os.path.join(
+    data_dir, clip_logmelspec_name, "original")
+orig_sr = localmodule.get_sample_rate()
+bg_durations = [
+    1, 2, 5, 10, 30,
+    60, 120, 300, 600, 1800,
+    3600, 7200]
+percentiles = [0.1, 1, 10, 25, 50, 75, 90, 99, 99.9]
+backgrounds_name = "_".join(
+    [dataset_name, "background_summaries"])
+backgrounds_dir = os.path.join(data_dir, backgrounds_name)
+os.makedirs(backgrounds_dir, exist_ok=True)
+
+
+start_time = int(time.time())
+
+unit_str = units[0] # DELETE ME
+bg_duration = bg_durations[0] # DELETE ME
+
+in_full_unit_name = unit_str + ".hdf5"
+in_full_unit_path = os.path.join(
+    full_logmelspec_dir, in_full_unit_name)
+in_full_unit_file = h5py.File(in_full_unit_path, "r")
+in_full_group = in_full_unit_file["logmelspec"]
+in_clip_unit_name = "_".join([
+    dataset_name, "original", unit_str + ".hdf5"])
+in_clip_unit_path = os.path.join(
+    clip_logmelspec_dir, in_clip_unit_name)
+in_clip_unit_file = h5py.File(in_clip_unit_path, "r")
+in_clip_group = in_clip_unit_file["logmelspec"]
+in_clip_keys = list(in_clip_group.keys())
+lms_settings = in_clip_unit_file["logmelspec_settings"]
+lms_hop_length = lms_settings["hop_length"].value
+lms_sr = lms_settings["sr"].value
+lms_ratio = lms_hop_length / lms_sr * orig_sr
+lms_hop_duration = lms_hop_length / lms_sr
+
+half_bg_duration = 0.5 * bg_duration
+half_bg_width = int(np.round(
+    half_bg_duration * lms_sr / lms_hop_length))
+
+bg_duration_str = str(int(bg_duration)).zfill(4)
+out_T_name = "-".join(["T", str(bg_duration_str)])
+out_T_dir = os.path.join(backgrounds_dir, out_T_name)
+os.makedirs(out_T_dir, exist_ok=True)
+out_unit_name = "_".join([
+    dataset_name, "background_summaries",
+    unit_str, out_T_name]) + ".hdf5"
+out_unit_path = os.path.join(out_T_dir, out_unit_name)
+out_unit_file = h5py.File(out_unit_path, "w")
+out_lms_group =\
+    out_unit_file.create_group("logmelspec_background")
+
+
+for in_clip_key in tqdm.tqdm(in_clip_keys):
+
+    in_clip_key_list = in_clip_key.split("_")
+    out_clip_key_list = in_clip_key_list[:-1]
+    out_clip_key = "_".join(out_clip_key_list)
+
+    timestamp = int(in_clip_key_list[1])
+    lms_mid = int(np.round(timestamp / lms_ratio))
+    lms_start = max(0, lms_mid - half_bg_width)
+    lms_stop = lms_start + 2 * half_bg_width
+    lms = in_full_group[:, lms_start:lms_stop]
+    lms_percentiles = np.percentile(lms, percentiles, axis=1)
+
+    out_lms_group[out_clip_key] = lms_percentiles
+
+
+out_unit_file.close()
+in_full_unit_file.close()
+in_clip_unit_file.close()
