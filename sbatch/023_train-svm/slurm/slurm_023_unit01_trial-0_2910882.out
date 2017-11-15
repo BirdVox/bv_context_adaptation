@@ -1,0 +1,14 @@
+2017-11-07 19:58:06.474030 Start.
+Training SVM for BirdVox-70k clips.
+Test unit: unit01.
+Trial ID: 0.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+scikit-learn version: 0.18.2
+skm version: 0.0.1
+
+Traceback (most recent call last):
+  File "../../../src/023_train-svm.py", line 123, in <module>
+    X_train = np.reshape(X_train, [X_train.shape[0]] + (-1,))
+TypeError: can only concatenate list (not "tuple") to list

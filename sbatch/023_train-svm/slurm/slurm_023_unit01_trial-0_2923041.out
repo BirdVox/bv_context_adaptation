@@ -1,0 +1,20 @@
+2017-11-08 17:18:26.789244 Start.
+Training SVM for BirdVox-70k clips.
+Test unit: unit01.
+Trial ID: 0.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+scikit-learn version: 0.18.2
+skm version: 0.0.1
+
+Traceback (most recent call last):
+  File "../../../src/023_train-svm.py", line 142, in <module>
+    X_train = skm_model.transform(X_train.T).T
+  File "/home/vl1019/skm/skm/core.py", line 397, in transform
+    X = self._pca_transform(X)
+  File "/home/vl1019/skm/skm/core.py", line 83, in _pca_transform
+    data = self.pca.transform(X.T)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/sklearn/decomposition/base.py", line 132, in transform
+    X = X - self.mean_
+ValueError: operands could not be broadcast together with shapes (38214,3840) (1280,) 
