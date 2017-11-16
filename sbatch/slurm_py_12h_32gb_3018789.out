@@ -102,3 +102,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 16:18:11.110 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/compute_background.ipynb
 [I 16:48:10.413 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/compute_background.ipynb
 [I 16:50:10.426 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/compute_background.ipynb
+slurmstepd: error: *** JOB 3018789 ON c41-05 CANCELLED AT 2017-11-15T19:33:46 ***
