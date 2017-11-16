@@ -102,6 +102,8 @@ for in_clip_key in in_clip_keys:
     lms_mid = int(np.round(timestamp / lms_ratio))
     lms_start = max(0, lms_mid - half_bg_width)
     lms_stop = lms_start + 2 * half_bg_width
+    lms_stop = min(lms_stop, in_full_group.shape[1])
+    lms_start = lms_stop - 2 * half_bg_width
     lms = in_full_group[:, lms_start:lms_stop]
 
     # Compute summary statistics.
