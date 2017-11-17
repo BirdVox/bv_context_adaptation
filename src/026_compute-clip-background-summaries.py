@@ -33,7 +33,7 @@ bg_duration = int(T_str)
 
 # Create folder for backgrounds.
 backgrounds_name = "_".join(
-    [dataset_name, "background_summaries"])
+    [dataset_name, "clip-backgrounds"])
 backgrounds_dir = os.path.join(data_dir, backgrounds_name)
 os.makedirs(backgrounds_dir, exist_ok=True)
 
@@ -85,7 +85,7 @@ out_T_name = "-".join(["T", str(bg_duration_str)])
 out_T_dir = os.path.join(backgrounds_dir, out_T_name)
 os.makedirs(out_T_dir, exist_ok=True)
 out_unit_name = "_".join([
-    dataset_name, "background_summaries",
+    dataset_name, "clip-backgrounds",
     unit_str, out_T_name]) + ".hdf5"
 out_unit_path = os.path.join(out_T_dir, out_unit_name)
 out_unit_file = h5py.File(out_unit_path, "w")
