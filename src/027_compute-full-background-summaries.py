@@ -84,7 +84,7 @@ out_lms_group = out_unit_file.create_dataset(
 
 
 # Load over clips.
-for bg_hop_id in range(n_bg_hops)[:1000]:
+for bg_hop_id in range(n_bg_hops)[:100]:
 
     # Load background excerpt.
     lms_start = bg_hop_id * bg_hop
@@ -97,7 +97,7 @@ for bg_hop_id in range(n_bg_hops)[:1000]:
     # Store summary statistics.
     out_lms_group[:, :, bg_hop_id] = lms_percentiles
 
-    if (bg_hop_id % 100) == 0:
+    if (bg_hop_id % 10) == 0:
         elapsed_time = time.time() - int(start_time)
         elapsed_hours = int(elapsed_time / (60 * 60))
         elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
