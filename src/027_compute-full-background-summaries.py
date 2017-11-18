@@ -18,6 +18,7 @@ full_logmelspec_dir = os.path.join(
     data_dir, full_logmelspec_name)
 orig_sr = localmodule.get_sample_rate()
 percentiles = [0.1, 1, 10, 25, 50, 75, 90, 99, 99.9]
+n_percentiles = len(percentiles)
 
 
 # Parse input arguments.
@@ -79,7 +80,7 @@ out_unit_name = "_".join([
 out_unit_path = os.path.join(out_T_dir, out_unit_name)
 out_unit_file = h5py.File(out_unit_path, "w")
 out_lms_group = out_unit_file.create_dataset(
-    "logmelspec_background", (n_bins, n_bg_hops))
+    "logmelspec_background", (n_bins, n_percentiles, n_bg_hops))
 
 
 # Load over clips.
@@ -94,7 +95,7 @@ for bg_hop_id in range(n_bg_hops):
     lms_percentiles = np.percentile(lms, percentiles, axis=1)
 
     # Store summary statistics.
-    out_lms_group[:, bg_hop_id] = lms_percentiles
+    out_lms_group[:, :, bg_hop_id] = lms_percentiles
 
 
 # Close files.
