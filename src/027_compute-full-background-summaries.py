@@ -52,7 +52,7 @@ in_full_unit_path = os.path.join(
     full_logmelspec_dir, in_full_unit_name)
 in_full_unit_file = h5py.File(in_full_unit_path, "r")
 in_full_group = in_full_unit_file["logmelspec"]
-n_bins, n_hops = in_full_group
+n_bins, n_hops = in_full_group.shape
 
 
 # Load settings.
