@@ -97,6 +97,17 @@ for bg_hop_id in range(n_bg_hops):
     # Store summary statistics.
     out_lms_group[:, :, bg_hop_id] = lms_percentiles
 
+    if (bg_hop_id % 100) == 0:
+        elapsed_time = time.time() - int(start_time)
+        elapsed_hours = int(elapsed_time / (60 * 60))
+        elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
+        elapsed_seconds = elapsed_time % 60.
+        elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
+                                                       elapsed_minutes,
+                                                       elapsed_seconds)
+        print("Total elapsed time: " + elapsed_str + ".")
+        start_time = int(time.time())
+
 
 # Close files.
 in_full_unit_file.close()
