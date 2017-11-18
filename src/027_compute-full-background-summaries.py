@@ -86,8 +86,6 @@ out_lms_group = out_unit_file.create_dataset(
 for bg_hop_id in range(n_bg_hops):
 
     # Load background excerpt.
-    in_clip_key_list = in_clip_key.split("_")
-    timestamp = int(in_clip_key_list[1])
     lms_start = bg_hop_id * bg_hop
     lms_stop = min(lms_start + bg_width, n_hops)
     lms = in_full_group[:, lms_start:lms_stop]
