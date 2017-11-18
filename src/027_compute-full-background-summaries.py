@@ -80,7 +80,7 @@ out_unit_name = "_".join([
 out_unit_path = os.path.join(out_T_dir, out_unit_name)
 out_unit_file = h5py.File(out_unit_path, "w")
 out_lms_group = out_unit_file.create_dataset(
-    "logmelspec_background", (n_bins, n_percentiles, n_bg_hops))
+    "logmelspec_background", (n_percentiles, n_bins, n_bg_hops))
 
 
 # Load over clips.
