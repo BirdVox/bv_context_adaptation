@@ -65,7 +65,7 @@ lms_hop_duration = lms_hop_length / lms_sr
 
 # Define duration of background in LMS hops.
 bg_width = int(np.round(bg_duration * lms_sr / lms_hop_length))
-bg_hop = int(np.round(0.25 * bg_width))
+bg_hop = int(np.round(0.5 * bg_width))
 n_bg_hops = int(n_hops / bg_hop)
 
 
@@ -84,7 +84,7 @@ out_lms_group = out_unit_file.create_dataset(
 
 
 # Load over clips.
-for bg_hop_id in range(n_bg_hops)[:100]:
+for bg_hop_id in range(n_bg_hops):
 
     # Load background excerpt.
     lms_start = bg_hop_id * bg_hop
@@ -96,17 +96,6 @@ for bg_hop_id in range(n_bg_hops)[:100]:
 
     # Store summary statistics.
     out_lms_group[:, :, bg_hop_id] = lms_percentiles
-
-    if (bg_hop_id % 10) == 0:
-        elapsed_time = time.time() - int(start_time)
-        elapsed_hours = int(elapsed_time / (60 * 60))
-        elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
-        elapsed_seconds = elapsed_time % 60.
-        elapsed_str = "{:>02}:{:>02}:{:>05.2f}".format(elapsed_hours,
-                                                       elapsed_minutes,
-                                                       elapsed_seconds)
-        print("Total elapsed time: " + elapsed_str + ".")
-        start_time = int(time.time())
 
 
 # Close files.
