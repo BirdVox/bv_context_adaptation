@@ -37,6 +37,12 @@ for unit_str in units:
         script_list = [script_path, T_str, unit_str]
         script_path_with_args = " ".join(script_list)
 
+        # Define time.
+        n_minutes = min(15, 16*60 / bg_duration)
+        hour_str = str(int(n_minutes / 60)).zfill(2)
+        minute_str = str(int(n_minutes % 60)).zfill(2)
+        time_str = ":".join([hour_str, minute_str, "00"])
+
         # Open file.
         with open(file_path, "w") as f:
             f.write("#!/bin/bash\n")
@@ -45,7 +51,7 @@ for unit_str in units:
             f.write("#SBATCH --nodes=1\n")
             f.write("#SBATCH --tasks-per-node=1\n")
             f.write("#SBATCH --cpus-per-task=1\n")
-            f.write("#SBATCH --time=8:00:00\n")
+            f.write("#SBATCH --time=" + time_str + "\n")
             f.write("#SBATCH --mem=8GB\n")
             f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
             f.write("\n")
