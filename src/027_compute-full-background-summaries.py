@@ -65,7 +65,7 @@ lms_hop_duration = lms_hop_length / lms_sr
 
 # Define duration of background in LMS hops.
 bg_width = int(np.round(bg_duration * lms_sr / lms_hop_length))
-bg_hop = int(np.round(0.5 * bg_width))
+bg_hop = int(np.round(0.25 * bg_width))
 n_bg_hops = int(n_hops / bg_hop)
 
 
