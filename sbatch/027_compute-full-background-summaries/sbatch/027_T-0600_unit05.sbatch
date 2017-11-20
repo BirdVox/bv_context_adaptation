@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=00:01:00
+#SBATCH --time=00:15:00
 #SBATCH --mem=8GB
 #SBATCH --output=../slurm/slurm_027_T-0600_unit05_%j.out
 
