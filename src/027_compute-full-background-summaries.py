@@ -84,9 +84,7 @@ out_lms_group = out_unit_file.create_dataset(
 
 
 # Load over clips.
-print(n_bg_hops) # UPDATE ME
-start_time = int(time.time()) #UPDATE ME
-for bg_hop_id in range(n_bg_hops)[:10]: # UPDATE ME
+for bg_hop_id in range(n_bg_hops):
 
     # Load background excerpt.
     lms_start = bg_hop_id * bg_hop
@@ -107,7 +105,7 @@ out_unit_file.close()
 
 # Print footer.
 print(str(datetime.datetime.now()) + " Finish.")
-elapsed_time = (time.time() - int(start_time)) * (n_bg_hops/10) # UPDATE ME
+elapsed_time = (time.time() - int(start_time))
 elapsed_hours = int(elapsed_time / (60 * 60))
 elapsed_minutes = int((elapsed_time % (60 * 60)) / 60)
 elapsed_seconds = elapsed_time % 60.
