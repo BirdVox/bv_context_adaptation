@@ -1,0 +1,40 @@
+
+Jupyter server is running on: c39-08
+Job starts at: Fri Nov 17 11:42:23 EST 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9016:localhost:9016 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9016:localhost:9016 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 11:42:27.611 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-3037283/jupyter/notebook_cookie_secret
+[I 11:42:28.418 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 11:42:28.418 NotebookApp] 0 active kernels 
+[I 11:42:28.418 NotebookApp] The Jupyter Notebook is running at: http://localhost:9016/?token=3e1e74b28dd74cbc912a7635c883830eb9f9bd38d2249b61
+[I 11:42:28.418 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:42:28.422 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9016/?token=3e1e74b28dd74cbc912a7635c883830eb9f9bd38d2249b61
+slurmstepd: error: *** JOB 3037283 ON c39-08 CANCELLED AT 2017-11-17T23:42:50 DUE TO TIME LIMIT ***
