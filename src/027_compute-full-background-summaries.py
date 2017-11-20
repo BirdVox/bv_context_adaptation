@@ -84,7 +84,8 @@ out_lms_group = out_unit_file.create_dataset(
 
 
 # Load over clips.
-for bg_hop_id in range(n_bg_hops):
+print(n_bg_hops)
+for bg_hop_id in range(n_bg_hops)[:1]:
 
     # Load background excerpt.
     lms_start = bg_hop_id * bg_hop
