@@ -38,7 +38,7 @@ for unit_str in units:
         script_path_with_args = " ".join(script_list)
 
         # Define time.
-        n_minutes = min(15, 16*60 / bg_duration)
+        n_minutes = max(15, 16*60 / bg_duration)
         hour_str = str(int(n_minutes / 60)).zfill(2)
         minute_str = str(int(n_minutes % 60)).zfill(2)
         time_str = ":".join([hour_str, minute_str, "00"])
