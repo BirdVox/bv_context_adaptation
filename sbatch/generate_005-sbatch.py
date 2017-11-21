@@ -12,6 +12,13 @@ script_name = "005_compute-logmelspec.py"
 script_path = os.path.join("..", "src", script_name)
 
 
+# Create folders.
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
+
+
 # Loop over augmentations.
 for aug_str in augmentations:
     n_instances = augmentations[aug_str]
@@ -27,10 +34,16 @@ for aug_str in augmentations:
 
         # Loop over recording units.
         for unit_str in units:
-            job_name = "_".join(["005", instanced_aug_str, unit_str])
+
+            # Define file path.
+            job_name = "_".join(["025", unit_str, "trial-" + trial_str])
             file_name = job_name + ".sbatch"
-            script_list = [script_path, aug_str, instance_str, unit_str]
+            file_path = os.path.join(sbatch_dir, file_name)
+
+            # Define script.
+            script_list = [script_path, unit_str, str(trial_id).zfill(2)]
             script_path_with_args = " ".join(script_list)
+
             with open(file_name, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
@@ -40,7 +53,7 @@ for aug_str in augmentations:
                 f.write("#SBATCH --cpus-per-task=1\n")
                 f.write("#SBATCH --time=3:00:00\n")
                 f.write("#SBATCH --mem=1GB\n")
-                f.write("#SBATCH --output=slurm_" + job_name + "_%j.out\n")
+                f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
                 f.write("\n")
                 f.write("module purge\n")
                 f.write("\n")
