@@ -115,6 +115,23 @@ def get_negative_labels():
     return ["alarm"]
 
 
+def get_pcen_settings():
+    pcen_settings = {
+        "fmin": 2000,
+        "fmax": 11025,
+        "hop_length": 32,
+        "n_fft": 1024,
+        "n_mels": 128,
+        "pcen_delta_denominator": 10,
+        "pcen_time_constant_frames:" 40,
+        "pcen_norm_exponent": = -0.8,
+        "pcen_power" = 0.25,
+        "sr": 22050,
+        "win_length": 256,
+        "window": "hann"}
+    return pcen_settings
+
+
 def get_sample_rate():
     return 24000 # in Hertz
 
