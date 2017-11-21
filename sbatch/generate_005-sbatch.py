@@ -42,7 +42,7 @@ for aug_str in augmentations:
             file_path = os.path.join(sbatch_dir, file_name)
 
             # Define script.
-            script_list = [script_path, unit_str, str(trial_id).zfill(2)]
+            script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)
 
             with open(file_name, "w") as f:
