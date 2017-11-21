@@ -29,7 +29,7 @@ for unit_str in units:
         trial_str = str(trial_id)
 
         # Define file path.
-        job_name = "_".join(["025", unit_str, "trial-" + trial_str])
+        job_name = "_".join([script_name[:3], unit_str, "trial-" + trial_str])
         file_name = job_name + ".sbatch"
         file_path = os.path.join(sbatch_dir, file_name)
 
@@ -53,4 +53,4 @@ for unit_str in units:
             f.write("\n")
             f.write("# The first argument is the name of the recording unit.\n")
             f.write("# The second argument is the name of the trial.\n")
-f.write("python " + script_path_with_args)
+            f.write("python " + script_path_with_args)
