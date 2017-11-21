@@ -38,7 +38,8 @@ for trial_id in range(n_trials):
         # Loop over recording units.
         for unit_str in units:
             # Define job name.
-            job_name = "_".join(["025", unit_str, "trial-"+str(trial_id)])
+            job_name = "_".join([
+                script_name[:3], unit_str, "trial-"+str(trial_id)])
             sbatch_str = "sbatch " + job_name + ".sbatch"
 
             # Write SBATCH command to shell file.
