@@ -94,20 +94,29 @@ out_lms_group =\
 
 
 # Load over clips.
+is_end_reached = False
 for in_clip_key in in_clip_keys:
-
-    # Load background excerpt.
     in_clip_key_list = in_clip_key.split("_")
-    timestamp = int(in_clip_key_list[1])
-    lms_mid = int(np.round(timestamp / lms_ratio))
-    lms_start = max(0, lms_mid - half_bg_width)
-    lms_stop = lms_start + 2 * half_bg_width
-    lms_stop = min(lms_stop, in_full_group.shape[1])
-    lms_start = lms_stop - 2 * half_bg_width
-    lms = in_full_group[:, lms_start:lms_stop]
 
-    # Compute summary statistics.
-    lms_percentiles = np.percentile(lms, percentiles, axis=1)
+    if not is_end_reached:
+
+        # Load background excerpt.
+        timestamp = int(in_clip_key_list[1])
+        lms_mid = int(np.round(timestamp / lms_ratio))
+        lms_start = max(0, lms_mid - half_bg_width)
+        lms_stop = lms_start + 2 * half_bg_width
+
+
+        if lms_stop > in_full_group.shape[1]:
+            # Activate switch for end reached.
+            #is_end_reached = True
+            lms_stop = in_full_group.shape[1]
+
+        lms_start = lms_stop - 2 * half_bg_width
+        lms = in_full_group[:, lms_start:lms_stop]
+
+        # Compute summary statistics.
+        lms_percentiles = np.percentile(lms, percentiles, axis=1)
 
     # Store summary statistics.
     out_clip_key_list = in_clip_key_list[:-1]
