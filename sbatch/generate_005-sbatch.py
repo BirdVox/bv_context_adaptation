@@ -36,7 +36,8 @@ for aug_str in augmentations:
         for unit_str in units:
 
             # Define file path.
-            job_name = "_".join([script_name[:3], unit_str, "trial-" + trial_str])
+            job_name = "_".join([
+                script_name[:3], instanced_aug_str, unit_str])
             file_name = job_name + ".sbatch"
             file_path = os.path.join(sbatch_dir, file_name)
 
