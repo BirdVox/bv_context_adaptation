@@ -8,13 +8,25 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-file_path = "005.sh"
+script_name = "025_predict-svm-full-audio.py"
+
+
+# Create folder.
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
+
+
+# Define file path.
+file_path = os.path.join(sbatch_dir, script_name[:3] + ".sh")
 
 
 # Open shell file.
 with open(file_path, "w") as f:
     # Print header.
-    f.write("# This shell script executes the Slurm jobs for computing log-mel-spectrograms.\n")
+    f.write("# This shell script executes the Slurm jobs " +\
+        "for computing log-mel-spectrograms.\n")
     f.write("\n")
 
     # Loop over augmentations.
@@ -33,7 +45,8 @@ with open(file_path, "w") as f:
             # Loop over recording units.
             for unit_str in units:
                 # Define job name.
-                job_name = "_".join(["005", instanced_aug_str, unit_str])
+                job_name = "_".join([
+                    script_name[:3], instanced_aug_str, unit_str])
                 sbatch_str = "sbatch " + job_name + ".sbatch"
 
                 # Write SBATCH command to shell file.
