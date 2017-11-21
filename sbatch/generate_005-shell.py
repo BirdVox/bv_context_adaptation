@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-script_name = "025_predict-svm-full-audio.py"
+script_name = "005_compute-logmelspec.py"
 
 
 # Create folder.
