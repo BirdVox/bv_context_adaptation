@@ -1,6 +1,7 @@
 import datetime
 import h5py
 import librosa
+import numpy as np
 import os
 import sys
 import time
@@ -54,6 +55,7 @@ os.makedirs(pcen_dir, exist_ok=True)
 out_aug_dir = os.path.join(pcen_dir, aug_str)
 os.makedirs(out_aug_dir, exist_ok=True)
 out_path = os.path.join(out_aug_dir, hdf5_name + ".hdf5")
+os.remove(out_path)
 out_file = h5py.File(out_path)
 
 
@@ -75,6 +77,14 @@ settings_group["n_mels"] = pcen_settings["n_mels"]
 settings_group["sr"] = pcen_settings["sr"]
 settings_group["win_length"] = pcen_settings["win_length"]
 settings_group["window"] = pcen_settings["window"]
+settings_group["pcen_delta_denominator"] =\
+    pcen_settings["pcen_delta_denominator"]
+settings_group["pcen_time_constant_frames"] =\
+    pcen_settings["pcen_time_constant_frames"]
+settings_group["pcen_norm_exponent"] =\
+    pcen_settings["pcen_norm_exponent"]
+settings_group["pcen_power"] =\
+    pcen_settings["pcen_power"]
 
 
 # List clips.
@@ -84,8 +94,10 @@ clip_names = list(in_file["waveforms"].keys())
 
 # Loop over clips.
 for clip_name in clip_names:
+
     # Load waveform.
     waveform = in_file["waveforms"][clip_name].value
+    waveform = waveform * (2**32)
 
     # Resample to 22050 Hz.
     waveform = librosa.resample(
@@ -113,8 +125,19 @@ for clip_name in clip_names:
         fmin=pcen_settings["fmin"],
         fmax=pcen_settings["fmax"])
 
-    # Apply pointwise base-10 logarithm.
-    pcen = 0.5 * librosa.logamplitude(melspec, ref=1.0)
+    # Smooth mel-spectrogram.
+    smoothed_melspec =\
+        pcen_smooth(melspec, pcen_settings["pcen_time_constant_frames"])
+
+    # Apply adaptive gain factor.
+    pcen_gain = (smoothed_melspec + 1) ** pcen_settings["pcen_norm_exponent"]
+    pcen_melspec = melspec * pcen_gain
+
+    # Raise to PCEN exponent.
+    pcen_offset = pcen_melspec.max() / 10.0
+    pcen =\
+        (pcen_melspec + pcen_offset) ** pcen_settings["pcen_power"] -\
+        pcen_offset ** pcen_settings["pcen_power"]
 
     # Convert to single floating-point precision.
     pcen = pcen.astype('float32')
