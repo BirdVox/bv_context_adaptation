@@ -45,7 +45,7 @@ for aug_str in augmentations:
             script_list = [script_path, aug_str, instance_str, unit_str]
             script_path_with_args = " ".join(script_list)
 
-            with open(file_name, "w") as f:
+            with open(file_path, "w") as f:
                 f.write("#!/bin/bash\n")
                 f.write("\n")
                 f.write("#BATCH --job-name=" + job_name + "\n")
