@@ -25,6 +25,18 @@ else:
 pcen_settings = localmodule.get_pcen_settings()
 
 
+# Define PCEN smoother.
+def pcen_smooth(melspec, time_constant_frames):
+    smoothed_melspec = melspec.copy()
+    coeff = 1.0 / time_constant_frames
+    num_cols = melspec.shape[1]
+    for col in np.arange(1, num_cols):
+        smoothed_melspec[:, col] =\
+            smoothed_melspec[:, col - 1] +\
+            (melspec[:, col] - smoothed_melspec[:, col - 1]) * coeff
+    return smoothed_melspec
+
+
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
