@@ -124,8 +124,8 @@ def get_pcen_settings():
         "n_mels": 128,
         "pcen_delta_denominator": 10,
         "pcen_time_constant_frames": 40,
-        "pcen_norm_exponent": = -0.8,
-        "pcen_power" = 0.25,
+        "pcen_norm_exponent": -0.8,
+        "pcen_power": 0.25,
         "sr": 22050,
         "win_length": 256,
         "window": "hann"}
