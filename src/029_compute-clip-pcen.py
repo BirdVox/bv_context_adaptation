@@ -67,7 +67,10 @@ os.makedirs(pcen_dir, exist_ok=True)
 out_aug_dir = os.path.join(pcen_dir, aug_str)
 os.makedirs(out_aug_dir, exist_ok=True)
 out_path = os.path.join(out_aug_dir, hdf5_name + ".hdf5")
-os.remove(out_path)
+try:
+    os.remove(out_path)
+except FileNotFoundError:
+    pass
 out_file = h5py.File(out_path)
 
 
