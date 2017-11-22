@@ -5,7 +5,7 @@
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
 #SBATCH --time=8:00:00
-#SBATCH --mem=100MB
+#SBATCH --mem=500MB
 #SBATCH --output=../slurm/slurm_029_noise-unit02_1_unit03_%j.out
 
 module purge
