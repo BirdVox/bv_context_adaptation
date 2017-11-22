@@ -1,0 +1,59 @@
+
+Jupyter server is running on: c41-01
+Job starts at: Wed Nov 22 10:11:28 EST 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9523:localhost:9523 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9523:localhost:9523 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:11:29.513 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-3074454/jupyter/notebook_cookie_secret
+[I 10:11:29.853 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:11:29.854 NotebookApp] 0 active kernels 
+[I 10:11:29.854 NotebookApp] The Jupyter Notebook is running at: http://localhost:9523/?token=f7294dd46bfc7d0f2c8254d20c9aec4d8a1afb68c9eafb4d
+[I 10:11:29.854 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:11:29.854 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9523/?token=f7294dd46bfc7d0f2c8254d20c9aec4d8a1afb68c9eafb4d
+[I 10:37:55.840 NotebookApp] 302 GET /?token=f7294dd46bfc7d0f2c8254d20c9aec4d8a1afb68c9eafb4d (::1) 0.81ms
+[W 10:38:27.623 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 29.62ms referer=http://localhost:9523/notebooks/BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 10:38:28.156 NotebookApp] Kernel started: 284d32c5-c3c1-40da-8d2a-1aed6284fe25
+[I 10:40:28.171 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 10:42:13.866 NotebookApp] Kernel restarted: 284d32c5-c3c1-40da-8d2a-1aed6284fe25
+[I 10:42:28.390 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 10:44:28.329 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:16:28.433 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:18:28.265 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:20:28.380 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[W 11:33:29.075 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/logmelspec.ipynb is not trusted
+[W 11:33:29.113 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.01ms referer=http://localhost:9523/notebooks/BirdVox-70k_icassp2018/notebooks/logmelspec.ipynb
+[I 11:33:29.398 NotebookApp] Kernel started: 5830ca9b-0467-45ee-832d-459a83997b7e
+[I 11:34:28.739 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:35:29.454 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/logmelspec.ipynb
+[W 11:35:29.455 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/notebooks/logmelspec.ipynb
+[I 11:36:28.599 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:38:28.494 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:40:28.466 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
+[I 11:42:28.464 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/029_compute-clip-pcen.ipynb
