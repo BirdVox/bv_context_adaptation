@@ -15,11 +15,18 @@ script_name = "013_train-icassp-convnet.py"
 script_path = os.path.join("..", "src", script_name)
 
 
+# Create folders.
+os.makedirs(script_name[:-3], exist_ok=True)
+os.makedirs(os.path.join(script_name[:-3], "sbatch"), exist_ok=True)
+os.makedirs(os.path.join(script_name[:-3], "slurm"), exist_ok=True)
+
+
 for aug_kind_str in aug_kinds:
     for trial_id in range(n_trials):
         trial_str = str(trial_id)
-        file_path = script_name[:3] + "_aug-" + aug_kind_str +\
+        file_name = script_name[:3] + "_aug-" + aug_kind_str +\
             "_trial-" + trial_str + ".sh"
+        file_path = os.path.join(sbatch_dir, file_name)
 
         # Open shell file
         with open(file_path, "w") as f:
