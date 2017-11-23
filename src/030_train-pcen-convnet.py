@@ -115,10 +115,11 @@ model.summary()
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
-training_streamer = localmodule.tfr_logmelspec(
-    aug_kind_str, training_units, n_input_hops, batch_size)
-validation_streamer = localmodule.tfr_logmelspec(
-    aug_kind_str, validation_units, n_input_hops, batch_size)
+tfr_str = "pcen"
+training_streamer = localmodule.multiplex_tfr(
+    aug_kind_str, training_units, n_input_hops, batch_size, tfr_str=tfr_str)
+validation_streamer = localmodule.multiplex_tfr(
+    aug_kind_str, validation_units, n_input_hops, batch_size, tfr_str=tfr_str)
 
 
 # Create directory for model, unit, and trial.
