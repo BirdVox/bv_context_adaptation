@@ -145,7 +145,8 @@ def get_units():
     # TODO: assert that unit names do not contain underscores.
 
 
-def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
+def multiplex_tfr(aug_kind_str, fold_units, n_hops, batch_size,
+        tfr_str="logmelspec"):
     # Parse augmentation kind string (aug_kind_str).
     if aug_kind_str == "none":
         augs = ["original"]
@@ -165,11 +166,11 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
     aug_dict = get_augmentations()
     data_dir = get_data_dir()
     dataset_name = get_dataset_name()
-    logmelspec_name = "_".join([dataset_name, "logmelspec"])
-    logmelspec_dir = os.path.join(data_dir, logmelspec_name)
+    tfr_name = "_".join([dataset_name, tfr_str])
+    tfr_dir = os.path.join(data_dir, tfr_name)
     streams = []
     for aug_str in augs:
-        aug_dir = os.path.join(logmelspec_dir, aug_str)
+        aug_dir = os.path.join(tfr_dir, aug_str)
         if aug_str == "original":
             instances = [aug_str]
         else:
@@ -184,8 +185,8 @@ def multiplex_logmelspec(aug_kind_str, fold_units, n_hops, batch_size):
             for unit_str in fold_units:
                 lms_name = "_".join([dataset_name, instanced_aug_str, unit_str])
                 lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
-                stream = pescador.Streamer(yield_logmelspec,
-                    lms_path, n_hops, bias)
+                stream = pescador.Streamer(yield_tfr,
+                    lms_path, n_hops, bias, tfr_str)
                 streams.append(stream)
 
     # Multiplex streamers together.
