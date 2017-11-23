@@ -16,9 +16,10 @@ script_path = os.path.join("..", "src", script_name)
 
 
 # Create folders.
-os.makedirs(script_name[:-3], exist_ok=True)
-os.makedirs(os.path.join(script_name[:-3], "sbatch"), exist_ok=True)
-os.makedirs(os.path.join(script_name[:-3], "slurm"), exist_ok=True)
+sbatch_dir = os.path.join(script_name[:-3], "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_name[:-3], "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
 
 
 for aug_kind_str in aug_kinds:
