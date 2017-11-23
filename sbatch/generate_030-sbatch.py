@@ -10,7 +10,7 @@ import localmodule
 aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 units = localmodule.get_units()
 n_trials = 10
-script_name = "013_train-pcen-convnet.py"
+script_name = "030_train-pcen-convnet.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
