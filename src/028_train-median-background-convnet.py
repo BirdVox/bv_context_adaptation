@@ -10,8 +10,6 @@ import sys
 import tensorflow as tf
 import time
 
-import sys
-sys.path.append("../src")
 import localmodule
 
 # Define constants.
@@ -31,7 +29,7 @@ n_context_classes = 4
 
 
 # Read command-line arguments.
-args = ["3600", "unit01"]
+args = sys.argv[1:]
 aug_kind_str = "original"
 bg_duration = int(args[0])
 unit_str = args[1]
@@ -157,7 +155,7 @@ inputs = [spec_input, bg_input]
 model = keras.models.Model(inputs=inputs, outputs=dense2)
 model.compile(loss="binary_crossentropy",
     optimizer="adam", metrics=["accuracy"])
-model.summary()
+model.summary()0
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
