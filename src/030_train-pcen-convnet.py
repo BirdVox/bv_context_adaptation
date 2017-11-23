@@ -123,7 +123,7 @@ validation_streamer = localmodule.multiplex_tfr(
 
 
 # Create directory for model, unit, and trial.
-model_name = "icassp-convnet"
+model_name = "pcen-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
