@@ -218,11 +218,11 @@ def rsync():
     os.command(command_str)
 
 
-def yield_logmelspec(lms_path, n_hops, bias):
+def yield_tfr(lms_path, n_hops, bias, tfr_str):
     # Open HDF5 container.
     with h5py.File(lms_path, "r") as lms_container:
-        # Open HDF5 group corresponding to log-mel-spectrograms (lms).
-        lms_group = lms_container["logmelspec"]
+        # Open HDF5 group corresponding to time-freq representation (TFR).
+        lms_group = lms_container[tfr_str]
 
         # The naming convention of a key is
         # [unit]_[time]_[freq]_[y]_[aug]_[instance]
@@ -232,10 +232,10 @@ def yield_logmelspec(lms_path, n_hops, bias):
             # Pick a key uniformly as random.
             key = random.choice(keys)
 
-            # Load logmelspec.
+            # Load TFR.
             X = lms_group[key]
 
-            # Trim logmelspec in time to required number of hops.
+            # Trim TFR in time to required number of hops.
             X_width = X.shape[1]
             first_col = int((X_width-n_hops) / 2)
             last_col = int((X_width+n_hops) / 2)
