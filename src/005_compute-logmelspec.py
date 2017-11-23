@@ -47,7 +47,7 @@ sample_rate = in_file["sample_rate"].value
 
 
 # Create HDF5 container of logmelspecs.
-logmelspec_name = "_".join([dataset_name, "logmelspec"])
+logmelspec_name = "_".join([dataset_name, "clip-logmelspec"])
 logmelspec_dir = os.path.join(data_dir, logmelspec_name)
 os.makedirs(logmelspec_dir, exist_ok=True)
 out_aug_dir = os.path.join(logmelspec_dir, aug_str)
