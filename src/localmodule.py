@@ -166,7 +166,7 @@ def multiplex_tfr(aug_kind_str, fold_units, n_hops, batch_size,
     aug_dict = get_augmentations()
     data_dir = get_data_dir()
     dataset_name = get_dataset_name()
-    tfr_name = "_".join([dataset_name, tfr_str])
+    tfr_name = "_".join([dataset_name, "clip-" + tfr_str])
     tfr_dir = os.path.join(data_dir, tfr_name)
     streams = []
     for aug_str in augs:
