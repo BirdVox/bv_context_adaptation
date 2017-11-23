@@ -32,7 +32,7 @@ for aug_kind_str in aug_kinds:
 
             # Define job name.
             job_name = "_".join(
-                ["013", "aug-" + aug_kind_str, unit_str, trial_str])
+                [script_name[:3], "aug-" + aug_kind_str, unit_str, trial_str])
             script_path_with_args = " ".join(
                 [script_path, aug_kind_str, unit_str, trial_str])
 
