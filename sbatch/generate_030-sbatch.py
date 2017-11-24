@@ -52,7 +52,10 @@ for aug_kind_str in aug_kinds:
                 f.write("#SBATCH --nodes=1\n")
                 f.write("#SBATCH --tasks-per-node=1\n")
                 f.write("#SBATCH --cpus-per-task=1\n")
-                f.write("#SBATCH --time=6:00:00\n")
+                if aug_kind_str == "none":
+                    f.write("#SBATCH --time=3:00:00\n")
+                else:
+                    f.write("#SBATCH --time=6:00:00\n")
                 f.write("#SBATCH --mem=4GB\n")
                 f.write("#SBATCH --gres=gpu:1\n")
                 f.write("#SBATCH --output=" + slurm_path + "\n")
