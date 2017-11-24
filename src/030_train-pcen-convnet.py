@@ -23,7 +23,6 @@ kernel_size = [5, 5]
 pool_size = [2, 4]
 n_hidden_units = 64
 steps_per_epoch = 256
-epochs = 32
 validation_steps = 256
 batch_size = 32
 
@@ -33,6 +32,13 @@ args = sys.argv[1:]
 aug_kind_str = args[0]
 unit_str = args[1]
 trial_str = args[2]
+
+
+# Set number of epochs.
+if aug_kind_str == "none":
+    epochs = 16
+else:
+    epochs = 32
 
 
 # Retrieve fold such that unit_str is in the test set.
