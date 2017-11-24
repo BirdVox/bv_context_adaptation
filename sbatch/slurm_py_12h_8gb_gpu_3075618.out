@@ -1,0 +1,86 @@
+
+Jupyter server is running on: gpu-28
+Job starts at: Wed Nov 22 14:17:41 EST 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7787:localhost:7787 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7787:localhost:7787 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 14:17:45.665 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-3075618/jupyter/notebook_cookie_secret
+[I 14:17:46.436 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:17:46.436 NotebookApp] 0 active kernels 
+[I 14:17:46.436 NotebookApp] The Jupyter Notebook is running at: http://localhost:7787/?token=9a031404fcc4cd6e6d7e8d21d4cb166ddda30dde58670047
+[I 14:17:46.436 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:17:46.436 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7787/?token=9a031404fcc4cd6e6d7e8d21d4cb166ddda30dde58670047
+[I 14:20:12.416 NotebookApp] 302 GET /?token=9a031404fcc4cd6e6d7e8d21d4cb166ddda30dde58670047 (::1) 0.94ms
+[W 14:20:26.369 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 20.91ms referer=http://localhost:7787/notebooks/BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:20:26.477 NotebookApp] Kernel started: e54fe997-4df7-4de8-a027-66b631cb5a2c
+[I 14:22:26.474 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:24:26.490 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:26:26.589 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:28:26.508 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:30:26.498 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 14:32:26.517 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 15:48:27.169 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 15:50:27.181 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 15:52:27.186 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 15:58:27.326 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:00:27.334 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:02:27.387 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:04:27.435 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:06:27.449 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:08:27.407 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:10:27.427 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:12:27.400 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:14:27.430 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:32:27.443 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:34:27.458 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:36:27.505 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:38:27.472 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:40:27.477 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:46:27.557 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:52:27.531 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:54:27.523 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 16:58:27.544 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:00:27.652 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:24:27.663 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:38:27.675 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:40:27.677 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:42:28.070 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:48:27.785 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:50:27.721 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:52:27.709 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:54:18.603 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:56:27.753 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 17:58:27.735 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 18:00:27.726 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 18:02:27.728 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 18:08:27.780 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 18:10:27.879 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[W 18:16:57.675 NotebookApp] WebSocket ping timeout after 119872 ms.
+slurmstepd: error: *** JOB 3075618 ON gpu-28 CANCELLED AT 2017-11-23T02:17:48 DUE TO TIME LIMIT ***

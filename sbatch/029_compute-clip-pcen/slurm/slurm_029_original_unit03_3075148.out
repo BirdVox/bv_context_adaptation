@@ -1,0 +1,10 @@
+2017-11-22 13:35:05.960033 Start.
+Computing per-channel energy normalization (PCEN) for BirdVox-70k clips.
+Unit: unit03.
+Augmentation: original.
+
+h5py version: 2.6.0
+librosa version: 0.5.1
+
+2017-11-22 15:19:01.569883 Finish.
+Total elapsed time: 01:43:56.57.
