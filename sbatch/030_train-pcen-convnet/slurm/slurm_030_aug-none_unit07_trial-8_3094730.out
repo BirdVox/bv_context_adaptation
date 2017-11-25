@@ -1,13 +1,13 @@
-2017-11-24 22:22:24.383787: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:22:24.384013: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:22:24.384028: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 03:50:46.428546: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 03:50:46.428781: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 03:50:46.428795: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 Using TensorFlow backend.
-2017-11-24 22:22:23.317270 Start.
+2017-11-25 03:50:45.471622 Start.
 Training Salamon's ICASSP 2017 convnet on BirdVox-70k
 with PCEN input instead of logmelspec.
-Training set: unit07, unit10, unit01.
-Validation set: unit02, unit03.
-Test set: unit05.
+Training set: unit10, unit01, unit02.
+Validation set: unit03, unit05.
+Test set: unit07.
 
 h5py version: 2.6.0
 keras version: 2.0.6
@@ -44,22 +44,22 @@ Trainable params: 677,075
 Non-trainable params: 2
 _________________________________________________________________
          acc      loss   val_acc  val_loss
-0   0.499634  8.047040  0.493530  8.190432
-1   0.501343  8.057863  0.504028  8.009482
-2   0.500488  8.063333  0.505493  7.979997
-3   0.492798  8.182763  0.505981  7.968678
-4   0.498901  8.081639  0.505005  7.982258
-5   0.504028  7.997255  0.497192  8.106787
-6   0.495605  8.128884  0.502930  8.051499
-7   0.494263  8.151062  0.502197  7.997535
-8   0.493530  8.122648  0.503906  7.947288
-9   0.497925  8.036519  0.504395  7.928294
-10  0.503174  7.944132  0.494629  8.077177
-11  0.497070  8.035767  0.498413  8.012098
-12  0.490234  8.140625  0.498169  8.012406
-13  0.498901  7.999277  0.496216  8.040738
-14  0.493774  8.078508  0.497803  8.013213
-15  0.501709  7.950025  0.495605  8.046479
+0   0.752563  0.673630  0.861572  0.494271
+1   0.939575  0.343929  0.870972  0.343507
+2   0.966064  0.158298  0.939697  0.211954
+3   0.977661  0.117905  0.925293  0.213302
+4   0.981812  0.092484  0.936401  0.169892
+5   0.970581  0.148563  0.841431  0.352456
+6   0.967529  0.154494  0.897095  0.293473
+7   0.984619  0.091100  0.893433  0.360544
+8   0.970825  0.173495  0.651001  5.578444
+9   0.872925  2.077901  0.919800  1.363215
+10  0.876465  2.058335  0.629517  6.052360
+11  0.603271  6.479161  0.548340  7.362151
+12  0.671387  5.384511  0.614502  6.305625
+13  0.710815  4.750170  0.859619  2.351923
+14  0.903809  1.633923  0.865356  2.255978
+15  0.889160  1.865155  0.946533  0.943324
 
-2017-11-25 00:27:11.557384 Finish.
-Total elapsed time: 02:04:48.56.
+2017-11-25 05:52:00.124063 Finish.
+Total elapsed time: 02:01:15.12.

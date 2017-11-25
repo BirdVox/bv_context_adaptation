@@ -1,10 +1,10 @@
-2017-11-24 22:39:43.984199: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:39:43.984424: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:39:43.984435: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:39:43.984440: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 22:39:43.984445: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 01:05:30.218330: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 01:05:30.218503: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 01:05:30.218514: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 01:05:30.218518: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 01:05:30.218522: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
 Using TensorFlow backend.
-2017-11-24 22:39:43.140969 Start.
+2017-11-25 01:05:29.500751 Start.
 Training Salamon's ICASSP 2017 convnet on BirdVox-70k
 with PCEN input instead of logmelspec.
 Training set: unit10, unit01, unit02.
@@ -46,22 +46,22 @@ Trainable params: 677,075
 Non-trainable params: 2
 _________________________________________________________________
          acc      loss   val_acc  val_loss
-0   0.850220  0.497817  0.959351  0.196288
-1   0.930908  0.227324  0.957520  0.178893
-2   0.944214  0.194308  0.973877  0.110788
-3   0.951904  0.176747  0.981934  0.095635
-4   0.961304  0.152049  0.973999  0.109554
-5   0.962402  0.139196  0.978271  0.090327
-6   0.963013  0.141771  0.974365  0.097636
-7   0.962646  0.157544  0.963745  0.141572
-8   0.963379  0.144662  0.975098  0.101158
-9   0.966431  0.130607  0.952881  0.160882
-10  0.968262  0.122437  0.974243  0.109048
-11  0.968506  0.123665  0.968628  0.131343
-12  0.969727  0.141868  0.973145  0.126822
-13  0.963989  0.144926  0.960327  0.142009
-14  0.953979  0.184451  0.963745  0.194072
-15  0.652954  2.033152  0.501343  8.022451
+0   0.872192  0.560825  0.918823  0.283906
+1   0.962769  0.183064  0.963257  0.164770
+2   0.968506  0.143855  0.966553  0.137909
+3   0.973999  0.128144  0.972778  0.121744
+4   0.976196  0.116785  0.978516  0.086323
+5   0.978516  0.099561  0.981445  0.082842
+6   0.979004  0.095098  0.962646  0.134439
+7   0.981934  0.089899  0.903564  0.263036
+8   0.977539  0.090934  0.945801  0.175328
+9   0.980591  0.095178  0.979492  0.085918
+10  0.980835  0.090156  0.962158  0.115877
+11  0.964355  0.184112  0.972900  0.137425
+12  0.974731  0.162498  0.959229  0.153948
+13  0.974609  0.162114  0.982056  0.120517
+14  0.911865  1.071857  0.496582  8.207955
+15  0.512695  7.939114  0.502197  8.099104
 
-2017-11-25 00:22:09.051511 Finish.
-Total elapsed time: 01:42:26.05.
+2017-11-25 02:47:05.903927 Finish.
+Total elapsed time: 01:41:36.90.

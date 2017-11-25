@@ -1,8 +1,10 @@
-2017-11-24 21:45:28.622772: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 21:45:28.622963: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-24 21:45:28.622977: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 00:22:49.803279: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 00:22:49.803490: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 00:22:49.803501: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 00:22:49.803505: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-25 00:22:49.803508: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
 Using TensorFlow backend.
-2017-11-24 21:45:27.605470 Start.
+2017-11-25 00:22:48.872105 Start.
 Training Salamon's ICASSP 2017 convnet on BirdVox-70k
 with PCEN input instead of logmelspec.
 Training set: unit03, unit05, unit07.
@@ -44,22 +46,22 @@ Trainable params: 677,075
 Non-trainable params: 2
 _________________________________________________________________
          acc      loss   val_acc  val_loss
-0   0.495361  8.133327  0.501587  8.064347
-1   0.504517  8.009622  0.498779  8.096371
-2   0.506836  7.962919  0.498657  8.091752
-3   0.498047  8.099486  0.497314  8.109478
-4   0.503296  8.011734  0.501953  8.032211
-5   0.496094  8.125779  0.511230  7.881037
-6   0.498413  8.087052  0.493896  8.159345
-7   0.508911  7.916958  0.506714  7.952042
-8   0.504028  7.995081  0.505249  7.975191
-9   0.502930  8.012416  0.498901  8.076684
-10  0.495605  8.130232  0.505737  7.966089
-11  0.498779  8.078930  0.495972  8.119597
-12  0.496338  8.183803  0.503052  8.129651
-13  0.500366  8.155859  0.489624  8.316321
-14  0.504272  8.071935  0.502075  8.100205
-15  0.495239  8.204925  0.497803  8.158671
+0   0.890259  0.411083  0.699707  1.078271
+1   0.968872  0.127821  0.702393  1.320941
+2   0.978394  0.094657  0.589355  1.916572
+3   0.985962  0.074909  0.679077  1.464854
+4   0.979370  0.085143  0.769775  0.927655
+5   0.981445  0.080256  0.740356  1.291149
+6   0.983643  0.070263  0.762939  0.977758
+7   0.985718  0.063149  0.719482  1.282597
+8   0.986572  0.058899  0.630371  2.695577
+9   0.988770  0.052773  0.776367  1.161506
+10  0.987549  0.053606  0.757446  1.001541
+11  0.987427  0.058822  0.723145  1.168493
+12  0.989990  0.046457  0.704590  1.545727
+13  0.982422  0.092152  0.665039  1.201489
+14  0.984253  0.088505  0.765381  1.236070
+15  0.984619  0.077820  0.766113  1.063381
 
-2017-11-24 23:47:01.816087 Finish.
-Total elapsed time: 02:01:34.82.
+2017-11-25 01:58:57.160787 Finish.
+Total elapsed time: 01:36:09.16.
