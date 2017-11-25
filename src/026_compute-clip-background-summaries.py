@@ -106,13 +106,14 @@ for in_clip_key in in_clip_keys:
         lms_start = max(0, lms_mid - half_bg_width)
         lms_stop = lms_start + 2 * half_bg_width
 
-
+        # Check if end is reached.
         if lms_stop > in_full_group.shape[1]:
             # Activate switch for end reached.
-            #is_end_reached = True
+            is_end_reached = True
             lms_stop = in_full_group.shape[1]
+            lms_start = lms_stop - 2 * half_bg_width
 
-        lms_start = lms_stop - 2 * half_bg_width
+        # Extract logmelspec chunk.
         lms = in_full_group[:, lms_start:lms_stop]
 
         # Compute summary statistics.
