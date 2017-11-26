@@ -6,9 +6,9 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=2:00:00
 #SBATCH --mem=4GB
-#SBATCH --output=slurm_006_unit01_%j.out
+#SBATCH --output=../slurm/slurm_006_unit01_%j.out
 
 module purge
 
 # The argument is the name of the recording unit.
-python ../src/006_compute-full-logmelspec.py unit01
+python ../../../src/006_compute-full-logmelspec.py unit01
