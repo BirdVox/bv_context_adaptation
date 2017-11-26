@@ -11,4 +11,4 @@
 module purge
 
 # The argument is the name of the recording unit.
-python ../src/032_compute-full-pcen.py unit07
+python ../../../src/032_compute-full-pcen.py unit07
