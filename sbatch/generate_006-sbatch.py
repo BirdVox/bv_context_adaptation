@@ -21,7 +21,7 @@ os.makedirs(slurm_dir, exist_ok=True)
 # Loop over recording units.
 for unit_str in units:
     # Define file path.
-    job_name = "_".join(["006", unit_str])
+    job_name = "_".join([script_name[:3], unit_str])
     file_name = job_name + ".sbatch"
     file_path = os.path.join(sbatch_dir, file_name)
 
