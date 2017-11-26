@@ -75,11 +75,11 @@ spec_input = keras.layers.Input(
     shape=(128, n_input_hops, 1), name="spec_input")
 
 # Layer 1
-spec_bn1 = keras.layers.normalization.BatchNormalization(
-    name="spec_bn1")(spec_input)
+spec_bn = keras.layers.normalization.BatchNormalization(
+    name="spec_bn")(spec_input)
 spec_conv1 = keras.layers.Convolution2D(n_filters[0], kernel_size,
     padding="same", kernel_initializer="he_normal",
-    name="spec_conv1")(spec_bn1)
+    name="spec_conv1")(spec_bn)
 spec_pool1 = keras.layers.MaxPooling2D(
     pool_size=pool_size, name="spec_pool1")(spec_conv1)
 
@@ -96,45 +96,62 @@ spec_conv3 = keras.layers.Convolution2D(n_filters[2], kernel_size,
     activation="relu", name="spec_conv3")(spec_pool2)
 
 # Layer 4
-spec_flatten1 = keras.layers.Flatten(
+spec_flatten = keras.layers.Flatten(
     name="spec_flatten")(spec_conv3)
-spec_dense1 = keras.layers.Dense(n_hidden_units,
+spec_dense = keras.layers.Dense(n_hidden_units,
     kernel_initializer="he_normal", activation="relu",
     kernel_regularizer=keras.regularizers.l2(0.001),
-    name="spec_dense1")(spec_flatten1)
+    name="spec_dense1")(spec_flatten)
 
 # Reshape.
-spec_shape = (-1, 4)
-spec_reshape = keras.layers.Reshape(spec_shape)(spec_dense1)
-spec_flatten2 = keras.layers.Flatten()(spec_reshape)
+spec_reshape = keras.layers.Reshape((-1, 4),
+    name="spec_reshape")(spec_dense)
 
 
 # Side channel.
 # Input
 bg_input = keras.layers.Input(
-    shape=(128, 1), name="bg_input")
+    shape=(128, 5), name="bg_input")
 
 # Pool
-bg_pool1 = keras.layers.AveragePooling1D(
-    pool_size=4, name="bg_pool1")(bg_input)
+bg_pool = keras.layers.AveragePooling1D(
+    pool_size=4, name="bg_pool")(bg_input)
+
+# Permute
+bg_permute = keras.layers.Permute(
+    (2, 1), name="bg_permute")(bg_pool)
+
+# Conv
+bg_conv = keras.layers.Conv1D(
+    8, 1, kernel_initializer="he_normal",
+    activation="relu", name="bg_conv")(bg_permute)
 
 # Flatten
 bg_flatten = keras.layers.Flatten(
-    name="bg_flatten1")(bg_pool1)
+    name="bg_flatten")(bg_conv)
 
-# Layer 1
-bg_dense1 = keras.layers.Dense(32,
+# Dense 1
+bg_dense1 = keras.layers.Dense(16,
     kernel_initializer="he_normal",
     activation="relu", name="bg_dense1")(bg_flatten)
 
-# Layer 2
-bg_dense2 = keras.layers.Dense(64,
+# Dense 2
+bg_dense2 = keras.layers.Dense(4,
     kernel_initializer="he_normal",
-    activation="relu", name="bg_dense2")(bg_dense1)
+    activation="softmax", name="bg_dense2")(bg_dense1)
+
+# Reshape
+bg_reshape = keras.layers.Reshape((1, 4),
+    name="bg_reshape")(bg_dense2)
 
 
 # Element-wise multiplication
-multiply = keras.layers.Multiply()([spec_flatten2, bg_dense2])
+multiply = keras.layers.Multiply(
+    name="multiply")([spec_reshape, bg_reshape])
+
+# Flatten
+flatten = keras.layers.Flatten(
+    name="flatten")(multiply)
 
 
 # Layer 5
@@ -144,18 +161,18 @@ multiply = keras.layers.Multiply()([spec_flatten2, bg_dense2])
 # original paper, so we divide the l2 weight penalization by 50, which is
 # of the same order of magnitude as 43.
 # 0.001 / 50 = 0.00002
-dense2 = keras.layers.Dense(1,
+dense = keras.layers.Dense(1,
     kernel_initializer="normal", activation="sigmoid",
-    kernel_regularizer=keras.regularizers.l2(0.00002))(multiply)
-
+    kernel_regularizer=keras.regularizers.l2(0.00002),
+    name="dense")(flatten)
 
 
 # Compile model, print model summary.
 inputs = [spec_input, bg_input]
-model = keras.models.Model(inputs=inputs, outputs=dense2)
+model = keras.models.Model(inputs=inputs, outputs=dense)
 model.compile(loss="binary_crossentropy",
     optimizer="adam", metrics=["accuracy"])
-model.summary()0
+model.summary()
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
