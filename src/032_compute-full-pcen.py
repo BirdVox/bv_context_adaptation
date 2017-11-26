@@ -18,7 +18,7 @@ args = sys.argv[1:]
 unit_str = args[0]
 pcen_settings = localmodule.get_pcen_settings()
 sample_rate = localmodule.get_sample_rate()
-chunk_duration = logmelspec_settings["hop_length"] # in seconds
+chunk_duration = pcen_settings["hop_length"] # in seconds
 chunk_length = chunk_duration * sample_rate
 
 
@@ -118,15 +118,15 @@ for chunk_id in range(n_chunks):
 
     # Resample to 22050 Hz.
     chunk_waveform = librosa.resample(
-        chunk_waveform, sample_rate, logmelspec_settings["sr"])
+        chunk_waveform, sample_rate, pcen_settings["sr"])
 
     # Compute Short-Term Fourier Transform (STFT).
     stft = librosa.stft(
         chunk_waveform,
-        n_fft=logmelspec_settings["n_fft"],
-        win_length=logmelspec_settings["win_length"],
-        hop_length=logmelspec_settings["hop_length"],
-        window=logmelspec_settings["window"])
+        n_fft=pcen_settings["n_fft"],
+        win_length=pcen_settings["win_length"],
+        hop_length=pcen_settings["hop_length"],
+        window=pcen_settings["window"])
 
     # Delete last sample to compensate for padding.
     stft = stft[:, :-1]
@@ -138,12 +138,12 @@ for chunk_id in range(n_chunks):
     melspec = librosa.feature.melspectrogram(
         y=None,
         S=abs2_stft,
-        sr=logmelspec_settings["sr"],
-        n_fft=logmelspec_settings["n_fft"],
-        n_mels=logmelspec_settings["n_mels"],
+        sr=pcen_settings["sr"],
+        n_fft=pcen_settings["n_fft"],
+        n_mels=pcen_settings["n_mels"],
         htk=True,
-        fmin=logmelspec_settings["fmin"],
-        fmax=logmelspec_settings["fmax"])
+        fmin=pcen_settings["fmin"],
+        fmax=pcen_settings["fmax"])
 
     # Smooth mel-spectrogram.
     smoothed_melspec =\
@@ -166,7 +166,7 @@ for chunk_id in range(n_chunks):
     # hop_start is an integer because chunk_start is both a multiple
     # of sample_rate and lms_hop_length = chunk_duration.
     hop_start = int((chunk_start*lms_sr) / (sample_rate*lms_hop_length))
-    n_hops_in_chunk = logmelspec.shape[1]
+    n_hops_in_chunk = pcen.shape[1]
     hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
     pcen_dataset[:, hop_start:hop_stop] = pcen
 
