@@ -173,14 +173,6 @@ dense = keras.layers.Dense(1,
     name="dense")(flatten)
 
 
-# Compile model, print model summary.
-inputs = [spec_input, bg_input]
-model = keras.models.Model(inputs=inputs, outputs=dense)
-model.compile(loss="binary_crossentropy",
-    optimizer="adam", metrics=["accuracy"])
-model.summary()
-
-
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
 training_streamer = localmodule.multiplex_tfr(
@@ -240,6 +232,14 @@ yaml_path = os.path.join(trial_dir, network_name + ".yaml")
 with open(yaml_path, "w") as yaml_file:
     yaml_string = model.to_yaml()
     yaml_file.write(yaml_string)
+
+
+# Compile model, print model summary.
+inputs = [spec_input, bg_input]
+model = keras.models.Model(inputs=inputs, outputs=dense)
+model.compile(loss="binary_crossentropy",
+    optimizer="adam", metrics=["accuracy"])
+model.summary()
 
 
 # Train model.
