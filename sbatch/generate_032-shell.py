@@ -7,7 +7,7 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-file_path = "032.sh"
+script_name = "032_compute-full-pcen.py"
 
 
 # Create folder.
@@ -29,7 +29,7 @@ with open(file_path, "w") as f:
     # Loop over recording units.
     for unit_str in units:
         # Define job name.
-        job_name = "_".join(["006", unit_str])
+        job_name = "_".join([script_name[:3], unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
 
         # Write SBATCH command to shell file.
