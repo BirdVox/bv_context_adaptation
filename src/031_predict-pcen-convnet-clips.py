@@ -72,6 +72,7 @@ hdf5_name = "_".join([dataset_name, aug_str, predict_unit_str])
 hdf5_path = os.path.join(original_pcen_dir, hdf5_name + ".hdf5")
 pcen_container = h5py.File(hdf5_path, "r")
 pcen_group = pcen_container["pcen"]
+keys = list(pcen_group.keys())
 
 
 # Create HDF5 container for predictions.
