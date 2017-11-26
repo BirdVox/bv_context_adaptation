@@ -101,7 +101,7 @@ for hop_id in range(n_hops):
     if clip_stop > n_hops:
         clip_stop = n_hops
         clip_start = clip_stop - clip_length
-        X = pcen_group[:, clip_start:clip_stop]
+    X = pcen_group[:, clip_start:clip_stop]
 
     # Add leading and trailing singleton dimension for Keras interoperability.
     X = X[np.newaxis, :, :, np.newaxis]
