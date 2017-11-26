@@ -98,17 +98,18 @@ full_audio_length = len(full_audio)
 n_chunks = int(np.ceil(full_audio_length / chunk_length))
 pcen_hop_length = pcen_settings["hop_length"]
 pcen_sr = pcen_settings["sr"]
-n_samples_per_hop = lms_hop_length * sample_rate / lms_sr
+n_samples_per_hop = pcen_hop_length * sample_rate / pcen_sr
 n_hops = int(np.floor(full_audio_length / n_samples_per_hop))
 
 
-# Start HDF5 group for log-mel-spectrograms (logmelspec).
-lms_dataset_size = (logmelspec_settings["n_mels"], n_hops)
-lms_dataset = out_file.create_dataset("logmelspec", lms_dataset_size)
+# Start HDF5 group for per-channel energy normalization (PCEN) spectrograms.
+pcen_dataset_size = (pcen_settings["n_mels"], n_hops)
+pcen_dataset = out_file.create_dataset("pcen", pcen_dataset_size)
 
 
 # Loop over chunks.
 for chunk_id in range(n_chunks):
+
     # Load audio chunk.
     chunk_start = chunk_id * chunk_length
     chunk_stop = min(chunk_start + chunk_length, full_audio_length)
@@ -144,12 +145,22 @@ for chunk_id in range(n_chunks):
         fmin=logmelspec_settings["fmin"],
         fmax=logmelspec_settings["fmax"])
 
-    # Apply pointwise base-10 logarithm.
-    # The multiplication by 0.5 is to compensate for magnitude squaring.
-    logmelspec = 0.5 * librosa.logamplitude(melspec, ref=1.0)
+    # Smooth mel-spectrogram.
+    smoothed_melspec =\
+        pcen_smooth(melspec, pcen_settings["pcen_time_constant_frames"])
+
+    # Apply adaptive gain factor.
+    pcen_gain = (smoothed_melspec + 1) ** pcen_settings["pcen_norm_exponent"]
+    pcen_melspec = melspec * pcen_gain
+
+    # Raise to PCEN exponent.
+    pcen_offset = pcen_melspec.max() / 10.0
+    pcen =\
+        (pcen_melspec + pcen_offset) ** pcen_settings["pcen_power"] -\
+        pcen_offset ** pcen_settings["pcen_power"]
 
     # Convert to single floating-point precision.
-    logmelspec = logmelspec.astype('float32')
+    pcen = pcen.astype('float32')
 
     # Write to HDF5 dataset.
     # hop_start is an integer because chunk_start is both a multiple
@@ -157,7 +168,7 @@ for chunk_id in range(n_chunks):
     hop_start = int((chunk_start*lms_sr) / (sample_rate*lms_hop_length))
     n_hops_in_chunk = logmelspec.shape[1]
     hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
-    lms_dataset[:, hop_start:hop_stop] = logmelspec
+    pcen_dataset[:, hop_start:hop_stop] = pcen
 
 
 # Close file.
