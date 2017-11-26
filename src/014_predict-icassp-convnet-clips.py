@@ -73,6 +73,7 @@ hdf5_name = "_".join([dataset_name, aug_str, predict_unit_str])
 hdf5_path = os.path.join(original_logmelspec_dir, hdf5_name + ".hdf5")
 lms_container = h5py.File(hdf5_path, "r")
 lms_group = lms_container["logmelspec"]
+keys = list(lms_group.keys())
 
 
 # Create HDF5 container for predictions.
