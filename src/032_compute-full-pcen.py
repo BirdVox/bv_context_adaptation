@@ -176,8 +176,8 @@ for chunk_id in range(n_chunks):
 
     # Write to HDF5 dataset.
     # hop_start is an integer because chunk_start is both a multiple
-    # of sample_rate and lms_hop_length = chunk_duration.
-    hop_start = int((chunk_start*lms_sr) / (sample_rate*lms_hop_length))
+    # of sample_rate and pcen_hop_length = chunk_duration.
+    hop_start = int((chunk_start*pcen_sr) / (sample_rate*pcen_hop_length))
     n_hops_in_chunk = pcen.shape[1]
     hop_stop = min(hop_start + n_hops_in_chunk, n_hops)
     pcen_dataset[:, hop_start:hop_stop] = pcen
