@@ -98,7 +98,10 @@ for hop_id in range(n_hops):
     # Load clip in full pcen data.
     clip_start = hop_id * hop_length
     clip_stop = clip_start + clip_length
-    X = pcen_group[:, clip_start:clip_stop]
+    if clip_stop > n_hops:
+        clip_stop = n_hops
+        clip_start = clip_stop - clip_length
+        X = pcen_group[:, clip_start:clip_stop]
 
     # Add leading and trailing singleton dimension for Keras interoperability.
     X = X[np.newaxis, :, :, np.newaxis]
