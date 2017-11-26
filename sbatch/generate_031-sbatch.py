@@ -72,7 +72,7 @@ for aug_kind_str in aug_kinds:
                     f.write("#SBATCH --cpus-per-task=1\n")
                     f.write("#SBATCH --time=4:00:00\n")
                     f.write("#SBATCH --mem=500MB\n")
-                    f.write("#SBATCH --output=" + slurm_name + ".out\n")
+                    f.write("#SBATCH --output=" + slurm_name + "\n")
                     f.write("\n")
                     f.write("module purge\n")
                     f.write("\n")
