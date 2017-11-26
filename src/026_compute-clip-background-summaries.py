@@ -17,7 +17,7 @@ data_dir = localmodule.get_data_dir()
 full_logmelspec_dir = os.path.join(
     data_dir, full_logmelspec_name)
 clip_logmelspec_name = "_".join([
-    dataset_name, "logmelspec"])
+    dataset_name, "clip-logmelspec"])
 clip_logmelspec_dir = os.path.join(
     data_dir, clip_logmelspec_name, "original")
 orig_sr = localmodule.get_sample_rate()
