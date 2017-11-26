@@ -4,13 +4,11 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=0:10:00
+#SBATCH --time=4:00:00
 #SBATCH --mem=500MB
 #SBATCH --output=../slurm/slurm_031_aug-all_test-unit05_trial-3_predict-unit03_%j.out.out
 
 module purge
-module load cuda/8.0.44
-module load cudnn/8.0v5.1
 
 # The first argument is the kind of augmentation.
 # The second argument is the name of the test unit.
