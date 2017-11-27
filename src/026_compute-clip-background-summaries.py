@@ -33,7 +33,7 @@ bg_duration = int(T_str)
 
 # Create folder for backgrounds.
 backgrounds_name = "_".join(
-    [dataset_name, "clip-backgrounds"])
+    [dataset_name, "clip-logmelspec-backgrounds"])
 backgrounds_dir = os.path.join(data_dir, backgrounds_name)
 os.makedirs(backgrounds_dir, exist_ok=True)
 
