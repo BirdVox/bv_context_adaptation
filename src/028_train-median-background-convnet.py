@@ -25,6 +25,7 @@ steps_per_epoch = 256
 validation_steps = 256
 batch_size = 32
 n_context_classes = 4
+percentile_ids = [4]
 
 
 # Read command-line arguments.
@@ -63,6 +64,73 @@ print('pandas version: {:s}'.format(pd.__version__))
 print('pescador version: {:s}'.format(pescador.__version__))
 print('tensorflow version: {:s}'.format(tf.__version__))
 print("")
+
+
+# Define function for multiplexing streamers.
+def multiplex_lms_with_background(
+        augs, fold_units, n_hops, batch_size, percentile_ids):
+
+    # Define constants.
+    aug_dict = localmodule.get_augmentations()
+    data_dir = localmodule.get_data_dir()
+    dataset_name = localmodule.get_dataset_name()
+    tfr_name = "_".join([dataset_name, "clip-logmelspec"])
+    tfr_dir = os.path.join(data_dir, tfr_name)
+    bg_name = "_".join(
+        [dataset_name, "clip-logmelspec-backgrounds"])
+    bg_dir = os.path.join(data_dir, bg_name)
+    T_str = "T-" + str(bg_duration).zfill(4)
+    T_dir = os.path.join(bg_dir, T_str)
+
+    # Loop over augmentations.
+    streams = []
+    for aug_str in augs:
+
+        # Define instances.
+        aug_dir = os.path.join(tfr_dir, aug_str)
+        if aug_str == "original":
+            instances = [aug_str]
+        else:
+            n_instances = aug_dict[aug_str]
+            instances = ["-".join([aug_str, str(instance_id)])
+                for instance_id in range(n_instances)]
+
+        # Define bias.
+        if aug_str[:5] == "noise":
+            bias = np.float32(-17.0)
+        else:
+            bias = np.float32(0.0)
+
+        # Loop over instances.
+        for instanced_aug_str in instances:
+
+            # Loop over units.
+            for unit_str in fold_units:
+
+                # Define path to time-frequency representation.
+                lms_name = "_".join(
+                    [dataset_name, instanced_aug_str, unit_str])
+                lms_path = os.path.join(aug_dir, lms_name + ".hdf5")
+
+                # Define path to background.
+                bg_name = "_".join(
+                    [dataset_name, "background-summaries",
+                     unit_str, T_str + ".hdf5"])
+                bg_path = os.path.join(bg_dir, bg_name)
+
+                # Define pescador streamer.
+                stream = pescador.Streamer(yield_lms_and_background,
+                    lms_path, n_hops, bias, bg_path, percentile_ids)
+                streams.append(stream)
+
+    # Multiplex streamers together.
+    mux = pescador.Mux(streams,
+        k=len(streams), lam=None, with_replacement=True, revive=True)
+
+    # Create buffered streamer with specified batch size.
+    buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
+
+    return buffered_streamer.tuples("X", "y", cycle=True)
 
 
 # Define and compile Keras model.
