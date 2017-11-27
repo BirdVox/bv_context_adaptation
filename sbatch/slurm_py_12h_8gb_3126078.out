@@ -77,3 +77,15 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 13:02:15.710 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
 [W 13:06:40.160 NotebookApp] WebSocket ping timeout after 119925 ms.
 [W 13:06:46.329 NotebookApp] WebSocket ping timeout after 119931 ms.
+[I 14:06:30.810 NotebookApp] 302 GET /?token=0a920e1a263e20e839b6cc1948cade9efd52210627c3696b (::1) 0.49ms
+[W 14:06:46.232 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.07ms referer=http://localhost:7591/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 14:07:23.944 NotebookApp] Kernel restarted: 9b6df0dc-126f-42f3-b813-bf0ed891400a
+[I 14:08:46.640 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 14:14:46.673 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 14:16:46.667 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 14:18:46.690 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 14:24:46.708 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[W 14:33:37.176 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 14:33:37.203 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.21ms referer=http://localhost:7591/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 14:33:38.222 NotebookApp] Kernel started: fe292989-6f09-4045-a615-d34501ad889c
+[I 14:36:46.779 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
