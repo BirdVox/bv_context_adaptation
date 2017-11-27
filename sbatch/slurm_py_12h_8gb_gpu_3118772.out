@@ -47,3 +47,24 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 17:15:14.379 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
 [I 17:17:14.348 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
 [I 17:19:14.393 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/028_train-median-background-convnet.ipynb
+[I 23:01:10.912 NotebookApp] 302 GET /?token=114b5df2b2d363cd33087384b2a621a424d68104c1b6eeea (::1) 0.77ms
+[I 23:01:24.070 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018
+[I 23:01:25.634 NotebookApp] Kernel started: 6aef6ee8-240b-41fa-ae96-4ff7df1a3898
+[W 23:01:25.654 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.26ms referer=http://localhost:8290/notebooks/BirdVox-70k_icassp2018/Untitled.ipynb?kernel_name=python3
+[I 23:01:29.470 NotebookApp] Creating new directory in /BirdVox-70k_icassp2018
+[I 23:01:34.635 NotebookApp] Kernel shutdown: 6aef6ee8-240b-41fa-ae96-4ff7df1a3898
+[W 23:01:34.637 NotebookApp] delete /BirdVox-70k_icassp2018/Untitled.ipynb
+[I 23:02:02.328 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/ijcnn2018
+[I 23:02:03.347 NotebookApp] Kernel started: edd7d1ed-704b-4bf8-a629-62f112161a53
+[W 23:02:03.351 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.38ms referer=http://localhost:8290/notebooks/BirdVox-70k_icassp2018/ijcnn2018/Untitled.ipynb?kernel_name=python3
+[W 23:02:08.127 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb is not trusted
+[I 23:02:08.716 NotebookApp] Kernel started: 041b1bc6-89d0-4930-a034-941270729bfe
+[W 23:02:08.835 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 1.98ms referer=http://localhost:8290/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 23:04:03.317 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:10:03.958 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:12:03.355 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:14:03.381 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:16:03.488 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:18:03.576 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:22:03.407 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:24:03.487 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
