@@ -75,7 +75,7 @@ print("")
 # Moreover, we disable dropout because we found that it consistently prevented
 # the model to train at all.
 
-# Main channel.
+# Spectrogram channel.
 # Input
 spec_input = keras.layers.Input(
     shape=(128, n_input_hops, 1), name="spec_input")
@@ -114,7 +114,7 @@ spec_reshape = keras.layers.Reshape((-1, 4),
     name="spec_reshape")(spec_dense)
 
 
-# Side channel.
+# Background channel.
 # Input
 bg_input = keras.layers.Input(
     shape=(128, 5), name="bg_input")
@@ -151,6 +151,7 @@ bg_reshape = keras.layers.Reshape((1, 4),
     name="bg_reshape")(bg_dense2)
 
 
+# Combined channel.
 # Element-wise multiplication
 multiply = keras.layers.Multiply(
     name="multiply")([spec_reshape, bg_reshape])
@@ -159,8 +160,7 @@ multiply = keras.layers.Multiply(
 flatten = keras.layers.Flatten(
     name="flatten")(multiply)
 
-
-# Layer 5
+# Output layer
 # We put a single output instead of 43 in the original paper, because this
 # is binary classification instead of multilabel classification.
 # Furthermore, this layer contains 43 times less connections than in the
@@ -255,7 +255,7 @@ for trial_id in range(10):
     val_acc = 100 * list(history_df["Validation accuracy (%)"])[-1]
     if val_acc > 60.0:
         break
-    
+
 
 # Train model.
 model.summary()
