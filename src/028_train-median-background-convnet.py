@@ -25,6 +25,7 @@ steps_per_epoch = 256
 validation_steps = 256
 batch_size = 32
 n_context_classes = 4
+percentile_ids = [4]
 
 
 # Read command-line arguments.
@@ -67,7 +68,7 @@ print("")
 
 # Define function for multiplexing streamers.
 def multiplex_lms_with_background(
-        augs, fold_units, n_hops, batch_size):
+        augs, fold_units, n_hops, batch_size, percentile_ids):
 
     # Define constants.
     aug_dict = localmodule.get_augmentations()
@@ -119,7 +120,7 @@ def multiplex_lms_with_background(
 
                 # Define pescador streamer.
                 stream = pescador.Streamer(yield_lms_and_background,
-                    lms_path, n_hops, bias, bg_path)
+                    lms_path, n_hops, bias, bg_path, percentile_ids)
                 streams.append(stream)
 
 
