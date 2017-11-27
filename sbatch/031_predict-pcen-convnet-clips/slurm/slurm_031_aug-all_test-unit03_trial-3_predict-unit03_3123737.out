@@ -1,0 +1,17 @@
+2017-11-27 00:31:18.095835: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-27 00:31:18.096063: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-27 00:31:18.096074: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-11-27 00:31:17.779451 Start.
+Using Salamon's ICASSP 2017 convnet for binary classification in BirdVox-70k clips with PCEN input instead of logmelspec. 
+Training set: unit05, unit07, unit10.
+Validation set: unit01, unit02.
+Test set: unit03.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+2017-11-27 00:35:03.901856 Finish.
+Total elapsed time: 00:03:46.90.
