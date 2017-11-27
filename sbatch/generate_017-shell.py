@@ -9,7 +9,7 @@ import localmodule
 # Define constants.
 aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
 units = localmodule.get_units()
-script_name = "017_evaluate-icassp-convnet-full-audio.py"
+script_name = "017_threshold-icassp-convnet-full-audio.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 dataset_name = localmodule.get_dataset_name()
 n_trials = 10
