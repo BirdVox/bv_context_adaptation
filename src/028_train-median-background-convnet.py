@@ -236,13 +236,29 @@ with open(yaml_path, "w") as yaml_file:
 
 # Compile model, print model summary.
 inputs = [spec_input, bg_input]
-model = keras.models.Model(inputs=inputs, outputs=dense)
-model.compile(loss="binary_crossentropy",
-    optimizer="adam", metrics=["accuracy"])
-model.summary()
 
+# Rejection sampling for best initialization.
+n_trials = 10
+for trial_id in range(10):
+    model = keras.models.Model(inputs=inputs, outputs=dense)
+    model.compile(loss="binary_crossentropy",
+        optimizer="adam", metrics=["accuracy"])
+    history = model.fit_generator(
+        training_streamer,
+        steps_per_epoch = steps_per_epoch,
+        epochs = 4,
+        verbose = False,
+        callbacks = [history_callback],
+        validation_data = validation_streamer,
+        validation_steps = validation_steps)
+    history_df = pd.read_csv(history)
+    val_acc = 100 * list(history_df["Validation accuracy (%)"])[-1]
+    if val_acc > 60.0:
+        break
+    
 
 # Train model.
+model.summary()
 history = model.fit_generator(
     training_streamer,
     steps_per_epoch = steps_per_epoch,
