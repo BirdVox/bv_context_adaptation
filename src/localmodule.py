@@ -177,7 +177,7 @@ def multiplex_tfr(aug_kind_str, fold_units, n_hops, batch_size,
             n_instances = aug_dict[aug_str]
             instances = ["-".join([aug_str, str(instance_id)])
                 for instance_id in range(n_instances)]
-        if aug_str[:5] == "noise":
+        if aug_str[:5] == "noise" and tfr_str == "logmelspec":
             bias = np.float32(-17.0)
         else:
             bias = np.float32(0.0)
