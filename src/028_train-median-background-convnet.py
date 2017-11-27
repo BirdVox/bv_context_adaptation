@@ -123,6 +123,15 @@ def multiplex_lms_with_background(
                     lms_path, n_hops, bias, bg_path, percentile_ids)
                 streams.append(stream)
 
+    # Multiplex streamers together.
+    mux = pescador.Mux(streams,
+        k=len(streams), lam=None, with_replacement=True, revive=True)
+
+    # Create buffered streamer with specified batch size.
+    buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
+
+    return buffered_streamer.tuples("X", "y", cycle=True)
+
 
 # Define and compile Keras model.
 # NB: the original implementation of Justin Salamon in ICASSP 2017 relies on
