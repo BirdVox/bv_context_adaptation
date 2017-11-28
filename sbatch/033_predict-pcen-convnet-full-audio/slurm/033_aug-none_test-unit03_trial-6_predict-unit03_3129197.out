@@ -1,3 +1,17 @@
 2017-11-27 15:08:42.343725: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
 2017-11-27 15:08:42.344076: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
 2017-11-27 15:08:42.344089: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-11-27 15:08:42.079640 Start.
+Using Salamon's ICASSP 2017 convnet for detection in BirdVox-70k, full audio, with PCEN input. 
+Training set: unit05, unit07, unit10.
+Validation set: unit01, unit02.
+Test set: unit03.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+2017-11-27 19:45:22.431411 Finish.
+Total elapsed time: 04:36:40.43.

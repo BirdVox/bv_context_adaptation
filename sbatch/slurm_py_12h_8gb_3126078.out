@@ -90,3 +90,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 14:33:38.222 NotebookApp] Kernel started: fe292989-6f09-4045-a615-d34501ad889c
 [I 14:36:46.779 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
 [I 15:08:46.863 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+slurmstepd: error: *** JOB 3126078 ON c39-05 CANCELLED AT 2017-11-27T22:47:54 DUE TO TIME LIMIT ***
