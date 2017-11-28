@@ -133,6 +133,55 @@ def multiplex_lms_with_background(
     return buffered_streamer.tuples("X", "y", cycle=True)
 
 
+# Define function for yielding logmelspec (lms) and background.
+def yield_lms_and_background(tfr_path, n_hops, bias, bg_path, percentile_ids):
+
+    # Open HDF5 container.
+    with h5py.File(tfr_path, "r") as tfr_container,
+            h5py.File(bg_path, "r") as bg_container:
+        # Open HDF5 group corresponding to time-freq representation (TFR).
+        tfr_group = tfr_container["logmelspec"]
+
+        # The naming convention of a key is
+        # [unit]_[time]_[freq]_[y]_[aug]_[instance]
+        # where y=1 if the key corresponds to a positive clip and 0 otherwise.
+        keys = list(tfr_group.keys())
+
+        # Open HDF5 group corresponding to background
+        bg_group = bg_file["logmelspec_background"]
+
+        # Infinite "yield" loop.
+        while True:
+            # Pick a key uniformly as random.
+            key = random.choice(keys)
+
+            # Load time-frequency spectrogram (TFR).
+            X_spec = tfr_group[key]
+
+            # Trim TFR in time to required number of hops.
+            X_width = X_spec.shape[1]
+            first_col = int((X_width-n_hops) / 2)
+            last_col = int((X_width+n_hops) / 2)
+            X_spec = X_spec[:, first_col:last_col]
+
+            # Add trailing singleton dimension for Keras interoperability.
+            X_spec = X_spec[:, :, np.newaxis]
+
+            # Apply bias
+            X_spec = X_spec + bias
+
+            # Load background.
+            bg_key = "_".join(key.split("_")[:-1])
+            X_bg = bg_group[bg_key]
+            X_bg = X_bg[:, percentile_ids]
+
+            # Retrieve label y from key name.
+            y = np.array([np.float32(key.split("_")[3])])
+
+            # Yield data and label as dictionary.
+            yield dict(X_spec=X_spec, X_bg=X_bg, y=y)
+
+
 # Define and compile Keras model.
 # NB: the original implementation of Justin Salamon in ICASSP 2017 relies on
 # glorot_uniform initialization for all layers, and the optimizer is a
