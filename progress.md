@@ -112,3 +112,21 @@ I. Dataset release
 2. [DONE] Have consistent columns across units.
 
 3. [DONE] Publish on Zenodo.
+
+
+J. Per-channel energy normalization
+1. [DONE] Compute PCEN on clips with augmentation. Parallelize over units (6) and instanced augmentations (31).
+
+2. [DONE] Compute PCEN on full night data. Parallelize over units (6).
+
+3. [DONE] Train PCEN convnets without augmentation. Parallelize over units (6) and trials (10).
+
+4. [DONE] Predict PCEN convnets without augmentation on clips. Parallelize over units (6).
+
+5. [DONE] Predict PCEN convnets without augmentation on full night data. Parallelize over units (6).
+
+6. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6).
+
+7. Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
+
+8. 
