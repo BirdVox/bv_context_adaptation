@@ -355,7 +355,7 @@ inputs = [spec_input, bg_input]
 
 # Rejection sampling for best initialization.
 n_trials = 10
-for trial_id in range(10):
+for trial_id in range(n_trials):
     model = keras.models.Model(inputs=inputs, outputs=dense)
     model.compile(loss="binary_crossentropy",
         optimizer="adam", metrics=["accuracy"])
