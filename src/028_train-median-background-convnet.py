@@ -292,10 +292,10 @@ dense = keras.layers.Dense(1,
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
-training_streamer = localmodule.multiplex_tfr(
-    aug_kind_str, training_units, n_input_hops, batch_size)
-validation_streamer = localmodule.multiplex_tfr(
-    aug_kind_str, validation_units, n_input_hops, batch_size)
+training_streamer = multiplex_lms_with_background(
+    augs, training_units, n_hops, batch_size, percentile_ids)
+validation_streamer = multiplex_lms_with_background(
+    augs, validation_units, n_hops, batch_size, percentile_ids)
 
 
 # Create directory for model, unit, and trial.
