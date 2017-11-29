@@ -193,7 +193,7 @@ def yield_lms_and_background(
             # Load background.
             bg_key = "_".join(key.split("_")[:-1])
             X_bg = bg_group[bg_key]
-            X_bg = X_bg[:, percentile_ids]
+            X_bg = np.transpose(X_bg[percentile_ids, :])
 
             # Retrieve label y from key name.
             y = np.array([np.float32(key.split("_")[3])])
