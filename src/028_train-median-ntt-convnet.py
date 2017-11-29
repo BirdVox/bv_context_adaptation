@@ -33,6 +33,8 @@ args = sys.argv[1:]
 aug_kind_str = "none"
 bg_duration = int(args[0])
 unit_str = args[1]
+trial_id = 0
+trial_str = "trial-" + str(trial_id)
 
 
 # Set number of epochs.
@@ -370,8 +372,8 @@ with open(yaml_path, "w") as yaml_file:
 inputs = [spec_input, bg_input]
 
 # Rejection sampling for best initialization.
-n_trials = 10
-for trial_id in range(n_trials):
+n_inits = 10
+for init_id in range(n_inits):
     model = keras.models.Model(inputs=inputs, outputs=dense)
     model.compile(loss="binary_crossentropy",
         optimizer="adam", metrics=["accuracy"])
