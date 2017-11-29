@@ -6,6 +6,7 @@ import numpy as np
 import os
 import pandas as pd
 import pescador
+import pescador.maps
 import random
 import sys
 import tensorflow as tf
@@ -147,8 +148,8 @@ def multiplex_lms_with_background(
     # Create buffered streamer with specified batch size.
     buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
 
-    return buffered_streamer.keras_tuples(
-        inputs=["X_spec", "X_bg"], outputs=["y"], cycle=True)
+    return pescador.maps.keras_tuples(buffered_streamer,
+        inputs=["X_spec", "X_bg"], outputs=["y"])
 
 
 # Define function for yielding logmelspec (lms) and background.
