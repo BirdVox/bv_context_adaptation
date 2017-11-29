@@ -154,8 +154,7 @@ def yield_lms_and_background(
         tfr_path, n_input_hops, bias, bg_path, percentile_ids):
 
     # Open HDF5 container.
-    with h5py.File(tfr_path, "r"), h5py.File(bg_path, "r") \
-            as tfr_container, bg_container:
+    with h5py.File(tfr_path, "r"), h5py.File(bg_path, "r") as tfr_container, bg_container:
         # Open HDF5 group corresponding to time-freq representation (TFR).
         tfr_group = tfr_container["logmelspec"]
 
@@ -165,7 +164,7 @@ def yield_lms_and_background(
         keys = list(tfr_group.keys())
 
         # Open HDF5 group corresponding to background
-        bg_group = bg_file["logmelspec_background"]
+        bg_group = bg_container["logmelspec_background"]
 
         # Infinite "yield" loop.
         while True:
