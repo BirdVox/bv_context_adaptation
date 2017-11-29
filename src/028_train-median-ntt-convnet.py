@@ -6,6 +6,7 @@ import numpy as np
 import os
 import pandas as pd
 import pescador
+import random
 import sys
 import tensorflow as tf
 import time
