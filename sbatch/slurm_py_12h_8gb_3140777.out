@@ -1,0 +1,45 @@
+
+Jupyter server is running on: c40-02
+Job starts at: Tue Nov 28 23:44:07 EST 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6196:localhost:6196 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6196:localhost:6196 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 23:44:12.432 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-3140777/jupyter/notebook_cookie_secret
+[I 23:44:13.586 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 23:44:13.586 NotebookApp] 0 active kernels 
+[I 23:44:13.587 NotebookApp] The Jupyter Notebook is running at: http://localhost:6196/?token=85a501f1f139b9584710281df49ea8805366abf520d028fc
+[I 23:44:13.587 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:44:13.587 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6196/?token=85a501f1f139b9584710281df49ea8805366abf520d028fc
+[I 23:44:48.688 NotebookApp] 302 GET /?token=85a501f1f139b9584710281df49ea8805366abf520d028fc (::1) 0.79ms
+[W 23:46:56.936 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 21.51ms referer=http://localhost:6196/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:46:57.346 NotebookApp] Kernel started: 17357389-7057-4324-8f26-d18e9fa95172
+[I 23:48:57.588 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:50:57.363 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 23:52:57.373 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
