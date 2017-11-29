@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 bg_durations = [1, 2, 5, 10, 30, 60, 120, 300, 600, 1800, 3600, 7200]
-script_name = "028_train-median-background-convnet.py"
+script_name = "028_train-median-ntt-convnet.py"
 
 
 # Create folder.
