@@ -68,7 +68,7 @@ print("")
 
 # Define function for multiplexing streamers.
 def multiplex_lms_with_background(
-        augs, fold_units, n_hops, batch_size, percentile_ids):
+        aug_kind_str, fold_units, n_hops, batch_size, percentile_ids):
 
     # Define constants.
     aug_dict = localmodule.get_augmentations()
@@ -81,6 +81,20 @@ def multiplex_lms_with_background(
     bg_dir = os.path.join(data_dir, bg_name)
     T_str = "T-" + str(bg_duration).zfill(4)
     T_dir = os.path.join(bg_dir, T_str)
+
+    # Parse augmentation kind string (aug_kind_str).
+    if aug_kind_str == "none":
+        augs = ["original"]
+    elif aug_kind_str == "pitch":
+        augs = ["original", "pitch"]
+    elif aug_kind_str == "stretch":
+        augs = ["original", "stretch"]
+    else:
+        noise_augs = ["noise-" + unit_str for unit_str in fold_units]
+        if aug_kind_str == "all":
+            augs = noise_augs + ["original", "pitch", "stretch"]
+        elif aug_kind_str == "noise":
+            augs = noise_augs + ["original"]
 
     # Loop over augmentations.
     streams = []
@@ -293,9 +307,9 @@ dense = keras.layers.Dense(1,
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
 training_streamer = multiplex_lms_with_background(
-    augs, training_units, n_hops, batch_size, percentile_ids)
+    aug_kind_str, training_units, n_hops, batch_size, percentile_ids)
 validation_streamer = multiplex_lms_with_background(
-    augs, validation_units, n_hops, batch_size, percentile_ids)
+    aug_kind_str, validation_units, n_hops, batch_size, percentile_ids)
 
 
 # Create directory for model, unit, and trial.
