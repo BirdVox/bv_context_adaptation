@@ -30,7 +30,7 @@ percentile_ids = [4]
 
 # Read command-line arguments.
 args = sys.argv[1:]
-aug_kind_str = "original"
+aug_kind_str = "none"
 bg_duration = int(args[0])
 unit_str = args[1]
 
