@@ -147,7 +147,8 @@ def multiplex_lms_with_background(
     # Create buffered streamer with specified batch size.
     buffered_streamer = pescador.BufferedStreamer(mux, batch_size)
 
-    return buffered_streamer.tuples("X_spec", "X_bg", "y", cycle=True)
+    return buffered_streamer.keras_tuples(
+        inputs=["X_spec", "X_bg"], outputs=["y"], cycle=True)
 
 
 # Define function for yielding logmelspec (lms) and background.
