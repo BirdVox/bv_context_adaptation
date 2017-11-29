@@ -68,7 +68,7 @@ print("")
 
 # Define function for multiplexing streamers.
 def multiplex_lms_with_background(
-        aug_kind_str, fold_units, n_hops, batch_size, percentile_ids):
+        aug_kind_str, fold_units, n_input_hops, batch_size, percentile_ids):
 
     # Define constants.
     aug_dict = localmodule.get_augmentations()
@@ -134,7 +134,7 @@ def multiplex_lms_with_background(
 
                 # Define pescador streamer.
                 stream = pescador.Streamer(yield_lms_and_background,
-                    lms_path, n_hops, bias, bg_path, percentile_ids)
+                    lms_path, n_input_hops, bias, bg_path, percentile_ids)
                 streams.append(stream)
 
     # Multiplex streamers together.
@@ -148,7 +148,8 @@ def multiplex_lms_with_background(
 
 
 # Define function for yielding logmelspec (lms) and background.
-def yield_lms_and_background(tfr_path, n_hops, bias, bg_path, percentile_ids):
+def yield_lms_and_background(
+        tfr_path, n_input_hops, bias, bg_path, percentile_ids):
 
     # Open HDF5 container.
     with h5py.File(tfr_path, "r"), h5py.File(bg_path, "r") \
@@ -174,8 +175,8 @@ def yield_lms_and_background(tfr_path, n_hops, bias, bg_path, percentile_ids):
 
             # Trim TFR in time to required number of hops.
             X_width = X_spec.shape[1]
-            first_col = int((X_width-n_hops) / 2)
-            last_col = int((X_width+n_hops) / 2)
+            first_col = int((X_width-n_input_hops) / 2)
+            last_col = int((X_width+n_input_hops) / 2)
             X_spec = X_spec[:, first_col:last_col]
 
             # Add trailing singleton dimension for Keras interoperability.
@@ -307,9 +308,9 @@ dense = keras.layers.Dense(1,
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
 training_streamer = multiplex_lms_with_background(
-    aug_kind_str, training_units, n_hops, batch_size, percentile_ids)
+    aug_kind_str, training_units, n_input_hops, batch_size, percentile_ids)
 validation_streamer = multiplex_lms_with_background(
-    aug_kind_str, validation_units, n_hops, batch_size, percentile_ids)
+    aug_kind_str, validation_units, n_input_hops, batch_size, percentile_ids)
 
 
 # Create directory for model, unit, and trial.
