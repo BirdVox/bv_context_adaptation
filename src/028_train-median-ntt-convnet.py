@@ -361,18 +361,9 @@ history_callback = keras.callbacks.LambdaCallback(
     on_epoch_end=lambda epoch, logs: write_row(history_path, epoch, logs))
 
 
-# Export network architecture as YAML file.
-yaml_path = os.path.join(trial_dir, network_name + ".yaml")
-with open(yaml_path, "w") as yaml_file:
-    yaml_string = model.to_yaml()
-    yaml_file.write(yaml_string)
-
-
-# Compile model, print model summary.
-inputs = [spec_input, bg_input]
-
 # Rejection sampling for best initialization.
 n_inits = 10
+inputs = [spec_input, bg_input]
 for init_id in range(n_inits):
     model = keras.models.Model(inputs=inputs, outputs=dense)
     model.compile(loss="binary_crossentropy",
@@ -391,8 +382,18 @@ for init_id in range(n_inits):
         break
 
 
-# Train model.
+# Export network architecture as YAML file.
+yaml_path = os.path.join(trial_dir, network_name + ".yaml")
+with open(yaml_path, "w") as yaml_file:
+    yaml_string = model.to_yaml()
+    yaml_file.write(yaml_string)
+
+
+# Print model summary.
 model.summary()
+
+
+# Train model.
 history = model.fit_generator(
     training_streamer,
     steps_per_epoch = steps_per_epoch,
