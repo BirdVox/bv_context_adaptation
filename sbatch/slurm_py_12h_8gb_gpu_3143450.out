@@ -37,3 +37,22 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8260/?token=6d1b517517aacadf822b097413fb6d86ef88776d52c67b30
+[I 15:22:53.732 NotebookApp] 302 GET /?token=6d1b517517aacadf822b097413fb6d86ef88776d52c67b30 (::1) 0.92ms
+[I 15:25:46.632 NotebookApp] 302 GET /?token=6d1b517517aacadf822b097413fb6d86ef88776d52c67b30 (::1) 0.48ms
+[W 15:27:42.733 NotebookApp] Notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb is not trusted
+[W 15:27:42.808 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 26.72ms referer=http://localhost:8260/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 15:27:43.896 NotebookApp] Kernel started: 60f0de0b-1950-41fd-88e5-618ef3c60f7d
+[I 15:28:05.937 NotebookApp] Kernel interrupted: 60f0de0b-1950-41fd-88e5-618ef3c60f7d
+[I 15:28:08.470 NotebookApp] Kernel restarted: 60f0de0b-1950-41fd-88e5-618ef3c60f7d
+[I 15:29:43.863 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:29:43.865 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 15:31:43.900 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:31:43.901 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 15:33:43.888 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:33:43.889 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:34:50.422 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.13ms referer=http://localhost:8260/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 15:34:50.595 NotebookApp] Kernel started: 50d86c65-1085-4e80-b81c-107879b135b6
+[I 15:35:43.870 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:35:43.871 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 15:37:43.877 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 15:37:43.878 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb

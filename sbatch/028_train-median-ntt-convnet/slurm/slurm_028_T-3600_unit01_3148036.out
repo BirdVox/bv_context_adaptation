@@ -1,0 +1,27 @@
+2017-11-29 15:19:30.516618: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-29 15:19:30.516887: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-29 15:19:30.516902: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-11-29 15:19:28.217816 Start.
+Training Salamon's ICASSP 2017 convnet on BirdVox-70k. 
+Training set: unit02, unit03, unit05.
+Validation set: unit07, unit10.
+Test set: unit01.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+pandas version: 0.20.3
+pescador version: 1.0.0
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../../../src/028_train-median-ntt-convnet.py", line 382, in <module>
+    history_df = pd.read_csv(history)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/io/parsers.py", line 655, in parser_f
+    return _read(filepath_or_buffer, kwds)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/io/parsers.py", line 392, in _read
+    filepath_or_buffer, encoding, compression)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/io/common.py", line 210, in get_filepath_or_buffer
+    raise ValueError(msg.format(_type=type(filepath_or_buffer)))
+ValueError: Invalid file path or buffer object type: <class 'keras.callbacks.History'>
