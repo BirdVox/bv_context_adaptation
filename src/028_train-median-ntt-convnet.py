@@ -379,7 +379,7 @@ for init_id in range(n_inits):
         callbacks = [history_callback],
         validation_data = validation_streamer,
         validation_steps = validation_steps)
-    history_df = pd.read_csv(history)
+    history_df = pd.read_csv(history_path)
     val_acc = 100 * list(history_df["Validation accuracy (%)"])[-1]
     if val_acc > 60.0:
         break
