@@ -249,7 +249,7 @@ spec_reshape = keras.layers.Reshape((-1, 4),
 # Background channel.
 # Input
 bg_input = keras.layers.Input(
-    shape=(128, 5), name="bg_input")
+    shape=(128, 1), name="bg_input")
 
 # Pool
 bg_pool = keras.layers.AveragePooling1D(
@@ -314,7 +314,7 @@ validation_streamer = multiplex_lms_with_background(
 
 
 # Create directory for model, unit, and trial.
-model_name = "icassp-median-background-convnet"
+model_name = "icassp-median-ntt-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
