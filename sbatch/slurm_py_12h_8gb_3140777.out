@@ -43,3 +43,5 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 23:48:57.588 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
 [I 23:50:57.363 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
 [I 23:52:57.373 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 00:04:57.415 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[W 00:07:28.515 NotebookApp] WebSocket ping timeout after 119987 ms.

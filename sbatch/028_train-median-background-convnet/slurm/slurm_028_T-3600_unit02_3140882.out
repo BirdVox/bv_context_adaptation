@@ -1,0 +1,4 @@
+  File "../../../src/028_train-median-background-convnet.py", line 140
+    with h5py.File(tfr_path, "r") as tfr_container,
+                                                  ^
+SyntaxError: invalid syntax
