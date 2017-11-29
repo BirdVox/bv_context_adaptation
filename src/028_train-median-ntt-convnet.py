@@ -132,7 +132,7 @@ def multiplex_lms_with_background(
                 bg_name = "_".join(
                     [dataset_name, "background-summaries",
                      unit_str, T_str + ".hdf5"])
-                bg_path = os.path.join(bg_dir, bg_name)
+                bg_path = os.path.join(T_dir, bg_name)
 
                 # Define pescador streamer.
                 stream = pescador.Streamer(yield_lms_and_background,
