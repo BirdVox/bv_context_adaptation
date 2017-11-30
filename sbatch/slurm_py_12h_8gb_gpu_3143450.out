@@ -56,3 +56,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 15:35:43.871 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
 [I 15:37:43.877 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
 [W 15:37:43.878 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+slurmstepd: error: *** JOB 3143450 ON gpu-25 CANCELLED AT 2017-11-29T21:07:34 DUE TO TIME LIMIT ***

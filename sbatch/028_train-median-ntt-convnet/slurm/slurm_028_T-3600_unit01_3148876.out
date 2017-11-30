@@ -1,8 +1,8 @@
-2017-11-29 15:19:30.516618: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-29 15:19:30.516887: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-11-29 15:19:30.516902: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-29 17:02:01.691011: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-29 17:02:01.691273: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-11-29 17:02:01.691287: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 Using TensorFlow backend.
-2017-11-29 15:19:28.217816 Start.
+2017-11-29 17:02:00.548985 Start.
 Training Salamon's ICASSP 2017 convnet on BirdVox-70k. 
 Training set: unit02, unit03, unit05.
 Validation set: unit07, unit10.
@@ -17,7 +17,7 @@ tensorflow version: 1.2.1
 
 Traceback (most recent call last):
   File "../../../src/028_train-median-ntt-convnet.py", line 382, in <module>
-    history_df = pd.read_csv(history)
+    history_df = pd.read_csv(history_path)
   File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/io/parsers.py", line 655, in parser_f
     return _read(filepath_or_buffer, kwds)
   File "/home/vl1019/miniconda3/lib/python3.6/site-packages/pandas/io/parsers.py", line 392, in _read
