@@ -382,7 +382,7 @@ for init_id in range(n_inits):
     history_df = pd.read_csv(history_path)
     val_acc = 100 * list(history_df["Validation accuracy (%)"])[-1]
     if val_acc > 60.0:
-        break
+        break 
 
 
 # Export network architecture as YAML file.
