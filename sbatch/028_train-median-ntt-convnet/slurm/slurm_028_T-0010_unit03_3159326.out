@@ -1,12 +1,14 @@
-2017-12-01 13:56:33.162766: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
-2017-12-01 13:56:33.163035: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
-2017-12-01 13:56:33.163049: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-01 22:05:11.907398: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-01 22:05:11.907684: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-01 22:05:11.907695: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-01 22:05:11.907699: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-01 22:05:11.907703: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
 Using TensorFlow backend.
-2017-12-01 13:56:31.954794 Start.
+2017-12-01 22:05:11.044440 Start.
 Training Salamon's ICASSP 2017 convnet on BirdVox-70k. 
-Training set: unit10, unit01, unit02.
-Validation set: unit03, unit05.
-Test set: unit07.
+Training set: unit05, unit07, unit10.
+Validation set: unit01, unit02.
+Test set: unit03.
 
 h5py version: 2.6.0
 keras version: 2.0.6
@@ -66,22 +68,22 @@ Trainable params: 677,551
 Non-trainable params: 2
 ____________________________________________________________________________________________________
          acc      loss   val_acc  val_loss
-0   0.978027  0.084363  0.970459  0.096440
-1   0.979614  0.075938  0.968750  0.100392
-2   0.985840  0.062376  0.972046  0.087322
-3   0.984985  0.064499  0.957520  0.138424
-4   0.981201  0.079029  0.959961  0.116792
-5   0.985840  0.055095  0.970337  0.099352
-6   0.987915  0.054896  0.967896  0.099058
-7   0.986450  0.056701  0.965332  0.114062
-8   0.986694  0.058451  0.965210  0.106341
-9   0.987549  0.051476  0.920898  0.236818
-10  0.983887  0.072818  0.932983  0.207679
-11  0.989380  0.053210  0.978394  0.087034
-12  0.985840  0.064123  0.977783  0.088399
-13  0.987549  0.058223  0.951294  0.179484
-14  0.984253  0.062243  0.949341  0.137489
-15  0.987671  0.057293  0.976685  0.091471
+0   0.971802  0.108884  0.743042  1.341254
+1   0.973022  0.108559  0.706909  1.039496
+2   0.978027  0.086469  0.743530  1.042033
+3   0.982422  0.078024  0.716675  2.829108
+4   0.981567  0.089711  0.709717  1.355272
+5   0.981812  0.065085  0.719238  1.957389
+6   0.981323  0.076401  0.725098  2.907378
+7   0.984131  0.064708  0.760986  2.017044
+8   0.984741  0.069709  0.780640  1.324514
+9   0.984009  0.064792  0.790649  1.175399
+10  0.984009  0.064734  0.767822  1.485518
+11  0.986328  0.063809  0.759155  2.653122
+12  0.982544  0.072976  0.751831  1.669205
+13  0.986206  0.066880  0.761475  2.119784
+14  0.989380  0.048646  0.747314  2.621565
+15  0.986572  0.063940  0.791138  1.210779
 
-2017-12-01 16:34:18.493934 Finish.
-Total elapsed time: 02:37:47.49.
+2017-12-02 00:11:13.903741 Finish.
+Total elapsed time: 02:06:02.90.

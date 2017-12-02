@@ -56,3 +56,26 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 13:04:16.737 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/034_evaluate-pcen-full-audio.ipynb
 [W 13:40:45.398 NotebookApp] WebSocket ping timeout after 118345 ms.
 [W 13:40:50.366 NotebookApp] WebSocket ping timeout after 116434 ms.
+[I 18:48:16.444 NotebookApp] 302 GET /?token=c392585aca09def36f38e2a3377557690dca3bb61a264362 (::1) 0.87ms
+[W 18:51:50.768 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb is not trusted
+[W 18:51:50.832 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.52ms referer=http://localhost:8180/notebooks/BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 18:51:51.055 NotebookApp] Kernel started: b8bb42f4-b8dc-4022-a548-0bd2d60ed55b
+[I 18:53:51.080 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 18:55:51.076 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 18:57:51.087 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 18:59:08.032 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 18:59:51.087 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:01:51.092 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:03:51.101 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:05:51.808 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:07:51.805 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:09:51.809 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:11:51.815 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:13:51.820 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:15:51.820 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:17:51.840 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:19:51.839 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:27:51.857 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:31:51.874 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+[I 19:33:51.887 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/evaluate_028.ipynb
+slurmstepd: error: *** JOB 3177150 ON c39-01 CANCELLED AT 2017-12-02T00:24:38 DUE TO TIME LIMIT ***
