@@ -13,4 +13,4 @@ module purge
 
 # The first argument is the name of the recording unit.
 # The second argument is the duration of background.
-python ../../../src/035_train-ntt-convnet.py all-but-noise unit10 trial-0
+python ../../../src/035_train-ntt-convnet.py all-but-noise unit10 0

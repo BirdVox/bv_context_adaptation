@@ -13,4 +13,4 @@ module purge
 
 # The first argument is the name of the recording unit.
 # The second argument is the duration of background.
-python ../../../src/035_train-ntt-convnet.py all unit03 trial-2
+python ../../../src/035_train-ntt-convnet.py all unit03 2
