@@ -36,7 +36,7 @@ for aug_kind_str in aug_kinds:
             file_path = os.path.join(sbatch_dir, file_name)
 
             # Define script.
-            script_list = [script_path, aug_kind_str, unit_str, trial_str]
+            script_list = [script_path, aug_kind_str, unit_str, str(trial_id)]
             script_path_with_args = " ".join(script_list)
 
             # Open file.

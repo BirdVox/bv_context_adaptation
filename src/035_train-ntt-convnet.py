@@ -32,9 +32,9 @@ bg_duration = 1800
 
 # Read command-line arguments.
 args = sys.argv[1:]
-aug_kind_str = "none"
+aug_kind_str = args[0]
 unit_str = args[1]
-trial_id = 0
+trial_id = args[2]
 trial_str = "trial-" + str(trial_id)
 
 
