@@ -6,7 +6,6 @@
 #SBATCH --cpus-per-task=1
 #SBATCH --time=4:00:00
 #SBATCH --mem=8GB
-#SBATCH --gres=gpu:1
 #SBATCH --output=../slurm/slurm_035_aug-none_unit07_trial-2_%j.out
 
 module purge
