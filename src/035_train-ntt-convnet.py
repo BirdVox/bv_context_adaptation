@@ -191,7 +191,7 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
             X_spec = X_spec + bias
 
             # Load background.
-            bg_key = "_".join(key.split("_")[:-1])
+            bg_key = "_".join(key.split("_")[:-2])
             X_bg = bg_group[bg_key]
             X_bg = np.transpose(X_bg)
 
