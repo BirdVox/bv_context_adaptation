@@ -31,7 +31,7 @@ for aug_kind_str in aug_kinds:
 
             # Define file path.
             trial_str = "trial-" + str(trial_id)
-            job_name = "_".join([script_name[:3], aug_kind_str, unit_str, trial_str])
+            job_name = "_".join([script_name[:3], "aug-" + aug_kind_str, unit_str, trial_str])
             file_name = job_name + ".sbatch"
             file_path = os.path.join(sbatch_dir, file_name)
 
