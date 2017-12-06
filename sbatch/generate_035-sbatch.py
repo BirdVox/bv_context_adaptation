@@ -52,7 +52,6 @@ for aug_kind_str in aug_kinds:
                 else:
                     f.write("#SBATCH --time=4:00:00\n")
                 f.write("#SBATCH --mem=8GB\n")
-                f.write("#SBATCH --gres=gpu:1\n")
                 f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
                 f.write("\n")
                 f.write("module purge\n")
