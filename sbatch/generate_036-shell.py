@@ -11,7 +11,7 @@ dataset_name = localmodule.get_dataset_name()
 aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
 n_trials = 10
-script_name = "035_train-dot-convnet.py"
+script_name = "036_train-dot-convnet.py"
 script_path = os.path.join("..", "src", script_name)
 
 
