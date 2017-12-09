@@ -55,7 +55,7 @@ validation_units = fold[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Training Salamon's ICASSP 2017 convnet on " + dataset_name + ". ")
+print("Training NTT-like convnet on " + dataset_name + ". ")
 print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
