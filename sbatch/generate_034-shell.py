@@ -7,7 +7,7 @@ import localmodule
 
 
 # Define constants.
-aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
+aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
 script_name = "034_evaluate-pcen-convnet-full-audio.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
