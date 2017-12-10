@@ -277,8 +277,11 @@ bg_dense = keras.layers.Dense(64,
 
 # Combined channel.
 # Dot product
-multiply = keras.layers.Dot(0,
-    name="multiply", activation="relu")([spec_dense, bg_dense])
+multiply = keras.layers.Dot(0, name="multiply")([spec_dense, bg_dense])
+
+
+# Parametric ReLU.
+prelu = keras.layers.PReLU()(multiply)
 
 
 # Output layer
@@ -291,7 +294,7 @@ multiply = keras.layers.Dot(0,
 dense = keras.layers.Dense(1,
     kernel_initializer="normal", activation="sigmoid",
     kernel_regularizer=keras.regularizers.l2(0.00002),
-    name="dense")(flatten)
+    name="dense")(prelu)
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
