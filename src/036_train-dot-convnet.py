@@ -281,7 +281,7 @@ multiply = keras.layers.Dot(0, name="multiply")([spec_dense, bg_dense])
 
 
 # Parametric ReLU.
-prelu = keras.layers.PReLU()(multiply)
+prelu = keras.layers.PReLU(name="prelu")(multiply)
 
 
 # Output layer
