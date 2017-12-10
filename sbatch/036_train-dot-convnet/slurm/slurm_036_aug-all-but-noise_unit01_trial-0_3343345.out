@@ -1,0 +1,108 @@
+2017-12-10 15:26:28.960089: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-10 15:26:28.960356: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-10 15:26:28.960369: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2017-12-10 15:26:21.209594 Start.
+Training dot-product context-aware convnet on BirdVox-70k. 
+Training set: unit02, unit03, unit05.
+Validation set: unit07, unit10.
+Test set: unit01.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+pandas version: 0.20.3
+pescador version: 1.0.0
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1139, in _do_call
+    return fn(*args)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1121, in _run_fn
+    status, run_metadata)
+  File "/home/vl1019/miniconda3/lib/python3.6/contextlib.py", line 89, in __exit__
+    next(self.gen)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/errors_impl.py", line 466, in raise_exception_on_not_ok_status
+    pywrap_tensorflow.TF_GetCode(status))
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Incompatible shapes: [64] vs. [32]
+	 [[Node: gradients/mul_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _class=["loc:@mul"], _device="/job:localhost/replica:0/task:0/cpu:0"](gradients/mul_grad/Shape, gradients/mul_grad/Shape_1)]]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "../../../src/036_train-dot-convnet.py", line 368, in <module>
+    validation_steps = validation_steps)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/legacy/interfaces.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 1840, in fit_generator
+    class_weight=class_weight)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 1565, in train_on_batch
+    outputs = self.train_function(ins)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2268, in __call__
+    **self.session_kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 789, in run
+    run_metadata_ptr)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 997, in _run
+    feed_dict_string, options, run_metadata)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1132, in _do_run
+    target_list, options, run_metadata)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/client/session.py", line 1152, in _do_call
+    raise type(e)(node_def, op, message)
+tensorflow.python.framework.errors_impl.InvalidArgumentError: Incompatible shapes: [64] vs. [32]
+	 [[Node: gradients/mul_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _class=["loc:@mul"], _device="/job:localhost/replica:0/task:0/cpu:0"](gradients/mul_grad/Shape, gradients/mul_grad/Shape_1)]]
+
+Caused by op 'gradients/mul_grad/BroadcastGradientArgs', defined at:
+  File "../../../src/036_train-dot-convnet.py", line 368, in <module>
+    validation_steps = validation_steps)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/legacy/interfaces.py", line 87, in wrapper
+    return func(*args, **kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 1725, in fit_generator
+    self._make_train_function()
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 937, in _make_train_function
+    self.total_loss)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/optimizers.py", line 404, in get_updates
+    grads = self.get_gradients(loss, params)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/optimizers.py", line 71, in get_gradients
+    grads = K.gradients(loss, params)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/backend/tensorflow_backend.py", line 2305, in gradients
+    return tf.gradients(loss, variables, colocate_gradients_with_ops=True)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 540, in gradients
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 346, in _MaybeCompile
+    return grad_fn()  # Exit early
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/gradients_impl.py", line 540, in <lambda>
+    grad_scope, op, func_call, lambda: grad_fn(op, *out_grads))
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_grad.py", line 663, in _MulGrad
+    rx, ry = gen_array_ops._broadcast_gradient_args(sx, sy)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_array_ops.py", line 395, in _broadcast_gradient_args
+    name=name)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 767, in apply_op
+    op_def=op_def)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2506, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1269, in __init__
+    self._traceback = _extract_stack()
+
+...which was originally created as op 'mul', defined at:
+  File "../../../src/036_train-dot-convnet.py", line 360, in <module>
+    optimizer="adam", metrics=["accuracy"])
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 840, in compile
+    sample_weight, mask)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/training.py", line 462, in weighted
+    score_array *= weights
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py", line 838, in binary_op_wrapper
+    return func(x, y, name=name)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/math_ops.py", line 1061, in _mul_dispatch
+    return gen_math_ops._mul(x, y, name=name)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/ops/gen_math_ops.py", line 1377, in _mul
+    result = _op_def_lib.apply_op("Mul", x=x, y=y, name=name)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/op_def_library.py", line 767, in apply_op
+    op_def=op_def)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 2506, in create_op
+    original_op=self._default_original_op, op_def=op_def)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/tensorflow/python/framework/ops.py", line 1269, in __init__
+    self._traceback = _extract_stack()
+
+InvalidArgumentError (see above for traceback): Incompatible shapes: [64] vs. [32]
+	 [[Node: gradients/mul_grad/BroadcastGradientArgs = BroadcastGradientArgs[T=DT_INT32, _class=["loc:@mul"], _device="/job:localhost/replica:0/task:0/cpu:0"](gradients/mul_grad/Shape, gradients/mul_grad/Shape_1)]]
+
