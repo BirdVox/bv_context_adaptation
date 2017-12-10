@@ -112,8 +112,6 @@ for predict_unit_str in predict_units:
         "full-audio-metrics"
     ])
     metrics_path = os.path.join(trial_dir, metrics_name + ".csv")
-    csv_file = open(metrics_path, 'w')
-    csv_writer = csv.writer(csv_file, delimiter=',')
 
 
     # Write CSV header.
@@ -133,7 +131,13 @@ for predict_unit_str in predict_units:
         "Precision (%)",
         "Recall (%)",
         "F1 Score (%)"]
+
+
+    # Write row.
+    csv_file = open(metrics_path, 'w')
+    csv_writer = csv.writer(csv_file, delimiter=',')
     csv_writer.writerow(csv_header)
+    csv_file.close()
 
 
     # Loop over thresholds.
@@ -185,11 +189,12 @@ for predict_unit_str in predict_units:
             format(recall, ".6f").rjust(10),
             format(f1_score, ".6f").rjust(10)
         ]
+
+        # Write row.
+        csv_file = open(metrics_path, 'a')
+        csv_writer = csv.writer(csv_file, delimiter=',')
         csv_writer.writerow(row)
-
-
-    # Close file.
-    csv_file.close()
+        csv_file.close()
 
 
 # Print elapsed time.
