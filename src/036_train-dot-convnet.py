@@ -277,7 +277,7 @@ bg_dense = keras.layers.Dense(64,
 
 # Combined channel.
 # Dot product
-multiply = keras.layers.Dot(0, name="multiply")([spec_dense, bg_dense])
+multiply = keras.layers.Dot(1, name="multiply")([spec_dense, bg_dense])
 
 
 # Parametric ReLU.
