@@ -17,8 +17,9 @@ import localmodule
 args = sys.argv[1:]
 aug_kind_str = args[0]
 test_unit_str = args[1]
-trial_id = int(args[2])
-threshold_start = int(args[3])
+predict_unit_str = args[2]
+trial_id = int(args[3])
+threshold_start = int(args[4])
 
 
 # Define constants.
