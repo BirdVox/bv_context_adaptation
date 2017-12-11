@@ -66,7 +66,7 @@ for aug_kind_str in aug_kinds:
                         "# This shell script executes Slurm jobs for thresholding\n" +
                         "# Justin Salamon's ICASSP 2017 predictions of convolutional\n" +
                         "# neural network on " + dataset_name + " full audio\n" +
-                        "# with PCEN input.")
+                        "# with PCEN input.\n")
                     f.write("# Augmentation kind: " + aug_kind_str + ".\n")
                     f.write("# Test unit: " + test_unit_str + ".\n")
                     f.write("# Prediction unit: " + predict_unit_str + ".\n")
