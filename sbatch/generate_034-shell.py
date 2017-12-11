@@ -56,7 +56,7 @@ for aug_kind_str in aug_kinds:
                     script_name[:3] + "_" +\
                     "aug-" + aug_kind_str +\
                     "test-" + test_unit_str + "_" +\
-                    "predict-" + predict_unit_str +\
+                    "predict-" + predict_unit_str + "_" +\
                     "trial-"+ str(trial_id) + ".sh")
 
                 # Open shell file
