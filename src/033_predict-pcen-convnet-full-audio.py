@@ -89,7 +89,9 @@ csv_writer.writerow(csv_header)
 
 
 # Compute number of hops.
-n_hops = int(pcen_group.shape[1] / hop_length) - 1
+n_cols = pcen_group.shape[1]
+n_hops = int(n_cols / hop_length) - 1
+is_end_reached = False
 
 
 # Loop over hops.
@@ -98,16 +100,21 @@ for hop_id in range(n_hops):
     # Load clip in full pcen data.
     clip_start = hop_id * hop_length
     clip_stop = clip_start + clip_length
-    if clip_stop > n_hops:
+    if clip_stop > n_cols:
+        is_end_reached = True
         clip_stop = n_hops
         clip_start = clip_stop - clip_length
-    X = pcen_group[:, clip_start:clip_stop]
 
-    # Add leading and trailing singleton dimension for Keras interoperability.
-    X = X[np.newaxis, :, :, np.newaxis]
 
-    # Predict.
-    predicted_probability = model.predict(X)[0,0]
+    if not is_end_reached:
+        X = pcen_group[:, clip_start:clip_stop]
+
+        # Add leading and trailing singleton dimension for Keras interoperability.
+        X = X[np.newaxis, :, :, np.newaxis]
+
+        # Predict.
+        predicted_probability = model.predict(X)[0,0]
+
 
     # Store prediction as DataFrame row.
     timestamp = (hop_id+1) * hop_duration
