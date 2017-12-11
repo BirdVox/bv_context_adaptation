@@ -63,6 +63,7 @@ for aug_kind_str in aug_kinds:
                         script_name[:3],
                         "aug-" + aug_kind_str,
                         "test-" + test_unit_str,
+                        "predict-" + predict_unit_str,
                         "trial-" + str(trial_id),
                         "th-" + threshold_range_str
                     ])
@@ -74,7 +75,8 @@ for aug_kind_str in aug_kinds:
                     # Define script path with arguments.
                     script_list = [
                         script_path, aug_kind_str,
-                        test_unit_str, str(trial_id), threshold_range_str]
+                        test_unit_str, predict_unit_str,
+                        str(trial_id), threshold_range_str]
                     script_path_with_args = " ".join(script_list)
 
                     # Define slurm path.
