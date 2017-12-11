@@ -54,7 +54,7 @@ for aug_kind_str in aug_kinds:
 
                 file_path = os.path.join(sbatch_dir,
                     script_name[:3] + "_" +\
-                    "aug-" + aug_kind_str +\
+                    "aug-" + aug_kind_str + "_" +\
                     "test-" + test_unit_str + "_" +\
                     "predict-" + predict_unit_str + "_" +\
                     "trial-"+ str(trial_id) + ".sh")
