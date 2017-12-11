@@ -17,7 +17,8 @@ n_trials = 10
 icassp_thresholds = 1.0 - np.concatenate((
     np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)))[:-1]
 n_thresholds = len(icassp_thresholds)
-n_groups = int(n_thresholds / 10)
+n_thresholds_per_group = 10
+n_groups = int(n_thresholds / n_thresholds_per_group)
 
 
 # Create folder.
