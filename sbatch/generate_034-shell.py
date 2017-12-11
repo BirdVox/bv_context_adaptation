@@ -24,18 +24,32 @@ slurm_dir = os.path.join(script_dir, "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
 
 
+# Loop over augmentations.
 for aug_kind_str in aug_kinds:
-    file_path = os.path.join(sbatch_dir,
-        script_name[:3] + "_aug-" + aug_kind_str + ".sh")
 
     # Loop over test units.
     for test_unit_str in units:
 
+        # Retrieve fold such that unit_str is in the test set.
+        folds = localmodule.fold_units()
+        fold = [f for f in folds if test_unit_str in f[0]][0]
+        test_units = fold[0]
+        training_units = fold[1]
+        validation_units = fold[2]
+        predict_units = test_units + validation_units
+
         # Loop over test units.
-        for predict_unit_str in units:
+        for predict_unit_str in predict_units:
 
             # Loop over trials.
             for trial_id in range(n_trials):
+
+                file_path = os.path.join(sbatch_dir,
+                    script_name[:3] + "_" +\
+                    "aug-" + aug_kind_str +\
+                    "test-" + test_unit_str + "_" +\
+                    "predict-" + predict_unit_str +\
+                    "trial-"+ str(trial_id) + ".sh")
 
                 # Open shell file
                 with open(file_path, "w") as f:
