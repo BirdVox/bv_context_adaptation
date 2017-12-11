@@ -13,6 +13,13 @@ script_path = os.path.join("..", "..", "..", "src", script_name)
 n_trials = 10
 
 
+# Define thresholds.
+icassp_thresholds = 1.0 - np.concatenate((
+    np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)))[:-1]
+n_thresholds = len(icassp_thresholds)
+n_groups = int(n_thresholds / 10)
+
+
 # Create folder.
 script_dir = script_name[:-3]
 os.makedirs(script_dir, exist_ok=True)
