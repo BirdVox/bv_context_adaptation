@@ -45,7 +45,7 @@ for aug_kind_str in aug_kinds:
 
                 # Define threshold boundaries in group.
                 threshold_start = group_id * n_thresholds_per_group
-                threshold_stop = group_id + n_thresholds_per_group
+                threshold_stop = threshold_start + n_thresholds_per_group - 1
                 threshold_range_str = str(threshold_start).zfill(3) + ":" +\
                     str(threshold_stop).zfill(3)
 
