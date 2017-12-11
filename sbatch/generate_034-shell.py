@@ -24,6 +24,14 @@ slurm_dir = os.path.join(script_dir, "slurm")
 os.makedirs(slurm_dir, exist_ok=True)
 
 
+# Define thresholds.
+icassp_thresholds = 1.0 - np.concatenate((
+    np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)))[:-1]
+n_thresholds = len(icassp_thresholds)
+n_thresholds_per_group = 10
+n_groups = int(n_thresholds / n_thresholds_per_group)
+
+
 # Loop over augmentations.
 for aug_kind_str in aug_kinds:
 
@@ -65,17 +73,23 @@ for aug_kind_str in aug_kinds:
                     f.write("# Trial ID: " + str(trial_id) + ".\n")
                     f.write("\n")
 
-                    # Define job name.
-                    job_name = "_".join([
-                        script_name[:3],
-                        "aug-" + aug_kind_str,
-                        "test-" + test_unit_str,
-                        "predict-" + predict_unit_str,
-                        "trial-" + str(trial_id)])
-                    sbatch_str = "sbatch " + job_name + ".sbatch"
-                    f.write(sbatch_str + "\n")
-                    f.write("\n")
+                    for group_id in n_groups:
+                        # Define threshold boundaries in group.
+                        threshold_start = group_id * n_thresholds_per_group
+                        threshold_range_str = str(threshold_start).zfill(3)
 
+                        # Define job name.
+                        job_name = "_".join([
+                            script_name[:3],
+                            "aug-" + aug_kind_str,
+                            "test-" + test_unit_str,
+                            "predict-" + predict_unit_str,
+                            "trial-" + str(trial_id),
+                            "th-" + threshold_range_str
+                        ])
+                        sbatch_str = "sbatch " + job_name + ".sbatch"
+                        f.write(sbatch_str + "\n")
+                        f.write("\n")
 
                 # Grant permission to execute the shell file.
                 # https://stackoverflow.com/a/30463972
