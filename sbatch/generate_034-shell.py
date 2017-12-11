@@ -89,7 +89,6 @@ for aug_kind_str in aug_kinds:
                         ])
                         sbatch_str = "sbatch " + job_name + ".sbatch"
                         f.write(sbatch_str + "\n")
-                        f.write("\n")
 
                 # Grant permission to execute the shell file.
                 # https://stackoverflow.com/a/30463972
