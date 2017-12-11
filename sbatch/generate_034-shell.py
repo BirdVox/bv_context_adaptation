@@ -73,7 +73,7 @@ for aug_kind_str in aug_kinds:
                     f.write("# Trial ID: " + str(trial_id) + ".\n")
                     f.write("\n")
 
-                    for group_id in n_groups:
+                    for group_id in range(n_groups):
                         # Define threshold boundaries in group.
                         threshold_start = group_id * n_thresholds_per_group
                         threshold_range_str = str(threshold_start).zfill(3)
