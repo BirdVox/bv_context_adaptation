@@ -76,8 +76,7 @@ for aug_kind_str in aug_kinds:
                         "aug-" + aug_kind_str,
                         "test-" + test_unit_str,
                         "predict-" + predict_unit_str,
-                        "trial-" + str(trial_id),
-                        "th-" + threshold_range_str
+                        "trial-" + str(trial_id)
                     ])
                     sbatch_str = "sbatch " + job_name + ".sbatch"
                     f.write(sbatch_str + "\n")
