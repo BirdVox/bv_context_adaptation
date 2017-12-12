@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=00:05:00
+#SBATCH --time=00:30:00
 #SBATCH --mem=1GB
 #SBATCH --output=../slurm/slurm_034_aug-none_test-unit02_predict-unit02_trial-3_%j.out
 
