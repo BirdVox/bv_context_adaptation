@@ -40,15 +40,6 @@ icassp_thresholds = 1.0 - np.linspace(0.0, 1.0, 201)[:-1]
 n_thresholds = len(icassp_thresholds)
 
 
-# Retrieve fold such that unit_str is in the test set.
-folds = localmodule.fold_units()
-fold = [f for f in folds if test_unit_str in f[0]][0]
-test_units = fold[0]
-training_units = fold[1]
-validation_units = fold[2]
-predict_units = test_units + validation_units
-
-
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
@@ -57,9 +48,7 @@ print("Thresholding Salamon's ICASSP 2017 convnet for detection in " +
 print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
-print("Prediction units: " + ", ".join(predict_units))
-print("Threshold indices: " +\
-    str(threshold_start).zfill(3) + " to " + str(threshold_stop).zfill(3))
+print("Prediction unit: " + ", ".join(predict_unit_str))
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
@@ -112,7 +101,6 @@ metrics_name = "_".join([
     trial_str,
     "predict-" + predict_unit_str,
     "full-audio-metrics",
-    "th-" + str(threshold_start).zfill(3)
 ])
 metrics_path = os.path.join(trial_dir, metrics_name + ".csv")
 
@@ -144,7 +132,7 @@ csv_file.close()
 
 
 # Loop over thresholds.
-for threshold_id in range(threshold_start, threshold_stop):
+for threshold_id in range(n_thresholds):
     threshold = icassp_thresholds[threshold_id]
 
     # Pick peaks.
