@@ -112,13 +112,6 @@ dense2 = keras.layers.Dense(1,
     kernel_regularizer=keras.regularizers.l2(0.00002))(dense1)
 
 
-# Compile model, print model summary.
-model = keras.models.Model(inputs=inputs, outputs=dense2)
-model.compile(loss="binary_crossentropy",
-    optimizer="adam", metrics=["accuracy"])
-model.summary()
-
-
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
 # training and validation sets.
 tfr_str = "pcen"
@@ -200,6 +193,9 @@ with open(yaml_path, "w") as yaml_file:
     yaml_string = model.to_yaml()
     yaml_file.write(yaml_string)
 
+
+# Print model summary.
+model.summary()
 
 # Train model.
 history = model.fit_generator(
