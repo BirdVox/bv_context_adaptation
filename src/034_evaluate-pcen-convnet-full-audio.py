@@ -19,7 +19,6 @@ aug_kind_str = args[0]
 test_unit_str = args[1]
 predict_unit_str = args[2]
 trial_id = int(args[3])
-threshold_start = int(args[4])
 
 
 # Define constants.
@@ -32,14 +31,13 @@ model_name = "pcen-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
-icassp_thresholds = 1.0 - np.concatenate((
-    np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)
-))
-n_thresholds = len(icassp_thresholds)
 tolerance = 0.5 # in seconds
 min_dist = 3 # 150 ms
-n_thresholds_per_group = 10
-threshold_stop = threshold_start + n_thresholds_per_group
+
+
+# Define thresholds.
+icassp_thresholds = 1.0 - np.linspace(0.0, 1.0, 201)[:-1]
+n_thresholds = len(icassp_thresholds)
 
 
 # Retrieve fold such that unit_str is in the test set.
