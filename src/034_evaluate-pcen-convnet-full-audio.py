@@ -48,7 +48,7 @@ print("Thresholding Salamon's ICASSP 2017 convnet for detection in " +
 print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
-print("Prediction unit: " + ", ".join(predict_unit_str))
+print("Prediction unit: " + predict_unit_str)
 print("")
 print('h5py version: {:s}'.format(h5py.__version__))
 print('numpy version: {:s}'.format(np.__version__))
