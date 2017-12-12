@@ -174,6 +174,26 @@ history_callback = keras.callbacks.LambdaCallback(
     on_epoch_end=lambda epoch, logs: write_row(history_path, epoch, logs))
 
 
+# Rejection sampling for best initialization.
+n_inits = 10
+for init_id in range(n_inits):
+    model = keras.models.Model(inputs=inputs, outputs=dense2)
+    model.compile(loss="binary_crossentropy",
+        optimizer="adam", metrics=["accuracy"])
+    history = model.fit_generator(
+        training_streamer,
+        steps_per_epoch = steps_per_epoch,
+        epochs = 4,
+        verbose = False,
+        callbacks = [history_callback],
+        validation_data = validation_streamer,
+        validation_steps = validation_steps)
+    history_df = pd.read_csv(history_path)
+    val_acc = 100 * list(history_df["Validation accuracy (%)"])[-1]
+    if val_acc > 60.0:
+        break
+
+
 # Export network architecture as YAML file.
 yaml_path = os.path.join(trial_dir, network_name + ".yaml")
 with open(yaml_path, "w") as yaml_file:
