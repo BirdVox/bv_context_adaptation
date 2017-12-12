@@ -1,13 +1,13 @@
-./034_aug-all_test-unit02_trial-0.sh
-./034_aug-all_test-unit02_trial-1.sh
-./034_aug-all_test-unit02_trial-2.sh
-./034_aug-all_test-unit02_trial-3.sh
-./034_aug-all_test-unit02_trial-4.sh
-./034_aug-all_test-unit02_trial-5.sh
-./034_aug-all_test-unit02_trial-6.sh
-./034_aug-all_test-unit02_trial-7.sh
-./034_aug-all_test-unit02_trial-8.sh
-./034_aug-all_test-unit02_trial-9.sh
+./034_aug-all_test-unit01_trial-0.sh
+./034_aug-all_test-unit01_trial-1.sh
+./034_aug-all_test-unit01_trial-2.sh
+./034_aug-all_test-unit01_trial-3.sh
+./034_aug-all_test-unit01_trial-4.sh
+./034_aug-all_test-unit01_trial-5.sh
+./034_aug-all_test-unit01_trial-6.sh
+./034_aug-all_test-unit01_trial-7.sh
+./034_aug-all_test-unit01_trial-8.sh
+./034_aug-all_test-unit01_trial-9.sh
 
 ./034_aug-all_test-unit02_trial-0.sh
 ./034_aug-all_test-unit02_trial-1.sh
