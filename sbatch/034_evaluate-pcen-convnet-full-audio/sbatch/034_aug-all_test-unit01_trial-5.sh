@@ -4,8 +4,8 @@
 # with PCEN input.
 # Augmentation kind: all.
 # Test unit: unit01.
-# Trial ID: 0.
+# Trial ID: 5.
 
-sbatch 034_aug-all_test-unit01_predict-unit01_trial-0.sbatch
-sbatch 034_aug-all_test-unit01_predict-unit07_trial-0.sbatch
-sbatch 034_aug-all_test-unit01_predict-unit10_trial-0.sbatch
+sbatch 034_aug-all_test-unit01_predict-unit01_trial-5.sbatch
+sbatch 034_aug-all_test-unit01_predict-unit07_trial-5.sbatch
+sbatch 034_aug-all_test-unit01_predict-unit10_trial-5.sbatch
