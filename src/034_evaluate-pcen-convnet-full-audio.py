@@ -36,7 +36,9 @@ min_dist = 3 # 150 ms
 
 
 # Define thresholds.
-icassp_thresholds = 1.0 - np.linspace(0.0, 1.0, 201)[:-1]
+icassp_thresholds = 1.0 - np.concatenate((
+    np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)
+))
 n_thresholds = len(icassp_thresholds)
 
 
