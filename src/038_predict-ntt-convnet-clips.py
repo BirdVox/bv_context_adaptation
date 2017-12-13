@@ -52,7 +52,7 @@ print("")
 
 
 # Load model.
-model_name = "ntt-convnet"
+model_name = "icassp-ntt-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
