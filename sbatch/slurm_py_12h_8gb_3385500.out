@@ -37,3 +37,11 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8370/?token=d387e3aecb49e69014e93941b0b9c58250360e6c3cd3e872
+[I 17:38:49.588 NotebookApp] 302 GET /?token=d387e3aecb49e69014e93941b0b9c58250360e6c3cd3e872 (::1) 0.78ms
+[W 17:39:02.469 NotebookApp] Notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb is not trusted
+[W 17:39:02.521 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 20.29ms referer=http://localhost:8370/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:39:04.131 NotebookApp] Kernel started: e6b2052a-a253-4225-a3dc-18f1a87c0904
+[I 17:41:04.095 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:41:04.096 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:43:04.105 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:43:04.106 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
