@@ -139,7 +139,7 @@ for key in keys:
 
     # Predict.
     predicted_probability = model.predict(
-        {"spec_input": X_spec, "bg_input": X_bg})[0, 0]
+        {"spec_input": X_lms, "bg_input": X_bg})[0, 0]
 
     # Store prediction as DataFrame row.
     key_split = key.split("_")
