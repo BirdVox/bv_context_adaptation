@@ -88,6 +88,7 @@ bg_name = "_".join(
      test_unit_str, T_str + ".hdf5"])
 bg_path = os.path.join(T_dir, bg_name)
 bg_container = h5py.File(bg_path, "r")
+bg_group = bg_container["logmelspec_background"]
 
 
 # Create HDF5 container for predictions.
@@ -118,21 +119,27 @@ csv_writer.writerow(csv_header)
 # Loop over keys.
 for key in keys:
     # Load logmelspec.
-    X = lms_group[key]
+    X_lms = lms_group[key]
 
     # Trim logmelspec in time to required number of hops.
-    X_width = X.shape[1]
+    X_width = X_lms.shape[1]
     first_col = int((X_width-n_input_hops) / 2)
     last_col = int((X_width+n_input_hops) / 2)
-    X = X[:, first_col:last_col]
+    X_lms = X_lms[:, first_col:last_col]
 
     # Add trailing singleton dimension for Keras interoperability.
-    X = X[np.newaxis, :, :, np.newaxis]
+    X_lms = X_lms[np.newaxis, :, :, np.newaxis]
 
+    # Define key for background container.
+    bg_key = "_".join(key.split("_")[:-1])
 
+    # Load background.
+    X_bg = bg_group[bg_key].value.T
+    X_bg = X_bg[np.newaxis, :, :]
 
     # Predict.
-    predicted_probability = model.predict(X)[0, 0]
+    predicted_probability = model.predict(
+        {"spec_input": X_spec, "bg_input": X_bg})[0, 0]
 
     # Store prediction as DataFrame row.
     key_split = key.split("_")
