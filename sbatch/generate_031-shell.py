@@ -8,7 +8,7 @@ import localmodule
 
 # Define constants
 dataset_name = localmodule.get_dataset_name()
-aug_kinds = ["all", "noise", "none", "pitch", "stretch"]
+aug_kinds = ["all", "all-but-noise", "none"]
 folds = localmodule.fold_units()
 units = localmodule.get_units()
 n_trials = 10
