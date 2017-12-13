@@ -281,7 +281,7 @@ bg_dense1 = keras.layers.Dense(64,
 
 # Dense 2
 bg_dense2 = keras.layers.Dense(1,
-    name="bg_dense1", use_bias=False)(bg_dense1)
+    name="bg_dense2", use_bias=False)(bg_dense1)
 
 
 # Combined channel.
