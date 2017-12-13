@@ -18,6 +18,7 @@ dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 models_dir = localmodule.get_models_dir()
 n_input_hops = 104
+bg_duration = 1800
 
 
 # Read command-line arguments.
