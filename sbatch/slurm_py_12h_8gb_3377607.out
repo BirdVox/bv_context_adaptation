@@ -156,3 +156,39 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 01:51:38.045 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
 [I 01:59:38.108 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
 [I 02:01:38.088 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:07:38.138 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:09:38.074 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:11:38.138 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:13:38.209 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:15:38.166 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:19:38.135 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:21:38.139 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:23:38.258 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:27:38.183 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:29:38.178 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:33:00.551 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:33:38.226 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:35:38.371 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:39:38.253 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:41:38.212 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:45:38.232 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:49:38.285 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[I 02:51:38.248 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_binary-classification.ipynb
+[W 03:15:58.070 NotebookApp] Notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb is not trusted
+[W 03:15:58.113 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 1.97ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:17:07.370 NotebookApp] Kernel restarted: 3efa11f2-f1e5-42aa-b986-0e4981b2a325
+[I 03:17:59.667 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:17:59.669 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:19:59.696 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:19:59.697 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:21:59.692 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:21:59.693 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:23:59.687 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:23:59.689 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:25:59.679 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:25:59.680 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:27:59.683 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:27:59.684 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 03:29:59.722 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 03:29:59.724 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+slurmstepd: error: *** JOB 3377607 ON c07-02 CANCELLED AT 2017-12-13T03:34:39 DUE TO TIME LIMIT ***
