@@ -55,7 +55,7 @@ validation_units = fold[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Training dot-product context-aware convnet on " + dataset_name + ". ")
+print("Training additive context-aware convnet on " + dataset_name + ". ")
 print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
@@ -302,7 +302,7 @@ validation_streamer = multiplex_lms_with_background(
 
 
 # Create directory for model, unit, and trial.
-model_name = "icassp-dot-convnet"
+model_name = "icassp-add-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
