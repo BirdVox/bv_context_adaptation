@@ -134,3 +134,11 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 19:50:59.680 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
 [I 19:52:59.683 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
 [W 19:57:00.566 NotebookApp] WebSocket ping timeout after 119981 ms.
+[I 23:39:41.788 NotebookApp] 302 GET /?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73 (::1) 1.20ms
+[W 23:39:59.208 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.44ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:41:59.775 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:44:00.070 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:45:59.780 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:47:59.812 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:49:59.795 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 23:57:59.836 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
