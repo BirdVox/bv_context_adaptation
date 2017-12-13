@@ -1,0 +1,136 @@
+
+Jupyter server is running on: c07-02
+Job starts at: Tue Dec 12 15:34:23 EST 2017
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7808:localhost:7808 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7808:localhost:7808 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 15:34:25.538 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-3377607/jupyter/notebook_cookie_secret
+[I 15:34:27.768 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 15:34:27.769 NotebookApp] 0 active kernels 
+[I 15:34:27.769 NotebookApp] The Jupyter Notebook is running at: http://localhost:7808/?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73
+[I 15:34:27.769 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 15:34:27.769 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7808/?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73
+[I 15:44:20.181 NotebookApp] 302 GET /?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73 (::1) 1.39ms
+[W 15:45:47.500 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/Untitled.ipynb is not trusted
+[W 15:45:47.558 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 36.65ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/Untitled.ipynb
+[I 15:45:48.587 NotebookApp] Kernel started: 7644a3aa-7f06-4d9e-b7c0-017f9995ba17
+[I 15:46:20.350 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/notebooks
+[I 15:46:21.075 NotebookApp] Kernel started: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[W 15:46:21.122 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.74ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/Untitled.ipynb?kernel_name=python3
+[I 15:46:32.512 NotebookApp] Kernel started: 480336e1-cec6-4231-bd6d-97c26af333a7
+[W 15:46:32.518 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 3.13ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/030_train-pcen-convnet.ipynb
+[I 15:48:21.101 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/Untitled.ipynb
+[I 15:54:21.111 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 15:54:21.208 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 15:54:32.234 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 15:56:21.124 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 15:58:21.905 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:00:21.913 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:02:21.915 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:08:21.937 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:10:21.983 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:12:21.947 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:13:56.528 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:14:21.957 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:16:22.017 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:16:45.263 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:18:21.968 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:20:21.975 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:22:21.989 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:24:22.000 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:26:22.254 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:28:22.185 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:30:22.082 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:32:22.078 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:34:22.107 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:36:22.114 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:38:22.269 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:44:20.756 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:44:20.761 NotebookApp] Kernel interrupted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:44:22.033 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:44:22.666 NotebookApp] Kernel interrupted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:44:23.756 NotebookApp] KernelRestarter: restarting kernel (1/5)
+[I 16:44:33.959 NotebookApp] Kernel interrupted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:44:37.927 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 16:56:15.668 NotebookApp] 302 GET /?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73 (::1) 0.79ms
+[W 16:56:36.495 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 3.17ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 16:58:36.837 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:00:36.761 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:02:14.187 NotebookApp] Kernel interrupted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 17:02:36.788 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:04:36.795 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:06:36.823 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:08:36.823 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:10:37.664 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:14:37.663 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:16:37.654 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:18:37.653 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:20:37.632 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:21:18.613 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 17:21:33.033 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[W 17:21:33.037 NotebookApp] zmq message arrived on closed channel
+[I 17:21:43.894 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:21:46.781 NotebookApp] Kernel restarted: 2bf9e9f3-a6f1-4298-8cec-b5e6e344f2cd
+[I 17:21:47.884 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:21:49.801 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:22:37.654 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:24:37.660 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:26:37.675 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:28:37.678 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:40:33.499 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/notebooks
+[I 17:40:34.701 NotebookApp] Kernel started: 3ef7b637-a1a5-4016-876c-d72e312272cd
+[W 17:40:34.707 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 3.45ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/Untitled.ipynb?kernel_name=python3
+[I 17:42:35.207 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_clip_pcen.ipynb
+[I 17:42:37.732 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:44:37.811 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 17:46:37.729 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/inspect_full_pcen.ipynb
+[I 19:30:27.191 NotebookApp] 302 GET /?token=d4d81951a17f8dcf49ba504528db8a9b89ed9462c9125a73 (::1) 1.20ms
+[I 19:30:57.566 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/notebooks
+[I 19:30:59.627 NotebookApp] Kernel started: 9e2ab636-9c3c-4ac0-9aae-6dc5f2c540f8
+[W 19:30:59.737 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 1.81ms referer=http://localhost:7808/notebooks/BirdVox-70k_icassp2018/notebooks/Untitled.ipynb?kernel_name=python3
+[I 19:31:56.842 NotebookApp] Kernel interrupted: 9e2ab636-9c3c-4ac0-9aae-6dc5f2c540f8
+[I 19:32:59.648 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:33:01.899 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:33:03.381 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+2017-12-12 19:34:36.136807: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-12 19:34:36.137104: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-12 19:34:36.137117: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-12 19:34:36.137124: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-12-12 19:34:36.137132: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+[I 19:34:59.656 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:36:59.656 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:38:59.661 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:40:59.676 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:44:59.669 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:46:59.677 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:48:59.682 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:50:59.680 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[I 19:52:59.683 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/038_predict-ntt-convnet-clips.ipynb
+[W 19:57:00.566 NotebookApp] WebSocket ping timeout after 119981 ms.
