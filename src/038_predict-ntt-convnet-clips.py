@@ -133,6 +133,7 @@ for key in keys:
 
 # Close HDF5 containers.
 lms_container.close()
+bg_container.close()
 
 
 # Close CSV file.
