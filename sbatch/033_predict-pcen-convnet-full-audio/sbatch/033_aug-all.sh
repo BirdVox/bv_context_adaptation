@@ -1,0 +1,10 @@
+./033_aug-all_trial-0.sh
+./033_aug-all_trial-1.sh
+./033_aug-all_trial-2.sh
+./033_aug-all_trial-3.sh
+./033_aug-all_trial-4.sh
+./033_aug-all_trial-5.sh
+./033_aug-all_trial-6.sh
+./033_aug-all_trial-7.sh
+./033_aug-all_trial-8.sh
+./033_aug-all_trial-9.sh
