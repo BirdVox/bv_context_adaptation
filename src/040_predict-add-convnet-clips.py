@@ -112,7 +112,7 @@ csv_writer = csv.writer(csv_file, delimiter=',')
 
 # Create CSV header.
 csv_header = ["Dataset", "Test unit", "Prediction unit", "Timestamp",
-    "Key", "Predicted probability"]
+    "Frequency (Hz)", "Augmentation", "Key", "Ground truth", "Predicted probability"]
 csv_writer.writerow(csv_header)
 
 
