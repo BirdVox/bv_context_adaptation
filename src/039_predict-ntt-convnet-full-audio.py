@@ -78,14 +78,14 @@ lms_group = lms_container["logmelspec"]
 bg_dir = os.path.join(data_dir, "_".join([
     dataset_name, "full-logmelspec-backgrounds"]))
 bg_duration_str = str(int(bg_duration)).zfill(4)
-out_T_name = "-".join(["T", str(bg_duration_str)])
-out_T_dir = os.path.join(bg_dir, out_T_name)
+T_name = "-".join(["T", str(bg_duration_str)])
+bg_T_dir = os.path.join(bg_dir, T_name)
 out_unit_name = "_".join([
     dataset_name, "full-backgrounds",
-    predict_unit_str, out_T_name]) + ".hdf5"
-out_unit_path = os.path.join(out_T_dir, out_unit_name)
-out_unit_file = h5py.File(out_unit_path, "r")
-out_lms_group = out_unit_file["logmelspec_background"]
+    predict_unit_str, T_name]) + ".hdf5"
+bg_unit_path = os.path.join(bg_T_dir, out_unit_name)
+bg_unit_file = h5py.File(bg_unit_path, "r")
+bg_group = out_unit_file["logmelspec_background"]
 
 
 # Create CSV file.
@@ -124,10 +124,10 @@ for hop_id in range(n_hops):
     if not is_end_reached:
         # Load logmelspec
         X_lms = lms_group[:, clip_start:clip_stop]
-        X_lms = X[np.newaxis, :, :, np.newaxis]
+        X_lms = X_lms[np.newaxis, :, :, np.newaxis]
 
         # Load background.
-        X_bg = bg_group[:, bg_col]
+        X_bg = bg_group[:, :, bg_col].T
         X_bg = X_bg[np.newaxis, :, :]
 
         # Predict.
