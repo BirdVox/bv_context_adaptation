@@ -1,3 +1,4 @@
+./040_aug-all_trial-0.sh
 ./040_aug-all_trial-1.sh
 ./040_aug-all_trial-2.sh
 ./040_aug-all_trial-3.sh
