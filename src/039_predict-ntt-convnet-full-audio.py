@@ -108,7 +108,7 @@ n_cols = lms_group.shape[1]
 n_hops = int(n_cols / hop_length) - 1
 is_end_reached = False
 n_bg_cols = bg_group.shape[-1]
-bg_ratio = n_bg_hops / n_cols
+bg_ratio = n_bg_cols / n_cols
 
 
 # Loop over hops.
