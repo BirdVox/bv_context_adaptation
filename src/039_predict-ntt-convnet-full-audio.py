@@ -40,8 +40,8 @@ validation_units = fold[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Using Salamon's ICASSP 2017 convnet for detection in " +
-    dataset_name + ", full audio, with PCEN input. ")
+print("Using NTT-like convnet for detection in " +
+    dataset_name + ", full audio, with logmelspec input. ")
 print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
@@ -54,7 +54,7 @@ print("")
 
 
 # Load model.
-model_name = "pcen-convnet"
+model_name = "ntt-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
@@ -66,11 +66,11 @@ network_path = os.path.join(trial_dir, network_name + ".hdf5")
 model = keras.models.load_model(network_path)
 
 
-# Open PCEN container with h5py.
-pcen_dir = os.path.join(data_dir, "_".join([dataset_name, "full-pcen"]))
-hdf5_path = os.path.join(pcen_dir, predict_unit_str + ".hdf5")
-pcen_container = h5py.File(hdf5_path, "r")
-pcen_group = pcen_container["pcen"]
+# Open logmelspec container with h5py.
+lms_dir = os.path.join(data_dir, "_".join([dataset_name, "full-logmelspec"]))
+hdf5_path = os.path.join(lms_dir, predict_unit_str + ".hdf5")
+lms_container = h5py.File(hdf5_path, "r")
+lms_group = lms_container["logmelspec"]
 
 
 # Create CSV file.
@@ -89,7 +89,7 @@ csv_writer.writerow(csv_header)
 
 
 # Compute number of hops.
-n_cols = pcen_group.shape[1]
+n_cols = lms_group.shape[1]
 n_hops = int(n_cols / hop_length) - 1
 is_end_reached = False
 
@@ -97,7 +97,7 @@ is_end_reached = False
 # Loop over hops.
 for hop_id in range(n_hops):
 
-    # Load clip in full pcen data.
+    # Load clip in full LMS data.
     clip_start = hop_id * hop_length
     clip_stop = clip_start + clip_length
     if clip_stop > n_cols:
@@ -107,7 +107,7 @@ for hop_id in range(n_hops):
 
 
     if not is_end_reached:
-        X = pcen_group[:, clip_start:clip_stop]
+        X = lms_group[:, clip_start:clip_stop]
 
         # Add leading and trailing singleton dimension for Keras interoperability.
         X = X[np.newaxis, :, :, np.newaxis]
