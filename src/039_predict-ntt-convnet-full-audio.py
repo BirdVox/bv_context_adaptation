@@ -107,6 +107,8 @@ csv_writer.writerow(csv_header)
 n_cols = lms_group.shape[1]
 n_hops = int(n_cols / hop_length) - 1
 is_end_reached = False
+n_bg_cols = bg_group.shape[-1]
+bg_ratio = n_bg_hops / n_cols
 
 
 # Loop over hops.
@@ -127,6 +129,8 @@ for hop_id in range(n_hops):
         X_lms = X_lms[np.newaxis, :, :, np.newaxis]
 
         # Load background.
+        bg_col = min(
+            int(np.round(bg_ratio * clip_start)), n_bg_cols-1)
         X_bg = bg_group[:, :, bg_col].T
         X_bg = X_bg[np.newaxis, :, :]
 
