@@ -8,3 +8,4 @@
 ./040_aug-all-but-noise_trial-7.sh
 ./040_aug-all-but-noise_trial-8.sh
 ./040_aug-all-but-noise_trial-9.sh
+ 
