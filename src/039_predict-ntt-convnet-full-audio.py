@@ -85,7 +85,7 @@ out_unit_name = "_".join([
     predict_unit_str, T_name]) + ".hdf5"
 bg_unit_path = os.path.join(bg_T_dir, out_unit_name)
 bg_unit_file = h5py.File(bg_unit_path, "r")
-bg_group = out_unit_file["logmelspec_background"]
+bg_group = bg_unit_file["logmelspec_background"]
 
 
 # Create CSV file.
