@@ -107,13 +107,17 @@ for hop_id in range(n_hops):
 
 
     if not is_end_reached:
-        X = lms_group[:, clip_start:clip_stop]
+        # Load logmelspec
+        X_lms = lms_group[:, clip_start:clip_stop]
+        X_lms = X[np.newaxis, :, :, np.newaxis]
 
-        # Add leading and trailing singleton dimension for Keras interoperability.
-        X = X[np.newaxis, :, :, np.newaxis]
+        # Load background.
+        X_bg = bg_group[:, bg_col]
+        X_bg = X_bg[np.newaxis, :, :]
 
         # Predict.
-        predicted_probability = model.predict(X)[0,0]
+        predicted_probability = model.predict(
+            {"spec_input": X_lms, "bg_input": X_bg})[0, 0]
 
 
     # Store prediction as DataFrame row.
