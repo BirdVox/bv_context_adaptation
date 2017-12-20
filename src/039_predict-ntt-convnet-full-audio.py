@@ -20,6 +20,7 @@ models_dir = localmodule.get_models_dir()
 clip_length = 104
 hop_length = 34
 hop_duration = hop_length * 32 / 22050
+bg_duration = 1800
 
 
 # Read command-line arguments.
@@ -71,6 +72,20 @@ lms_dir = os.path.join(data_dir, "_".join([dataset_name, "full-logmelspec"]))
 hdf5_path = os.path.join(lms_dir, predict_unit_str + ".hdf5")
 lms_container = h5py.File(hdf5_path, "r")
 lms_group = lms_container["logmelspec"]
+
+
+# Open background container with h5py.
+bg_dir = os.path.join(data_dir, "_".join[
+    dataset_name, "full-logmelspec-backgrounds"])
+bg_duration_str = str(int(bg_duration)).zfill(4)
+out_T_name = "-".join(["T", str(bg_duration_str)])
+out_T_dir = os.path.join(bg_dir, out_T_name)
+out_unit_name = "_".join([
+    dataset_name, "full-backgrounds",
+    unit_str, out_T_name]) + ".hdf5"
+out_unit_path = os.path.join(out_T_dir, out_unit_name)
+out_unit_file = h5py.File(out_unit_path, "r")
+out_lms_group = out_unit_file["logmelspec_background"]
 
 
 # Create CSV file.
