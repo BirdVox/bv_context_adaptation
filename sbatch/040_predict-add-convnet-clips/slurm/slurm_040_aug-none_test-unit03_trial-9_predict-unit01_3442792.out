@@ -1,0 +1,25 @@
+Using TensorFlow backend.
+2017-12-20 11:58:32.145182 Start.
+Using additive context-aware convnet for binary classification in BirdVox-70k clips with logmelspec input. 
+Training set: unit05, unit07, unit10.
+Validation set: unit01, unit02.
+Test set: unit03.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../../../src/040_predict-add-convnet-clips.py", line 65, in <module>
+    model = keras.models.load_model(network_path)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/models.py", line 227, in load_model
+    with h5py.File(filepath, mode='r') as f:
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 272, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 92, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2853)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2811)
+  File "h5py/h5f.pyx", line 76, in h5py.h5f.open (/tmp/pip-tnf92dft-build/h5py/h5f.c:2099)
+OSError: Unable to open file (Unable to open file: name = '/scratch/vl1019/birdvox-70k_models/icassp-add-convnet/unit03/trial-9/birdvox-70k_icassp-add-convnet_unit03_trial-9_network.hdf5', errno = 2, error message = 'no such file or directory', flags = 0, o_flags = 0)
