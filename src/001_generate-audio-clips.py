@@ -1,4 +1,6 @@
 import datetime
+import h5py
+import librosa
 import numpy as np
 import os
 import pandas as pd
