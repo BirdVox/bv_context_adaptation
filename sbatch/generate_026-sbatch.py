@@ -29,7 +29,7 @@ for unit_str in units:
         T_str = str(bg_duration).zfill(4)
 
         # Define file path.
-        job_name = "_".join(["026", "T-" + T_str, unit_str])
+        job_name = "_".join([script_name[:3], "T-" + T_str, unit_str])
         file_name = job_name + ".sbatch"
         file_path = os.path.join(sbatch_dir, file_name)
 
