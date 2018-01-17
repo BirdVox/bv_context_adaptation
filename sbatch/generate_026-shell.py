@@ -39,7 +39,7 @@ for bg_duration in bg_durations:
         for unit_str in units:
 
             # Define job name.
-            job_name = "_".join(["026", "T-" + T_str, unit_str])
+            job_name = "_".join([script_name[:3], "T-" + T_str, unit_str])
             sbatch_str = "sbatch " + job_name + ".sbatch"
 
             # Write SBATCH command to shell file.
