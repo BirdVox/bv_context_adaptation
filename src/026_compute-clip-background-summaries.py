@@ -93,7 +93,7 @@ out_lms_group =\
     out_unit_file.create_group("logmelspec_background")
 
 
-# Load over clips.
+# Loop over clips.
 is_end_reached = False
 for in_clip_key in in_clip_keys:
     in_clip_key_list = in_clip_key.split("_")
