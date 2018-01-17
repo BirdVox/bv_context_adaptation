@@ -1,0 +1,10 @@
+2018-01-17 17:09:38.751688 Start.
+Computing background summaries on BirdVox-70k.
+Background duration (T): 0005.
+Unit: unit05.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+
+2018-01-17 17:13:52.093296 Finish.
+Total elapsed time: 00:04:14.09.

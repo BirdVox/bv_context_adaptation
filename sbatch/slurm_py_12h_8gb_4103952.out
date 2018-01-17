@@ -1,0 +1,51 @@
+
+Jupyter server is running on: c40-13
+Job starts at: Wed Jan 17 16:58:45 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7762:localhost:7762 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7762:localhost:7762 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 16:58:51.107 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4103952/jupyter/notebook_cookie_secret
+[I 16:58:52.134 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 16:58:52.134 NotebookApp] 0 active kernels 
+[I 16:58:52.134 NotebookApp] The Jupyter Notebook is running at: http://localhost:7762/?token=813a34c997c84dae7369607ec3a7b109aec439389ae9bbd1
+[I 16:58:52.134 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 16:58:52.134 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7762/?token=813a34c997c84dae7369607ec3a7b109aec439389ae9bbd1
+[I 17:04:50.830 NotebookApp] 302 GET /?token=813a34c997c84dae7369607ec3a7b109aec439389ae9bbd1 (::1) 0.82ms
+[W 17:05:22.944 NotebookApp] Notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb is not trusted
+[W 17:05:23.013 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 35.05ms referer=http://localhost:7762/notebooks/BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:05:25.002 NotebookApp] Kernel started: 8f4531a4-e098-471a-9796-ce8ea15b3311
+[I 17:09:24.425 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:09:24.427 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:15:24.446 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:15:24.447 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:17:24.455 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:17:24.456 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[I 17:18:55.212 NotebookApp] Saving file at /BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
+[W 17:18:55.214 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/ijcnn2018/fig_precision-recall.ipynb
