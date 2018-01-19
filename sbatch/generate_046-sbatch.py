@@ -6,7 +6,7 @@ import localmodule
 
 
 # Define constants.
-script_name = "043_train-pcen-ntt-convnet.py"
+script_name = "046_train-pcen-add-convnet.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 units = localmodule.get_units()
 n_trials = 10
