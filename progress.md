@@ -127,6 +127,14 @@ J. Per-channel energy normalization
 
 6. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6).
 
-7. Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
+7. [IN PROGRESS] Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
 
-8. 
+
+K. Dynamic filter networks
+1. [DONE] Compute clip background logmelspec summaries. Parallelize over units (6) and instanced augmentations (31).
+
+2. [DONE] Compute clip background PCEN summaries. Parallelize over units (6) and instanced augmentations (31).
+
+3. [DONE] Compute full night background logmelspec summaries. Parallelize over units (6).
+
+4. [IN PROGRESS] Compute full night background PCEN summaries. Parallelize over units (6).
