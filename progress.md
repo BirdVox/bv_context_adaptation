@@ -138,3 +138,9 @@ K. Dynamic filter networks
 3. [DONE] Compute full night background logmelspec summaries. Parallelize over units (6).
 
 4. [IN PROGRESS] Compute full night background PCEN summaries. Parallelize over units (6).
+
+5. [DONE] Train NTT convnets. Parallelize over units (6) and trials (10).
+
+6. [DONE] Train dot-product convnets. Parallelize over units (6) and trials (10).
+
+7. [DONE] Train adaptive threshold convnets. Parallelize over units (6) and trials (10).
