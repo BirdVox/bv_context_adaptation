@@ -161,4 +161,4 @@ K. Dynamic filter networks
 L. Dynamic filter networks with PCEN
 1. [DONE] Compute clip background PCEN summaries. Parallelize over units (6) and instanced augmentations (31).
 
-2. [DONE] Compute full night background PCEN summaries. Parallelize over units (6).
+2. [IN PROGRESS] Compute full night background PCEN summaries. Parallelize over units (6).
