@@ -154,6 +154,8 @@ def multiplex_tfr(aug_kind_str, fold_units, n_hops, batch_size,
         augs = ["original", "pitch"]
     elif aug_kind_str == "stretch":
         augs = ["original", "stretch"]
+    elif aug_kind_str == "all-but-noise":
+        augs = ["original", "pitch", "stretch"]
     else:
         noise_augs = ["noise-" + unit_str for unit_str in fold_units]
         if aug_kind_str == "all":
