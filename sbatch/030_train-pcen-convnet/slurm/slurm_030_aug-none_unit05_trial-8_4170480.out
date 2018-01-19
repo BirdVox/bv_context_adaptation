@@ -1,3 +1,65 @@
 2018-01-19 15:19:02.570576: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
 2018-01-19 15:19:02.570833: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
 2018-01-19 15:19:02.570858: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2018-01-19 15:19:01.583683 Start.
+Training Salamon's ICASSP 2017 convnet on BirdVox-70k
+with PCEN input instead of logmelspec.
+Training set: unit07, unit10, unit01.
+Validation set: unit02, unit03.
+Test set: unit05.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+pandas version: 0.20.3
+pescador version: 1.0.0
+tensorflow version: 1.2.1
+
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+input_1 (InputLayer)         (None, 128, 104, 1)       0         
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 128, 104, 1)       4         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 128, 104, 24)      624       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 64, 26, 24)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 64, 26, 48)        28848     
+_________________________________________________________________
+max_pooling2d_2 (MaxPooling2 (None, 32, 6, 48)         0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 32, 6, 48)         57648     
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 9216)              0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 64)                589888    
+_________________________________________________________________
+dense_2 (Dense)              (None, 1)                 65        
+=================================================================
+Total params: 677,077
+Trainable params: 677,075
+Non-trainable params: 2
+_________________________________________________________________
+         acc      loss   val_acc  val_loss
+0   0.499634  7.994899  0.504517  7.915348
+1   0.497681  8.022849  0.497437  8.025342
+2   0.494629  8.068877  0.500488  7.974303
+3   0.505249  7.897383  0.491821  8.110481
+4   0.507324  7.862471  0.497681  8.015398
+5   0.503052  7.929052  0.501099  7.959507
+6   0.497559  8.015343  0.496582  8.030342
+7   0.498291  8.002596  0.504150  7.908441
+8   0.500732  7.962786  0.495117  8.049967
+9   0.496704  8.026275  0.502441  7.932091
+10  0.488770  8.199471  0.493530  8.321457
+11  0.489868  8.363704  0.510132  8.024153
+12  0.503418  8.123200  0.503174  8.118926
+13  0.501343  8.141694  0.505127  8.074405
+14  0.505859  8.057125  0.495728  8.215221
+15  0.497559  8.181054  0.492920  8.251349
+
+2018-01-19 17:59:01.873964 Finish.
+Total elapsed time: 02:40:00.87.
