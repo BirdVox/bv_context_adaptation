@@ -85,7 +85,7 @@ T_str = "T-" + str(bg_duration).zfill(4)
 T_dir = os.path.join(bg_dir, T_str)
 bg_name = "_".join(
     [dataset_name, "background_summaries",
-     test_unit_str, T_str + ".hdf5"])
+     predict_unit_str, T_str + ".hdf5"])
 bg_path = os.path.join(T_dir, bg_name)
 bg_container = h5py.File(bg_path, "r")
 bg_group = bg_container["logmelspec_background"]
