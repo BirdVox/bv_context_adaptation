@@ -10,7 +10,7 @@ script_name = "043_train-pcen-ntt-convnet.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 units = localmodule.get_units()
 n_trials = 10
-aug_kinds = ["all", "none"]
+aug_kinds = ["all", "all-but-noise", "none"]
 
 
 # Create folders.
