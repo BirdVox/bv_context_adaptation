@@ -157,6 +157,18 @@ K. Dynamic filter networks
 
 10. [DONE] Train NTT convnets with data augmentation. Parallelize over units (6) and trials (10).
 
+11. Predict NTT convnets on clips without augmentation. Parallelize over units (6) and trials (10).
+
+12. [DONE] Predict NTT convnets on clips with augmentation excepting noise. Parallelize over units (6) and trials (10).
+
+13. [DONE] Predict NTT convnets on clips with augmentation. Parallelize over units (6) and trials (10).
+
+14. Predict adaptive threshold convnets on clips without augmentation. Parallelize over units (6) and trials (10).
+
+15. Predict adaptive threshold convnets on clips with augmentation excepting noise. Parallelize over units (6) and trials (10).
+
+16. Predict adaptive threshold convnets on clips with augmentation. Parallelize over units (6) and trials (10).
+
 
 L. Dynamic filter networks with PCEN
 1. [DONE] Compute clip background PCEN summaries. Parallelize over units (6) and instanced augmentations (31).
