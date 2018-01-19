@@ -140,3 +140,13 @@ K. Dynamic filter networks
 4. [DONE] Train adaptive threshold convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
 
 5. [DONE] Train adaptive threshold convnets with data augmentation. Parallelize over units (6) and trials (10).
+
+6. [DONE] Train dot-product convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
+
+7. [DONE] Train dot-product convnets with data augmentation. Parallelize over units (6) and trials (10).
+
+8. [IN PROGRESS] Train NTT convnets without data augmentation. Parallelize over units (6) and trials (10).
+
+9. [DONE] Train NTT convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
+
+10. [DONE] Train NTT convnets with data augmentation. Parallelize over units (6) and trials (10).
