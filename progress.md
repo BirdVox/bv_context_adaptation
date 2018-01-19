@@ -133,14 +133,10 @@ J. Per-channel energy normalization
 K. Dynamic filter networks
 1. [DONE] Compute clip background logmelspec summaries. Parallelize over units (6) and instanced augmentations (31).
 
-2. [DONE] Compute clip background PCEN summaries. Parallelize over units (6) and instanced augmentations (31).
+2. [DONE] Compute full night background logmelspec summaries. Parallelize over units (6).
 
-3. [DONE] Compute full night background logmelspec summaries. Parallelize over units (6).
+3. [IN PROGRESS] Train adaptive threshold convnets without data augmentation. Parallelize over units (6) and trials (10).
 
-4. [IN PROGRESS] Compute full night background PCEN summaries. Parallelize over units (6).
+4. [DONE] Train adaptive threshold convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
 
-5. [DONE] Train NTT convnets. Parallelize over units (6) and trials (10).
-
-6. [DONE] Train dot-product convnets. Parallelize over units (6) and trials (10).
-
-7. [DONE] Train adaptive threshold convnets. Parallelize over units (6) and trials (10).
+5. [DONE] Train adaptive threshold convnets with data augmentation. Parallelize over units (6) and trials (10).
