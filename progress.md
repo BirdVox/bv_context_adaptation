@@ -119,15 +119,21 @@ J. Per-channel energy normalization
 
 2. [DONE] Compute PCEN on full night data. Parallelize over units (6).
 
-3. [DONE] Train PCEN convnets without augmentation. Parallelize over units (6) and trials (10).
+3. [IN PROGRESS] Train PCEN convnets without augmentation. Parallelize over units (6) and trials (10).
 
-4. [DONE] Predict PCEN convnets without augmentation on clips. Parallelize over units (6).
+4. Predict PCEN convnets without augmentation on clips. Parallelize over units (6).
 
-5. [DONE] Predict PCEN convnets without augmentation on full night data. Parallelize over units (6).
+5. Predict PCEN convnets without augmentation on full night data. Parallelize over units (6).
 
 6. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6).
 
 7. [IN PROGRESS] Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
+
+8. Predict PCEN convnets without augmentation on clips. Parallelize over units (6).
+
+9. Predict PCEN convnets without augmentation on full night data. Parallelize over units (6).
+
+10. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6).
 
 
 K. Dynamic filter networks
@@ -150,3 +156,5 @@ K. Dynamic filter networks
 9. [DONE] Train NTT convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
 
 10. [DONE] Train NTT convnets with data augmentation. Parallelize over units (6) and trials (10).
+
+11.
