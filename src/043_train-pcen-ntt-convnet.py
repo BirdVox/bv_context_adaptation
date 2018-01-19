@@ -133,7 +133,7 @@ def multiplex_lms_with_background(
 
                 # Define path to background.
                 bg_name = "_".join(
-                    [dataset_name, "background_summaries",
+                    [dataset_name, "clip-backgrounds",
                      unit_str, T_str + ".hdf5"])
                 bg_path = os.path.join(T_dir, bg_name)
 
