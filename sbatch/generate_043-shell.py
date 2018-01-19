@@ -8,7 +8,7 @@ import localmodule
 
 # Define constants
 dataset_name = localmodule.get_dataset_name()
-aug_kinds = ["all", "none"]
+aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
 n_trials = 10
 script_name = "043_train-pcen-ntt-convnet.py"
