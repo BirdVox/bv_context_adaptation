@@ -157,4 +157,8 @@ K. Dynamic filter networks
 
 10. [DONE] Train NTT convnets with data augmentation. Parallelize over units (6) and trials (10).
 
-11.
+
+L. Dynamic filter networks with PCEN
+1. [DONE] Compute clip background PCEN summaries. Parallelize over units (6) and instanced augmentations (31).
+
+2. [DONE] Compute full night background PCEN summaries. Parallelize over units (6).
