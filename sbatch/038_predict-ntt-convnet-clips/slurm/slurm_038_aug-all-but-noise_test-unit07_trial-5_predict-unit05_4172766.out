@@ -1,0 +1,26 @@
+2018-01-19 14:03:56.597478: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-19 14:03:56.597751: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-19 14:03:56.597763: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2018-01-19 14:03:56.405926 Start.
+Using NTT-like convnet for binary classification in BirdVox-70k clips with logmelspec input. 
+Training set: unit10, unit01, unit02.
+Validation set: unit03, unit05.
+Test set: unit07.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../../../src/038_predict-ntt-convnet-clips.py", line 137, in <module>
+    X_bg = bg_group[bg_key].value.T
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2853)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2811)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/group.py", line 166, in __getitem__
+    oid = h5o.open(self.id, self._e(name), lapl=self._lapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2853)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2811)
+  File "h5py/h5o.pyx", line 190, in h5py.h5o.open (/tmp/pip-tnf92dft-build/h5py/h5o.c:3739)
+KeyError: "Unable to open object (Object 'unit05_020751255_00000_0' doesn't exist)"
