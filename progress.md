@@ -113,6 +113,12 @@ I. Dataset release
 
 3. [DONE] Publish on Zenodo.
 
+4. Bugfix latitude and longitude.
+
+5. Add a text file with location of clips.
+
+6. Publish on Zenodo under new name.
+
 
 J. Per-channel energy normalization
 1. [DONE] Compute PCEN on clips with augmentation. Parallelize over units (6) and instanced augmentations (31).
