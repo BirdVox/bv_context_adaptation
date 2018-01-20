@@ -127,23 +127,23 @@ J. Per-channel energy normalization
 
 3. [DONE] Train PCEN convnets without augmentation. Parallelize over units (6) and trials (10).
 
-4. Predict PCEN convnets without augmentation on clips. Parallelize over units (6).
+4. [DONE] Predict PCEN convnets without augmentation on clips. Parallelize over units (6) and trials (10).
 
-5. [IN PROGRESS] Predict PCEN convnets without augmentation on full night data. Parallelize over units (6).
+5. [IN PROGRESS] Predict PCEN convnets without augmentation on full night data. Parallelize over units (6) and trials (10).
 
-6. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6).
+6. [PENDING 5] Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6) and trials (10).
 
 7. [DONE] Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
 
-8. Predict PCEN convnets without augmentation on clips. Parallelize over units (6) and trials (10).
+8. [DONE] Predict PCEN convnets with augmentation on clips. Parallelize over units (6) and trials (10).
 
-9. Predict PCEN convnets without augmentation on full night data. Parallelize over units (6) and trials (10).
+9. Predict PCEN convnets with augmentation on full night data. Parallelize over units (6) and trials (10).
 
-10. Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6) and trials (10).
+10. Threshold PCEN convnet predictions with augmentation on full night data. Parallelize over units (6) and trials (10).
 
 11. [IN PROGRESS] Train PCEN convnets with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
-12. Predict PCEN convnets with augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
+12. [PENDING 11] Predict PCEN convnets with augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
 
 13. Predict PCEN convnets with augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
@@ -156,7 +156,7 @@ K. Dynamic filter networks
 2. [DONE] Compute full night background logmelspec summaries. Parallelize over units (6).
 
 3. [IN PROGRESS] Train adaptive threshold convnets without data augmentation. Parallelize over units (6) and trials (10).
-!! re-run ./037_aug-all_trial-7.sh -8.sh -9.sh
+!! re-run ./040_aug-all_trial-7.sh -8.sh -9.sh
 
 4. [DONE] Train adaptive threshold convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
 
@@ -189,6 +189,12 @@ K. Dynamic filter networks
 18. [IN PROGRESS] Predict NTT convnets on full nights with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
 19. [IN PROGRESS] Predict NTT convnets on full nights with augmentation. Parallelize over units (6) and trials (10).
+
+20. [PENDING 17] Threshold NTT convnets on full nights without augmentation. Parallelize over units (6) and trials (10).
+
+21. [PENDING 18] Threshold NTT convnets on full nights with augmentation excepting noise. Parallelize over units (6) and trials (10).
+
+22. [PENDING 19] Threshold NTT convnets on full nights with augmentation. Parallelize over units (6) and trials (10).
 
 
 L. Dynamic filter networks with PCEN
