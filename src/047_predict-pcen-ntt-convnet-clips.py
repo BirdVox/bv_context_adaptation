@@ -18,6 +18,7 @@ dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 models_dir = localmodule.get_models_dir()
 n_input_hops = 104
+bg_duration = 1800
 
 
 # Read command-line arguments.
@@ -39,7 +40,7 @@ validation_units = fold[2]
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Using NTT-like convnet for binary classification in " +
-    dataset_name + " clips with PCEN input instead of logmelspec. ")
+    dataset_name + " clips with PCEN input. ")
 print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
@@ -75,6 +76,20 @@ pcen_group = pcen_container["pcen"]
 keys = list(pcen_group.keys())
 
 
+# Open background container with h5py.
+bg_name = "_".join(
+    [dataset_name, "clip-pcen-backgrounds"])
+bg_dir = os.path.join(data_dir, bg_name)
+T_str = "T-" + str(bg_duration).zfill(4)
+T_dir = os.path.join(bg_dir, T_str)
+bg_name = "_".join(
+    [dataset_name, "clip-backgrounds",
+     predict_unit_str, T_str + ".hdf5"])
+bg_path = os.path.join(T_dir, bg_name)
+bg_container = h5py.File(bg_path, "r")
+bg_group = bg_container["pcen_background"]
+
+
 # Create HDF5 container for predictions.
 clip_predictions_name = "_".join([
     dataset_name,
@@ -103,19 +118,27 @@ csv_writer.writerow(csv_header)
 # Loop over keys.
 for key in keys:
     # Load logmelspec.
-    X = pcen_group[key]
+    X_pcen = pcen_group[key]
 
     # Trim logmelspec in time to required number of hops.
-    X_width = X.shape[1]
+    X_width = X_pcen.shape[1]
     first_col = int((X_width-n_input_hops) / 2)
     last_col = int((X_width+n_input_hops) / 2)
-    X = X[:, first_col:last_col]
+    X_pcen = X_pcen[:, first_col:last_col]
 
     # Add trailing singleton dimension for Keras interoperability.
-    X = X[np.newaxis, :, :, np.newaxis]
+    X_pcen = X_pcen[np.newaxis, :, :, np.newaxis]
+
+    # Define key for background container.
+    bg_key = "_".join(key.split("_")[:-1])
+
+    # Load background.
+    X_bg = bg_group[bg_key].value.T
+    X_bg = X_bg[np.newaxis, :, :]
 
     # Predict.
-    predicted_probability = model.predict(X)[0, 0]
+    predicted_probability = model.predict(
+        {"spec_input": X_lms, "bg_input": X_bg})[0, 0]
 
     # Store prediction as DataFrame row.
     key_split = key.split("_")
