@@ -178,7 +178,7 @@ K. Dynamic filter networks
 
 13. [DONE] Predict NTT convnets on clips with augmentation. Parallelize over units (6) and trials (10).
 
-14. Predict adaptive threshold convnets on clips without augmentation. Parallelize over units (6) and trials (10).
+14. [DONE] Predict adaptive threshold convnets on clips without augmentation. Parallelize over units (6) and trials (10).
 
 15. [DONE] Predict adaptive threshold convnets on clips with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
