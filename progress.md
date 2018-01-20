@@ -214,31 +214,27 @@ L. Dynamic filter networks with PCEN
 
 8. [IN PROGRESS] Train PCEN convnets with adaptive threshold, with augmentation. Parallelize over units (6) and trials (10).
 
-9. [DONE] Predict NTT PCEN convnets without data augmentation on clips. Parallelize over units (6) and trials (10).
+9. [DEBUG] Predict NTT PCEN convnets with data augmentation on clips. Parallelize over units (6) and trials (10).
 
-10. [DONE] Predict NTT PCEN convnets with data augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
+10. [DEBUG] Predict NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
 
-11. [DONE] Predict NTT PCEN convnets with data augmentation on clips. Parallelize over units (6) and trials (10).
+11. [DEBUG] Predict NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
-12. [READY] Predict NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
+12. [READY] Predict NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
 
-13. [READY] Predict NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
+13. [PENDING 12] Threshold NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
 
-14. [READY] Predict NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
+14. [PENDING 13] Threshold NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
-15. [PENDING 12] Threshold NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
+15. [PENDING 14] Threshold NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
 
-16. [PENDING 13] Threshold NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
+16. [READY] Predict PCEN convnets with adaptive threshold without data augmentation on clips. Parallelize over units (6) and trials (10).
 
-17. [PENDING 14] Threshold NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
+17. [PENDING 7] Predict PCEN convnets with adaptive threshold with data augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
 
-18. [READY] Predict PCEN convnets with adaptive threshold without data augmentation on clips. Parallelize over units (6) and trials (10).
+18. [PENDING 8] Predict PCEN convnets with adaptive threshold with data augmentation on clips. Parallelize over units (6) and trials (10).
 
-19. [PENDING 7] Predict PCEN convnets with adaptive threshold with data augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
-
-19. [PENDING 8] Predict PCEN convnets with adaptive threshold with data augmentation on clips. Parallelize over units (6) and trials (10).
-
-20. [READY] Predict PCEN convnets with adaptive threshold without data augmentation on full nights. Parallelize over units (6) and trials (10).
+29. [READY] Predict PCEN convnets with adaptive threshold without data augmentation on full nights. Parallelize over units (6) and trials (10).
 
 21. [PENDING 7] Predict PCEN convnets with adaptive threshold with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
