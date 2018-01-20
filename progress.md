@@ -202,13 +202,13 @@ L. Dynamic filter networks with PCEN
 
 2. [IN PROGRESS] Compute full night background PCEN summaries. Parallelize over units (6).
 
-3. [IN PROGRESS] Train NTT PCEN convnets without data augmentation. Parallelize over units (6) and trials (10).
+3. [DONE] Train NTT PCEN convnets without data augmentation. Parallelize over units (6) and trials (10).
 
-4. [IN PROGRESS] Train NTT PCEN convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
+4. [DONE] Train NTT PCEN convnets with data augmentation excepting noise. Parallelize over units (6) and trials (10).
 
-5. [IN PROGRESS] Train NTT PCEN convnets with data augmentation. Parallelize over units (6) and trials (10).
+5. [DONE] Train NTT PCEN convnets with data augmentation. Parallelize over units (6) and trials (10).
 
-6. [IN PROGRESS] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
+6. [DONE] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
 
 7. [IN PROGRESS] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
 
