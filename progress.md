@@ -218,7 +218,7 @@ L. Dynamic filter networks with PCEN
 
 10. [DONE] Predict NTT PCEN convnets with data augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
 
-11. [READY] Predict NTT PCEN convnets with data augmentation on clips. Parallelize over units (6) and trials (10).
+11. [DONE] Predict NTT PCEN convnets with data augmentation on clips. Parallelize over units (6) and trials (10).
 
 12. [READY] Predict NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
 
