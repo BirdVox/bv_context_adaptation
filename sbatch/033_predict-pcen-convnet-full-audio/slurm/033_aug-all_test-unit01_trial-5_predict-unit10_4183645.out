@@ -3,3 +3,4 @@
 2018-01-19 23:11:42.355662: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
 2018-01-19 23:11:42.355667: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
 2018-01-19 23:11:42.355672: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+slurmstepd: error: *** JOB 4183645 ON c27-04 CANCELLED AT 2018-01-20T05:11:38 DUE TO TIME LIMIT ***
