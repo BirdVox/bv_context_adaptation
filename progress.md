@@ -212,4 +212,22 @@ L. Dynamic filter networks with PCEN
 
 7. [IN PROGRESS] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
 
-8. [IN PROGRRESS] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
+8. [IN PROGRESS] Train PCEN convnets with adaptive threshold, without data augmentation. Parallelize over units (6) and trials (10).
+
+9. [READY] Predict NTT PCEN convnets without data augmentation on clips. Parallelize over units (6) and trials (10).
+
+10. [READY] Predict NTT PCEN convnets with data augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
+
+11. [READY] Predict NTT PCEN convnets with data augmentation on clips. Parallelize over units (6) and trials (10).
+
+12. [READY] Predict NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
+
+13. [READY] Predict NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
+
+14. [READY] Predict NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
+
+15. [PENDING 12] Threshold NTT PCEN convnets without data augmentation on full nights. Parallelize over units (6) and trials (10).
+
+16. [PENDING 13] Threshold NTT PCEN convnets with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
+
+17. [PENDING 14] Threshold NTT PCEN convnets with data augmentation on full nights. Parallelize over units (6) and trials (10).
