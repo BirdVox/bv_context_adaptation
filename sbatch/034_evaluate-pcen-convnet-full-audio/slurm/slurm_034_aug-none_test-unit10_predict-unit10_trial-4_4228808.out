@@ -1,2 +1,0 @@
-/opt/slurm/data/slurmd/job4228808/slurm_script: line 17: 18942 Killed                  python ../../../src/034_evaluate-pcen-convnet-full-audio.py none unit10 unit10 4
-slurmstepd: error: Exceeded step memory limit at some point.
