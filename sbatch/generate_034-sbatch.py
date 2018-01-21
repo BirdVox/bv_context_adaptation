@@ -79,7 +79,7 @@ for aug_kind_str in aug_kinds:
                     f.write("#SBATCH --nodes=1\n")
                     f.write("#SBATCH --tasks-per-node=1\n")
                     f.write("#SBATCH --cpus-per-task=1\n")
-                    f.write("#SBATCH --time=00:05:00\n")
+                    f.write("#SBATCH --time=00:15:00\n")
                     f.write("#SBATCH --mem=1GB\n")
                     f.write("#SBATCH --output=" + slurm_path + "\n")
                     f.write("\n")
