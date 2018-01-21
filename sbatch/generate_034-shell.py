@@ -32,40 +32,35 @@ n_thresholds = len(icassp_thresholds)
 # Loop over augmentations.
 for aug_kind_str in aug_kinds:
 
-    # Loop over test units.
-    for test_unit_str in units:
+    # Define file path.
+    file_path = os.path.join(sbatch_dir,
+        script_name[:3] + "_" +\
+        "aug-" + aug_kind_str + ".sh")
 
-        # Retrieve fold such that unit_str is in the test set.
-        folds = localmodule.fold_units()
-        fold = [f for f in folds if test_unit_str in f[0]][0]
-        test_units = fold[0]
-        training_units = fold[1]
-        validation_units = fold[2]
-        predict_units = test_units + validation_units
-
+    # Open shell file
+    with open(file_path, "w") as f:
+        # Print header
+        f.write(
+            "# This shell script executes Slurm jobs for thresholding\n" +
+            "# Justin Salamon's ICASSP 2017 predictions of convolutional\n" +
+            "# neural network on " + dataset_name + " full audio\n" +
+            "# with PCEN input.\n")
+        f.write("# Augmentation kind: " + aug_kind_str + ".\n")
+        f.write("\n")
 
         # Loop over trials.
         for trial_id in range(n_trials):
 
-            # Define file path.
-            file_path = os.path.join(sbatch_dir,
-                script_name[:3] + "_" +\
-                "aug-" + aug_kind_str + "_" +\
-                "test-" + test_unit_str + "_" +\
-                "trial-"+ str(trial_id) + ".sh")
+            # Loop over test units.
+            for test_unit_str in units:
 
-            # Open shell file
-            with open(file_path, "w") as f:
-                # Print header
-                f.write(
-                    "# This shell script executes Slurm jobs for thresholding\n" +
-                    "# Justin Salamon's ICASSP 2017 predictions of convolutional\n" +
-                    "# neural network on " + dataset_name + " full audio\n" +
-                    "# with PCEN input.\n")
-                f.write("# Augmentation kind: " + aug_kind_str + ".\n")
-                f.write("# Test unit: " + test_unit_str + ".\n")
-                f.write("# Trial ID: " + str(trial_id) + ".\n")
-                f.write("\n")
+                # Retrieve fold such that unit_str is in the test set.
+                folds = localmodule.fold_units()
+                fold = [f for f in folds if test_unit_str in f[0]][0]
+                test_units = fold[0]
+                training_units = fold[1]
+                validation_units = fold[2]
+                predict_units = test_units + validation_units
 
                 # Loop over test units.
                 for predict_unit_str in predict_units:
@@ -81,8 +76,12 @@ for aug_kind_str in aug_kinds:
                     sbatch_str = "sbatch " + job_name + ".sbatch"
                     f.write(sbatch_str + "\n")
 
-            # Grant permission to execute the shell file.
-            # https://stackoverflow.com/a/30463972
-            mode = os.stat(file_path).st_mode
-            mode |= (mode & 0o444) >> 2
-            os.chmod(file_path, mode)
+                f.write("\n")
+            f.write("\n")
+        f.write("\n")
+
+    # Grant permission to execute the shell file.
+    # https://stackoverflow.com/a/30463972
+    mode = os.stat(file_path).st_mode
+    mode |= (mode & 0o444) >> 2
+    os.chmod(file_path, mode)
