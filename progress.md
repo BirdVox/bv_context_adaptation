@@ -131,7 +131,7 @@ J. Per-channel energy normalization
 
 5. [DONE] Predict PCEN convnets without augmentation on full night data. Parallelize over units (6) and trials (10).
 
-6. [READY] Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6) and trials (10).
+6. [IN PROGRESS] Threshold PCEN convnet predictions without augmentation on full night data. Parallelize over units (6) and trials (10).
 
 7. [DONE] Train PCEN convnets with augmentation. Parallelize over units (6) and trials (10).
 
@@ -143,7 +143,7 @@ J. Per-channel energy normalization
 
 11. [DONE] Train PCEN convnets with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
-12. [READY] Predict PCEN convnets with augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
+12. [DONE] Predict PCEN convnets with augmentation excepting noise on clips. Parallelize over units (6) and trials (10).
 
 13. [READY] Predict PCEN convnets with augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
