@@ -4,8 +4,8 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=00:30:00
-#SBATCH --mem=1GB
+#SBATCH --time=00:05:00
+#SBATCH --mem=100MB
 #SBATCH --output=../slurm/slurm_034_aug-all-but-noise_test-unit10_predict-unit07_trial-6_%j.out
 
 module purge
