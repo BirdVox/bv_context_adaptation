@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 script_name = "001_generate-audio-clips.py"
-script_path = os.path.join("..", "src", script_name)
+script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
 # Loop over recording units.
