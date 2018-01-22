@@ -137,7 +137,7 @@ J. Per-channel energy normalization
 
 8. [DONE] Predict PCEN convnets with augmentation on clips. Parallelize over units (6) and trials (10).
 
-9. [IN PROGRRESS] Predict PCEN convnets with augmentation on full night data. Parallelize over units (6) and trials (10).
+9. [IN PROGRESS] Predict PCEN convnets with augmentation on full night data. Parallelize over units (6) and trials (10).
 
 10. [PENDING 9] Threshold PCEN convnet predictions with augmentation on full night data. Parallelize over units (6) and trials (10).
 
@@ -183,11 +183,11 @@ K. Dynamic filter networks
 
 16. [DONE] Predict adaptive threshold convnets on clips with augmentation. Parallelize over units (6) and trials (10).
 
-17. [FAILED AFTER 24H] Predict NTT convnets on full nights without augmentation. Parallelize over units (6) and trials (10).
+17. [IN PROGRESS] Predict NTT convnets on full nights without augmentation. Parallelize over units (6) and trials (10).
 
-18. [FAILED AFTER 24H] Predict NTT convnets on full nights with augmentation excepting noise. Parallelize over units (6) and trials (10).
+18. [IN PROGRESS] Predict NTT convnets on full nights with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
-19. [FAILED AFTER 24H] Predict NTT convnets on full nights with augmentation. Parallelize over units (6) and trials (10).
+19. [IN PROGRESS] Predict NTT convnets on full nights with augmentation. Parallelize over units (6) and trials (10).
 
 20. [PENDING 17] Threshold NTT convnets on full nights without augmentation. Parallelize over units (6) and trials (10).
 
