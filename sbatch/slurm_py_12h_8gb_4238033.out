@@ -52,3 +52,43 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 00:05:54.870 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/039.ipynb
 [I 00:07:54.306 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/039.ipynb
 [I 00:09:54.782 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/039.ipynb
+[I 00:38:08.029 NotebookApp] 302 GET /?token=6d1e7e557efaafbc9f51a1227c8f03419bae99e8be39815c (::1) 0.84ms
+[I 00:38:22.490 NotebookApp] Creating new notebook in /nemisig2018/notebooks
+[W 00:38:22.916 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.73ms referer=http://localhost:8665/notebooks/nemisig2018/notebooks/Untitled.ipynb?kernel_name=python3
+[I 00:38:23.050 NotebookApp] Kernel started: 1626d948-4798-4037-9dea-88381f45731e
+[I 00:40:23.091 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[W 00:41:51.863 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.50ms referer=http://localhost:8665/notebooks/nemisig2018/notebooks/sandbox.ipynb
+[I 00:43:52.004 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 00:45:51.990 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 00:47:52.011 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 00:49:52.074 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 00:58:43.623 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:00:43.637 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:02:45.696 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:04:43.639 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:06:43.684 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:11:47.636 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:13:47.650 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:15:47.669 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:17:47.670 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:18:05.429 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:18:46.236 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:21:49.579 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:23:49.583 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:33:52.110 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:35:52.113 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:37:52.150 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:39:52.136 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:41:52.200 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:43:52.259 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:45:52.138 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:47:52.125 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:49:52.171 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:51:52.187 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:53:52.165 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:55:52.148 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:57:52.184 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 01:59:16.035 NotebookApp] Kernel restarted: 1626d948-4798-4037-9dea-88381f45731e
+[I 01:59:52.173 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 02:02:01.389 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+[I 02:04:08.001 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
