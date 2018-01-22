@@ -92,3 +92,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 01:59:52.173 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
 [I 02:02:01.389 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
 [I 02:04:08.001 NotebookApp] Saving file at /nemisig2018/notebooks/sandbox.ipynb
+slurmstepd: error: *** JOB 4238033 ON c17-03 CANCELLED AT 2018-01-22T11:36:38 DUE TO TIME LIMIT ***
