@@ -4,7 +4,7 @@
 #SBATCH --nodes=1
 #SBATCH --tasks-per-node=1
 #SBATCH --cpus-per-task=1
-#SBATCH --time=96:00:00
+#SBATCH --time=48:00:00
 #SBATCH --mem=1GB
 #SBATCH --output=../slurm/039_aug-all-but-noise_test-unit01_trial-3_predict-unit01_%j.out
 
