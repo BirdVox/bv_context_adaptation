@@ -1,0 +1,39 @@
+
+Jupyter server is running on: c17-03
+Job starts at: Sun Jan 21 23:36:18 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8665:localhost:8665 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8665:localhost:8665 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 23:36:24.007 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4238033/jupyter/notebook_cookie_secret
+[I 23:36:25.248 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 23:36:25.248 NotebookApp] 0 active kernels 
+[I 23:36:25.248 NotebookApp] The Jupyter Notebook is running at: http://localhost:8665/?token=6d1e7e557efaafbc9f51a1227c8f03419bae99e8be39815c
+[I 23:36:25.248 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:36:25.248 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8665/?token=6d1e7e557efaafbc9f51a1227c8f03419bae99e8be39815c
