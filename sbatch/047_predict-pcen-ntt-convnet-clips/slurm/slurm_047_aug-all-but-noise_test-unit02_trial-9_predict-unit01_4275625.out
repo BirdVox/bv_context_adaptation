@@ -1,0 +1,17 @@
+2018-01-24 13:52:54.595792: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-24 13:52:54.596034: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-24 13:52:54.596046: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+Using TensorFlow backend.
+2018-01-24 13:52:54.254070 Start.
+Using NTT-like convnet for binary classification in BirdVox-70k clips with PCEN input. 
+Training set: unit03, unit05, unit07.
+Validation set: unit10, unit01.
+Test set: unit02.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+tensorflow version: 1.2.1
+
+2018-01-24 13:55:07.468795 Finish.
+Total elapsed time: 00:02:13.47.
