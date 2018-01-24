@@ -37,3 +37,13 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:8916/?token=b00b77f40eabc481c71bdf456e18110cac44ef834ab258ea
+[I 00:37:03.794 NotebookApp] 302 GET /?token=b00b77f40eabc481c71bdf456e18110cac44ef834ab258ea (::1) 0.82ms
+[W 00:37:23.827 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 29.36ms referer=http://localhost:8916/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:37:24.218 NotebookApp] Kernel started: 88ad3e44-a380-490c-a11e-f6e9cb90ccaa
+[I 00:39:24.186 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:41:24.182 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:43:24.188 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:45:24.317 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:47:24.304 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:49:24.217 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:51:24.203 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
