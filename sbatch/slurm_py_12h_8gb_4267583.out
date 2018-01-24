@@ -65,3 +65,7 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 01:49:24.451 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [I 02:01:24.539 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [I 02:03:24.660 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 02:15:24.571 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 02:17:24.532 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 02:53:55.521 NotebookApp] WebSocket ping timeout after 119871 ms.
+slurmstepd: error: *** JOB 4267583 ON c41-01 CANCELLED AT 2018-01-24T07:36:59 DUE TO TIME LIMIT ***
