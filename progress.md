@@ -188,6 +188,7 @@ K. Dynamic filter networks
 18. [IN PROGRESS] Predict NTT convnets on full nights with augmentation excepting noise. Parallelize over units (6) and trials (10).
 
 19. [IN PROGRESS] Predict NTT convnets on full nights with augmentation. Parallelize over units (6) and trials (10).
+(should re-run trials 2 to 6 included + 039_aug-all_test-unit01_trial-7_predict-unit07)
 
 20. [PENDING 17] Threshold NTT convnets on full nights without augmentation. Parallelize over units (6) and trials (10).
 
