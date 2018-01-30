@@ -69,7 +69,7 @@ model = keras.models.load_model(network_path)
 
 # Open logmelspec container with h5py.
 pcen_dir = os.path.join(data_dir, "_".join([dataset_name, "full-pcen"]))
-hdf5_path = os.path.join(lms_dir, predict_unit_str + ".hdf5")
+hdf5_path = os.path.join(pcen_dir, predict_unit_str + ".hdf5")
 pcen_container = h5py.File(hdf5_path, "r")
 pcen_group = pcen_container["pcen"]
 
@@ -104,7 +104,7 @@ csv_writer.writerow(csv_header)
 
 
 # Compute number of hops.
-n_cols = lms_group.shape[1]
+n_cols = pcen_group.shape[1]
 n_hops = int(n_cols / hop_length) - 1
 is_end_reached = False
 n_bg_cols = bg_group.shape[-1]
@@ -114,7 +114,7 @@ bg_ratio = n_bg_cols / n_cols
 # Loop over hops.
 for hop_id in range(n_hops):
 
-    # Load clip in full LMS data.
+    # Load clip in full PCEN data.
     clip_start = hop_id * hop_length
     clip_stop = clip_start + clip_length
     if clip_stop > n_cols:
