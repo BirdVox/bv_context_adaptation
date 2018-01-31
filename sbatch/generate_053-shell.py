@@ -7,7 +7,7 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-script_name = "053_evaluate-spectral-flux.py"
+script_name = "053_evaluate-spectral-flux-full-audio.py"
 
 
 # Create folder.
