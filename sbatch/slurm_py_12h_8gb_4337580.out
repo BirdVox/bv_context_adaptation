@@ -48,3 +48,9 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 11:07:30.323 NotebookApp] WebSocket ping timeout after 119889 ms.
 [W 12:09:10.867 NotebookApp] WebSocket ping timeout after 119916 ms.
 [W 12:09:10.924 NotebookApp] WebSocket ping timeout after 119969 ms.
+[I 15:29:42.934 NotebookApp] 302 GET /?token=b8c14e304b2aada8817426653d7bbee09791cba6749df7c6 (::1) 0.70ms
+[W 15:30:12.731 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 15:30:12.825 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.26ms referer=http://localhost:7593/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 15:30:57.236 NotebookApp] Kernel interrupted: 1d61e256-2329-4670-b4c2-496dce8ac5d1
+[I 15:32:14.484 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 15:32:14.485 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
