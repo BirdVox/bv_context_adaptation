@@ -1,0 +1,4 @@
+2018-01-31 12:02:04.682935: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-31 12:02:04.683130: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-01-31 12:02:04.683143: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+slurmstepd: error: *** JOB 4343484 ON gpu-28 CANCELLED AT 2018-01-31T12:39:34 ***
