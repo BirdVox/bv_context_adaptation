@@ -28,7 +28,7 @@ tolerance = 0.5
 
 
 # Parse arguments.
-args = sys.args[1:]
+args = sys.argv[1:]
 test_unit_str = args[0]
 
 
