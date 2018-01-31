@@ -7,7 +7,7 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-script_name = "053_evaluate-spectral-flux.py"
+script_name = "053_evaluate-spectral-flux-full-audio.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 
 
@@ -22,11 +22,17 @@ os.makedirs(slurm_dir, exist_ok=True)
 
 # Loop over recording units.
 for unit_str in units:
+    # Define script path and arguments.
     job_name = "_".join([script_name[:3], unit_str])
     file_name = job_name + ".sbatch"
     file_path = os.path.join(sbatch_dir, file_name)
     script_list = [script_path, unit_str]
     script_path_with_args = " ".join(script_list)
+
+    # Define slurm path.
+    slurm_path = os.path.join("..", "slurm",
+        "slurm_" + job_name + "_%j.out")
+
     with open(file_path, "w") as f:
         f.write("#!/bin/bash\n")
         f.write("\n")
