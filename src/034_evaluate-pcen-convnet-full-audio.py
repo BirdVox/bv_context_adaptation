@@ -46,7 +46,7 @@ n_thresholds = len(icassp_thresholds)
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
 print("Thresholding Salamon's ICASSP 2017 convnet for detection in " +
-    dataset_name + " full audio. ")
+    dataset_name + " full audio with PCEN input. ")
 print("Augmentation kind: " + aug_kind_str)
 print("Test unit: " + test_unit_str)
 print("Trial ID: {}".format(trial_id))
