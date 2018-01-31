@@ -52,14 +52,14 @@ for aug_kind_str in aug_kinds:
                 f.write("#SBATCH --nodes=1\n")
                 f.write("#SBATCH --tasks-per-node=1\n")
                 f.write("#SBATCH --cpus-per-task=1\n")
-                f.write("#SBATCH --time=6:00:00\n")
+                if aug_kind_str == "all" or aug_kind_str == "all-but-noise":
+                    f.write("#SBATCH --time=12:00:00\n")
+                else:
+                    f.write("#SBATCH --time=6:00:00\n")
                 f.write("#SBATCH --mem=8GB\n")
-                f.write("#SBATCH --gres=gpu:1\n")
                 f.write("#SBATCH --output=" + slurm_path + "\n")
                 f.write("\n")
                 f.write("module purge\n")
-                f.write("module load cuda/8.0.44\n")
-                f.write("module load cudnn/8.0v5.1\n")
                 f.write("\n")
                 f.write("# The first argument is the kind of augmentation.\n")
                 f.write("# The second argument is the name of the recording unit.\n")
