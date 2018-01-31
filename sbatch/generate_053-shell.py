@@ -7,7 +7,17 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-file_path = "053.sh"
+script_name = "016_run-spectral-flux.py"
+
+
+# Create folder.
+script_dir = script_name[:-3]
+os.makedirs(script_dir, exist_ok=True)
+sbatch_dir = os.path.join(script_dir, "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_dir, "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
+file_path = os.path.join(sbatch_dir, script_name[:3] + ".sh")
 
 
 # Open shell file.
@@ -21,7 +31,7 @@ with open(file_path, "w") as f:
     # Loop over recording units.
     for unit_str in units:
         # Define job name.
-        job_name = "_".join([file_path[:3], unit_str])
+        job_name = "_".join([script_name[:3], unit_str])
         sbatch_str = "sbatch " + job_name + ".sbatch"
 
         # Write SBATCH command to shell file.

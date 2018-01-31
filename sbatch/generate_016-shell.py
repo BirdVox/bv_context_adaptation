@@ -7,7 +7,16 @@ import localmodule
 
 # Define constants.
 units = localmodule.get_units()
-file_path = "016.sh"
+script_name = "016_run-spectral-flux.py"
+
+
+# Create folder.
+script_dir = script_name[:-3]
+os.makedirs(script_dir, exist_ok=True)
+sbatch_dir = os.path.join(script_dir, "sbatch")
+os.makedirs(sbatch_dir, exist_ok=True)
+slurm_dir = os.path.join(script_dir, "slurm")
+os.makedirs(slurm_dir, exist_ok=True)
 
 
 # Open shell file.
