@@ -1,0 +1,46 @@
+
+Jupyter server is running on: c41-01
+Job starts at: Wed Jan 31 09:12:53 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7593:localhost:7593 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7593:localhost:7593 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:12:54.848 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4337580/jupyter/notebook_cookie_secret
+[I 09:12:55.235 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:12:55.236 NotebookApp] 0 active kernels 
+[I 09:12:55.236 NotebookApp] The Jupyter Notebook is running at: http://localhost:7593/?token=b8c14e304b2aada8817426653d7bbee09791cba6749df7c6
+[I 09:12:55.236 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:12:55.236 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7593/?token=b8c14e304b2aada8817426653d7bbee09791cba6749df7c6
+[I 09:17:53.218 NotebookApp] 302 GET /?token=b8c14e304b2aada8817426653d7bbee09791cba6749df7c6 (::1) 0.79ms
+[W 09:18:27.161 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 09:18:27.206 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 8.40ms referer=http://localhost:7593/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:18:29.264 NotebookApp] Kernel started: 1d61e256-2329-4670-b4c2-496dce8ac5d1
+[W 09:20:22.840 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 09:20:23.002 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.03ms referer=http://localhost:7593/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 09:20:24.098 NotebookApp] Kernel started: bdc2384d-ee32-4079-8721-ac52f59a4d60
