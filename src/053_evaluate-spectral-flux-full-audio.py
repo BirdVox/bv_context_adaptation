@@ -48,7 +48,7 @@ fn_matrix = np.zeros((n_thresholds, n_units))
 
 
 # Load onset detection function.
-odf_path = os.path.join(sf_dir, unit_str + ".hdf5")
+odf_path = os.path.join(sf_dir, test_unit_str + ".hdf5")
 odf_file = h5py.File(odf_path, "r")
 odf = odf_file["spectral-flux_odf"].value
 odf = np.ravel(odf)
@@ -57,7 +57,7 @@ odf_file.close()
 
 # Load annotation.
 annotation_path = os.path.join(
-annotations_dir, unit_str + ".txt")
+annotations_dir, test_unit_str + ".txt")
 annotation = pd.read_csv(annotation_path, '\t')
 begin_times = np.array(annotation["Begin Time (s)"])
 end_times = np.array(annotation["End Time (s)"])
