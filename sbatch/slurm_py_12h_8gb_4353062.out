@@ -1,0 +1,129 @@
+
+Jupyter server is running on: c41-01
+Job starts at: Thu Feb  1 08:48:40 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9385:localhost:9385 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9385:localhost:9385 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 08:48:42.565 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4353062/jupyter/notebook_cookie_secret
+[I 08:48:43.085 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 08:48:43.086 NotebookApp] 0 active kernels 
+[I 08:48:43.086 NotebookApp] The Jupyter Notebook is running at: http://localhost:9385/?token=5ab147345ac699da70b6670f7ae8947aaa718273964d7108
+[I 08:48:43.086 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:48:43.086 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9385/?token=5ab147345ac699da70b6670f7ae8947aaa718273964d7108
+[I 08:49:38.335 NotebookApp] 302 GET /?token=5ab147345ac699da70b6670f7ae8947aaa718273964d7108 (::1) 0.84ms
+[W 08:52:01.211 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 08:52:01.280 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 9.57ms referer=http://localhost:9385/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 08:52:02.480 NotebookApp] Kernel started: 9d0317e5-6aae-4bf3-919e-56db6ee131f7
+[I 08:54:02.762 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 08:54:02.764 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 08:56:02.777 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 08:56:02.779 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:04:02.738 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:04:02.740 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:06:02.751 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:06:02.752 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:08:02.961 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:08:02.962 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:14:03.035 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:14:03.037 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:16:02.737 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:16:02.738 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:20:02.724 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:20:02.725 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:22:02.730 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:22:02.731 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:24:02.788 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:24:02.789 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:26:02.992 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:26:02.993 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:28:02.875 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:28:02.876 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:30:02.794 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:30:02.795 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:32:02.797 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:32:02.799 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:34:02.788 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:34:02.790 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:36:02.802 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:36:02.804 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:38:02.811 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:38:02.812 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:40:02.818 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:40:02.819 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:46:02.874 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:46:02.875 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:48:02.889 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:48:02.891 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:50:03.022 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:50:03.023 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:50:33.273 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:50:33.274 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:52:02.927 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:52:02.929 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:54:02.820 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:54:02.821 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:56:02.938 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:56:02.940 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 09:58:02.834 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 09:58:02.836 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:00:11.064 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:00:11.065 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:05:15.744 NotebookApp] Kernel restarted: 9d0317e5-6aae-4bf3-919e-56db6ee131f7
+[I 10:05:16.858 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:05:16.859 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:06:02.847 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:06:02.848 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:08:03.802 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:08:03.803 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:10:07.288 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:10:07.289 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:12:07.524 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:12:07.526 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:14:02.817 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:14:02.818 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:28:03.003 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:28:03.004 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:30:02.983 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:30:02.984 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:32:03.041 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:32:03.042 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:36:03.186 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:36:03.188 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 10:38:03.075 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 10:38:03.077 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:28:30.418 NotebookApp] Kernel restarted: 9d0317e5-6aae-4bf3-919e-56db6ee131f7
+[I 11:30:03.080 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:30:03.082 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:34:03.216 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:34:03.217 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:36:03.185 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:36:03.186 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:38:03.204 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:38:03.205 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb

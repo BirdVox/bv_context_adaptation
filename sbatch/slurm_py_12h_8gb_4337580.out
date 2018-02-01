@@ -74,3 +74,31 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 16:18:14.740 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
 [I 16:20:14.676 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
 [W 16:20:14.677 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 16:52:14.748 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 16:52:14.750 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 16:54:14.697 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 16:54:14.698 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 16:56:14.857 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 16:56:14.859 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:20:14.798 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:20:14.799 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:22:14.808 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:22:14.809 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:24:14.920 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:24:14.921 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:26:15.152 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:26:15.154 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:28:16.687 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:28:16.689 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:30:15.896 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:30:15.897 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:32:14.840 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:32:14.841 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:34:14.892 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:34:14.893 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:36:14.854 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:36:14.856 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 17:38:14.825 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 17:38:14.826 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 18:15:44.413 NotebookApp] WebSocket ping timeout after 119914 ms.
+slurmstepd: error: *** JOB 4337580 ON c41-01 CANCELLED AT 2018-01-31T21:13:05 DUE TO TIME LIMIT ***
