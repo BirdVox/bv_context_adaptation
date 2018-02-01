@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "../../../src/053_evaluate-spectral-flux-full-audio.py", line 51, in <module>
-    odf_path = os.path.join(sf_dir, unit_str + ".hdf5")
-NameError: name 'unit_str' is not defined
