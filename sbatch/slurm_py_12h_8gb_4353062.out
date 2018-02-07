@@ -127,3 +127,12 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 11:36:03.186 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
 [I 11:38:03.204 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
 [W 11:38:03.205 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:46:03.233 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:46:03.234 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 11:48:03.135 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 11:48:03.137 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 12:02:03.209 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 12:02:03.210 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 12:48:02.021 NotebookApp] WebSocket ping timeout after 119940 ms.
+slurmstepd: error: *** JOB 4353062 ON c41-01 CANCELLED AT 2018-02-01T20:48:41 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.
