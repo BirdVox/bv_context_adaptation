@@ -73,7 +73,7 @@ test_unit_dir = os.path.join(
     model_dir, test_unit_str)
 metrics_name = "_".join([
     dataset_name,
-    model_name,
+    "spectral-flux",
     "test-" + test_unit_str,
     "full-audio-metrics"])
 metrics_path = os.path.join(
