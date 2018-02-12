@@ -1,4 +1,0 @@
-Traceback (most recent call last):
-  File "../../../src/053_evaluate-spectral-flux-full-audio.py", line 76, in <module>
-    model_name,
-NameError: name 'model_name' is not defined
