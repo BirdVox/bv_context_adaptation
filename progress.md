@@ -60,6 +60,14 @@ C. ICASSP model
 
 16. [DONE] Investigate the locations of 20% of false detections.
 
+17. [DONE] Train ICASSP convnet with "all but noise" augmentation.
+
+18. [IN PROGRESS] Predict "all but noise" on clips.
+
+19. [IN PROGRESS] Predict "all but noise" on full nights.
+
+20. Threshold "all but noise" on full nights.
+
 
 D. Snowball on UrbanSound-8K
 1. [DONE] Find padding heuristics (repeat vs zero).
