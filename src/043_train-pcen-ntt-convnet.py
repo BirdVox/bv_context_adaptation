@@ -40,9 +40,9 @@ trial_str = "trial-" + str(trial_id)
 
 # Set number of epochs.
 if aug_kind_str == "none":
-    epochs = 16
+    epochs = 64
 else:
-    epochs = 32
+    epochs = 128
 
 
 # Retrieve fold such that unit_str is in the test set.

@@ -48,9 +48,9 @@ for aug_kind_str in aug_kinds:
                 f.write("#SBATCH --tasks-per-node=1\n")
                 f.write("#SBATCH --cpus-per-task=1\n")
                 if aug_kind_str == "all":
-                    f.write("#SBATCH --time=12:00:00\n")
+                    f.write("#SBATCH --time=24:00:00\n")
                 else:
-                    f.write("#SBATCH --time=6:00:00\n")
+                    f.write("#SBATCH --time=12:00:00\n")
                 f.write("#SBATCH --mem=8GB\n")
                 f.write("#SBATCH --output=../slurm/slurm_" + job_name + "_%j.out\n")
                 f.write("\n")

@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "../../../src/053_evaluate-spectral-flux-full-audio.py", line 103, in <module>
+    csv_file = open(metrics_path, 'w')
+FileNotFoundError: [Errno 2] No such file or directory: '/scratch/vl1019/BirdVox-70k_models/spectral-flux/unit03/BirdVox-70k_spectral-flux_test-unit03_full-audio-metrics.csv'
