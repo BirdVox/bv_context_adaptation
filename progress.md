@@ -62,7 +62,7 @@ C. ICASSP model
 
 17. [DONE] Train ICASSP convnet with "all but noise" augmentation.
 
-18. [IN PROGRESS] Predict "all but noise" on clips.
+18. [DONE] Predict "all but noise" on clips.
 
 19. [IN PROGRESS] Predict "all but noise" on full nights.
 
