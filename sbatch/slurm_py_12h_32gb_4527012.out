@@ -244,3 +244,22 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 13:58:29.749 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.34ms referer=http://localhost:7353/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
 [I 13:58:44.392 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
 [W 13:58:44.394 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 14:04:31.190 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 14:04:31.191 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 14:10:51.694 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb is not trusted
+[W 14:10:51.717 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.69ms referer=http://localhost:7353/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 14:10:52.048 NotebookApp] Kernel started: d5bdd152-4521-430b-a2f7-a56c975b47ff
+[W 14:11:04.108 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 14:11:04.148 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 1.79ms referer=http://localhost:7353/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 14:12:52.140 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[W 14:12:52.142 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 14:14:52.154 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[W 14:14:52.155 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 14:29:37.608 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[W 14:29:37.609 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 14:31:24.365 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[W 14:31:24.367 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 14:31:37.627 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[W 14:31:41.268 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[W 14:31:41.303 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.46ms referer=http://localhost:7353/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[I 14:31:41.885 NotebookApp] Kernel started: 49c8910b-b755-44e3-b9be-c884d211feed
