@@ -1,0 +1,65 @@
+
+Jupyter server is running on: c41-02
+Job starts at: Wed Feb 14 09:38:24 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7353:localhost:7353 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7353:localhost:7353 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:38:25.262 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4527012/jupyter/notebook_cookie_secret
+[I 09:38:25.609 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:38:25.609 NotebookApp] 0 active kernels 
+[I 09:38:25.609 NotebookApp] The Jupyter Notebook is running at: http://localhost:7353/?token=9021f30f5dd4a2e2c7bade227bb603fecf5259cc3bdf6a88
+[I 09:38:25.609 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:38:25.609 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7353/?token=9021f30f5dd4a2e2c7bade227bb603fecf5259cc3bdf6a88
+[I 09:44:55.581 NotebookApp] 302 GET /?token=9021f30f5dd4a2e2c7bade227bb603fecf5259cc3bdf6a88 (::1) 1.76ms
+[W 09:45:34.673 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 09:45:34.810 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 53.81ms referer=http://localhost:7353/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 09:45:35.816 NotebookApp] Kernel started: fcb8951d-4bba-484d-a94a-2f208175cd82
+[I 09:55:36.057 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 09:55:36.058 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 09:57:37.464 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 09:57:37.465 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:00:06.494 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:00:06.495 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:04:12.458 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:04:12.459 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:06:12.966 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:06:12.967 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:08:16.122 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:08:16.123 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:12:40.258 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:12:40.259 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:14:40.177 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:14:40.178 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:25:52.980 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:25:52.981 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:27:52.929 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:27:52.930 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 10:29:53.279 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 10:29:53.281 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb

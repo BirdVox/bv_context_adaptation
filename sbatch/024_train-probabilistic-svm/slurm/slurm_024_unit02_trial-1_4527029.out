@@ -1,0 +1,15 @@
+2018-02-14 09:47:28.999554 Start.
+Training probabilistic SVM for BirdVox-70k clips.
+Test unit: unit02.
+Trial ID: 1.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+skm version: 0.0.1
+
+Accuracy = 83.20
+
+2018-02-14 10:26:42.503255 Finish.
+Total elapsed time: 00:39:14.50.
