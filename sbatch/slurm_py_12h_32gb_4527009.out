@@ -38,3 +38,4 @@ Warning: remote port forwarding failed for listen port 6013
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:6013/?token=e34657149c89ea1016fbf86dbe8fdecc0511d58a829ce25c
+slurmstepd: error: *** JOB 4527009 ON c41-02 CANCELLED AT 2018-02-14T21:32:50 DUE TO TIME LIMIT ***
