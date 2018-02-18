@@ -260,8 +260,3 @@ L. Dynamic filter networks with PCEN
 20. [READY] Predict PCEN convnets with adaptive threshold with data augmentation excepting noise on full nights. Parallelize over units (6) and trials (10).
 
 21. [READY] Predict PCEN convnets with adaptive threshold with data augmentation on full nights. Parallelize over units (6) and trials (10).
-
-
-* RE-RUN PREDICT 047 UNIT 03
-* RE-RUN PREDICT 048 UNIT 02
-* RE-RUN PREDICT 048 UNIT 03
