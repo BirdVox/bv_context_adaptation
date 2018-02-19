@@ -78,10 +78,10 @@ def multiplex_lms_with_background(
     aug_dict = localmodule.get_augmentations()
     data_dir = localmodule.get_data_dir()
     dataset_name = localmodule.get_dataset_name()
-    tfr_name = "_".join([dataset_name, "clip-logmelspec"])
+    tfr_name = "_".join([dataset_name, "clip-pcen"])
     tfr_dir = os.path.join(data_dir, tfr_name)
     bg_name = "_".join(
-        [dataset_name, "clip-logmelspec-backgrounds"])
+        [dataset_name, "clip-pcen-backgrounds"])
     bg_dir = os.path.join(data_dir, bg_name)
     T_str = "T-" + str(bg_duration).zfill(4)
     T_dir = os.path.join(bg_dir, T_str)
