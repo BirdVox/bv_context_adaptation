@@ -275,7 +275,7 @@ bg_dense1 = keras.layers.Dense(64,
     activation="relu")(bg_flatten)
 
 # Bias (adaptive threshold)
-bg_threshold = keras.layers.Dense(1,
+adaptive_threshold = keras.layers.Dense(1,
     name="bg_dense2", use_bias=False)(bg_dense1)
 
 # Weights (mixture of experts)
