@@ -133,6 +133,7 @@ def multiplex_lms_with_background(
                 bg_path = os.path.join(T_dir, bg_name)
 
                 # Define pescador streamer.
+                bias = 0.0
                 stream = pescador.Streamer(yield_lms_and_background,
                     lms_path, n_input_hops, bias, bg_path)
                 streams.append(stream)
