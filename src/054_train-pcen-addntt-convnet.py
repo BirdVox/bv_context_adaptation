@@ -55,7 +55,8 @@ validation_units = fold[2]
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Training additive context-aware convnet on " + dataset_name + ". ")
+print("Training mixture of experts with adaptive threshold on " +\
+    dataset_name + " with PCEN input. ")
 print("Training set: " + ", ".join(training_units) + ".")
 print("Validation set: " + ", ".join(validation_units) + ".")
 print("Test set: " + ", ".join(test_units) + ".")
@@ -114,12 +115,6 @@ def multiplex_lms_with_background(
             instances = ["-".join([aug_str, str(instance_id)])
                 for instance_id in range(n_instances)]
 
-        # Define bias.
-        if aug_str[:5] == "noise":
-            bias = np.float32(-17.0)
-        else:
-            bias = np.float32(0.0)
-
         # Loop over instances.
         for instanced_aug_str in instances:
 
@@ -133,7 +128,7 @@ def multiplex_lms_with_background(
 
                 # Define path to background.
                 bg_name = "_".join(
-                    [dataset_name, "background_summaries",
+                    [dataset_name, "clip-backgrounds",
                      unit_str, T_str + ".hdf5"])
                 bg_path = os.path.join(T_dir, bg_name)
 
@@ -160,7 +155,7 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
     with h5py.File(tfr_path, "r") as tfr_container,\
             h5py.File(bg_path, "r") as bg_container:
         # Open HDF5 group corresponding to time-freq representation (TFR).
-        tfr_group = tfr_container["logmelspec"]
+        tfr_group = tfr_container["pcen"]
 
         # The naming convention of a key is
         # [unit]_[time]_[freq]_[y]_[aug]_[instance]
@@ -168,7 +163,7 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
         keys = list(tfr_group.keys())
 
         # Open HDF5 group corresponding to background
-        bg_group = bg_container["logmelspec_background"]
+        bg_group = bg_container["pcen_background"]
 
         # Infinite "yield" loop.
         while True:
