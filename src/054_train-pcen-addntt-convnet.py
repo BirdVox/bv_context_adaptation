@@ -277,12 +277,12 @@ bg_dense1 = keras.layers.Dense(64,
 
 # Bias (adaptive threshold)
 adaptive_threshold = keras.layers.Dense(1,
-    name="bg_dense2", use_bias=False)(bg_dense1)
+    name="adaptive_threshold", use_bias=False)(bg_dense1)
 
 # Weights (mixture of experts)
 bg_experts = keras.layers.Dense(4,
     kernel_initializer="he_normal",
-    activation="softmax", name="bg_dense2")(bg_dense1)
+    activation="softmax", name="bg_experts")(bg_dense1)
 
 # Reshape
 bg_reshape = keras.layers.Reshape((1, 4),
