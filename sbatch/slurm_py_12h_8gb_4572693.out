@@ -47,3 +47,133 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 16:24:06.408 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [I 16:26:06.397 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [I 16:30:06.442 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 18:53:46.982 NotebookApp] 302 GET /?token=bea58849763c0db5086dbd376e6dca9dc5aad744eefc9cb2 (::1) 0.79ms
+[W 18:53:53.237 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.71ms referer=http://localhost:9208/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 18:53:59.425 NotebookApp] Kernel restarted: 99f84496-406c-488e-b91f-f35b95e94f78
+[I 18:55:54.764 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 18:57:55.244 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 18:59:54.442 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:01:54.995 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:03:55.267 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:05:53.832 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:07:54.883 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:09:54.977 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:11:55.994 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:13:53.947 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:15:53.872 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:25:53.894 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:29:54.897 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:31:54.895 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:33:55.101 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:35:53.919 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:37:54.783 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:39:54.873 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:41:53.930 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:43:54.988 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:45:54.997 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:47:55.303 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:49:53.949 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:51:55.013 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:53:55.037 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:55:55.041 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:57:54.018 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:59:54.028 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:01:55.554 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:03:54.035 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:07:54.041 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:09:54.072 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:25:54.114 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 20:27:18.984 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 20:27:19.085 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 3.44ms referer=http://localhost:9208/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 20:27:19.647 NotebookApp] Kernel started: 46428e30-3848-4ce6-9aa1-06f8323b857c
+[I 20:27:54.128 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:29:19.647 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 20:29:19.648 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 20:33:19.646 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 20:33:19.647 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 20:33:55.210 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:35:54.132 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:37:54.141 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:39:55.111 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:43:54.154 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:44:07.159 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:44:11.841 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:45:54.941 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:47:54.179 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:49:55.214 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:51:54.216 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:53:55.195 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:59:55.036 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:01:20.649 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:01:20.650 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:05:20.729 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:05:20.730 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:07:54.234 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:09:20.679 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:09:20.680 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:09:47.440 NotebookApp] Kernel restarted: 46428e30-3848-4ce6-9aa1-06f8323b857c
+[I 21:09:54.250 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:11:20.690 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:11:20.691 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:15:20.807 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:15:20.808 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:15:54.248 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:17:20.694 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:17:20.695 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:17:54.243 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:19:54.262 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:21:54.287 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:23:54.294 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:25:54.362 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:27:21.225 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:27:21.226 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:27:55.187 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:29:21.090 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:29:21.091 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 21:31:55.542 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:33:55.551 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 21:37:00.558 NotebookApp] WebSocket ping timeout after 119800 ms.
+[W 21:39:18.546 NotebookApp] WebSocket ping timeout after 119584 ms.
+[I 21:54:40.786 NotebookApp] 302 GET /?token=bea58849763c0db5086dbd376e6dca9dc5aad744eefc9cb2 (::1) 0.86ms
+[W 21:54:49.129 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 21:54:49.235 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 3.57ms referer=http://localhost:9208/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 21:55:02.116 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.12ms referer=http://localhost:9208/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:55:05.173 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:57:02.927 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 21:59:02.979 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:01:02.933 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:03:02.981 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:05:02.968 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:07:03.025 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:09:03.013 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:11:03.004 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:13:03.065 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:15:03.042 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:33:03.113 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:35:03.118 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:37:03.125 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:43:03.147 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:45:03.283 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:47:03.140 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:49:03.162 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:51:03.153 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 22:51:07.196 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 22:51:07.280 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.76ms referer=http://localhost:9208/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 22:55:02.193 NotebookApp] Kernel interrupted: 99f84496-406c-488e-b91f-f35b95e94f78
+[I 22:55:03.187 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:57:03.012 NotebookApp] Kernel interrupted: 99f84496-406c-488e-b91f-f35b95e94f78
+[I 22:57:03.248 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 22:59:03.188 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:01:03.199 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:01:07.871 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 23:01:07.871 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 23:03:03.244 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:05:03.202 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:10:56.551 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:13:03.446 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:37:03.350 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:37:08.003 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[W 23:37:08.003 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 23:41:03.334 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:01:03.547 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 00:03:03.479 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
