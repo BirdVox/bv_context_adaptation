@@ -1,0 +1,22 @@
+Using TensorFlow backend.
+2018-02-19 00:36:53.994739 Start.
+Training mixture of experts with adaptive threshold on BirdVox-70k with PCEN input. 
+Training set: unit01, unit02, unit03.
+Validation set: unit05, unit07.
+Test set: unit10.
+
+h5py version: 2.6.0
+keras version: 2.0.6
+numpy version: 1.13.1
+pandas version: 0.20.3
+pescador version: 1.0.0
+tensorflow version: 1.2.1
+
+Traceback (most recent call last):
+  File "../../../src/054_train-pcen-addntt-convnet.py", line 298, in <module>
+    name="add", activation="sigmoid")([mixture_of_experts, adaptive_threshold])
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/layers/merge.py", line 15, in __init__
+    super(_Merge, self).__init__(**kwargs)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/keras/engine/topology.py", line 281, in __init__
+    raise TypeError('Keyword argument not understood:', kwarg)
+TypeError: ('Keyword argument not understood:', 'activation')
