@@ -292,10 +292,11 @@ bg_reshape = keras.layers.Reshape((1, 4),
 mixture_of_experts = keras.layers.Multiply(
     name="multiply")([spec_reshape, bg_reshape])
 
+# Addition
+add = keras.layers.Add(name="add")([mixture_of_experts, adaptive_threshold])
 
-# Combined channel.
-output = keras.layers.Add(
-    name="add", activation="sigmoid")([mixture_of_experts, adaptive_threshold])
+# Output
+dense = keras.layers.Dense(1, activation="sigmoid", name="dense")(add)
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
