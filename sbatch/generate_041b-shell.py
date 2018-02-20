@@ -32,7 +32,7 @@ for bg_duration in bg_durations:
         # Print header.
         f.write(
             "# This shell script executes the Slurm jobs for computing " +
-            "backgrounds on clips.\n")
+            "backgrounds on PCEN full nights.\n")
         f.write("\n")
 
         # Loop over recording units.
