@@ -6,7 +6,7 @@ import localmodule
 
 
 # Define constants.
-script_name = "041_compute-pcen-full-background-summaries.py"
+script_name = "041b_compute-pcen-full-background-summaries.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 units = localmodule.get_units()
 bg_durations = [1, 2, 5, 10, 30, 60, 120, 300, 600, 1800, 3600, 7200]
