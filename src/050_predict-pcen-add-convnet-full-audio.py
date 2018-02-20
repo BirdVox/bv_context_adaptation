@@ -67,7 +67,7 @@ network_path = os.path.join(trial_dir, network_name + ".hdf5")
 model = keras.models.load_model(network_path)
 
 
-# Open logmelspec container with h5py.
+# Open PCEN container with h5py.
 pcen_dir = os.path.join(data_dir, "_".join([dataset_name, "full-pcen"]))
 hdf5_path = os.path.join(pcen_dir, predict_unit_str + ".hdf5")
 pcen_container = h5py.File(hdf5_path, "r")
@@ -124,9 +124,9 @@ for hop_id in range(n_hops):
 
 
     if not is_end_reached:
-        # Load logmelspec
-        X_lms = lms_group[:, clip_start:clip_stop]
-        X_lms = X_lms[np.newaxis, :, :, np.newaxis]
+        # Load PCEN
+        X_pcen = pcen_group[:, clip_start:clip_stop]
+        X_pcen = X_pcen[np.newaxis, :, :, np.newaxis]
 
         # Load background.
         bg_col = min(
@@ -136,7 +136,7 @@ for hop_id in range(n_hops):
 
         # Predict.
         predicted_probability = model.predict(
-            {"spec_input": X_lms, "bg_input": X_bg})[0, 0]
+            {"spec_input": X_pcen, "bg_input": X_bg})[0, 0]
 
 
     # Store prediction as DataFrame row.
