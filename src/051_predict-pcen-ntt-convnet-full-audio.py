@@ -81,7 +81,7 @@ bg_duration_str = str(int(bg_duration)).zfill(4)
 T_name = "-".join(["T", str(bg_duration_str)])
 bg_T_dir = os.path.join(bg_dir, T_name)
 out_unit_name = "_".join([
-    dataset_name, "full-backgrounds",
+    dataset_name, "pcen-backgrounds",
     predict_unit_str, T_name]) + ".hdf5"
 bg_unit_path = os.path.join(bg_T_dir, out_unit_name)
 bg_unit_file = h5py.File(bg_unit_path, "r")
