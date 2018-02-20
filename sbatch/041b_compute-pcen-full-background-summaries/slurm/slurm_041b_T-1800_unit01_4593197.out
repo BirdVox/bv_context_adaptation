@@ -1,0 +1,10 @@
+2018-02-19 22:47:17.754817 Start.
+Computing PCEN background summaries on BirdVox-70k full nights.
+Background duration (T): 1800.
+Unit: unit01.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+
+2018-02-19 22:56:26.486933 Finish.
+Total elapsed time: 00:09:09.49.
