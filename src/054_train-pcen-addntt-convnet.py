@@ -288,16 +288,22 @@ bg_experts = keras.layers.Dense(4,
 bg_reshape = keras.layers.Reshape((1, 4),
     name="bg_reshape")(bg_experts)
 
+
 # Combined channel.
 # Element-wise multiplication
-mixture_of_experts = keras.layers.Multiply(
+multiply = keras.layers.Multiply(
     name="multiply")([spec_reshape, bg_reshape])
 
-# Addition
-add = keras.layers.Add(name="add")([mixture_of_experts, adaptive_threshold])
+# Flatten
+mixture_of_experts = keras.layers.Flatten(
+    name="mixture_of_experts")(multiply)
+
+# Concatenation
+concatenate = keras.layers.Concatenate(
+    name="concatenate")([mixture_of_experts, adaptive_threshold])
 
 # Output
-dense = keras.layers.Dense(1, activation="sigmoid", name="dense")(add)
+dense = keras.layers.Dense(1, activation="sigmoid", name="dense")(concatenate)
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
