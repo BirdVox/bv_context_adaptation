@@ -1,3 +1,4 @@
 2018-02-17 22:57:17.206730: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
 2018-02-17 22:57:17.206837: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
 2018-02-17 22:57:17.206848: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+slurmstepd: error: *** JOB 4570590 ON c37-07 CANCELLED AT 2018-02-21T22:57:23 DUE TO TIME LIMIT ***
