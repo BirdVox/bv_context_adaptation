@@ -1,0 +1,14 @@
+2018-02-22 21:23:04.324405 Start.
+Thresholding NTT-like convnet for detection in BirdVox-70k full audio. 
+Augmentation kind: all
+Test unit: unit05
+Trial ID: 4
+Prediction unit: unit02
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+
+2018-02-23 04:26:11.028133 Finish.
+Total elapsed time: 07:03:07.03.
