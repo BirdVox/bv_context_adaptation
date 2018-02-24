@@ -1,6 +1,6 @@
 # This shell script executes Slurm jobs for evaluating
-# PCEN NTT convolutional neural network
-# on BirdVox-70k full audio.
+# adaptive threshold convolutional neural network
+# on BirdVox-70k full audio with PCEN input.
 # Augmentation kind: all-but-noise.
 
 sbatch 052_aug-all-but-noise_test-unit01_trial-0.sbatch
