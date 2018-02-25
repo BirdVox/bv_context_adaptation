@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 aug_kinds = ["all", "all-but-noise", "noise"]
 units = localmodule.get_units()
-script_name = "049_evaluate-pcen-ntt-convnet-full-audio.py"
+script_name = "056_evaluate-pcen-ntt-convnet-full-audio.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 n_trials = 10
 
