@@ -1,0 +1,14 @@
+2018-02-24 20:01:35.789424 Start.
+Thresholding mixture of experts for detection in BirdVox-70k full audio with PCEN input. 
+Augmentation kind: all-but-noise
+Test unit: unit03
+Trial ID: 8
+Prediction units: unit03, unit01, unit02
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+
+2018-02-24 20:04:15.332467 Finish.
+Total elapsed time: 00:02:40.33.

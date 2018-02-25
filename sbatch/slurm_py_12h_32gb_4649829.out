@@ -40,3 +40,36 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 18:18:51.298 NotebookApp] 302 GET /?token=ee62d963d24189bac07cc2a4a4995c83df82478bf403799d (::1) 0.76ms
 [W 18:19:11.868 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 33.44ms referer=http://localhost:9724/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
 [I 18:19:12.494 NotebookApp] Kernel started: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:21:12.556 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:22:04.880 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:23:12.476 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:25:12.483 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:26:15.174 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:26:25.985 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:26:51.652 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:27:12.524 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:29:12.631 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:31:12.544 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:33:12.477 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:35:12.559 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:37:12.553 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:39:12.647 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:39:44.696 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:39:51.168 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 18:41:12.600 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:43:12.574 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:51:15.544 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:53:15.437 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:01:28.575 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:03:28.650 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:05:28.620 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:07:28.771 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:14:39.874 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 19:55:03.264 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 19:56:02.135 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 20:07:04.718 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 20:08:59.860 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 20:10:59.460 NotebookApp] Kernel restarted: 43bcd555-6820-4385-9f49-4742a9da6a7b
+[I 20:10:59.822 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 20:12:59.821 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 20:33:30.557 NotebookApp] WebSocket ping timeout after 119870 ms.
