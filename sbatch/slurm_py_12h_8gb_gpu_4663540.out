@@ -1,0 +1,175 @@
+
+Jupyter server is running on: gpu-23
+Job starts at: Mon Feb 26 01:01:02 EST 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7383:localhost:7383 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7383:localhost:7383 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 01:01:09.462 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4663540/jupyter/notebook_cookie_secret
+[I 01:01:10.896 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 01:01:10.896 NotebookApp] 0 active kernels 
+[I 01:01:10.896 NotebookApp] The Jupyter Notebook is running at: http://localhost:7383/?token=68d3fe2958f2cf5d32362df25418c10461f5c37208ad319c
+[I 01:01:10.896 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 01:01:10.897 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7383/?token=68d3fe2958f2cf5d32362df25418c10461f5c37208ad319c
+[I 01:01:52.306 NotebookApp] 302 GET /?token=68d3fe2958f2cf5d32362df25418c10461f5c37208ad319c (::1) 0.85ms
+[W 01:02:08.993 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 35.69ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 01:02:09.640 NotebookApp] Kernel started: ba175e98-90b3-4faa-80cc-679e1a5377cb
+[W 01:02:10.261 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 1.88ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:02:10.680 NotebookApp] Kernel started: b2096d78-c220-49c5-8727-abb6ba7d90ea
+[I 01:04:13.427 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:06:12.484 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:08:12.608 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:10:12.309 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:12:12.562 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:14:12.608 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:16:12.609 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:18:12.609 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:20:12.579 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:22:14.099 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:24:13.421 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:36:33.559 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:38:33.584 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:40:33.557 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:42:33.586 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:44:33.607 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:46:33.733 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:48:33.583 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:50:33.647 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:52:33.751 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:54:33.747 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:56:33.567 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 01:58:33.766 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:00:33.658 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:02:33.713 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:04:33.626 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:08:33.684 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:10:33.681 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:12:33.775 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:14:33.688 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:27:49.681 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:27:53.587 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:27:54.151 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:29:47.653 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:31:47.622 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:33:47.617 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:35:47.636 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:37:47.674 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:37:50.926 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:39:47.611 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:41:47.651 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:45:47.662 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:47:47.593 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:49:49.557 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 02:56:17.742 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:00:38.305 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:02:38.371 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:17:50.466 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:19:50.385 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:34:04.132 NotebookApp] 302 GET /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb?content=0&_=1519624930122 (::1) 1.03ms
+[W 03:34:04.389 NotebookApp] None
+[W 03:34:04.389 NotebookApp] 403 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 163.29ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:34:17.507 NotebookApp] 302 GET /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb?content=0&_=1519624930123 (::1) 1.02ms
+[W 03:34:17.629 NotebookApp] None
+[W 03:34:17.630 NotebookApp] 403 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 84.51ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:34:24.382 NotebookApp] 302 GET /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb?content=0&_=1519624930124 (::1) 1.04ms
+[W 03:34:24.487 NotebookApp] None
+[W 03:34:24.487 NotebookApp] 403 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 75.14ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:35:26.592 NotebookApp] 302 GET /api/sessions?_=1519624925906 (::1) 0.88ms
+[I 03:35:26.593 NotebookApp] 302 GET /api/terminals?_=1519624925907 (::1) 0.71ms
+[I 03:35:30.706 NotebookApp] 302 GET /?token=68d3fe2958f2cf5d32362df25418c10461f5c37208ad319c (::1) 0.57ms
+[I 03:36:04.258 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 03:36:29.706 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.00ms referer=http://localhost:7383/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:36:31.729 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:38:30.435 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:39:56.597 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:40:20.382 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:42:20.362 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:44:20.448 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:46:20.469 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:48:20.414 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:50:20.583 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:52:23.082 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:54:23.133 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:56:23.144 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 03:58:23.112 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:07:48.660 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:08:11.937 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:08:14.211 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:10:10.168 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:12:10.200 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:14:10.201 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:16:10.164 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:18:10.203 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:20:10.184 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:22:10.198 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:24:10.227 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:26:10.323 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:28:10.365 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:30:10.258 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:36:11.293 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:38:13.063 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:40:13.051 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:42:12.937 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:42:17.524 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 04:44:12.949 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:11:08.672 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:15:08.889 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:17:08.756 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:18:53.883 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:18:54.341 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:21:08.802 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:23:08.866 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:25:08.878 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:25:39.554 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:27:08.812 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:28:25.028 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:29:08.824 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:31:08.783 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:35:08.776 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:37:11.531 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:39:11.353 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:41:11.346 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:55:28.643 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:57:28.655 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 05:59:28.727 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:01:10.645 NotebookApp] Kernel restarted: b2096d78-c220-49c5-8727-abb6ba7d90ea
+[I 06:01:28.673 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:03:28.804 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:05:28.682 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:07:28.703 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:11:28.739 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:13:28.750 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:15:28.750 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:23:28.759 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:24:27.755 NotebookApp] Kernel restarted: b2096d78-c220-49c5-8727-abb6ba7d90ea
+[I 06:25:28.758 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:27:28.868 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 06:29:28.921 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 06:31:59.069 NotebookApp] WebSocket ping timeout after 119989 ms.
+slurmstepd: error: *** JOB 4663540 ON gpu-23 CANCELLED AT 2018-02-26T13:01:12 DUE TO TIME LIMIT ***
