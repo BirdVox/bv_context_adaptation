@@ -59,3 +59,19 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 16:35:14.792 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
 [I 16:37:14.800 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
 [I 16:39:14.794 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 18:39:20.588 NotebookApp] 302 GET /?token=18c540fabc26a1c21481df1955475d2642e84d4a62ee6257 (::1) 0.51ms
+[I 18:39:52.913 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/spl2018
+[I 18:39:55.636 NotebookApp] Kernel started: 0f73f787-f306-41aa-b0b8-475f12a89ff3
+[W 18:39:55.683 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js (::1) 2.28ms referer=http://localhost:7684/notebooks/BirdVox-70k_icassp2018/spl2018/Untitled.ipynb?kernel_name=python3
+[I 18:41:55.743 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 18:43:55.652 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 18:45:55.648 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 18:47:55.665 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 18:49:55.678 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 18:51:55.665 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 19:09:55.856 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 19:11:55.712 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 19:13:55.712 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 19:23:55.748 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 19:25:55.986 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[W 19:27:56.805 NotebookApp] WebSocket ping timeout after 119994 ms.
