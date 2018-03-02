@@ -25,7 +25,7 @@ os.makedirs(slurm_dir, exist_ok=True)
 
 
 for aug_kind_str in aug_kinds:
-    file_path = os.path.join(sbatch_dir, "052_aug-" + aug_kind_str + ".sh")
+    file_path = os.path.join(sbatch_dir, "058_aug-" + aug_kind_str + ".sh")
 
     # Open shell file
     with open(file_path, "w") as f:
