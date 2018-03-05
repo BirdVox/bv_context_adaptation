@@ -183,3 +183,24 @@ fmtutil: config file `fmtutil.cnf' not found.
 [I 23:50:54.595 NotebookApp] Kernel started: f9383f5f-c9b8-4fd7-99a6-96e6fcbeecf1
 [I 23:51:12.894 NotebookApp] Kernel restarted: f9383f5f-c9b8-4fd7-99a6-96e6fcbeecf1
 [I 23:52:54.608 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[W 00:07:03.736 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 00:07:03.764 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180304190103 (::1) 1.88ms referer=http://localhost:6918/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:11:04.573 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:11:04.574 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:12:21.363 NotebookApp] Kernel restarted: eceb193d-9e46-44bd-8e73-6ba84593e4ca
+[I 00:13:04.547 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:13:04.548 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:17:04.556 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:17:04.556 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:19:07.242 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:19:07.243 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:21:07.282 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:21:07.283 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 00:23:07.227 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 00:23:07.228 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 01:15:09.613 NotebookApp] Kernel restarted: eceb193d-9e46-44bd-8e73-6ba84593e4ca
+[I 01:17:05.476 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 01:17:05.477 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 02:57:10.898 NotebookApp] WebSocket ping timeout after 119789 ms.
+[W 02:57:13.750 NotebookApp] WebSocket ping timeout after 117794 ms.
+slurmstepd: error: *** JOB 4761288 ON gpu-24 CANCELLED AT 2018-03-05T07:01:05 DUE TO TIME LIMIT ***
