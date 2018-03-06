@@ -37,3 +37,30 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:6532/?token=016bc6b922e2d26ca29384cfe660e4347b745acad8ef16d8
+[I 13:23:32.354 NotebookApp] 302 GET /?token=016bc6b922e2d26ca29384cfe660e4347b745acad8ef16d8 (::1) 0.87ms
+[W 13:25:49.930 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 13:25:49.979 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180305101345 (::1) 29.35ms referer=http://localhost:6532/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:25:54.417 NotebookApp] Kernel started: 99e3dce5-8387-4c63-b15c-1810825d7af9
+[I 13:26:15.637 NotebookApp] Kernel interrupted: 99e3dce5-8387-4c63-b15c-1810825d7af9
+[I 13:26:35.726 NotebookApp] Kernel restarted: 99e3dce5-8387-4c63-b15c-1810825d7af9
+[I 13:27:54.395 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:27:54.396 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:29:54.609 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:29:54.610 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:31:54.404 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:31:54.405 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:33:54.384 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:33:54.385 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:35:54.402 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:35:54.403 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:37:54.485 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:37:54.486 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:39:54.427 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:39:54.428 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:41:54.484 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:41:54.485 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:43:55.973 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:43:55.973 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:47:36.702 NotebookApp] WebSocket ping timeout after 118842 ms.
+[I 17:04:48.481 NotebookApp] 302 GET /?token=016bc6b922e2d26ca29384cfe660e4347b745acad8ef16d8 (::1) 0.51ms
+slurmstepd: error: *** JOB 4766469 ON gpu-23 CANCELLED AT 2018-03-05T22:13:36 DUE TO TIME LIMIT ***
