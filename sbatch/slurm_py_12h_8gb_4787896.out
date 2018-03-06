@@ -38,3 +38,382 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     to login with a token:
         http://localhost:9400/?token=fe64048df0370af72c0b2515496f3796db7c879b1d550a8e
 [I 15:07:17.370 NotebookApp] 302 GET /?token=fe64048df0370af72c0b2515496f3796db7c879b1d550a8e (::1) 0.84ms
+[W 15:11:02.530 NotebookApp] The signatures database cannot be opened; maybe it is corrupted or encrypted. You may need to rerun your notebooks to ensure that they are trusted to run Javascript. The old signatures database has been renamed to /home/vl1019/.local/share/jupyter/nbsignatures.db.bak and a new one has been created.
+[W 15:11:02.551 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 15:11:02.640 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 21.79ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 15:11:03.501 NotebookApp] Kernel started: c6681858-ab46-44e6-b066-3165b1e3c5d1
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T15.11.04.541775.sqlite and a new file created.
+[I 15:14:02.932 NotebookApp] 302 GET /?token=fe64048df0370af72c0b2515496f3796db7c879b1d550a8e (::1) 0.33ms
+[W 15:14:14.100 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 15:14:14.115 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 2.03ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 15:14:47.618 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb is not trusted
+[W 15:14:47.629 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.89ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:14:48.313 NotebookApp] Kernel started: e5e141bd-d4a7-4070-adcd-fd5094d1b8cd
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T15.14.49.192832.sqlite and a new file created.
+[I 15:16:48.784 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:16:48.785 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:18:48.612 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:18:48.613 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:20:50.077 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:20:50.078 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:24:48.801 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:24:48.801 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:26:49.130 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:26:49.131 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:27:04.690 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:27:04.690 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:28:27.857 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:28:48.438 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:28:48.469 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:28:48.499 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:28:48.499 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "88895",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:28:48.499 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 510.58ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:28:49.111 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:28:49.115 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:28:49.115 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:28:49.116 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "88895",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:28:49.116 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 580.05ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:30:48.812 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:30:48.817 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:30:48.818 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:30:48.818 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "85171",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:30:48.818 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 403.05ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:32:48.830 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:32:48.835 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:32:48.836 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:32:48.836 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "89789",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:32:48.836 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 354.96ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:34:48.833 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:34:48.837 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:34:48.838 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:34:48.839 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86279",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:34:48.839 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 436.85ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:26.495 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:26.499 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:26.500 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:26.500 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:26.500 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 403.96ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:30.844 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:30.848 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:30.849 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:30.849 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:30.849 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 417.86ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:31.289 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:31.292 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:31.293 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:31.293 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:31.293 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 401.39ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:31.753 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:31.757 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:31.757 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:31.758 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:31.758 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 429.73ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:32.283 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:32.286 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:32.287 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:32.287 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:32.287 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 527.00ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:32.556 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:32.560 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:32.560 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:32.561 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:32.561 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 279.56ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[I 15:35:36.606 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[E 15:35:36.610 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 15:35:36.610 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/21feb.ipynb disk I/O error
+[E 15:35:36.611 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb",
+      "Content-Length": "86304",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520367242|23:username-localhost-9400|44:MjJhYWQyZjlhYjIzNGY2ZWI4NDYwYWZjYjJjYTE2NjE=|ce7ad626b2f9d59d7244f8d8354cb64d174963498f265827c3c9aeed1a65f11a\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 15:35:36.611 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 458.36ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:35:47.443 NotebookApp] File already exists: BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 15:35:47.443 NotebookApp] 409 PATCH /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 1.63ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
+[W 15:35:49.785 NotebookApp] File already exists: BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 15:35:49.786 NotebookApp] 409 PATCH /api/contents/BirdVox-70k_icassp2018/spl2018/21feb.ipynb (::1) 1.68ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/21feb.ipynb
