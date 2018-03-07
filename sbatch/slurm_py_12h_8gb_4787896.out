@@ -2051,3 +2051,86 @@ you should be able to connect to jupyter notebook running remotly on prince comp
       "Cookie": "username-localhost-9400=\"2|1:0|10:1520376321|23:username-localhost-9400|44:NTZjZjUxNDE2YjEzNGZlZTkxMDc2ZjNkYWIxZTI4YjI=|540db7fb9df4da92dff245949a2232b28e27cf28c8d4e2a85bb67b6956e7316f\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
     }
 [E 19:18:42.629 NotebookApp] 500 POST /api/contents/BirdVox-70k_icassp2018/icassp2018 (::1) 25.98ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 19:29:51.934 NotebookApp] 302 GET /?token=fe64048df0370af72c0b2515496f3796db7c879b1d550a8e (::1) 0.35ms
+[W 19:31:15.840 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[W 19:31:15.860 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.88ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:31:16.749 NotebookApp] Kernel started: bd75aae0-4a50-47ea-ac4e-802b60b22f14
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T19.31.17.622213.sqlite and a new file created.
+[I 19:31:34.307 NotebookApp] Kernel restarted: bd75aae0-4a50-47ea-ac4e-802b60b22f14
+[W 19:31:34.311 NotebookApp] zmq message arrived on closed channel
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T19.31.35.132783.sqlite and a new file created.
+[I 19:33:17.689 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:33:17.690 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:35:17.689 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:35:17.690 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:37:17.657 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:37:17.658 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:39:17.659 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:39:17.660 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:46:20.040 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 19:46:20.052 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 2.03ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 19:46:47.621 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.64ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[I 19:47:17.923 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:47:17.924 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:47:46.188 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 19:47:46.232 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 2.34ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 19:48:01.296 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[E 19:48:01.301 NotebookApp] Error while saving file: BirdVox-70k_icassp2018/spl2018/6-mars.ipynb disk I/O error
+    Traceback (most recent call last):
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/filemanager.py", line 395, in save
+        self.check_and_sign(nb, path)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/notebook/services/contents/manager.py", line 431, in check_and_sign
+        self.notary.sign(nb)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 447, in sign
+        self.store.store_signature(signature, self.algorithm)
+      File "/home/vl1019/miniconda3/lib/python3.6/site-packages/nbformat/sign.py", line 220, in store_signature
+        n, = self.db.execute("SELECT Count(*) FROM nbsignatures").fetchone()
+    sqlite3.OperationalError: disk I/O error
+[W 19:48:01.301 NotebookApp] Unexpected error while saving file: BirdVox-70k_icassp2018/spl2018/6-mars.ipynb disk I/O error
+[E 19:48:01.302 NotebookApp] {
+      "Host": "localhost:9400",
+      "Accept": "application/json, text/javascript, */*; q=0.01",
+      "X-Requested-With": "XMLHttpRequest",
+      "X-Xsrftoken": "2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114",
+      "Accept-Language": "en-us",
+      "Accept-Encoding": "gzip, deflate",
+      "Content-Type": "application/json",
+      "Origin": "http://localhost:9400",
+      "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_3) AppleWebKit/604.5.6 (KHTML, like Gecko) Version/11.0.3 Safari/604.5.6",
+      "Referer": "http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb",
+      "Content-Length": "94430",
+      "Connection": "keep-alive",
+      "Cookie": "username-localhost-9400=\"2|1:0|10:1520382591|23:username-localhost-9400|44:YTM4ZGI3NzRhMjRlNDI0MmJjOThkNWI0NTc2NTI0NTA=|a7ef98835032b9967587068f7899b83b2f9de780342ca8fd6de73f642fa78a0b\"; username-localhost-8888=\"2|1:0|10:1520367103|23:username-localhost-8888|44:OGZlMjRiMmExZjMxNDg2Yzk5YzczMmQzNTJiOWQzMWQ=|a50594862452ca6891d778ffa2f1636b87f0ce14254ba31c2b003a0bbc18f8c4\"; username-localhost-6918=\"2|1:0|10:1520220349|23:username-localhost-6918|44:NjY2NjEzNzcyMTJhNGNmM2E4NDI2ZmIzZmEwMzkzMmE=|3da88256b7036ac0703277fe9c126d7f7da8eacf47e1f31ec6d51357a30cbb89\"; _xsrf=2|53c77471|7a5ab5bd8ff2ea36ecb9d34be00b4789|1520208114"
+    }
+[E 19:48:01.302 NotebookApp] 500 PUT /api/contents/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb (::1) 459.67ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[W 19:48:33.908 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 19:48:33.949 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.85ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 19:48:45.901 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb is not trusted
+[W 19:48:45.921 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.70ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_recall-frequency.ipynb
+[I 19:48:46.256 NotebookApp] Kernel started: 835dce17-e73e-40b1-bd58-c37853f47a03
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T19.48.47.135429.sqlite and a new file created.
+[W 19:49:00.773 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb is not trusted
+[W 19:49:00.784 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.87ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_binary-classification.ipynb
+[I 19:49:01.167 NotebookApp] Kernel started: 53ec7feb-741b-4f44-a011-f62c9756591d
+[IPKernelApp] ERROR | Failed to open SQLite history /home/vl1019/.ipython/profile_default/history.sqlite (disk I/O error).
+[IPKernelApp] ERROR | History file was moved to /home/vl1019/.ipython/profile_default/history-corrupt-2018-03-06T19.49.01.989235.sqlite and a new file created.
+[W 19:49:12.609 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[W 19:49:12.639 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180306150646 (::1) 1.65ms referer=http://localhost:9400/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[I 19:51:17.887 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:51:17.888 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:53:20.448 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:53:20.449 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:55:19.292 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:55:19.293 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 19:59:17.913 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 19:59:17.914 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:01:17.973 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 20:01:17.974 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 20:03:17.978 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 20:03:17.979 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 20:17:05.256 NotebookApp] WebSocket ping timeout after 119879 ms.
+[W 20:17:14.248 NotebookApp] WebSocket ping timeout after 119954 ms.
+[W 20:17:17.058 NotebookApp] WebSocket ping timeout after 119977 ms.
