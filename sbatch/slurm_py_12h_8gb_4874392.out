@@ -1,0 +1,66 @@
+
+Jupyter server is running on: c41-01
+Job starts at: Mon Mar 12 23:09:43 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8356:localhost:8356 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8356:localhost:8356 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 23:09:50.047 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4874392/jupyter/notebook_cookie_secret
+[I 23:09:51.515 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 23:09:51.515 NotebookApp] 0 active kernels 
+[I 23:09:51.515 NotebookApp] The Jupyter Notebook is running at: http://localhost:8356/?token=8fd6037ec55d4ac3a564db62e7a51d7e16bd5481b044c6cb
+[I 23:09:51.515 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 23:09:51.516 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8356/?token=8fd6037ec55d4ac3a564db62e7a51d7e16bd5481b044c6cb
+[I 23:25:21.769 NotebookApp] 302 GET /?token=8fd6037ec55d4ac3a564db62e7a51d7e16bd5481b044c6cb (::1) 0.82ms
+[W 23:25:35.257 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 42.45ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time_bis.ipynb
+[I 23:25:35.414 NotebookApp] Kernel started: 1bb3c3eb-cbc3-4ba5-958c-2b0cc40f65c6
+[W 23:25:41.324 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 23:25:41.451 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 2.14ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 23:25:42.482 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb is not trusted
+[I 23:25:42.799 NotebookApp] Kernel started: 1a72903b-2bd7-4eed-8dac-5a7792f08339
+[I 23:25:42.994 NotebookApp] Kernel started: f45a629c-53f3-4e6e-ab55-90d4aeb9cd0c
+[W 23:25:43.001 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 1.94ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[W 23:25:44.485 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 23:25:44.589 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 1.86ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 23:25:45.212 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[W 23:25:45.232 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 1.77ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:25:45.892 NotebookApp] Kernel started: b5cf8669-059a-4ebf-a496-ff3cb158e63a
+[W 23:25:46.235 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 4.59ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[I 23:25:46.618 NotebookApp] Kernel started: 1c1993c8-d65d-49b0-9429-25ef8fb48bda
+[I 23:25:47.164 NotebookApp] Kernel started: d779aa9d-d884-4052-85a2-ac2ede3a256b
+[I 23:27:46.790 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 23:27:46.791 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 23:29:48.350 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 23:29:48.351 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 23:30:08.960 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312230950 (::1) 2.49ms referer=http://localhost:8356/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time_bis.ipynb
+[W 23:39:14.397 NotebookApp] WebSocket ping timeout after 119985 ms.
+[W 23:39:14.560 NotebookApp] WebSocket ping timeout after 119991 ms.
+[W 23:39:17.986 NotebookApp] WebSocket ping timeout after 119793 ms.
+[W 23:39:39.024 NotebookApp] WebSocket ping timeout after 119982 ms.
+slurmstepd: error: *** JOB 4874392 ON c41-01 CANCELLED AT 2018-03-13T11:10:12 DUE TO TIME LIMIT ***

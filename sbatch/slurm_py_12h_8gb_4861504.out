@@ -37,3 +37,42 @@ you should be able to connect to jupyter notebook running remotly on prince comp
     Copy/paste this URL into your browser when you connect for the first time,
     to login with a token:
         http://localhost:7589/?token=5643d735e563c623886076d067215c15985e3a50068a7151
+[I 10:35:30.810 NotebookApp] 302 GET /?token=5643d735e563c623886076d067215c15985e3a50068a7151 (::1) 0.79ms
+[W 10:37:15.032 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[W 10:37:15.082 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312014439 (::1) 21.18ms referer=http://localhost:7589/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 10:37:16.111 NotebookApp] Kernel started: b66c2c64-7eff-44f3-9937-6b7f4fe00cce
+[W 10:37:23.360 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 10:37:23.381 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312014439 (::1) 1.99ms referer=http://localhost:7589/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:37:24.003 NotebookApp] Kernel started: 9298d299-8858-41f6-9642-14cd560eef4a
+[I 10:39:24.057 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:39:24.058 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:44:11.449 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb is not trusted
+[W 10:44:11.472 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312014439 (::1) 2.37ms referer=http://localhost:7589/notebooks/BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 10:44:11.741 NotebookApp] Kernel started: 9e58a4bd-056c-4c5f-878b-bc00bd188ad4
+[I 10:45:24.067 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:45:24.070 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:46:11.746 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[W 10:46:11.747 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[I 10:47:24.082 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:47:24.082 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:49:24.126 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:49:24.127 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:51:24.116 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:51:24.117 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:53:24.101 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:53:24.101 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:53:39.335 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312014439 (::1) 2.55ms referer=http://localhost:7589/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time_bis.ipynb
+[I 10:53:39.390 NotebookApp] Kernel started: 55fb1098-99fb-4b65-bb76-2f8840a0df00
+[W 10:53:47.808 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180312014439 (::1) 1.84ms referer=http://localhost:7589/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[I 10:53:48.339 NotebookApp] Kernel started: de0aa630-6141-42fb-a877-d6579ef705ae
+[I 10:57:24.141 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:57:24.141 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 10:59:24.092 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 10:59:24.093 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 11:01:24.121 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 11:01:24.121 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 11:03:24.104 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 11:03:24.104 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 11:05:29.255 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 11:05:29.256 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+slurmstepd: error: *** JOB 4861504 ON c39-08 CANCELLED AT 2018-03-12T13:44:39 DUE TO TIME LIMIT ***
