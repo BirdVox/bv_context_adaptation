@@ -1,0 +1,86 @@
+
+Jupyter server is running on: c17-01
+Job starts at: Tue Mar 13 11:29:03 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6458:localhost:6458 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6458:localhost:6458 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 11:29:23.987 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-4883009/jupyter/notebook_cookie_secret
+[I 11:29:27.133 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 11:29:27.133 NotebookApp] 0 active kernels 
+[I 11:29:27.133 NotebookApp] The Jupyter Notebook is running at: http://localhost:6458/?token=8f5d0cc346b4b845796182392175cc97a698eac98f20c841
+[I 11:29:27.133 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:29:27.134 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6458/?token=8f5d0cc346b4b845796182392175cc97a698eac98f20c841
+[I 11:46:35.934 NotebookApp] 302 GET /?token=8f5d0cc346b4b845796182392175cc97a698eac98f20c841 (::1) 1.34ms
+[W 11:47:37.786 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 11:47:37.951 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180313112923 (::1) 65.68ms referer=http://localhost:6458/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 11:47:38.756 NotebookApp] Kernel started: 9a1e6a76-eb62-4d9c-a808-737cbd1fb4e5
+[I 12:04:03.795 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:04:03.796 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:06:40.702 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:06:40.703 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:12:46.087 NotebookApp] Kernel restarted: 9a1e6a76-eb62-4d9c-a808-737cbd1fb4e5
+[I 12:14:03.931 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:14:03.931 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:16:04.069 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:16:04.070 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:46:55.184 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:46:55.185 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:47:51.897 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:47:51.898 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:48:58.569 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:48:58.570 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:50:58.613 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:50:58.613 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:52:58.881 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:52:58.881 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:56:58.940 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:56:58.941 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 12:59:00.012 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 12:59:00.013 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:01:00.187 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:01:00.188 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:02:59.978 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:02:59.979 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:05:00.045 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:05:00.046 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:07:00.025 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:07:00.026 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:08:59.977 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:08:59.977 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:11:00.183 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:11:00.184 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:13:00.032 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:13:00.033 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:15:00.045 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:15:00.046 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:17:00.071 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:17:00.072 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 13:39:09.034 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 13:39:09.036 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
