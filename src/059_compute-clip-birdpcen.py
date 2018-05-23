@@ -129,7 +129,7 @@ for clip_name in clip_names:
     # PCEN with librosa.
     pcen = librosa.core.pcen(
         melspec,
-        sr=sr,
+        sr=pcen_settings["sr"],
         hop_length=settings_group["hop_length"],
         gain=settings_group["gain"],
         bias=settings_group["bias"],
