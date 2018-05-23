@@ -56,8 +56,8 @@ for aug_str in augmentations:
         f.write("\n")
 
 
-# Grant permission to execute the shell file.
-# https://stackoverflow.com/a/30463972
-mode = os.stat(file_path).st_mode
-mode |= (mode & 0o444) >> 2
-os.chmod(file_path, mode)
+    # Grant permission to execute the shell file.
+    # https://stackoverflow.com/a/30463972
+    mode = os.stat(file_path).st_mode
+    mode |= (mode & 0o444) >> 2
+    os.chmod(file_path, mode)
