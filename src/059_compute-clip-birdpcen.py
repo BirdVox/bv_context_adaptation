@@ -81,10 +81,11 @@ settings_group["sr"] = pcen_settings["sr"]
 settings_group["win_length"] = pcen_settings["win_length"]
 settings_group["window"] = pcen_settings["window"]
 
+
 # These domain-specific parameters have shown to Gaussianize PCEN magnitudes.
 settings_group["bias"] = 2.0
 settings_group["time_constant"] = 0.015
-settings_group["gain"] = 0.98
+settings_group["gain"] = 0.95
 settings_group["power"] = 0.5
 settings_group["eps"] = 1e-6
 
@@ -129,7 +130,7 @@ for clip_name in clip_names:
     # PCEN with librosa.
     pcen = librosa.core.pcen(
         melspec,
-        sr=pcen_settings["sr"],
+        sr=settings_group["sr"],
         hop_length=settings_group["hop_length"],
         gain=settings_group["gain"],
         bias=settings_group["bias"],
@@ -137,7 +138,7 @@ for clip_name in clip_names:
         time_constant=settings_group["time_constant"],
         eps=settings_group["eps"])
 
-    # Convert to single floating-point precision.
+    # Convert to single floating-point precision (32 bits).
     pcen = pcen.astype('float32')
 
     # Save.
