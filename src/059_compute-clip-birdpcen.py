@@ -130,13 +130,13 @@ for clip_name in clip_names:
     # PCEN with librosa.
     pcen = librosa.core.pcen(
         melspec,
-        sr=settings_group["sr"],
-        hop_length=settings_group["hop_length"],
-        gain=settings_group["gain"],
-        bias=settings_group["bias"],
-        power=settings_group["power"],
-        time_constant=settings_group["time_constant"],
-        eps=settings_group["eps"])
+        sr=settings_group["sr"].value,
+        hop_length=settings_group["hop_length"].value,
+        gain=settings_group["gain"].value,
+        bias=settings_group["bias"].value,
+        power=settings_group["power"].value,
+        time_constant=settings_group["time_constant"].value,
+        eps=settings_group["eps"].value)
 
     # Convert to single floating-point precision (32 bits).
     pcen = pcen.astype('float32')
