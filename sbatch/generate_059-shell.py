@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 units = localmodule.get_units()
 augmentations = localmodule.get_augmentations()
-script_name = "059_compute-clip-pcen.py"
+script_name = "059_compute-clip-birdpcen.py"
 
 
 # Create folder.
