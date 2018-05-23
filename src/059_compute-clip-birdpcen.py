@@ -22,6 +22,7 @@ if aug_str == "original":
     instanced_aug_str = aug_str
 else:
     instanced_aug_str = "-".join([aug_str, instance_str])
+pcen_settings = localmodule.get_pcen_settings()
 
 
 # Print header.
