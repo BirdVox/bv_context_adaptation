@@ -75,14 +75,13 @@ settings_group["n_mels"] = pcen_settings["n_mels"]
 settings_group["sr"] = pcen_settings["sr"]
 settings_group["win_length"] = pcen_settings["win_length"]
 settings_group["window"] = pcen_settings["window"]
-settings_group["pcen_delta_denominator"] =\
-    pcen_settings["pcen_delta_denominator"]
-settings_group["pcen_time_constant_frames"] =\
-    pcen_settings["pcen_time_constant_frames"]
-settings_group["pcen_norm_exponent"] =\
-    pcen_settings["pcen_norm_exponent"]
-settings_group["pcen_power"] =\
-    pcen_settings["pcen_power"]
+
+# These domain-specific parameters have shown to Gaussianize PCEN magnitudes.
+settings_group["bias"] = 2.0
+settings_group["time_constant"] = 0.015
+settings_group["gain"] = 0.95
+settings_group["power"] = 0.5
+settings_group["eps"] = 1e-6
 
 
 # Open full audio file as FLAC.
