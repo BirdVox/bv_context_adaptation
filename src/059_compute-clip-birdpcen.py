@@ -49,7 +49,7 @@ sample_rate = in_file["sample_rate"].value
 
 
 # Create HDF5 container of PCENs.
-pcen_name = "_".join([dataset_name, "clip-pcen"])
+pcen_name = "_".join([dataset_name, "clip-birdpcen"])
 pcen_dir = os.path.join(data_dir, pcen_name)
 os.makedirs(pcen_dir, exist_ok=True)
 out_aug_dir = os.path.join(pcen_dir, aug_str)
