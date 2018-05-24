@@ -1,0 +1,47 @@
+
+Jupyter server is running on: c07-02
+Job starts at: Wed May 23 19:19:23 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9114:localhost:9114 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9114:localhost:9114 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 19:19:25.688 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-6359145/jupyter/notebook_cookie_secret
+[I 19:19:26.499 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 19:19:26.500 NotebookApp] 0 active kernels 
+[I 19:19:26.500 NotebookApp] The Jupyter Notebook is running at: http://localhost:9114/?token=5198c8c825480f1f62bb4428dea6a856d50007164020ca4f
+[I 19:19:26.500 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 19:19:26.500 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9114/?token=5198c8c825480f1f62bb4428dea6a856d50007164020ca4f
+[I 19:23:59.474 NotebookApp] 302 GET /?token=5198c8c825480f1f62bb4428dea6a856d50007164020ca4f (::1) 1.52ms
+[I 19:24:20.136 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/notebooks
+[W 19:24:21.537 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180523191925 (::1) 22.57ms referer=http://localhost:9114/notebooks/BirdVox-70k_icassp2018/notebooks/Untitled.ipynb?kernel_name=python3
+[I 19:24:21.718 NotebookApp] Kernel started: bb113bda-3d4a-4337-aab1-4107cdb7e984
+[I 19:26:21.650 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/059.ipynb
+[I 19:28:21.645 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/059.ipynb
+[I 19:48:21.706 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/059.ipynb
+slurmstepd: error: *** JOB 6359145 ON c07-02 CANCELLED AT 2018-05-23T20:02:42 ***
