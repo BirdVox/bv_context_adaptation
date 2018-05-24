@@ -25,7 +25,7 @@ chunk_length = chunk_duration * sample_rate
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Computing PCEN for full " + dataset_name + ".")
+print("Computing PCEN (domain-specific parameters) for full " + dataset_name + ".")
 print("Unit: " + unit_str + ".")
 print("")
 print("h5py version: {:s}".format(h5py.__version__))
@@ -37,7 +37,7 @@ print("")
 
 
 # Create HDF5 container of PCENs
-full_pcen_name = "_".join([dataset_name, "full-pcen"])
+full_pcen_name = "_".join([dataset_name, "full-birdpcen"])
 full_pcen_dir = os.path.join(data_dir, full_pcen_name)
 os.makedirs(full_pcen_dir, exist_ok=True)
 out_name = unit_str
