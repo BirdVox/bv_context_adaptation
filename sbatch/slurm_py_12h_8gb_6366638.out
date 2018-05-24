@@ -1,0 +1,57 @@
+
+Jupyter server is running on: c40-06
+Job starts at: Thu May 24 09:49:22 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6306:localhost:6306 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6306:localhost:6306 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:49:27.408 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-6366638/jupyter/notebook_cookie_secret
+[I 09:49:28.202 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:49:28.202 NotebookApp] 0 active kernels 
+[I 09:49:28.202 NotebookApp] The Jupyter Notebook is running at: http://localhost:6306/?token=0c65acfdb2a82d3d036ed8f8a4d0df9eada01eb5041efb5b
+[I 09:49:28.202 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:49:28.202 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6306/?token=0c65acfdb2a82d3d036ed8f8a4d0df9eada01eb5041efb5b
+[I 09:53:07.015 NotebookApp] 302 GET /?token=0c65acfdb2a82d3d036ed8f8a4d0df9eada01eb5041efb5b (::1) 0.82ms
+[I 09:53:49.147 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/spl2018
+[I 09:53:51.672 NotebookApp] Kernel started: 7fa7c94d-2676-47f2-bcc6-ffd42f63c80c
+[W 09:53:51.726 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180524094927 (::1) 30.91ms referer=http://localhost:6306/notebooks/BirdVox-70k_icassp2018/spl2018/Untitled.ipynb?kernel_name=python3
+[I 09:55:51.658 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/Untitled.ipynb
+[I 10:01:51.636 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:03:52.004 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:05:24.141 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:05:51.692 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:07:51.731 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:09:51.765 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:13:51.760 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:15:51.893 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:17:51.755 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:19:51.748 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:21:51.810 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:23:51.775 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 10:25:51.799 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb

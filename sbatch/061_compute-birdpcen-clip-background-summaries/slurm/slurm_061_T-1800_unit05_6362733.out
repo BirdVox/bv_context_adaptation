@@ -1,0 +1,19 @@
+2018-05-23 21:34:31.815511 Start.
+Computing background summaries on BirdVox-70k with librosa's PCEN.
+Background duration (T): 1800.
+Unit: unit05.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+
+Traceback (most recent call last):
+  File "../../../src/061_compute-birdpcen-clip-background-summaries.py", line 63, in <module>
+    in_clip_unit_file = h5py.File(in_clip_unit_path, "r")
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 272, in __init__
+    fid = make_fid(name, mode, userblock_size, fapl, swmr=swmr)
+  File "/home/vl1019/miniconda3/lib/python3.6/site-packages/h5py/_hl/files.py", line 92, in make_fid
+    fid = h5f.open(name, flags, fapl=fapl)
+  File "h5py/_objects.pyx", line 54, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2853)
+  File "h5py/_objects.pyx", line 55, in h5py._objects.with_phil.wrapper (/tmp/pip-tnf92dft-build/h5py/_objects.c:2811)
+  File "h5py/h5f.pyx", line 76, in h5py.h5f.open (/tmp/pip-tnf92dft-build/h5py/h5f.c:2099)
+OSError: Unable to open file (File signature not found)

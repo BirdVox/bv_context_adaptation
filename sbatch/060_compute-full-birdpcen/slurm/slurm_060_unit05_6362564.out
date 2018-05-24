@@ -1,0 +1,12 @@
+2018-05-23 20:41:57.715131 Start.
+Computing PCEN (domain-specific parameters) for full BirdVox-70k.
+Unit: unit05.
+
+h5py version: 2.6.0
+librosa version: 0.6.1rc0
+numpy version: 1.13.1
+pandas version: 0.20.3
+soundfile version: 0.9.0
+
+2018-05-23 21:33:20.846314 Finish.
+Total elapsed time: 00:51:23.85.

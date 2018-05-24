@@ -1,0 +1,10 @@
+2018-05-23 21:34:31.815514 Start.
+Computing background summaries on BirdVox-70k with librosa's PCEN.
+Background duration (T): 1800.
+Unit: unit02.
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+
+2018-05-24 08:30:20.510826 Finish.
+Total elapsed time: 10:55:49.51.
