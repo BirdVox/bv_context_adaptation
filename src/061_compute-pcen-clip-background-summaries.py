@@ -41,7 +41,7 @@ os.makedirs(backgrounds_dir, exist_ok=True)
 # Print header.
 start_time = int(time.time())
 print(str(datetime.datetime.now()) + " Start.")
-print("Computing background summaries on " + dataset_name + ".")
+print("Computing background summaries on " + dataset_name + " with librosa's PCEN.")
 print("Background duration (T): " + T_str + ".")
 print("Unit: " + unit_str + ".")
 print("")
