@@ -276,7 +276,8 @@ bg_transposed = keras.layers.Reshape((1, 8),
 
 # Bias (adaptive threshold)
 bg_bias = keras.layers.Dense(1,
-    name="adaptive_threshold", use_bias=False)(bg_flatten)
+    name="adaptive_threshold", activation="sigmoid",
+    use_bias=False)(bg_flatten)
 
 
 # Combined channel.
@@ -302,10 +303,13 @@ mixture_of_experts = keras.layers.Lambda(lambda x: K.sum(x, axis=2),
     name="mixture_of_experts")(dense_across_experts_transposed)
 
 # Dropout
-dropout = keras.layers.Dropout(0.5)(dropout)
+dropout = keras.layers.Dropout(0.5, name="dropout")(mixture_of_experts)
+
+# Concatenation
+concat = keras.layers.Concatenate(axis=1)([dropout, bg_bias])
 
 # Event detection function
-edf = keras.layers.Dense(1, activation="sigmoid", name="edf")(dropout)
+edf = keras.layers.Dense(1, activation="sigmoid", name="edf")(concat)
 
 
 # Build Pescador streamers corresponding to log-mel-spectrograms in augmented
