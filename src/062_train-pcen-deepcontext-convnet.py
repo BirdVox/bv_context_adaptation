@@ -202,9 +202,6 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
             yield dict(X_spec=X_spec, X_bg=X_bg, y=y)
 
 
-# Define and compile Keras model.
-# Spectrogram channel.
-# Input
 spec_input = keras.layers.Input(
     shape=(128, n_input_hops, 1), name="spec_input")
 
@@ -371,7 +368,7 @@ history_callback = keras.callbacks.LambdaCallback(
 n_inits = 10
 inputs = [spec_input, bg_input]
 for init_id in range(n_inits):
-    model = keras.models.Model(inputs=inputs, outputs=dense)
+    model = keras.models.Model(inputs=inputs, outputs=edf)
     model.compile(loss="binary_crossentropy",
         optimizer="adam", metrics=["accuracy"])
     history = model.fit_generator(
