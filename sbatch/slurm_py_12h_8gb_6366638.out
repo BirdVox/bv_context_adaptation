@@ -55,3 +55,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 10:21:51.810 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
 [I 10:23:51.775 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
 [I 10:25:51.799 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+slurmstepd: error: *** JOB 6366638 ON c40-06 CANCELLED AT 2018-05-24T21:49:31 DUE TO TIME LIMIT ***
