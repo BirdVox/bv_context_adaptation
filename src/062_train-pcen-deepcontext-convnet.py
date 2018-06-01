@@ -192,7 +192,10 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
             X_bg = np.transpose(X_bg)
 
             # Retrieve label y from key name.
-            y = np.array([np.float32(key.split("_")[3])])
+            # We permute labels 0.0 and 1.0 because we need
+            # a better floating-point precision for positive samples
+            # than for negative samples.
+            y = np.array([1.0 - np.float32(key.split("_")[3])])
 
             # Yield data and label as dictionary.
             yield dict(X_spec=X_spec, X_bg=X_bg, y=y)
