@@ -53,3 +53,101 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 15:16:01.392 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
 [I 15:18:01.338 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
 [I 15:35:03.891 NotebookApp] Kernel restarted: 7aefc37a-a039-44a1-93e6-2b98544eac12
+[I 16:05:43.370 NotebookApp] Creating new notebook in /spl2018
+[W 16:05:43.736 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180601122923 (::1) 1.96ms referer=http://localhost:8185/notebooks/spl2018/Untitled.ipynb?kernel_name=python3
+[I 16:05:43.796 NotebookApp] Kernel started: 01612103-aca0-49c6-ac6e-1a808491be93
+[W 16:07:38.764 NotebookApp] Notebook spl2018/pcen_correlations.ipynb is not trusted
+[W 16:07:38.796 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180601122923 (::1) 1.90ms referer=http://localhost:8185/notebooks/spl2018/pcen_correlations.ipynb
+[I 16:07:39.103 NotebookApp] Kernel started: be94bc63-cd32-456b-ac83-f6df8d5476c6
+[I 16:07:44.267 NotebookApp] Saving file at /spl2018/pcen_bayesian.ipynb
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1809:0,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /state/partition1/job-6566728/tmpvecsyqwy/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7524605081320753718.cpp:549:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^
+In file included from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/base.hpp:28:0,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array.hpp:21,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/numeric/odeint/util/multi_array_adaption.hpp:29,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/numeric/odeint.hpp:61,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/arr/functor/integrate_ode_rk45.hpp:17,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/arr.hpp:38,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/mat.hpp:298,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/rev/mat.hpp:12,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/model/log_prob_grad.hpp:4,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/model/test_gradients.hpp:7,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/services/diagnose/diagnose.hpp:10,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan_fit.hpp:22,
+                 from /state/partition1/job-6566728/tmpvecsyqwy/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7524605081320753718.cpp:553:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp: In static member function ‘static void boost::multi_array_concepts::detail::idgen_helper<N>::call(Array&, const IdxGen&, Call_Type)’:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:42:43: warning: typedef ‘index_range’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index_range index_range;
+                                           ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:43:37: warning: typedef ‘index’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index index;
+                                     ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp: In static member function ‘static void boost::multi_array_concepts::detail::idgen_helper<0ul>::call(Array&, const IdxGen&, Call_Type)’:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:53:43: warning: typedef ‘index_range’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index_range index_range;
+                                           ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:54:37: warning: typedef ‘index’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index index;
+                                     ^
+/state/partition1/job-6566728/tmpvecsyqwy/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7524605081320753718.cpp: In function ‘PyObject* __pyx_pf_71stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7524605081320753718_2_call_sampler(PyObject*, PyObject*, PyObject*, PyObject*)’:
+/state/partition1/job-6566728/tmpvecsyqwy/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7524605081320753718.cpp:9043:71: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     __pyx_t_12 = ((__pyx_t_9 != __pyx_v_fitptr->param_names_oi().size()) != 0);
+                                                                       ^
+[I 16:09:43.836 NotebookApp] Saving file at /spl2018/pcen_bayesian.ipynb
+Initial log joint probability = -17.3023
+    Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+       2      -10.8967      0.640279   5.77316e-15           1           1        4   
+Optimization terminated normally: 
+  Convergence detected: gradient norm is below tolerance
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++ [enabled by default]
+In file included from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarraytypes.h:1809:0,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/ndarrayobject.h:18,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/arrayobject.h:4,
+                 from /state/partition1/job-6566728/tmp8045lf3v/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7991642986846228874.cpp:549:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/numpy/core/include/numpy/npy_1_7_deprecated_api.h:15:2: warning: #warning "Using deprecated NumPy API, disable it by " "#defining NPY_NO_DEPRECATED_API NPY_1_7_API_VERSION" [-Wcpp]
+ #warning "Using deprecated NumPy API, disable it by " \
+  ^
+In file included from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/base.hpp:28:0,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array.hpp:21,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/numeric/odeint/util/multi_array_adaption.hpp:29,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/numeric/odeint.hpp:61,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/arr/functor/integrate_ode_rk45.hpp:17,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/arr.hpp:38,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/prim/mat.hpp:298,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/stan/math/rev/mat.hpp:12,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/model/log_prob_grad.hpp:4,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/model/test_gradients.hpp:7,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/src/stan/services/diagnose/diagnose.hpp:10,
+                 from /home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan_fit.hpp:22,
+                 from /state/partition1/job-6566728/tmp8045lf3v/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7991642986846228874.cpp:553:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp: In static member function ‘static void boost::multi_array_concepts::detail::idgen_helper<N>::call(Array&, const IdxGen&, Call_Type)’:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:42:43: warning: typedef ‘index_range’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index_range index_range;
+                                           ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:43:37: warning: typedef ‘index’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index index;
+                                     ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp: In static member function ‘static void boost::multi_array_concepts::detail::idgen_helper<0ul>::call(Array&, const IdxGen&, Call_Type)’:
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:53:43: warning: typedef ‘index_range’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index_range index_range;
+                                           ^
+/home/vl1019/miniconda3/lib/python3.6/site-packages/pystan/stan/lib/stan_math/lib/boost_1.64.0/boost/multi_array/concept_checks.hpp:54:37: warning: typedef ‘index’ locally defined but not used [-Wunused-local-typedefs]
+       typedef typename Array::index index;
+                                     ^
+/state/partition1/job-6566728/tmp8045lf3v/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7991642986846228874.cpp: In function ‘PyObject* __pyx_pf_71stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7991642986846228874_2_call_sampler(PyObject*, PyObject*, PyObject*, PyObject*)’:
+/state/partition1/job-6566728/tmp8045lf3v/stanfit4anon_model_3aaa1aff3be33470f8a5bfa56085d51c_7991642986846228874.cpp:9043:71: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+     __pyx_t_12 = ((__pyx_t_9 != __pyx_v_fitptr->param_names_oi().size()) != 0);
+                                                                       ^
+[I 16:11:44.314 NotebookApp] Saving file at /spl2018/pcen_bayesian.ipynb
+Initial log joint probability = -10.3502
+    Iter      log prob        ||dx||      ||grad||       alpha      alpha0  # evals  Notes 
+       2      -9.50174      0.233028   1.44329e-15           1           1        4   
+Optimization terminated normally: 
+  Convergence detected: gradient norm is below tolerance
+[I 16:13:44.293 NotebookApp] Saving file at /spl2018/pcen_bayesian.ipynb
