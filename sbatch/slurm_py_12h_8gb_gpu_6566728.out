@@ -52,3 +52,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 15:14:01.039 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180601122923 (::1) 2.00ms referer=http://localhost:8185/notebooks/BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
 [I 15:16:01.392 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
 [I 15:18:01.338 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
+[I 15:35:03.891 NotebookApp] Kernel restarted: 7aefc37a-a039-44a1-93e6-2b98544eac12
