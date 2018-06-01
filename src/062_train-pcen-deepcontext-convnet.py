@@ -15,6 +15,7 @@ import time
 
 import localmodule
 
+
 # Define constants.
 dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
@@ -202,6 +203,8 @@ def yield_lms_and_background(tfr_path, n_input_hops, bias, bg_path):
             yield dict(X_spec=X_spec, X_bg=X_bg, y=y)
 
 
+# Spectrogram channel.
+# Input
 spec_input = keras.layers.Input(
     shape=(128, n_input_hops, 1), name="spec_input")
 
