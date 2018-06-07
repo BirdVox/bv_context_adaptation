@@ -151,3 +151,6 @@ Initial log joint probability = -10.3502
 Optimization terminated normally: 
   Convergence detected: gradient norm is below tolerance
 [I 16:13:44.293 NotebookApp] Saving file at /spl2018/pcen_bayesian.ipynb
+[W 20:14:05.135 NotebookApp] WebSocket ping timeout after 119993 ms.
+[W 20:14:10.101 NotebookApp] WebSocket ping timeout after 119859 ms.
+slurmstepd: error: *** JOB 6566728 ON gpu-23 CANCELLED AT 2018-06-02T00:29:38 DUE TO TIME LIMIT ***
