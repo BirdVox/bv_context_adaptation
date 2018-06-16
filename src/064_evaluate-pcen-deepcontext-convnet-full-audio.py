@@ -30,7 +30,7 @@ model_name = "pcen-deepcontext"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
-icassp_thresholds = 1.0 - np.concatenate((
+icassp_thresholds = np.concatenate((
     np.logspace(-9, -2, 141), np.delete(np.logspace(-2, 0, 81), 0)
 ))
 n_thresholds = len(icassp_thresholds)
@@ -145,7 +145,7 @@ for predict_unit_str in predict_units:
             odf, thres=threshold, min_dist=min_dist)
         peak_times = timestamps[peak_locations]
         peak_values = odf[peak_locations]
-        selected = peak_times[peak_values > threshold]
+        selected = peak_times[peak_values < threshold]
 
         # Match events.
         selected_relevant = mir_eval.util.match_events(
