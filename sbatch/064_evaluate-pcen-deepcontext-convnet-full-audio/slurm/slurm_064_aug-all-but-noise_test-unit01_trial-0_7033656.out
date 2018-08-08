@@ -1,0 +1,14 @@
+2018-06-16 10:43:24.436916 Start.
+Thresholding deep context convnet for detection in BirdVox-70k full audio with PCEN input. 
+Augmentation kind: all-but-noise
+Test unit: unit01
+Trial ID: 0
+Prediction units: unit01, unit07, unit10
+
+h5py version: 2.6.0
+numpy version: 1.13.1
+pandas version: 0.20.3
+scikit-learn version: 0.18.2
+
+2018-06-16 16:24:00.144242 Finish.
+Total elapsed time: 05:40:36.14.
