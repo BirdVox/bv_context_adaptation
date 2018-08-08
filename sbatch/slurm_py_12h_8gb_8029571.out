@@ -1,0 +1,67 @@
+
+Jupyter server is running on: c39-01
+Job starts at: Tue Aug  7 20:15:44 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8322:localhost:8322 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8322:localhost:8322 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 20:15:48.867 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-8029571/jupyter/notebook_cookie_secret
+[I 20:15:49.657 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 20:15:49.657 NotebookApp] 0 active kernels 
+[I 20:15:49.657 NotebookApp] The Jupyter Notebook is running at: http://localhost:8322/?token=06dc0fa643c08cda82e19ec88cbffc52a7c14e668e0dc8de
+[I 20:15:49.657 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 20:15:49.658 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8322/?token=06dc0fa643c08cda82e19ec88cbffc52a7c14e668e0dc8de
+[I 20:16:35.394 NotebookApp] 302 GET /?token=06dc0fa643c08cda82e19ec88cbffc52a7c14e668e0dc8de (::1) 0.76ms
+[W 20:18:56.644 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb is not trusted
+[W 20:18:56.698 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180807201548 (::1) 36.44ms referer=http://localhost:8322/notebooks/BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
+[I 20:18:57.195 NotebookApp] Kernel started: 72925fef-4388-4ec2-9310-e2919c0f84d5
+[W 20:19:57.368 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/6-mars.ipynb is not trusted
+[W 20:19:57.381 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180807201548 (::1) 1.85ms referer=http://localhost:8322/notebooks/BirdVox-70k_icassp2018/spl2018/6-mars.ipynb
+[I 20:19:58.121 NotebookApp] Kernel started: 02975e24-cf56-4827-8cbd-e9ca97f22e0a
+[W 20:21:10.859 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[W 20:21:10.913 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180807201548 (::1) 1.61ms referer=http://localhost:8322/notebooks/BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:21:12.054 NotebookApp] Kernel started: a01ef968-0a17-48c2-ba55-fd0efdea956c
+[I 20:23:12.039 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:23:12.039 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:25:12.030 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:25:12.031 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:27:12.172 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:27:12.173 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:29:12.184 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:29:12.185 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:31:12.635 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:31:12.636 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:33:12.216 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:33:12.216 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:35:12.405 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:35:12.405 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:37:12.109 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:37:12.109 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[I 20:39:12.229 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 20:39:12.230 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb
