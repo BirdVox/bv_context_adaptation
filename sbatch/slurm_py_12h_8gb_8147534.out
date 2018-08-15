@@ -126,3 +126,16 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 19:53:02.887 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
 [I 19:55:02.888 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
 [I 20:05:02.937 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 20:15:45.392 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 2.23ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time_bis.ipynb
+[I 20:15:45.485 NotebookApp] Kernel started: d6ff9f65-6ba1-49af-be93-cf25c347a401
+[W 20:15:50.475 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 20:15:51.600 NotebookApp] Kernel started: bf6f81f0-fdf0-4430-af06-a57d695b256d
+[W 20:15:52.693 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 1.92ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 20:19:41.825 NotebookApp] Kernel restarted: bf6f81f0-fdf0-4430-af06-a57d695b256d
+[I 20:19:51.598 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 20:19:51.599 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 20:21:51.655 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 20:21:51.656 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 20:24:50.164 NotebookApp] Kernel interrupted: bf6f81f0-fdf0-4430-af06-a57d695b256d
+[I 20:25:51.616 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 20:25:51.617 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
