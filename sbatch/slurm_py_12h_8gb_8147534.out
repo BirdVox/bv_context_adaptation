@@ -155,3 +155,19 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 20:43:51.720 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
 [I 20:45:51.715 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
 [W 20:45:51.716 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 21:27:51.839 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 21:27:51.840 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 21:31:12.501 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[W 21:31:12.625 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 1.97ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[I 21:31:13.270 NotebookApp] Kernel started: 77fedcf2-fbc6-40e7-a908-dd39192e5127
+[I 21:33:13.316 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 21:33:13.317 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[I 21:33:28.531 NotebookApp] Kernel restarted: 77fedcf2-fbc6-40e7-a908-dd39192e5127
+[I 21:33:51.856 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 21:33:51.857 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[I 21:35:13.331 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 21:35:13.331 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[I 21:37:13.382 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 21:37:13.383 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[I 21:39:13.340 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 21:39:13.340 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
