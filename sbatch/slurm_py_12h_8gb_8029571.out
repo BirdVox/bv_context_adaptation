@@ -234,3 +234,5 @@ libpng error: Invalid IHDR data
 [W 01:18:07.227 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [I 01:20:07.160 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
 [W 01:20:07.161 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 02:50:37.276 NotebookApp] WebSocket ping timeout after 119979 ms.
+slurmstepd: error: *** JOB 8029571 ON c39-01 CANCELLED AT 2018-08-08T08:15:57 DUE TO TIME LIMIT ***

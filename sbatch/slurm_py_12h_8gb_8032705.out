@@ -1,0 +1,52 @@
+
+Jupyter server is running on: c39-01
+Job starts at: Wed Aug  8 09:34:46 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8023:localhost:8023 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8023:localhost:8023 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 09:34:48.193 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-8032705/jupyter/notebook_cookie_secret
+[I 09:34:48.986 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 09:34:48.986 NotebookApp] 0 active kernels 
+[I 09:34:48.986 NotebookApp] The Jupyter Notebook is running at: http://localhost:8023/?token=8746e6b90e92924c4aadcf41f6d6376e51c86040fa41aace
+[I 09:34:48.986 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 09:34:48.987 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8023/?token=8746e6b90e92924c4aadcf41f6d6376e51c86040fa41aace
+[I 09:45:34.491 NotebookApp] 302 GET /?token=8746e6b90e92924c4aadcf41f6d6376e51c86040fa41aace (::1) 0.81ms
+[W 09:45:47.730 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb is not trusted
+[W 09:45:47.773 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180808093448 (::1) 9.48ms referer=http://localhost:8023/notebooks/BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 09:45:48.171 NotebookApp] Kernel started: cb75b2b5-9e77-43b4-9f60-8a4a68f53562
+[I 09:47:48.177 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 09:47:48.177 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 09:49:50.473 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 09:49:50.474 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 09:53:59.358 NotebookApp] Kernel restarted: cb75b2b5-9e77-43b4-9f60-8a4a68f53562
+[I 09:55:48.300 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 09:55:48.301 NotebookApp] Saving untrusted notebook BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 10:44:36.070 NotebookApp] WebSocket ping timeout after 119966 ms.
+slurmstepd: error: *** JOB 8032705 ON c39-01 CANCELLED AT 2018-08-08T21:34:47 DUE TO TIME LIMIT ***

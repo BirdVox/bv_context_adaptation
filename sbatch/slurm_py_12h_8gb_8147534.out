@@ -1,0 +1,128 @@
+
+Jupyter server is running on: c39-03
+Job starts at: Tue Aug 14 15:45:11 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8113:localhost:8113 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8113:localhost:8113 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 15:45:16.845 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-8147534/jupyter/notebook_cookie_secret
+[I 15:45:18.026 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 15:45:18.026 NotebookApp] 0 active kernels 
+[I 15:45:18.026 NotebookApp] The Jupyter Notebook is running at: http://localhost:8113/?token=97af4ea902927e84af0f46165d5438f75b2b2b3e67c2a9fe
+[I 15:45:18.026 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 15:45:18.027 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8113/?token=97af4ea902927e84af0f46165d5438f75b2b2b3e67c2a9fe
+[I 15:46:26.145 NotebookApp] 302 GET /?token=97af4ea902927e84af0f46165d5438f75b2b2b3e67c2a9fe (::1) 0.78ms
+[I 15:48:29.273 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/spl2018
+[W 15:48:30.829 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 36.86ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/Untitled.ipynb?kernel_name=python3
+[I 15:48:30.986 NotebookApp] Kernel started: e5d0add6-e5a7-4088-85ce-1e721e12e131
+[I 15:50:30.899 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 15:52:30.909 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 15:53:20.510 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 15:53:22.918 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 15:54:30.933 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 15:56:31.057 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:02:31.473 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:04:31.456 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:06:31.565 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[W 16:07:32.821 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 16:07:32.953 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 1.97ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[I 16:07:33.528 NotebookApp] Kernel started: 21ae0a04-e111-40b1-ae69-e5d6321dc5d0
+[I 16:08:31.464 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:10:31.475 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:12:32.331 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:14:32.079 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:16:32.089 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:18:32.355 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:20:32.093 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:22:32.160 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:24:32.101 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:26:32.150 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:28:32.141 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:30:32.212 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:32:32.120 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:34:32.126 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 16:36:32.128 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:22:32.330 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:24:32.320 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:26:32.551 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:28:32.327 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:30:32.379 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:32:32.343 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:34:32.359 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:36:32.361 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:38:32.408 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:40:32.378 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:42:32.379 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:44:32.425 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:46:32.392 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:48:32.473 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:52:32.408 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:54:32.409 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:56:32.417 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 17:58:32.416 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 18:00:32.435 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 18:02:32.436 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 18:04:33.547 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[W 18:48:02.477 NotebookApp] WebSocket ping timeout after 119992 ms.
+[W 18:48:04.457 NotebookApp] WebSocket ping timeout after 119993 ms.
+[I 19:04:54.091 NotebookApp] 302 GET /?token=97af4ea902927e84af0f46165d5438f75b2b2b3e67c2a9fe (::1) 0.48ms
+[W 19:05:02.301 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb is not trusted
+[W 19:05:02.314 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 2.14ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:05:02.677 NotebookApp] Kernel started: c1e17d0e-d81d-4cca-91fa-4896c476a757
+[I 19:06:43.119 NotebookApp] Kernel restarted: c1e17d0e-d81d-4cca-91fa-4896c476a757
+[I 19:06:52.552 NotebookApp] Kernel restarted: c1e17d0e-d81d-4cca-91fa-4896c476a757
+[I 19:07:02.717 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:09:02.710 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:09:52.222 NotebookApp] Kernel restarted: c1e17d0e-d81d-4cca-91fa-4896c476a757
+[I 19:11:02.728 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:13:02.738 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:15:02.742 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:17:02.762 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:19:02.751 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[W 19:20:20.469 NotebookApp] 404 GET /nbextensions/widgets/notebook/js/extension.js?v=20180814154516 (::1) 2.34ms referer=http://localhost:8113/notebooks/BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[I 19:21:03.027 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:23:02.779 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:24:24.352 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:25:02.766 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:27:02.783 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:29:02.813 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:31:03.002 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:33:02.808 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:35:02.849 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:37:02.877 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:39:02.842 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:41:02.846 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:43:02.864 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:45:02.881 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:47:02.968 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:49:02.916 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:51:02.885 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:53:02.887 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 19:55:02.888 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
+[I 20:05:02.937 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_pcen-snr.ipynb
