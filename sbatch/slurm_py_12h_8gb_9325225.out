@@ -1,0 +1,46 @@
+
+Jupyter server is running on: c07-03
+Job starts at: Tue Oct 16 18:14:50 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6438:localhost:6438 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6438:localhost:6438 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 18:15:02.704 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9325225/jupyter/notebook_cookie_secret
+[I 18:15:07.255 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 18:15:07.255 NotebookApp] The Jupyter Notebook is running at:
+[I 18:15:07.255 NotebookApp] http://localhost:6438/?token=4e2a151f39d69eefb05af8f364f6c9efc8713f9058928ff5
+[I 18:15:07.255 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:15:07.256 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6438/?token=4e2a151f39d69eefb05af8f364f6c9efc8713f9058928ff5
+[I 03:24:18.059 NotebookApp] 302 GET /?token=4e2a151f39d69eefb05af8f364f6c9efc8713f9058928ff5 (::1) 1.15ms
+[W 03:24:54.992 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 03:24:55.668 NotebookApp] Kernel started: 4e3ad740-d7e7-41b0-9b20-e35d9da1c615
+[I 03:24:58.203 NotebookApp] Adapting to protocol v5.1 for kernel 4e3ad740-d7e7-41b0-9b20-e35d9da1c615
+[I 03:26:55.724 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 03:26:55.724 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 03:27:57.651 NotebookApp] Starting buffering for 4e3ad740-d7e7-41b0-9b20-e35d9da1c615:219152917e4c4a11827d26caaedd2509

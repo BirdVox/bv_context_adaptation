@@ -1,0 +1,45 @@
+
+Jupyter server is running on: gpu-24
+Job starts at: Wed Oct 17 03:44:07 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6354:localhost:6354 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6354:localhost:6354 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 03:44:13.402 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9351706/jupyter/notebook_cookie_secret
+[I 03:44:16.202 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 03:44:16.202 NotebookApp] The Jupyter Notebook is running at:
+[I 03:44:16.202 NotebookApp] http://localhost:6354/?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056
+[I 03:44:16.202 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 03:44:16.203 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6354/?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056
+[I 03:45:17.618 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.77ms
+[W 03:45:36.883 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 03:45:37.536 NotebookApp] Kernel started: 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4
+[I 03:45:38.735 NotebookApp] Adapting to protocol v5.1 for kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4
+[I 03:47:38.856 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 03:47:38.857 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
