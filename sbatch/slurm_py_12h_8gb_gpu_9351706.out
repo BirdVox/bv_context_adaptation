@@ -45,3 +45,22 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 03:47:38.857 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
 [I 03:51:38.453 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
 [W 03:51:38.454 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 04:01:37.679 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 04:01:37.680 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 04:36:38.738 NotebookApp] WebSocket ping timeout after 119953 ms.
+[I 04:36:43.740 NotebookApp] Starting buffering for 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4:24245c33e82841cb8bc45e8b53b7efa7
+[I 09:53:26.498 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.51ms
+[I 09:55:34.664 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.54ms
+[I 09:55:51.920 NotebookApp] Creating new notebook in /BirdVox-70k_icassp2018/spl2018
+[I 09:55:55.077 NotebookApp] Kernel started: 717654ce-8b5f-49e0-898d-64f25fe318e1
+[I 09:55:58.334 NotebookApp] Adapting to protocol v5.1 for kernel 717654ce-8b5f-49e0-898d-64f25fe318e1
+[W 09:56:04.033 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1539784563800 (::1): Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 09:56:04.033 NotebookApp] Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 09:56:04.033 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1539784563800 (::1) 47.95ms referer=http://localhost:6354/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 09:57:55.048 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 09:58:41.675 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 09:59:55.054 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 10:01:58.601 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[W 11:03:58.336 NotebookApp] WebSocket ping timeout after 119892 ms.
+[I 11:04:03.340 NotebookApp] Starting buffering for 717654ce-8b5f-49e0-898d-64f25fe318e1:c111907e23c44db8844e67e37e2c6d2c
+[I 13:10:49.550 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.63ms
