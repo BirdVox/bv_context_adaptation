@@ -64,3 +64,46 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 11:03:58.336 NotebookApp] WebSocket ping timeout after 119892 ms.
 [I 11:04:03.340 NotebookApp] Starting buffering for 717654ce-8b5f-49e0-898d-64f25fe318e1:c111907e23c44db8844e67e37e2c6d2c
 [I 13:10:49.550 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.63ms
+[I 14:32:23.185 NotebookApp] 302 GET /?token=853261269ff33ae219db9f65027d3ab4c75986e92aca0056 (::1) 0.49ms
+[W 14:32:36.510 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:32:37.538 NotebookApp] Adapting to protocol v5.1 for kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4
+[W 14:32:51.617 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[I 14:32:52.648 NotebookApp] Kernel started: 0f9d34cf-3924-45e7-bb36-46002f04dd91
+[I 14:32:53.431 NotebookApp] Adapting to protocol v5.1 for kernel 0f9d34cf-3924-45e7-bb36-46002f04dd91
+[I 14:34:37.426 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:34:37.426 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:34:53.249 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb
+[W 14:34:53.250 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[I 14:36:38.587 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:36:38.587 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:38:37.790 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:38:37.791 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:39:25.534 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:40:38.735 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:40:38.736 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:41:13.652 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:42:22.663 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:42:37.596 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:42:37.596 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:42:37.695 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:43:25.702 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:43:46.710 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:44:38.153 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:44:38.154 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:46:28.721 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4 restarted
+[I 14:46:37.289 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:46:37.290 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:47:04.373 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 14:47:04.373 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 14:47:05.505 NotebookApp] Starting buffering for 2b1aa506-1fc7-4432-946a-b7d8d4e37ac4:2c2ac327396f4e058e06a11d2b6e0553
+[I 14:47:27.840 NotebookApp] Starting buffering for 0f9d34cf-3924-45e7-bb36-46002f04dd91:180ef1f1ec3c43008ba91c90aa30faa9
+slurmstepd: error: *** JOB 9351706 ON gpu-24 CANCELLED AT 2018-10-17T15:44:26 DUE TO TIME LIMIT ***
+slurmstepd: error: Exceeded step memory limit at some point.
+slurmstepd: error: This may or may not result in some failure. The SLURM utilizes Linux cgroups for resource containment. For reference please read the explanation in the bug report: https://bugs.schedmd.com/show_bug.cgi?id=3214#c4

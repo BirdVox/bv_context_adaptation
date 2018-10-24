@@ -1,0 +1,108 @@
+
+Jupyter server is running on: gpu-24
+Job starts at: Wed Oct 24 01:38:40 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8431:localhost:8431 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8431:localhost:8431 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 01:38:46.906 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9541538/jupyter/notebook_cookie_secret
+[I 01:38:50.197 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 01:38:50.198 NotebookApp] The Jupyter Notebook is running at:
+[I 01:38:50.198 NotebookApp] http://localhost:8431/?token=7884a03f98e32fa71bd491cfb479132d9a71a897467f8493
+[I 01:38:50.198 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 01:38:50.198 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8431/?token=7884a03f98e32fa71bd491cfb479132d9a71a897467f8493
+[I 01:43:15.188 NotebookApp] 302 GET /?token=7884a03f98e32fa71bd491cfb479132d9a71a897467f8493 (::1) 0.69ms
+[W 01:43:38.018 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:43:39.477 NotebookApp] Kernel started: 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 01:43:40.736 NotebookApp] Adapting to protocol v5.1 for kernel 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 01:43:54.641 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:43:54.642 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:45:39.620 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:45:39.620 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:49:39.759 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:49:39.760 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:51:50.575 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:51:50.575 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[W 01:52:39.236 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 01:52:41.525 NotebookApp] Kernel started: 89582c03-7945-4379-8070-ae5817b415d2
+[I 01:52:42.442 NotebookApp] Adapting to protocol v5.1 for kernel 89582c03-7945-4379-8070-ae5817b415d2
+[I 01:53:40.523 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:53:40.524 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:54:42.659 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 01:54:42.659 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 01:55:39.621 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:55:39.622 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 01:59:39.548 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 01:59:39.548 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:01:41.231 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:01:41.232 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:03:39.569 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:03:39.569 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:04:24.420 NotebookApp] Starting buffering for 0837cae1-1bc0-4d2d-bfd7-8528e254f0df:9435060c87df484e879ff5b7445ee2aa
+[I 02:04:25.031 NotebookApp] Kernel restarted: 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 02:04:26.037 NotebookApp] Adapting to protocol v5.1 for kernel 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 02:04:26.038 NotebookApp] Restoring connection for 0837cae1-1bc0-4d2d-bfd7-8528e254f0df:9435060c87df484e879ff5b7445ee2aa
+[I 02:04:26.038 NotebookApp] Replaying 6 buffered messages
+[I 02:05:39.658 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:05:39.658 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:07:39.701 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:07:39.701 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:11:39.822 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:11:39.822 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:22:19.734 NotebookApp] Starting buffering for 0837cae1-1bc0-4d2d-bfd7-8528e254f0df:9435060c87df484e879ff5b7445ee2aa
+[I 02:22:20.451 NotebookApp] Kernel restarted: 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 02:22:21.443 NotebookApp] Adapting to protocol v5.1 for kernel 0837cae1-1bc0-4d2d-bfd7-8528e254f0df
+[I 02:22:21.443 NotebookApp] Restoring connection for 0837cae1-1bc0-4d2d-bfd7-8528e254f0df:9435060c87df484e879ff5b7445ee2aa
+[I 02:22:21.443 NotebookApp] Replaying 6 buffered messages
+[I 02:23:39.610 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:23:39.610 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:25:39.696 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:25:39.696 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:27:39.678 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:27:39.679 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:29:39.645 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:29:39.645 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:30:08.883 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:30:08.883 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:31:39.702 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:31:39.703 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:33:39.633 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:33:39.634 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:35:39.545 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:35:39.546 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:37:39.677 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:37:39.678 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:41:40.281 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:41:40.282 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:43:39.694 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:43:39.694 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:45:39.568 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:45:39.568 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 02:47:39.662 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 02:47:39.663 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
