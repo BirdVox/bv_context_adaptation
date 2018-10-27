@@ -108,3 +108,8 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [W 02:47:39.663 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
 [I 02:51:39.693 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
 [W 02:51:39.694 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[W 03:39:51.444 NotebookApp] WebSocket ping timeout after 119928 ms.
+[I 03:39:56.451 NotebookApp] Starting buffering for 0837cae1-1bc0-4d2d-bfd7-8528e254f0df:9435060c87df484e879ff5b7445ee2aa
+[W 03:40:12.444 NotebookApp] WebSocket ping timeout after 119994 ms.
+[I 03:40:17.449 NotebookApp] Starting buffering for 89582c03-7945-4379-8070-ae5817b415d2:d05d9d7c6f604be780c00265cd5d457f
+slurmstepd: error: *** JOB 9541538 ON gpu-24 CANCELLED AT 2018-10-24T13:39:07 DUE TO TIME LIMIT ***
