@@ -9,7 +9,7 @@ import localmodule
 # Define constants.
 aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
-script_name = "066_evaluate-pcen-convnet-full-audio-nomindist.py"
+script_name = "067_evaluate-pcen-convnet-full-audio-nomindist.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 dataset_name = localmodule.get_dataset_name()
 n_trials = 10

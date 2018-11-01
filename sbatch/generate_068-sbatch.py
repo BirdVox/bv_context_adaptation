@@ -8,7 +8,7 @@ import localmodule
 # Define constants.
 aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
-script_name = "067_evaluate-icassp-convnet-full-audio-nomindist.py"
+script_name = "068_evaluate-icassp-convnet-full-audio-nomindist.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 n_trials = 10
 
