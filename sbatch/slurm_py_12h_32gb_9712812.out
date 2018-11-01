@@ -1,0 +1,52 @@
+
+Jupyter server is running on: c24-01
+Job starts at: Thu Nov  1 18:07:08 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7894:localhost:7894 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7894:localhost:7894 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 18:07:12.998 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9712812/jupyter/notebook_cookie_secret
+[I 18:07:14.773 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 18:07:14.773 NotebookApp] The Jupyter Notebook is running at:
+[I 18:07:14.773 NotebookApp] http://localhost:7894/?token=5c45c402f46e082cd29e2b331205132a60e2f3340894faf3
+[I 18:07:14.774 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:07:14.774 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7894/?token=5c45c402f46e082cd29e2b331205132a60e2f3340894faf3
+[I 18:07:50.049 NotebookApp] 302 GET /?token=5c45c402f46e082cd29e2b331205132a60e2f3340894faf3 (::1) 1.06ms
+[W 18:08:45.710 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 18:08:48.010 NotebookApp] Kernel started: ae23ddcd-2732-4456-b39b-6b5c657624f7
+[I 18:08:49.418 NotebookApp] Adapting to protocol v5.1 for kernel ae23ddcd-2732-4456-b39b-6b5c657624f7
+[I 18:09:41.167 NotebookApp] Starting buffering for ae23ddcd-2732-4456-b39b-6b5c657624f7:60ee44b75afc468d8eec9533b0f15669
+[I 18:09:41.498 NotebookApp] Kernel restarted: ae23ddcd-2732-4456-b39b-6b5c657624f7
+[I 18:09:42.309 NotebookApp] Adapting to protocol v5.1 for kernel ae23ddcd-2732-4456-b39b-6b5c657624f7
+[I 18:09:42.310 NotebookApp] Restoring connection for ae23ddcd-2732-4456-b39b-6b5c657624f7:60ee44b75afc468d8eec9533b0f15669
+[I 18:09:42.310 NotebookApp] Replaying 6 buffered messages
+[I 18:10:47.957 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 18:10:47.958 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 18:13:39.021 NotebookApp] Starting buffering for ae23ddcd-2732-4456-b39b-6b5c657624f7:60ee44b75afc468d8eec9533b0f15669
+slurmstepd: error: *** JOB 9712812 ON c24-01 CANCELLED AT 2018-11-01T18:23:36 ***

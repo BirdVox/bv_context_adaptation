@@ -1,0 +1,45 @@
+
+Jupyter server is running on: c40-12
+Job starts at: Thu Nov  1 18:04:49 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 6268:localhost:6268 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 6268:localhost:6268 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 18:04:54.705 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9712799/jupyter/notebook_cookie_secret
+[I 18:04:56.737 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 18:04:56.738 NotebookApp] The Jupyter Notebook is running at:
+[I 18:04:56.738 NotebookApp] http://localhost:6268/?token=27bac62cf9d74c01004a935c47b242a9ee609c6c51dac377
+[I 18:04:56.738 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:04:56.738 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:6268/?token=27bac62cf9d74c01004a935c47b242a9ee609c6c51dac377
+[I 18:05:32.823 NotebookApp] 302 GET /?token=27bac62cf9d74c01004a935c47b242a9ee609c6c51dac377 (::1) 0.63ms
+[W 18:06:08.720 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 18:06:10.922 NotebookApp] Kernel started: e8f2564a-db9f-419a-b6c2-a117dede5cbf
+[I 18:06:11.877 NotebookApp] Adapting to protocol v5.1 for kernel e8f2564a-db9f-419a-b6c2-a117dede5cbf
+[I 18:06:38.054 NotebookApp] Starting buffering for e8f2564a-db9f-419a-b6c2-a117dede5cbf:96047b8414fe4120992f2ff98f5b215b
+slurmstepd: error: *** JOB 9712799 ON c40-12 CANCELLED AT 2018-11-01T18:23:36 ***

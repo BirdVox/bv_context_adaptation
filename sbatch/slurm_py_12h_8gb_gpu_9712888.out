@@ -1,0 +1,47 @@
+
+Jupyter server is running on: gpu-23
+Job starts at: Thu Nov  1 18:12:09 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9466:localhost:9466 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9466:localhost:9466 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 18:12:10.500 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9712888/jupyter/notebook_cookie_secret
+[I 18:12:10.862 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 18:12:10.862 NotebookApp] The Jupyter Notebook is running at:
+[I 18:12:10.862 NotebookApp] http://localhost:9466/?token=d3a995691bd4ada27b38d1d5f257bc82e22faafeeee17833
+[I 18:12:10.862 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 18:12:10.863 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9466/?token=d3a995691bd4ada27b38d1d5f257bc82e22faafeeee17833
+[I 18:13:48.554 NotebookApp] 302 GET /?token=d3a995691bd4ada27b38d1d5f257bc82e22faafeeee17833 (::1) 0.66ms
+[W 18:14:10.919 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 18:14:12.949 NotebookApp] Kernel started: 822feb8f-18b9-4015-bea2-e5d04e01e6a3
+[I 18:14:13.675 NotebookApp] Adapting to protocol v5.1 for kernel 822feb8f-18b9-4015-bea2-e5d04e01e6a3
+[I 18:16:13.033 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 18:16:13.034 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 18:22:15.309 NotebookApp] Starting buffering for 822feb8f-18b9-4015-bea2-e5d04e01e6a3:2bd7add093f44882a3258f94decc7516
+slurmstepd: error: *** JOB 9712888 ON gpu-23 CANCELLED AT 2018-11-01T18:23:36 ***

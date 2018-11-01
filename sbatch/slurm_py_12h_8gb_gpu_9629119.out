@@ -1,0 +1,41 @@
+
+Jupyter server is running on: gpu-43
+Job starts at: Mon Oct 29 10:22:31 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7106:localhost:7106 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7106:localhost:7106 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:22:33.066 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9629119/jupyter/notebook_cookie_secret
+[I 10:22:33.419 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:22:33.419 NotebookApp] The Jupyter Notebook is running at:
+[I 10:22:33.419 NotebookApp] http://localhost:7106/?token=2b8eb5598be12b1d76170062a02df95eb2e2c3990cbdb22b
+[I 10:22:33.419 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:22:33.419 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7106/?token=2b8eb5598be12b1d76170062a02df95eb2e2c3990cbdb22b
+[I 10:25:48.981 NotebookApp] 302 GET /?token=2b8eb5598be12b1d76170062a02df95eb2e2c3990cbdb22b (::1) 1.07ms
+slurmstepd: error: *** JOB 9629119 ON gpu-43 CANCELLED AT 2018-10-29T22:22:50 DUE TO TIME LIMIT ***

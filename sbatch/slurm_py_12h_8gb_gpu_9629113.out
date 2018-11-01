@@ -1,0 +1,44 @@
+
+Jupyter server is running on: gpu-38
+Job starts at: Mon Oct 29 10:18:05 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9290:localhost:9290 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9290:localhost:9290 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:18:11.347 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9629113/jupyter/notebook_cookie_secret
+[I 10:18:12.967 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:18:12.967 NotebookApp] The Jupyter Notebook is running at:
+[I 10:18:12.967 NotebookApp] http://localhost:9290/?token=4e7125063adfc276742879479e1710b9d48f2500b99e183e
+[I 10:18:12.967 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:18:12.967 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9290/?token=4e7125063adfc276742879479e1710b9d48f2500b99e183e
+[I 10:20:49.814 NotebookApp] 302 GET /?token=4e7125063adfc276742879479e1710b9d48f2500b99e183e (::1) 1.02ms
+[I 10:21:51.068 NotebookApp] Kernel started: 92e2b77a-c46f-4d26-9296-de7b808d5e90
+[I 10:21:52.025 NotebookApp] Adapting to protocol v5.1 for kernel 92e2b77a-c46f-4d26-9296-de7b808d5e90
+[I 10:22:01.815 NotebookApp] Starting buffering for 92e2b77a-c46f-4d26-9296-de7b808d5e90:cd57b2e3741249cd884c0ba2d1e0b54c
+slurmstepd: error: *** JOB 9629113 ON gpu-38 CANCELLED AT 2018-10-29T22:18:20 DUE TO TIME LIMIT ***

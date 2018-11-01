@@ -1,0 +1,73 @@
+
+Jupyter server is running on: gpu-28
+Job starts at: Mon Oct 29 10:29:46 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8851:localhost:8851 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8851:localhost:8851 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 10:29:49.450 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9629962/jupyter/notebook_cookie_secret
+[I 10:29:51.019 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 10:29:51.019 NotebookApp] The Jupyter Notebook is running at:
+[I 10:29:51.019 NotebookApp] http://localhost:8851/?token=07e327c0f6d1d42aa723b67f4d498d00e0737cd13624f261
+[I 10:29:51.020 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 10:29:51.020 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8851/?token=07e327c0f6d1d42aa723b67f4d498d00e0737cd13624f261
+[I 10:30:25.226 NotebookApp] 302 GET /?token=07e327c0f6d1d42aa723b67f4d498d00e0737cd13624f261 (::1) 0.57ms
+[I 10:30:45.226 NotebookApp] Kernel started: ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 10:30:46.657 NotebookApp] Adapting to protocol v5.1 for kernel ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 10:32:45.217 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 10:38:45.327 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 10:40:45.343 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 10:42:52.631 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[W 11:02:16.661 NotebookApp] WebSocket ping timeout after 119995 ms.
+[I 11:02:21.663 NotebookApp] Starting buffering for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:812d0f2b8c154ea2984abfb19a7996ab
+[I 15:50:38.320 NotebookApp] 302 GET /?token=07e327c0f6d1d42aa723b67f4d498d00e0737cd13624f261 (::1) 1.05ms
+[I 15:51:00.687 NotebookApp] Adapting to protocol v5.1 for kernel ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 15:51:09.686 NotebookApp] Starting buffering for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:6ea520399ca24305811cdef779f17703
+[I 15:51:10.104 NotebookApp] Kernel restarted: ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 15:51:10.939 NotebookApp] Adapting to protocol v5.1 for kernel ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 15:51:10.940 NotebookApp] Restoring connection for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:6ea520399ca24305811cdef779f17703
+[I 15:51:10.940 NotebookApp] Replaying 6 buffered messages
+[W 15:53:01.304 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 15:53:03.181 NotebookApp] Kernel started: ea0f44d7-c872-4220-9245-40077f930563
+[I 15:53:03.285 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 15:53:04.007 NotebookApp] Adapting to protocol v5.1 for kernel ea0f44d7-c872-4220-9245-40077f930563
+[I 15:55:01.405 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 15:56:10.494 NotebookApp] Starting buffering for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:6ea520399ca24305811cdef779f17703
+[I 15:56:11.018 NotebookApp] Kernel restarted: ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 15:56:11.891 NotebookApp] Adapting to protocol v5.1 for kernel ade1237c-f911-4cc1-8d3c-3de37dbdfc99
+[I 15:56:11.892 NotebookApp] Restoring connection for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:6ea520399ca24305811cdef779f17703
+[I 15:56:11.892 NotebookApp] Replaying 6 buffered messages
+[I 15:57:00.676 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 15:59:01.775 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[I 16:01:01.507 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/visualize_clips.ipynb
+[W 20:30:34.011 NotebookApp] WebSocket ping timeout after 119888 ms.
+[I 20:30:39.014 NotebookApp] Starting buffering for ea0f44d7-c872-4220-9245-40077f930563:37f5c8dd8f364618a661a3db25e63a26
+[W 20:30:41.894 NotebookApp] WebSocket ping timeout after 119989 ms.
+[I 20:30:46.897 NotebookApp] Starting buffering for ade1237c-f911-4cc1-8d3c-3de37dbdfc99:6ea520399ca24305811cdef779f17703
+slurmstepd: error: *** JOB 9629962 ON gpu-28 CANCELLED AT 2018-10-29T22:29:52 DUE TO TIME LIMIT ***
