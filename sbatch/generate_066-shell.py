@@ -9,7 +9,7 @@ import localmodule
 # Define constants.
 aug_kinds = ["all", "all-but-noise", "none"]
 units = localmodule.get_units()
-script_name = "065_evaluate-pcen-add-convnet-full-audio-nomindist.py"
+script_name = "066_evaluate-pcen-ntt-convnet-full-audio-nomindist.py"
 script_path = os.path.join("..", "..", "..", "src", script_name)
 dataset_name = localmodule.get_dataset_name()
 n_trials = 10
@@ -31,11 +31,6 @@ for aug_kind_str in aug_kinds:
     # Open shell file
     with open(file_path, "w") as f:
         # Print header
-        f.write(
-            "# This shell script executes Slurm jobs for evaluating\n" +
-            "# adaptive threshold convolutional neural network\n" +
-            "# on " + dataset_name + " full audio with PCEN input.\n" +
-            "# No minimum distance between adjacent flight calls.")
         f.write("# Augmentation kind: " + aug_kind_str + ".\n")
         f.write("\n")
 
