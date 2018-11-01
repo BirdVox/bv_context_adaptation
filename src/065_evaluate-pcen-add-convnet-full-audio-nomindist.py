@@ -68,7 +68,7 @@ print("")
 for predict_unit_str in predict_units:
 
     # Define directory for test unit.
-    unit_dir = os.path.join(model_dir, test_unit_str)
+    unit_dir = os.path.join(model_dir + "-nomindist", test_unit_str)
 
 
     # Define directory for trial.
@@ -79,7 +79,7 @@ for predict_unit_str in predict_units:
     # Load ODF.
     prediction_name = "_".join([
         dataset_name,
-        model_name,
+        model_name + "-nomindist",
         "test-" + test_unit_str,
         trial_str,
         "predict-" + predict_unit_str,
@@ -105,7 +105,7 @@ for predict_unit_str in predict_units:
     # Create CSV file for metrics.
     metrics_name = "_".join([
         dataset_name,
-        model_name,
+        model_name + "-nomindist",
         "test-" + test_unit_str,
         trial_str,
         "predict-" + predict_unit_str,
