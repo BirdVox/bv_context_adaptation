@@ -56,3 +56,4 @@ you should be able to connect to jupyter notebook running remotly on prince comp
 [I 18:41:03.090 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
 [W 18:41:03.091 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
 [I 19:07:30.932 NotebookApp] Starting buffering for 8fae0be0-f93a-458f-a807-9ae1e8a1ab6b:8f7543e3621d4ba98babf8d809eee82e
+slurmstepd: error: *** JOB 9712998 ON c32-01 CANCELLED AT 2018-11-01T22:26:41 DUE TO TIME LIMIT ***

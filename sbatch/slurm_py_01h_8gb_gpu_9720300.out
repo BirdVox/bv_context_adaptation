@@ -1,0 +1,59 @@
+
+Jupyter server is running on: gpu-54
+Job starts at: Fri Nov  2 08:46:31 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 8402:localhost:8402 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 8402:localhost:8402 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 08:46:34.815 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9720300/jupyter/notebook_cookie_secret
+[I 08:46:36.318 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 08:46:36.318 NotebookApp] The Jupyter Notebook is running at:
+[I 08:46:36.318 NotebookApp] http://localhost:8402/?token=79f00c81ada283726062fe16d92413818f8ff344f5c7a130
+[I 08:46:36.318 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 08:46:36.319 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8402/?token=79f00c81ada283726062fe16d92413818f8ff344f5c7a130
+[I 08:48:44.639 NotebookApp] 302 GET /?token=79f00c81ada283726062fe16d92413818f8ff344f5c7a130 (::1) 1.09ms
+[W 08:49:21.904 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 08:49:24.551 NotebookApp] Kernel started: 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 08:49:25.845 NotebookApp] Adapting to protocol v5.1 for kernel 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 08:51:24.661 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 08:51:24.662 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 08:52:10.625 NotebookApp] Kernel restarted: 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 08:52:10.626 NotebookApp] Starting buffering for 2f46a009-458a-4e23-beb0-23fd1ef4e376:5e34b68786214a12bea18419ed49a8da
+[I 08:52:12.458 NotebookApp] Adapting to protocol v5.1 for kernel 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 08:52:12.459 NotebookApp] Restoring connection for 2f46a009-458a-4e23-beb0-23fd1ef4e376:5e34b68786214a12bea18419ed49a8da
+[I 08:52:12.459 NotebookApp] Replaying 6 buffered messages
+[I 08:53:24.667 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 08:53:24.668 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 09:03:53.319 NotebookApp] Starting buffering for 2f46a009-458a-4e23-beb0-23fd1ef4e376:5e34b68786214a12bea18419ed49a8da
+[I 09:03:53.722 NotebookApp] Kernel restarted: 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 09:03:54.764 NotebookApp] Adapting to protocol v5.1 for kernel 2f46a009-458a-4e23-beb0-23fd1ef4e376
+[I 09:03:54.765 NotebookApp] Restoring connection for 2f46a009-458a-4e23-beb0-23fd1ef4e376:5e34b68786214a12bea18419ed49a8da
+[I 09:03:54.765 NotebookApp] Replaying 6 buffered messages
+[I 09:05:49.514 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 09:05:49.515 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
