@@ -26,7 +26,7 @@ dataset_name = localmodule.get_dataset_name()
 folds = localmodule.fold_units()
 models_dir = localmodule.get_models_dir()
 units = localmodule.get_units()
-model_name = "pcen-convnet"
+model_name = "icassp-convnet"
 if not aug_kind_str == "none":
     model_name = "_".join([model_name, "aug-" + aug_kind_str])
 model_dir = os.path.join(models_dir, model_name)
