@@ -1,0 +1,112 @@
+
+Jupyter server is running on: c39-01
+Job starts at: Tue Jan 15 14:19:05 EST 2019
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9570:localhost:9570 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9570:localhost:9570 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 14:19:07.324 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-14523798/jupyter/notebook_cookie_secret
+[I 14:19:08.860 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 14:19:08.860 NotebookApp] The Jupyter Notebook is running at:
+[I 14:19:08.860 NotebookApp] http://localhost:9570/?token=1ebf95816da9e5a2eedb9b1564a4cc35742690704d211ced
+[I 14:19:08.860 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 14:19:08.860 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9570/?token=1ebf95816da9e5a2eedb9b1564a4cc35742690704d211ced
+[I 14:20:18.953 NotebookApp] 302 GET /?token=1ebf95816da9e5a2eedb9b1564a4cc35742690704d211ced (::1) 0.60ms
+[W 14:20:36.803 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[I 14:20:37.546 NotebookApp] Kernel started: efb4c81b-a091-4819-b6f3-4a8ccb669225
+[I 14:20:38.558 NotebookApp] Adapting to protocol v5.1 for kernel efb4c81b-a091-4819-b6f3-4a8ccb669225
+[I 14:22:37.551 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 14:22:37.552 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[I 14:24:37.644 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 14:24:37.645 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[I 14:30:38.596 NotebookApp] Saving file at /BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb
+[W 14:30:38.596 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_recall-time.ipynb is not trusted
+[W 14:30:56.546 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb is not trusted
+[I 14:30:57.007 NotebookApp] Kernel started: 5dff0b08-be92-43bb-98f2-a4c2ff00e97d
+[I 14:30:57.690 NotebookApp] Adapting to protocol v5.1 for kernel 5dff0b08-be92-43bb-98f2-a4c2ff00e97d
+[W 14:31:02.170 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/measure_snr.ipynb is not trusted
+[I 14:31:02.447 NotebookApp] Kernel started: a77c5775-3f08-409b-b30a-80342590699d
+[I 14:31:02.949 NotebookApp] Adapting to protocol v5.1 for kernel a77c5775-3f08-409b-b30a-80342590699d
+[I 14:31:12.047 NotebookApp] Kernel started: 83533997-e851-4ec7-90b0-5a6c6e5b1342
+[I 14:31:12.601 NotebookApp] Adapting to protocol v5.1 for kernel 83533997-e851-4ec7-90b0-5a6c6e5b1342
+[W 14:31:16.321 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 14:31:17.500 NotebookApp] Kernel started: 3a6a078f-8a8b-4a97-b845-cb159f9141a0
+[I 14:31:18.000 NotebookApp] Adapting to protocol v5.1 for kernel 3a6a078f-8a8b-4a97-b845-cb159f9141a0
+[I 14:32:57.135 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb
+[W 14:32:57.136 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/pcen_snr.ipynb is not trusted
+[I 14:33:02.884 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/measure_snr.ipynb
+[W 14:33:02.884 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/measure_snr.ipynb is not trusted
+[I 14:33:12.633 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time_bis.ipynb
+[I 14:33:17.766 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 14:33:17.766 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 14:53:20.164 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 14:53:20.165 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 14:55:20.167 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 14:55:20.168 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 14:57:20.153 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 14:57:20.153 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 14:59:20.205 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 14:59:20.206 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 15:05:20.188 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 15:05:20.189 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 15:43:21.118 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 15:43:21.119 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 15:45:21.172 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 15:45:21.173 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 16:28:27.693 NotebookApp] WebSocket ping timeout after 119978 ms.
+[I 16:28:32.695 NotebookApp] Starting buffering for 5dff0b08-be92-43bb-98f2-a4c2ff00e97d:27de96ac7cb649978a10fd6fbd78947e
+[W 16:28:32.951 NotebookApp] WebSocket ping timeout after 119994 ms.
+[I 16:28:37.954 NotebookApp] Starting buffering for a77c5775-3f08-409b-b30a-80342590699d:8fba82facdba44e8aeb9cf1af048c356
+[W 16:28:38.560 NotebookApp] WebSocket ping timeout after 119972 ms.
+[W 16:28:42.603 NotebookApp] WebSocket ping timeout after 119993 ms.
+[I 16:28:43.562 NotebookApp] Starting buffering for efb4c81b-a091-4819-b6f3-4a8ccb669225:f59b606b04534d8281847974b9aaf909
+[I 16:28:47.605 NotebookApp] Starting buffering for 83533997-e851-4ec7-90b0-5a6c6e5b1342:7f66ccb998874eee8de6ca35a14cd2b7
+[W 16:28:48.002 NotebookApp] WebSocket ping timeout after 119910 ms.
+[I 16:28:53.004 NotebookApp] Starting buffering for 3a6a078f-8a8b-4a97-b845-cb159f9141a0:e1c34a668f7b486c88f757bca6b08474
+[I 16:30:28.971 NotebookApp] Adapting to protocol v5.1 for kernel 3a6a078f-8a8b-4a97-b845-cb159f9141a0
+[I 16:30:28.972 NotebookApp] Restoring connection for 3a6a078f-8a8b-4a97-b845-cb159f9141a0:e1c34a668f7b486c88f757bca6b08474
+[I 16:30:29.114 NotebookApp] Adapting to protocol v5.1 for kernel 5dff0b08-be92-43bb-98f2-a4c2ff00e97d
+[I 16:30:29.115 NotebookApp] Restoring connection for 5dff0b08-be92-43bb-98f2-a4c2ff00e97d:27de96ac7cb649978a10fd6fbd78947e
+[I 16:30:29.154 NotebookApp] Adapting to protocol v5.1 for kernel 83533997-e851-4ec7-90b0-5a6c6e5b1342
+[I 16:30:29.155 NotebookApp] Restoring connection for 83533997-e851-4ec7-90b0-5a6c6e5b1342:7f66ccb998874eee8de6ca35a14cd2b7
+[I 16:30:29.194 NotebookApp] Adapting to protocol v5.1 for kernel efb4c81b-a091-4819-b6f3-4a8ccb669225
+[I 16:30:29.195 NotebookApp] Restoring connection for efb4c81b-a091-4819-b6f3-4a8ccb669225:f59b606b04534d8281847974b9aaf909
+[I 16:30:29.215 NotebookApp] Adapting to protocol v5.1 for kernel a77c5775-3f08-409b-b30a-80342590699d
+[I 16:30:29.216 NotebookApp] Restoring connection for a77c5775-3f08-409b-b30a-80342590699d:8fba82facdba44e8aeb9cf1af048c356
+[W 17:12:28.972 NotebookApp] WebSocket ping timeout after 119993 ms.
+[W 17:12:29.117 NotebookApp] WebSocket ping timeout after 119996 ms.
+[W 17:12:29.155 NotebookApp] WebSocket ping timeout after 119994 ms.
+[W 17:12:29.196 NotebookApp] WebSocket ping timeout after 119995 ms.
+[W 17:12:29.217 NotebookApp] WebSocket ping timeout after 119994 ms.
+[I 17:12:33.975 NotebookApp] Starting buffering for 3a6a078f-8a8b-4a97-b845-cb159f9141a0:e1c34a668f7b486c88f757bca6b08474
+[I 17:12:34.120 NotebookApp] Starting buffering for 5dff0b08-be92-43bb-98f2-a4c2ff00e97d:27de96ac7cb649978a10fd6fbd78947e
+[I 17:12:34.578 NotebookApp] Starting buffering for 83533997-e851-4ec7-90b0-5a6c6e5b1342:7f66ccb998874eee8de6ca35a14cd2b7
+[I 17:12:34.578 NotebookApp] Starting buffering for efb4c81b-a091-4819-b6f3-4a8ccb669225:f59b606b04534d8281847974b9aaf909
+[I 17:12:34.579 NotebookApp] Starting buffering for a77c5775-3f08-409b-b30a-80342590699d:8fba82facdba44e8aeb9cf1af048c356
+slurmstepd: error: *** JOB 14523798 ON c39-01 CANCELLED AT 2019-01-16T02:19:04 DUE TO TIME LIMIT ***

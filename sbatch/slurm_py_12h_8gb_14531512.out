@@ -1,0 +1,267 @@
+
+Jupyter server is running on: c41-01
+Job starts at: Wed Jan 16 02:36:38 EST 2019
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 9100:localhost:9100 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 9100:localhost:9100 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 02:36:39.541 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-14531512/jupyter/notebook_cookie_secret
+[I 02:36:40.025 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 02:36:40.026 NotebookApp] The Jupyter Notebook is running at:
+[I 02:36:40.026 NotebookApp] http://localhost:9100/?token=ec304f0a7e4444c84b24d98158ae97242d023fb338cf60ac
+[I 02:36:40.026 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 02:36:40.026 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:9100/?token=ec304f0a7e4444c84b24d98158ae97242d023fb338cf60ac
+[I 04:05:39.031 NotebookApp] 302 GET /?token=ec304f0a7e4444c84b24d98158ae97242d023fb338cf60ac (::1) 0.95ms
+[I 04:18:09.891 NotebookApp] Kernel started: d6f19952-46ee-4888-af95-09a2109138ad
+[I 04:18:11.041 NotebookApp] Adapting to protocol v5.1 for kernel d6f19952-46ee-4888-af95-09a2109138ad
+[I 04:19:23.498 NotebookApp] Kernel started: 6d25fa37-7bf1-46ef-818e-b9d0c1bb50fa
+[I 04:19:24.174 NotebookApp] Adapting to protocol v5.1 for kernel 6d25fa37-7bf1-46ef-818e-b9d0c1bb50fa
+[I 04:19:37.014 NotebookApp] Kernel started: 272988a1-5cec-4006-a106-f59e5702f1e0
+[I 04:19:37.681 NotebookApp] Adapting to protocol v5.1 for kernel 272988a1-5cec-4006-a106-f59e5702f1e0
+[I 04:19:38.503 NotebookApp] Kernel started: 238c9817-1cbe-43a2-b83e-3989e66bf04d
+[I 04:19:39.140 NotebookApp] Adapting to protocol v5.1 for kernel 238c9817-1cbe-43a2-b83e-3989e66bf04d
+[I 04:25:51.650 NotebookApp] Starting buffering for 238c9817-1cbe-43a2-b83e-3989e66bf04d:31d0bccc7bb64ad99cd79eabf996a9e9
+[I 04:25:52.168 NotebookApp] Starting buffering for 272988a1-5cec-4006-a106-f59e5702f1e0:26982c3e839543f488f9cbe4d77bb5f3
+[I 04:25:52.617 NotebookApp] Starting buffering for 6d25fa37-7bf1-46ef-818e-b9d0c1bb50fa:a5109148389540f48b5778f95e5a281e
+[I 04:25:52.899 NotebookApp] Starting buffering for d6f19952-46ee-4888-af95-09a2109138ad:5ab82ab550294222853c378db0bcedc2
+[I 04:26:07.755 NotebookApp] 302 GET /?token=ec304f0a7e4444c84b24d98158ae97242d023fb338cf60ac (::1) 0.61ms
+[W 04:26:20.911 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1547630780949 (::1): Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 04:26:20.912 NotebookApp] Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 04:26:20.912 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1547630780949 (::1) 29.52ms referer=http://localhost:9100/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 04:26:26.357 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb is not trusted
+[I 04:26:26.693 NotebookApp] Kernel started: 4242986e-4131-4bf1-ac91-4e1bedf19db7
+[I 04:26:27.455 NotebookApp] Adapting to protocol v5.1 for kernel 4242986e-4131-4bf1-ac91-4e1bedf19db7
+[I 04:26:36.280 NotebookApp] Kernel started: 24ec9728-ae98-4a15-968d-bc27e5eb417e
+[I 04:26:36.865 NotebookApp] Adapting to protocol v5.1 for kernel 24ec9728-ae98-4a15-968d-bc27e5eb417e
+[I 04:26:38.429 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb
+[W 04:26:38.429 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb is not trusted
+[I 04:26:38.918 NotebookApp] Starting buffering for 24ec9728-ae98-4a15-968d-bc27e5eb417e:9194999ab3a0415687f50eb2a0f0625e
+[W 04:26:39.189 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 04:26:40.180 NotebookApp] Kernel started: 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[I 04:26:40.800 NotebookApp] Adapting to protocol v5.1 for kernel 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[W 04:26:58.688 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 04:26:59.643 NotebookApp] Kernel started: 96982c94-bec4-4965-8fd7-7a8c9036c974
+[I 04:27:00.136 NotebookApp] Starting buffering for 0fbad587-7f85-4828-aefb-9d6c1a81a2e6:84c84dc326854c998f4d18f61316733f
+[I 04:27:00.282 NotebookApp] Adapting to protocol v5.1 for kernel 96982c94-bec4-4965-8fd7-7a8c9036c974
+[W 04:27:31.635 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:27:33.033 NotebookApp] Kernel started: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 04:27:33.708 NotebookApp] Adapting to protocol v5.1 for kernel 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 04:33:33.208 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:33:33.209 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:35:33.247 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:35:33.248 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:37:17.375 NotebookApp] Kernel interrupted: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 04:37:33.156 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:37:33.157 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:39:33.176 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:39:33.177 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:39:34.106 NotebookApp] Kernel interrupted: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 04:41:33.182 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:41:33.183 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:43:33.205 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:43:33.206 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 04:47:33.196 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 04:47:33.197 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 04:54:41.344 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_cross-validation.ipynb is not trusted
+[I 04:54:41.803 NotebookApp] Adapting to protocol v5.1 for kernel 4242986e-4131-4bf1-ac91-4e1bedf19db7
+[W 04:54:48.466 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1547632488457 (::1): Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 04:54:48.467 NotebookApp] Unreadable Notebook: /home/vl1019/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb NotJSONError('Notebook does not appear to be JSON: \'{\\n "cells": [\\n  {\\n   "cell_type": "c...',)
+[W 04:54:48.467 NotebookApp] 400 GET /api/contents/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb?type=notebook&_=1547632488457 (::1) 8.44ms referer=http://localhost:9100/notebooks/BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[I 05:01:35.132 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 05:01:35.133 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[W 05:02:21.802 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:02:23.328 NotebookApp] Kernel started: 6fc05667-b28e-432b-aa05-4d670a04d6aa
+[I 05:02:24.174 NotebookApp] Adapting to protocol v5.1 for kernel 6fc05667-b28e-432b-aa05-4d670a04d6aa
+[I 05:04:23.395 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:04:23.396 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:06:23.418 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:06:23.419 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:08:23.406 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:08:23.407 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:10:24.210 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:10:24.211 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:14:23.428 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:14:23.429 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:16:23.429 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:16:23.430 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 05:18:23.432 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 05:18:23.433 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[W 05:23:10.061 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb is not trusted
+[I 05:23:10.527 NotebookApp] Kernel started: f74cf47d-7d91-4076-9122-2e12dbaa95af
+[I 05:23:11.839 NotebookApp] Adapting to protocol v5.1 for kernel f74cf47d-7d91-4076-9122-2e12dbaa95af
+[I 05:23:15.774 NotebookApp] Saving file at /BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb
+[W 05:23:15.775 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/BirdVoxDetect.ipynb is not trusted
+[W 05:23:26.338 NotebookApp] Notebook BirdVox-70k_icassp2018/notebooks/evaluate-icassp-convnet-clips.ipynb is not trusted
+[I 05:23:26.890 NotebookApp] Kernel started: 67d345b4-cfbc-437c-b2d7-7e7b8722b8d1
+[I 05:23:27.789 NotebookApp] Adapting to protocol v5.1 for kernel 67d345b4-cfbc-437c-b2d7-7e7b8722b8d1
+[I 05:23:32.450 NotebookApp] Starting buffering for 67d345b4-cfbc-437c-b2d7-7e7b8722b8d1:b2bfd651989942c0be8b3aed1ee10546
+[I 05:28:19.570 NotebookApp] Starting buffering for f74cf47d-7d91-4076-9122-2e12dbaa95af:403c7c10fa2848d18f673bef6d30e6f5
+[I 05:28:20.037 NotebookApp] Starting buffering for 6fc05667-b28e-432b-aa05-4d670a04d6aa:535fa2f0c26d4167854a5071d02f816e
+[I 05:28:21.071 NotebookApp] Starting buffering for 59264520-27e3-4c94-b9ff-9d9c7671c9c0:019ebe853fa241318d28306a0054529a
+[I 05:28:21.599 NotebookApp] Starting buffering for 96982c94-bec4-4965-8fd7-7a8c9036c974:950c6f225139405c88658174acb47b32
+[I 05:28:23.987 NotebookApp] Starting buffering for 4242986e-4131-4bf1-ac91-4e1bedf19db7:2a609f3593a44a48820e2176d88fac3f
+[I 05:29:02.522 NotebookApp] Adapting to protocol v5.1 for kernel d6f19952-46ee-4888-af95-09a2109138ad
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcublas.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcudnn.so.5 locally
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcufft.so.7.5 locally
+I tensorflow/stream_executor/dso_loader.cc:126] Couldn't open CUDA library libcuda.so.1. LD_LIBRARY_PATH: :/share/apps/centos/7/usr/lib64
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:165] hostname: c41-01
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:189] libcuda reported version is: Not found: was unable to find libcuda.so DSO loaded into this program
+I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:193] kernel reported version is: Permission denied: could not open driver version path for reading: /proc/driver/nvidia/version
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1065] LD_LIBRARY_PATH: :/share/apps/centos/7/usr/lib64
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:1066] failed to find libcuda.so on this system: Failed precondition: could not dlopen DSO: libcuda.so.1; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+I tensorflow/stream_executor/dso_loader.cc:135] successfully opened CUDA library libcurand.so.7.5 locally
+[I 05:31:02.409 NotebookApp] Saving file at /birdvox-full-season/detector/notebooks/threshold-birdvoxdetect-300h.ipynb
+[I 05:31:48.601 NotebookApp] Kernel interrupted: d6f19952-46ee-4888-af95-09a2109138ad
+[I 05:33:02.416 NotebookApp] Saving file at /birdvox-full-season/detector/notebooks/threshold-birdvoxdetect-300h.ipynb
+[I 05:33:05.876 NotebookApp] Kernel interrupted: d6f19952-46ee-4888-af95-09a2109138ad
+[I 05:35:02.518 NotebookApp] Saving file at /birdvox-full-season/detector/notebooks/threshold-birdvoxdetect-300h.ipynb
+[W 05:35:07.491 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 05:35:08.794 NotebookApp] Adapting to protocol v5.1 for kernel 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 05:35:11.442 NotebookApp] Kernel started: 4f17cb89-e112-4757-a61c-ebe27cb214de
+[I 05:35:12.629 NotebookApp] Adapting to protocol v5.1 for kernel 4f17cb89-e112-4757-a61c-ebe27cb214de
+[I 05:35:15.770 NotebookApp] Starting buffering for 4f17cb89-e112-4757-a61c-ebe27cb214de:388ed84949744e6c89551d2a536c01a7
+[I 05:35:30.839 NotebookApp] Kernel interrupted: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[W 05:36:38.944 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 05:36:40.064 NotebookApp] Kernel started: 1663c6e5-3029-4835-acb6-ad832c67ae8e
+[I 05:36:42.190 NotebookApp] Adapting to protocol v5.1 for kernel 1663c6e5-3029-4835-acb6-ad832c67ae8e
+[W 05:36:52.832 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[I 05:36:53.594 NotebookApp] Kernel started: 51a68377-5325-4abf-91ac-b489a26d7fd0
+[I 05:36:55.593 NotebookApp] Adapting to protocol v5.1 for kernel 51a68377-5325-4abf-91ac-b489a26d7fd0
+[W 05:36:56.645 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/6-mars.ipynb is not trusted
+[I 05:36:57.349 NotebookApp] Kernel started: a5621123-08a6-4ce7-b58e-650c8f031a8e
+[I 05:36:59.153 NotebookApp] Adapting to protocol v5.1 for kernel a5621123-08a6-4ce7-b58e-650c8f031a8e
+[I 05:37:09.116 NotebookApp] Starting buffering for a5621123-08a6-4ce7-b58e-650c8f031a8e:ed98fc6acdc841278097d167e705e3ee
+[I 05:37:09.224 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 05:37:09.225 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 05:38:53.803 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb
+[W 05:38:53.804 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram-v2.ipynb is not trusted
+[W 05:40:45.736 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 05:40:46.773 NotebookApp] Adapting to protocol v5.1 for kernel 96982c94-bec4-4965-8fd7-7a8c9036c974
+[W 05:41:12.350 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 05:41:13.670 NotebookApp] Adapting to protocol v5.1 for kernel 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[W 05:41:17.537 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:41:18.753 NotebookApp] Adapting to protocol v5.1 for kernel 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[I 05:43:18.542 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:43:18.543 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:45:18.624 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:45:18.625 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[W 05:45:49.368 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 05:45:50.410 NotebookApp] Adapting to protocol v5.1 for kernel 96982c94-bec4-4965-8fd7-7a8c9036c974
+[I 05:49:19.890 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:49:19.891 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:51:50.480 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 05:51:50.481 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 05:53:51.363 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 05:53:51.365 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 05:55:03.591 NotebookApp] Kernel interrupted: 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[I 05:55:20.455 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:55:20.457 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:57:21.001 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:57:21.002 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:59:20.933 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 05:59:20.934 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 05:59:46.412 NotebookApp] Starting buffering for 0fbad587-7f85-4828-aefb-9d6c1a81a2e6:74f50d6882bd493b8571a85b989915ec
+[I 05:59:48.062 NotebookApp] Kernel restarted: 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[I 05:59:50.300 NotebookApp] Adapting to protocol v5.1 for kernel 0fbad587-7f85-4828-aefb-9d6c1a81a2e6
+[I 05:59:50.301 NotebookApp] Restoring connection for 0fbad587-7f85-4828-aefb-9d6c1a81a2e6:74f50d6882bd493b8571a85b989915ec
+[I 05:59:50.302 NotebookApp] Replaying 6 buffered messages
+[I 06:01:20.939 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 06:01:20.940 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 06:03:20.942 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb
+[W 06:03:20.943 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall.ipynb is not trusted
+[I 06:13:14.987 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 06:13:14.988 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 06:16:56.625 NotebookApp] Starting buffering for 1663c6e5-3029-4835-acb6-ad832c67ae8e:708abe33627348a79c9404dfa92067db
+[I 06:16:56.971 NotebookApp] Kernel restarted: 1663c6e5-3029-4835-acb6-ad832c67ae8e
+[I 06:16:58.355 NotebookApp] Adapting to protocol v5.1 for kernel 1663c6e5-3029-4835-acb6-ad832c67ae8e
+[I 06:16:58.356 NotebookApp] Restoring connection for 1663c6e5-3029-4835-acb6-ad832c67ae8e:708abe33627348a79c9404dfa92067db
+[I 06:16:58.357 NotebookApp] Replaying 6 buffered messages
+[I 06:18:48.481 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 06:18:48.482 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 06:20:57.912 NotebookApp] Starting buffering for 96982c94-bec4-4965-8fd7-7a8c9036c974:91351453eb1544d9ac72a82e4ed889ec
+[W 06:21:02.444 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:21:04.065 NotebookApp] Adapting to protocol v5.1 for kernel 6fc05667-b28e-432b-aa05-4d670a04d6aa
+[I 06:23:04.139 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:23:04.140 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:25:05.219 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:25:05.220 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:27:05.389 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:27:05.390 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:29:04.570 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:29:04.571 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:31:04.563 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:31:04.564 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:33:05.812 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:33:05.813 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:35:05.387 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:35:05.388 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:37:04.578 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:37:04.579 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 06:41:06.018 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 06:41:06.019 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 07:53:12.997 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 07:53:12.998 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 07:53:27.766 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 07:53:27.767 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 07:57:27.913 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 07:57:27.914 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 07:59:27.930 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 07:59:27.931 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 08:01:28.743 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 08:01:28.744 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 08:03:42.292 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 08:03:42.293 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 08:05:30.530 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb
+[W 08:05:30.531 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_binary-classification.ipynb is not trusted
+[I 08:06:31.765 NotebookApp] Kernel interrupted: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 08:07:42.492 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 08:07:42.493 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 08:13:06.312 NotebookApp] Kernel interrupted: 59264520-27e3-4c94-b9ff-9d9c7671c9c0
+[I 08:13:43.100 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 08:13:43.101 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 08:15:43.721 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb
+[W 08:15:43.722 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_recall-time.ipynb is not trusted
+[I 08:17:16.269 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:17:16.270 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:19:16.275 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:19:16.276 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:21:16.317 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:21:16.319 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:23:16.324 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:23:16.325 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:25:16.326 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:25:16.327 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:27:16.313 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:27:16.314 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:29:16.366 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:29:16.367 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+[I 08:31:16.372 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/diagram.ipynb
+[W 08:31:16.373 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/diagram.ipynb is not trusted
+slurmstepd: error: *** JOB 14531512 ON c41-01 CANCELLED AT 2019-01-16T08:59:39 ***

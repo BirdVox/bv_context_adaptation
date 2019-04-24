@@ -1,0 +1,166 @@
+
+Jupyter server is running on: c09-01
+Job starts at: Wed Apr 24 15:52:51 EDT 2019
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7269:localhost:7269 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host,
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7269:localhost:7269 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 15:53:02.864 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-888030/jupyter/notebook_cookie_secret
+[I 15:53:06.589 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 15:53:06.589 NotebookApp] The Jupyter Notebook is running at:
+[I 15:53:06.590 NotebookApp] http://localhost:7269/?token=7f484870498ee706315f939f8ebcc0b99a26b864c0afa626
+[I 15:53:06.590 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 15:53:06.590 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7269/?token=7f484870498ee706315f939f8ebcc0b99a26b864c0afa626
+[I 15:53:28.565 NotebookApp] 302 GET /?token=7f484870498ee706315f939f8ebcc0b99a26b864c0afa626 (::1) 1.23ms
+[W 15:54:17.987 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 15:54:19.288 NotebookApp] Kernel started: a6dc884a-2735-42fb-8ff3-e913f4285766
+[I 15:54:20.837 NotebookApp] Adapting to protocol v5.1 for kernel a6dc884a-2735-42fb-8ff3-e913f4285766
+[I 15:54:50.457 NotebookApp] Kernel started: 0b0ec2fc-2562-4af8-a77c-c4a37d141ae9
+[I 15:54:51.097 NotebookApp] Adapting to protocol v5.1 for kernel 0b0ec2fc-2562-4af8-a77c-c4a37d141ae9
+[I 15:56:58.477 NotebookApp] Copying BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb to /BirdVox-70k_icassp2018/spl2018
+[W 15:56:58.511 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[W 15:56:58.531 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist-Copy1.ipynb is not trusted
+[W 15:56:59.937 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist-Copy1.ipynb is not trusted
+[I 15:57:01.016 NotebookApp] Kernel started: c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 15:57:01.835 NotebookApp] Adapting to protocol v5.1 for kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 15:59:01.052 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 15:59:01.053 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[W 16:00:03.265 NotebookApp] Notebook BirdVox-70k_icassp2018/icassp2018/fig_precision-recall.ipynb is not trusted
+[I 16:00:04.586 NotebookApp] Kernel started: 26e9a745-93bc-473c-9692-61ce4677f0da
+[I 16:00:05.356 NotebookApp] Adapting to protocol v5.1 for kernel 26e9a745-93bc-473c-9692-61ce4677f0da
+[I 16:00:55.015 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42 restarted
+[I 16:01:01.160 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:01:01.162 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:01:04.585 NotebookApp] Starting buffering for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:01:04.913 NotebookApp] Kernel restarted: c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:01:05.545 NotebookApp] Adapting to protocol v5.1 for kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:01:05.546 NotebookApp] Restoring connection for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:01:05.546 NotebookApp] Replaying 6 buffered messages
+[I 16:02:19.913 NotebookApp] KernelRestarter: restarting kernel (1/5), keep random ports
+WARNING:root:kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42 restarted
+[I 16:02:26.493 NotebookApp] Starting buffering for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:02:26.872 NotebookApp] Kernel restarted: c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:02:27.644 NotebookApp] Adapting to protocol v5.1 for kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:02:27.645 NotebookApp] Restoring connection for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:02:27.645 NotebookApp] Replaying 6 buffered messages
+[I 16:03:01.066 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:03:01.067 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:09:01.090 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:09:01.091 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:11:01.088 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:11:01.089 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:13:01.084 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:13:01.085 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:15:01.109 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:15:01.110 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:17:01.113 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:17:01.114 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:19:01.120 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:19:01.121 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:21:01.138 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:21:01.139 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:23:01.127 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:23:01.128 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:25:01.126 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:25:01.127 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:27:01.244 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:27:01.245 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:28:21.483 NotebookApp] Starting buffering for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:28:22.013 NotebookApp] Kernel restarted: c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:28:22.803 NotebookApp] Adapting to protocol v5.1 for kernel c7c4c14e-cfe9-40f7-aec9-1ff821701a42
+[I 16:28:22.804 NotebookApp] Restoring connection for c7c4c14e-cfe9-40f7-aec9-1ff821701a42:c9039a8a9d9a41eb98b6b1f860ab8622
+[I 16:28:22.804 NotebookApp] Replaying 3 buffered messages
+[I 16:29:01.132 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:29:01.133 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:31:01.139 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:31:01.140 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:33:01.150 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:33:01.151 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:35:01.147 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:35:01.148 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:37:01.172 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:37:01.173 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:39:01.182 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:39:01.183 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:41:01.171 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:41:01.172 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:43:01.178 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:43:01.179 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:45:01.185 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:45:01.186 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:47:01.280 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:47:01.281 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:49:02.272 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:49:02.273 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:51:02.344 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:51:02.345 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:53:02.186 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:53:02.187 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:55:02.197 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:55:02.198 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:57:02.732 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:57:02.734 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 16:59:02.217 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 16:59:02.218 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:01:02.515 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:01:02.516 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:03:02.490 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:03:02.491 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:05:03.370 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:05:03.371 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:07:03.634 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:07:03.635 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:09:03.505 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:09:03.506 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:11:03.505 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:11:03.505 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:13:03.529 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:13:03.530 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:37:03.654 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:37:03.655 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 17:39:03.597 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 17:39:03.598 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+packet_write_wait: Connection to 172.16.0.13 port 22: Broken pipe
+[I 18:49:20.586 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:49:20.587 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 18:51:20.516 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:51:20.517 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 18:53:20.508 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:53:20.509 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 18:55:20.929 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:55:20.930 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 18:57:20.951 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:57:20.952 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 18:59:21.339 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 18:59:21.340 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 19:30:10.539 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 19:30:10.540 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted
+[I 19:32:10.574 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb
+[W 19:32:10.576 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_dolby2019.ipynb is not trusted

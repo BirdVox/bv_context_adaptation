@@ -1,0 +1,14 @@
+2018-11-02 16:27:52.962537 Start.
+Thresholding PCEN adaptive threshold convnet for detection in BirdVox-70k full audio with PCEN input. 
+Augmentation kind: none
+Test unit: unit07
+Trial ID: 1
+Prediction units: unit07, unit03, unit05
+
+h5py version: 2.8.0
+numpy version: 1.15.1
+pandas version: 0.23.4
+scikit-learn version: 0.19.1
+
+2018-11-02 17:00:34.665612 Finish.
+Total elapsed time: 00:32:42.67.

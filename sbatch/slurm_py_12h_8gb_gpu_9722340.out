@@ -1,0 +1,88 @@
+
+Jupyter server is running on: gpu-53
+Job starts at: Fri Nov  2 11:13:30 EDT 2018
+
+Step 1 :
+
+If you are working in NYU campus, please open an iTerm window, run command
+
+ssh -L 7242:localhost:7242 vl1019@prince.hpc.nyu.edu
+
+If you are working off campus, you should already have ssh tunneling setup through HPC bastion host, 
+that you can directly login to prince with command
+
+ssh vl1019@prince
+
+Please open an iTerm window, run command
+
+ssh -L 7242:localhost:7242 vl1019@prince
+
+Step 2:
+
+Keep the iTerm windows in the previouse step open. Now open browser, find the line with
+
+The Jupyter Notebook is running at:
+
+the URL is something: http://localhost:/?token=XXXXXXXX
+
+you should be able to connect to jupyter notebook running remotly on prince compute node with above url
+
+[I 11:13:30.991 NotebookApp] Writing notebook server cookie secret to /state/partition1/job-9722340/jupyter/notebook_cookie_secret
+[I 11:13:31.262 NotebookApp] Serving notebooks from local directory: /home/vl1019
+[I 11:13:31.262 NotebookApp] The Jupyter Notebook is running at:
+[I 11:13:31.262 NotebookApp] http://localhost:7242/?token=652bd738ad933c6c99e4b30917f101920a8530aa0f77421b
+[I 11:13:31.262 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 11:13:31.263 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:7242/?token=652bd738ad933c6c99e4b30917f101920a8530aa0f77421b
+[I 11:14:21.908 NotebookApp] 302 GET /?token=652bd738ad933c6c99e4b30917f101920a8530aa0f77421b (::1) 1.00ms
+[W 11:14:37.214 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:14:39.647 NotebookApp] Kernel started: 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:14:40.521 NotebookApp] Adapting to protocol v5.1 for kernel 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:16:39.721 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:16:39.722 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:18:39.716 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:18:39.717 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:20:39.658 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:20:39.659 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:22:39.648 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:22:39.649 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:23:24.984 NotebookApp] Starting buffering for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 11:23:25.483 NotebookApp] Kernel restarted: 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:23:26.199 NotebookApp] Adapting to protocol v5.1 for kernel 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:23:26.200 NotebookApp] Restoring connection for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 11:23:26.200 NotebookApp] Replaying 3 buffered messages
+[I 11:23:46.380 NotebookApp] Starting buffering for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 11:23:46.620 NotebookApp] Kernel restarted: 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:23:47.186 NotebookApp] Adapting to protocol v5.1 for kernel 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 11:23:47.187 NotebookApp] Restoring connection for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 11:23:47.187 NotebookApp] Replaying 3 buffered messages
+[I 11:24:39.636 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:24:39.637 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:34:39.716 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:34:39.717 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:46:39.771 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:46:39.772 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:48:39.710 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:48:39.711 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 11:50:39.703 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 11:50:39.704 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 12:28:39.868 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 12:28:39.869 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 15:24:41.250 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 15:24:41.251 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 15:28:40.451 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 15:28:40.452 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[I 15:34:42.201 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 15:34:42.202 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[W 16:34:17.188 NotebookApp] WebSocket ping timeout after 119922 ms.
+[I 16:34:22.194 NotebookApp] Starting buffering for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 16:35:11.966 NotebookApp] Adapting to protocol v5.1 for kernel 0ee9c2ed-e325-4abe-988d-e0ee50a46251
+[I 16:35:11.967 NotebookApp] Restoring connection for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+[I 16:42:45.278 NotebookApp] Saving file at /BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb
+[W 16:42:45.279 NotebookApp] Notebook BirdVox-70k_icassp2018/spl2018/fig_precision-recall_nomindist.ipynb is not trusted
+[W 18:17:11.970 NotebookApp] WebSocket ping timeout after 119988 ms.
+[I 18:17:16.973 NotebookApp] Starting buffering for 0ee9c2ed-e325-4abe-988d-e0ee50a46251:73a62dbfd7f842ab97f38591c6d6a117
+slurmstepd: error: *** JOB 9722340 ON gpu-53 CANCELLED AT 2018-11-02T23:13:36 DUE TO TIME LIMIT ***
